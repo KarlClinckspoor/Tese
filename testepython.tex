@@ -1,0 +1,105 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+%\usepackage[subpreambles=false]{standalone}
+
+%%%% Fontes e língua %%%%
+\usepackage{fontspec}     %for XeLaTeX, selecting multiple fonts
+\usepackage{polyglossia}  %for XeLaTeX, enables multiple languages.
+\setmainlanguage{brazil}
+\PolyglossiaSetup{brazil}{indentfirst=true}
+\setotherlanguages{english}
+
+\setmainfont[Ligatures=TeX]{Latin Modern Roman}
+\setsansfont[Ligatures=TeX]{Latin Modern Sans}
+\setmonofont{Latin Modern Mono}
+
+
+
+
+\usepackage{csquotes}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{xfrac}
+%\mathchardef\period=\mathcode`.               % Muda . para , e usa como sep. decimal
+%\DeclareMathSymbol{.}{\mathord}{letters}{"3B} % Muda . para , e usa como sep. decimal
+%\renewcommand{\baselinestretch}{1.15}
+\usepackage[compact]{titlesec}
+\usepackage{multicol}
+%%%%%%%%%%%%%%%%%
+
+\usepackage{xcolor}
+%\usepackage{enumerate}  % listas com numeração diferente
+\usepackage{enumitem}
+
+%%%% Gráficos, posicionamento de tabelas
+\usepackage{graphicx}
+\usepackage{float}
+\floatstyle{plaintop} % tabelas com legenda na parte de cima
+\restylefloat{table}  % tabelas com legenda na parte de cima
+
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\usepackage{caption} % figuras com subfiguras
+\usepackage{subcaption}  % figuras com subfiguras
+
+
+%\usepackage{listings}
+\usepackage{minted}
+
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\renewcommand{\theFancyVerbLine}{
+    \sffamily\textcolor[rgb]{0.5,0.5,0.5}{\scriptsize\arabic{FancyVerbLine}}}
+
+\begin{minted}[mathescape,
+    linenos,
+    numbersep=5pt,
+    gobble=0,
+    frame=lines,
+    framesep=2mm,
+    breakautoindent=true,
+    breakanywhere=true,
+    breaklines=true]{python}
+
+import numpy as np
+from numpy import sin, cos
+import matplotlib.pyplot as plt
+from scipy.special import jv
+from scipy import integrate
+from S_KP_EXV import *
+
+def sphere_FF(q, R):
+    if R == 0:
+        return 0
+    FF = ((3 * (sin(q * R) - q * R * cos(q * R)) / (q * R) ** 3) ** 2)
+    return FF
+
+
+def FI(X):
+    if X > 0.05:
+        FI = 3 * (sin(X) - X * cos(X))/(X**3)
+        return FI
+    else:
+        FI = 1 - 0.1 * X * X
+        return FI
+
+
+def spherical_shell(q, R1, R2):
+    def V(R):
+         return 4 / 3 * np.pi * R ** 3
+
+    if R1 < R2:
+        return (V(R2) * sphere_FF(q, R2) - V(R1) * sphere_FF(q, R1)) / (V(R2) - V(R1))
+    if R1 > R2:
+        return (V(R1) * sphere_FF(q, R1) - V(R2) * sphere_FF(q, R2)) / (V(R1) - V(R2))
+\end{minted}
+
+
+%\lstset{language=Python}
+%
+%\lstinputlisting[language=Python]{testelatex.py}
+    
+\end{document}

@@ -1,0 +1,167 @@
+\changetocdepth {4}
+\select@language {brazil}
+\select@language {brazil}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\select@language {english}
+\select@language {brazil}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {part}{\partnumberline {I}\MakeTextUppercase {Introdução}}{27}{part.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Surfactantes}}{29}{chapter.1}
+\contentsline {section}{\numberline {1.1}Polaridade}{33}{section.1.1}
+\contentsline {section}{\numberline {1.2}Parâmetro de empacotamento}{33}{section.1.2}
+\contentsline {section}{\numberline {1.3}Mesofases}{33}{section.1.3}
+\contentsline {section}{\numberline {1.4}Aditivos}{33}{section.1.4}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Micelas gigantes}}{35}{chapter.2}
+\contentsline {section}{\numberline {2.1}Crescimento de micelas}{35}{section.2.1}
+\contentsline {section}{\numberline {2.2}Termodinâmica de micelas}{35}{section.2.2}
+\contentsline {section}{\numberline {2.3}Modelos de comportamento reológico}{35}{section.2.3}
+\contentsline {section}{\numberline {2.4}Perfis de viscosidade}{35}{section.2.4}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Inspirações para o projeto}}{37}{chapter.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Estudos de Hoffmann sobre micelas e lamelas}}{39}{chapter.4}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Estudos de Pedersen sobre cinética}}{41}{chapter.5}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Objetivos}}{43}{chapter.6}
+\contentsline {part}{\partnumberline {II}\MakeTextUppercase {Teoria}}{45}{part.2}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase {Reologia}}{47}{chapter.7}
+\contentsline {section}{\numberline {7.1}Fundamentos}{47}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Fluídos Newtonianos}{47}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Sólidos Hookeanos}{47}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Fluidos viscoelásticos}{47}{subsection.7.1.3}
+\contentsline {section}{\numberline {7.2}Reologia oscilatória}{47}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Aquisição de dados}{47}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Modelo de Maxwell}{47}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Modelos mais complexos}{47}{subsection.7.2.3}
+\contentsline {section}{\numberline {7.3}Curvas de Fluxo}{47}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Modelos de curvas de fluxo}{47}{subsection.7.3.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase {Calorimetria de titulação isotérmica}}{49}{chapter.8}
+\contentsline {section}{\numberline {8.1}Fundamentos}{49}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Aquisição de dados}{49}{subsection.8.1.1}
+\contentsline {section}{\numberline {8.2}Calorimetria de micelas esféricas}{49}{section.8.2}
+\contentsline {section}{\numberline {8.3}Calorimetria de micelas gigantes}{49}{section.8.3}
+\contentsline {section}{\numberline {8.4}Termodinâmica de micelização}{49}{section.8.4}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {9}\MakeTextUppercase {SAXS}}{51}{chapter.9}
+\contentsline {section}{\numberline {9.1}Fundamentos}{51}{section.9.1}
+\contentsline {section}{\numberline {9.2}Modelagem}{51}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Esferas}{51}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Micelas esféricas}{51}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.3}Micelas gigantes}{51}{subsection.9.2.3}
+\contentsline {subsection}{\numberline {9.2.4}Visualização dos parâmetros}{51}{subsection.9.2.4}
+\contentsline {subsection}{\numberline {9.2.5}Indexação de picos}{51}{subsection.9.2.5}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {10}\MakeTextUppercase {Fluorescência}}{53}{chapter.10}
+\contentsline {section}{\numberline {10.1}Fundamentos}{53}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Diagramas}{53}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.2}Rendimento quântico}{53}{subsection.10.1.2}
+\contentsline {subsubsection}{\numberline {10.1.2.1}Lei de X (não importa onde incide para fluorescência)}{53}{subsubsection.10.1.2.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {11}\MakeTextUppercase {Análise Multivariada}}{55}{chapter.11}
+\contentsline {section}{\numberline {11.1}Técnicas de classificação}{55}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Normalização dos dados}{55}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}PCA}{55}{subsection.11.1.2}
+\contentsline {subsection}{\numberline {11.1.3}HCA}{55}{subsection.11.1.3}
+\contentsline {section}{\numberline {11.2}Técnicas de regressão}{55}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}Regressão Multivariada}{55}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.2}PCR}{55}{subsection.11.2.2}
+\contentsline {subsection}{\numberline {11.2.3}PLS}{55}{subsection.11.2.3}
+\contentsline {part}{\partnumberline {III}\MakeTextUppercase {Materiais e Métodos}}{57}{part.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {12}\MakeTextUppercase {Reagentes}}{59}{chapter.12}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {13}\MakeTextUppercase {Reologia}}{61}{chapter.13}
+\contentsline {section}{\numberline {13.1}Preparo das amostras}{61}{section.13.1}
+\contentsline {section}{\numberline {13.2}Tratamento de dados de reologia oscilatória}{61}{section.13.2}
+\contentsline {section}{\numberline {13.3}Tratamento de dados de curvas de fluxo}{61}{section.13.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {14}\MakeTextUppercase {Calorimetria de titulação isotérmica}}{63}{chapter.14}
+\contentsline {section}{\numberline {14.1}Preparo das amostras}{63}{section.14.1}
+\contentsline {section}{\numberline {14.2}Tratamento de dados}{63}{section.14.2}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {15}\MakeTextUppercase {SAXS}}{65}{chapter.15}
+\contentsline {section}{\numberline {15.1}Aquisição de dados}{65}{section.15.1}
+\contentsline {subsection}{\numberline {15.1.1}LNLS}{65}{subsection.15.1.1}
+\contentsline {subsection}{\numberline {15.1.2}Grenoble}{65}{subsection.15.1.2}
+\contentsline {subsection}{\numberline {15.1.3}Stopped-flow}{65}{subsection.15.1.3}
+\contentsline {section}{\numberline {15.2}Tratamento de dados}{65}{section.15.2}
+\contentsline {subsection}{\numberline {15.2.1}Subtração do ``branco''}{65}{subsection.15.2.1}
+\contentsline {subsection}{\numberline {15.2.2}Média das curvas de cinética}{65}{subsection.15.2.2}
+\contentsline {subsection}{\numberline {15.2.3}Ajuste das curvas pelo software superSAXS}{65}{subsection.15.2.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {16}\MakeTextUppercase {Fluorescência}}{67}{chapter.16}
+\contentsline {section}{\numberline {16.1}Aquisição de dados}{67}{section.16.1}
+\contentsline {subsection}{\numberline {16.1.1}Determinação da absorção e emissão}{67}{subsection.16.1.1}
+\contentsline {subsection}{\numberline {16.1.2}Fluorescência estática}{67}{subsection.16.1.2}
+\contentsline {subsection}{\numberline {16.1.3}Fluorescência resolvida no tempo}{67}{subsection.16.1.3}
+\contentsline {subsubsection}{\numberline {16.1.3.1}Programa LabView}{67}{subsubsection.16.1.3.1}
+\contentsline {section}{\numberline {16.2}Tratamento de dados}{67}{section.16.2}
+\contentsline {subsection}{\numberline {16.2.1}Filtro Savitzky-Golay}{67}{subsection.16.2.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {17}\MakeTextUppercase {Técnicas adicionais}}{69}{chapter.17}
+\contentsline {section}{\numberline {17.1}Calorimetria diferencial de varredura}{69}{section.17.1}
+\contentsline {section}{\numberline {17.2}Espalhamento dinâmico de luz}{69}{section.17.2}
+\contentsline {section}{\numberline {17.3}Tensiometria}{69}{section.17.3}
+\contentsline {part}{\partnumberline {IV}\MakeTextUppercase {Efeito dos aditivos hidrofílicos}}{71}{part.4}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {18}\MakeTextUppercase {Resultados}}{73}{chapter.18}
+\contentsline {section}{\numberline {18.1}Efeitos dos aditivos na reologia}{73}{section.18.1}
+\contentsline {subsection}{\numberline {18.1.1}Glicerina}{73}{subsection.18.1.1}
+\contentsline {subsection}{\numberline {18.1.2}Sacarose}{73}{subsection.18.1.2}
+\contentsline {subsection}{\numberline {18.1.3}DMSO}{73}{subsection.18.1.3}
+\contentsline {subsection}{\numberline {18.1.4}1,3BD}{73}{subsection.18.1.4}
+\contentsline {subsection}{\numberline {18.1.5}Ureia}{73}{subsection.18.1.5}
+\contentsline {section}{\numberline {18.2}Efeito dos aditivos na calorimetria de micelas gigantes}{73}{section.18.2}
+\contentsline {section}{\numberline {18.3}Efeito dos aditivos na calorimetria de micelização}{73}{section.18.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {19}\MakeTextUppercase {Parâmetros a ser estudados}}{75}{chapter.19}
+\contentsline {subsection}{\numberline {19.0.1}Índice de refração}{75}{subsection.19.0.1}
+\contentsline {subsection}{\numberline {19.0.2}Constante dielétrica}{75}{subsection.19.0.2}
+\contentsline {subsection}{\numberline {19.0.3}Parâmetro de Gordon}{75}{subsection.19.0.3}
+\contentsline {subsection}{\numberline {19.0.4}Interação dos aditivos com a superfície micelar}{75}{subsection.19.0.4}
+\contentsline {subsection}{\numberline {19.0.5}Decomposição em propriedades fundamentais}{75}{subsection.19.0.5}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {20}\MakeTextUppercase {Correlações entre os parâmetros e as propriedades}}{77}{chapter.20}
+\contentsline {subsection}{\numberline {20.0.1}Reologia}{77}{subsection.20.0.1}
+\contentsline {subsection}{\numberline {20.0.2}Calorimetria}{77}{subsection.20.0.2}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {21}\MakeTextUppercase {Efeito da Ureia}}{79}{chapter.21}
+\contentsline {section}{\numberline {21.1}Calorimetria diferencial de varredura}{79}{section.21.1}
+\contentsline {section}{\numberline {21.2}SAXS}{79}{section.21.2}
+\contentsline {section}{\numberline {21.3}DLS}{79}{section.21.3}
+\contentsline {section}{\numberline {21.4}Reologia do sólido}{79}{section.21.4}
+\contentsline {section}{\numberline {21.5}Entalpia de interação de ureia com surfactante}{79}{section.21.5}
+\contentsline {part}{\partnumberline {V}\MakeTextUppercase {Cinética de crescimento}}{81}{part.5}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {22}\MakeTextUppercase {SAXS resolvido no tempo}}{83}{chapter.22}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {23}\MakeTextUppercase {Fluorescência resolvida no tempo}}{85}{chapter.23}
+\contentsline {part}{\partnumberline {VI}\MakeTextUppercase {Projetos menores}}{87}{part.6}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {24}\MakeTextUppercase {Estudo sobre regiões Maxwellianas nos perfis de viscosidade}}{89}{chapter.24}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {25}\MakeTextUppercase {Comparação de ITC de MG em dois sentidos opostos}}{91}{chapter.25}
+\contentsline {part}{\partnumberline {VII}\MakeTextUppercase {Contribuições para outros projetos}}{93}{part.7}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {26}\MakeTextUppercase {Muco}}{95}{chapter.26}
+\contentsline {section}{\numberline {26.1}Breve descrição do projeto}{95}{section.26.1}
+\contentsline {section}{\numberline {26.2}Contribuição}{95}{section.26.2}
+\contentsline {subsection}{\numberline {26.2.1}Determinação de uma metodologia}{95}{subsection.26.2.1}
+\contentsline {subsection}{\numberline {26.2.2}Tratamento de dados}{95}{subsection.26.2.2}
+\contentsline {section}{\numberline {26.3}Resultado da colaboração}{95}{section.26.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {27}\MakeTextUppercase {Previsão de temperaturas de fusão de triacilglicerídeos}}{97}{chapter.27}
+\contentsline {section}{\numberline {27.1}Breve descrição}{97}{section.27.1}
+\contentsline {section}{\numberline {27.2}Contribuição}{97}{section.27.2}
+\vspace {\cftbeforechapterskip }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{\uppercase {Referências Bibliográficas}}{99}{section*.22}
