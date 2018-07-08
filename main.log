@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.6.30)  8 JUL 2018 18:52
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.6.30)  8 JUL 2018 20:20
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1746,8 +1746,12 @@ TIDOS OPOS-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24])
-[25] [26
+ [24]
+Overfull \hbox (1.66797pt too wide) detected at line 170
+ \TU/LatinModernRoman(0)/bx/n/12 101
+ []
+
+) [25] [26
 
 ]
 \openout2 = `introducao.aux'.
@@ -1780,15 +1784,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ] [41] [42
 
-]) [43]
-\openout2 = `teoria.aux'.
-
- (./teoria.tex [44
-
-
+]) [43] [44
 
 ]
-[45] [46] [47
+\openout2 = `teoria.aux'.
+
+ (./teoria.tex
+[45
+
+
+] [46] [47
 
 ] [48
 
@@ -1879,8 +1884,14 @@ bibitemlist
 
 
 No file apendices.tex.tex.
-No file main.ind.
+(./main.ind [100
 
+
+
+] [101
+
+
+]) 
 AED: lastpage setting LastPage
 \tf@lof=\write8
 \openout8 = `main.lof'.
@@ -1891,25 +1902,25 @@ AED: lastpage setting LastPage
 \tf@toc=\write10
 \openout10 = `main.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 484.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 484.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 487.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 487.
 (./main.aux (./introducao.aux) (./teoria.aux) (./materiais_e_metodos.aux)
 (./aditivos.aux) (./cinetica.aux) (./contribuicoes.aux) (./apendices.tex.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 484.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 484.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 487.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 487.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 484.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 487.
  ) 
 Here is how much of TeX's memory you used:
- 32696 strings out of 492969
- 593955 string characters out of 6133923
- 934969 words of memory out of 5000000
- 36260 multiletter control sequences out of 15000+600000
+ 32701 strings out of 492969
+ 594008 string characters out of 6133923
+ 934980 words of memory out of 5000000
+ 36263 multiletter control sequences out of 15000+600000
  540907 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  57i,13n,92p,935b,524s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (101 pages).
+Output written on main.pdf (103 pages).
