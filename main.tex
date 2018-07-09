@@ -51,7 +51,7 @@
 \floatstyle{plaintop} % tabelas com legenda na parte de cima
 \restylefloat{table}  % tabelas com legenda na parte de cima
 \usepackage{longtable}
-%\usepackage{booktabs} % TODO: verificar se isso é necessário
+\usepackage{booktabs} 
 
 % Figuras
 \usepackage[labelsep=period]{caption} % figuras com subfiguras
@@ -63,7 +63,7 @@
 
 \newcommand{\mM}{mmol.L\textsuperscript{-1}}
 \newcommand{\Sal}{Sal\textsuperscript{--}}
-
+\newcommand{\q}{$q$}
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
@@ -164,6 +164,7 @@
 % ----
 % Início do documento
 % ----
+\includeonly{apendices}
 \begin{document}
 
 % Retira espaço extra obsoleto entre as frases.
@@ -475,7 +476,7 @@ Agradeço ao CNPq pelo financiamento.
 \bibliography{library}
 
 % Apêndices
-\include{apendices.tex}
+\include{apendices}
 
 % Índice remissivo
 % TODO: criar um índice
