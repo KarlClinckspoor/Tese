@@ -6,13 +6,14 @@
 	\chapter{Descrição matemática do modelo de micelas gigantes}
 	
 	\section{Introdução e motivação}
+	
+	% TODO: colocar as referências.
+	Esta seção mostrará as equações utilizadas para descrever o modelo de espalhamento de micelas gigantes. As equação foram baseadas numa série de artigos de X, Y, Z. Aqui, esses artigos serão agrupados, de modo a facilitar o entendimento do modelo.
+	
+	Porém, essa descrição matemática é de menor aplicabilidade, pois é necessário transcrever as equações em código que consiga realizar ajustes. Essa tarefa não é trivial, especialmente para não especialistas. Logo, será disponibilizado, na seção X, uma transcrição dessas equações, na linguagem Python.
+
 	% TODO: colocar a seção onde o modelo foi utilizado
-%	
-%	Esta seção mostrará as equações do modelo de micelas gigantes, utilizado neste trabalho. O modelo foi criado pelo Prof. Jan Skov Pedersen, em Fortran 77, e disponibilizado para o aluno para realizar os ajustes das curvas obtidas no ESRF. O aluno então transcreveu o código de Fortran para Python, uma linguagem mais clara, e criou um pequeno programa interativo que relaciona o modelo com seus parâmetros. O programa consegue também comparar uma curva teórica com dados experimentais, de modo a fornecer um bom chute inicial para o ajuste das curvas.
-%	
-%	% todo: colocar uma imagem do modelo em ação
-%	
-%	Uma das motivações para realizar essa tarefa foi a grande dificuldade de nosso grupo utilizar SAXS para estudar micelas. Não há especialistas na região que conhecem modelagem de micelas gigantes. Além disso, escrever um modelo computacional baseando-se somente as equações matemáticas é uma tarefa muito difícil. O modelo computacional, apesar de menos compacto em sua notação, é mais legível, o que também facilita o entendimento de novos alunos.
+	% TODO: colocar a seção onde a descrição de Python foi escrita
 	
 	\section{Resumo do modelo}
 	
@@ -308,7 +309,15 @@
 	\noindent onde V é o volume molecular das regiões do surfactante.
 	
 	
-	\chapter{Softwares}
+	\chapter{Descrição do modelo de micelas gigantes em Python}
+	
+	
+	%	Esta seção mostrará as equações do modelo de micelas gigantes, utilizado neste trabalho. O modelo foi criado pelo Prof. Jan Skov Pedersen, em Fortran 77, e disponibilizado para o aluno para realizar os ajustes das curvas obtidas no ESRF. O aluno então transcreveu o código de Fortran para Python, uma linguagem mais clara, e criou um pequeno programa interativo que relaciona o modelo com seus parâmetros. O programa consegue também comparar uma curva teórica com dados experimentais, de modo a fornecer um bom chute inicial para o ajuste das curvas.
+	%	
+	%	% todo: colocar uma imagem do modelo em ação
+	%	
+	%	Uma das motivações para realizar essa tarefa foi a grande dificuldade de nosso grupo utilizar SAXS para estudar micelas. Não há especialistas na região que conhecem modelagem de micelas gigantes. Além disso, escrever um modelo computacional baseando-se somente as equações matemáticas é uma tarefa muito difícil. O modelo computacional, apesar de menos compacto em sua notação, é mais legível, o que também facilita o entendimento de novos alunos.
+		
 		Neste apêndice serão descritos alguns dos métodos computacionais criados durante a execução deste doutorado. Todos os scripts foram escritos na linguagem Python. O aluno fortemente recomenda essa linguagem para outros que desejam tratar, visualizar e entender seus dados. Python possui uma sintaxe simples, mas poderosa, grande número de pacotes matemáticos e científicos de qualidade, e é totalmente gratuito. Em especial, a conjunção de \emph{Jupyter Notebooks} (extensão \texttt{ipynb}) com um \emph{kernel} de Python é uma ferramenta muito poderosa e conveniente.
 		
 		Um curso de Python com foco em tratamento de dados foi elaborado pelo aluno, e se encontra disponível em um repositório no Github\footnote{\href{https://github.com/KarlClinckspoor/CursoPython}{https://github.com/KarlClinckspoor/CursoPython}}. Em brevo, o curso possui a seguinte estrutura:
@@ -326,9 +335,11 @@
 			\item Tarefas avançadas
 		\end{enumerate}
 		
-
-	\section{Descrição e uso do software de tratamento de curvas de fluxo}
-	\section{Softwares miscelâneos para tratamento de dados}
+	\chapter{Descrição e uso do software de tratamento de curvas de fluxo}
+	
+	Para o tratamento de curvas de fluxo de fluidos pseudoplástico, foi desenvolvido um software que realiza o ajuste das curvas por um modelo simplificado e três modelos mais complexos, de forma a contornar erros experimentais. Esse software acelera em várias vezes a velocidade de tratamento. Nesta seção, será descrito o algoritmo que o programa faz para os ajustes, e será dada uma breve introdução para o uso do software tanto num ambiente Python, como um script \emph{standalone}.
+	
+	\chapter{Softwares miscelâneos para tratamento de dados}
 \end{apendicesenv}
 
 %\begin{anexosenv}
