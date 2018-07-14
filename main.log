@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6600 64-bit) (preloaded format=xelatex 2018.2.27)  10 JUL 2018 12:33
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6600 64-bit) (preloaded format=xelatex 2018.2.27)  13 JUL 2018 11:11
 entering extended mode
 **./main.tex
 (main.tex
@@ -1798,127 +1798,63 @@ Overfull \hbox (1.66797pt too wide) detected at line 200
 ) [25] [26
 
 ]
-\openout2 = `introducao.aux'.
-
- (introducao.tex [27
-
-
-] [28]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32]
-[33] [34
-
-] [35] [36
-
-] [37] [38
-
-] [39] [40
-
-] [41] [42
-
-]) [43]
-\openout2 = `teoria.aux'.
-
- (teoria.tex [44
-
-
-
-]
-[45] [46] [47
-
-] [48
-
-] [49] [50
-
-] [51] [52
-
-] [53] [54
-
-]) [55]
-\openout2 = `materiais_e_metodos.aux'.
-
-
-(materiais_e_metodos.tex [56
-
-
-
-] [57] [58] [59
-
-] [60
-
-] [61] [62
-
-] [63] [64
-
-] [65]
-[66
-
-] [67] [68
-
-]) [69]
-\openout2 = `aditivos.aux'.
-
- (aditivos.tex [70
-
-
-
-] [71] [72] [73
-
-] [74
-
-] [75] [76
-
-]) [77]
 \openout2 = `ureia.aux'.
 
-
-(ureia.tex [78
-
-
-
-]) [79]
-\openout2 = `cinetica.aux'.
-
- (cinetica.tex [80
+ (ureia.tex [78
 
 
 
-] [81] [82] [83
-
-] [84
-
-]) [85]
-\openout2 = `contribuicoes.aux'.
-
-
-(contribuicoes.tex [86
 
 
 
-] [87] [88] [89
+]
+Underfull \vbox (badness 10000) detected at line 23
+ []
 
-] [90
+File: ./imagens/dsc/CTAB_porc_ur.png Graphic file (type bmp)
+<./imagens/dsc/CTAB_porc_ur.png>
 
-] [91] [92
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-] [93] [94] [95
+File: ./imagens/dsc/CTAB_45p.png Graphic file (type bmp)
+<./imagens/dsc/CTAB_45p.png>
+File: ./imagens/dsc/CTAB_40p.png Graphic file (type bmp)
+<./imagens/dsc/CTAB_40p.png>
 
-] [96
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-])
-[97] (main.bbl [98
+File: ./imagens/dsc/TTAB_45p.png Graphic file (type bmp)
+<./imagens/dsc/TTAB_45p.png>
+File: ./imagens/dsc/TTAB_40p.png Graphic file (type bmp)
+<./imagens/dsc/TTAB_40p.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: ./imagens/dsc/DTAB_45p.png Graphic file (type bmp)
+<./imagens/dsc/DTAB_45p.png>
+File: ./imagens/dsc/DTAB_40p.png Graphic file (type bmp)
+<./imagens/dsc/DTAB_40p.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: ./imagens/dsc/Surf_100mm_45p.png Graphic file (type bmp)
+<./imagens/dsc/Surf_100mm_45p.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: ./imagens/dsc/Surf_200mm_45p.png Graphic file (type bmp)
+<./imagens/dsc/Surf_200mm_45p.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: ./imagens/dsc/Surf_300mm_45p.png Graphic file (type bmp)
+<./imagens/dsc/Surf_300mm_45p.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[79]) [80] [81] [82] (main.bbl [98
+
+
 
 
 ]
@@ -2082,12 +2018,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 487.
  ) 
 Here is how much of TeX's memory you used:
- 31789 strings out of 427836
- 576298 string characters out of 3152479
- 933154 words of memory out of 3000000
- 35335 multiletter control sequences out of 15000+200000
+ 31720 strings out of 427836
+ 576857 string characters out of 3152479
+ 936494 words of memory out of 3000000
+ 35261 multiletter control sequences out of 15000+200000
  540405 words of font info for 103 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 57i,13n,92p,10413b,652s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,13n,92p,10413b,654s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.pdf (117 pages).
+Output written on main.pdf (51 pages).
