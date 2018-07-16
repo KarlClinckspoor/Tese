@@ -19,9 +19,16 @@
 			CTAB, TTAB, DTAB 100	& 45	& \ref{fig:DSC_Surf_100mm_45p}	\\
 			CTAB, TTAB, DTAB 200	& 45	& \ref{fig:DSC_Surf_200mm_45p}	\\
 			CTAB, TTAB, DTAB 300	& 45	& \ref{fig:DSC_Surf_300mm_45p}	\\
+			\midrule
+			CTAB 100 NaSal 60	& 35, 40, 45	& \ref{fig:DSC_NaSal60}		\\
+			CTAB 100 NaSal 100	& 35, 40, 45	& \ref{fig:DSC_NaSal100}	\\
+			CTAB 100 NaSal 250	& 35, 40, 45	& \ref{fig:DSC_NaSal250}	\\
+			CTAB 100 NaSal 60, 100, 250 & 35 	& \ref{fig:DSC_NaSal_Ur35}  \\
+			CTAB 100 NaSal 60, 100, 250 & 40	& \ref{fig:DSC_NaSal_Ur40}  \\
+			CTAB 100 NaSal 60, 100, 250	& 45	& \ref{fig:DSC_NaSal_Ur45}  \\
 			\bottomrule
-			\label{tab:refs_DSC}
-			\caption{Amostras analisadas e suas respectivas figuras}
+			\caption{Comparações realizadas e suas respectivas figuras} \\
+			\label{tab:refs_DSC} \\
 		\end{longtable}
 		
 		\begin{figure}[h]
@@ -104,20 +111,52 @@
 			\label{fig:DSC_Surf_300mm_45p}
 		\end{figure}
 	
-		%%%%%%%%% MG %%%%%%%%%%%%%%%%%%%%%
-		% CTAB 100 NaSal 60: 35, 40, 45%
-		% CTAB 100 NaSal 100: 35, 40, 45%
-		% CTAB 100 NaSal 260: 35, 40, 45%
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.45\textwidth]{./imagens/dsc/NaSal60}
+			\caption{Termogramas de soluções de NaSal 60\mM{} e CTAB 100 \mM{}, em 35\%, 40\% e 45\% (m/m) de ureia}
+			\label{fig:DSC_NaSal60}
+		\end{figure}
+	
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.45\textwidth]{./imagens/dsc/NaSal100}
+			\caption{Termogramas de soluções de NaSal 100\mM{} e CTAB 100 \mM{}, em 35\%, 40\% e 45\% (m/m) de ureia}
+			\label{fig:DSC_NaSal100}
+		\end{figure}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.45\textwidth]{./imagens/dsc/NaSal250}
+			\caption{Termogramas de soluções de NaSal 250\mM{} e CTAB 100 \mM{}, em 35\%, 40\% e 45\% (m/m) de ureia}
+			\label{fig:DSC_NaSal250}
+		\end{figure}
+	
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.45\textwidth]{./imagens/dsc/NaSal35}
+			\caption{Termogramas de soluções de NaSal 60, 100 e 250\mM{} e CTAB 100 \mM{}, em 35\% (m/m) de ureia}
+			\label{fig:DSC_NaSal_Ur35}
+		\end{figure}
+	
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.45\textwidth]{./imagens/dsc/NaSal40}
+			\caption{Termogramas de soluções de NaSal 60, 100 e 250\mM{} e CTAB 100 \mM{}, em 40\% (m/m) de ureia}
+			\label{fig:DSC_NaSal_Ur40}
+		\end{figure}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.45\textwidth]{./imagens/dsc/NaSal45}
+			\caption{Termogramas de soluções de NaSal 60, 100 e 250\mM{} e CTAB 100 \mM{}, em 45\% (m/m) de ureia}
+			\label{fig:DSC_NaSal_Ur45}
+		\end{figure}
+
+		% todo: colocar aqui uma tabela com as áreas de transição, dependendo da concentração de surfactante utilizado (mol), e uma estimativa da largura a meia altura de cada transição.
+		% todo: verificar se há bons métodos para determinar essa linha base. Senão, utilizar um valor medido na mão mesmo.
 		
-		% Efeito do tamanho da cadeia do surfactante	
-		% CTAB, TTAB, DTAB; 100, 200, 300 a 45% ureia
-		% CTAB, TTAB, DTAB; 100, 200, 300 a 40% ureia
-		
-		% Efeito da concentração de ureia
-		% CTAB100 de 38% a 45% de ureia
-		% CTAB300 de 38% a 45% de ureia (mandar fazer)
-		% CTAB400 de 35%, 40%, 45%
+		Qualitativamente, podemos observar que com o aumento de concentração de ureia, a temperatura de transição também aumenta (Figs. \ref{fig:DSC_CTAB_UR38-45}, \ref{fig:DSC_CTAB_UR40-45}, \ref{fig:DSC_TTAB_UR_40-45}, \ref{fig:DSC_DTAB_UR_40-45}, \ref{fig:DSC_NaSal60}, \ref{fig:DSC_NaSal100}, \ref{fig:DSC_NaSal250}). Além disso, vemos que CTAB e TTAB possuem temperaturas semelhantes de transição, maiores que DTAB (Figs. \ref{fig:DSC_Surf_100mm_45p}, \ref{fig:DSC_Surf_200mm_45p}, \ref{fig:DSC_Surf_300mm_45p}). As áreas de transição, e a largura dos picos são, também, proporcionais à concentração de surfactante utilizado. A adição de NaSal causa uma diminuição na temperatura de transição, especialmente visível em 250\mM{} de NaSal.
 		
 	\section{SAXS}
 	\section{DLS}
