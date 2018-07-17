@@ -24,31 +24,35 @@
 	\label{eqn:saxs_MG_superficial}
 	\end{equation}
 	% TODO: colocar refs às equações que definem alguns desses termos
-	\begin{longtable}[c]{r p{12cm}}
-		\toprule
-		Símbolo 			& Descrição        						\\
-		\midrule
-		$I$					& Intensidade de RX espalhado			\\
-		\q					& Vetor de espalhamento					\\
-		\midrule
-		$scale$				& Fator de escala						\\
-		$d_{head}$			& Espessura do \emph{shell}				\\
-		$r_{core}$			& Raio do \emph{core}					\\
-		$\rho_{rel}$		& Diferença de densidade eletrônica entre \emph{core} e \emph{shell} \\
-		$\sigma$			& Fator de \emph{smearing}, o quão definido é o limite entre regiões \\
-		$back$				& Constante referente ao \emph{background} \\
-		$L$					& Comprimento de contorno das cadeias 	\\
-		$k_L$				& Comprimento de \emph{Kuhn} das cadeias, igual ao dobro do comprimento de correlação \\ % TODO: Achar o que é esse comprimento exatamente
-		$\varepsilon$			& Excentricidade radial das micelas		\\
-		$D_{CQ}$			& Distância de correlação das micelas 	\\
-		$\nu_{RPA}$			& Fator de concentração					\\
-		\midrule
-		$SC_{pow}$			& Fator de escala (preexponencial) da exponencial em baixo q\\
-		$exp_{pow}$			& Fator exponencial, relativo à inclinação na escala log\\
-		\bottomrule
-		\caption{Símbolos e parâmetros utilizados no modelo, e seus significados}
-		\label{tab_ap:simbolos} 
-	\end{longtable}
+    \begin{table}
+        \IBGEtab%
+        {\caption{Símbolos e parâmetros utilizados no modelo, e seus significados}
+         \label{tab_ap:simbolos} }%
+        {\begin{tabular}{r p{8cm}}
+     	\toprule
+         Símbolo 			& Descrição        						\\
+         \midrule
+         $I$					& Intensidade de RX espalhado			\\
+         \q					& Vetor de espalhamento					\\
+         \midrule
+         $scale$				& Fator de escala						\\
+         $d_{head}$			& Espessura do \emph{shell}				\\
+         $r_{core}$			& Raio do \emph{core}					\\
+         $\rho_{rel}$		& Diferença de densidade eletrônica entre \emph{core} e \emph{shell} \\
+         $\sigma$			& Fator de \emph{smearing}, o quão definido é o limite entre regiões \\
+         $back$				& Constante referente ao \emph{background} \\
+         $L$					& Comprimento de contorno das cadeias 	\\
+         $k_L$				& Comprimento de \emph{Kuhn} das cadeias, igual ao dobro do comprimento de correlação \\ % TODO: Achar o que é esse comprimento exatamente
+         $\varepsilon$			& Excentricidade radial das micelas		\\
+         $D_{CQ}$			& Distância de correlação das micelas 	\\
+         $\nu_{RPA}$			& Fator de concentração					\\
+         \midrule
+         $SC_{pow}$			& Fator de escala (pre-exponencial) da exponencial em baixo q\\
+         $exp_{pow}$			& Fator exponencial, relativo à inclinação na escala log\\
+         \bottomrule
+        \end{tabular}}%
+        {}%
+    \end{table}
 	
 	A equação geral do modelo, e a descrição de seus fatores, estão descritos na Eq.\ref{eqn:saxs_MG_geral} e na Tab. \ref{tab_ap:fatores_geral}.
 	
@@ -57,17 +61,22 @@
 	\label{eqn:saxs_MG_geral}
 	\end{equation}
 	
-	\begin{longtable}[c]{r p{12cm}}
-		\toprule
-		Termo 			& Descrição        						\\
-		\midrule
-		$F_{KPchain_{ExV}}$  & Fator forma de cadeias de Kratky-Porod com volume excluído \\
-		$F_{rod_{CS}}$		 & Fator forma da seção transversão de um bastão	\\
-		$F_{sphere}(D_{CQ})$ & Fator forma de uma esfera, cujo raio é a distância de correlação \\
-		\bottomrule
-		\caption{Parâmetros da equação \ref{eqn:saxs_MG_geral}}
-		\label{tab_ap:fatores_geral} 
-	\end{longtable}
+    \begin{table}
+        \IBGEtab%
+        {\caption{Parâmetros da equação \ref{eqn:saxs_MG_geral}}
+         \label{tab_ap:fatores_geral} }%
+        {\begin{tabular}{r p{8cm}}
+        \toprule
+        Termo 			& Descrição        						\\
+        \midrule
+        $F_{KPchain_{ExV}}$  & Fator forma de cadeias de Kratky-Porod com volume excluído \\
+        $F_{rod_{CS}}$		 & Fator forma da seção transversão de um bastão	\\
+        $F_{sphere}(D_{CQ})$ & Fator forma de uma esfera, cujo raio é a distância de correlação \\
+        \bottomrule%
+        \end{tabular}}
+        {}%
+    \end{table}
+    
 	
 	Já o modelo do PRISM é descrito pela Eq. \ref{eqn:saxs_PRISM}. Note a similaridade com a Eq \ref{eqn:saxs_MG_geral}.
 	
@@ -76,21 +85,27 @@
 	\label{eqn:saxs_PRISM}
 	\end{equation}
 	
-	\begin{longtable}[c]{r p{12cm}}
-		\toprule
-		Termo 			& Descrição        						\\
-		\midrule
-		$\varphi$		& Fração volumétrica \\ % TODO: checar
-		$V_{mic}$		& Volume da micela   \\
-		$F_{wc}$		& Fator forma de uma \emph{wormlike chain} \\
-		$F_{cs}$		& Fator forma de uma seção transversal de cilindro \\ % TODO: checar se é cilindro
-		$F_{rod}$		& Fator forma de um bastão infinitamente longo \\
-		$L_{c(q)}$		& $=6\xi$, comprimento característico \\
-		$\xi$			& Comprimento de correlação da função $c(q) \approx F_{rod}$ \\
-		\bottomrule
-		\caption{Termos da equação \ref{eqn:saxs_PRISM}}
-		\label{tab_ap:PRISM_geral} 
-	\end{longtable}
+    \begin{table}
+        \IBGEtab{%
+       	\caption{Termos da equação \ref{eqn:saxs_PRISM}}
+        \label{tab_ap:PRISM_geral}}%
+        {%
+         \begin{tabular}{r p{8cm}}
+         \toprule
+         Termo 			& Descrição        						\\
+         \midrule
+         $\varphi$		& Fração volumétrica \\ % TODO: checar
+         $V_{mic}$		& Volume da micela   \\
+         $F_{wc}$		& Fator forma de uma \emph{wormlike chain} \\
+         $F_{cs}$		& Fator forma de uma seção transversal de cilindro \\ % TODO: checar se é cilindro
+         $F_{rod}$		& Fator forma de um bastão infinitamente longo \\
+         $L_{c(q)}$		& $=6\xi$, comprimento característico \\
+         $\xi$			& Comprimento de correlação da função $c(q) \approx F_{rod}$ \\
+         \bottomrule
+         \end{tabular}}%
+         {}%
+    \end{table}
+   
 	
 	A partir disso, podemos começar a adentrar nos termos.
 	
@@ -178,20 +193,24 @@
 	\end{equation}
 	
 	As constantes $C_1$, $C_2$, $C_3$, $C_4$ e $C_5$ foram obtidas a partir de um ajuste, e estão na tabela \ref{tab_ap:C1C5}.
-	
-	\begin{longtable}[c]{r l}
-		\toprule
-		Constante 			& Valor \\
-		\midrule
-		$C_1$			&  1,220	\\
-		$C_2$			&  0,4288	\\
-		$C_3$			&  --1,651	\\
-		$C_4$			&  1,523	\\
-		$C_5$			&  0,1477 	\\						
-		\bottomrule
-		\caption{Constantes}
-		\label{tab_ap:C1C5} 
-	\end{longtable}
+	\begin{table}
+        \IBGEtab%
+        {\caption{Constantes}
+        \label{tab_ap:C1C5} }%
+        {\begin{tabular}{r p{6cm}}
+          \toprule
+          Constante 	& Valor \\
+          \midrule
+          $C_1$			&  1,220	\\
+          $C_2$			&  0,4288	\\
+          $C_3$			&  --1,651	\\
+          $C_4$			&  1,523	\\
+          $C_5$			&  0,1477 	\\						
+          \bottomrule
+        \end{tabular}}%
+        {}%
+    \end{table}
+   
 	
 	\subsubsection{Fator de correção $\Gamma$}
 	
@@ -212,34 +231,37 @@
 	\label{eqn:Bi}
 	\end{equation}
 	
-	\begin{longtable}[c]{r l | r l | r l | r l}
-		\toprule
-		\endhead
-		$a_1$(2,0) & --0.1222 & $a_2$(2,1) & 0.1212 & $b_1$(0,0) &
-		--0.0699 & $b_2$(0,1) & --0.5171\\
-		$a_1$(3,0) & 0.3051 & $a_2$(3,1) & --0.4169 & $b_1$(1,0) & --0.09
-		& $b_2$(1,1) & --0.2028\\
-		$a_1$(4,0) & --0.0711 & $a_2$(4,1) & 0.1988 & $b_1$(2,0) &
-		0.2677 & $b_2$(2,1) & --0.3112\\
-		$a_1$(5,0) & 0.0584 & $a_2$(5,1) & 0.3435 & $b_1$(0,1) & 0.1342
-		& $b_2$(0,2) & 0.6950\\
-		$a_1$(2,1) & 1.761 & $a_2$(2,2) & 0.0170 & $b_1$(1,1) & 0.0138 &
-		$b_2$(1,2) & --0.3238\\
-		$a_1$(3,1) & 2.252 & $a_2$(3,2) & --0.4731 & $b_1$(2,1) & 0.1898
-		& $b_2$(2,2) & --0.5403\\
-		$a_1$(4,1) & --1.291 & $a_2$(4,2) & 0.1869 & $b_1$(0,2) & --0.2020
-		& &\\
-		$a_1$(5,1) & 0.6994 & $a_2$(5,2) & 0.3350 & $b_1$(1,2) & --0.0114
-		& &\\
-		$a_1$(2,2) & --26.04 & & & $b_1$(2,2) & 0.0123 & &\\
-		$a_1$(3,2) & 20.00 & & & & & &\\
-		$a_1$(4,2) & 4.382 & & & & & &\\
-		$a_1$(5,2) & 1.594 & & & & & &\\
-		\bottomrule
-		\caption{Constantes utilizadas para o cálculo de $\Gamma$}
-		\label{tab_ap:AiBi}
-	\end{longtable}
-	
+    \begin{table}[h]
+        \IBGEtab%
+        {\caption{Constantes utilizadas para o cálculo de $\Gamma$}
+        \label{tab_ap:AiBi}}%
+        {\begin{tabular}{r l | r l | r l | r l}
+        \toprule
+        $a_1$(2,0) & --0.1222 & $a_2$(2,1) & 0.1212 & $b_1$(0,0) &
+        --0.0699 & $b_2$(0,1) & --0.5171\\
+        $a_1$(3,0) & 0.3051 & $a_2$(3,1) & --0.4169 & $b_1$(1,0) & --0.09
+        & $b_2$(1,1) & --0.2028\\
+        $a_1$(4,0) & --0.0711 & $a_2$(4,1) & 0.1988 & $b_1$(2,0) &
+        0.2677 & $b_2$(2,1) & --0.3112\\
+        $a_1$(5,0) & 0.0584 & $a_2$(5,1) & 0.3435 & $b_1$(0,1) & 0.1342
+        & $b_2$(0,2) & 0.6950\\
+        $a_1$(2,1) & 1.761 & $a_2$(2,2) & 0.0170 & $b_1$(1,1) & 0.0138 &
+        $b_2$(1,2) & --0.3238\\
+        $a_1$(3,1) & 2.252 & $a_2$(3,2) & --0.4731 & $b_1$(2,1) & 0.1898
+        & $b_2$(2,2) & --0.5403\\
+        $a_1$(4,1) & --1.291 & $a_2$(4,2) & 0.1869 & $b_1$(0,2) & --0.2020
+        & &\\
+        $a_1$(5,1) & 0.6994 & $a_2$(5,2) & 0.3350 & $b_1$(1,2) & --0.0114
+        & &\\
+        $a_1$(2,2) & --26.04 & & & $b_1$(2,2) & 0.0123 & &\\
+        $a_1$(3,2) & 20.00 & & & & & &\\
+        $a_1$(4,2) & 4.382 & & & & & &\\
+        $a_1$(5,2) & 1.594 & & & & & &\\
+        \bottomrule
+       \end{tabular} }%
+        {}%
+    \end{table}
+    
 	\subsubsection{Fator forma de um cilindro $F_{rod}$}
 	
 	O fator forma de um cilindro segue a equação \ref{eqn:Frod}.
@@ -277,23 +299,27 @@
 	% Todo: padronizar essas equações
 	% Todo: verificar se o \varepsilon é a excentricidade
 	% Todo: verificar se Rc e Rs são funções de \varepsilon e \theta
-	\begin{longtable}[c]{r l}
-		\toprule
-		Parâmetro 			& Significado \\
-		\midrule
-		$\rho_S$			&  Densidade eletrônica do \emph{shell} \\
-		$\rho_C$			&  Densidade eletrônica do \emph{core}  \\
-		$\rho_w$			&  Densidade eletrônica da água			\\
-		$R_S$			& Raio do \emph{shell} 						\\
-		$R_C$			& Raio do \emph{core}						\\
-		$J_1$			&  Função de Bessel do primeiro tipo e de primeira ordem\\
-		$C_4$			&  1,523	\\
-		$C_5$			&  0,1477 	\\						
-		\bottomrule
-		\caption{Parâmetros para a equação \ref{eqn:Fcs}}
-		\label{tab_ap:Fcs} 
-	\end{longtable}
-	
+    
+    \begin{table}
+        \IBGEtab{\caption{Parâmetros para a equação \ref{eqn:Fcs}}
+        \label{tab_ap:Fcs} }%
+        {\begin{tabular}{r l}
+                \toprule
+                Parâmetro 			& Significado \\
+                \midrule
+                $\rho_S$			&  Densidade eletrônica do \emph{shell} \\
+                $\rho_C$			&  Densidade eletrônica do \emph{core}  \\
+                $\rho_w$			&  Densidade eletrônica da água			\\
+                $R_S$			& Raio do \emph{shell} 						\\
+                $R_C$			& Raio do \emph{core}						\\
+                $J_1$			&  Função de Bessel do primeiro tipo e de primeira ordem\\
+                $C_4$			&  1,523	\\
+                $C_5$			&  0,1477 	\\						
+                \bottomrule
+            \end{tabular}}%
+        {}%
+    \end{table}
+    
 	Os termos $R_S$ e $R_C$ podem ser calculados pelas expressões \ref{eqn:Rs} e \ref{eqn:Rc}
 	
 	\begin{equation}
