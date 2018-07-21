@@ -1,0 +1,666 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"script",
+				"script_commands"
+			],
+			[
+				"ori",
+				"original_image"
+			],
+			[
+				"orig",
+				"orig_size"
+			],
+			[
+				"r_boost_",
+				"r_boost_lower"
+			],
+			[
+				"channel",
+				"channel_adjust"
+			],
+			[
+				"add",
+				"addHandler"
+			],
+			[
+				"not_",
+				"not_following_id"
+			],
+			[
+				"not",
+				"not_following_id"
+			],
+			[
+				"not_fo",
+				"not_following_id"
+			],
+			[
+				"not_foll",
+				"not_following_user"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "tese.sublime-project",
+			"settings":
+			{
+				"buffer_size": 93,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "main.tex",
+			"settings":
+			{
+				"buffer_size": 13562,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ureia.tex",
+			"settings":
+			{
+				"buffer_size": 17548,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "main.fls",
+			"settings":
+			{
+				"buffer_size": 21840,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 125,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				"Script Builder"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"todo",
+				"TodoReview: Open Files"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"script",
+				"Build With: LaTeX - Script Builder"
+			],
+			[
+				"build scr",
+				"Build With: LaTeX - Script Builder"
+			],
+			[
+				"package ",
+				"Package Control: List Packages"
+			],
+			[
+				"package remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"color sch",
+				"UI: Select Color Scheme"
+			],
+			[
+				"pro",
+				"Project: Add Folder"
+			],
+			[
+				"proje",
+				"Project: Add Folder"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"latex",
+				"Build With: LaTeX - XeLaTeX"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
+				"package ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package control",
+				"Package Control: Remove Package"
+			],
+			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"color ",
+				"UI: Select Color Scheme"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"linter",
+				"Preferences: SublimeLinter Settings"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/karl/dados/gdrive/Doutorado/Tese"
+	],
+	"file_history":
+	[
+		"/home/karl/.config/sublime-text-3/Packages/TodoReview/TodoReview.sublime-settings",
+		"/home/karl/.cache/.fr-NSTQuL/README.md",
+		"/home/karl/dados/gdrive/Doutorado/Tese/main.xdv",
+		"/home/karl/dados/gdrive/Doutorado/Tese/main.fdb_latexmk",
+		"/home/karl/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/home/karl/.config/sublime-text-3/Packages/LaTeXBox/README.md",
+		"/home/karl/dados/gdrive/Doutorado/Tese/ureia.tex",
+		"/home/karl/dados/gdrive/Doutorado/Tese/main.tex",
+		"/home/karl/.config/sublime-text-3/Packages/LaTeXTools/README.markdown",
+		"/home/karl/dados/gdrive/Doutorado/Tese/main.log",
+		"/home/karl/dados/tutorials/notas/teste.markdown",
+		"/usr/share/applications/defaults.list",
+		"/usr/share/applications/mimeapps.list",
+		"/home/karl/dados/tutorials/notas/sublime_text_basics.md",
+		"/home/karl/dados/tutorials/notas/teste.MARKDOWN",
+		"/home/karl/dados/tutorials/notas/Hacking Classic Nintendo games with Python.md",
+		"/home/karl/dados/tutorials/notas/Using_Github_TravisCI_Collab.md",
+		"/home/karl/dados/tutorials/notas/Instagram Filters in Python.md",
+		"/home/karl/dados/tutorials/notas/expert_python.md",
+		"/home/karl/dados/Dropbox/Python/Curso/colormap.py",
+		"/home/karl/dados/gdrive/Doutorado/Exame Qualificação/main.tex",
+		"/home/karl/dados/tutorials/PhilipGuo/git.md",
+		"/home/karl/dados/tutorials/git.txt",
+		"/home/karl/dados/Dropbox/Python/Curso/dados-3/regex.txt",
+		"/home/karl/.config/texstudio/texstudio.ini-flatland",
+		"/home/karl/.config/texstudio/texstudio.ini-solarizedlight",
+		"/home/karl/.config/texstudio/texstudio.ini",
+		"/home/karl/.config/xm1/texmaker.ini",
+		"/home/karl/.config/xm1/texmakerapp.ini",
+		"/home/karl/dados/tutorials/python/maçantes.md",
+		"/home/karl/Desktop/grive/dest/overgrive",
+		"/home/karl/dados/tutorials/python/Jake VDP Exploratory Data Analysis with Vega.md",
+		"/home/karl/dados/Dropbox/Python/Curso/dados-2/Calorimetria.csv",
+		"/home/karl/dados/Dropbox/Python/Curso/dados-2/DSC.txt",
+		"/home/karl/dados/Dropbox/Python/Curso/dados-2/Reologia.txt",
+		"/home/karl/Desktop/teste.tex",
+		"/home/karl/dados/tutorials/python/Fundamentals of Numerical computing in Python.md",
+		"/home/karl/dados/tutorials/python/Solutions to everyday problems.md",
+		"/home/karl/dados/tutorials/python/logging.md",
+		"/home/karl/dados/tutorials/python/videos.txt",
+		"/home/karl/dados/tutorials/python/logging",
+		"/home/karl/.config/sublime-text-3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/karl/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/karl/dados/Dropbox/Python/insta_settings.txt",
+		"/home/karl/dados/Dropbox/Python/instagram_scraper.py",
+		"/home/karl/teste.py",
+		"/home/karl/Desktop/sublime_text_3/sublime_plugin.py"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"saxs",
+			"builder_settings",
+			"script",
+			"xelatex",
+			"subl",
+			"R",
+			"Shift",
+			"Ctrl",
+			"CT",
+			"TTAB",
+			"\\n ",
+			" +",
+			" *",
+			"]",
+			"[",
+			"(\\d),(\\d)",
+			"\\d(,)\\d",
+			"[forma",
+			"&t=\\d*s&index=\\d*",
+			"&list=WL"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\\n",
+			" ",
+			"",
+			"\\1.\\2",
+			".",
+			"\\1.",
+			"\\g<1>.",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "tese.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 93,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								93,
+								93
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "main.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13562,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "ureia.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								406,
+								406
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2295.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "main.fls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21840,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4156.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								125,
+								125
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 102.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 187.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 108.0
+	},
+	"pinned_build_system": "",
+	"project": "tese.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				".gi",
+				".gitignore"
+			],
+			[
+				"main.xd",
+				"main.xdv"
+			],
+			[
+				"main.f",
+				"main.fdb_latexmk"
+			],
+			[
+				"main.fls",
+				"main.fls"
+			],
+			[
+				"ureia.tex",
+				"ureia.tex"
+			],
+			[
+				"main.tex",
+				"main.tex"
+			],
+			[
+				"urei",
+				"ureia.tex"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 278.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
