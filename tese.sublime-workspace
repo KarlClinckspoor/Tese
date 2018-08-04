@@ -24,7 +24,7 @@
 			"file": "ureia.tex",
 			"settings":
 			{
-				"buffer_size": 19232,
+				"buffer_size": 18504,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -90,6 +90,34 @@
 		"selected_items":
 		[
 			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"script",
+				"Build With: LaTeX - Script Builder"
+			],
+			[
+				"view",
+				"LaTeXTools: View PDF"
+			],
+			[
 				"package control us",
 				"Preferences: Package Control Settings – User"
 			],
@@ -136,10 +164,6 @@
 			[
 				"script bui",
 				"Build With: LaTeX - Script Builder"
-			],
-			[
-				"list pa",
-				"Package Control: List Packages"
 			],
 			[
 				"remove p",
@@ -202,10 +226,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"color",
-				"UI: Select Color Scheme"
-			],
-			[
 				"packag",
 				"Package Control: List Packages"
 			],
@@ -234,15 +254,17 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Google Drive/Doutorado/Tese"
+		"/C/Users/Karl/Google Drive/Doutorado/Tese"
 	],
 	"file_history":
 	[
+		"/C/Users/Karl/Dropbox/linux/notas/Semana 1 Curso estatística com R do Coursera.md",
+		"/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
+		"/C/Users/Karl/Google Drive/Doutorado/Tese/tese.sublime-project",
 		"/D/Dropbox/Linux/Package Control.sublime-settings",
 		"/D/Google Drive/Doutorado/Tese/apendices.tex",
 		"/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/LaTeXYZ/README.md",
 		"/D/Google Drive/Doutorado/Tese/tese.sublime-project",
-		"/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
 		"/D/Google Drive/Doutorado/Tese/main.log",
 		"/D/Google Drive/Doutorado/Tese/main.tex",
 		"/D/Google Drive/Doutorado/Tese/ureia.tex",
@@ -285,7 +307,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -310,10 +332,10 @@
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 216.0,
+						"translation.y": 3906.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -322,29 +344,35 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19232,
+						"buffer_size": 18504,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11677,
-								11677
+								17918,
+								17918
 							]
 						],
 						"settings":
 						{
+							"SL.14.region_keys":
+							[
+							],
 							"SL.16.region_keys":
+							[
+							],
+							"SL.33.region_keys":
 							[
 							],
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 3445.0,
+						"translation.y": 12061.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -443,7 +471,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 246.0,
+	"side_bar_width": 203.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
