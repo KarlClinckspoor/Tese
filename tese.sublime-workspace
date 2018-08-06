@@ -15,7 +15,7 @@
 			"file": "main.tex",
 			"settings":
 			{
-				"buffer_size": 13562,
+				"buffer_size": 13658,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -24,9 +24,17 @@
 			"file": "ureia.tex",
 			"settings":
 			{
-				"buffer_size": 18504,
+				"buffer_size": 20958,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/User/ActualVim.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 976,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -90,32 +98,16 @@
 		"selected_items":
 		[
 			[
-				"markd",
-				"Set Syntax: Markdown"
+				"vim",
+				"ActualVim: Disable (Global)"
 			],
 			[
-				"python",
-				"Set Syntax: Python"
+				"actual",
+				"ActualVim: Enable (Global)"
 			],
 			[
-				"color",
-				"UI: Select Color Scheme"
-			],
-			[
-				"list pa",
-				"Package Control: List Packages"
-			],
-			[
-				"list",
-				"Package Control: List Packages"
-			],
-			[
-				"script",
-				"Build With: LaTeX - Script Builder"
-			],
-			[
-				"view",
-				"LaTeXTools: View PDF"
+				"install",
+				"Package Control: Install Package"
 			],
 			[
 				"package control us",
@@ -166,16 +158,16 @@
 				"Build With: LaTeX - Script Builder"
 			],
 			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
 				"remove p",
 				"Package Control: Remove Package"
 			],
 			[
 				"instal",
 				"Package Control: Install Package"
-			],
-			[
-				"install",
-				"Package Control: Advanced Install Package"
 			],
 			[
 				"ui",
@@ -226,6 +218,10 @@
 				"Package Control: Install Package"
 			],
 			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
 				"packag",
 				"Package Control: List Packages"
 			],
@@ -238,7 +234,7 @@
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 430.0,
 		"history":
 		[
 		]
@@ -254,17 +250,15 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Karl/Google Drive/Doutorado/Tese"
+		"/D/Google Drive/Doutorado/Tese"
 	],
 	"file_history":
 	[
-		"/C/Users/Karl/Dropbox/linux/notas/Semana 1 Curso estatística com R do Coursera.md",
-		"/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
-		"/C/Users/Karl/Google Drive/Doutorado/Tese/tese.sublime-project",
 		"/D/Dropbox/Linux/Package Control.sublime-settings",
 		"/D/Google Drive/Doutorado/Tese/apendices.tex",
 		"/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/LaTeXYZ/README.md",
 		"/D/Google Drive/Doutorado/Tese/tese.sublime-project",
+		"/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
 		"/D/Google Drive/Doutorado/Tese/main.log",
 		"/D/Google Drive/Doutorado/Tese/main.tex",
 		"/D/Google Drive/Doutorado/Tese/ureia.tex",
@@ -307,7 +301,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -316,15 +310,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13562,
+						"buffer_size": 13658,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1403,
-								1404
+								0,
+								0
 							]
 						],
 						"settings":
@@ -332,10 +326,10 @@
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 3906.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -344,15 +338,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 18504,
+						"buffer_size": 20958,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								17918,
-								17918
+								16283,
+								16283
 							]
 						],
 						"settings":
@@ -363,13 +357,43 @@
 							"SL.16.region_keys":
 							[
 							],
-							"SL.33.region_keys":
-							[
-							],
+							"actual_mode": true,
+							"av_input": true,
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 12061.0,
+						"translation.y": 5200.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/User/ActualVim.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								175,
+								175
+							]
+						],
+						"settings":
+						{
+							"actual_mode": false,
+							"av_input": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -471,7 +495,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 203.0,
+	"side_bar_width": 246.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

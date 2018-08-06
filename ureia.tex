@@ -329,7 +329,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		
 \section{SAXS}
 
-	Foram realizadas análises de SAXS para determinar a estrutura da fase branca. Foi avaliado o papel do comprimento da cadeia e da concentração de surfactante (Figs. \ref{fig:SAXS_ctabconc}, \ref{fig:SAXS_ttabconc}, \ref{fig:SAXS_dtabconc}) e o efeito da concentração de ureia (Fig. \ref{fig:SAXS_ctab300ur37-45}). Além disso, foram analisadas amostras a 50°C para obter informações sobre a fase transparente (Fig. \ref{fig:SAXS_surf50c}).
+	Foram realizadas análises de SAXS para determinar a estrutura da fase branca. Foi avaliado o papel do comprimento da cadeia e da concentração de surfactante (Figs. \ref{fig:SAXS_ctabconc}, \ref{fig:SAXS_ttabconc}, \ref{fig:SAXS_dtabconc}).
 	
 	\begin{figure}[H]
 		\centering
@@ -352,12 +352,35 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\label{fig:SAXS_dtabconc}
 	\end{figure}
 	
+		Para analisar a fase presente, é necessário indexar os picos. Isso é, determinar os valores de \q{} de seus máximos e observar a relação entre eles. Dependendo da relação, é possível afirmar que há um tipo de mesofase. Por exemplo, lamelas possuem espaçamento $1:2:3$, já fases hexagonais possuem espaçamento $1:\sqrt{3}:2:\sqrt{7}$. Em todas as curvas mostradas aqui, o espaçamento segue a regra $1:2:3$, ou seja, são observadas lamelas.
+	
+	Para se determinar o parâmetro de rede de lamelas, que é a distância de repetição, utiliza-se a equação \ref{eqn:SAXS_param_rede} utilizando o valor do pico de menor \q{} para o cálculo.
+	
+	% todo: colocar uma figura aqui mostrando o que é a distância de repetição
+	% todo: colocar uma foto das lamelas
+	
+	\begin{equation}
+	d = \frac{2\pi}{q}
+	\label{eqn:SAXS_param_rede}
+	\end{equation}
+	
+	As distâncias de repetição estão ilustradas junto com os valores dos picos nas figuras. É possível observar que as distâncias se tornam menores a medida que a concentração de surfactante aumenta, possivelmente porque mais surfactante resulta também em menos solvente. Além disso, é possível que a carga das micelas se torne menor devido à presença de mais contraíons em solução. Observa-se também que os picos se tornam melhor definidos e aparentemente menos largos com mais surfactante. É interessante notar que DTAB possui picos muito bem definidos em 300 \mM, e que sua distância de repetição é muito menor que os outros casos. A espessura dos picos está inversamente relacionada com o tamanho dos ``cristalitos'', de acordo com a equação de Scherrer. Logo, o aumento de concentração de surfactante também aumenta 
+
+	% todo: encontrar a equação de Scherrer	
+	% todo: pesquisar um termo melhor que cristalito.
+	
+	Também foi analisado o efeito da concentração de ureia em amostras de 300 \mM{} de CTAB (Fig. \ref{fig:SAXS_ctab300ur37-45}).
+	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\textwidth]{imagens/saxs/CTAB300Ur37-45}
 		\caption{Curvas de SAXS de CTAB 300 \mM{} em concentrações crescentes de ureia, com os parâmetros de rede calculados com o primeiro pico.}
 		\label{fig:SAXS_ctab300ur37-45}
 	\end{figure}
+	
+	Interessantemente, a adição de ureia aparenta diminuir o tamanho dos cristalitos, tanto que o trio de picos na faixa de \q{} acima de 1 nm\textsuperscript{-1} se junta, formando uma banda só em concentrações de ureia acima de 39\%. Observamos também que a distância de repetição é um pouco afetada pela adição de ureia, aumentando de 14,5 para 18,3 nm.
+	
+	Além disso, foram analisadas amostras a 50°C para obter informações sobre a fase transparente (Fig. \ref{fig:SAXS_surf50c}). Para comparação, a Fig. \ref{fig:SAXS_micelas_esfericas} mostra os padrões de espalhamento de micelas em água para os três surfactantes, a 100, 200 e 300 \mM.
 	
 	\begin{figure}[H]
 		\centering
@@ -371,16 +394,45 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\includegraphics[width=0.7\textwidth]{imagens/saxs/micelas_esfericas}
 		\caption{Curvas de SAXS de CTAB, TTAB e DTAB 100, 200 e 300 \mM{} em água, mostrando o perfil característico de micelas esféricas carregadas.}
 		\label{fig:SAXS_micelas_esfericas}
+	\end{figure}  % todo: extrair os ``tamanhos'' dessas micelas, possivelmente por ajuste com o SUPERSAXS, e colocar em uma tabela aqui.
+
+	Observa-se que os padrões de espalhamento se alteraram drasticamente, e que o padrão para CTAB e TTAB são bastante diferentes. Não foi possível medir DTAB pois havia muito pouco contraste. Foi estimado um tamanho para esses agregados pela equação \ref{eqn:SAXS_param_rede}. Por esse parâmetro, vemos que essas estruturas são menores que as estruturas lamelares vistas anteriormente. É necessário, porém, realizar um ajuste nesses dados para obter uma informação confiável sobre tamanho.
+	% todo: verificar porque não foi possível medir o DTAB de verdade.
+	
+	Na seção X, mostra-se que há estruturas com um tamanho de aproximadamente 100-300 nm e outras com tamanhos de 3-5 nm. Devido às soluções serem transparentes, isotrópicas e pouco viscosas, e possuírem estruturas nessa faixa de tamanho, chegamos à conclusão que ocorre uma transição lamela-micela esférica. Logo, é interessante comparar o perfil de espalhamento das micelas em água, da figura \ref{fig:SAXS_micelas_esfericas}, com o perfil de micelas+lamelas da figura \ref{fig:SAXS_surf50c}. Observamos que as curvas de micelas esféricas possuem um perfil característico de micelas carregadas, com um pico referente à repulsão eletrostática e outro referente ao tamanho das micelas.
+	
+	Caso a ureia removesse íons da superfície das micelas observaríamos um aumento da repulsão eletrostática entre as mesmas, que possivelmente poderia esconder o perfil do tamanho das micelas. A figura \ref{fig:SAXS_com_sem_ureia} mostra uma comparação de CTAB e TTAB com e sem ureia.
+	
+	\begin{figure}[H]
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{./imagens/saxs/micelas_CTAB_agua_ureia}
+			\caption{CTAB}
+			\label{fig:SAXS_CTAB_com_sem_ureia}
+		\end{subfigure} \qquad %
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{./imagens/saxs/micelas_TTAB_agua_ureia}
+			\caption{TTAB}
+			\label{fig:SAXS_TTAB_com_sem_ureia}
+		\end{subfigure}
+		\caption{Curvas de SAXS de CTAB (\ref{fig:SAXS_CTAB_com_sem_ureia}) e TTAB (\ref{fig:SAXS_TTAB_com_sem_ureia}) em água a 25°C e em ureia 45\% a 50°C}
+		\label{fig:SAXS_com_sem_ureia}
 	\end{figure}
+
+	% todo: colocar uma boa discussão sobre a diferença nos perfis de (C|T|D)TAB com o aumento da concentração de surfactante. 
+	% todo: checar o artigo que estuda micelas esféricas carregadas e sem carga. Lutz-Bueno2017.
+	% todo: colocar o label da seção e comparar com os resultados dos tamanhos de DLS observados.
+
+	Os padrões de espalhamento para os surfactantes sólidos estão na Fig. \ref{fig:SAXS_surf_sólido}.
 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\textwidth]{imagens/saxs/surfactante_solido}
-		\caption{Curvas de SAXS de CTAB, TTAB e DTAB sólidos}
+		\caption{Curvas de SAXS de CTAB, TTAB e DTAB sólidos, a 25°C}
 		\label{fig:SAXS_surf_sólido}
-	\end{figure}
-
-
+	\end{figure}  % todo: extrair os ``tamanhos'' dessas micelas, possivelmente por ajuste com o SUPERSAXS, e colocar em uma tabela aqui.
+	
 \section{DLS}
 \section{Reologia do sólido}
 \section{Entalpia de interação de ureia com surfactante}
