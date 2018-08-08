@@ -392,7 +392,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	Observa-se que os padrões de espalhamento se alteraram drasticamente, e que o padrão para CTAB e TTAB são bastante diferentes. Não foi possível medir DTAB pois havia muito pouco contraste.
 	% todo: verificar porque não foi possível medir o DTAB de verdade.
 	
-	Essas soluções são pouco viscosas, transparentes e isotrópicas. Essas características sugerem que há alguma estrutura como micelas esféricas, micelas cilíndricas curtas ou vesículas nessas soluções. Seria interessante comparar os perfis de espalhamento da estruturas similares, e a maneira mais fácil de realizar isso é medir soluções com a mesma composição de surfactante, mas sem ureia. A Fig. \ref{fig:SAXS_micelas_esfericas} mostra os padrões de espalhamento de micelas em água para os três surfactantes, a 100, 200 e 300 \mM.
+	Essas soluções são pouco viscosas, transparentes e isotrópicas. Essas características sugerem que há alguma estrutura como micelas esféricas, micelas cilíndricas curtas ou vesículas nessas soluções. Seria interessante comparar os perfis de espalhamento da estruturas similares, e a maneira mais fácil de realizar isso é medir soluções com a mesma concentração de surfactante, mas sem ureia. A Fig. \ref{fig:SAXS_micelas_esfericas} mostra os padrões de espalhamento de micelas em água para os três surfactantes, a 100, 200 e 300 \mM.
 	
 	\begin{figure}[H]
 		\centering
@@ -402,7 +402,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	\end{figure}  % todo: extrair os ``tamanhos'' dessas micelas, possivelmente por ajuste com o SUPERSAXS, e colocar em uma tabela aqui.
 	
 	% ref: Lutz-Bueno2017
-	Observa-se o perfil característico de micelas carregadas, com um pico do correlação $q_{corr}$ em valores de \q{} menores e outro pico estrutural (\q{} maior). Quanto mais carregadas forem as micelas, maior será o pico de correlação. A Fig. \ref{fig:SAXS_ctab_q_corrs} mostra os picos de correlação. 
+	Observa-se o perfil característico de micelas carregadas, com um pico do correlação $q_{corr}$ em valores de \q{} menores e outro pico estrutural (\q{} maior). Quanto mais carregadas forem as micelas, maior será o pico de correlação. A Fig. \ref{fig:SAXS_ctab_q_corrs} evidencia os picos de correlação. 
 	
 	\begin{figure}[H]
 		\centering
@@ -413,39 +413,50 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 
 	Utilizando a equação \ref{eqn:SAXS_param_rede}, é possível encontrar a distância intermicelar média. A tabela X mostra as distâncias intermicelares calculadas por esse método.
 	
-	\begin{table}
+%	\begin{table}
+%		\IBGEtab%
+%		{\caption{Distâncias intermicelares $d_{im}$ de soluções de micelas esféricas de (C|T|D)TAB 100, 200, 300 \mM{} calculadas a partir da eq. \ref{eqn:SAXS_param_rede}}
+%		\label{tab:SAXS_dim}}%
+%		{\begin{tabular}{p{3cm} p{3cm} p{0.1cm}}
+%			\toprule
+%			\centering Solução  & \centering $d_{im}$/nm & \\ 
+%			\midrule
+%			\centering CTAB 100  & \centering  12,5    & \\
+%			\centering CTAB 200  & \centering  10,4    & \\
+%			\centering CTAB 300  & \centering  9,57    & \\ 
+%			\midrule
+%			\centering TTAB 100  & \centering 9,71    & \\
+%			\centering TTAB 200  & \centering 8,26    & \\
+%			\centering TTAB 300  & \centering 7,55    & \\ 
+%			\midrule
+%			\centering DTAB 100  & \centering 9,44    & \\
+%			\centering DTAB 200  & \centering 7,14    & \\
+%			\centering DTAB 300  & \centering 6,31    & \\ 
+%			\bottomrule
+%		\end{tabular}}%
+%		{}
+%	\end{table} % todo: pensar se é possível estruturar essa tabela com Surf nas linhas e conc nas colunas, ou o contrário.
+%	% por algum motivo esta coluna extra na tabela é necessária.
+	
+		\begin{table}
 		\IBGEtab%
-		{\caption{Distâncias intermicelares $d_{im}$ de soluções de micelas esféricas de (C|T|D)TAB 100, 200, 300 \mM{} calculadas a partir de SAXS}
-		\label{tab:SAXS_dim}}%
-		{\begin{tabular}{p{3cm} p{3cm} p{0.1cm}}
+		{\caption{Distâncias intermicelares $d_{im}$/nm de soluções de micelas esféricas de (C|T|D)TAB 100, 200, 300 \mM{} calculadas a partir da eq. \ref{eqn:SAXS_param_rede}}
+			\label{tab:SAXS_dim}}%
+		{\begin{tabular}{c c c c}
 			\toprule
-			\centering Solução  & \centering $d_{im}$/nm & \\ 
+			Concentração  &	CTAB	& TTAB & 	DTAB  \\
 			\midrule
-			\centering CTAB 100  & \centering  12,5    & \\
-			\centering CTAB 200  & \centering  10,4    & \\
-			\centering CTAB 300  & \centering  9,57    & \\ 
-			\midrule
-			\centering TTAB 100  & \centering 9,71    & \\
-			\centering TTAB 200  & \centering 8,26    & \\
-			\centering TTAB 300  & \centering 7,55    & \\ 
-			\midrule
-			\centering DTAB 100  & \centering 9,44    & \\
-			\centering DTAB 200  & \centering 7,14    & \\
-			\centering DTAB 300  & \centering 6,31    & \\ 
+			100 &	12.49	& 9.711	& 9.448   \\
+			200 &	10.45	& 8.267& 	7.148   \\
+			300	& 9.578	& 7.552& 	6.315   \\
 			\bottomrule
 		\end{tabular}}%
 		{}
-	\end{table} % todo: pensar se é possível estruturar essa tabela com Surf nas linhas e conc nas colunas, ou o contrário.
-	% por algum motivo esta coluna extra na tabela é necessária.
+	\end{table}  % todo: utilizar o SUPERSAXS pra tentar fitar esses dados
 	
-	Observamos então que a distância intermicellar diminui com o aumento da concentração de surfactante, possivelmente porque a presença de uma maior quantidade de contraíons diminui a carga superficial micelar, logo a repulsão intermicelar diminui.
+	Observamos então que a distância intermicellar diminui com o aumento da concentração de surfactante, possivelmente porque a presença de uma maior quantidade de contraíons diminui a carga superficial micelar, logo a repulsão intermicelar diminui. Considerando esse fato, há uma semelhança entre as curvas das soluções de surfactante com ureia a 50°C (Fig. \ref{fig:SAXS_surf50c}) e as soluções de surfactante em água a 25°C (Fig. \ref{fig:SAXS_micelas_esfericas}). Se as micelas estiverem com menos íons adsorvidos, o pico de correlação $q_{corr}$ se tornará mais intenso, sendo possível até obscurecer o pico estrutural. As curvas estão comparadas na figura \ref{fig:SAXS_com_sem_ureia}.
 	
-	% todo: verificar se essa explicação é a mesma do artigo da Viviane.
-	
-	%%%%%%%%%%
-	Na seção X, mostra-se que há estruturas com um tamanho de aproximadamente 100-300 nm e outras com tamanhos de 3-5 nm. Devido às soluções serem transparentes, isotrópicas e pouco viscosas, e possuírem estruturas nessa faixa de tamanho, chegamos à conclusão que ocorre uma transição lamela-micela esférica. Logo, é interessante comparar o perfil de espalhamento das micelas em água, da figura \ref{fig:SAXS_micelas_esfericas}, com o perfil de micelas+lamelas da figura \ref{fig:SAXS_surf50c}. Observamos que as curvas de micelas globulares possuem um perfil característico de micelas carregadas, com um pico referente à repulsão eletrostática e outro referente ao tamanho das micelas.
-	%%%%%%%%%%
-	Caso a ureia removesse íons da superfície das micelas observaríamos um aumento da repulsão eletrostática entre as mesmas, que possivelmente poderia esconder o perfil do tamanho das micelas. A figura \ref{fig:SAXS_com_sem_ureia} mostra uma comparação de CTAB e TTAB com e sem ureia.
+	% todo: encontrar palavra melhor que obscurecer
 	
 	\begin{figure}[H]
 		\begin{subfigure}[t]{0.45\textwidth}
@@ -463,12 +474,16 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\caption{Curvas de SAXS de CTAB (\ref{fig:SAXS_CTAB_com_sem_ureia}) e TTAB (\ref{fig:SAXS_TTAB_com_sem_ureia}) em água a 25°C e em ureia 45\% a 50°C}
 		\label{fig:SAXS_com_sem_ureia}
 	\end{figure}
+	
+	Vemos então a grande similaridade das curvas. Há diferenças na intensidade de espalhamento, provavelmente devido à composição diferente das regiões espalhadoras e devido à uma mudança na temperatura. Na região de baixo \q{} da Fig. \ref{fig:SAXS_TTAB_com_sem_ureia} há uma queda que não existe nas outras curvas. Isso pode ser um erro experimental, devido à uma subtração pouco ideal do \emph{background}, ou também pode haver estruturas maiores nessa amostra, possivelmente vesículas. Dessa maneira, há fortes indícios que ao se aquecer a solução, ocorre uma transição lamela---micela esférica.
+	% todo: verificar se essa explicação é a mesma do artigo da Viviane.
+	% todo: colocar o label dessa seção.
+	
+	Na seção \ref{sec:Ureia-DLS}, mostra-se que em temperaturas elevadas, há estruturas com um tamanho de aproximadamente 100-300 nm e outras com tamanhos de 3-5 nm. Esses dados foram obtidos por espalhamento dinâmico de luz. Isso reforça a ideia de que há estruturas pequenas, micelares, nessa temperatura.
 
-	% todo: colocar uma boa discussão sobre a diferença nos perfis de (C|T|D)TAB com o aumento da concentração de surfactante. 
-	% todo: checar o artigo que estuda micelas esféricas carregadas e sem carga. Lutz-Bueno2017.
-	% todo: colocar o label da seção e comparar com os resultados dos tamanhos de DLS observados.
-
-	Os padrões de espalhamento para os surfactantes sólidos estão na Fig. \ref{fig:SAXS_surf_sólido}.
+	% todo: colocar uma boa discussão sobre a diferença nos perfis de (C|T|D)TAB com o aumento da concentração de surfactante.
+	 
+	De modo a comparar as estruturas lamelares observadas com a estrutura lamelar do surfactante puro, obteve-se as curvas de SAXS dos três surfactantes sólidos. Os padrões de espalhamento para os surfactantes sólidos estão na Fig. \ref{fig:SAXS_surf_sólido}.
 
 	\begin{figure}[H]
 		\centering
@@ -477,6 +492,10 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\label{fig:SAXS_surf_sólido}
 	\end{figure}  % todo: extrair os ``tamanhos'' dessas micelas, possivelmente por ajuste com o SUPERSAXS, e colocar em uma tabela aqui.
 	
+	Testou-se as seguintes fases: H2, Fd3m, Pn3m, Im3m, Pm3n, la3d, P4332, Primitiva, Fm3m e lamelar. Nenhuma dessas fases teve picos coincidentes com os picos mostrados na figura. Portanto, não é possível realizar uma comparação direta com as curvas.
+	
+	É possível calcular a espessura lamelar a partir de considerações envolvendo o volume total ocupado pelas moléculas de surfactante e o volume de solvente, sabendo-se a distância interlamelar. Isso necessita, porém, conhecer exatamente a composição das fases, para que os cálculos sejam corretos. A natureza esbranquiçada das fases formadas sugere que ocorre espalhamento de luz de vários centros espalhadores pequenos. Além disso, observou-se que a consistência e a intensidade da cor branca é dependente da concentração de ureia. Isso sugere que, ao invés de ocorrer a formação de lamelas homogeneamente na fase, ocorre a formação de pequenos agregados lamelares dispersos, que espalham luz. A quantidade de agregados seria proporcional também é quantidade de luz espalhada, logo, quanto maior for a concentração de ureia, maior é a quantidade de agregados formados. 
 \section{DLS}
+\label{sec:Ureia-DLS}
 \section{Reologia do sólido}
 \section{Entalpia de interação de ureia com surfactante}
