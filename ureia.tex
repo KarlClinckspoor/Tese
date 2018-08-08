@@ -380,7 +380,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	
 	Interessantemente, a adição de ureia aparenta diminuir o tamanho dos cristalitos, tanto que o trio de picos na faixa de \q{} acima de 1 nm\textsuperscript{-1} se junta, formando uma banda só em concentrações de ureia acima de 39\%. Observamos também que a distância de repetição é um pouco afetada pela adição de ureia, aumentando de 14,5 para 18,3 nm.
 	
-	Além disso, foram analisadas amostras a 50°C para obter informações sobre a fase transparente (Fig. \ref{fig:SAXS_surf50c}). Para comparação, a Fig. \ref{fig:SAXS_micelas_esfericas} mostra os padrões de espalhamento de micelas em água para os três surfactantes, a 100, 200 e 300 \mM.
+	Além disso, foram analisadas amostras a 50°C para obter informações sobre a fase transparente (Fig. \ref{fig:SAXS_surf50c}).
 	
 	\begin{figure}[H]
 		\centering
@@ -389,18 +389,62 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\label{fig:SAXS_surf50c}
 	\end{figure}
 
+	Observa-se que os padrões de espalhamento se alteraram drasticamente, e que o padrão para CTAB e TTAB são bastante diferentes. Não foi possível medir DTAB pois havia muito pouco contraste.
+	% todo: verificar porque não foi possível medir o DTAB de verdade.
+	
+	Essas soluções são pouco viscosas, transparentes e isotrópicas. Essas características sugerem que há alguma estrutura como micelas esféricas, micelas cilíndricas curtas ou vesículas nessas soluções. Seria interessante comparar os perfis de espalhamento da estruturas similares, e a maneira mais fácil de realizar isso é medir soluções com a mesma composição de surfactante, mas sem ureia. A Fig. \ref{fig:SAXS_micelas_esfericas} mostra os padrões de espalhamento de micelas em água para os três surfactantes, a 100, 200 e 300 \mM.
+	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\textwidth]{imagens/saxs/micelas_esfericas}
-		\caption{Curvas de SAXS de CTAB, TTAB e DTAB 100, 200 e 300 \mM{} em água, mostrando o perfil característico de micelas esféricas carregadas.}
+		\caption{Curvas de SAXS de CTAB, TTAB e DTAB 100, 200 e 300 \mM{} em água, mostrando o perfil característico de micelas globulares carregadas.}
 		\label{fig:SAXS_micelas_esfericas}
 	\end{figure}  % todo: extrair os ``tamanhos'' dessas micelas, possivelmente por ajuste com o SUPERSAXS, e colocar em uma tabela aqui.
+	
+	% ref: Lutz-Bueno2017
+	Observa-se o perfil característico de micelas carregadas, com um pico do correlação $q_{corr}$ em valores de \q{} menores e outro pico estrutural (\q{} maior). Quanto mais carregadas forem as micelas, maior será o pico de correlação. A Fig. \ref{fig:SAXS_ctab_q_corrs} mostra os picos de correlação. 
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagens/saxs/CTAB_q_corrs}
+		\caption{Curvas de SAXS de CTAB 100, 200 e 300 \mM{} em água, evidenciando os picos de correlação.}
+		\label{fig:SAXS_ctab_q_corrs}
+	\end{figure}
 
-	Observa-se que os padrões de espalhamento se alteraram drasticamente, e que o padrão para CTAB e TTAB são bastante diferentes. Não foi possível medir DTAB pois havia muito pouco contraste. Foi estimado um tamanho para esses agregados pela equação \ref{eqn:SAXS_param_rede}. Por esse parâmetro, vemos que essas estruturas são menores que as estruturas lamelares vistas anteriormente. É necessário, porém, realizar um ajuste nesses dados para obter uma informação confiável sobre tamanho.
-	% todo: verificar porque não foi possível medir o DTAB de verdade.
+	Utilizando a equação \ref{eqn:SAXS_param_rede}, é possível encontrar a distância intermicelar média. A tabela X mostra as distâncias intermicelares calculadas por esse método.
 	
-	Na seção X, mostra-se que há estruturas com um tamanho de aproximadamente 100-300 nm e outras com tamanhos de 3-5 nm. Devido às soluções serem transparentes, isotrópicas e pouco viscosas, e possuírem estruturas nessa faixa de tamanho, chegamos à conclusão que ocorre uma transição lamela-micela esférica. Logo, é interessante comparar o perfil de espalhamento das micelas em água, da figura \ref{fig:SAXS_micelas_esfericas}, com o perfil de micelas+lamelas da figura \ref{fig:SAXS_surf50c}. Observamos que as curvas de micelas esféricas possuem um perfil característico de micelas carregadas, com um pico referente à repulsão eletrostática e outro referente ao tamanho das micelas.
+	\begin{table}
+		\IBGEtab%
+		{\caption{Distâncias intermicelares $d_{im}$ de soluções de micelas esféricas de (C|T|D)TAB 100, 200, 300 \mM{} calculadas a partir de SAXS}
+		\label{tab:SAXS_dim}}%
+		{\begin{tabular}{p{3cm} p{3cm} p{0.1cm}}
+			\toprule
+			\centering Solução  & \centering $d_{im}$/nm & \\ 
+			\midrule
+			\centering CTAB 100  & \centering  12,5    & \\
+			\centering CTAB 200  & \centering  10,4    & \\
+			\centering CTAB 300  & \centering  9,57    & \\ 
+			\midrule
+			\centering TTAB 100  & \centering 9,71    & \\
+			\centering TTAB 200  & \centering 8,26    & \\
+			\centering TTAB 300  & \centering 7,55    & \\ 
+			\midrule
+			\centering DTAB 100  & \centering 9,44    & \\
+			\centering DTAB 200  & \centering 7,14    & \\
+			\centering DTAB 300  & \centering 6,31    & \\ 
+			\bottomrule
+		\end{tabular}}%
+		{}
+	\end{table} % todo: pensar se é possível estruturar essa tabela com Surf nas linhas e conc nas colunas, ou o contrário.
+	% por algum motivo esta coluna extra na tabela é necessária.
 	
+	Observamos então que a distância intermicellar diminui com o aumento da concentração de surfactante, possivelmente porque a presença de uma maior quantidade de contraíons diminui a carga superficial micelar, logo a repulsão intermicelar diminui.
+	
+	% todo: verificar se essa explicação é a mesma do artigo da Viviane.
+	
+	%%%%%%%%%%
+	Na seção X, mostra-se que há estruturas com um tamanho de aproximadamente 100-300 nm e outras com tamanhos de 3-5 nm. Devido às soluções serem transparentes, isotrópicas e pouco viscosas, e possuírem estruturas nessa faixa de tamanho, chegamos à conclusão que ocorre uma transição lamela-micela esférica. Logo, é interessante comparar o perfil de espalhamento das micelas em água, da figura \ref{fig:SAXS_micelas_esfericas}, com o perfil de micelas+lamelas da figura \ref{fig:SAXS_surf50c}. Observamos que as curvas de micelas globulares possuem um perfil característico de micelas carregadas, com um pico referente à repulsão eletrostática e outro referente ao tamanho das micelas.
+	%%%%%%%%%%
 	Caso a ureia removesse íons da superfície das micelas observaríamos um aumento da repulsão eletrostática entre as mesmas, que possivelmente poderia esconder o perfil do tamanho das micelas. A figura \ref{fig:SAXS_com_sem_ureia} mostra uma comparação de CTAB e TTAB com e sem ureia.
 	
 	\begin{figure}[H]
