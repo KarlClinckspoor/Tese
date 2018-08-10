@@ -187,44 +187,39 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
         	{Temperaturas de transição ($T$/°C), áreas de transição por mol de surfactante ($A$/$J.mol^{-1}$) e largura a meia altura dos picos de transição ($L$/°C) dos ciclos de aquecimento (\emph{aq}) e resfriamento (\emph{res}) para três surfactantes (Surf.), CTAB, TTAB, DTAB, cujas concentrações estão em \mM, em várias concentrações \% (m/m) de ureia}
         \label{tab:DSC_temp_areas}}%
         {\begin{tabular}{ccccccccc}
-            \toprule
-			\% Ur. & Surf. & $C_{surf}$ & $T_{aq}$ & $T_{res}$ & $A_{aq}$ & $A_{res}$ & $L_{aq}$ & $L_{res}$ \\
-			\midrule
-			38     & CTAB  & 100        & 30,5     & 19,3      & 2,67     & 2,68      & 5,6      & 	3,0      \\
-			39     & CTAB  & 100        & 32,5     & 25,2      & 2,28     & 2,30      & 6,4      & 	2,4      \\
-			40     & CTAB  & 100        & 33,3     & 25,1      & 4,73     & 4,41      & 5,6      & 	3,0      \\
-			41     & CTAB  & 100        & 34,1     & 27,2      & 1,74     & 1,77      & 5,3      & 	1,6      \\
-			42     & CTAB  & 100        & 37,5     & 29,6      & 2,71     & 2,75      & 6,0      & 	1,9      \\
-			43     & CTAB  & 100        & 38,7     & 31,1      & 2,10     & 2,10      & 5,4      & 	1,8      \\
-			44     & CTAB  & 100        & 40,2     & 34,6      & 1,86     & 1,85      & 4,9      & 	1,6      \\
-			45     & CTAB  & 100        & 41,0     & 34,6      & 2,04     & 2,02      & 4,6      & 	1,5      \\
-			\midrule
-			40     & CTAB  & 200        & 31,6     & 23,6      & 4,75     & 4,81      & 6,4      & 	2,4      \\
-			45     & CTAB  & 200        & 41,6     & 34,9      & 1,72     & 1,92      & 10,3     & 3,5       \\
-			40     & CTAB  & 300        & 31,7     & 24,8      & 4,84     & 4,79      & 5,3      & 	1,6      \\
-			45     & CTAB  & 300        & 41,4     & 32,8      & 2,40     & 2,44      & 15,4     & 5,8       \\
-			% 35   & CTAB  & 400        & 21,9     & 21,9      & 2,93     & 1,52      & 24,0     & 12,3      \\
-			% 40   & CTAB  & 400        & 36,4     & 26,5      & 2,99     & 1,78      & 23,3     & 7,4       \\
-			% 45   & CTAB  & 400        & 43,4     & 33,6      & 3,79     & 3,74      & 21,7     & 7,4       \\
-			\midrule
-			40     & DTAB  & 100        & 26,7     & 22,5      & 1,77     & 1,71      & 6,0      & 1,9       \\
-			45     & DTAB  & 100        & 33,0     & 30,1      & 1,39     & 1,48      & 2,5      & 1,1       \\
-			40     & DTAB  & 200        & 27,4     & 22,8      & 2,34     & 2,27      & 5,4      & 1,8       \\
-			45     & DTAB  & 200        & 33,4     & 30,0      & 1,83     & 1,88      & 6,3      & 2,8       \\
-			40     & DTAB  & 300        & 26,2     & 21,5      & 1,87     & 1,93      & 4,9      & 1,6       \\
-			45     & DTAB  & 300        & 33,5     & 29,8      & 2,04     & 2,13      & 10,6     & 3,7       \\
-			\midrule
-			40     & TTAB  & 100        & 31,9     & 26,4      & 4,94     & 5,04      & 4,6      & 1,5       \\
-			45     & TTAB  & 100        & 37,8     & 34,7      & 2,25     & 2,29      & 4,7      & 1,6       \\
-			40     & TTAB  & 200        & 31,9     & 25,3      & 3,94     & 4,00      & 10,3     & 3,5       \\
-			45     & TTAB  & 200        & 37,4     & 33,8      & 1,85     & 1,90      & 8,8      & 2,6       \\
-			40     & TTAB  & 300        & 29,8     & 26,5      & 4,81     & 4,61      & 15,4     & 5,8       \\
-			45     & TTAB  & 300        & 37,8     & 33,2      & 2,03     & 2,06      & 14,0     & 4,1       \\
-            \bottomrule
-            \end{tabular}}%
+        	\toprule
+        	        Surf.         &      $C_{surf}$      & \% Ur. & $T_{aq}$ & $T_{res}$ & $A_{aq}$ & $A_{res}$ & $L_{aq}$ & $L_{res}$ \\ \midrule
+        	\multirow{8}{*}{CTAB} & \multirow{8}{*}{100} &   38   &   30,5   &   19,3    &   2,67   &   2,68    &   5,6    &    3,0    \\
+        	                      &                      &   39   &   32,5   &   25,2    &   2,28   &   2,30    &   6,4    &    2,4    \\
+        	                      &                      &   40   &   33,3   &   25,1    &   4,73   &   4,41    &   5,6    &    3,0    \\
+        	                      &                      &   41   &   34,1   &   27,2    &   1,74   &   1,77    &   5,3    &    1,6    \\
+        	                      &                      &   42   &   37,5   &   29,6    &   2,71   &   2,75    &   6,0    &    1,9    \\
+        	                      &                      &   43   &   38,7   &   31,1    &   2,10   &   2,10    &   5,4    &    1,8    \\
+        	                      &                      &   44   &   40,2   &   34,6    &   1,86   &   1,85    &   4,9    &    1,6    \\
+        	                      &                      &   45   &   41,0   &   34,6    &   2,04   &   2,02    &   4,6    &    1,5    \\ \midrule
+        	\multirow{4}{*}{CTAB} &         200          &   40   &   31,6   &   23,6    &   4,75   &   4,81    &   6,4    &    2,4    \\
+        	                      &         200          &   45   &   41,6   &   34,9    &   1,72   &   1,92    &   10,3   &    3,5    \\
+        	                      &         300          &   40   &   31,7   &   24,8    &   4,84   &   4,79    &   5,3    &    1,6    \\
+        	                      &         300          &   45   &   41,4   &   32,8    &   2,40   &   2,44    &   15,4   &    5,8    \\ \midrule
+        	\multirow{6}{*}{DTAB} &         100          &   40   &   26,7   &   22,5    &   1,77   &   1,71    &   6,0    &    1,9    \\
+        	                      &         100          &   45   &   33,0   &   30,1    &   1,39   &   1,48    &   2,5    &    1,1    \\
+        	                      &         200          &   40   &   27,4   &   22,8    &   2,34   &   2,27    &   5,4    &    1,8    \\
+        	                      &         200          &   45   &   33,4   &   30,0    &   1,83   &   1,88    &   6,3    &    2,8    \\
+        	                      &         300          &   40   &   26,2   &   21,5    &   1,87   &   1,93    &   4,9    &    1,6    \\
+        	                      &         300          &   45   &   33,5   &   29,8    &   2,04   &   2,13    &   10,6   &    3,7    \\ \midrule
+        	\multirow{6}{*}{TTAB} &         100          &   40   &   31,9   &   26,4    &   4,94   &   5,04    &   4,6    &    1,5    \\
+        	                      &         100          &   45   &   37,8   &   34,7    &   2,25   &   2,29    &   4,7    &    1,6    \\
+        	                      &         200          &   40   &   31,9   &   25,3    &   3,94   &   4,00    &   10,3   &    3,5    \\
+        	                      &         200          &   45   &   37,4   &   33,8    &   1,85   &   1,90    &   8,8    &    2,6    \\
+        	                      &         300          &   40   &   29,8   &   26,5    &   4,81   &   4,61    &   15,4   &    5,8    \\
+        	                      &         300          &   45   &   37,8   &   33,2    &   2,03   &   2,06    &   14,0   &    4,1    \\ \bottomrule
+        \end{tabular}}%
         {}
     \end{table}
-    
+  % 35  &         CTAB          &    400     &   21,9   &   21,9    &   2,93   &   1,52    &   24,0   &   12,3    \\
+  % 40  &         CTAB          &    400     &   36,4   &   26,5    &   2,99   &   1,78    &   23,3   &    7,4    \\
+  % 45  &         CTAB          &    400     &   43,4   &   33,6    &   3,79   &   3,74    &   21,7   &    7,4    \\ \midrule 
+  
     \begin{table}[H]
       \IBGEtab%
       {\caption{Temperaturas de transição ($T$/°C), áreas de transição por mol de surfactante ($A$/$J.mol^{-1}$) e largura a meia altura dos picos de transição ($L$/°C) dos ciclos de aquecimento (\emph{aq}) e resfriamento (\emph{res}) para CTAB com NaSal, cujas concentrações estão em \mM, em três concentrações \% (m/m) de ureia}
@@ -488,14 +483,95 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\textwidth]{imagens/saxs/surfactante_solido}
-		\caption{Curvas de SAXS de CTAB, TTAB e DTAB sólidos, a 25°C}
+		\caption{Curvas de SAXS de CTAB, TTAB e DTAB sólidos, a 25°C. O \emph{inset} mostra o perfil de espalhamento em valores baixos de \q}
 		\label{fig:SAXS_surf_sólido}
 	\end{figure}  % todo: extrair os ``tamanhos'' dessas micelas, possivelmente por ajuste com o SUPERSAXS, e colocar em uma tabela aqui.
 	
-	Testou-se as seguintes fases: H2, Fd3m, Pn3m, Im3m, Pm3n, la3d, P4332, Primitiva, Fm3m e lamelar. Nenhuma dessas fases teve picos coincidentes com os picos mostrados na figura. Portanto, não é possível realizar uma comparação direta com as curvas.
+	Testou-se a indexação das seguintes fases utilizando o programa SGI: H2, Fd3m, Pn3m, Im3m, Pm3n, la3d, P4332, Primitiva, Fm3m e lamelar. Nenhuma dessas fases teve picos coincidentes com os picos mostrados na figura. Portanto, não é possível realizar uma comparação direta com os padrões de espalhamento para as fases lamelares observadas (Figs. \ref{fig:SAXS_ctabconc}, \ref{fig:SAXS_ttabconc}, \ref{fig:SAXS_dtabconc}, \ref{fig:SAXS_ctab300ur37-45}).
 	
-	É possível calcular a espessura lamelar a partir de considerações envolvendo o volume total ocupado pelas moléculas de surfactante e o volume de solvente, sabendo-se a distância interlamelar. Isso necessita, porém, conhecer exatamente a composição das fases, para que os cálculos sejam corretos. A natureza esbranquiçada das fases formadas sugere que ocorre espalhamento de luz de vários centros espalhadores pequenos. Além disso, observou-se que a consistência e a intensidade da cor branca é dependente da concentração de ureia. Isso sugere que, ao invés de ocorrer a formação de lamelas homogeneamente na fase, ocorre a formação de pequenos agregados lamelares dispersos, que espalham luz. A quantidade de agregados seria proporcional também é quantidade de luz espalhada, logo, quanto maior for a concentração de ureia, maior é a quantidade de agregados formados. 
+	% todo: colocar a referência do artigo do guilherme
+	É possível calcular a espessura lamelar ($d_{\text{HC}}$) a partir da distância interlamelar $d$, considerando-se a fração volumétrica de surfactante $\phi_s$. Seguindo o método adaptado de X, a fração volumétrica de surfactante pode ser obtida pela Eq. \ref{eqn:SAXS_frac_volum}, cujos parâmetros estão explicados na tabela \ref{tab:ur_fracvol_descr}.
+	
+	\begin{equation}
+		\phi_s = \dfrac{V_{\textit{HC}}\left( \dfrac{w_{s}}{M_{s}} \right)}{\left( V_{\textit{HC}} + V_{P} \right)\dfrac{w_{s}}{M_{s}} + V_{w}\dfrac{w_{w}}{M_{w}} + V_{\textit{ur}}\dfrac{w_{\textit{ur}}}{M_{\textit{ur}}}}
+		\label{eqn:SAXS_frac_volum}
+	\end{equation}
+
+	\begin{table}[H]
+		\IBGEtab{\caption{Descrições das variáveis da equação \ref{eqn:SAXS_frac_volum} \label{tab:ur_fracvol_descr}}}
+		{\begin{tabular}{r l}
+				\toprule
+				Variável 					&	Descrição									\\
+				\midrule
+				$s$ 						& 	Fração volumétrica de surfactante			\\
+				$V_{\textit{HC}}$			& 	Volume molar parcial da cadeia alquílica do surfactante \\
+				$V_{P}$						& 	Volume molar parcial da cabeça do surfactante \\
+				$w_{s}$						& 	Fração mássica de surfactante 				\\
+				$M_{s}$						&   Massa molar do surfactante					\\
+				\midrule
+				$V_{w}$						&   Volume molar parcial de água				\\
+				$w_{w}$						&	Fração mássica de água						\\
+				$M_{w}$						&	Massa molar da água							\\
+				\midrule
+				$V_{\textit{ur}}$			&	Volume molar parcial de ureia				\\
+				$w_{\textit{ur}}$			&	Fração mássica de ureia						\\
+				$M_{\textit{ur}}$			&	Massa molar da ureia						\\
+				\bottomrule
+			\end{tabular}
+		}%
+		{}%
+	\end{table}
+	
+	% todo: colocar como que esses valores podem ser estimados
+	
+	Para se calcular a espessura lamelar, utiliza-se a equação \ref{eqn:SAXS_espessura_lamelar}.
+	
+	\begin{equation} \label{eqn:SAXS_espessura_lamelar}
+		d_{\text{HC}} = \phi_sd
+	\end{equation}
+	
+	Isso necessita, porém, conhecer exatamente a composição das fases, para que os cálculos sejam corretos.	A natureza esbranquiçada das fases formadas sugere que ocorre espalhamento de luz de vários centros espalhadores pequenos, e que a fase lamelar não homogeneamente formada pela solução. Isso é compatível com a baixa concentração de surfactante no meio.
+	
+	Além disso, observou-se que a consistência e a intensidade da cor branca é dependente da concentração de ureia e de surfactante. Isso sugere que mais agregados lamelares são formados quanto maior for a concentração de ureia e de surfactante. Seria necessário, então, separar a fase lamelar da fase aquosa, o que é realizado por centrifugação.
+	                   
+	% todo: verificar quem é que foi o mais resistente
+	Quanto maior era a concentração de ureia, maior era a resistência das amostras à centrifugação. Além disso, foi necessário utilizar forças de 50000g (aproximadamente 25000 rpm) para realizar a separação das fases num tempo de algumas horas, pois velocidades de 5000 rpm não foram capazes de separar as fases. As partes superiores foram separadas das partes inferiores, onde estavam as lamelas, e foi feita uma correlação da massa de lamela e a massa do solvente. A partir disso, seria possível calcular a espessura lamelar com a concentração efetiva de surfactante formando a lamela.
+	
+	Foi realizado um experimento com 35\% (m/m) de ureia de modo a diminuir o tempo de centrifugação. A tabela \ref{tab:SAXS_centrifug_ur35} mostra as massas obtidas para ambas as fases após a centrifugação de amostras de (C|T|D)TAB 100, 200 e 300 \mM{}.
+	
+	\begin{table}[H]
+		\IBGEtab%
+		{
+			\caption{Massas das fases líquidas $m_{\text{líquido}}$ e sólidas (lamelas) $m_{\text{sólido}}$ de amostras de (C|T|D)TAB nas concentrações de 100, 200 e 300 \mM{} em 35\% de ureia. $m_{\text{extra}}$ é a massa de surfactante descontada da fase lamelar.}
+			
+			\label{tab:SAXS_centrifug_ur35}
+		}
+		{
+			\begin{tabular}{c c | c c c c}
+				\toprule
+				        Surf.         & $c_{\text{surf}}$/\mM & $m_{\text{líquido}}$/g & $m_{\text{sólido}}$/g & $m_{\text{surf}}$/g & $m_{\text{extra}}$/g \\ \midrule
+				\multirow{3}{*}{CTAB} & 99,7                  & 2,5251                 & 2,4681                & 0,1608              & 2,3073               \\
+				                      & 199,2                 & 2,8278                 & 2,1766                & 0,3118              & 1,8648               \\
+				                      & 299,5                 & 2,9638                 & 2,0391                & 0,4544              & 1,5847               \\ \midrule
+				\multirow{3}{*}{TTAB} & 103,6                 & 3,6639                 & 1,3548                & 0,1551              & 1,1997               \\
+				                      & 199,3                 & 3,6479                 & 1,3523                & 0,2891              & 1,0632               \\
+				                      & 296,6                 & 3,6396                 & 1,3628                & 0,4186              & 0,9442               \\ \midrule
+				\multirow{3}{*}{DTAB} & 97,6                  & 4,5646                 & 0,4443                & 0,1342              & 0,3101               \\
+				                      & 195,8                 & 4,5670                 & 0,4405                & 0,2622              & 0,1783               \\
+				                      & 299,9                 & 4,5839                 & 0,4347                & 0,3916              & 0,0431               \\ \bottomrule
+			\end{tabular}
+		}
+		{}
+	\end{table}
+	
+	É interessante observar que a massa da fase lamelar parece ser independente da concentração de surfactante, ou seja, a quantidade de ureia no meio está determinando a concentração da fase lamelar produzida. O CTAB parece ser uma exceção, porem isso pode se dever ao fato de que, mesmo com as velocidades de rotação utilizadas, não foi possível completar a separação. Além disso, observou-se que com o resfriamento da solução de 3°C (para 17°C), ocorreu a formação de mais fase lamelar, visualmente diferente da fase compacta formada após a centrifugação. Possivelmente, há uma proporção entre surfactante e ureia que está compondo essa fase, ou seja, ainda há tanto ureia como surfactante na fase límpida que foi removida após a centrifugação.
+	
+	Dessa maneira, não é possível realizar um cálculo da espessura lamelar, pois não foi possível quantificar a concentração das espécies. Caso os cálculos sejam realizados, a estimativa da espessura lamelar será muito menor do que um valor real, devido à superestimação da concentração de surfactante, gerando valores menores que o comprimento da cadeia de surfactante.
+	
 \section{DLS}
 \label{sec:Ureia-DLS}
+
+	De modo a obter informações complementares sobre as soluções em temperaturas elevadas, foram realizadas medidas de DLS a 
+
 \section{Reologia do sólido}
 \section{Entalpia de interação de ureia com surfactante}
