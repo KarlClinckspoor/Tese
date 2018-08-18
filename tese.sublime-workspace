@@ -11,32 +11,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "main.tex",
-			"settings":
-			{
-				"buffer_size": 13658,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ureia.tex",
-			"settings":
-			{
-				"buffer_size": 20958,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/User/ActualVim.sublime-settings",
-			"settings":
-			{
-				"buffer_size": 976,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"build_system_choices":
@@ -97,6 +71,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"python",
+				"Set Syntax: Python"
+			],
 			[
 				"vim",
 				"ActualVim: Disable (Global)"
@@ -254,14 +232,16 @@
 	],
 	"file_history":
 	[
+		"/D/Google Drive/Doutorado/Tese/main.tex",
+		"/D/Google Drive/Doutorado/Tese/ureia.tex",
+		"/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/User/ActualVim.sublime-settings",
+		"/D/t/teste/instagram_scraper.py",
 		"/D/Dropbox/Linux/Package Control.sublime-settings",
 		"/D/Google Drive/Doutorado/Tese/apendices.tex",
 		"/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/LaTeXYZ/README.md",
 		"/D/Google Drive/Doutorado/Tese/tese.sublime-project",
 		"/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
 		"/D/Google Drive/Doutorado/Tese/main.log",
-		"/D/Google Drive/Doutorado/Tese/main.tex",
-		"/D/Google Drive/Doutorado/Tese/ureia.tex",
 		"/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/SublimeMagick/SublimeMagick.sublime-settings",
 		"/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/User/SublimeMagick.sublime-settings",
 		"/D/Dropbox/LaTeX/teste.tex",
@@ -270,7 +250,7 @@
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -284,13 +264,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"'",
+			"',"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"",
+			"\\n"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -301,110 +285,14 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "main.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13658,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 216.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "ureia.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 20958,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								16283,
-								16283
-							]
-						],
-						"settings":
-						{
-							"SL.14.region_keys":
-							[
-							],
-							"SL.16.region_keys":
-							[
-							],
-							"actual_mode": true,
-							"av_input": true,
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 5200.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/Karl/AppData/Roaming/Sublime Text 3/Packages/User/ActualVim.sublime-settings",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 976,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								175,
-								175
-							]
-						],
-						"settings":
-						{
-							"actual_mode": false,
-							"av_input": false,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 40.0
+		"height": 27.0
 	},
 	"input":
 	{
