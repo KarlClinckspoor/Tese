@@ -686,18 +686,23 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 %\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Reologia do sólido}
+% todo: pensar se eu devo colocar dados sobre reologia, já que tem somente dados com salicilato, e se eu devo fazer mais experimentos com o sólido sozinho.
 
-Amostras de ureia abaixo da temperatura de transição foram analisadas no reômetro e os resultados estão na Figura. X
+%\section{Reologia do sólido}
+%
+%Amostras de ureia abaixo da temperatura de transição foram analisadas no reômetro e os resultados estão na Figura. X
 
 \section{Entalpia de interação de ureia com surfactante}
 
-	De modo a investigar a espontaneidade da interação entre ureia e micelas de TTAB, foram realizadas titulações calorimétricas isotérmicas de ureia sobre uma solução de TTAB 12 \mM, e foi descontado o valor da titulação de ureia em água. Utilizou-se concentrações crescentes de ureia, de 40 a 160 \mM. Não foi possível testar concentrações maiores de ureia, semelhantes às condições experimentais dos experimentos das seções anteriores, porque o calor de interação se tornava muito intenso.
+	De modo a investigar a espontaneidade da interação entre ureia e micelas de TTAB, foram realizadas titulações calorimétricas isotérmicas de ureia sobre uma solução de TTAB 12 \mM, e foi descontado o valor da titulação de ureia em água. Utilizou-se concentrações crescentes de ureia, de 40 a 160 \mM. Não foi possível testar concentrações maiores de ureia, semelhantes às condições experimentais das seções anteriores, porque o calor de interação se tornava muito intenso. A Fig. \ref{fig:itc_interacaoUrSurf_entalpograma} mostra os entalpogramas com o branco já descontado, obtidos em função da concentração de ureia na cela. Foram realizados ajustes lineares  dessas curvas para se obter o valor do intercepto quando a concentração de ureia tende a zero. Os valores estão na Fig. \ref{fig:itc_interacaoUrSurf_intercepto}.
+	
+	%É possível exibir este gráfico em função do número da titulação ou da concentração de TTAB na cela, porém a maneira apresentada se mostra mais relevante.
+	% todo: colocar o snippet que tratou isso.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{imagens/itc/interacao_ureia_surf}
-	\caption{Entalpogramas da titulação de ureia em TTAB 12\mM, com o calor normalizado pela concentração de surfactante na cela. As linhas contínuas são ajustes lineares.}
+	\caption{Entalpogramas da titulação de ureia em TTAB 12\mM, com o calor normalizado pela concentração de surfactante na cela e com subtração do branco. As linhas contínuas são ajustes lineares.}
 	\label{fig:itc_interacaoUrSurf_entalpograma}
 \end{figure}
 
@@ -709,3 +714,172 @@ Amostras de ureia abaixo da temperatura de transição foram analisadas no reôm
 	\label{fig:itc_interacaoUrSurf_intercepto}
 \end{figure}
 
+	Podemos observar que os valores para as concentrações menores de ureia são iguais entre si, cerca de 7.8 J por mol de surfactante na cela. Somente quando a concentração se torna muito alta, o valor de interação diminui. Esse valor é bastante pequeno, indicando que a interação de ureia com o grupo trimetilamônio, nessas condições, é pouco intensa. Para comparação, a Fig. \ref{fig:itc_interacaoUrAgua} mostra os brancos de titulação de ureia em água. Observamos que esses valores são maiores que os valores calculados para a interação surfactante-ureia.
+	
+	% todo: esses calores são endotérmicos. Qual seria a explicação? São assim melhores? Não seria melhor algo o quanto mais negativo possível?
+	% todo: pensar se vale a pena colocar os RAW ITCs para mostrar que os dados foram bem adquiridos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{imagens/itc/interacao_branco}
+	\caption{Entalpogramas da titulação de ureia em água}
+	\label{fig:itc_interacaoUrAgua}
+\end{figure}
+	
+	 Para facilitar a comparação, a Fig. \ref{fig:itc_comparativo_tit_ureia_agua_ureia_ttab} mostra os calores registrados pelo equipamento tanto na titulação de ureia em água quanto na titulação de ureia em TTAB 12 \mM. 
+	 
+\begin{figure}[H]
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{imagens/itc/interacao_branco_dq}
+		\caption{Titulação ureia em água}
+		\label{fig:itc_interacaoUreiaAguaDq}
+	\end{subfigure} \qquad%
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{imagens/itc/interacao_ureia_surf_dq}
+		\caption{Titulação ureia em TTAB 12\mM{} com subtração do branco}
+		\label{fig:itc_interacaoUreiaSurfDq}
+	\end{subfigure}
+
+	\caption{Calores experimentais sem normalização para as titulações de ureia em água e em solução de TTAB 12\mM. A Fig. \ref{fig:itc_interacaoUreiaAguaDq} faz paralelo com a Fig. \ref{fig:itc_interacaoUrAgua} e a Fig. \ref{fig:itc_interacaoUreiaSurfDq} faz paralelo com a Fig. 
+	\ref{fig:itc_interacaoUrSurf_entalpograma}. As retas representam a tendência de cada curva, obtidas através de um ajuste linear.}
+	\label{fig:itc_comparativo_tit_ureia_agua_ureia_ttab}
+\end{figure}
+	
+	Há uma notável semelhança entre as curvas \ref{fig:itc_interacaoUreiaAguaDq} e \ref{fig:itc_interacaoUrAgua}, com primariamente um deslocamento nos valores absolutos das curvas, pois não houve a normalização pela concentração de espécie na cela. Já a Fig. \ref{fig:itc_interacaoUreiaSurfDq} difere grandemente da Fig. \ref{fig:itc_interacaoUrSurf_entalpograma} principalmente porque a concentração de TTAB diminui no decorrer da titulação, então o valor de $\Delta H/J.mol^{-1} \text{de surfactante na cela}$ difere de $\Delta q/J$. Vemos o mesmo padrão, com as curvas de 40, 80 e 120 \mM{} de ureia na seringa partindo do mesmo ponto e a curva de 160 \mM{} de ureia na seringa paralela à curva de 120 \mM.
+	
+	% todo: achar uma referencia pra entalpia de mistura com ureia.
+	
+	A entalpia de dissolução de ureia em água é negativa, como foi observado durante a mistura dos componentes durante o preparo de amostra. Logo, é razoável que a entalpia de diluição de ureia também seja, pois interações ureia-ureia e ureia-água estão sendo trocadas por interações ureia-água e água-água, respectivamente.
+	
+	% todo: colocar a referência da seção onde foram medidas as CMCs de TTAB em ureia.
+	
+	Foi levantada também a hipótese de que a ureia está aumentando a concentração micelar crítica do surfactante, levando à sua desmicelização durante a titulação com TTAB. Porém, o aumento da CMC somente ocorre de maneira apreciável em concentrações muito maiores de ureia, então os efeitos observados devem ser somente devido à interação de micelas de TTAB com ureia.
+	
+	% todo: colocar as curvas de ``branco''.
+	O código utilizado para gerar a Fig. \ref{fig:itc_interacaoUrSurf_entalpograma} se encontra a seguir. As outras figuras foram geradas com códigos semelhantes, alterando-se os valores de y da linha 38.
+	
+%	\begin{minted}{python}
+%
+%import pandas as pd
+%import matplotlib.pyplot as plt
+%import numpy as np
+%import os
+%import glob
+%import re
+%from uncertainties import ufloat
+%import locale
+%locale.setlocale(locale.LC_ALL, '')
+%import matplotlib as mpl
+%mpl.rcParams.update({'font.size': 14, 'text.usetex':False, 'text.latex.unicode':True})
+%mpl.rcParams.update({'mathtext.fontset':'dejavusans'})
+%mpl.rcParams['axes.formatter.use_locale'] = True
+%
+%def linear(x, slp, inter):
+%    return inter + slp * x
+%
+%c_surf = 12.107     # mmol/L
+%V_cela = 240e-6     # L
+%
+%conc_ur = re.compile(r'\d?\d\dmM')
+%fig2, ax2 = plt.subplots(1, 1, figsize=(9,6))
+%colors = [f'C{i}' for i in range(10, -1, -1)]
+%
+%arquivos = glob.glob(r'./csv/convertidos/*csv')
+%brancos = [i for i in arquivos if 'ctrl' in i]
+%experimentos = [i for i in arquivos if 'ctrl' not in i]
+%experimentos = [i for i in experims if ' - 2' not in i]
+%
+%for exp in experimentos:
+%    df = pd.read_csv(exp)
+%    df = df.iloc[1:,:]
+%    Cur = conc_ur.findall(exp)[0].replace('mM', ' mmol.L$^{-1}$')
+%    df_br = pd.read_csv(brancos_unique[Cur])
+%    df_br = df_br.iloc[1:, :]
+%    nome = f'{Cur}'
+%    x = df['Xt'] * 1e-3
+%    y = (df['DQ'] - df_br['DQ']) * 1e-6 / (df['Mt'] * 1e-3 * V_cela)  # (Real - branco)uJ / (n Surf. cela)
+%    
+%    p, cov = np.polyfit(x, y, deg=1, full=False, cov=True)
+%    errs = np.sqrt(np.diag(cov))
+%    
+%    u_int = ufloat(p[1], errs[1])
+%    u_slp = ufloat(p[0], errs[0])
+%    y_vals_errs = [linear(i, u_slp, u_int) for i in x]
+%    y_vals = [i.nominal_value for i in y_vals_errs]
+%    y_errs = [i.std_dev for i in y_vals_errs]
+%    
+%    color = colors.pop()
+%    ax2.plot(x, y, linewidth=0, markersize=5, marker='o', label=nome, color=color)
+%    ax2.errorbar(x, y_vals, yerr=y_errs, color=color, capsize=3)
+%
+%ax2.legend(ncol=2, fontsize='small', title='Conc. Ureia')
+%ax2.set_xlabel('Concentração de ureia na cela/mol.L$^{-1}$')
+%ax2.set_ylabel('$\Delta H$/J.mol$^{-1}$ de surfactante na cela')
+%ax2.set_title('TTAB 12 mmol.L$^{-1}$', loc='right')
+%	\end{minted}
+
+\begin{listing}[H]
+	\begin{minted}{python}
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import os
+import glob
+import re
+from uncertainties import ufloat
+import locale
+locale.setlocale(locale.LC_ALL, '')
+import matplotlib as mpl
+mpl.rcParams.update({'font.size': 14, 'text.usetex':False, 'text.latex.unicode':True})
+mpl.rcParams.update({'mathtext.fontset':'dejavusans'})
+mpl.rcParams['axes.formatter.use_locale'] = True
+
+def linear(x, slp, inter):
+return inter + slp * x
+
+c_surf = 12.107     # mmol/L
+V_cela = 240e-6     # L
+
+conc_ur = re.compile(r'\d?\d\dmM')
+fig2, ax2 = plt.subplots(1, 1, figsize=(9,6))
+colors = [f'C{i}' for i in range(10, -1, -1)]
+
+arquivos = glob.glob(r'./csv/convertidos/*csv')
+brancos = [i for i in arquivos if 'ctrl' in i]
+experimentos = [i for i in arquivos if 'ctrl' not in i]
+experimentos = [i for i in experims if ' - 2' not in i]
+
+for exp in experimentos:
+df = pd.read_csv(exp)
+df = df.iloc[1:,:]
+Cur = conc_ur.findall(exp)[0].replace('mM', ' mmol.L$^{-1}$')
+df_br = pd.read_csv(brancos_unique[Cur])
+df_br = df_br.iloc[1:, :]
+nome = f'{Cur}'
+x = df['Xt'] * 1e-3
+y = (df['DQ'] - df_br['DQ']) * 1e-6 / (df['Mt'] * 1e-3 * V_cela)  # (Real - branco)uJ / (n Surf. cela)
+
+p, cov = np.polyfit(x, y, deg=1, full=False, cov=True)
+errs = np.sqrt(np.diag(cov))
+
+u_int = ufloat(p[1], errs[1])
+u_slp = ufloat(p[0], errs[0])
+y_vals_errs = [linear(i, u_slp, u_int) for i in x]
+y_vals = [i.nominal_value for i in y_vals_errs]
+y_errs = [i.std_dev for i in y_vals_errs]
+
+color = colors.pop()
+ax2.plot(x, y, linewidth=0, markersize=5, marker='o', label=nome, color=color)
+ax2.errorbar(x, y_vals, yerr=y_errs, color=color, capsize=3)
+
+ax2.legend(ncol=2, fontsize='small', title='Conc. Ureia')
+ax2.set_xlabel('Concentração de ureia na cela/mol.L$^{-1}$')
+ax2.set_ylabel('$\Delta H$/J.mol$^{-1}$ de surfactante na cela')
+ax2.set_title('TTAB 12 mmol.L$^{-1}$', loc='right')
+\end{minted}
+\caption{Código utilizado para gerar a Fig. \ref{fig:itc_interacaoUrSurf_entalpograma}}
+\label{lst:codigo_itc_ureia}
+\end{listing}

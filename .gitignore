@@ -1,5 +1,4 @@
 manuais*
-python*
 *aux
 *bbl
 *blg
@@ -20,3 +19,4 @@ main.pdf
 *fdb*
 *fls
 *xdv
+*_minted-main

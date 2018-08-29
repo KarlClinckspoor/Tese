@@ -63,10 +63,28 @@
 
 % Python
 \usepackage{minted}
+\setminted[python]{mathescape,
+	linenos,
+	numbersep=5pt,
+	stepnumber=5,
+	style=friendly,
+	gobble=0,
+	baselinestretch=0.5,
+	frame=lines,
+	framesep=2mm,
+	breakautoindent=true,
+	breakanywhere=true,
+	breaklines=true,
+	python3=True,
+	texcomments=true}
+% https://www.sharelatex.com/learn/Code_Highlighting_with_minted
+\renewcommand{\listingscaption}{Código}
+\renewcommand{\listoflistingscaption}{Lista de códigos}
 
 \newcommand{\mM}{mmol.L\textsuperscript{-1}}
 \newcommand{\Sal}{Sal\textsuperscript{--}}
 \newcommand{\q}{$q$}
+\newcommand{\menosUm}{\textsuperscript{-1}}
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
@@ -167,7 +185,7 @@
 % ----
 % Início do documento
 % ----
-\includeonly{ureia}
+\includeonly{apendices}
 \begin{document}
 
 % Retira espaço extra obsoleto entre as frases.
@@ -243,25 +261,7 @@
 % Inserir errata
 %% ---
 %\begin{errata}
-%
-%$$ FF_{esfera}(q) = \frac{3\left(\sin{(qR)} - qR\cos{(qR)}\right)}{(qR)^3}^2$$
-%
-%\begin{minted}[mathescape,
-%linenos,
-%numbersep=5pt,
-%gobble=0,
-%frame=lines,
-%framesep=2mm,
-%breakautoindent=true,
-%breakanywhere=true,
-%breaklines=true,
-%python3=True]{python}
-%def sphere_FF(q, R):
-%    if R == 0:
-%        return 0
-%    FF = ((3 * (sin(q * R) - q * R * cos(q * R)) / (q * R) ** 3) ** 2)
-%    return FF
-%\end{minted}
+
 %\end{errata}
 % ---
 
@@ -398,6 +398,7 @@ Agradeço ao CNPq pelo financiamento.
 % ---
 \pdfbookmark[0]{\listtablename}{lot}
 \listoftables*
+\listoflistings
 \cleardoublepage
 % ---
 
@@ -442,7 +443,7 @@ Agradeço ao CNPq pelo financiamento.
 % para que se inicie o bookmark na raiz
 % e adiciona espaço de parte no Sumário
 % ----------------------------------------------------------
-%\phantompart
+\phantompart
 
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
