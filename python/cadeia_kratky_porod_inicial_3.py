@@ -1,4 +1,10 @@
 # ... Continuação ...
+    AEXP1 = 2 * L
+    
+    if AEXP1 > 74:
+        AEXP = 0
+    else:
+        AEXP1 = np.exp(-AEXP1)
     # Calcular os termos A, Eq. \ref{eqn:AP_Ai}
     for i in range(2, 5 + 1, 1):
         AA[i] = 0

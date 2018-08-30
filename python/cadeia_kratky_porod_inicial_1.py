@@ -1,5 +1,3 @@
-import numpy as np
-
 def S_KP_EXV(Q, RL, RLL):
     # RL = comprimento de contorno
     # RRL = comprimento de Kuhn
@@ -40,20 +38,4 @@ def S_KP_EXV(Q, RL, RLL):
         K_MEM = K
         K = 10
         KK = 1
-    
-   if I_EXVOL:
-        AEXP = 2 * L
-        if AEXP > 60:
-            AEXP = 0
-        else:
-            AEXP = np.exp(-AEXP)
-        
-        # Declaração de algumas constantes
-        EPSI = 0.17
-        EXPAN = (1 + (abs(L / 3.12) ** 2) + abs(L / 8.67) ** 3) ** (EPSI / 3)
-        S2 = L / 6 - 0.25 + 0.25 / L - (1 - AEXP) / (8 * L * L)
-        S2 = S2 * EXPAN
-
-        F_DEBYE = S_EXV_APP(K * np.sqrt(S2))
-
 # ... Continua ...

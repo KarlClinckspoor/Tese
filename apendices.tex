@@ -131,6 +131,7 @@ A equação \ref{eqn:AP_Fwc} pode ser simplificada dependendo da faixa de \q. A 
 			F_{\text{chain}_{\text{ExV}}}		& \text{q baixo}  \\
 			F_{\text{rod}}						& \text{q alto}
 		\end{cases}
+	\label{eqn:AP_Fwc_dois_casos}
 \end{equation}
 
 %	\begin{longtable}[c]{r p{12cm}}
@@ -181,7 +182,7 @@ F_{Debye} = 2 \left(\frac{e^{-u} + u - 1}{u^2}\right)
 
 \noindent onde $u = R_g^2q^2$. $R_g$ é a raiz quadrada do raio de giro médio ao quadrado, $R_g = \left<R_g^2\right>^{1/2}$, considerando o volume excluído. Por sua vez, esse valor é dado pela Eq. \ref{eqn:AP_Rg2}
 
-% Achar o que significam os termos faltantes aqui.
+% todo: Achar o que significam os termos faltantes aqui.
 \begin{equation}
 \left<R_g^2\right> = \alpha \left(\frac{L}{k_L}\right)^2\left<R_g^2\right>_0
 \label{eqn:AP_Rg2}
@@ -289,13 +290,13 @@ O fator forma da seção transversal de um cilindro é descrito pela equação \
 \begin{equation}
 F_{\text{cs}} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}%
 %
-\left[ \left(\rho_{S} - \rho_{w} \right) \frac{2J_1 \left( qR_{s}\left( \varepsilon,\theta \right) \right)}{qR_{s}\left( \varepsilon,\theta \right)} % 
+\left[ \left(\rho_{S} - \rho_{w} \right) \frac{2J_1 \left( qR_{S}\left( \varepsilon,\theta \right) \right)}{qR_{S}\left( \varepsilon,\theta \right)} % 
 %
 +  %
 %
-\frac{\pi\varepsilon R_c^2}{\pi\varepsilon R_s^2}\left( \rho_c - \rho_s \right)	%
+\frac{\pi\varepsilon R_C^2}{\pi\varepsilon R_S^2}\left( \rho_c - \rho_s \right)	%
 %
-\frac{2J_1\left( qR_{c}\left( \varepsilon,\theta \right) \right)}{qR_{c}\left( \varepsilon,\theta \right)}\  \right]^2 d\theta
+\frac{2J_1\left( qR_{C}\left( \varepsilon,\theta \right) \right)}{qR_{C}\left( \varepsilon,\theta \right)}\  \right]^2 d\theta
 \label{eqn:AP_Fcs}
 \end{equation}
 
@@ -337,26 +338,47 @@ R_C = \sqrt{\frac{V_{\text{surf, apolar}}}{V_{\text{surf, total}}}}R_S
 
 \noindent onde V é o volume molecular das regiões do surfactante.
 
+\subsection{Fator forma de uma esfera}
+Como uma aproximação, o modelo final utiliza $F_{sphere}$ ao invés de $F_{rod}$ no denominador (ver equações \ref{eqn:AP_saxs_MG_geral} e \ref{eqn:AP_saxs_PRISM}). Esse fator forma de esferas é dado por:
+
+\begin{equation}
+	F_{sphere} = \dfrac{3\sin(qR) - qR\cos(qR)}{(qR)^3}
+	\label{eqn:AP_Fsphere}
+\end{equation}
 
 \chapter{Códigos}
 
 	Neste apêndice serão descritos alguns dos métodos computacionais criados durante a execução deste doutorado. Todos os scripts foram escritos na linguagem Python. O aluno fortemente recomenda essa linguagem para outros que desejam tratar, visualizar e entender seus dados. Python possui uma sintaxe simples, mas poderosa, grande número de pacotes matemáticos e científicos de qualidade, e é totalmente gratuito. Em especial, a conjunção de \emph{Jupyter Notebooks} (extensão \texttt{ipynb}) com um \emph{kernel} de Python é uma ferramenta muito poderosa e conveniente.
 	
-	Um curso de Python com foco em tratamento de dados foi elaborado pelo aluno, e se encontra disponível em um repositório no Github\footnote{\href{https://github.com/KarlClinckspoor/CursoPython}{https://github.com/KarlClinckspoor/CursoPython}}. Em brevo, o curso possui a seguinte estrutura:
+	Um curso de Python com foco em tratamento de dados foi elaborado pelo aluno, e se encontra disponível em um repositório no Github\footnote{\href{https://github.com/KarlClinckspoor/CursoPython}{https://github.com/KarlClinckspoor/CursoPython}}. Para ajudar na compreensão dos blocos de código a seguir, leia o seguinte.
 	
 	\begin{enumerate}
-		\item ``Hello world'', strings, obtendo ajuda
-		\item Operações matemáticas, variáveis
-		\item Estruturas de dados
-		\item Condicionais e loops
-		\item Instalando e carregando módulos
-		\item Definindo funções
-		\item Matemática computacional com \emph{numpy}
-		\item Carregando e manipulando dados com \emph{pandas}
-		\item Criando gráficos com \emph{pyplot}
-		\item Tópicos avançados de tratamento de dados
-		\item Tópicos adicionais
+	\item 	Para definir uma equação, segue-se a seguinte sintaxe \mintinline{python}{def nome_da_equação(parâmetros):}. Após o \texttt{:}, ocorre a criação de um bloco de código com um nível de indentação. Todo o código dentro de um mesmo nível de indentação possui o mesmo escopo, ou seja, está dentro, por exemplo, da definição da função. A palavra chave \mintinline{python}{return} retorna a/as variáveis seguintes, como resposta da função. Para chamar uma função, é utilizado o nome da função seguido dos parâmetros entre parênteses.
+	
+	\item  Outras declarações criam indentações, como loops \mintinline{python}{for} e condicionais \mintinline{python}{if}, \mintinline{python}{elif} e \mintinline{python}{else}, e ambos são terminados com \texttt{:}.
+	
+	\item 	As operações de soma, subtração, multiplicação e divisão utilizam os símbolos tradicionais, \mintinline{python}{+-*/}. Exponenciação utiliza o símbolo \mintinline{python}{**} e é necessário utilizar o pacote \texttt{numpy} para realizar exponenciação, extração de raiz quadrada, aplicação de funções seno, cosseno e tangente hiperbólica (\texttt{np.exp, np.sqrt, np.sin, np.cos, np.tanh}). A ordem das operações obedece as regras estabelecidas na matemática. 
+	
+	\item 	A atribuição de valores a variáveis é feita com um único sinal de igual, \texttt{=}, porém comparações de igualdade são realizadas com dois, \texttt{==}. Os símbolos de maior e menor são os mesmos da matemática, \texttt{>}, \texttt{<}.
+	
+	\item 	A indexação de elementos em vetores/matrizes é feita utilizando-se colchetes com o índice do elemento no interior, \texttt{Matriz[i], Matriz[i,j]}.
+	
+	\item Todo o código após \mintinline{python}{#} é ignorado, pois é um comentário.
+	
 	\end{enumerate}
+%	\begin{enumerate}
+%		\item ``Hello world'', strings, obtendo ajuda
+%		\item Operações matemáticas, variáveis
+%		\item Estruturas de dados
+%		\item Condicionais e loops
+%		\item Instalando e carregando módulos
+%		\item Definindo funções
+%		\item Matemática computacional com \emph{numpy}
+%		\item Carregando e manipulando dados com \emph{pandas}
+%		\item Criando gráficos com \emph{pyplot}
+%		\item Tópicos avançados de tratamento de dados
+%		\item Tópicos adicionais
+%	\end{enumerate}
 
 \section{Descrição do modelo de micelas gigantes em Python}
 
@@ -369,13 +391,71 @@ R_C = \sqrt{\frac{V_{\text{surf, apolar}}}{V_{\text{surf, total}}}}R_S
 	\label{fig:saxs_modelo_dado_saxs_python}
 \end{figure}
 
-	% todo: colocar uma imagem do modelo em ação
+	Uma das motivações para realizar essa tarefa foi a grande dificuldade de nosso grupo utilizar SAXS para estudar micelas. Não há especialistas na região que conhecem modelagem de micelas gigantes. Além disso, escrever um modelo computacional baseando-se somente as equações matemáticas é uma tarefa muito difícil para quem não possui experiência. O modelo computacional, apesar de menos compacto em sua notação, é mais fácil de ser utilizado pois os passos são bastante detalhados, o que também facilita o entendimento de novos alunos. Além disso, examinando o código, é possível notar vários detalhes operacionais, como constantes de integração/normalização que não estão explicitamente presentes nas equações.
 	
-	Uma das motivações para realizar essa tarefa foi a grande dificuldade de nosso grupo utilizar SAXS para estudar micelas. Não há especialistas na região que conhecem modelagem de micelas gigantes. Além disso, escrever um modelo computacional baseando-se somente as equações matemáticas é uma tarefa muito difícil. O modelo computacional, apesar de menos compacto em sua notação, é mais fácil de ser utilizado pois os passos são bastante detalhados, o que também facilita o entendimento de novos alunos.
+	As equações descritas no apêndice anterior foram traduzidas em uma série de funções e termos dentro dessas funções. Para ajudar no entendimento, há comentários no código que referenciam as equações à medida que elas são utilizadas. Note, porém, que a lógica utilizada para descrever um modelo matematicamente e computacionalmente são diferentes. Matematicamente, iniciei descrevendo o modelo de forma geral e depois descrevi as partes mais detalhadas, enquanto que, computacionalmente, essa ordem pode se inverter.
 	
-	\subsection{Fator $F_{KPchain_{ExV}}$}
-	As equações da seção \ref{sec:equacoes_Fwc} relevantes ao cálculo do fator de cadeias com volume excluído então descritas nos códigos a seguir (listas \ref{lst:cadeia_KP_1}, \ref{lst:cadeia_KP_2}, \ref{lst:cadeia_KP_3}, \ref{lst:cadeia_KP_Debye}, \ref{lst:cadeia_KP_SI}).
+	Para facilitar o entendimento, a tabela \ref{tab:AP_corrs_blocos_equacoes} correlaciona as equações e os blocos de código onde aparecem.
+
+\begin{table}[H]
+	\IBGEtab{%
+		\caption{Blocos de código e equações}
+		\label{tab:AP_corrs_blocos_equacoes}
+	}%
+	{%
+	\begin{tabular}{c c}
+		\toprule
+		          Bloco           & Equações                                                                                                       \\ \midrule
+		   \ref{lst:WLM_geral}    & \ref{eqn:AP_Fcs}, \ref{eqn:AP_Fwc}, \ref{eqn:AP_Rc}, \ref{eqn:AP_Rs}, \ref{eqn:AP_saxs_MG_geral}, \ref{eqn:AP_Fsphere}  \\
+		  \ref{lst:cadeia_KP_1}   & Tab. \ref{tab_ap:AiBi}                                                                                                  \\
+		  \ref{lst:cadeia_KP_2}   & \ref{eqn:AP_Si}, \ref{eqn:AP_xi}, \ref{eqn:AP_Fwc}, \ref{eqn:AP_chi}                                                  \\
+		  \ref{lst:cadeia_KP_3}   & \ref{eqn:AP_Ai}, \ref{eqn:AP_Bi}, \ref{eqn:AP_Gamma}, \ref{eqn:AP_Fwc}                                                \\
+		\ref{lst:cadeia_KP_Debye} & \ref{eqn:AP_fdebye}, \ref{eqn:AP_w}, \ref{eqn:AP_FchainExV}                                                          \\
+		 \ref{lst:cadeia_KP_SI}   & \ref{eqn:AP_Si}                                                                                                    \\ \bottomrule
+	\end{tabular}%
+}{}
+\end{table}
+
+As seguintes equações não aparecem no código:
+
+\begin{table}[H]
+	\IBGEtab{%
+		\caption{Equações não descritas}
+		\label{tab:AP_equacoes_n_descritas}
+	}%
+	{%
+		\begin{tabular}{c p{10cm}}
+			\toprule
+			Equação   & Motivo  \\ \midrule
+			\ref{eqn:AP_saxs_MG_superficial} & Melhor descrita pela Eq. \ref{eqn:AP_saxs_MG_geral} \\
+			\ref{eqn:AP_saxs_PRISM} & O modelo PRISM, com uma aproximação, é calculado dentro da Eq. \ref{eqn:AP_saxs_MG_geral}  \\
+			\ref{eqn:AP_Fwc_dois_casos} & Os dois casos são considerados simulaneamente durante os cálculos, então não é preciso realizar uma divisão explícita no código dos fatores \\
+			\ref{eqn:AP_Rg2} & Devido aos parâmetros iniciais, o modelo não necessita calcular o raio de giro. \\
+			\ref{eqn:AP_Frod}  & O modelo utiliza uma função para esfera ao invés de bastão no denominador, como uma aproximação \\ \bottomrule
+		\end{tabular}%
+	}{}
+\end{table}
+
+	\subsection{Código}
+
+	\begin{listing}[H]
+		\inputminted{python}{./python/cadeias_WLM_1.py}
+		\caption{Cálculo das equações \ref{eqn:AP_saxs_MG_geral} e \ref{eqn:AP_Fsphere}}
+		\label{lst:WLM_geral}
+	\end{listing}
 	
+	\begin{listing}[H]
+	\inputminted{python}{./python/cadeias_WLM_2.py}
+	\caption{Aplicação da equação \ref{eqn:AP_saxs_MG_geral} para uma faixa de \q. É esta a função que deve ser importada em outros pacotes para fazer uso da modelagem}
+	\label{lst:WLM_whole_q}
+	\end{listing}
+	
+%	A parte mais complexa do modelo é justamente o modelo de Kratky-Porod com volume excluído para cadeias core-shell, e por isso merece uma subseção própria.
+
+%	\subsection{Fator $F_{KPchain_{ExV}}$}
+%	\label{sec:apendice_F_KPchain}
+%	As equações da seção \ref{sec:equacoes_Fwc} relevantes ao cálculo do fator de cadeias com volume excluído então descritas nos códigos a seguir (listas \ref{lst:cadeia_KP_1}, \ref{lst:cadeia_KP_2}, \ref{lst:cadeia_KP_3}, \ref{lst:cadeia_KP_Debye}, \ref{lst:cadeia_KP_SI}).
+%	
 	\begin{listing}[H]
 		\inputminted{python}{./python/cadeia_kratky_porod_inicial_1.py}
 		\caption{Cálculo do fator de cadeias de Kratky-Porod com volume excluído (Parte 1/3)}
@@ -406,10 +486,96 @@ R_C = \sqrt{\frac{V_{\text{surf, apolar}}}{V_{\text{surf, total}}}}R_S
 		\label{lst:cadeia_KP_SI}
 	\end{listing}
 
+\subsection{Uso do código}
+
+Agora que todas as equações necessárias para descrever as micelas gigantes estão corretamente descritas programaticamente, é possível utilizar o modelo facilmente em outros projetos. Supondo que todas as funções criadas estejam num pacote chamado \texttt{SAXS\_FF}, é possível chamar a função e plotar um gráfico igual ao da Fig. \ref{fig:saxs_modelo_dado_saxs_python} com o seguinte código (\ref{lst:utilizando_modelo_WLM}), bastante simples:
+
+\begin{listing}[H]
+ 	\inputminted{python}{./python/uso_modelo.py}
+ 	\caption{Exemplo de como utilizar o código de micelas gigantes para realizar um plot}  % todo: encontrar um nome melhor
+ 	\label{lst:utilizando_modelo_WLM}
+\end{listing}
 	
+A partir deste ponto, é possível utilizar o código para realizar plotagens interativas, como também ajustes, utilizando métodos como \texttt{curve\_fit} do \texttt{scipy.optimize} ou, idealmente, o pacote \texttt{lmfit}.
+
 \section{Descrição e uso do software de tratamento de curvas de fluxo}
 
-Para o tratamento de curvas de fluxo de fluidos pseudoplástico, foi desenvolvido um software que realiza o ajuste das curvas por um modelo simplificado e três modelos mais complexos, de forma a contornar erros experimentais. Esse software acelera em várias vezes a velocidade de tratamento. Nesta seção, será descrito o algoritmo que o programa faz para os ajustes, e será dada uma breve introdução para o uso do software tanto num ambiente Python, como um script \emph{standalone}.
+Para o tratamento de dados de curva de fluxo, foi criado um programa que permite o usuário aplicar três modelos mais complexos e um modelo simplificado para a obtenção de valores de viscosidade no repouso. Todas as amostras, sem exceção, demonstraram ser pseudoplásticas, então não foram colocados mais modelos. A seguir, será mostrado os modelos utilizados e seções da lógica do programa, pois o código fonte inteiro é longo demais (aproximadamente 1000 linhas).
+
+\subsection{Modelos de curvas de fluxo pseudoplásticas}
+
+Foram implementados os modelos de \emph{Carreau-Yasuda} (Eq \ref{eqn:AP_CarreauYasuda}), \emph{Carreau} (Eq. \ref{eqn:AP_Carreau}), \emph{Cross} (Eq. \ref{eqn:AP_Cross}) e \emph{linear}, de maior para menor complexidade, respectivamente. Os modelos correlacionam a taxa de cisalhamento ($\dot{\gamma}$, variável independente) à viscosidade ($\eta$, variável dependente) utilizando alguns parâmetros.
+
+\begin{equation}
+	\eta = \eta_{\infty} + \frac{\eta_0 - \eta_{\infty}}{\left[  1 + \left(  \dfrac{\dot{\gamma}}{\dot{\gamma}_b}  \right)^{a}  \right]^{\frac{ \left(  n - 1  \right) }{a}}}
+	\label{eqn:AP_CarreauYasuda}
+\end{equation}
+
+\begin{equation}
+	\eta = \eta_{\infty} + \frac{\eta_0 - \eta_{\infty}}{\left[  1 + \left(  \dfrac{\dot{\gamma}}{\dot{\gamma}_b}  \right)^{2}  \right]^{\frac{n}{2}}}
+	\label{eqn:AP_Carreau}
+\end{equation}
+
+\begin{equation}
+	\eta = \eta_{\infty} + \frac{\eta_0 - \eta_{\infty}}{1 + \left(  \dfrac{\dot{\gamma}}{\dot{\gamma}_b}  \right)^{n}}
+	\label{eqn:AP_Cross}
+\end{equation}
+
+O modelo linear considera somente valores de viscosidade em $\dot{\gamma}$ próximos de zero, ou seja, $\eta = \eta_0 + 0 \times \dot{\gamma}$.
+
+Os parâmetros possuem os seguintes significados:
+
+\begin{table}[H]
+	\IBGEtab{%
+          \caption{Parâmetros dos modelos de fluidos pseudoplásticos}
+		  \label{tab:params_pseudoplasticos}
+		}%
+		{%
+		\begin{tabular}{c c p{9cm}}
+			\toprule
+			   Parâmetro     & Unidade   & Significado                                                     \\ \midrule
+			    $\eta_0$     & Pa.s      & Viscosidade no repouso*                                         \\
+			$\eta_{\infty}$  & Pa.s      & Viscosidade no infinito                                         \\
+			      $n$        & --        & Inclinação da região de decaimento de viscosidade               \\
+			$\dot{\gamma}_b$ & s\menosUm & $\dot{\gamma}$ de início da região de decaimento de viscosidade \\ \midrule
+			      $a$        & --        & Afeta tanto a inclinação quanto o ponto de inflexão             \\ \bottomrule
+		\end{tabular}%
+		}{}
+\end{table}
+% todo: encontrar a unidade de GPb
+% todo: pensar em colocar os gráficos mostrando como esses parâmetros afetam as curvas
+% todo: pensar um pouco mais sobre o Carreau-Yasuda e como que o a deve se comportar
+
+A Fig. \ref{fig:reologia_modelos} exemplifica os modelos de Carreau e Cross e como os parâmetros afetam o formato das curvas. Note que a escala dos eixos é logarítmica. Vemos que, essencialmente, ambas as curvas possuem formatos muito semelhantes, com os parâmetros escolhidos. A escolha de um modelo depende da qualidade dos dados e do desejo do experimentalista. Observando-se como os modelos variam com os parâmetros, nota-se que a queda de viscosidade do modelo de Carreau é menos abrupta que no modelo de Cross e se assemelha mais aos dados estudados, então esse modelo foi mais utilizado.
+
+\begin{figure}[H]
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{./imagens/reologia/Carreau}
+		\caption{Modelo de Carreau}
+		\label{fig:reologia_modelo_carreau}
+	\end{subfigure} \qquad %
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{./imagens/reologia/Cross}
+		\caption{Modelo de Cross}
+		\label{fig:reologia_modelo_cross}
+	\end{subfigure}
+	\caption{Exemplos de curvas de fluxo descritas pelos modelos de Carreau e Cross, com os parâmetros utilizados.}
+	\label{fig:reologia_modelos}
+\end{figure}
+
+De maior interesse para os estudos neste trabalho é a viscosidade no repouso, $\eta_0$, e portanto esse é o foco do programa. Porém, o ajuste indiscriminado de um modelo a um dado experimental é problemático caso a qualidade do dado não seja boa, seja pela própria característica da amostra, ou pela sensibilidade do equipamento. Por exemplo, é frequente que apareçam artefatos de medida em baixos valores de $\dot{\gamma}$, resultando ou num decréscimo ou acréscimo gradual de $\eta$. Além disso, é possível que não seja observada a região descrita por $\eta_{\infty}$, em altos valores de $\dot{\gamma}$, o que atribui grande incerteza na determinação desse parâmetro. Dessa forma, é necessário que uma região das curvas seja escolhida para que o ajuste seja bem sucedido e informativo, o que representa a maior dificuldade nesse tipo de análise, devido à certa subjetividade no critério de escolha da região de ajuste.
+
+Por essa razão, e outras, como velocidade de análise, foi escrito o método de ajuste. O método consiste em realizar ajustes sucessivos, entre um ponto inicial $P_i$ até um ponto final $P_f$, e depois comparar os resultados dos ajustes para escolher um deles. Podem ser comparados, por exemplo, os parâmetros $R^2$, $\chi^2$ ou $\chi_{red}^2$. Escolhido o melhor ajuste, observando-se, por exemplo, a maior proximidade de $R^2$ a 1 ou de $\chi^2$ a 0, tomando cuidado para não escolher uma faixa muito estreita de pontos, os resultados são graficados, gravados num arquivo de texto e passa-se para o próximo dado experimental.
+
+\begin{listing}[H]
+	\inputminted{python}{./python/curva_de_fluxo.py}
+	\caption{Seções do código mostrando o método de ajuste}  % todo: encontrar um nome melhor
+	\label{lst:exemplo_curva_de_fluxo}
+\end{listing}
+
+% todo: colocar um exemplo de como utilizar a classe Fitter
 
 \section{Softwares miscelâneos para tratamento de dados}
 \end{apendicesenv}
