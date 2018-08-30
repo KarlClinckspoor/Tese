@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.optimize import curve_fit
 from lmfit import minimize, Parameters
-
+# ... #
 # Ajuste por curve\_fit
 @staticmethod
 def fit_lin(x, a, b):
@@ -23,10 +23,10 @@ for first_point in range(0, length//3, 1):
         fittings.append((first_point, last_point, popt, perr))
 
 if self.settings.LIN_SORTING_METHOD == 'by_error':
-    fittings.sort(key=lambda x: np.log(x[3][0]))  # gets perr of eta\_0
+    fittings.sort(key=lambda x: np.log(x[3][0]))  # Escolhe o melhor ajuste pelo menor erro de $\eta_0$#
 elif self.settings.LIN_SORTING_METHOD == 'by_error_length':
-    fittings.sort(key=lambda x: np.log(x[3][0]) / (x[1] - x[0]) ) # divides perr by last-first
-
+    fittings.sort(key=lambda x: np.log(x[3][0]) / (x[1] - x[0]) ) # Escolhe o melhor ajuste pello menor erro/número de pontos
+# ... #
 # Ajuste por lmfit
 # Definição das funções
 @staticmethod
@@ -38,15 +38,16 @@ def residual(self, params, x, dataset):
     resid = dataset - mod
     return resid
 # Ajuste
-params = Parameters()
-SStot = sum((Eta - np.mean(Eta)) ** 2)
-params.add('eta_0', 100, vary=True, min=0)
-params.add('eta_inf', 1, vary=True, min=0)
-params.add('GP_b', 5, vary=True, min=0)
-params.add('n', 1, vary=True, min=0)
-fit = minimize(self.residual, params, args=(GP, Eta))
-params = [fit.params[par].value for par in fit.params]
-param_errs = [fit.params[par].stderr for par in fit.params]
-R2 = 1 - fit.chisqr / SStot
-return params, param_errs, R2
-
+def fit(GP, Eta)
+    params = Parameters()
+    SStot = sum((Eta - np.mean(Eta)) ** 2)
+    params.add('eta_0', 100, vary=True, min=0)
+    params.add('eta_inf', 1, vary=True, min=0)
+    params.add('GP_b', 5, vary=True, min=0)
+    params.add('n', 1, vary=True, min=0)
+    fit = minimize(self.residual, params, args=(GP, Eta))
+    params = [fit.params[par].value for par in fit.params]
+    param_errs = [fit.params[par].stderr for par in fit.params]
+    R2 = 1 - fit.chisqr / SStot
+    return params, param_errs, R2
+# ... #

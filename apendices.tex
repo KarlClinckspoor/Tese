@@ -503,7 +503,7 @@ A partir deste ponto, é possível utilizar o código para realizar plotagens in
 Para o tratamento de dados de curva de fluxo, foi criado um programa que permite o usuário aplicar três modelos mais complexos e um modelo simplificado para a obtenção de valores de viscosidade no repouso. Todas as amostras, sem exceção, demonstraram ser pseudoplásticas, então não foram colocados mais modelos. A seguir, será mostrado os modelos utilizados e seções da lógica do programa, pois o código fonte inteiro é longo demais (aproximadamente 1000 linhas).
 
 \subsection{Modelos de curvas de fluxo pseudoplásticas}
-
+\label{sec:modelagem_curva_fluxo}
 Foram implementados os modelos de \emph{Carreau-Yasuda} (Eq \ref{eqn:AP_CarreauYasuda}), \emph{Carreau} (Eq. \ref{eqn:AP_Carreau}), \emph{Cross} (Eq. \ref{eqn:AP_Cross}) e \emph{linear}, de maior para menor complexidade, respectivamente. Os modelos correlacionam a taxa de cisalhamento ($\dot{\gamma}$, variável independente) à viscosidade ($\eta$, variável dependente) utilizando alguns parâmetros.
 
 \begin{equation}
@@ -569,15 +569,65 @@ De maior interesse para os estudos neste trabalho é a viscosidade no repouso, $
 
 Por essa razão, e outras, como velocidade de análise, foi escrito o método de ajuste. O método consiste em realizar ajustes sucessivos, entre um ponto inicial $P_i$ até um ponto final $P_f$, e depois comparar os resultados dos ajustes para escolher um deles. Podem ser comparados, por exemplo, os parâmetros $R^2$, $\chi^2$ ou $\chi_{red}^2$. Escolhido o melhor ajuste, observando-se, por exemplo, a maior proximidade de $R^2$ a 1 ou de $\chi^2$ a 0, tomando cuidado para não escolher uma faixa muito estreita de pontos, os resultados são graficados, gravados num arquivo de texto e passa-se para o próximo dado experimental.
 
+A listagem \ref{lst:exemplo_curva_de_fluxo} mostra duas seções do código completo do programa, uma mostrando o ciclo de ajuste utilizando o ajuste linear e \texttt{curve\_fit} e outro que realiza um ajuste não-linear utilizando o modelo de Carreau e \emph{lmfit}.
+
 \begin{listing}[H]
 	\inputminted{python}{./python/curva_de_fluxo.py}
 	\caption{Seções do código mostrando o método de ajuste}  % todo: encontrar um nome melhor
 	\label{lst:exemplo_curva_de_fluxo}
 \end{listing}
 
-% todo: colocar um exemplo de como utilizar a classe Fitter
+Essas funções estão dentro de uma classe chamada \texttt{Fitter}. Para utilizar essa classe em outros códigos, é necessário inicializar uma instância da classe \texttt{Settings} e depois inicializar uma instância da classe \texttt{Fitter} utilizando as configurações da classe \texttt{Settings}. Caso não haja um arquivo \texttt{settings.dat} na pasta, um arquivo com valores padrão será criado. Após isso, é possível tanto editar o arquivo \texttt{settings.dat} quando utilizar as funções \texttt{print\_settings, edit\_settings} do objeto \texttt{Settings}. Ao criar um objeto \emph{Fitter}, por padrão os ajustes configurados já são realizados e os resultados são mostrados na tela. Caso se deseja criar um gráfico mostrando o resultado dos ajustes, pode-se chamar a função \texttt{plot\_error\_graphs()}. 
+
+A listagem \ref{lst:exemplo_fitter} mostra como o programa pode ser utilizado por outros scripts, e o resultado do ajuste se encontra na Fig. \ref{fig:reologia_dado-exemplo}
+
+\begin{listing}[H]
+	\inputminted{python}{./python/uso_fitter.py}
+	\caption{Exemplo de como utilizar a ferramenta de ajuste não linear}  % todo: encontrar um nome melhor
+	\label{lst:exemplo_fitter}
+\end{listing}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{imagens/reologia/Dado-exemplo}
+	\caption{Figura resultante do ajuste não linear de Carreau e ajuste linear gerada pela função \texttt{plot\_error\_graphs()}. As barras de erro são oriundas da propagação de erro dos parâmetros e os números em vermelho indicam os pontos iniciais e finais considerados em cada ajuste.}
+	\label{fig:reologia_dado-exemplo}
+\end{figure}
+
+Note que no dado utilizado, não há muitos problemas de desvio da curva, então os ajustes foram bem comportados. Os exemplos das figuras \ref{fig:reologia_dado-problemadescida} e \ref{fig:reologia_dado-problemasubida} mostram problemas reais na região de baixos valores de $\dot{\gamma}$.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{imagens/reologia/Dado-ProblemaDescida}
+	\caption{Exemplo dos ajustes não-linear e linear de um dado real que possui uma queda nos valores de $\eta$ em baixas $\dot{\gamma}$}
+	\label{fig:reologia_dado-problemadescida}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{imagens/reologia/Dado-ProblemaSubida}
+	\caption{Exemplo dos ajustes não-linear e linear de um dado real que possui um aumento nos valores de $\eta$ em baixas $\dot{\gamma}$}
+	\label{fig:reologia_dado-problemasubida}
+\end{figure}
+
+O tempo de execução e de plotagem para cada experimento está na faixa de um segundo, o que é muito mais rápido do que realizar o ajuste manualmente em uma ferramenta como o Origin ou Excel, então é algo ideal para o tratamento de um grande volume de dados.
+
+\section{Método de ajuste para reologia oscilatória de muco}
+
+Durante a execução do projeto de doutorado, foi estabelecida uma parceria com uma aluna de doutorado da Faculdade de Ciências Médicas na Unicamp, Carla Cristina S. Gomez, para a análise de amostras de muco de pacientes com fibrose cística. Foram realizadas medidas de curva de fluxo, analisadas pelo método descrito na seção \ref{sec:modelagem_curva_fluxo}. Além disso, foi necessário realizar uma análise das curvas de varredura de frequência para obter informações relevantes.
+
+Plotando-se todos os dados obtidos, observou-se que G' estava sempre acima de G'' e, na escala logarítmica, as duas curvas eram praticamente paralelas e ligeiramente inclinadas positivamente. Em alguns casos, a inclinação aumentava em frequências maiores e, frequentemente, havia uma oscilação de G' e G'' sem significado físico nessa região. A taxa de aumento era consistente com uma exponencial. Visto isso, foi desenvolvido um script que realiza o seguinte:
+
+\begin{enumerate}
+	\item Obter a região de frequência confiável de G' e de G'' para o modelo linear e exponencial. Isso é feito realizando-se ajustes gradativos, do primeiro ponto até um ponto \emph{n}, armazenando os ajustes e depois escolhendo o ajuste com maior número de pontos onde $R^2 > 0,9$. Caso não exista ajuste seguindo esse critério, escolhe-se um novo critério com $R^2 > 0,85$. Caso não exista ajuste que obedeça isso mesmo assim, é escolhido o ajuste com o maior número de pontos. 
+	\item Os parâmetros dos ajustes que passaram pelo filtro de $R^2$ são gravados em um arquivo \texttt{csv}. Além disso, são gravados a média dos valores de G' e G'' da região linear, o desvio dessa média, o valor de $R^2$, os índices dos pontos utilizados para o ajuste e o valor de G' e G'' em 0,6813Hz. Esses parâmetros foram escolhidos com base em alguns artigos da literatura. % todo: ref?
+\end{enumerate}
+
+Cerca de 500 dados experimentais únicos são tratados e plotados em cerca de 3 minutos, mostrando novamente o ganho enorme de eficiência com métodos computacionais. Após análise estatística, observou-se uma variação significativa em um dos conjuntos de dados. Porém devido à enorme variabilidade das amostras, houve pouca relevância estatística no resto do conjunto de dados. Contudo, os pacientes revelaram uma melhora física após o tratamento estabelecido, mostrando que de fato o tratamento foi eficiente. Mais informações sobre esse projeto podem ser encontrados na tese da aluna. % todo: colocar uma referência pra tese dela.
 
 \section{Softwares miscelâneos para tratamento de dados}
+
+
 \end{apendicesenv}
 
 %\begin{anexosenv}

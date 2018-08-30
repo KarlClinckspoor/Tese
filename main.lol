@@ -8,3 +8,4 @@
 \contentsline {listing}{\numberline {8}{\ignorespaces Cálculo numérico da integral cardinal\relax }}{136}{listing.8}
 \contentsline {listing}{\numberline {9}{\ignorespaces Exemplo de como utilizar o código de micelas gigantes para realizar um plot\relax }}{137}{listing.9}
 \contentsline {listing}{\numberline {10}{\ignorespaces Seções do código mostrando o método de ajuste\relax }}{140}{listing.10}
+\contentsline {listing}{\numberline {11}{\ignorespaces Exemplo de como utilizar a ferramenta de ajuste não linear\relax }}{141}{listing.11}
