@@ -625,10 +625,459 @@ Plotando-se todos os dados obtidos, observou-se que G' estava sempre acima de G'
 
 Cerca de 500 dados experimentais únicos são tratados e plotados em cerca de 3 minutos, mostrando novamente o ganho enorme de eficiência com métodos computacionais. Após análise estatística, observou-se uma variação significativa em um dos conjuntos de dados. Porém devido à enorme variabilidade das amostras, houve pouca relevância estatística no resto do conjunto de dados. Contudo, os pacientes revelaram uma melhora física após o tratamento estabelecido, mostrando que de fato o tratamento foi eficiente. Mais informações sobre esse projeto podem ser encontrados na tese da aluna. % todo: colocar uma referência pra tese dela.
 
-\section{Softwares miscelâneos para tratamento de dados}
+\clearpage
 
+\section{Manual de uso do programa SUPERSAXS}
+
+Foi desenvolvido um guia para utilizar o programa SUPERSAXS, disponibilizado para o grupo. Aqui se encontra uma versão ligeiramente adaptada do manual.
+
+\begin{center}
+	\Huge{Tutorial para uso do programa SUPERSAXS}
+	
+	\Large{Karl Jan Clinckspoor}
+	
+	\large{26/10/2017}
+\end{center}
+
+\textbf{Resumo}
+
+O programa SUPERSAXS foi desenvolvido em FORTRAN77 por Jan Skov Pedersen e Cristiano Oliveira, na Universidade de Århus, Dinamarca, para o ajuste não linear com base no método dos mínimos quadrados. A operação do programa é totalmente baseada no teclado. Este documento visa guiar um novo usuário a como utilizar o programa e alertá-lo para todos os eventuais problemas que possam aparecer.
+
+
+\subsection*{Descrição geral}
+
+O fluxo de trabalho do aplicativo segue a seguinte ordem.
+
+\begin{enumerate}
+	\item Carregar dados
+	\item Plotar dados
+	\item Escolha do modelo
+	\item Chutes iniciais dos parâmetros
+	\item Ajuste da curva
+	\item Salvar parâmetros finais
+\end{enumerate}
+
+Quando se possui uma grande quantidade de arquivos para serem tratados, pode-se utilizar um processo de \emph{batch}, criando-se uma lista de arquivos para serem tratados automaticamente. Note que os dados não podem ser significativamente diferentes uns dos outros, senão o algoritmo de ajuste não consegue chegar numa resposta final satisfatória.
+
+O programa é rodado utilizando-se o prompt de comando, o PowerShell ou somente dando duplo-clique no programa. A diferença do último método para os demais é que a janela se fecha imediatamente após o programa terminar.
+
+Uma nova janela de prompt de comando ou PowerShell pode ser aberta na pasta atual clicando-se com o botão direito no Explorer com a tecla Shift apertada.
+
+\begin{figure}[t]
+	\includegraphics[scale=0.5]{./imagens/saxs/supersaxs_Powershell}
+	\centering
+	\caption{Como abrir uma janela do PowerShell no Windows 10}
+	\centering
+\end{figure}
+
+Após isso, digite o nome do programa, geralmente \texttt{wlsq.exe} para iniciar o programa, e você será apresentado com a seguinte tela. Mas antes de realizar começar a fazer os ajustes, é necessário cuidar de outros detalhes.
+\begin{samepage}
+	\begin{verbatim}
+	PS C:\Users\Karl\Desktop\SAXS\SAXS_Karl_back> .\wlsq_karl.exe
+	*************************************************
+	*                W L S Q S A X S                *
+	*          LEAST SQUARES NONLINEAR FIT          *
+	*               SUPERSAXS PROGRAMS              *
+	*                                               *
+	*EMPTY READY PROGRAM            crislpo 13/12/07*
+	*************************************************
+	
+	FIT SINGLE FILE (0=def) OR LIST OF FILES (1) ?
+	\end{verbatim}
+\end{samepage}
+
+\subsection{Carregamento de dados}
+
+É necessário se atentar a estes três requesitos para os arquivos.
+
+\begin{enumerate}
+	\item Formatação
+	\item Nome
+	\item Localização
+\end{enumerate}
+
+\subsubsection{Formatação}
+
+Os dados de SAXS devem obedecer a seguinte formatação:
+
+\begin{linenumbers}
+	\begin{verbatim}
+	Comentário
+	Comentário
+	Número total de pontos
+	q(nm ou Å) Int  Erro
+	...     ...  ...
+	\end{verbatim}
+\end{linenumbers}
+\resetlinenumber[1]
+
+O valor de erro para as medidas não é necessário e o programa estima alguns valores. Um exemplo das primeiras linhas de um arquivo válido é:
+
+\begin{linenumbers}
+	\begin{verbatim}
+	nothing special
+	nothing special
+	273
+	0.0232465 0.021071 0.042898
+	0.0325451 0.024961 0.013387
+	0.0418437 0.012566 0.007131
+	0.0511423 0.005719 0.004330
+	0.0604409 0.003657 0.002916
+	\end{verbatim}
+\end{linenumbers}
+\resetlinenumber[1]
+
+\subsubsection{Nome}
+
+O nome dos arquivos não pode conter espaços e deve ter no máximo 15 caracteres, incluindo a extensão. Dessa forma, \texttt{MG\_1.dat} é aceitável, mas \texttt{Micelas gigantes 1.dar} não é.
+
+\subsubsection{Localização}
+Os dados devem estar presentes na mesma pasta que o executável \texttt{wlsq.exe}. Além disso, não pode haver mais de 80 arquivos com a mesma extensão na pasta. Caso tenha que tratar mais de 80 arquivos, separe-os em subpastas e copie o executável para cada pasta.
+
+\subsubsection{Arquivos adicionais}
+Além dos arquivos com os dados de SAXS, os seguintes arquivos também devem estar presentes na pasta do executável.
+
+\begin{itemize}
+	\item \texttt{wgnuplot.exe}
+	%\item \texttt{SAXS\{1\}N.DAT}
+	\item \texttt{SAXS1N.DAT}
+	\item \texttt{SAXS2N.DAT}
+	\item \texttt{SAXS3N.DAT}
+	\item $\cdots$
+\end{itemize}
+
+\texttt{wgnuplot.exe} é o programa utilizado para mostrar os dados e os ajustes. Os arquivos \texttt{SAXS\{numero\}N.DAT} contém parâmetros iniciais para os modelos \texttt{\{numero\}}. Por exemplo, se o modelo de micelas gigantes é o modelo número 2, \texttt{SAXS2N.DAT} irá conter os parâmetros iniciais para o modelo 2, neste caso, micelas gigantes.
+
+\begin{verbatim}
+0.15620869E+00 , 0,SCALE               
+0.14915730E+02 , 0,D_HEAD              
+0.10027541E+02 , 0,RAD_CORE            
+0.12508109E+00 , 0,RHO_REL_OUT         
+0.10000000E+01 , 1,sIGMA               
+0.00000000E+00 , 1,BCK                 
+0.50000000E+04 , 1,L_CONT              
+0.10000000E+04 , 1,B_KUHN              
+0.10000000E+01 , 1,EPS_XS              
+0.92598854E+02 , 0,D_CQ                
+0.40709053E+02 , 0,NU_RPA              
+0.001,1,SC_POW
+4,1,EXPONENT
+\end{verbatim}
+
+A falta desse tipo de arquivo gera um erro no programa na hora do início dos ajustes.
+
+\subsection{Plotar dados}
+Inicie o programa. Digite \texttt{0} e aperte enter para fazer o ajuste de um único arquivo. Em seguida, digite a extensão dos arquivos, geralmente \texttt{txt} ou \texttt{dat}. O programa irá listar todos os arquivos com aquela extensão na pasta.
+
+\begin{verbatim}
+Type desired file extension : dat
+
+.dat FILES AVAILABLE:
+1 100-60a.dat      21 PearlNl.dat
+2 100-60o.dat      22 RESULT.DAT
+3 A_100-60a.DAT    23 SalTB100.dat
+4 A_34CB.DAT       24 SalTB55.dat
+5 A_4CB.DAT        25 SalTB75.dat
+6 A_92_30min.DAT   26 SAXS1N.DAT
+7 A_final.DAT      27 SAXS2N.DAT
+8 A_FT.DAT         28 SAXS2N_2.DAT
+9 A_NaSal.DAT      29 SAXS3N.DAT
+10 A_SalTB100.DAT   30 scanx.dat
+11 A_SalTB55.DAT    31 SF.dat
+12 A_SalTB75.DAT    32 test.dat
+13 A_SF.DAT         33 TTAB.dat
+14 A_TTAB.DAT
+15 final.dat
+16 FT.dat
+17 initial.dat
+18 LISTRES.DAT
+19 OHCA6.dat
+20 OHCA9.dat
+FILENUMBER OF FILE TO BE FITTED :
+\end{verbatim}
+
+Digite o número do arquivo e aperte enter. Veja que o programa mostrou todos os arquivos, não só aqueles com dados válidos. Tentar carregar arquivos inválidos gera um erro no programa.
+
+As seguintes frases irão aparecer, e os procedimentos a seguir são os mais comumente usados.
+
+\begin{itemize}
+	\item \texttt{INPUT SCALE FACTOR FOR THE FILE (1=def) :} não é necessário digitar nada, só apertar enter. Isso vale para a maior parte dos casos onde há um padrão, \emph{default}, \texttt{def}.
+	\item \texttt{INPUT BACKGROUND FOR THE FILE (0=def) :} novamente, só apertar enter.
+	\item \texttt{ADD EXTRA MC GENERATED NOISE (1/0=def)} só enter.
+	\item \texttt{ESRF OR AARHUS DATA (1/2)}, digite 1 se os dados estiverem em $nm^{-1}$ ou 2 se estiverem em \AA$^{-1}$.
+\end{itemize}
+
+O programa irá então mostrar todo o conteúdo do arquivo e perguntar como deseja plotar os dados, começando com uma pergunta sobre o eixo Y e uma pergunta sobre o eixo X.
+
+\begin{verbatim}
+...      ...         ...           ...
+316 0.266563714 1.09084343E-04 2.66976643
+NO OF DATA POINTS  316
+Which Function of Intensity;
+Intensity[1], log(I)[2], log(q*I)[3], log(q*q*I)[4],1/I[5]
+ln(I) [6], I*q**4[7] or I*q**2 [8]:
+\end{verbatim}
+
+Geralmente, seleciona-se \texttt{2}, ou seja, $\log(I)$, e depois, para 
+\begin{verbatim}Which Function of scattering vector;
+q[1], q*q[2], log(q)[3] or q**4 [4] :\end{verbatim} seleciona-se \texttt{3}, para $\log(q)$.
+
+O programa irá então plotar o gráfico. A janela \emph{gnuplot pause} está com \emph{OK} selecionado então é possível fechá-la somente apertando enter novamente.
+
+\begin{figure}[h]
+	\includegraphics[scale=0.5]{./imagens/saxs/supersaxs_gnuplot}
+	\centering
+	\caption{Plot do dado na escala log-log}
+	\centering
+\end{figure}
+
+\subsection{Escolha do modelo}
+
+Aperte enter para:
+
+\texttt{DO YOU WANT TO FIT (Y=def/N)}
+
+e
+
+\texttt{INCLUDE RESOLUTION FUNCTION (Y/N=def):}
+
+Em seguida, o programa irá perguntar qual modelo se deseja ajustar:
+
+\begin{verbatim}
+CROSS SECTION
+core-shell ELL MICS WITH HS S(Q)            (1)
+Infinite LENGTH core-shell cylinder micelle (2)
+3-ACIAL ELLIPSOID CORE-SHELL + S(Q)  HS     (3)
+\end{verbatim}
+
+Os modelos servem para:
+
+\begin{enumerate}
+	\item Micelas \emph{core-shell} elipsoidais (2-eixos) com fator estrutura \emph{hard spheres}.
+	\item Micelas gigantes de Kratky-Porod (KP), core-shell, com interações intermoleculares modeladas pelo modelo PRISM.
+	\item Micelas elipsoidais com 3 eixos e fator estrutura de \emph{hard spheres}
+\end{enumerate}
+
+Se há micelas esféricas, teste 1 primeiro, e depois 3, caso não consiga fazer o ajuste. Caso tenha micelas gigantes, selecione 2.
+
+\subsection{Chutes iniciais}
+
+A seguinte tela irá aparecer:
+
+\begin{verbatim}
+FILE OPENED
+A( 1)=        0.15620869   IA( 1)= 0    SCALE
+A( 2)=       14.91573050   IA( 2)= 0    D_HEAD
+A( 3)=       10.02754120   IA( 3)= 0    RAD_CORE
+A( 4)=        0.12508109   IA( 4)= 0    RHO_REL_OU
+A( 5)=        1.00000000   IA( 5)= 1    sIGMA
+A( 6)=    0.00000000E+00   IA( 6)= 1    BCK
+A( 7)=     5000.00000000   IA( 7)= 1    L_CONT
+A( 8)=     1000.00000000   IA( 8)= 1    B_KUHN
+A( 9)=        1.00000000   IA( 9)= 1    EPS_XS
+A(10)=       92.59885410   IA(10)= 0    D_CQ
+A(11)=       40.70905300   IA(11)= 0    NU_RPA
+A(12)=        0.00100000   IA(12)= 1    SC_POW
+A(13)=        4.00000000   IA(13)= 1    EXPONENT
+UNFIX SUBSET OF PARAMETERS    (-1)
+FIX SUBSET OF PARAMETERS      (-2)
+CHANGE MAX NO OF ITERATIONS   (99)
+Change parameter no. (no change=0)
+\end{verbatim}
+
+\texttt{FILE OPENED} significa que o arquivo \texttt{SAXS2N.DAT} foi aberto com sucesso. Após isso, as linhas de \texttt{A( 1)} a \texttt{A(13)} possuem 4 colunas, que contém:
+
+\begin{itemize}
+	\item O número do parâmetro (1 a 13)
+	\item O valor do parâmetro, em \AA.
+	\item Se o parâmetro será fixado (1) ou está livre para variar (1)
+	\item O nome do parâmetro.
+\end{itemize}
+
+Há 5 tipos de comandos que podem ser colocados nessa parte.
+
+\begin{itemize}
+	\item Número, de 1 a 13: Alterar o valor do chute e se o parâmetro será fitado ou não. A mensagem \texttt{Input A(I),IA(I)} irá aparecer. Escreva aqui o novo valor, uma vírgula, e 0 ou 1. Exemplo: \texttt{0.15,1}
+	\item \texttt{-1}: Desfixar certos parâmetros. A seguinte mensagem irá aparecer: \texttt{INPUT I(MIN) I(MAX) FOR PARAMETERS TO BE UNFIXED}. Escreva A,B deixar variar todos os parâmetros entre A e B. Exemplo, escrever \texttt{3,7} irá desfixar os parâmetros entre 3 e 7, inclusivo. Se deseja fixar somente um parâmetros, escreva A,A (p.e. \texttt{1,1})
+	\item \texttt{-2}: Fixar certos parâmetros. Mesma sintaxe que o anterior.
+	\item \texttt{99}: Alterar o número de iterações do ajuste. O padrão é 10. Quando mais parâmetros, mais o fit demorará, mas melhor ele será.
+	\item \texttt{0}: Nada será alterado, e o ajuste começará.
+\end{itemize}
+
+\subsection{Ajuste da Curva}
+Ao escolher \texttt{0}, escolha o q mínimo e o q máximo para o ajuste. Esses valores deverão ser fornecidos na escala linear (não logarítmica). Geralmente \texttt{0.005} e \texttt{1} são o suficiente para pegar a faixa inteira. Isso pode ser usado para fitar somente algumas seções das curvas.
+
+O programa começará a variar os parâmetros que foram deixados livres para minimizar o $\chi^2$, a diferença entre os dados e o modelo. Em seguida, ele mostrará um plot com o modelo e os dados.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{./imagens/saxs/supersaxs_gnuplot_fit}
+	\caption{Exemplo de um ajuste. Destacado está o $\chi^2$ do ajuste.}
+\end{figure}
+
+E depois ele irá mostrar os parâmetros e os erros calculados de cada parâmetro.
+
+\begin{verbatim}
+*****PARAMETERS*****
+
+INAL CHISQ= 0.402E+01   FINAL MSQRES= 0.392E+01
+
+NO   START        FINAL        STD.ERR
+
+1   0.1500E+00   0.1854E+00   0.6945E-02  SCALE
+2   0.1492E+02   0.1381E+02   0.7423E+01  D_HEAD
+3   0.1003E+02   0.7774E+01   0.1327E+01  RAD_CORE
+4   0.1251E+00   0.1046E+00   0.9685E-01  RHO_REL_OUT
+5   0.1000E+01   0.3933E+01   0.4168E+01  sIGMA
+6   0.0000E+00   0.0000E+00   *FIXED      BCK
+7   0.5000E+04   0.5000E+04   *FIXED      L_CONT
+8   0.1000E+04   0.1000E+04   *FIXED      B_KUHN
+9   0.1000E+01   0.1000E+01   *FIXED      EPS_XS
+10   0.9260E+02   0.8345E+02   0.2666E+01  D_CQ
+11   0.4071E+02   0.2835E+02   0.1814E+01  NU_RPA
+12   0.1000E-02   0.1000E-02   *FIXED      SC_POW
+13   0.4000E+01   0.4000E+01   *FIXED      EXPONENT
+2.32465006E-03 325.344025 324.916748 325.344025 324.916748
+2.32465006E-03 325.344025 324.916748 325.344025 324.916748
+GIVE RETURN TO CONTINUE OR S=STORE
+\end{verbatim}
+
+Você tem duas escolhas, dar enter ou escrever \texttt{S}. Store armazena os parâmetros no arquivo \texttt{RESULT.DAT}, se você estiver satisfeito com os parâmetros.
+
+Depois disso ele mostrará alguns parâmetros do ajuste e perguntar se você deseja fazer um novo fit. É necessário você escolher \texttt{Y} ou \texttt{N}. Aí você escolhe entre ajustar um novo conjunto de dados ou tentar ajustar esse dado novamente (\textit{default}). Aí o processo se repete.
+
+\subsection{Resultados}
+
+Neste exemplo, eu liberei o SC\_POW, fiz o ajuste novamente e salvei os parâmetros. Veja o ajuste.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{./imagens/saxs/supersaxs_gnuplot_fit2}
+	\centering
+	\caption{Mesmo ajuste que o anterior, mas liberando o parâmetro \texttt{SC\_POW}}
+\end{figure}
+
+O arquivo \texttt{RESULT.DAT} contém as seguintes informações:
+
+\begin{verbatim}
+SalTB100.dat
+
+FINAL CHISQ= 0.310E+01   FINAL MSQRES= 0.301E+01
+
+NO   START        FINAL        STD.ERR
+
+1   0.1854E+00   0.1850E+00   0.5645E-02  SCALE               
+2   0.1381E+02   0.1358E+02   0.4355E+01  D_HEAD              
+3   0.7774E+01   0.7320E+01   0.1081E+01  RAD_CORE            
+4   0.1046E+00   0.1002E+00   0.5388E-01  RHO_REL_OUT         
+5   0.3933E+01   0.4338E+01   0.2234E+01  sIGMA               
+6   0.0000E+00   0.0000E+00   *FIXED      BCK                 
+7   0.5000E+04   0.5000E+04   *FIXED      L_CONT              
+8   0.1000E+04   0.1000E+04   *FIXED      B_KUHN              
+9   0.1000E+01   0.1000E+01   *FIXED      EPS_XS              
+10   0.8345E+02   0.8067E+02   0.2468E+01  D_CQ                
+11   0.2835E+02   0.2531E+02   0.1475E+01  NU_RPA              
+12   0.1000E-02   0.3958E-03   0.7098E-04  SC_POW              
+13   0.4000E+01   0.4000E+01   *FIXED      EXPONENT            
+\end{verbatim}
+
+Esses valores podem então ser colocados numa planilha para serem plotados posteriormente.
+
+Caso se coloque que não quer realizar um ajuste, o programa irá cair num estado pedindo sua escolha, caracterizado por \texttt{>} e o cursor piscante. Há 5 escolhas que podem ser feitas.
+
+\begin{itemize}
+	\item[FIT] Voltar e realizar um ajuste com a mesma função.
+	\item[PLO] Plotar os dados e o ajuste.
+	\item[FIL] Voltar ao início e escolher um novo arquivo e um novo modelo.
+	\item[GRI] Faz ajustes pequenos de um número de parâmetros e mostra o valor de $\chi^2$.
+	\item[EXI] Sair do programa
+\end{itemize}
+
+\subsection{Análises em sequência}
+
+Quando tiver muitos arquivos, você pode utiliar o modo de sequência, usando uma lista de arquivos. Essa lista deve ter o nome \texttt{INPUT.LIS} e deve conter o seguinte:
+
+\begin{linenumbers}
+	\begin{verbatim}
+	Número de arquivos
+	nome1.ext
+	nome2.ext
+	...
+	\end{verbatim}
+\end{linenumbers}
+\resetlinenumber[1]
+
+A lista tem um limite de arquivos, não muito grande. 30 arquivos é certamente factível, talvez 80 seja o máximo.
+
+No programa, digite \texttt{1} no início para escolher o modo lista. A sequência de eventos é igual ao anterior, exceto na hora de escolher um novo arquivo. Quando você estiver satisfeito com a escolha dos parâmetros, coloque que deseja fazer um novo fit e depois que deseja fitar outro arquivo. Aí o programa irá fazer todos os arquivos, salvar no \texttt{RESULT.DAT}
+
+Caso tenha muitos arquivos e deseje criar essa lista automaticamente, pode ser utilizado o script \texttt{converting\_files.py} para criar o script. Caso deseje converter o arquivo de resultados em algo um pouco mais fácil de ser importado para o excel, pode ser utilizado o script \texttt{converting\_results.py}, ambos disponíveis em \\https://github.com/KarlClinckspoor/SAXS\_treatment.
+
+
+\section{Scripts menores para tratamento de dados}
+
+Para acelerar o tratamento de dados, foram desenvolvidos alguns scripts para auxiliar na extração e conversão de arquivos, e para a obtenção de alguns valores. Esses scripts são, em sua maioria, bastante curtos e auto-explicativos, mas não necessariamente elegantes.
+
+\subsection{Conversão de .dat do LNLS e Grenoble para arquivos compatíveis com o SUPERSAXS}
+
+O programa superSAXS necessita que existam duas linhas de comentário no cabeçalho do arquivo, seguido de uma linha com o número de pontos experimentais. Cada ponto experimental deve conter o valor de \q, em nm ou Å, intensidade e opcionalmente o erro (os valores de erro são estimados caso não estejam presentes). Além disso, o programa consegue analisar sequencialmente dados que possuem ajustes semelhantes, através de um arquivo .LIS, que este script consegue criar também. Para executá-lo, basta rodar o comando \texttt{python converting\_files.py}. O código fonte se encontra nas listagens \ref{lst:conversao_supersaxs1} e \ref{lst:conversao_supersaxs2}.
+
+\begin{listing}[H]
+	\inputminted{python}{./python/converting_files1.py}
+	\caption{Código fonte para o script de conversão de dados do ESRF e LNLS para um formato compatível com o programa SUPERSAXS (1/2)}  
+	\label{lst:conversao_supersaxs1}
+\end{listing}
+
+\begin{listing}[H]
+	\inputminted{python}{./python/converting_files2.py}
+	\caption{Código fonte para o script de conversão de dados do ESRF e LNLS para um formato compatível com o programa SUPERSAXS (2/2)}  
+	\label{lst:conversao_supersaxs2}
+\end{listing}
+
+\subsection{Conversão do arquivo RESULT.DAT para um arquivo .csv}
+
+\begin{listing}[H]
+	\inputminted{python}{./python/converting_results.py}
+	\caption{Código fonte para o script de conversão de resultados de ajuste do programa SUPERSAXS para csv (2/2)}  
+	\label{lst:conversao_resultados}
+\end{listing}
+
+\subsection{Conversão de .dat do LNLS para .pdh da Universidade de Graz}
+
+O software \emph{SGI} desenvolvido pelo grupo do Prof. Otto Glatter da Universidade de Graz possui ferramentas que auxiliam na determinação de mesofases por meio da indexação de picos. O formato dos dados de SAXS obtidos no LNLS é incompatível com o formato requisitado pelo \emph{SGI}, então foi desenvolvido um pequeno script para realizar essa conversão. Esse script é simples o suficiente para poder ser transformado em executável com um programa como o pyinstaller.
+
+O script encontra todos os arquivos \texttt{dat} da pasta onde o próprio se encontra e os transforma em \texttt{\_conv.dat}, que podem ser abertos diretamente pelo \emph{SGI}. O código fonte do script se encontra na listagem \ref{lst:LNLS_pdh}. Para utilizar este código, basta digitar no terminal \texttt{python LNLS\_dat\_to\_pdh.py} que a conversão será feita automaticamente.
+
+\begin{listing}[H]
+	\inputminted{python}{./python/LNLS_dat_to_pdh.py}
+	\caption{Código fonte para o script the conversão de \texttt{dat} para arquivo similar ao \texttt{pdh} da Universidade de Graz}  % todo: encontrar um nome melhor
+	\label{lst:LNLS_pdh}
+\end{listing}
 
 \end{apendicesenv}
+
+\subsection{Desmembramento de arquivos exportados pelo software RheoWin}
+
+Para a análise reológica completa de uma amostra, é necessário realizar uma sequência de experimentos no reômetro, que podem ser programados para ocorrerem sequencialmente. Os dados podem ser automaticamente exportados para um arquivo \texttt{txt} com todas as informações relevantes para uma análise, como os módulos G', G'', $\eta$, etc. Não é possível, porém, exportar cada experimento separadamente, e a tarefa de separá-los manualmente é tediosa e passiva de erros. Por esses motivos, foi desenvolvido um script que consegue separar as seções dos arquivos \texttt{txt} em arquivos \texttt{csv}.
+
+Por exemplo, o arquivo \texttt{Exp1.txt}, que possui reologia oscilatória de varredura de tensão, frequência e curvas de fluxo, é separado em três arquivos, \texttt{OT\_Exp1--0.csv}, \texttt{OF\_Exp1--0.csv} e \texttt{CF\_Exp1--0.csv}, respectivamente. O contador seguido do nome é necessário para diferenciar arquivos, caso haja colisão de nome. Para utilizar o script, somente é necessário colocá-lo na mesma pasta dos arquivos dos quais se deseja extrair dados e rodá-lo pelo console com \texttt{python Extracao\_dados.py}.
+
+Como pré-requisitos, é necessário possuir o pacote \emph{pandas} do Python, que pode ser instalado pelo comando \emph{pip install pandas} e os arquivos devem ser exportados contendo, necessariamente, as seguintes colunas na seguinte ordem: número, taxa de cisalhamento, viscosidade, frequência, G', G'', temperatura, tensão.
+
+O código fonte se encontra nas listagens \ref{lst:extracao_reologia1} e \ref{lst:extracao_reologia2}.
+
+\begin{listing}[H]
+	\inputminted{python}{./python/extracao_reologia1.py}
+	\caption{Código fonte para o script de extração de dados de reologia fornecidos pelo software RheoWin (1/2)}  
+	\label{lst:extracao_reologia1}
+\end{listing}
+
+\begin{listing}[H]
+	\inputminted{python}{./python/extracao_reologia2.py}
+	\caption{Código fonte para o script de extração de dados de reologia fornecidos pelo software RheoWin (2/2)} 
+	\label{lst:extracao_reologia2}
+\end{listing}
+
 
 %\begin{anexosenv}
 %

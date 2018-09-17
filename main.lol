@@ -9,3 +9,9 @@
 \contentsline {listing}{\numberline {9}{\ignorespaces Exemplo de como utilizar o código de micelas gigantes para realizar um plot\relax }}{137}{listing.9}
 \contentsline {listing}{\numberline {10}{\ignorespaces Seções do código mostrando o método de ajuste\relax }}{140}{listing.10}
 \contentsline {listing}{\numberline {11}{\ignorespaces Exemplo de como utilizar a ferramenta de ajuste não linear\relax }}{141}{listing.11}
+\contentsline {listing}{\numberline {12}{\ignorespaces Código fonte para o script de conversão de dados do ESRF e LNLS para um formato compatível com o programa SUPERSAXS (1/2)\relax }}{155}{listing.12}
+\contentsline {listing}{\numberline {13}{\ignorespaces Código fonte para o script de conversão de dados do ESRF e LNLS para um formato compatível com o programa SUPERSAXS (2/2)\relax }}{156}{listing.13}
+\contentsline {listing}{\numberline {14}{\ignorespaces Código fonte para o script de conversão de resultados de ajuste do programa SUPERSAXS para csv (2/2)\relax }}{157}{listing.14}
+\contentsline {listing}{\numberline {15}{\ignorespaces Código fonte para o script the conversão de \texttt {dat} para arquivo similar ao \texttt {pdh} da Universidade de Graz\relax }}{158}{listing.15}
+\contentsline {listing}{\numberline {16}{\ignorespaces Código fonte para o script de extração de dados de reologia fornecidos pelo software RheoWin (1/2)\relax }}{159}{listing.16}
+\contentsline {listing}{\numberline {17}{\ignorespaces Código fonte para o script de extração de dados de reologia fornecidos pelo software RheoWin (2/2)\relax }}{160}{listing.17}
