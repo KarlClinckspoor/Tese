@@ -4,7 +4,7 @@
 \partapendices
 
 \chapter{Descrição matemática do modelo de micelas gigantes}
-
+\label{sec:modelo_MG_matematica}
 \section{Introdução e motivação}
 
 % TODO: colocar as referências.
@@ -240,29 +240,20 @@ B_{i} = \sum_{j = 0}^{2}{b_{1}\left( i,j \right)\left( \frac{L}{k_{L}} \right)^{
     {\caption{Constantes utilizadas para o cálculo de $\Gamma$}
     \label{tab_ap:AiBi}}%
     {\begin{tabular}{r l | r l | r l | r l}
-    \toprule
-    $a_1$(2,0) & --0.1222 & $a_2$(2,1) & 0.1212 & $b_1$(0,0) &
-    --0.0699 & $b_2$(0,1) & --0.5171\\
-    $a_1$(3,0) & 0.3051 & $a_2$(3,1) & --0.4169 & $b_1$(1,0) & --0.09
-    & $b_2$(1,1) & --0.2028\\
-    $a_1$(4,0) & --0.0711 & $a_2$(4,1) & 0.1988 & $b_1$(2,0) &
-    0.2677 & $b_2$(2,1) & --0.3112\\
-    $a_1$(5,0) & 0.0584 & $a_2$(5,1) & 0.3435 & $b_1$(0,1) & 0.1342
-    & $b_2$(0,2) & 0.6950\\
-    $a_1$(2,1) & 1.761 & $a_2$(2,2) & 0.0170 & $b_1$(1,1) & 0.0138 &
-    $b_2$(1,2) & --0.3238\\
-    $a_1$(3,1) & 2.252 & $a_2$(3,2) & --0.4731 & $b_1$(2,1) & 0.1898
-    & $b_2$(2,2) & --0.5403\\
-    $a_1$(4,1) & --1.291 & $a_2$(4,2) & 0.1869 & $b_1$(0,2) & --0.2020
-    & &\\
-    $a_1$(5,1) & 0.6994 & $a_2$(5,2) & 0.3350 & $b_1$(1,2) & --0.0114
-    & &\\
-    $a_1$(2,2) & --26.04 & & & $b_1$(2,2) & 0.0123 & &\\
-    $a_1$(3,2) & 20.00 & & & & & &\\
-    $a_1$(4,2) & 4.382 & & & & & &\\
-    $a_1$(5,2) & 1.594 & & & & & &\\
-    \bottomrule
-   \end{tabular} }%
+    	\toprule
+    	$a_1$(2,0) & --0.1222 & $a_2$(2,1) & 0.1212   & $b_1$(0,0) & --0.0699 & $b_2$(0,1) & --0.5171 \\
+    	$a_1$(3,0) & 0.3051   & $a_2$(3,1) & --0.4169 & $b_1$(1,0) & --0.09   & $b_2$(1,1) & --0.2028 \\
+    	$a_1$(4,0) & --0.0711 & $a_2$(4,1) & 0.1988   & $b_1$(2,0) & 0.2677   & $b_2$(2,1) & --0.3112 \\
+    	$a_1$(5,0) & 0.0584   & $a_2$(5,1) & 0.3435   & $b_1$(0,1) & 0.1342   & $b_2$(0,2) & 0.6950   \\
+    	$a_1$(2,1) & 1.761    & $a_2$(2,2) & 0.0170   & $b_1$(1,1) & 0.0138   & $b_2$(1,2) & --0.3238 \\
+    	$a_1$(3,1) & 2.252    & $a_2$(3,2) & --0.4731 & $b_1$(2,1) & 0.1898   & $b_2$(2,2) & --0.5403 \\
+    	$a_1$(4,1) & --1.291  & $a_2$(4,2) & 0.1869   & $b_1$(0,2) & --0.2020 &            &          \\
+    	$a_1$(5,1) & 0.6994   & $a_2$(5,2) & 0.3350   & $b_1$(1,2) & --0.0114 &            &          \\
+    	$a_1$(2,2) & --26.04  &            &          & $b_1$(2,2) & 0.0123   &            &          \\
+    	$a_1$(3,2) & 20.00    &            &          &            &          &            &          \\
+    	$a_1$(4,2) & 4.382    &            &          &            &          &            &          \\
+    	$a_1$(5,2) & 1.594    &            &          &            &          &            &          \\ \bottomrule
+    \end{tabular} }%
     {}%
 \end{table}
 
@@ -381,7 +372,7 @@ Como uma aproximação, o modelo final utiliza $F_{sphere}$ ao invés de $F_{rod
 %	\end{enumerate}
 
 \section{Descrição do modelo de micelas gigantes em Python}
-
+\label{sec:modelo_MG_python}
 	Esta seção mostrará as equações do modelo de micelas gigantes, utilizado neste trabalho. O modelo foi criado pelo Prof. Jan Skov Pedersen, em Fortran 77, e disponibilizado para o aluno para realizar os ajustes das curvas obtidas no ESRF. O aluno então transcreveu o código de Fortran para Python, uma linguagem mais clara, e criou um pequeno programa interativo que relaciona o modelo com seus parâmetros. O programa consegue também comparar uma curva teórica com dados experimentais, de modo a fornecer um bom chute inicial para o ajuste das curvas.
 	
 \begin{figure}[H]
@@ -619,7 +610,7 @@ Durante a execução do projeto de doutorado, foi estabelecida uma parceria com 
 Plotando-se todos os dados obtidos, observou-se que G' estava sempre acima de G'' e, na escala logarítmica, as duas curvas eram praticamente paralelas e ligeiramente inclinadas positivamente. Em alguns casos, a inclinação aumentava em frequências maiores e, frequentemente, havia uma oscilação de G' e G'' sem significado físico nessa região. A taxa de aumento era consistente com uma exponencial. Visto isso, foi desenvolvido um script que realiza o seguinte:
 
 \begin{enumerate}
-	\item Obter a região de frequência confiável de G' e de G'' para o modelo linear e exponencial. Isso é feito realizando-se ajustes gradativos, do primeiro ponto até um ponto \emph{n}, armazenando os ajustes e depois escolhendo o ajuste com maior número de pontos onde $R^2 > 0,9$. Caso não exista ajuste seguindo esse critério, escolhe-se um novo critério com $R^2 > 0,85$. Caso não exista ajuste que obedeça isso mesmo assim, é escolhido o ajuste com o maior número de pontos. 
+	\item Obter a região de frequência confiável de G' e de G'' para o modelo linear e exponencial. Isso é feito realizando-se ajustes gradativos, do primeiro ponto até um ponto \emph{n}, armazenando os ajustes e depois escolhendo o ajuste com maior número de pontos onde $R^2 > 0{,}9$. Caso não exista ajuste seguindo esse critério, escolhe-se um novo critério com $R^2 > 0,85$. Caso não exista ajuste que obedeça isso mesmo assim, é escolhido o ajuste com o maior número de pontos. 
 	\item Os parâmetros dos ajustes que passaram pelo filtro de $R^2$ são gravados em um arquivo \texttt{csv}. Além disso, são gravados a média dos valores de G' e G'' da região linear, o desvio dessa média, o valor de $R^2$, os índices dos pontos utilizados para o ajuste e o valor de G' e G'' em 0,6813Hz. Esses parâmetros foram escolhidos com base em alguns artigos da literatura. % todo: ref?
 \end{enumerate}
 
@@ -663,7 +654,7 @@ Cerca de 500 dados experimentais únicos são tratados e plotados em cerca de 3 
 
 
 \section{Manual de uso do programa SUPERSAXS}
-
+\label{sec:manual_SUPERSAXS}
 Foi desenvolvido um guia para utilizar o programa SUPERSAXS, disponibilizado para o grupo. Aqui se encontra uma versão ligeiramente adaptada do manual.
 
 \begin{center}
@@ -1029,7 +1020,7 @@ Caso se coloque que não quer realizar um ajuste, o programa irá cair num estad
 \end{itemize}
 
 \subsection{Análises em sequência}
-
+\label{sec:script_saxs_sequencia}
 Quando tiver muitos arquivos, você pode utiliar o modo de sequência, usando uma lista de arquivos. Essa lista deve ter o nome \texttt{INPUT.LIS} e deve conter o seguinte:
 
 \begin{linenumbers}
