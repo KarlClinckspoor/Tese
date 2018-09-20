@@ -21,8 +21,6 @@ def convert_file(list_contents, dest_filename, multiple=True):
     fdest.close()
     return
 
-
-# todo: find out the max length of the list and warn the user. Is it 59?
 if __name__ == '__main__':
     choice = input('Do you want to convert a series of experiments [1, def] or a single one [2]?'
                    + '\nYou can also [list] all files in the directory'
@@ -30,7 +28,7 @@ if __name__ == '__main__':
     if choice == 'list:':
         files = glob.glob('*.*')
         print(*files)
-    if choice == 'batch':  # todo: do not insert directories into the input.lis
+    if choice == 'batch':
         append = input('Do you want to [1] create a new list or [2] append to a new one?')
         fname = input('What is the file name of the file/series you want to batch treat? ')
         files = glob.glob('*{}*'.format(fname))

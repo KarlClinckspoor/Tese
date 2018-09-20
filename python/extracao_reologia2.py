@@ -14,8 +14,7 @@
 
         if df_OF.size == 0:
             df_OF = None
-        elif (df_OF.index[0] + 1) != df_OF.index[1]: # É possível que haja uma coincidencia e repita um valor de Freq.
-            
+        elif (df_OF.index[0] + 1) != df_OF.index[1]:
             df_OF = df_OF.drop(df_OF.index[-1])
     else:
         df_OT = None
@@ -23,7 +22,6 @@
     
     return df_CF, df_OT, df_OF
 
-    
 def main():
     nomes = [arq.split(' ')[0] for arq in glob.glob('*.txt')]
     arquivos = glob.glob('*.txt')
@@ -53,6 +51,5 @@ def main():
                 counter += 1
             temp_OF.to_csv('OF_{0}--{1}.csv'.format(nome, counter), sep=';', encoding='utf8', index=False, decimal=',')
 
-        
 if __name__ == '__main__':
     main()

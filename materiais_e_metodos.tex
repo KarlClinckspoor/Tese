@@ -1,9 +1,70 @@
 \part{Materiais e Métodos}
 	\chapter{Reagentes}
+	
+	Os reagentes utilizados, suas respectivas purezas e os fabricantes se encontram na tabela \ref{tab:reagentes}.
+	
+	\begin{table}[H]
+		\IBGEtab%
+		{\caption{Reagentes, pureza e fabricantes}
+		\label{tab:reagentes}}%
+	    {
+		\centering
+		\begin{tabular}{c c p{3.2cm}}
+			\toprule
+			Reagente  & Pureza                                      & Fabricante    \\ \midrule
+			  CTAB    & $\geqslant 98\%$                            & Sigma Aldrich \\
+			  TTAB    & $\geqslant 99\%$                            & Sigma Aldrich \\
+			  DTAB	  & $\geqslant 98\%$							& Sigma Aldrich \\
+			  NaSal   & $99,5\%$                                    & Sigma Aldrich \\
+			Glicerina & $85\%$/$15\%\textnormal{H}_2\textnormal{O}$ & Merck         \\
+			Sacarose  & $\geqslant 99,5\%$                          & Sigma Aldrich \\
+	%		Sucralose & 											& 				\\  % todo: ver se coloco algo da sucralose aqui
+			  Ureia   & $\geqslant 99,5\%$                          & Sigma Aldrich \\
+			  DMSO    & $\geqslant 99,5\%$                          & Sigma Aldrich \\
+			  1,3BD   & $99,5\%$                                    & Sigma Aldrich \\ 
+			  Água    & $\sigma = 18,2M\Omega$.cm					& Millipore Direct-Q\textregistered{} \newline 3 UV com bomba  \\ \bottomrule
+		\end{tabular}}%
+		{}
+	\end{table}
+	
 	\chapter{Reologia}
 		\section{Preparo das amostras}
+		
+		O preparo de amostras de reologia deve ser feita de modo a garantir a completa homogeneização, e perda de memória reológica da amostra. A densidade do solvente é utilizada para os cálculos de concentração, para se determinar as concentrações, em \mM, do surfactante e de NaSal. Não foi considerada a alteração de densidade pela adição de surfactante e NaSal, somente dos aditivos.
+		
+		Após a pesagem dos componentes em balanças de precisão, frequentemente partindo de soluções estoque altamente concentradas, as amostras são aquecidas até 50°C em banho maria e homogeneizadas por meio de agitação manual e com vórtex. Temperaturas elevadas auxiliam na dissolução dos componentes e diminuem a viscosidade do meio, por também desfavorecerem o crescimento das micelas. Após já homogeneizadas, as amostras são mantidas a 50°C, e depois são resfriadas lentamente até temperatura ambiente removendo-se o aquecimento do banho maria. Neste instante, as amostras estão prontas para análise reológica. As amostras eram preparadas no mínimo com 24h de antecedência.
+		
+		\section{Análises reológicas}
+
+		% todo: checar se só foi utilizado esse reômetro
+		Todas as análises reológicas foram realizadas utilizando a geometria placa-placa de 35 mm de diâmetro (P35 Ti L) no reômetro Haake Mars III da Thermo Scientific. Antes de cada análise, a inércia do porta-rotor (\emph{spindle}) e do rotor eram determinadas de modo a controlar por erros relacionados ao encaixe manual do rotor. Também era determinado o ponto zero de altura, onde há o contato do rotor com a base, de modo a estabelecer um espaçamento de 1,000 mm durante as análises. A temperatura era controlada pela combinação de um banho termostatizado e de aquecimento na base, e monitorada por meio de sensores na base.
+		
+		As amostras são transferidas para a placa do reômetro simplesmente vertendo-se os tubos falcon até que a área de análise estivesse coberta. Caso as amostras fossem resistentes demais, uma espátula era utilizada para cortar e espalhar o gel sobre a base. Em seguida, o rotor era abaixado e observava-se se não havia falta de amostra em algum ponto. Caso houvesse falta, a amostra era recuperada e reaplicada na base. O cisalhamento causado pela transferência de amostra e pelo abaixamento do rotor não foram levados em consideração nas análises. A amostra era coberta por um protetor de teflon de modo a minimizar a perda de solvente durante a análise.
+		
+		Os métodos de análise são montados de acordo com as necessidades de cada amostra. Em comum, somente há a etapa de termostatização por 5 minutos na temperatura de análise. As etapas possíveis são:
+		
+		\begin{itemize}
+			\item Análise de varredura de tensão. A faixa de valores de tensão estudados foram geralmente de 0,01 Pa até 5 Pa, espaçados logaritmicamente, analisados a 1 Hz. Com essa análise é possível determinar a região linear, onde os valores de G' e G'' estão constantes, independente da tensão aplicada. Caso uma tensão alta demais seja aplicada, começa a ocorrer a desestruturação do material, e os valores de G' e G'' diminuem.
+			
+			\item Análise de varredura de frequência, numa tensão dentro da região linear, geralmente 1 Pa. A faixa de frequência estudada varia de acordo com as necessidades da amostra e com o tempo disponível, pois quanto menor a frequência estudada, maior é o tempo de análise. A faixa de frequência habitual é de 0,01 Hz a 10 Hz (ou 0,0628 rad.s\menosUm{} a 62,83 rad.s\menosUm), e 6 medidas por década, espaçadas logaritmicamente. Este tipo de experimento demora cerca de 20 minutos. O modo utilizado em todas as análises foi CS (Control Shear).
+			
+			\item Análise de curva de fluxo. As taxas de cisalhamento ($\dot{\gamma}$) utilizadas geralmente variavam de 0,001 s\menosUm{} a 10 s\menosUm. Caso o platô Newtoniano não fosse observado, diminuia-se a taxa aplicada. Obtinha-se entre 10 e 20 pontos espaçados logaritmicamente. As medidas eram obtidas no modo CR (Control Rate).
+		\end{itemize}
+		
+		Ao montar-se um plano experimental, pode-se configurar o equipamento para exportar os dados obtidos de acordo com uma configuração tabular específica, para um arquivo de texto. Isso facilita posteriormente o tratamento de dados. Além disso, o nome do arquivo pode ser gerado automaticamente pela composição da amostra, a hora e a data de análise.
+		
 		\section{Tratamento de dados de reologia oscilatória}
+		
+		Para micelas gigantes, a obtenção de informações microscópicas da amostra geralmente é realizada através de um ajuste das curvas de G' e G'' ao modelo de Maxwell. Com esse ajuste, é possível obter informações como o tempo de relaxação estrutural das micelas e os módulos elásticos das soluções. Para realizar o tratamento, os dados foram importados ou para o software Origin\textcopyright{} 9 ou Python, e o modelo de Maxwell foi ajustado para G' e G'' utilizando-se somente um conjunto de parâmetros pelo método dos mínimos quadrados. A região utilizada para os ajustes depende da qualidade subjetiva dos pontos. Por exemplo, em altas frequências de oscilação, a confiabilidade dos valores de G' e G'' é menor devido à inércia do rotor. Por essa razão, há muito ruído em altas frequências, e a região de ruído varia de amostra para amostra. Dessa maneira, cada dado é analisado separadamente, removendo-se os pontos ruidosos.
+		% todo: colocar referência das seções relevantes.
+		% todo: quando eu analisar novamente os dados de reologia oscilatória das amostras com aditivos, onde eu farei também análises de Cole Cole e descobrirei outros tempos de relaxação, colocar aqui como que esses métodos foram feitos
+		
 		\section{Tratamento de dados de curvas de fluxo}
+		
+		Micelas gigantes são fluídos conhecidamente pseudoplásticos, cuja viscosidade aparente ($\eta$) diminui com o aumento da taxa de cisalhamento ($\dot{\gamma}$). Em baixos valores de $\dot{\gamma}$, a viscosidade aparente é constante, e esse valor é chamado de viscosidade no repouso, $\eta_0$. Esse valor é de maior interesse para este trabalho. Para obter esse valor, é possível realizar ajustes lineares da região onde a viscosidade é constante, forçando-se a inclinação da reta a zero, o que se reduz a obter um valor médio desses valores, mas também foram feitos ajustes de modelos, como Carreau e Cross, através do método dos mínimos quadrados.
+		
+		Dados de curva de fluxo também são passíveis de desvios, que dificultam a análise. Geralmente há problemas em taxas de cisalhamento muito baixas. Para contornar esse problema, é necessário selecionar uma faixa de valores para o ajuste, o que foi feito manualmente e programaticamente. O apêndice \ref{sec:apn_tratamento_CF} mostra brevemente como o programa para tratamento de curva de fluxo funciona, os problemas frequentes encontrados com curvas de fluxo.		
+		
 	\chapter{Calorimetria de titulação isotérmica}
 		\section{Preparo das amostras}
 		\section{Tratamento de dados}
