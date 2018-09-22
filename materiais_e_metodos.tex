@@ -69,7 +69,7 @@
 		
 	\chapter{Calorimetria de titulação isotérmica}
 		\section{Preparo de amostra e uso do equipamento}
-		
+		\label{sec:preparo_amostra_itc}
 		% todo: verificar qual é a variação de volume
 		
 		Na calorimetria de titulação isotérmica (ITC), titula-se uma solução contida numa seringa em outra solução contida numa cela. Esse processo pode liberar ou absorver calor, e a quantidade de calor absorvido ou liberado é dependente de todos os processos que ocorrem durante a injeção, por exemplo, diluição e micelização. Essa sensibilidade exige que muito cuidado seja tomado na preparação de amostra, de modo a obter soluções bastante limpas e homogêneas, sem interferentes, e com concentração bem conhecida. Além disso, o solvente de ambas as soluções (da seringa e cela) devem ser estritamente os mesmos, para impedir que exista um sinal de mistura do solvente.
@@ -119,7 +119,7 @@
 	\chapter{SAXS}
 		\section{Preparo de amostra}
 		
-		A metodologia de preparo de amostra para SAXS é igual à metodologia apresentada na seção \ref{sec:reologia_preparo_amostra}.
+		A metodologia de preparo de amostra para SAXS é igual à metodologia apresentada na seção \ref{sec:reologia_preparo_amostra}. Para as amostras de stopped-flow, é necessário preparar amostras com o dobro de concentração final desejada, devido à mistura 1:1 no aparato. Por esse motivo, utilizou-se TTAB, ao invés de CTAB, devido à sua maior solubilidade e menor temperatura Krafft.
 		
 		\section{Aquisição de dados}
 			\subsection{LNLS}
@@ -218,12 +218,49 @@
 			Com os parâmetros importados no software de escolha, seus valores foram comparados para obter a cinética de crescimento das micelas.
 			
 	\chapter{Fluorescência}
+		\section{Preparo de amostra}
+		
+		As amostras para fluorescência foram preparadas utilizando a mesma metodologia usada para calorimetria de titulação isotérmica (Sec. \ref{sec:preparo_amostra_itc}), devido aos paralelos que se deseja criar entre as duas técnicas. Para o uso de stopped-flow com fluorescência, as amostras foram preparadas com o dobro de concentração final desejada, para que com a mistura 1:1 resulte na diluição correta.
+		
 		\section{Aquisição de dados}
 			\subsection{Determinação da absorção e emissão}
-			\subsection{Fluorescência estática}
+			
+			Amostras de NaSal 1,5\mM{} com concentrações crescentes de TTAB foram preparadas de modo a medir o espectro de absorção e emissão do salicilato. As amostras foram preparadas a partir de um estoque e diluídas apropriadamente. As medidas foram realizadas no espectrômetro XYZ da ABC % todo: encontrar o nome do equipamento.
+			
 			\subsection{Fluorescência resolvida no tempo}
-				\subsubsection{Programa LabView}
+			
+			% todo: encontrar as características do laser
+			Amostras de NaSal 3,0\mM{} em água e com TTAB X\mM{} foram preparadas. Um aparato ótimo foi montado juntando-se o \emph{stopped-flow}, um detector da OceanOptics 4000 e uma fonte da XYZ. Veja a Figura X para um diagrama da montagem utilizado.
+			
+			% \begin{figure} ...
+			
+			Para a aquisição de dados, utilizou-se um programa escrito em LabView 2013, da National Instruments. O código de aquisição foi escrito pelo Prof. Dr. René Nome e modificado pelo aluno. O painel frontal do programa se encontra na Fig. \ref{fig:fluor_painelfrontal} e o código fonte, na Fig. \ref{fig:fluor_gravacaodados}.
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{imagens/fluor/painel_frontal}
+				\caption{Painel frontal do programa de aquisição de dados}
+				\label{fig:fluor_painelfrontal}
+			\end{figure}
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{imagens/fluor/gravacao_dados}
+				\caption{Código fonte do programa de aquisição de dados}
+				\label{fig:fluor_gravacaodados}
+			\end{figure}
+
+			% todo: colocar a pressão
+			Após iniciar a aquisição de dados, acionava-se rapidamente o botão de injeção do \emph{stopped-flow}, que empurrava os êmbolos das duas seringas simultaneamente. A pressão utilizada para injeção era de XYZ Pa. Os tempos de integração e o número de pontos de aquisição variavam de acordo com o experimento. O programa gera dois arquivos, um contendo os $n$ comprimentos de onda de cada ponto medido num vetor coluna e outro continha uma matriz com os $m \times n$ pontos de aquisição, além dos $m$ tempos de aquisição, em milissegundos, na primeira coluna. A matriz resultante tem tamanho $m\times n+1$. Foi criado um mapa de cor para cada matriz.
+			
+			Dessa matriz, extraiu-se a coluna que continha informações em função do tempo do comprimento de onda do máximo do espectro de emissão, em 411 nm. Esse dado foi utilizado para realizar as análises quantitativas de cinética.
+			
 		\section{Tratamento de dados}
+		
+			As informações de cada amostra foram plotadas comparativamente. Notou-se que os dados eram bastante ruidosos, mas que havia uma tendência. Para melhorar a qualidade dos dados, aplicou-se o filtro de Savitzky-Golay, um para a região pré-injeção e outro para a região pós-injeção, com janelas diferentes, porém ambas de segundo grau.
+			
+			O filtro de Savitzky-Golay é uma maneira de se remover ruído experimental aplicando um ajuste polinomial de grau $n$ sobre uma janela de número ímpar de dados. O valor experimental do ponto médio é substituído pelo valor do ponto médio do ajuste. Isso é realizado para a curva inteira, utilizando-se, neste caso, valores constantes iguais ao primeiro/último valor para as extremidades.
+		
 			\subsection{Filtro Savitzky-Golay}
 	\chapter{Técnicas adicionais}
 		\section{Calorimetria diferencial de varredura}
