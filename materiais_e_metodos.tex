@@ -136,7 +136,7 @@
 			
 			Os perfis de espalhamento obtidos no LNLS não foram ajustados por nenhum modelo, sendo necessário somente a indexação dos picos de espalhamento para a obtenção de informações sobre o sistema.		
 			
-			\subsection{Grenoble}
+			\subsection{ESRF}
 			As medidas de SAXS resolvido no tempo foram realizadas na linha ID02 no \emph{European Scattering Radiation Facility} (ESRF) em Grenoble, França. Esses estudos contaram com a colaboração do Professor Jan Skov Pedersen da Universidade de \AA rhus, Dinamarca. Inicialmente, o contato local realizou as seguintes tarefas:
 			
 			\begin{itemize}
@@ -251,18 +251,45 @@
 			\end{figure}
 
 			% todo: colocar a pressão
-			Após iniciar a aquisição de dados, acionava-se rapidamente o botão de injeção do \emph{stopped-flow}, que empurrava os êmbolos das duas seringas simultaneamente. A pressão utilizada para injeção era de XYZ Pa. Os tempos de integração e o número de pontos de aquisição variavam de acordo com o experimento. O programa gera dois arquivos, um contendo os $n$ comprimentos de onda de cada ponto medido num vetor coluna e outro continha uma matriz com os $m \times n$ pontos de aquisição, além dos $m$ tempos de aquisição, em milissegundos, na primeira coluna. A matriz resultante tem tamanho $m\times n+1$. Foi criado um mapa de cor para cada matriz.
+			Após iniciar a aquisição de dados, acionava-se rapidamente o botão de injeção do \emph{stopped-flow}, que empurrava os êmbolos das duas seringas simultaneamente. A pressão utilizada para injeção era de XYZ Pa. Os tempos de integração e o número de pontos de aquisição variavam de acordo com o experimento. O programa gera dois arquivos, um contendo os $n$ comprimentos de onda de cada ponto medido num vetor coluna (\emph{nome\_t\_int.csv}) e outro continha uma matriz com os $m \times n$ pontos de aquisição, além dos $m$ tempos de aquisição, em milissegundos, na primeira coluna (\emph{nome\_t\_int.csv}). A matriz resultante tem tamanho $m\times n+1$.
 			
-			Dessa matriz, extraiu-se a coluna que continha informações em função do tempo do comprimento de onda do máximo do espectro de emissão, em 411 nm. Esse dado foi utilizado para realizar as análises quantitativas de cinética.
+			Foi criado um mapa de cor para cada matriz. Dessa matriz, extraiu-se a coluna que continha informações do comprimento de onda no máximo do espectro de emissão, em 411 nm, junto com a coluna de tempos. Esse dado, após ser normalizado pelo máximo de intensidade, foi utilizado para realizar as análises quantitativas de cinética. A listagem \ref{lst:extracao_fluor1} mostra o código utilizado para realizar essas tarefas. Esse código foi colocado em um \emph{Jupyter Notebook}, e a cada novo experimento, o nome do arquivo era alterado e todas as tarefas eram aplicadas automaticamente, facilitando muito a visualização ágil dos dados.
+			
+			\begin{listing}[H]
+				\inputminted{python}{./python/fluor_plot_inicial.py}
+				\caption{Código fonte para a criação de mapas de cor e extração de informações em 411 nm.}
+				\label{lst:extracao_fluor1}
+			\end{listing}
 			
 		\section{Tratamento de dados}
 		
-			As informações de cada amostra foram plotadas comparativamente. Notou-se que os dados eram bastante ruidosos, mas que havia uma tendência. Para melhorar a qualidade dos dados, aplicou-se o filtro de Savitzky-Golay, um para a região pré-injeção e outro para a região pós-injeção, com janelas diferentes, porém ambas de segundo grau.
+			As informações de intensidade por tempo, em 411 nm, de cada amostra foram plotadas comparativamente. Notou-se que os dados eram bastante ruidosos, mas que havia uma tendência geral. Para facilitar as comparações, aplicou-se o filtro de Savitzky-Golay. Esse filtro ajusta um polinômio de grau $n$ sobre um conjunto de dados de tamanho ímpar (janela), $j$. O ponto médio experimental então é substituído pelo ponto médio do ajuste. Para os pontos nas extremidades, onde não há pontos suficientes para o tamanho da janela, utilizou-se o modo padrão do pacote \emph{scipy}, interpolação. Por exemplo, no início da aplicação do filtro, há $\frac{j}{2}$ pontos à direita mas menos de $\frac{j}{2}$ pontos à esquerda. Para completar essa falta, é feito um ajuste de grau $n$ dos primeiros $j$ pontos, e esse ajuste é estendido para antes do primeiro ponto, garantindo então que existam $\frac{j}{2}$ à direita e à esquerda do ponto médio.
 			
-			O filtro de Savitzky-Golay é uma maneira de se remover ruído experimental aplicando um ajuste polinomial de grau $n$ sobre uma janela de número ímpar de dados. O valor experimental do ponto médio é substituído pelo valor do ponto médio do ajuste. Isso é realizado para a curva inteira, utilizando-se, neste caso, valores constantes iguais ao primeiro/último valor para as extremidades.
+			Utilizou-se dois filtros de segundo grau, mas com tamanhos de janela diferente, para antes e depois da injeção. O ponto de injeção foi determinado manualmente. O tamanho da janela foi escolhido de acordo com o número total de pontos de cada parte. Antes da injeção, utilizou-se como janela o número de pontos, dividido por 2, arredondando para o número inteiro mais próximo, e caso seja ímpar, adicionou-se 1 ao número. Para o conjunto de dados depois da injeção, utilizou-se 201 pontos para conjuntos com 10000 pontos no total e 101 pontos para conjuntos com 5000 pontos. Esses valores foram determinados testando-se várias janelas e escolhendo aquelas com o melhor alisamento.
+			
+			Após o alisamento, estudou-se o tempo de injeção e a taxa de decaimento após a injeção. O tempo de injeção foi determinado contando-se o número de pontos alisados pertencentes à região de acréscimo de fluorescência. A taxa de decaimento foi determinada realizando-se ajustes monoexponenciais ($y = y_0 + A_1 e^{\frac{-x}{t_1}}$) e comparando-se os valores de $R^2$. Outros modelos foram testados, mas o ajuste monoexponencial descrevia muito bem os dados, e era o mais simples.
 		
-			\subsection{Filtro Savitzky-Golay}
 	\chapter{Técnicas adicionais}
 		\section{Calorimetria diferencial de varredura}
+		
+		Foram realizadas análises utilizando o equipamento institucional DSC Q100 da TA Instruments. O preparo de amostra seguiu as mesmas considerações descritas na seção \ref{sec:reologia_preparo_amostra}. O método de análise utilizado foi:
+		
+		\begin{enumerate}
+			\item Equilíbrio a 1°C
+			\item Rampa até 60°C na taxa de 2°C/min
+			\item Isotérmica por 3 minutos
+			\item Rampa até 1°C na taxa de 2°C/min
+			\item Isotérmica por 3 minutos
+		\end{enumerate}
+		
+		A análise foi realizada sob fluxo de nitrogênio a 50 ml/min e as massas utilizadas estavam na faixa de 10 a 20 mg. As áreas de transição e temperaturas de transição foram determinadas pelo software do equipamento. As larguras a meia-altura foram determinadas de acordo com o script localizado na seção \ref{sec:apendice_DSC}
+		
 		\section{Espalhamento dinâmico de luz}
+		
+		% todo: colocar mais detalhes experimentais aqui.
+		Foram realizadas análises de espalhamento dinâmico de luz no Malvern ZetasizerNano Zs-Zen3600 com o objetivo de observar o tamanho dos objetos das amostras de surfactante e ureia acima da temperatura de transição. Desse modo, a temperatura de análise foi fixada em 50°C e as amostras foram termostatizadas nessa temperatura por 10 minutos antes das medidas. As medidas foram realizadas em triplicata.
+		
 		\section{Tensiometria}
+		
+		% todo: checar o diâmetro da agulha.
+		Para a determinação do parâmetro de Gordon das misturas aquosas binárias, mediu-se a tensão superficial no equipamento Attension Theta da Biolin Scientific pelo método da gota pendente. Preparou-se misturas com composições e densidades conhecidas, e certificou-se de que estavam homogêneas. Utilizou-se uma agulha com 0,7mm de diâmetro, previamente limpa. A câmera foi focada na agulha e foi calibrada utilizando-se o diâmetro conhecido da mesma. Os parâmetros da câmera foram ajustados pelo método automático. A temperatura da sala onde foram realizadas as medidas era de 18°C. Após confirmação de que os parâmetros de análise estão corretos, medindo-se a tensão superficial de água, iniciou-se as medidas das amostras. Gerava-se uma gota com o maior volume possível de líquido, de modo que a gota estivesse na iminência de cair. Em seguida, iniciou-se a captura de fotos pela câmera, a 12 fotos por segundo, por 10 segundos. Em seguida, cada frame individual foi ajustado pelo método de Young-Laplace de modo a obter um valor de tensão superficial, corrigido pela densidade do líquido. Os valores de tensão superficial foram somados, e considerou-se o desvio padrão dessas medidas como o erro experimental. Esse processo foi repetido cinco vezes por amostra.
