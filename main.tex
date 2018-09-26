@@ -1,5 +1,4 @@
-% todo: encontrar como remover o espaço extra entre os números separados com vírgulas
-
+% todo: alterar as partes com $$ para \[\]
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
@@ -46,6 +45,7 @@
 \usepackage{csquotes}
 \usepackage{amsmath, amsfonts, amssymb}
 \usepackage{xfrac}
+%\usepackage{nicefrac}
 % Cores
 \usepackage{xcolor}
 \usepackage{enumitem}
@@ -88,8 +88,14 @@
 
 \newcommand{\mM}{mmol.L\textsuperscript{-1}}
 \newcommand{\Sal}{Sal\textsuperscript{--}}
-\newcommand{\q}{$q$}
+\newcommand{\q}{\(q\)}
 \newcommand{\menosUm}{\textsuperscript{-1}}
+\newcommand{\cmc}{CMC}
+\newcommand{\cwlm}{\(c_{WLM}\)}
+\newcommand{\CTAB}{C\textsubscript{16}TAB}
+\newcommand{\TTAB}{C\textsubscript{14}TAB}
+\newcommand{\DTAB}{C\textsubscript{12}TAB}
+\newcommand{\CTDTAB}{C\textsubscript{16,14,12}TAB}
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
@@ -337,7 +343,7 @@
 
 Agradeço à minha mãe, a quem amo muito, por ter sempre me apoiado em toda minha vida. Agradeço à Karen, minha maravilhosa namorada, por todos os singelos momentos vividos até agora. Agradeço à Lia, por ter sido uma ótima companhia, desde o início da graduação.
 
-Agradeço ao Prof. Edvaldo, que dirigiu e focou minha, por vezes dispersa, atenção, e me apoiou nas diversas decisões que eu tive que tomar durante minha pós graduação. Agradeço ao Prof. Jan Skov Pedersen, por ter aceitado me receber em seu laboratório por um mês, mesmo eu sendo um completo amador em sua área de especialização.
+Agradeço ao Prof. Edvaldo, que dirigiu e focou minha, por vezes dispersa, atenção, e me apoiou nas diversas decisões que eu tive que tomar durante minha pós graduação. Agradeço o Prof. Heinz Hoffmann, por tantas discussões científicas, e por ter me abrigado em sua casa por uma semana em Setembro de 2018. Agradeço ao Prof. Jan Skov Pedersen, por ter aceitado me receber em seu laboratório por um mês, mesmo eu sendo um completo amador em sua área de especialização.
 
 Agradeço aos colegas do laboratório B145, pelas discussões e companhia durante esses anos.
 
