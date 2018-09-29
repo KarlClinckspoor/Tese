@@ -18,7 +18,7 @@ Porém, essa descrição matemática é de menor aplicabilidade, pois é necess�
 
 \section{Resumo do modelo}
 
-O modelo descreve cadeias alongadas caroço-casca (\emph{core-shell}) de Kratky-Porod, considerando volume excluído, com interações intercadeias modeladas pelo modelo PRISM (\emph{Polymer Reference Interaction Site Model}). No total, a equação de intensidade de espalhamento $I$ em função do vetor de espalhamento \q ($I(q)$, Eq. \ref{eqn:AP_saxs_MG_superficial}) possui 13 parâmetros, descritos na tabela \ref{tab_ap:simbolos}.
+O modelo descreve cadeias alongadas caroço-casca (\emph{core-shell}) de Kratky-Porod, considerando volume excluído, com interações intercadeias modeladas pelo modelo PRISM (\emph{Polymer Reference Interaction Site Model}). No total, a equação de intensidade de espalhamento \(I\) em função do vetor de espalhamento \q (\(I(q)\), Eq. \ref{eqn:AP_saxs_MG_superficial}) possui 13 parâmetros, descritos na tabela \ref{tab_ap:simbolos}.
 
 \begin{equation}
 I = f(q, scale, d_{head}, r_{core}, \rho_{rel}, \sigma, back, L, k_L, \varepsilon, D_{CQ}, \nu_{RPA}, SC_{pow}, exp_{pow})
@@ -33,23 +33,23 @@ I = f(q, scale, d_{head}, r_{core}, \rho_{rel}, \sigma, back, L, k_L, \varepsilo
     	\toprule
      Símbolo 			& Descrição        						\\
      \midrule
-     $I$					& Intensidade de RX espalhado			\\
+     \(I\)					& Intensidade de RX espalhado			\\
      \q					& Vetor de espalhamento					\\
      \midrule
-     $scale$				& Fator de escala						\\
-     $d_{head}$			& Espessura do \emph{shell}				\\
-     $r_{core}$			& Raio do \emph{core}					\\
-     $\rho_{rel}$		& Diferença de densidade eletrônica entre \emph{core} e \emph{shell} \\
-     $\sigma$			& Fator de \emph{smearing}, o quão definido é o limite entre regiões \\
-     $back$				& Constante referente ao \emph{background} \\
-     $L$					& Comprimento de contorno das cadeias 	\\
-     $k_L$				& Comprimento de \emph{Kuhn} das cadeias, igual ao dobro do comprimento de correlação \\ % TODO: Achar o que é esse comprimento exatamente
-     $\varepsilon$			& Excentricidade radial das micelas		\\
-     $D_{CQ}$			& Distância de correlação das micelas 	\\
-     $\nu_{RPA}$			& Fator de concentração					\\
+     \(scale\)				& Fator de escala						\\
+     \(d_{head}\)			& Espessura do \emph{shell}				\\
+     \(r_{core}\)			& Raio do \emph{core}					\\
+     \(\rho_{rel}\)		& Diferença de densidade eletrônica entre \emph{core} e \emph{shell} \\
+     \(\sigma\)			& Fator de \emph{smearing}, o quão definido é o limite entre regiões \\
+     \(back\)				& Constante referente ao \emph{background} \\
+     \(L\)					& Comprimento de contorno das cadeias 	\\
+     \(k_L\)				& Comprimento de \emph{Kuhn} das cadeias, igual ao dobro do comprimento de correlação \\ % TODO: Achar o que é esse comprimento exatamente
+     \(\varepsilon\)			& Excentricidade radial das micelas		\\
+     \(D_{CQ}\)			& Distância de correlação das micelas 	\\
+     \(\nu_{RPA}\)			& Fator de concentração					\\
      \midrule
-     $SC_{pow}$			& Fator de escala (pre-exponencial) da exponencial em baixo q\\
-     $exp_{pow}$			& Fator exponencial, relativo à inclinação na escala log\\
+     \(SC_{pow}\)			& Fator de escala (pre-exponencial) da exponencial em baixo q\\
+     \(exp_{pow}\)			& Fator exponencial, relativo à inclinação na escala log\\
      \bottomrule
     \end{tabular}}%
     {}%
@@ -70,9 +70,9 @@ I = \frac{scale\left(F_{KPchain_{ExV}}F_{rod_{CS}}\right)}{1 + \nu_{RPA} F_{sphe
     \toprule
     Termo 			& Descrição        						\\
     \midrule
-    $F_{KPchain_{ExV}}$  & Fator forma de cadeias de Kratky-Porod com volume excluído \\
-    $F_{rod_{CS}}$		 & Fator forma da seção transversão de um bastão	\\
-    $F_{sphere}(D_{CQ})$ & Fator forma de uma esfera, cujo raio é a distância de correlação \\
+    \(F_{KPchain_{ExV}}\)  & Fator forma de cadeias de Kratky-Porod com volume excluído \\
+    \(F_{rod_{CS}}\)		 & Fator forma da seção transversão de um bastão	\\
+    \(F_{sphere}(D_{CQ})\) & Fator forma de uma esfera, cujo raio é a distância de correlação \\
     \bottomrule%
     \end{tabular}}
     {}%
@@ -95,13 +95,13 @@ I_{PRISM}= \frac{\varphi V_{mic}F_{wc}(q)F_{cs}(q)}{1 + \nu F_{rod}(qL_{c(q)})F_
      \toprule
      Termo 			& Descrição        						\\
      \midrule
-     $\varphi$		& Fração volumétrica \\ % TODO: checar
-     $V_{mic}$		& Volume da micela   \\
-     $F_{wc}$		& Fator forma de uma \emph{wormlike chain} \\
-     $F_{cs}$		& Fator forma de uma seção transversal de cilindro \\ % TODO: checar se é cilindro
-     $F_{rod}$		& Fator forma de um bastão infinitamente longo \\
-     $L_{c(q)}$		& $=6\xi$, comprimento característico \\
-     $\xi$			& Comprimento de correlação da função $c(q) \approx F_{rod}$ \\
+     \(\varphi\)		& Fração volumétrica \\ % TODO: checar
+     \(V_{mic}\)		& Volume da micela   \\
+     \(F_{wc}\)		& Fator forma de uma \emph{wormlike chain} \\
+     \(F_{cs}\)		& Fator forma de uma seção transversal de cilindro \\ % TODO: checar se é cilindro
+     \(F_{rod}\)		& Fator forma de um bastão infinitamente longo \\
+     \(L_{c(q)}\)		& \(=6\xi\), comprimento característico \\
+     \(\xi\)			& Comprimento de correlação da função \(c(q) \approx F_{rod}\) \\
      \bottomrule
      \end{tabular}}%
      {}%
@@ -112,9 +112,9 @@ A partir disso, podemos começar a adentrar nos termos.
 
 \section{Descrição detalhada do modelo}
 
-O modelo será dividido em duas partes, uma referente à cadeia micelar, $F_{wc}$ e outra referente à seção transversal da cadeia, $F_{cs}$.
+O modelo será dividido em duas partes, uma referente à cadeia micelar, \(F_{wc}\) e outra referente à seção transversal da cadeia, \(F_{cs}\).
 
-\subsection{Fator forma das cadeias \emph{wormlike}, $F_{wc}$}
+\subsection{Fator forma das cadeias \emph{wormlike}, \(F_{wc}\)}
 \label{sec:equacoes_Fwc}
 
 \begin{equation}
@@ -123,7 +123,7 @@ F_{wc} = \left[\left(1 - \chi\right)F_{chain_{ExV}} + \chi F_{rod}\right]\Gamma
 \end{equation}
 
 % TODO: colocar a equação do \Gamma
-A equação \ref{eqn:AP_Fwc} pode ser simplificada dependendo da faixa de \q. A região de \q intermediária precisa ser descrita pelo termo $\chi$ (Eq. \ref{eqn:AP_chi}) e corrigida por $\Gamma$. Esses parâmetros são obtidos por simulações de Monte Carlo.
+A equação \ref{eqn:AP_Fwc} pode ser simplificada dependendo da faixa de \q. A região de \q intermediária precisa ser descrita pelo termo \(\chi\) (Eq. \ref{eqn:AP_chi}) e corrigida por \(\Gamma\). Esses parâmetros são obtidos por simulações de Monte Carlo.
 
 \begin{equation}
 	F_{\text{wc}} \approx 
@@ -138,15 +138,15 @@ A equação \ref{eqn:AP_Fwc} pode ser simplificada dependendo da faixa de \q. A 
 %		\toprule
 %		Termo 			& Descrição        						\\
 %		\midrule
-%		$\chi$			& Região de \emph{crossover} \\
-%		$\Gamma$		& Correção da região de crossover. \\
+%		\(\chi\)			& Região de \emph{crossover} \\
+%		\(\Gamma\)		& Correção da região de crossover. \\
 %		\bottomrule
 %		\caption{Termos da equação \ref{eqn:AP_Fwc}}
 %		\label{tab_ap:Fwc} 
 %	\end{longtable}
 
-\subsubsection{Fator de correção $\chi$}
-O termo $\chi$ é descrito pela equação \ref{eqn:AP_chi}, que por sua vez é dependente da equação \ref{eqn:AP_xi}.
+\subsubsection{Fator de correção \(\chi\)}
+O termo \(\chi\) é descrito pela equação \ref{eqn:AP_chi}, que por sua vez é dependente da equação \ref{eqn:AP_xi}.
 
 \begin{equation}
 \chi = \exp{\xi^{-5}}
@@ -159,11 +159,11 @@ O termo $\chi$ é descrito pela equação \ref{eqn:AP_chi}, que por sua vez é d
 \label{eqn:AP_xi}
 \end{equation}
 
-\noindent onde $\left<R_g^2\right>$ é a média do \emph{ensemble} do quadrado do raio de giro das cadeias, no modelo.
+\noindent onde \(\left<R_g^2\right>\) é a média do \emph{ensemble} do quadrado do raio de giro das cadeias, no modelo.
 
-\subsubsection{Fator forma de cadeias com volume excluído, $F_{chain_{ExV}}$}
+\subsubsection{Fator forma de cadeias com volume excluído, \(F_{chain_{ExV}}\)}
 \label{sec:F_chain_ExV_equacoes}
-O termo $F_{chain_{ExV}}$ possui a seguinte forma (Eq. \ref{eqn:AP_FchainExV})
+O termo \(F_{chain_{ExV}}\) possui a seguinte forma (Eq. \ref{eqn:AP_FchainExV})
 
 % TODO: verificar se o \nu aqui é o \nu_RPA
 \begin{multline}
@@ -174,13 +174,13 @@ C_3(q R_g)^{-\frac{3}{\nu}}\right]
 % todo: colocar o valor de \nu, que está na Eq. S_EXV_APP
 % todo: incluir aqui uma tabela com os termos e as equações
 
-O termo $F_{Debye}$, por sua vez, é dado pela Eq. \ref{eqn:AP_fdebye}.
+O termo \(F_{Debye}\), por sua vez, é dado pela Eq. \ref{eqn:AP_fdebye}.
 \begin{equation}
 F_{Debye} = 2 \left(\frac{e^{-u} + u - 1}{u^2}\right)
 \label{eqn:AP_fdebye}
 \end{equation}
 
-\noindent onde $u = R_g^2q^2$. $R_g$ é a raiz quadrada do raio de giro médio ao quadrado, $R_g = \left<R_g^2\right>^{1/2}$, considerando o volume excluído. Por sua vez, esse valor é dado pela Eq. \ref{eqn:AP_Rg2}
+\noindent onde \(u = R_g^2q^2\). \(R_g\) é a raiz quadrada do raio de giro médio ao quadrado, \(R_g = \left<R_g^2\right>^{1/2}\), considerando o volume excluído. Por sua vez, esse valor é dado pela Eq. \ref{eqn:AP_Rg2}
 
 % todo: Achar o que significam os termos faltantes aqui.
 \begin{equation}
@@ -188,14 +188,14 @@ F_{Debye} = 2 \left(\frac{e^{-u} + u - 1}{u^2}\right)
 \label{eqn:AP_Rg2}
 \end{equation}
 
-O termo $w$ é uma equação empírica, da forma: (Eq \ref{eqn:AP_w})
+O termo \(w\) é uma equação empírica, da forma: (Eq \ref{eqn:AP_w})
 
 \begin{equation}
 w(x) = \frac{\left[1 + \frac{\tanh(x-C_4)}{C_5}\right]}{2}
 \label{eqn:AP_w}
 \end{equation}
 
-As constantes $C_1$, $C_2$, $C_3$, $C_4$ e $C_5$ foram obtidas a partir de um ajuste, e estão na tabela \ref{tab_ap:C1C5}, assim como o valor de $\nu$.
+As constantes \(C_1\), \(C_2\), \(C_3\), \(C_4\) e \(C_5\) foram obtidas a partir de um ajuste, e estão na tabela \ref{tab_ap:C1C5}, assim como o valor de \(\nu\).
 \begin{table}
     \IBGEtab%
     {\caption{Constantes}
@@ -204,21 +204,21 @@ As constantes $C_1$, $C_2$, $C_3$, $C_4$ e $C_5$ foram obtidas a partir de um aj
       \toprule
       Constante 	& Valor \\
       \midrule
-      $C_1$			&  1,220	\\
-      $C_2$			&  0,4288	\\
-      $C_3$			&  -1,651	\\
-      $C_4$			&  1,523	\\
-      $C_5$			&  0,1477 	\\	
-      $\nu$			&  0,585	\\					
+      \(C_1\)			&  1,220	\\
+      \(C_2\)			&  0,4288	\\
+      \(C_3\)			&  -1,651	\\
+      \(C_4\)			&  1,523	\\
+      \(C_5\)			&  0,1477 	\\	
+      \(\nu\)			&  0,585	\\					
       \bottomrule
     \end{tabular}}% todo: encontrar de onde vem o \nu
     {}%
 \end{table}
 
 
-\subsubsection{Fator de correção $\Gamma$}
+\subsubsection{Fator de correção \(\Gamma\)}
 
-O fator de correção $\Gamma$ (Eq. \ref{eqn:AP_Gamma}) é dependente de dois conjuntos de constantes, $A$ (Eq. \ref{eqn:AP_Ai}) e B (Eq. \ref{eqn:AP_Bi}) determinadas empiricamente (Tab \ref{tab_ap:AiBi}).
+O fator de correção \(\Gamma\) (Eq. \ref{eqn:AP_Gamma}) é dependente de dois conjuntos de constantes, \(A\) (Eq. \ref{eqn:AP_Ai}) e B (Eq. \ref{eqn:AP_Bi}) determinadas empiricamente (Tab \ref{tab_ap:AiBi}).
 
 \begin{equation}
 \Gamma\left( q,L,k_{L} \right) = 1 + \left( 1 - \chi \right)\sum_{i = 2}^{5}{A_{i}\xi^{i}} + \chi\sum_{i = 0}^{2}{B_{i}\xi^{- i}}
@@ -237,27 +237,27 @@ B_{i} = \sum_{j = 0}^{2}{b_{1}\left( i,j \right)\left( \frac{L}{k_{L}} \right)^{
 
 \begin{table}[h]
     \IBGEtab%
-    {\caption{Constantes utilizadas para o cálculo de $\Gamma$}
+    {\caption{Constantes utilizadas para o cálculo de \(\Gamma\)}
     \label{tab_ap:AiBi}}%
     {\begin{tabular}{r l | r l | r l | r l}
     	\toprule
-    	$a_1$(2,0) & --0.1222 & $a_2$(2,1) & 0.1212   & $b_1$(0,0) & --0.0699 & $b_2$(0,1) & --0.5171 \\
-    	$a_1$(3,0) & 0.3051   & $a_2$(3,1) & --0.4169 & $b_1$(1,0) & --0.09   & $b_2$(1,1) & --0.2028 \\
-    	$a_1$(4,0) & --0.0711 & $a_2$(4,1) & 0.1988   & $b_1$(2,0) & 0.2677   & $b_2$(2,1) & --0.3112 \\
-    	$a_1$(5,0) & 0.0584   & $a_2$(5,1) & 0.3435   & $b_1$(0,1) & 0.1342   & $b_2$(0,2) & 0.6950   \\
-    	$a_1$(2,1) & 1.761    & $a_2$(2,2) & 0.0170   & $b_1$(1,1) & 0.0138   & $b_2$(1,2) & --0.3238 \\
-    	$a_1$(3,1) & 2.252    & $a_2$(3,2) & --0.4731 & $b_1$(2,1) & 0.1898   & $b_2$(2,2) & --0.5403 \\
-    	$a_1$(4,1) & --1.291  & $a_2$(4,2) & 0.1869   & $b_1$(0,2) & --0.2020 &            &          \\
-    	$a_1$(5,1) & 0.6994   & $a_2$(5,2) & 0.3350   & $b_1$(1,2) & --0.0114 &            &          \\
-    	$a_1$(2,2) & --26.04  &            &          & $b_1$(2,2) & 0.0123   &            &          \\
-    	$a_1$(3,2) & 20.00    &            &          &            &          &            &          \\
-    	$a_1$(4,2) & 4.382    &            &          &            &          &            &          \\
-    	$a_1$(5,2) & 1.594    &            &          &            &          &            &          \\ \bottomrule
+    	\(a_1\)(2,0) & --0.1222 & \(a_2\)(2,1) & 0.1212   & \(b_1\)(0,0) & --0.0699 & \(b_2\)(0,1) & --0.5171 \\
+    	\(a_1\)(3,0) & 0.3051   & \(a_2\)(3,1) & --0.4169 & \(b_1\)(1,0) & --0.09   & \(b_2\)(1,1) & --0.2028 \\
+    	\(a_1\)(4,0) & --0.0711 & \(a_2\)(4,1) & 0.1988   & \(b_1\)(2,0) & 0.2677   & \(b_2\)(2,1) & --0.3112 \\
+    	\(a_1\)(5,0) & 0.0584   & \(a_2\)(5,1) & 0.3435   & \(b_1\)(0,1) & 0.1342   & \(b_2\)(0,2) & 0.6950   \\
+    	\(a_1\)(2,1) & 1.761    & \(a_2\)(2,2) & 0.0170   & \(b_1\)(1,1) & 0.0138   & \(b_2\)(1,2) & --0.3238 \\
+    	\(a_1\)(3,1) & 2.252    & \(a_2\)(3,2) & --0.4731 & \(b_1\)(2,1) & 0.1898   & \(b_2\)(2,2) & --0.5403 \\
+    	\(a_1\)(4,1) & --1.291  & \(a_2\)(4,2) & 0.1869   & \(b_1\)(0,2) & --0.2020 &            &          \\
+    	\(a_1\)(5,1) & 0.6994   & \(a_2\)(5,2) & 0.3350   & \(b_1\)(1,2) & --0.0114 &            &          \\
+    	\(a_1\)(2,2) & --26.04  &            &          & \(b_1\)(2,2) & 0.0123   &            &          \\
+    	\(a_1\)(3,2) & 20.00    &            &          &            &          &            &          \\
+    	\(a_1\)(4,2) & 4.382    &            &          &            &          &            &          \\
+    	\(a_1\)(5,2) & 1.594    &            &          &            &          &            &          \\ \bottomrule
     \end{tabular} }%
     {}%
 \end{table}
 
-\subsubsection{Fator forma de um cilindro $F_{rod}$}
+\subsubsection{Fator forma de um cilindro \(F_{rod}\)}
 
 O fator forma de um cilindro segue a equação \ref{eqn:AP_Frod}.
 
@@ -266,7 +266,7 @@ F_{rod}(q, L) = \frac{2Si(qL)}{qL} - \frac{4\sin^2\frac{qL}{2}}{q^2L^2}
 \label{eqn:AP_Frod}
 \end{equation}
 
-\noindent onde $Si$ é a função-integral de seno (Eq. \ref{eqn:AP_Si})
+\noindent onde \(Si\) é a função-integral de seno (Eq. \ref{eqn:AP_Si})
 
 \begin{equation}
 Si(x) = \int_0^x \frac{\sin t}{t}dt
@@ -274,7 +274,7 @@ Si(x) = \int_0^x \frac{\sin t}{t}dt
 \end{equation}
 
 % TODO: verificar se F_CS é de fator da seção de um cilindro. CS é cross section mesmo.
-\subsection{Fator forma da seção transversal de um cilindro $F_{cs}$}
+\subsection{Fator forma da seção transversal de um cilindro \(F_{cs}\)}
 
 O fator forma da seção transversal de um cilindro é descrito pela equação \ref{eqn:AP_Fcs}. Seus parâmetros se encontram na tabela \ref{tab_ap:Fcs}
 
@@ -302,20 +302,20 @@ F_{\text{cs}} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}%
             \toprule
             Parâmetro 			& Significado \\
             \midrule
-            $\rho_S$			&  Densidade eletrônica do \emph{shell} \\
-            $\rho_C$			&  Densidade eletrônica do \emph{core}  \\
-            $\rho_w$			&  Densidade eletrônica da água			\\
-            $R_S$			& Raio do \emph{shell} 						\\
-            $R_C$			& Raio do \emph{core}						\\
-            $J_1$			&  Função de Bessel do primeiro tipo e de primeira ordem\\
-            $C_4$			&  1,523	\\
-            $C_5$			&  0,1477 	\\						
+            \(\rho_S\)			&  Densidade eletrônica do \emph{shell} \\
+            \(\rho_C\)			&  Densidade eletrônica do \emph{core}  \\
+            \(\rho_w\)			&  Densidade eletrônica da água			\\
+            \(R_S\)			& Raio do \emph{shell} 						\\
+            \(R_C\)			& Raio do \emph{core}						\\
+            \(J_1\)			&  Função de Bessel do primeiro tipo e de primeira ordem\\
+            \(C_4\)			&  1,523	\\
+            \(C_5\)			&  0,1477 	\\						
             \bottomrule
         \end{tabular}}%
     {}%
 \end{table}
 
-Os termos $R_S$ e $R_C$ podem ser calculados pelas expressões \ref{eqn:AP_Rs} e \ref{eqn:AP_Rc}
+Os termos \(R_S\) e \(R_C\) podem ser calculados pelas expressões \ref{eqn:AP_Rs} e \ref{eqn:AP_Rc}
 
 \begin{equation}
 R_C(\varepsilon\theta) = \sqrt{R_C^2\sin^2\theta + \varepsilon^2R_c^2\cos^2\theta}
@@ -330,7 +330,7 @@ R_C = \sqrt{\frac{V_{\text{surf, apolar}}}{V_{\text{surf, total}}}}R_S
 \noindent onde V é o volume molecular das regiões do surfactante.
 
 \subsection{Fator forma de uma esfera}
-Como uma aproximação, o modelo final utiliza $F_{sphere}$ ao invés de $F_{rod}$ no denominador (ver equações \ref{eqn:AP_saxs_MG_geral} e \ref{eqn:AP_saxs_PRISM}). Esse fator forma de esferas é dado por:
+Como uma aproximação, o modelo final utiliza \(F_{sphere}\) ao invés de \(F_{rod}\) no denominador (ver equações \ref{eqn:AP_saxs_MG_geral} e \ref{eqn:AP_saxs_PRISM}). Esse fator forma de esferas é dado por:
 
 \begin{equation}
 	F_{sphere} = \dfrac{3\sin(qR) - qR\cos(qR)}{(qR)^3}
@@ -443,7 +443,7 @@ As seguintes equações não aparecem no código:
 	
 %	A parte mais complexa do modelo é justamente o modelo de Kratky-Porod com volume excluído para cadeias core-shell, e por isso merece uma subseção própria.
 
-%	\subsection{Fator $F_{KPchain_{ExV}}$}
+%	\subsection{Fator \(F_{KPchain_{ExV}}\)}
 %	\label{sec:apendice_F_KPchain}
 %	As equações da seção \ref{sec:equacoes_Fwc} relevantes ao cálculo do fator de cadeias com volume excluído então descritas nos códigos a seguir (listas \ref{lst:cadeia_KP_1}, \ref{lst:cadeia_KP_2}, \ref{lst:cadeia_KP_3}, \ref{lst:cadeia_KP_Debye}, \ref{lst:cadeia_KP_SI}).
 %	
@@ -495,7 +495,7 @@ Para o tratamento de dados de curva de fluxo, foi criado um programa que permite
 
 \subsection{Modelos de curvas de fluxo pseudoplásticas}
 \label{sec:modelagem_curva_fluxo}
-Foram implementados os modelos de \emph{Carreau-Yasuda} (Eq \ref{eqn:AP_CarreauYasuda}), \emph{Carreau} (Eq. \ref{eqn:AP_Carreau}), \emph{Cross} (Eq. \ref{eqn:AP_Cross}) e \emph{linear}, de maior para menor complexidade, respectivamente. Os modelos correlacionam a taxa de cisalhamento ($\dot{\gamma}$, variável independente) à viscosidade ($\eta$, variável dependente) utilizando alguns parâmetros.
+Foram implementados os modelos de \emph{Carreau-Yasuda} (Eq \ref{eqn:AP_CarreauYasuda}), \emph{Carreau} (Eq. \ref{eqn:AP_Carreau}), \emph{Cross} (Eq. \ref{eqn:AP_Cross}) e \emph{linear}, de maior para menor complexidade, respectivamente. Os modelos correlacionam a taxa de cisalhamento (\(\dot{\gamma}\), variável independente) à viscosidade (\(\eta\), variável dependente) utilizando alguns parâmetros.
 
 \begin{equation}
 	\eta = \eta_{\infty} + \frac{\eta_0 - \eta_{\infty}}{\left[  1 + \left(  \dfrac{\dot{\gamma}}{\dot{\gamma}_b}  \right)^{a}  \right]^{\frac{ \left(  n - 1  \right) }{a}}}
@@ -512,7 +512,7 @@ Foram implementados os modelos de \emph{Carreau-Yasuda} (Eq \ref{eqn:AP_CarreauY
 	\label{eqn:AP_Cross}
 \end{equation}
 
-O modelo linear considera somente valores de viscosidade em $\dot{\gamma}$ próximos de zero, ou seja, $\eta = \eta_0 + 0 \times \dot{\gamma}$.
+O modelo linear considera somente valores de viscosidade em \(\dot{\gamma}\) próximos de zero, ou seja, \(\eta = \eta_0 + 0 \times \dot{\gamma}\).
 
 Os parâmetros possuem os seguintes significados:
 
@@ -525,11 +525,11 @@ Os parâmetros possuem os seguintes significados:
 		\begin{tabular}{c c p{9cm}}
 			\toprule
 			   Parâmetro     & Unidade   & Significado                                                     \\ \midrule
-			    $\eta_0$     & Pa.s      & Viscosidade no repouso*                                         \\
-			$\eta_{\infty}$  & Pa.s      & Viscosidade no infinito                                         \\
-			      $n$        & --        & Inclinação da região de decaimento de viscosidade               \\
-			$\dot{\gamma}_b$ & s\menosUm & $\dot{\gamma}$ de início da região de decaimento de viscosidade \\ \midrule
-			      $a$        & --        & Afeta tanto a inclinação quanto o ponto de inflexão             \\ \bottomrule
+			    \(\eta_0\)     & Pa.s      & Viscosidade no repouso*                                         \\
+			\(\eta_{\infty}\)  & Pa.s      & Viscosidade no infinito                                         \\
+			      \(n\)        & --        & Inclinação da região de decaimento de viscosidade               \\
+			\(\dot{\gamma}_b\) & s\menosUm & \(\dot{\gamma}\) de início da região de decaimento de viscosidade \\ \midrule
+			      \(a\)        & --        & Afeta tanto a inclinação quanto o ponto de inflexão             \\ \bottomrule
 		\end{tabular}%
 		}{}
 \end{table}
@@ -556,9 +556,9 @@ A Fig. \ref{fig:reologia_modelos} exemplifica os modelos de Carreau e Cross e co
 	\label{fig:reologia_modelos}
 \end{figure}
 
-De maior interesse para os estudos neste trabalho é a viscosidade no repouso, $\eta_0$, e portanto esse é o foco do programa. Porém, o ajuste indiscriminado de um modelo a um dado experimental é problemático caso a qualidade do dado não seja boa, seja pela própria característica da amostra, ou pela sensibilidade do equipamento. Por exemplo, é frequente que apareçam artefatos de medida em baixos valores de $\dot{\gamma}$, resultando ou num decréscimo ou acréscimo gradual de $\eta$. Além disso, é possível que não seja observada a região descrita por $\eta_{\infty}$, em altos valores de $\dot{\gamma}$, o que atribui grande incerteza na determinação desse parâmetro. Dessa forma, é necessário que uma região das curvas seja escolhida para que o ajuste seja bem sucedido e informativo, o que representa a maior dificuldade nesse tipo de análise, devido à certa subjetividade no critério de escolha da região de ajuste.
+De maior interesse para os estudos neste trabalho é a viscosidade no repouso, \(\eta_0\), e portanto esse é o foco do programa. Porém, o ajuste indiscriminado de um modelo a um dado experimental é problemático caso a qualidade do dado não seja boa, seja pela própria característica da amostra, ou pela sensibilidade do equipamento. Por exemplo, é frequente que apareçam artefatos de medida em baixos valores de \(\dot{\gamma}\), resultando ou num decréscimo ou acréscimo gradual de \(\eta\). Além disso, é possível que não seja observada a região descrita por \(\eta_{\infty}\), em altos valores de \(\dot{\gamma}\), o que atribui grande incerteza na determinação desse parâmetro. Dessa forma, é necessário que uma região das curvas seja escolhida para que o ajuste seja bem sucedido e informativo, o que representa a maior dificuldade nesse tipo de análise, devido à certa subjetividade no critério de escolha da região de ajuste.
 
-Por essa razão, e outras, como velocidade de análise, foi escrito o método de ajuste. O método consiste em realizar ajustes sucessivos, entre um ponto inicial $P_i$ até um ponto final $P_f$, e depois comparar os resultados dos ajustes para escolher um deles. Podem ser comparados, por exemplo, os parâmetros $R^2$, $\chi^2$ ou $\chi_{red}^2$. Escolhido o melhor ajuste, observando-se, por exemplo, a maior proximidade de $R^2$ a 1 ou de $\chi^2$ a 0, tomando cuidado para não escolher uma faixa muito estreita de pontos, os resultados são graficados, gravados num arquivo de texto e passa-se para o próximo dado experimental.
+Por essa razão, e outras, como velocidade de análise, foi escrito o método de ajuste. O método consiste em realizar ajustes sucessivos, entre um ponto inicial \(P_i\) até um ponto final \(P_f\), e depois comparar os resultados dos ajustes para escolher um deles. Podem ser comparados, por exemplo, os parâmetros \(R^2\), \(\chi^2\) ou \(\chi_{red}^2\). Escolhido o melhor ajuste, observando-se, por exemplo, a maior proximidade de \(R^2\) a 1 ou de \(\chi^2\) a 0, tomando cuidado para não escolher uma faixa muito estreita de pontos, os resultados são graficados, gravados num arquivo de texto e passa-se para o próximo dado experimental.
 
 A listagem \ref{lst:exemplo_curva_de_fluxo} mostra duas seções do código completo do programa, uma mostrando o ciclo de ajuste utilizando o ajuste linear e \texttt{curve\_fit} e outro que realiza um ajuste não-linear utilizando o modelo de Carreau e \emph{lmfit}.
 
@@ -585,19 +585,19 @@ A listagem \ref{lst:exemplo_fitter} mostra como o programa pode ser utilizado po
 	\label{fig:reologia_dado-exemplo}
 \end{figure}
 
-Note que no dado utilizado, não há muitos problemas de desvio da curva, então os ajustes foram bem comportados. Os exemplos das figuras \ref{fig:reologia_dado-problemadescida} e \ref{fig:reologia_dado-problemasubida} mostram problemas reais na região de baixos valores de $\dot{\gamma}$.
+Note que no dado utilizado, não há muitos problemas de desvio da curva, então os ajustes foram bem comportados. Os exemplos das figuras \ref{fig:reologia_dado-problemadescida} e \ref{fig:reologia_dado-problemasubida} mostram problemas reais na região de baixos valores de \(\dot{\gamma}\).
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{imagens/reologia/Dado-ProblemaDescida}
-	\caption{Exemplo dos ajustes não-linear e linear de um dado real que possui uma queda nos valores de $\eta$ em baixas $\dot{\gamma}$}
+	\caption{Exemplo dos ajustes não-linear e linear de um dado real que possui uma queda nos valores de \(\eta\) em baixas \(\dot{\gamma}\)}
 	\label{fig:reologia_dado-problemadescida}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{imagens/reologia/Dado-ProblemaSubida}
-	\caption{Exemplo dos ajustes não-linear e linear de um dado real que possui um aumento nos valores de $\eta$ em baixas $\dot{\gamma}$}
+	\caption{Exemplo dos ajustes não-linear e linear de um dado real que possui um aumento nos valores de \(\eta\) em baixas \(\dot{\gamma}\)}
 	\label{fig:reologia_dado-problemasubida}
 \end{figure}
 
@@ -610,8 +610,8 @@ Durante a execução do projeto de doutorado, foi estabelecida uma parceria com 
 Plotando-se todos os dados obtidos, observou-se que G' estava sempre acima de G'' e, na escala logarítmica, as duas curvas eram praticamente paralelas e ligeiramente inclinadas positivamente. Em alguns casos, a inclinação aumentava em frequências maiores e, frequentemente, havia uma oscilação de G' e G'' sem significado físico nessa região. A taxa de aumento era consistente com uma exponencial. Visto isso, foi desenvolvido um script que realiza o seguinte:
 
 \begin{enumerate}
-	\item Obter a região de frequência confiável de G' e de G'' para o modelo linear e exponencial. Isso é feito realizando-se ajustes gradativos, do primeiro ponto até um ponto \emph{n}, armazenando os ajustes e depois escolhendo o ajuste com maior número de pontos onde $R^2 > 0{,}9$. Caso não exista ajuste seguindo esse critério, escolhe-se um novo critério com $R^2 > 0,85$. Caso não exista ajuste que obedeça isso mesmo assim, é escolhido o ajuste com o maior número de pontos. 
-	\item Os parâmetros dos ajustes que passaram pelo filtro de $R^2$ são gravados em um arquivo \texttt{csv}. Além disso, são gravados a média dos valores de G' e G'' da região linear, o desvio dessa média, o valor de $R^2$, os índices dos pontos utilizados para o ajuste e o valor de G' e G'' em 0,6813Hz. Esses parâmetros foram escolhidos com base em alguns artigos da literatura. % todo: ref?
+	\item Obter a região de frequência confiável de G' e de G'' para o modelo linear e exponencial. Isso é feito realizando-se ajustes gradativos, do primeiro ponto até um ponto \emph{n}, armazenando os ajustes e depois escolhendo o ajuste com maior número de pontos onde \(R^2 > 0{,}9\). Caso não exista ajuste seguindo esse critério, escolhe-se um novo critério com \(R^2 > 0,85\). Caso não exista ajuste que obedeça isso mesmo assim, é escolhido o ajuste com o maior número de pontos. 
+	\item Os parâmetros dos ajustes que passaram pelo filtro de \(R^2\) são gravados em um arquivo \texttt{csv}. Além disso, são gravados a média dos valores de G' e G'' da região linear, o desvio dessa média, o valor de \(R^2\), os índices dos pontos utilizados para o ajuste e o valor de G' e G'' em 0,6813Hz. Esses parâmetros foram escolhidos com base em alguns artigos da literatura. % todo: ref?
 \end{enumerate}
 
 Cerca de 500 dados experimentais únicos são tratados e plotados em cerca de 3 minutos, mostrando novamente o ganho enorme de eficiência com métodos computacionais. Após análise estatística, observou-se uma variação significativa em um dos conjuntos de dados. Porém devido à enorme variabilidade das amostras, houve pouca relevância estatística no resto do conjunto de dados. Contudo, os pacientes revelaram uma melhora física após o tratamento estabelecido, mostrando que de fato o tratamento foi eficiente. Mais informações sobre esse projeto podem ser encontrados na tese da aluna. O código fonte da parte de tratamento de dados está nas listagens \ref{lst:extracao_muco1} -- \ref{lst:extracao_muco6}. % todo: colocar uma referência pra tese dela.
@@ -769,7 +769,7 @@ Além dos arquivos com os dados de SAXS, os seguintes arquivos também devem est
 	\item \texttt{SAXS1N.DAT}
 	\item \texttt{SAXS2N.DAT}
 	\item \texttt{SAXS3N.DAT}
-	\item $\cdots$
+	\item \(\cdots\)
 \end{itemize}
 
 \texttt{wgnuplot.exe} é o programa utilizado para mostrar os dados e os ajustes. Os arquivos \texttt{SAXS\{numero\}N.DAT} contém parâmetros iniciais para os modelos \texttt{\{numero\}}. Por exemplo, se o modelo de micelas gigantes é o modelo número 2, \texttt{SAXS2N.DAT} irá conter os parâmetros iniciais para o modelo 2, neste caso, micelas gigantes.
@@ -830,7 +830,7 @@ As seguintes frases irão aparecer, e os procedimentos a seguir são os mais com
 	\item \texttt{INPUT SCALE FACTOR FOR THE FILE (1=def) :} não é necessário digitar nada, só apertar enter. Isso vale para a maior parte dos casos onde há um padrão, \emph{default}, \texttt{def}.
 	\item \texttt{INPUT BACKGROUND FOR THE FILE (0=def) :} novamente, só apertar enter.
 	\item \texttt{ADD EXTRA MC GENERATED NOISE (1/0=def)} só enter.
-	\item \texttt{ESRF OR AARHUS DATA (1/2)}, digite 1 se os dados estiverem em $nm^{-1}$ ou 2 se estiverem em \AA$^{-1}$.
+	\item \texttt{ESRF OR AARHUS DATA (1/2)}, digite 1 se os dados estiverem em \(nm^{-1}\) ou 2 se estiverem em \AA\(^{-1}\).
 \end{itemize}
 
 O programa irá então mostrar todo o conteúdo do arquivo e perguntar como deseja plotar os dados, começando com uma pergunta sobre o eixo Y e uma pergunta sobre o eixo X.
@@ -844,9 +844,9 @@ Intensity[1], log(I)[2], log(q*I)[3], log(q*q*I)[4],1/I[5]
 ln(I) [6], I*q**4[7] or I*q**2 [8]:
 \end{verbatim}
 
-Geralmente, seleciona-se \texttt{2}, ou seja, $\log(I)$, e depois, para 
+Geralmente, seleciona-se \texttt{2}, ou seja, \(\log(I)\), e depois, para 
 \begin{verbatim}Which Function of scattering vector;
-q[1], q*q[2], log(q)[3] or q**4 [4] :\end{verbatim} seleciona-se \texttt{3}, para $\log(q)$.
+q[1], q*q[2], log(q)[3] or q**4 [4] :\end{verbatim} seleciona-se \texttt{3}, para \(\log(q)\).
 
 O programa irá então plotar o gráfico. A janela \emph{gnuplot pause} está com \emph{OK} selecionado então é possível fechá-la somente apertando enter novamente.
 
@@ -933,12 +933,12 @@ Há 5 tipos de comandos que podem ser colocados nessa parte.
 \subsection{Ajuste da Curva}
 Ao escolher \texttt{0}, escolha o q mínimo e o q máximo para o ajuste. Esses valores deverão ser fornecidos na escala linear (não logarítmica). Geralmente \texttt{0.005} e \texttt{1} são o suficiente para pegar a faixa inteira. Isso pode ser usado para fitar somente algumas seções das curvas.
 
-O programa começará a variar os parâmetros que foram deixados livres para minimizar o $\chi^2$, a diferença entre os dados e o modelo. Em seguida, ele mostrará um plot com o modelo e os dados.
+O programa começará a variar os parâmetros que foram deixados livres para minimizar o \(\chi^2\), a diferença entre os dados e o modelo. Em seguida, ele mostrará um plot com o modelo e os dados.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5]{./imagens/saxs/supersaxs_gnuplot_fit}
-	\caption{Exemplo de um ajuste. Destacado está o $\chi^2$ do ajuste.}
+	\caption{Exemplo de um ajuste. Destacado está o \(\chi^2\) do ajuste.}
 \end{figure}
 
 E depois ele irá mostrar os parâmetros e os erros calculados de cada parâmetro.
@@ -1015,7 +1015,7 @@ Caso se coloque que não quer realizar um ajuste, o programa irá cair num estad
 	\item[FIT] Voltar e realizar um ajuste com a mesma função.
 	\item[PLO] Plotar os dados e o ajuste.
 	\item[FIL] Voltar ao início e escolher um novo arquivo e um novo modelo.
-	\item[GRI] Faz ajustes pequenos de um número de parâmetros e mostra o valor de $\chi^2$.
+	\item[GRI] Faz ajustes pequenos de um número de parâmetros e mostra o valor de \(\chi^2\).
 	\item[EXI] Sair do programa
 \end{itemize}
 
@@ -1085,7 +1085,7 @@ O script encontra todos os arquivos \texttt{dat} da pasta onde o próprio se enc
 
 \subsection{Desmembramento de arquivos exportados pelo software RheoWin}
 
-Para a análise reológica completa de uma amostra, é necessário realizar uma sequência de experimentos no reômetro, que podem ser programados para ocorrerem sequencialmente. Os dados podem ser automaticamente exportados para um arquivo \texttt{txt} com todas as informações relevantes para uma análise, como os módulos G', G'', $\eta$, etc. Não é possível, porém, exportar cada experimento separadamente, e a tarefa de separá-los manualmente é tediosa e passiva de erros. Por esses motivos, foi desenvolvido um script que consegue separar as seções dos arquivos \texttt{txt} em arquivos \texttt{csv}.
+Para a análise reológica completa de uma amostra, é necessário realizar uma sequência de experimentos no reômetro, que podem ser programados para ocorrerem sequencialmente. Os dados podem ser automaticamente exportados para um arquivo \texttt{txt} com todas as informações relevantes para uma análise, como os módulos G', G'', \(\eta\), etc. Não é possível, porém, exportar cada experimento separadamente, e a tarefa de separá-los manualmente é tediosa e passiva de erros. Por esses motivos, foi desenvolvido um script que consegue separar as seções dos arquivos \texttt{txt} em arquivos \texttt{csv}.
 
 Por exemplo, o arquivo \texttt{Exp1.txt}, que possui reologia oscilatória de varredura de tensão, frequência e curvas de fluxo, é separado em três arquivos, \texttt{OT\_Exp1--0.csv}, \texttt{OF\_Exp1--0.csv} e \texttt{CF\_Exp1--0.csv}, respectivamente. O contador seguido do nome é necessário para diferenciar arquivos, caso haja colisão de nome. Para utilizar o script, somente é necessário colocá-lo na mesma pasta dos arquivos dos quais se deseja extrair dados e rodá-lo pelo console com \texttt{python Extracao\_dados.py}.
 

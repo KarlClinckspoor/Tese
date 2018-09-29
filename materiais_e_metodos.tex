@@ -12,17 +12,17 @@
 		\begin{tabular}{c c p{3.2cm}}
 			\toprule
 			Reagente  & Pureza                                      & Fabricante    \\ \midrule
-			  CTAB    & $\geqslant 98\%$                            & Sigma Aldrich \\
-			  TTAB    & $\geqslant 99\%$                            & Sigma Aldrich \\
-			  DTAB	  & $\geqslant 98\%$							& Sigma Aldrich \\
-			  NaSal   & $99{,}5\%$                                    & Sigma Aldrich \\
-			Glicerina & $85\%$/$15\%\textnormal{H}_2\textnormal{O}$ & Merck         \\
-			Sacarose  & $\geqslant 99{,}5\%$                          & Sigma Aldrich \\
+			  CTAB    & \(\geqslant 98\%\)                            & Sigma Aldrich \\
+			  TTAB    & \(\geqslant 99\%\)                            & Sigma Aldrich \\
+			  DTAB	  & \(\geqslant 98\%\)							& Sigma Aldrich \\
+			  NaSal   & \(99{,}5\%\)                                    & Sigma Aldrich \\
+			Glicerina & \(85\%\)/\(15\%\textnormal{H}_2\textnormal{O}\) & Merck         \\
+			Sacarose  & \(\geqslant 99{,}5\%\)                          & Sigma Aldrich \\
 	%		Sucralose & 											& 				\\  % todo: ver se coloco algo da sucralose aqui
-			  Ureia   & $\geqslant 99{,}5\%$                          & Sigma Aldrich \\
-			  DMSO    & $\geqslant 99{,}5\%$                          & Sigma Aldrich \\
-			  1,3BD   & $99{,}5\%$                                    & Sigma Aldrich \\ 
-			  Água    & $\sigma = 18{,}2M\Omega$.cm					& Millipore Direct-Q\textregistered{} \newline 3 UV com bomba  \\ \bottomrule
+			  Ureia   & \(\geqslant 99{,}5\%\)                          & Sigma Aldrich \\
+			  DMSO    & \(\geqslant 99{,}5\%\)                          & Sigma Aldrich \\
+			  1,3BD   & \(99{,}5\%\)                                    & Sigma Aldrich \\ 
+			  Água    & \(\sigma = 18{,}2M\Omega\).cm					& Millipore Direct-Q\textregistered{} \newline 3 UV com bomba  \\ \bottomrule
 		\end{tabular}}%
 		{}
 	\end{table}
@@ -48,7 +48,7 @@
 			
 			\item Análise de varredura de frequência, numa tensão dentro da região linear, geralmente 1 Pa. A faixa de frequência estudada varia de acordo com as necessidades da amostra e com o tempo disponível, pois quanto menor a frequência estudada, maior é o tempo de análise. A faixa de frequência habitual é de 0,01 Hz a 10 Hz (ou 0,0628 rad.s\menosUm{} a 62,83 rad.s\menosUm), e 6 medidas por década, espaçadas logaritmicamente. Este tipo de experimento demora cerca de 20 minutos. O modo utilizado em todas as análises foi CS (Control Shear).
 			
-			\item Análise de curva de fluxo. As taxas de cisalhamento ($\dot{\gamma}$) utilizadas geralmente variavam de 0,001 s\menosUm{} a 10 s\menosUm. Caso o platô Newtoniano não fosse observado, diminuia-se a taxa aplicada. Obtinha-se entre 10 e 20 pontos espaçados logaritmicamente. As medidas eram obtidas no modo CR (Control Rate).
+			\item Análise de curva de fluxo. As taxas de cisalhamento (\(\dot{\gamma}\)) utilizadas geralmente variavam de 0,001 s\menosUm{} a 10 s\menosUm. Caso o platô Newtoniano não fosse observado, diminuia-se a taxa aplicada. Obtinha-se entre 10 e 20 pontos espaçados logaritmicamente. As medidas eram obtidas no modo CR (Control Rate).
 		\end{itemize}
 		
 		Ao montar-se um plano experimental, pode-se configurar o equipamento para exportar os dados obtidos de acordo com uma configuração tabular específica, para um arquivo de texto. Isso facilita posteriormente o tratamento de dados. Além disso, o nome do arquivo pode ser gerado automaticamente pela composição da amostra, a hora e a data de análise.
@@ -63,7 +63,7 @@
 		
 		\section{Tratamento de dados de curvas de fluxo}
 		
-		Micelas gigantes são fluídos conhecidamente pseudoplásticos, ou seja, sua viscosidade aparente ($\eta$) diminui com o aumento da taxa de cisalhamento ($\dot{\gamma}$). Em baixos valores de $\dot{\gamma}$, a viscosidade aparente é constante, e esse valor é chamado de viscosidade no repouso, $\eta_0$. Esse valor é de maior interesse para este trabalho. Para obter esse valor, é possível realizar ajustes lineares da região onde a viscosidade é constante, forçando-se a inclinação da reta a zero. Em suma, isso obtém o valor médio da viscosidade no repouso. Há também modelos matemáticos que podem ser usados, como Carreau e Cross, e a viscosidade no repouso, dentre outros parâmetros, podem ser obtidos pelo método dos mínimos quadrados.
+		Micelas gigantes são fluídos conhecidamente pseudoplásticos, ou seja, sua viscosidade aparente (\(\eta\)) diminui com o aumento da taxa de cisalhamento (\(\dot{\gamma}\)). Em baixos valores de \(\dot{\gamma}\), a viscosidade aparente é constante, e esse valor é chamado de viscosidade no repouso, \(\eta_0\). Esse valor é de maior interesse para este trabalho. Para obter esse valor, é possível realizar ajustes lineares da região onde a viscosidade é constante, forçando-se a inclinação da reta a zero. Em suma, isso obtém o valor médio da viscosidade no repouso. Há também modelos matemáticos que podem ser usados, como Carreau e Cross, e a viscosidade no repouso, dentre outros parâmetros, podem ser obtidos pelo método dos mínimos quadrados.
 		
 		Dados de curva de fluxo também são passíveis de desvios, que dificultam os ajustes. Nas amostras observadas aqui, geralmente há problemas em baixas taxas de cisalhamento. Para contornar esse problema, é necessário selecionar uma faixa de valores para o ajuste, o que pode ser feito manualmente e programaticamente. O apêndice \ref{sec:apn_tratamento_CF} mostra brevemente como o programa para tratamento de curva de fluxo funciona, os problemas frequentes encontrados com curvas de fluxo e como contorná-los.
 		
@@ -130,7 +130,7 @@
 			
 			% todo: recordado?
 			% todo: checar na explicação de SAXS qual é o simbolo, teta ou phi?
-			Cada análise resulta numa matriz onde o valor de cada posição $(i, j)$ é proporcional à intensidade do feixe recordado pelo sensor. Essa matriz é salva como um arquivo de imagem \emph{tiff}. Para transformar essa imagem em uma curva bidimensional, é necessário realizar uma integração radial, partindo do centro do \emph{beam-stop}. Um programa que pode realizar isso é o \href{http://www.esrf.eu/computing/scientific/FIT2D/windows.html}{FIT2D}, criado pelo ESRF. A integração é baseada numa transformação de coordenadas da imagem original, de cartesianas $(x, y)$ para polares $(r, \phi)$. As intensidades dos vários ângulos $\phi$ são integrados em função da distância do detector, $r$, proporcional a $\theta$, e assim se obtém uma curva 2D de SAXS de $I$ em função do vetor de espalhamento $q$. 
+			Cada análise resulta numa matriz onde o valor de cada posição \((i, j)\) é proporcional à intensidade do feixe recordado pelo sensor. Essa matriz é salva como um arquivo de imagem \emph{tiff}. Para transformar essa imagem em uma curva bidimensional, é necessário realizar uma integração radial, partindo do centro do \emph{beam-stop}. Um programa que pode realizar isso é o \href{http://www.esrf.eu/computing/scientific/FIT2D/windows.html}{FIT2D}, criado pelo ESRF. A integração é baseada numa transformação de coordenadas da imagem original, de cartesianas \((x, y)\) para polares \((r, \phi)\). As intensidades dos vários ângulos \(\phi\) são integrados em função da distância do detector, \(r\), proporcional a \(\theta\), e assim se obtém uma curva 2D de SAXS de \(I\) em função do vetor de espalhamento \(q\). 
 			
 			Os funcionários do LNLS desenvolveram um script em Python chamado \emph{cake\_plot} que age como intermediário entre o usuário e o Fit2D, e facilita no processo de integração, pois armazena valores de centro do feixe, resolução, dentre outros (dados presentes nos arquivos \texttt{geometry\_pars.py} e \texttt{cake\_pars.py}). O \emph{cake\_plot} tanto processa dados individuais quanto consegue subtrair os brancos de curvas.
 			
@@ -251,7 +251,7 @@
 			\end{figure}
 
 			% todo: colocar a pressão
-			Após iniciar a aquisição de dados, acionava-se rapidamente o botão de injeção do \emph{stopped-flow}, que empurrava os êmbolos das duas seringas simultaneamente. A pressão utilizada para injeção era de XYZ Pa. Os tempos de integração e o número de pontos de aquisição variavam de acordo com o experimento. O programa gera dois arquivos, um contendo os $n$ comprimentos de onda de cada ponto medido num vetor coluna (\emph{nome\_t\_int.csv}) e outro continha uma matriz com os $m \times n$ pontos de aquisição, além dos $m$ tempos de aquisição, em milissegundos, na primeira coluna (\emph{nome\_t\_int.csv}). A matriz resultante tem tamanho $m\times n+1$.
+			Após iniciar a aquisição de dados, acionava-se rapidamente o botão de injeção do \emph{stopped-flow}, que empurrava os êmbolos das duas seringas simultaneamente. A pressão utilizada para injeção era de XYZ Pa. Os tempos de integração e o número de pontos de aquisição variavam de acordo com o experimento. O programa gera dois arquivos, um contendo os \(n\) comprimentos de onda de cada ponto medido num vetor coluna (\emph{nome\_t\_int.csv}) e outro continha uma matriz com os \(m \times n\) pontos de aquisição, além dos \(m\) tempos de aquisição, em milissegundos, na primeira coluna (\emph{nome\_t\_int.csv}). A matriz resultante tem tamanho \(m\times n+1\).
 			
 			Foi criado um mapa de cor para cada matriz. Dessa matriz, extraiu-se a coluna que continha informações do comprimento de onda no máximo do espectro de emissão, em 411 nm, junto com a coluna de tempos. Esse dado, após ser normalizado pelo máximo de intensidade, foi utilizado para realizar as análises quantitativas de cinética. A listagem \ref{lst:extracao_fluor1} mostra o código utilizado para realizar essas tarefas. Esse código foi colocado em um \emph{Jupyter Notebook}, e a cada novo experimento, o nome do arquivo era alterado e todas as tarefas eram aplicadas automaticamente, facilitando muito a visualização ágil dos dados.
 			
@@ -263,11 +263,11 @@
 			
 		\section{Tratamento de dados}
 		
-			As informações de intensidade por tempo, em 411 nm, de cada amostra foram plotadas comparativamente. Notou-se que os dados eram bastante ruidosos, mas que havia uma tendência geral. Para facilitar as comparações, aplicou-se o filtro de Savitzky-Golay. Esse filtro ajusta um polinômio de grau $n$ sobre um conjunto de dados de tamanho ímpar (janela), $j$. O ponto médio experimental então é substituído pelo ponto médio do ajuste. Para os pontos nas extremidades, onde não há pontos suficientes para o tamanho da janela, utilizou-se o modo padrão do pacote \emph{scipy}, interpolação. Por exemplo, no início da aplicação do filtro, há $\frac{j}{2}$ pontos à direita mas menos de $\frac{j}{2}$ pontos à esquerda. Para completar essa falta, é feito um ajuste de grau $n$ dos primeiros $j$ pontos, e esse ajuste é estendido para antes do primeiro ponto, garantindo então que existam $\frac{j}{2}$ à direita e à esquerda do ponto médio.
+			As informações de intensidade por tempo, em 411 nm, de cada amostra foram plotadas comparativamente. Notou-se que os dados eram bastante ruidosos, mas que havia uma tendência geral. Para facilitar as comparações, aplicou-se o filtro de Savitzky-Golay. Esse filtro ajusta um polinômio de grau \(n\) sobre um conjunto de dados de tamanho ímpar (janela), \(j\). O ponto médio experimental então é substituído pelo ponto médio do ajuste. Para os pontos nas extremidades, onde não há pontos suficientes para o tamanho da janela, utilizou-se o modo padrão do pacote \emph{scipy}, interpolação. Por exemplo, no início da aplicação do filtro, há \(\frac{j}{2}\) pontos à direita mas menos de \(\frac{j}{2}\) pontos à esquerda. Para completar essa falta, é feito um ajuste de grau \(n\) dos primeiros \(j\) pontos, e esse ajuste é estendido para antes do primeiro ponto, garantindo então que existam \(\frac{j}{2}\) à direita e à esquerda do ponto médio.
 			
 			Utilizou-se dois filtros de segundo grau, mas com tamanhos de janela diferente, para antes e depois da injeção. O ponto de injeção foi determinado manualmente. O tamanho da janela foi escolhido de acordo com o número total de pontos de cada parte. Antes da injeção, utilizou-se como janela o número de pontos, dividido por 2, arredondando para o número inteiro mais próximo, e caso seja ímpar, adicionou-se 1 ao número. Para o conjunto de dados depois da injeção, utilizou-se 201 pontos para conjuntos com 10000 pontos no total e 101 pontos para conjuntos com 5000 pontos. Esses valores foram determinados testando-se várias janelas e escolhendo aquelas com o melhor alisamento.
 			
-			Após o alisamento, estudou-se o tempo de injeção e a taxa de decaimento após a injeção. O tempo de injeção foi determinado contando-se o número de pontos alisados pertencentes à região de acréscimo de fluorescência. A taxa de decaimento foi determinada realizando-se ajustes monoexponenciais ($y = y_0 + A_1 e^{\frac{-x}{t_1}}$) e comparando-se os valores de $R^2$. Outros modelos foram testados, mas o ajuste monoexponencial descrevia muito bem os dados, e era o mais simples.
+			Após o alisamento, estudou-se o tempo de injeção e a taxa de decaimento após a injeção. O tempo de injeção foi determinado contando-se o número de pontos alisados pertencentes à região de acréscimo de fluorescência. A taxa de decaimento foi determinada realizando-se ajustes monoexponenciais (\(y = y_0 + A_1 e^{\frac{-x}{t_1}}\)) e comparando-se os valores de \(R^2\). Outros modelos foram testados, mas o ajuste monoexponencial descrevia muito bem os dados, e era o mais simples.
 		
 	\chapter{Técnicas adicionais}
 		\section{Calorimetria diferencial de varredura}
