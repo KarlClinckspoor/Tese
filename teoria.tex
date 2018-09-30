@@ -2,15 +2,87 @@
 \part{Teoria}
 	\chapter{Reologia}
 		\section{Fundamentos}
+		
+		% todo: Pensar se eu devo colocar que vem do grego rheos, corrente/rio/fluxo e logia, estudo/ciência
+		% todo: pensar se eu devo falar que foi cunhado pelo Prof. Bingham em 1929
+		A reologia é a área ciência que estuda o fluxo e a deformação da matéria. Para causar um fluxo ou deformação, é necessário que uma força externa seja aplicada ao corpo. Reagindo à essa força, o material se comporta de tal maneira que algumas de suas características estruturais podem ser inferidas. Isso é feito intuitivamente por qualquer pessoa, por exemplo, ao apertar uma fruta para determinar sua firmeza e assim, se ela está apropriada para consumo ou não, para desagrado do vendedor.  % todo: pensar se eu deixo essa piadinha aqui ou não
+		
+		No campo coloidal, a reologia é utilizada para estudar como os corpos coloidais estão dispostas no meio, suas interações entre si e com o meio, e como fluem mediante a força externa. Por exemplo, soluções de micelas gigantes são altamente viscosas, pois as cadeias das micelas se entrelaçam e ramificam, então existe um mecanismo para oferecer resistência à força aplicada. Já soluções de micelas esféricas possuem baixa viscosidade, pois o tamanho das micelas é pequeno, e não existe esse mecanismo. A resistência se deve principalmente ao solvente, nesse caso.
+		
+		A viscosidade pode ser definida, de maneira pouco rigorosa, como a resistência ao fluxo de um material. Então água possui baixa viscosidade, já mel, uma solução concentrada de açúcar, possui alta viscosidade. Porém, quando tenta-se aplicar essa definição para outros tipos de materiais, aparecem problemas. Manteiga mantém seu formato, ao contrário de mel, que sempre flui, mas é muito mais fácil passar manteiga num pedaço de pão do que mel. Qual seria mais viscoso? % todo: mencionar amido de milho funciona?
+		
+		% todo: checar o tipo de emulsão da manteiga
+		O comportamento diferente da manteiga é causado por sua microestrutura coloidal. Manteiga é uma emulsão água em óleo, ou seja, há gotículas de água estabilizadas pelas proteínas do leite dispersas e compactadas num meio contínuo de óleo. As forças atrativas entre as gotículas, e a concentração relativa pequena de óleo, faz com que as gotículas consigam se estruturar no meio, impedindo o fluxo sob uma força externa bastante fraca como a gravidade. Porém, as forças entre as gotículas podem ser rompidas quando uma força externa um pouco mais forte é aplicada. Após o rompimento das interações intergotículas, o fluxo se torna fácil. Se a força for removida, as interações são reformadas e o material volta a assumir sua consistência característica.
+		
+		Portanto, a viscosidade da manteiga dependeu da força que estava sendo aplicada. Em forças baixas, o material aparentava ser altamente viscoso, já em forças maiores, o material aparentava ser pouco viscoso. Não existe um valor único de viscosidade que pode ser atribuído à manteira, da mesma maneira que é feito com água. Somente é possível estabelecer viscosidades aparentes dependentes da força aplicada.
+		
+		Do lado oposto à viscosidade, no campo reológico, existe a elasticidade. Materiais elásticos, ao invés de fluir, se deformam reversivelmente. A estrutura interna desses materiais permite que energia seja armazenada em torções e distensões. Quando a força externa é removida, a energia é liberada e o material volta ao seu formato inicial. Caso a energia aplicada supere as forças que estruturam o material, por exemplo, ligações covalentes ou interações intermoleculares, o material acaba fluindo ou quebrando. Exemplos clássicos de materiais elásticos são: molas, borrachas, rochas, madeira. A constante de elasticidade é a grandeza análoga à viscosidade, para materiais elásticos. Essa constante está relacionada à força necessária para causar uma deformação no material.
+
+		Retomando o exemplo anterior, em baixos valores de força, a manteiga conseguia se manter estruturada. Nessa região de forças bastante pequenas, a manteiga consegue armazenar energia em sua estrutura interna. De acordo com as definições apresentadas, a manteiga pode se comportar tanto como um material elástico quanto um material viscoso. Esse tipo de material recebe o nome de material viscoelástico.
+		
+		\subsection{Número de Deborah}
+		
+		É possível relacionar materiais viscosos, elásticos e viscoelásticos através do número de Deborah (Eq. \ref{eqn:Deborah}), que relaciona o tempo de relaxação do material (\(\tau_{\text{rel}}\)) com o tempo de observação (\(t\)).
+		
+		\begin{equation}
+			D_e = \dfrac{\tau_{\text{rel}}}{t}
+			\label{eqn:Deborah}
+		\end{equation}
+		
+		O tempo de relaxação é, como o nome diz, o tempo que um material leva para dissipar uma tensão aplicada em si. Quando a força é aplicada por um tempo maior que o tempo de relaxação do material, a tensão é dissipada e o material flui. De maneira oposta, caso a tensão seja aplicada por um tempo bastante curto, comparativamente, não há tempo para o material perder a energia, e mantém seu formato.
+		
+		% todo: achar uma ref pra isso
+		Por exemplo, um arco de madeira utilizado para caça ou para guerra devia ser armazenado sem sua corda. Caso fosse, a força do arco cairia com o tempo e a eficácia do arco diminuía. Isso ocorre porque as fibras da madeira que compõe o arco, se tensionadas por muito tempo, conseguem deslizar umas pelas outras para dissipar a tensão. Logo, o arco, notavelmente um material elástico no uso cotidiano, se comporta como um fluído se tensionado por muito tempo.
+		
+		Água, no outro extremo, é um material que se comporta quase sempre como um líquido. Porém, a água age como um sólido quando um objeto impacta sobre ela, a uma velocidade suficientemente grande. Isso ocorre porque as moléculas de água não tem tempo suficiente para se deslocar, e a água é um fluído incompressível, resultando numa resistência forte ao fluxo.
+		
+		Soluções de micelas gigantes combinam ambos os comportamentos elástico e viscoso. Isso é observado claramente no efeito de recuo (\emph{recoil}), quando uma solução de micelas gigantes é agitada circularmente. Inicialmente, observa-se a solução seguindo o sentido do fluxo, possivelmente através das bolhas formadas pela agitação. Quando a agitação é cessada, o fluxo continua por um tempo, devido à sua inércia, depois para e começa a fluir no sentido contrário (recuo). As cadeias de micelas gigantes conseguem interagir entre si e se entrelaçar de tal modo que um pouco da energia da agitação é armazenada. Quando a agitação cessa, essa energia consegue ser liberada, o que ocorre no sentido oposto à agitação, então o recuo é observado. Depois do recuo, a solução para de se movimentar pois toda a energia foi dissipada. A escala de tempo para a perda de energia e para o \emph{recoil} são aproximadamente iguais, logo o número de Deborah desse fluído é próximo de 1.
+		
+		A correlação entre o número de Deborah e o comportamento do material pode ser resumido pela Eq. \ref{eqn:Deborah_casos}
+		
+		\begin{equation}
+			D_e
+			\begin{cases}
+				\gg 1     & \textrm{Elástico}      \\
+				\approx 1 & \textrm{Viscoelástico} \\
+				\ll 1     & \textrm{Viscoso}
+			\end{cases}
+			\label{eqn:Deborah_casos}
+		\end{equation}
+		
+		O arco em uso possui \(D_e\gg1\), pois seu tempo de relaxação é bastante longo comparado com a ação de atirar uma flecha, mas \(D_e\ll1\) quando armazenado, o que pode durar meses. Dessa maneira, o arco e os outros materiais citados se comportam como materiais tanto elásticos quanto viscosos, dependendo do tempo de análise \(t\). O nome desse número vem de uma passagem bíblica, \emph{Os montes deslizaram diante do senhor} (Juízes 5:5). Mesmo as montanhas, que tradicionalmente não se movem, acabam deslizando mediante tempos de observação infinitos.
+		
 			\subsection{Fluídos Newtonianos}
+			
+			% Começar a estabelecer o formalismo. Colocar termos para tensão, cisalhamento, taxa de cisalhamento.
+					
+			Os fluídos Newtonianos obedecem a lei de Newton da viscosidade
+			\begin{equation}
+				\tau = \eta\dot{\gamma}
+				\label{eqn:Newton}
+			\end{equation}
+	
+			% Colocar um exemplo de uma curva de fluxo para fluído Newtoniano
+				
 			\subsection{Sólidos Hookeanos}
+			
+			% Colocar a equação de Hooke, mostrar o que é G
+			
+			% Colocar um exemplo de curva de fluxo Hookeana, e as regiões onde não há mais o comportamento. Fazer um paralelo, ou deixar implícito, com o exemplo da parte de fundamentos, sobre sobrepor a energia interna.
+			
 			\subsection{Fluidos viscoelásticos}
+			
+			% Micelas gigantes são fluidos viscoelásticos por causa da estrutura
+			% Mostrar o formato de curvas de fluxo de micelas gigantes, comparando com as hookeanas e newtonianas
+			% Mostrar de onde é obtido o valor de viscosidade no platô
+			% Mostrar os modelos que podem ser usados para fluidos viscoelásticos.
+			% Fazer referência ao apêndice, onde tem alguns exemplos de curvas.
+			% Mencionar como que os dados são adquiridos nas curvas de fluxo
+			
 		\section{Reologia oscilatória}
 			\subsection{Aquisição de dados}
 			\subsection{Modelo de Maxwell}
 			\subsection{Modelos mais complexos}
-		\section{Curvas de Fluxo}
-			\subsection{Modelos de curvas de fluxo}
 			% todo: colocar a seção dos apêndices onde eu descrevo as curvas aqui, e depois só referenciar o apêndice para a implementação técnica dos modelos
 	\chapter{Calorimetria de titulação isotérmica}
 		\section{Fundamentos}
