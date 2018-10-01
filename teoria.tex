@@ -32,11 +32,11 @@
 		O tempo de relaxação é, como o nome diz, o tempo que um material leva para dissipar uma tensão aplicada em si. Quando a força é aplicada por um tempo maior que o tempo de relaxação do material, a tensão é dissipada e o material flui. De maneira oposta, caso a tensão seja aplicada por um tempo bastante curto, comparativamente, não há tempo para o material perder a energia, e mantém seu formato.
 		
 		% todo: achar uma ref pra isso
-		Por exemplo, um arco de madeira utilizado para caça ou para guerra devia ser armazenado sem sua corda. Caso fosse, a força do arco cairia com o tempo e a eficácia do arco diminuía. Isso ocorre porque as fibras da madeira que compõe o arco, se tensionadas por muito tempo, conseguem deslizar umas pelas outras para dissipar a tensão. Logo, o arco, notavelmente um material elástico no uso cotidiano, se comporta como um fluído se tensionado por muito tempo.
+		Por exemplo, um arco de madeira utilizado para caça ou para guerra devia ser armazenado sem sua corda. Caso fosse, a força do arco cairia com o tempo e a eficácia do arco diminuía. Isso ocorre porque as fibras da madeira que compõe o arco, se tensionadas por muito tempo, conseguem deslizar umas pelas outras para dissipar a tensão. Logo, o arco, notavelmente um material elástico no uso cotidiano, se comporta como um fluido se tensionado por muito tempo.
 		
-		Água, no outro extremo, é um material que se comporta quase sempre como um líquido. Porém, a água age como um sólido quando um objeto impacta sobre ela, a uma velocidade suficientemente grande. Isso ocorre porque as moléculas de água não tem tempo suficiente para se deslocar, e a água é um fluído incompressível, resultando numa resistência forte ao fluxo.
+		Água, no outro extremo, é um material que se comporta quase sempre como um líquido. Porém, a água age como um sólido quando um objeto impacta sobre ela, a uma velocidade suficientemente grande. Isso ocorre porque as moléculas de água não tem tempo suficiente para se deslocar, e a água é um fluido incompressível, resultando numa resistência forte ao fluxo.
 		
-		Soluções de micelas gigantes combinam ambos os comportamentos elástico e viscoso. Isso é observado claramente no efeito de recuo (\emph{recoil}), quando uma solução de micelas gigantes é agitada circularmente. Inicialmente, observa-se a solução seguindo o sentido do fluxo, possivelmente através das bolhas formadas pela agitação. Quando a agitação é cessada, o fluxo continua por um tempo, devido à sua inércia, depois para e começa a fluir no sentido contrário (recuo). As cadeias de micelas gigantes conseguem interagir entre si e se entrelaçar de tal modo que um pouco da energia da agitação é armazenada. Quando a agitação cessa, essa energia consegue ser liberada, o que ocorre no sentido oposto à agitação, então o recuo é observado. Depois do recuo, a solução para de se movimentar pois toda a energia foi dissipada. A escala de tempo para a perda de energia e para o \emph{recoil} são aproximadamente iguais, logo o número de Deborah desse fluído é próximo de 1.
+		Soluções de micelas gigantes combinam ambos os comportamentos elástico e viscoso. Isso é observado claramente no efeito de recuo (\emph{recoil}), quando uma solução de micelas gigantes é agitada circularmente. Inicialmente, observa-se a solução seguindo o sentido do fluxo, possivelmente através das bolhas formadas pela agitação. Quando a agitação é cessada, o fluxo continua por um tempo, devido à sua inércia, depois para e começa a fluir no sentido contrário (recuo). As cadeias de micelas gigantes conseguem interagir entre si e se entrelaçar de tal modo que um pouco da energia da agitação é armazenada. Quando a agitação cessa, essa energia consegue ser liberada, o que ocorre no sentido oposto à agitação, então o recuo é observado. Depois do recuo, a solução para de se movimentar pois toda a energia foi dissipada. A escala de tempo para a perda de energia e para o \emph{recoil} são aproximadamente iguais, logo o número de Deborah desse fluido é próximo de 1.
 		
 		A correlação entre o número de Deborah e o comportamento do material pode ser resumido pela Eq. \ref{eqn:Deborah_casos}
 		
@@ -50,37 +50,125 @@
 			\label{eqn:Deborah_casos}
 		\end{equation}
 		
-		O arco em uso possui \(D_e\gg1\), pois seu tempo de relaxação é bastante longo comparado com a ação de atirar uma flecha, mas \(D_e\ll1\) quando armazenado, o que pode durar meses. Dessa maneira, o arco e os outros materiais citados se comportam como materiais tanto elásticos quanto viscosos, dependendo do tempo de análise \(t\). O nome desse número vem de uma passagem bíblica, \emph{Os montes deslizaram diante do senhor} (Juízes 5:5). Mesmo as montanhas, que tradicionalmente não se movem, acabam deslizando mediante tempos de observação infinitos.
+		O arco, em uso, possui \(D_e\gg1\), pois seu tempo de relaxação é bastante longo comparado com a ação de atirar uma flecha, mas \(D_e\ll1\) quando armazenado, o que pode durar meses. Dessa maneira, o arco e os outros materiais citados se comportam como materiais tanto elásticos quanto viscosos, dependendo do tempo de análise \(t\). O nome desse número vem de uma passagem bíblica, \emph{Os montes deslizaram diante do senhor} (Juízes 5:5). Mesmo as montanhas, que tradicionalmente não se movem, acabam deslizando mediante tempos de observação infinitos.
 		
-			\subsection{Fluídos Newtonianos}
+		Para um estudo mais aprofundado de reologia, é necessário estabelecer um formalismo matemático, que será feito nas seções a seguir. Primeiramente se
+		
+			\subsection{Cisalhamento e curvas de fluxo}
 			
-			% Começar a estabelecer o formalismo. Colocar termos para tensão, cisalhamento, taxa de cisalhamento.
-					
-			Os fluídos Newtonianos obedecem a lei de Newton da viscosidade
+			O cisalhamento é um tipo de movimento que ocorre no sentido do plano da amostra, perpendicular ao plano normal. A magnitude do cisalhamento \(\gamma\) é calculada a partir da altura \(z\) da amostra e o grau de deformação \(\Delta x\), como mostra a Eq. \ref{eqn:cisalhamento}. \(\gamma\) é adimensional.
+			
+			\begin{equation}  % todo: pensar em colocar isso em paralelo à uma figura semelhante à da Wikipedia
+				\gamma = \frac{\Delta x}{z}
+				\label{eqn:cisalhamento}
+			\end{equation}
+			
+			A tensão de cisalhamento \(\tau\) é a força necessária para aplicar um cisalhamento divido pela área de aplicação (Eq. \ref{eqn:tensao_cisalhamento}). A unidade usual para \(\tau\) é Pa.
+			
+			\begin{equation}
+				\tau = \frac{F}{A}
+				\label{eqn:tensao_cisalhamento}
+			\end{equation}
+			
+			A velocidade de cisalhamento é conhecida também como taxa de cisalhamento \(\dot{\gamma}\), calculada a partir da derivada em função do tempo de \(\gamma\) (Eq. \ref{eqn:taxa_cisalhamento}). A unidade usual de \(\dot{\gamma}\) é Pa.s\menosUm.
+			
+			\begin{equation}
+				\dot{\gamma} = \dfrac{\delta y}{\delta t}
+				\label{eqn:taxa_cisalhamento}
+			\end{equation}
+			
+			É possível obter o valor de viscosidade de um material aplicando-se uma taxa de cisalhamento crescente e medindo a tensão necessária para manter essa taxa (modo \emph{control rate}, \emph{CR}), ou aplicando-se uma tensão e medindo-se a taxa (modo \emph{control stress}, \emph{CS}). A informação resultante desse tipo de análise se chama curva de fluxo.
+						
+			\subsection{Fluidos Newtonianos}
+			
+			Os fluidos Newtonianos são caracterizados por possuírem somente um valor para viscosidade \(\eta\), independente da taxa de cisalhamento, relação simbolizada pela Eq. \ref{eqn:Newton}. Um modelo físico frequentemente utilizado para fluidos Newtonianos é o pistão.
+			
 			\begin{equation}
 				\tau = \eta\dot{\gamma}
 				\label{eqn:Newton}
 			\end{equation}
-	
-			% Colocar um exemplo de uma curva de fluxo para fluído Newtoniano
+			
+			A figura \ref{fig:reol_newt_exemplos} mostra curvas de fluxo simuladas para um fluido Newtoniano de viscosidade \(\eta=10\:Pa.s^{-1}\).
+			
+			\begin{figure}[H]
+				\begin{subfigure}[t]{.5\textwidth}
+					\includegraphics[width=\textwidth]{./imagens/reologia/newtoniano_exemplo_tauGP}
+					\caption{\(\tau \times \dot{\gamma}\)}
+					\label{fig:reol_newt_tauGP}
+				\end{subfigure}%
+				\begin{subfigure}[t]{.5\textwidth}
+					\includegraphics[width=\textwidth]{./imagens/reologia/newtoniano_exemplo_etaGP}
+					\caption{\(\eta \times \dot{\gamma}\)}
+					\label{fig:reol_newt_etaGP}
+				\end{subfigure}
+				\caption{Exemplos de curvas de fluxo. (\ref{fig:reol_newt_tauGP}) Método para obtenção da viscosidade. (\ref{fig:reol_newt_etaGP}) Dependência da viscosidade com a taxa de cisalhamento, mostrando que o valor é constante.}
+				\label{fig:reol_newt_exemplos}
+			\end{figure}
 				
 			\subsection{Sólidos Hookeanos}
 			
-			% Colocar a equação de Hooke, mostrar o que é G
+			Sólidos hookeanos possuem uma constante elástica \(G\) que relaciona a tensão \(\tau\) aplicada e a deformação \(\gamma\) (Eq. \ref{eqn:Hooke}).
 			
-			% Colocar um exemplo de curva de fluxo Hookeana, e as regiões onde não há mais o comportamento. Fazer um paralelo, ou deixar implícito, com o exemplo da parte de fundamentos, sobre sobrepor a energia interna.
+			\begin{equation}
+				\tau = G\gamma
+				\label{eqn:Hooke}
+			\end{equation}
 			
-			\subsection{Fluidos viscoelásticos}
+			A deformação de um sólido Hookeano pode ser tanto compressiva quando extensiva, dependendo do sinal de \(\gamma\), e consequentemente a tensão retornada possui a direção oposta da tensão aplicada inicialmente. 
 			
-			% Micelas gigantes são fluidos viscoelásticos por causa da estrutura
-			% Mostrar o formato de curvas de fluxo de micelas gigantes, comparando com as hookeanas e newtonianas
-			% Mostrar de onde é obtido o valor de viscosidade no platô
-			% Mostrar os modelos que podem ser usados para fluidos viscoelásticos.
-			% Fazer referência ao apêndice, onde tem alguns exemplos de curvas.
-			% Mencionar como que os dados são adquiridos nas curvas de fluxo
+			O modelo físico associado ao sólido Hookeano é a mola. É possível que uma mola, quando estendida demasiadamente, não retorne à sua extensão original. Isso ocorre porque a Eq. \ref{eqn:Hooke} se aplica somente a uma região dos possíveis valores de \(\gamma\). A fig X mostra o comportamento Hookeano de amostras.
 			
+			% todo: colocar uma figura do Goodwin e Hughes de viscosidade, para mostrar o comportamento não Hookeano.
+			
+			\subsection{Fluidos não-Newtonianos}
+			
+			Fluidos que não obedecem a lei de Newton (Eq. \ref{eqn:Newton}), portanto possuem valores de viscosidade dependentes da taxa de cisalhamento, são chamados de fluidos não-Newtonianos. Dentro dessa classificação, há vários tipos de fluido, dependendo de como \(\eta\) varia com (\(\dot{\gamma}\)). Alguns dos tipos possíveis são:
+			
+			\begin{itemize}[noitemsep]
+				\item Plásticos: Viscosidade inicial é muito alta ou, teoricamente, infinita, até a tensão atingir um valor específico, chamado de tensão limite ou \emph{yield-stress}, quando o material começa a fluir. Exemplo: Manteiga, géis. % todo: achar se o termo é tensão limite mesmo
+				\item Pseudoplásticos ou \emph{shear-thinning}: Viscosidade alta, mas finita, em baixas taxas de cisalhamento, e decai com o aumento da taxa de cisalhamento, atingindo um valor mínimo. Exemplo: soluções de micelas gigantes.
+				\item Dilatantes: Viscosidade baixa a baixas taxas de cisalhamento, e aumenta com o aumento da taxa. Exemplo: Dispersões de amido em água.
+			\end{itemize}
+			
+			% Todo: colocar a figura dos vários tipos de comportamento aqui.
+			
+			% todo: pensar melhor sobre isso de contribuições elásticas e viscosas. O que eu escrevi aqui é o oposto do que aparece no diagrama de frequência, com a viscosidade complexa. Qual é a relação?
+			
+			Sob taxas de cisalhamento baixas, micelas gigantes em solução estão emaranhadas. Isso dificulta a movimentação do solvente e da solução como um todo, resultado em uma viscosidade aparente alta. Nesse regime, o comportamento elástico predomina. Quanto maior for o entrelaçamento das micelas, maior é a contribuição do comportamento elástico, e maior é a viscosidade aparente. À medida que a taxa é aumentada, as micelas gigantes começam a se alinhar ao fluxo, de modo a diminuir o gradiente de velocidade que cada cadeia sente. Isso facilita o fluxo e diminui a estruturação que resulta no comportamento elástico, o que acaba diminuindo a viscosidade aparente.
+			
+			Após um valor específico de taxa de cisalhamento, a viscosidade atinja um mínimo pois não há mais como aumentar o alinhamento das micelas. Nessa situação, a viscosidade aparente é predominantemente devido ao solvente, e a contribuição Newtoniana é predominante. A figura \ref{fig:reol_pseudoplastico_exemplos} mostra a curva de fluxo de um material pseudoplástico, tanto .\footnote{Construção: vide apêndice \ref{sec:apn_tratamento_CF}. Parâmetros: Modelo de Carreau, \(\eta_0=10\), \(\eta_{\infty}=1\), \(\dot{\gamma}_b=10\), \(n=10\).} É possível que as cadeias comecem a se estruturar, formando \emph{shear induced structures}, mas isso não foi observado neste trabalho.
+	
+			\begin{figure}[H]
+				\begin{subfigure}[t]{.5\textwidth}
+					\includegraphics[width=\textwidth]{./imagens/reologia/pseudoplastico_tau}
+					\caption{\(\tau \times \dot{\gamma}\)}
+					\label{fig:reol_pseudo_tauGP}
+				\end{subfigure}%
+				\begin{subfigure}[t]{.5\textwidth}
+					\includegraphics[width=\textwidth]{./imagens/reologia/pseudoplastico_eta}
+					\caption{\(\eta \times \dot{\gamma}\)}
+					\label{fig:reol_pseudo_etaGP}
+				\end{subfigure}
+				\caption{Exemplos de curvas de fluxo de um fluido pseudoplástico. (\ref{fig:reol_newt_tauGP}) Tensão aplicada em função da taxa de cisalhamento. (\ref{fig:reol_newt_etaGP}) Derivada de (\ref{fig:reol_newt_tauGP}) em função da taxa de cisalhamento.}
+				\label{fig:reol_pseudoplastico_exemplos}
+			\end{figure}
+			
+			No entanto, as curvas de fluxo são frequentemente plotadas na escala log-log. Nesse tipo de gráfico (Fig. \ref{fig:reol_pseudoplastico_loglog}), é possível observar a região com viscosidade constante em baixas taxas de cisalhamento, chamada de platô Newtoniano, devido à sua constância. Essa valor também é chamado de viscosidade no repouso, \(\eta_0\).
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{./imagens/reologia/Pseudoplastico_loglog}
+				\caption{Curva de fluxo de um fluído pseudoplástico na escala log-log, mostrando o valor da viscosidade no repouso, \(\eta_0\).}
+				\label{fig:reol_pseudoplastico_loglog}
+			\end{figure}
+		
+			Para obter o valor da viscosidade no repouso, é possível tanto realizar um ajuste linear da região inicial na escala log-log, ou ajustar um modelo à curva, como o modelo de Cross, Carreau e Carreau-Yasuda. Mais informações podem ser obtidas no apêndice \ref{sec:apn_tratamento_CF}.
+
 		\section{Reologia oscilatória}
 			\subsection{Aquisição de dados}
+			
+			Além de análises de curva de fluxo, as análises oscilatórias podem ser utilizadas para obter informações reológicas mais aprofundadas sobre um material. Variando-se a frequência de perturbação, é possível obter o espectro mecânico do material, onde se observa as contribuições elástica e viscosa em função da frequência de perturbação mecânica.
+			
 			\subsection{Modelo de Maxwell}
 			\subsection{Modelos mais complexos}
 			% todo: colocar a seção dos apêndices onde eu descrevo as curvas aqui, e depois só referenciar o apêndice para a implementação técnica dos modelos
