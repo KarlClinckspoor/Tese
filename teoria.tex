@@ -162,14 +162,141 @@
 				\label{fig:reol_pseudoplastico_loglog}
 			\end{figure}
 		
-			Para obter o valor da viscosidade no repouso, é possível tanto realizar um ajuste linear da região inicial na escala log-log, ou ajustar um modelo à curva, como o modelo de Cross, Carreau e Carreau-Yasuda. Mais informações podem ser obtidas no apêndice \ref{sec:apn_tratamento_CF}.
+			Para obter o valor da viscosidade no repouso, é possível tanto realizar um ajuste linear da região inicial na escala log-log, ou ajustar um modelo à curva, como o modelo de Cross, Carreau e Carreau-Yasuda. Mais informações sobre a modelagem estão no apêndice \ref{sec:apn_tratamento_CF}.
 
 		\section{Reologia oscilatória}
-			\subsection{Aquisição de dados}
+			\subsection{Princípios e aquisição de dados}
 			
-			Além de análises de curva de fluxo, as análises oscilatórias podem ser utilizadas para obter informações reológicas mais aprofundadas sobre um material. Variando-se a frequência de perturbação, é possível obter o espectro mecânico do material, onde se observa as contribuições elástica e viscosa em função da frequência de perturbação mecânica.
+			As análises oscilatórias podem ser utilizadas para obter informações reológicas mais completas sobre um material. Variando-se a frequência de perturbação, é possível obter o espectro mecânico do material, onde se observa as contribuições elástica e viscosa em função da frequência de perturbação mecânica.
+			
+			Ao material, é aplicada uma deformação \(\gamma\) que varia com o tempo de acordo com a Eq. \ref{eqn:osc_gamma_t}.
+			
+			\begin{equation}
+				\gamma(t)=\gamma_0\cos(\omega t)
+				\label{eqn:osc_gamma_t}
+			\end{equation}
+			
+			\noindent onde \(\gamma_0\) é a deformação máxima e \(\omega\) é a frequência de perturbação. As deformações aplicadas ao material devem ser tais que não ocorra desestruturação do mesmo. Por exemplo, uma deformação muito grande pode causar a quebra de ligações químicas de um polímero, o que altera irreversivelmente as suas características reológicas. Por esse motivo, é necessário modular também a tensão aplicada.
+			
+			Um material elástico responde à deformação imediatamente com uma força no sentido oposto ao sentido da deformação. Já materiais viscosos respondem à deformação quando há uma mudança na direção, ou seja, a resposta desses materiais é totalmente defasada em relação à aplicação da deformação. Já materiais viscoelásticos, por terem componentes de ambos os tipos, possuem uma defasagem intermediária. O grau dessa defasagem é proporcional ao grau de comportamento elástico e viscoso. Levando isso em consideração, a tensão \(\tau\)  é expressa de acordo com a Eq. \ref{eqn:osc_tau_t}.
+			
+			\begin{equation}
+				\tau = \tau_0\cos(\omega t - \theta)
+				\label{eqn:osc_tau_t}
+			\end{equation}
+			
+			\noindent onde \(\tau_0\) é a tensão máxima (determinada no experimento oscilatório de amplitude) e \(\theta\) é o ângulo de defasagem.
+			
+			As expressões \ref{eqn:osc_gamma_t} e \ref{eqn:osc_tau_t} podem ser reescritas utilizando a relação de Euler, Eq. \ref{eqn:Euler}, resultando nas expressões \ref{eqn:osc_gamma_im} e \ref{eqn:osc_tau_im}, onde utilizou-se um acento circunflexo para diferenciar as expressões. Essa transformação facilita a manipulação matemática.
+			
+			\begin{equation}
+				e^{ix} = \cos(x) + i\sin(x)
+				\label{eqn:Euler}
+			\end{equation}
+			
+			\begin{equation}
+				\hat{\gamma} = \gamma_0 e^{i\omega t}
+				\label{eqn:osc_gamma_im}
+			\end{equation}
+			
+			\begin{equation}
+				\hat{\tau} = \tau_0 e^{i(\omega t - \theta)}
+				\label{eqn:osc_tau_im}
+			\end{equation}
+			
+			A partir dessas relações, é possível utilizar a equação de Hooke (Eq. \ref{eqn:Hooke}) para encontrar o módulo elástico do material, na notação imaginária, \(\hat{G}\) (Eq. \ref{eqn:osc_transform_G}).
+			
+			\begin{equation}
+				\hat{\tau} = \hat{G}\hat{\gamma} \to \hat{G} = \dfrac{\hat{\tau}}{\hat{\gamma}}    \to 
+				\hat{G} = \dfrac{\tau_0}{\gamma_0} \dfrac{e^{i(\omega t - \theta)}}{e^{i\omega t}} \to
+				\hat{G} = \dfrac{\tau_0}{\gamma_0} e^{-i\theta}
+				\label{eqn:osc_transform_G}
+			\end{equation}
+			
+			Utilizando-se a equação de Euler novamente, mas voltando para o domínio dos senos e cossenos, obtemos a Eq. \ref{eqn:osc_volta_senos_G}:
+			
+			\begin{equation}
+				\hat{G} = \dfrac{\tau_0}{\gamma_0} \left( \cos(\theta) + i\sin(\theta) \right)
+				\label{eqn:osc_volta_senos_G}
+			\end{equation}
+			
+			Nessa equação, o módulo total \(\hat{G}\) foi dividido em dois termos, um em fase à deformação \(\cos(\theta)\) e outro 90° fora de fase, \(\sin(\theta)\). Esses dois termos são diretamente relacionáveis às componentes elástica e viscosa de um material. Dessa maneira, é possível separar o módulo total complexo \(\hat{G}\) em dois módulos (Eq. \ref{eqn:osc_G_complexo}), o módulo elástico, G' (Eq. \ref{eqn:osc_g1linha}), e o módulo viscoso, G'' (Eq. \ref{eqn:osc_g2linha}).
+			
+			\begin{equation}
+				\hat{G} = G' + iG''
+				\label{eqn:osc_G_complexo}
+			\end{equation}
+			
+			\begin{equation}
+				G' = \dfrac{\tau_0}{\gamma_0} \cos(\theta)
+				\label{eqn:osc_g1linha}
+			\end{equation}
+			
+			\begin{equation}
+				G'' = \dfrac{\tau_0}{\gamma_0} \sin(\theta)
+				\label{eqn:osc_g2linha}
+			\end{equation}
+			
+			Portanto, para conseguir separar os valores dos módulos G' e G'', o reômetro necessita medir o módulo total e o ângulo de defasagem, sendo possível assim separar os componentes. Vale notar que a tangente do ângulo de defasagem é a relação \(G''/G'\) (Eq. \ref{eqn:osc_tan_teta})
+			
+			\begin{equation}
+				\tan(\theta) = \dfrac{\sin(\theta)}{\cos(\theta)} = \dfrac{G''}{G'}
+				\label{eqn:osc_tan_teta}
+			\end{equation}
+			
+			A Figura \ref{fig:osc_simulacoes} mostra uma série de simulações do modelo apresentado aqui. A deformação em função do tempo foi calculada, e o ângulo de defasagem foi aumentado gradativamente de 0° para 90°. 
+			% todo: descobrir e colocar os ângulos aqui
+			
+			\begin{figure}[H]
+				\begin{subfigure}[t]{0.3\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{./imagens/reologia/Simulacao_visc_0}
+					\caption{\(\theta=0°\)}
+					\label{fig:osc_sim0}
+				\end{subfigure}%
+				\begin{subfigure}[t]{0.3\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{./imagens/reologia/Simulacao_visc_25}
+					\caption{\(\theta=0°\)}
+					\label{fig:osc_sim25}
+				\end{subfigure}%
+				\begin{subfigure}[t]{0.3\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{./imagens/reologia/Simulacao_visc_50}
+					\caption{\(\theta=0°\)}
+					\label{fig:osc_sim50}
+				\end{subfigure}
+			
+				\begin{subfigure}[t]{0.3\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{./imagens/reologia/Simulacao_visc_75}
+					\caption{\(\theta=0°\)}
+					\label{fig:osc_sim75}
+				\end{subfigure}%
+				\begin{subfigure}[t]{0.3\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{./imagens/reologia/Simulacao_visc_100}
+					\caption{\(\theta=90°\)}
+					\label{fig:osc_sim100}
+				\end{subfigure}%
+%				\begin{subfigure}[t]{0.3\textwidth}
+%					\centering
+%					\includegraphics[width=\textwidth]{}
+%					\label{fig:}
+%				\end{subfigure}
+			\caption{Simulações do comportamento de um fluido sob cisalhamento cossenoidal. As imagens mostram a deformação \(\gamma\) em função do tempo, a tensão total \(\tau\) de resposta em função do tempo, decomposta em suas componentes elástica e viscosa. No título de cada gráfico está a contribuição, em porcentagem, de cada componente do material. O ângulo de defasagem está ilustrado na figura.}
+			\label{fig:osc_simulacoes}
+			\end{figure}  % todo: colocar o código para essa figura nos apêndices
 			
 			\subsection{Modelo de Maxwell}
+			
+			O modelo de Maxwell é construído juntando-se um elemento elástico (mola) e um elemento viscoso (pistão) ideais em série. É possível expressar a taxa de cisalhamento do modelo de Maxwell como a soma das taxas de cisalhamento dos elementos individuais (Eq. \ref{eqn:Maxwell_soma}).
+			
+			\begin{equation}
+				\dot{\gamma} = \dfrac{\tau}{\eta} + \dfrac{a}{b}
+				\label{eqn:Maxwell_soma}
+			\end{equation}
+			
 			\subsection{Modelos mais complexos}
 			% todo: colocar a seção dos apêndices onde eu descrevo as curvas aqui, e depois só referenciar o apêndice para a implementação técnica dos modelos
 	\chapter{Calorimetria de titulação isotérmica}
