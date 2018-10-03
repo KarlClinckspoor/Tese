@@ -257,20 +257,20 @@
 				\begin{subfigure}[t]{0.3\textwidth}
 					\centering
 					\includegraphics[width=\textwidth]{./imagens/reologia/Simulacao_visc_25}
-					\caption{\(\theta=0°\)}
+					\caption{\(\theta=18°\)}
 					\label{fig:osc_sim25}
 				\end{subfigure}%
 				\begin{subfigure}[t]{0.3\textwidth}
 					\centering
 					\includegraphics[width=\textwidth]{./imagens/reologia/Simulacao_visc_50}
-					\caption{\(\theta=0°\)}
+					\caption{\(\theta=45°\)}
 					\label{fig:osc_sim50}
 				\end{subfigure}
 			
 				\begin{subfigure}[t]{0.3\textwidth}
 					\centering
 					\includegraphics[width=\textwidth]{./imagens/reologia/Simulacao_visc_75}
-					\caption{\(\theta=0°\)}
+					\caption{\(\theta=72°\)}
 					\label{fig:osc_sim75}
 				\end{subfigure}%
 				\begin{subfigure}[t]{0.3\textwidth}
@@ -290,15 +290,196 @@
 			
 			\subsection{Modelo de Maxwell}
 			
-			O modelo de Maxwell é construído juntando-se um elemento elástico (mola) e um elemento viscoso (pistão) ideais em série. É possível expressar a taxa de cisalhamento do modelo de Maxwell como a soma das taxas de cisalhamento dos elementos individuais (Eq. \ref{eqn:Maxwell_soma}).
+			O modelo de Maxwell é construído juntando-se um elemento elástico (mola) e um elemento viscoso (pistão) ideais em série. É possível expressar a taxa de cisalhamento do modelo de Maxwell como a soma das taxas de cisalhamento dos elementos individuais (Eq. \ref{eqn:Maxwell_soma}). % todo: colocar uma ilustração desse modelo.
 			
 			\begin{equation}
-				\dot{\gamma} = \dfrac{\tau}{\eta} + \dfrac{a}{b}
+				\dot{\gamma}_{\textrm{total}} =  \dot{\gamma}_{\textrm{viscoso}} + \dot{\gamma}_{\textrm{elástico}} \to
+				\dfrac{d\gamma}{dt} = \dfrac{1}{\eta}\tau + \dfrac{1}{G}\dfrac{d\tau}{dt}
 				\label{eqn:Maxwell_soma}
 			\end{equation}
 			
+			Para uma deformação constante, \(\frac{d\gamma}{dt}=0\), a Eq. \ref{eqn:Maxwell_soma} se torna uma equação diferencial (Eq. \ref{eqn:Maxwell_diferencial}).
+			
+			\begin{equation}
+				\dfrac{1}{\eta}\tau + \dfrac{1}{G}\dfrac{d\tau}{dt} = 0
+				\label{eqn:Maxwell_diferencial}
+			\end{equation}
+			
+			Utilizando as condições de contorno necessárias, essa equação pode ser resolvida, resultando em (Eq. \ref{eqn:Maxwell_dif_resolvida}):
+			
+			\begin{equation}
+				\tau(t) = \tau_0 e^{\left( -\frac{G}{\eta}t \right)}
+				\label{eqn:Maxwell_dif_resolvida}
+			\end{equation}
+			
+			O termo exponencial na Eq. \ref{eqn:Maxwell_dif_resolvida} possui unidade de tempo e é a relação entre as componentes elástica e viscosa do material. Essa relação recebe o nome de tempo de relaxação, \(\tau_{\textrm{rel}}\) (Eq. \ref{eqn:Maxwell_tempo_rel_def})
+			
+			\begin{equation}
+				\tau(t) = \tau_0 e^{\sfrac{-t}{\tau_{\textrm{rel}}}}
+				\label{eqn:Maxwell_tempo_rel_def}
+			\end{equation}
+		
+			O tempo de relaxação é o tempo em que a tensão inicial demora para cair ao valor de \(\sfrac{1}{e}\) do valor inicial. É interessante notar que em tempos pequenos, relativos a \(\tau_{\textrm{rel}}\), o material responde com a tensão inicial total. Essa é a resposta imediata da mola. Porém, com o tempo, à medida que \(t\to\tau_{\textrm{rel}}\), a tensão começa a decair exponencialmente e depois, em \(t \gg \tau_{\textrm{rel}}\), tende a zero. Nessa situação, o pistão difundiu toda a energia inicial aplicada.
+			
+			A expressão \ref{eqn:Maxwell_soma} pode ser rearranjada utilizando o tempo de relaxação (\ref{eqn:Maxwell_tempo_rel_def}).
+			
+			\begin{equation}
+				\dfrac{d\gamma}{dt} = \dfrac{1}{\eta}\tau + \dfrac{1}{G}\dfrac{d\tau}{dt} \to 
+				\tau = -\dfrac{\eta}{G} \dfrac{d\tau}{dt} + \eta\dfrac{d\gamma}{dt} =
+				-\tau_{\textrm{rel}} \dfrac{d\tau}{dt} + \eta\dfrac{d\gamma}{dt}
+				\label{eqn:Maxwell_inicio_g1g2}
+			\end{equation}
+			
+			É possível substituir as expressões de tensão e \ref{eqn:osc_gamma_im} e \ref{eqn:osc_tau_im} na expressão \ref{eqn:Maxwell_inicio_g1g2} para obter uma expressão em função do tempo, da frequência e do ângulo de fase. Já realizando as derivações, obtemos:
+			
+			\begin{equation}
+				\tau_0 e^{i \left( \omega t - \theta \right)} = - \tau_{\textrm{rel}} \tau_0 i\omega e^{i \left( \omega t - \theta \right)}     +       \eta i\omega\gamma_0e^{i\omega t}
+				\label{eqn:Maxwell_substituicao}
+			\end{equation}
+			
+			Em comum a todos os termos é a constante \(e^{i\omega t}\). Dividindo ambos os lados por essa constante, agrupando os termos com \(e^{-i\theta}\) e substituindo a viscosidade por \(G\tau_{\textrm{rel}}\), temos:
+			
+			\begin{equation}
+				\tau_0e^{-i\theta} \left(   1 + i\omega\tau_{\textrm{rel}}  \right) = i\omega G\tau_{\textrm{rel}}\gamma_0 \to
+				\tau_0e^{-i\theta} = \dfrac{i\omega G\tau_{\textrm{rel}}\gamma_0}{\left(   1 + i\omega\tau_{\textrm{rel}}  \right)}
+				\label{eqn:Maxwell_intermediario}
+			\end{equation}
+			
+			O termo à esquerda da Eq. \ref{eqn:Maxwell_intermediario} é similar à definição do módulo elástico complexo, Eq. \ref{eqn:osc_transform_G}, sendo necessário somente dividir ambos os lados por \(\gamma_0\). Realizando a substituição, temos:
+			
+			\begin{equation}
+				\hat{G} = \dfrac{\tau_0e^{-i\theta}}{\gamma_0} = \dfrac{i\omega G\tau_{\textrm{rel}}}{\left(   1 + i\omega\tau_{\textrm{rel}}  \right)}
+				\label{eqn:Maxwell_complexo_antes_sep}
+			\end{equation}
+			
+			Seguindo o princípio de que o módulo complexo \(\hat{G}\) pode ser dividido em uma parte imaginária e uma parte real, podemos realizar o mesmo com a Eq. \ref{eqn:Maxwell_complexo_antes_sep} multiplicando-se a fração por \(\frac{\left(   1 - i\omega\tau_{\textrm{rel}}  \right)}{\left(   1 - i\omega\tau_{\textrm{rel}}  \right)}\).
+			
+			\begin{equation}
+				\hat{G} = \dfrac{  i\omega G\tau_{\textrm{rel}} - i^2 \omega^2 G \tau_{\textrm{rel}}^2        }{  1 - i^2\omega^2 \tau_{\textrm{rel}}^2          }
+				\label{eqn:Maxwell_complexo_antes_sep2}
+			\end{equation}
+			
+			Separando as partes imaginárias das partes reais e substituindo \(i^2 = -1\):
+			
+			\begin{equation}
+				\hat{G} = \dfrac{   \omega^2 G \tau_{\textrm{rel}}^2       }{  1 + \omega^2 \tau_{\textrm{rel}}^2      } + i \dfrac{   \omega G \tau_{\textrm{rel}}        }{ 1 + \omega^2 \tau_{\textrm{rel}}^2 }
+				\label{eqn:Maxwell_substituido}
+			\end{equation}
+			
+			Seguindo a expressão \ref{eqn:osc_G_complexo}, \(\hat{G} = G' + iG''\), podemos definir o módulo elástico de acordo com o modelo de Maxwell como:
+			
+			\begin{equation}
+				G' = \dfrac{ G \omega^2 \tau_{\textrm{rel}}^2   }{  1 + \omega^2 \tau_{\textrm{rel}}^2      }
+				\label{eqn:Maxwell_G1_def}
+			\end{equation}
+			
+			E o módulo viscoso, G'', como:
+			
+			\begin{equation}
+				G'' = \dfrac{  G \omega  \tau_{\textrm{rel}}        }{ 1 + \omega^2 \tau_{\textrm{rel}}^2 }
+				\label{eqn:Maxwell_G2_def}
+			\end{equation}
+			
+			É interessante notar que a relação \(\sfrac{G''}{G'}\), que equivale a \(\tan(\theta)\) (\ref{eqn:osc_tan_teta}), também se relaciona com o tempo de relaxação:
+			
+			\begin{equation}
+				\tan(\theta) = \dfrac{G''}{G'} = \dfrac{1}{\omega\tau_{\textrm{rel}}}
+				\label{eqn:Maxwell_cruzamento}
+			\end{equation}
+			
+			Com isso, é possível determinar o tempo de relaxação de um fluido Maxwelliano através da frequência do ponto de cruzamento de G' e G''. Lembrando que \(\omega\) é a frequência de perturbação, e o inverso da frequência é o tempo de observação, podemos relacionar essa relação com o número de Deborah, Eq. \ref{eqn:Deborah}.
+			
+			\begin{equation}
+				\dfrac{1}{\omega\tau_{\textrm{rel}}} = \dfrac{ t_{\textrm{observação}  }}{ \tau_{\textrm{rel}}  } = \dfrac{1}{D_e}
+				\label{eqn:Maxwell_cruzamento_Deborah}
+			\end{equation}
+
+			A reologia oscilatória geralmente é expressa em termos de G' e G'' em função da frequência, na escala logarítmica. A Fig. \ref{fig:modelo_maxwell} mostra duas curvas simuladas para um material com tempo de relaxação de 10 s.$rad^{-1}$ e um módulo \(G\) de 10 Pa. Nessa figura estão mostrado como se obtêm visualmente os parâmetros \(G\) e \(\tau_{\textrm{rel}}\).
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{./imagens/reologia/modelo_maxwell}
+				\caption{Modelo de Maxwell}
+				\label{fig:modelo_maxwell}
+			\end{figure}
+						
+			Micelas gigantes, em vários regimes, obedecem muito bem o modelo de Maxwell. É possível interpretar esse comportamento da seguinte maneira. Em baixas frequências de perturbação (longos tempos), as micelas possuem tempo suficiente para deslizar umas pelas outras, então a maior parte da energia fornecida é perdida, logo o módulo viscoso, ou de perda, possui valores altos. Em frequências altas, a rede micelar e os entrelaçamentos conseguem armazenar a energia, não possuindo tempo suficiente para deslizar, então o módulo elástico, ou de armazenamento, é alto. Na região intermediária, ambos os mecanismos estão presentes, parte da energia é perdida e parte é armazenada, sendo que no ponto de cruzamento, exatamente metade da energia é preservada e metade é perdida.
+			
+			Para a obtenção de valores mais confiáveis para os parâmetros, é necessário realizar um ajuste dessas curvas. Porém, existem duas curvas que são descritas pelos mesmos parâmetros. Ao invés de se fazer dois ajustes e encontrar quatro parâmetros, é ideal realizar um ajuste das duas curvas simultaneamente. Isso pode ser feito minimizando-se um vetor com os resíduos das duas curvas concatenados. Isso pode ser feito utilizando-se, por exemplo, o Excel, com a ferramenta \emph{Solver} para minimizar o resíduo.
+			
 			\subsection{Modelos mais complexos}
-			% todo: colocar a seção dos apêndices onde eu descrevo as curvas aqui, e depois só referenciar o apêndice para a implementação técnica dos modelos
+			
+			Experimentalmente, existem divergências entre o modelo de Maxwell e os espectros mecânicos dos materiais. Geralmente, essas divergências aparecem devido ao aparecimento de outros  mecanismos de relaxação em frequências mais altas. Para isso, existem alguns modelos que visam corrigir o modelo de Maxwell, afetando principalmente essa região.
+			
+			Uma possível correção é utilizar dois elementos de Maxwell em série, produzindo um modelo que tem dois tempos de relaxação e dois módulos (Eqs. \ref{eqn:modelo_doismodos_g1}, \ref{eqn:modelo_doismodos_g2}).
+			
+			\begin{equation}
+				G' = \dfrac{ G_1 \omega^2 \tau_{\textrm{rel,1}}^2   }{  1 + \omega^2 \tau_{\textrm{rel,1}}^2      } + \dfrac{ G_2 \omega^2 \tau_{\textrm{rel,2}}^2   }{  1 + \omega^2 \tau_{\textrm{rel,2}}^2      }
+			\label{eqn:modelo_doismodos_g1}
+			\end{equation}
+		
+			\begin{equation}
+				G'' = \dfrac{  G_1 \omega  \tau_{\textrm{rel,1}}        }{ 1 + \omega^2 \tau_{\textrm{rel,1}}^2 } + \dfrac{  G_2 \omega  \tau_{\textrm{rel,2}}        }{ 1 + \omega^2 \tau_{\textrm{rel,2}}^2 }
+			\label{eqn:modelo_doismodos_g2}
+			\end{equation}
+			
+			% todo: a viscosidade do Oldroyd é para isso mesmo?
+			
+			O modelo de Oldroyd é praticamente idêntico ao modelo de Maxwell, e introduz somente um termo relativo à viscosidade do solvente para altas frequências de G'' (Eq. \ref{eqn:modelo_oldroyd_g2}). G' é inalterado.
+			
+			\begin{equation}
+				G'' =\dfrac{  G \omega  \tau_{\textrm{rel}}        }{ 1 + \omega^2 \tau_{\textrm{rel}}^2 } + \eta_{\infty} * \omega
+				\label{eqn:modelo_oldroyd_g2}
+			\end{equation}
+			
+			O modelo mais diferente do modelo de Maxwell é o modelo de Jeffreys, que possui as seguintes formas:
+			
+			\begin{equation}
+				G' = \dfrac{G \omega^{2} \tau_{\textrm{rel,1}} \left(\tau_{\textrm{rel,1}} - \tau_{\textrm{rel,2}}\right)}{1 + \omega^{2} \tau_{\textrm{rel,1}}^{2}}
+				\label{eqn:modelo_jeffreys_g1}
+			\end{equation}
+			
+			\begin{equation}
+				G'' = \dfrac{G \omega \tau_{\textrm{rel,1}} \left(\omega^{2} \tau_{\textrm{rel,1}} \tau_{\textrm{rel,2}} + 1\right)}{1 + \omega^{2} \tau_{\textrm{rel,1}}^{2}}
+				\label{eqn:modelo_jeffreys_g2}
+			\end{equation}
+			
+			% todo: verificar na literatura essas equações.
+			
+			A Figura \ref{fig:comparativo_modelos} compara os modelos apresentados. 
+			
+			\begin{figure}[H]
+				\begin{subfigure}[t]{.5\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{./imagens/reologia/modelos_comparativo_max}
+					\caption{Maxwell. \(G=10, \tau_{\textrm{rel}}=10\)}
+					\label{fig:comparativo_modelo_maxwell}
+				\end{subfigure}%
+				\begin{subfigure}[t]{.5\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{./imagens/reologia/modelos_comparativo_doismodos}
+					\caption{Dois Módulos. \(G_1=10, G=15, \tau_{\textrm{rel,1}}=1,  \tau_{\textrm{rel,2}}=5\)}
+					\label{fig:comparativo_modelo_doismodos}
+				\end{subfigure}
+			
+				\begin{subfigure}[t]{.5\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{./imagens/reologia/modelos_comparativo_oldroyd}
+					\caption{Oldroyd. \(G=10, \tau_{\textrm{rel}}=10, \eta_{\infty}=2\)}
+					\label{fig:comparativo_modelo_oldroyd}
+				\end{subfigure}%	
+				\begin{subfigure}[t]{.5\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{./imagens/reologia/modelos_comparativo_jeffreys}
+					\caption{Jeffreys. \(G=10, \tau_{\textrm{rel,1}}=35, \tau_{\textrm{rel,2}}=0.1 \)}
+					\label{fig:comparativo_modelo_jeffreys}
+				\end{subfigure}
+			
+				\caption{Comparação dos modelos de Maxwell, Dois-Módulos, Oldroyd e Jeffreys. Nas legendas estão os parâmetros para a criação dos modelos. Os módulos estão na unidade de Pa, os tempos de relaxação, em \(s.rad^{-1}\) e \(\eta_{\infty}\) em Pa.s}
+				\label{fig:comparativo_modelos}
+			\end{figure}
+			
+			% todo: pensar se eu devo descrever os detalhes de micelas gigantes aqui, ou na seção de micelas mesmo.
 	\chapter{Calorimetria de titulação isotérmica}
 		\section{Fundamentos}
 			\subsection{Aquisição de dados}
