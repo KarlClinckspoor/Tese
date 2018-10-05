@@ -2,20 +2,47 @@
 \part{Introdução}
 	\chapter{Surfactantes e autoassociação}
 	
-	Surfactantes são moléculas que possuem regiões com polaridades diferentes, são anfifílicas. Uma das regiões interage com com o solvente, e portanto é chamada de liofílica, e a outra interage mal, chamada de liofóbica. Quando o solvente é água, essas regiões são chamadas então hidrofílicas e hidrofóbicas, respectivamente. Essas diferenças de afinidade resultam na orientação das moléculas de surfactante de acordo com as moléculas ao redor, de maneira a maximizar a quantidade de interações favoráveis.
+	Surfactantes são moléculas anfifílicas, ou seja, possuem regiões com polaridades diferentes. Uma das regiões interage com com o solvente, e portanto é chamada de liofílica, e a outra interage mal, chamada de liofóbica. Quando o solvente é água, essas regiões são chamadas então hidrofílicas e hidrofóbicas, respectivamente. Essas diferenças de afinidade resultam na orientação das moléculas de surfactante de acordo com as moléculas ao redor, de maneira a maximizar a quantidade de interações favoráveis. A figura \ref{fig:estrutura_surfactantes} mostra a estrutura de alguns surfactantes.
 	
-	% todo: colocar um desenho de um surfactante
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=6cm]{./imagens/introducao/estrutura_surfactantes}
+		\caption{Estruturas de alguns surfactantes. (a) dodecilsulfato de sódio (SDS) (b) brometo de hexadeciltrimetilamônio (\CTAB) (c) 1-palmitoil-2-oleoil-3-sn-fosfatidilcolina (d) bis-(2-etilhexil) sulfosuccinato de sódio (AOT) (e) poli(etilenoglicol) p-(1,1,3,3-tetrametilbutil)-fenil éter (Triton X-100)}
+		\label{fig:estrutura_surfactantes}
+	\end{figure}
 	
-	Em solução aquosa, as moléculas de surfactante se orientam na interface com o ar, com a região apolar direcionada para o ar, e a região polar direcionada para a água. Esse efeito está relacionado à maior favorabilidade das interações polares com a água. É necessário, entretanto, considerar também as moléculas de solvente. Para maximizar as ligações de hidrogênio, as moléculas de água devem se organizar ao redor da cadeia hidrofóbica, resultando numa perda alta de entropia. Caso essas moléculas de água sejam liberadas, por exemplo, orientando a região apolar para o ar, o ganho entrópico das moléculas de água se sobrepõe à perda entrópica das moléculas de surfactante. Esse efeito, conhecido como efeito hidrofóbico, é um força motriz bastante importante da química coloidal.
+	Em solução aquosa, as moléculas de surfactante se orientam na interface com o ar, com a região apolar direcionada para o ar, e a região polar direcionada para a água (Fig. \ref{fig:superficie_surfactante}. Esse efeito está relacionado à maior favorabilidade das interações polares com a água. É necessário, entretanto, considerar também as moléculas de solvente. Para maximizar as ligações de hidrogênio, as moléculas de água devem se organizar ao redor da cadeia hidrofóbica, resultando numa perda alta de entropia. Caso essas moléculas de água sejam liberadas, por exemplo, orientando a região apolar para o ar, o ganho entrópico das moléculas de água se sobrepõe à perda entrópica das moléculas de surfactante. Esse efeito, conhecido como efeito hidrofóbico, é um força motriz bastante importante da química coloidal.
 	
-	À medida que mais surfactante é adicionado, mais moléculas se concentram na superfície, até uma concentração limite. Nessa concentração, chamada de concentração micelar crítica (\cmc) as moléculas começam a formar estruturas de autoassociação, como, por exemplo, micelas. Da mesma forma que no caso das moléculas de surfactante na superfície, a perda entrópica da formação de micelas é compensada pelo ganho entrópico das moléculas de água. 
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\textwidth]{./imagens/introducao/superficie_surfactante}
+		\caption{Interface de água e ar, com moléculas de surfactantes direcionadas}
+		\label{fig:superficie_surfactante}
+	\end{figure}
+	
+	À medida que mais surfactante é adicionado, mais moléculas se concentram na superfície, até uma concentração limite. Nessa concentração, chamada de concentração micelar crítica (\cmc) as moléculas começam a formar estruturas de autoassociação, como, por exemplo, micelas esféricas (Fig. \ref{fig:micela_esferica}). Da mesma forma que no caso das moléculas de surfactante na superfície, a perda entrópica da formação de micelas é compensada pelo ganho entrópico das moléculas de água. 
 	
 	% todo: verificar bem os casos onde isso acontece.
+	% todo: pensar se eu devo ilustrar o efeito hidrofóbico
 	
-	Outras estruturas de autoassociação, além de micelas esféricas, são possíveis. Micelas esféricas podem se deformar, gerando micelas esferoidais, podendo possuir até 3 raios diferentes. Após isso, as micelas podem crescer unidimensionalmente, formando micelas cilíndricas. Esse crescimento pode continuar, formando micelas que possuem uma variedade de nomes na literatura, como vermiformes (\emph{wormlike}), gigantes (\emph{giant}), alongadas (\emph{elongated}), filiformes (\emph{threadlike}), parecidas com polímeros (\emph{polymerlike}). Os nomes mais comuns são \emph{wormlike} em inglês e \emph{gigantes} em português. As micelas gigantes são o foco deste trabalho.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=5cm]{./imagens/introducao/micela_esferica}
+		\caption{Micela esférica formada por surfactantes em água}
+		\label{fig:micela_esferica}
+	\end{figure}
+	
+	Outras estruturas de autoassociação, além de micelas esféricas, são possíveis. Micelas esféricas podem se deformar, gerando micelas esferoidais, podendo possuir até 3 raios diferentes. Após isso, as micelas podem crescer unidimensionalmente, formando micelas cilíndricas. Esse crescimento pode continuar, formando micelas que possuem uma variedade de nomes na literatura, como vermiformes (\emph{wormlike}), gigantes (\emph{giant}), alongadas (\emph{elongated}), filiformes (\emph{threadlike}), parecidas com polímeros (\emph{polymerlike}). Os nomes mais comuns são \emph{wormlike} em inglês e \emph{gigantes} em português. As micelas gigantes são o foco deste trabalho. Uma ilustração de micelas gigantes se encontra na Fig. \ref{fig:micela_gigante}.
 		
 	% todo: colocar citações com exemplos desses nomes
 	% todo: colocar uma figura com um desenho de micelas gigantes
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{./imagens/introducao/micela_gigante}
+		\caption{Micela gigante formada pela interação de salicilato de sódio e brometo de hexadeciltrimetilamônio}
+		\label{fig:micela_gigante}
+	\end{figure}
 	
 	Continuando a adição de surfactante, é possível a formação de várias outras estruturas de autoassociação. O fator que diferencia essas estruturas é o empacotamento da molécula de surfactante, que acaba resultando em curvaturas diferentes. O parâmetro de empacotamento \(P\) (Eq. \ref{eqn:param_empacot}) é um parâmetro geométrico utilizado para racionalizar o empacotamento das moléculas de surfactante.
 	
@@ -26,7 +53,14 @@
 	
 	% todo: colocar a figura do param. de empacot.
 	% todo: nicefrac?
-	\noindent onde \(V\) é o volume da cadeia hidrofóbica, \(l\) é o comprimento da mesma e \(a_0\) é a área da região polar do surfactante.
+	\noindent onde \(V\) é o volume da cadeia hidrofóbica, \(l\) é o comprimento da mesma e \(a_0\) é a área da região polar do surfactante. A figura \ref{fig:param_empacotamento} ilustra os elementos que compõem o parâmetro de empacotamento.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=2cm]{imagens/introducao/param_empacotamento}
+		\caption{}
+		\label{fig:param_empacotamento}
+	\end{figure}
 	
 	Esse parâmetro pode ser visualizado como uma comparação entre as áreas das bases de um cilindro, sendo uma dada por \(\sfrac{V}{l}\) e a outra por \(a_0\). Quando o termo hidrofóbico é pequeno, temos praticamente um cone, e valores de \(P\) menores que \(\sfrac{1}{3}\). Como a região polar é muito grande, a estrutura de autoassociação necessariamente possuirá uma curvatura alta, o que resulta em micelas esféricas. Seguindo esse raciocínio, tanto aumentando a contribuição hidrofóbica quanto diminuindo a contribuição hidrofílica, é possível obter valores de \(\sfrac{1}{3} \leq P < \sfrac{1}{2}\). Nesse momento, são formadas micelas gigantes. Quando as contribuições das duas regiões são equivalentes, (\(P = 1\)), as moléculas de surfactante possuem um formato cilíndrico, sem curvatura. Nessa situação, são formadas estruturas de curvatura zero, como lamelas. Se a contribuição da parte hidrofóbica for muito grande, são formados agregados com grande curvatura, mas de maneira oposta à original são formadas micelas esféricas reversas.
 	
@@ -37,9 +71,19 @@
 	De maneira similar, o aumento da cadeia hidrofóbica (\(l\)) de um surfactante induz a micelização em concentrações menores (diminui a \cmc). Surfactantes com duas caudas, por exemplo, sequer formam micelas esféricas, partindo diretamente para sistemas lamelares em solução. Uma alteração de \(V\) pode ser realizada tanto com o aumento do comprimento da cauda do surfactante, como também com a adição de moléculas apolares, como hidrocarbonetos, que também induzem a micelização. É importante ressaltar que o parâmetro de empacotamento se refere somente à estrutura do surfactante, mas é necessário também considerar o contexto químico do sistema, que pode alterar os parâmetros, se comparados com um surfactante isolado.
 	ltando em estruturas diferentes. 
 	
-	O sistema mais bem descrito na literatura para a formação de micelas gigantes é uma mistura de um surfactante catiônico, como brometo de hexadeciltrimetilamônio (\CTAB) com salicilato de sódio, NaSal. I íon \Sal{} consegue se inserir na superfície micelar, por ser planar, possuir uma região hidrofóbica e a carga oposta do surfactante, e assim diminui \(a_0\). Concentrações pequenas, tanto de surfactante quanto de NaSal são capazes de induzir o crescimento micelar, devido à grande afinidade que o salicilato possui pela paliçada. O sistema 100 \mM{} de CTAB e 100 \mM{} de NaSal forma uma solução bastante viscosa, porém uma solução 100 \mM{} de CTAB e 100 \mM{} de NaCl é completamente fluída, devido à baixa afinidade do íon Cl\textsuperscript{-} pela superfície micelar.
+	O sistema mais bem descrito na literatura para a formação de micelas gigantes é uma mistura de um surfactante catiônico, como brometo de hexadeciltrimetilamônio (\CTAB) com salicilato de sódio, NaSal. O íon \Sal{} consegue se inserir na superfície micelar, por ser planar, possuir uma região hidrofóbica e carga oposta ao surfactante, e assim diminui \(a_0\) (\ref{fig:interacao_nasal_ctab}). Além disso, as interações cátion-\(\pi\) entre o surfactante e o anel aromático e as interações das partes polares da molécula de salicilato reforçam o posicionamento da molécula na paliçada micelar.
 	
-	% todo: colocar figura desses componentes
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=5cm]{imagens/introducao/interacao_nasal_ctab}
+		\caption{Interação da molécula de salicilato com um surfactante catiônico e com o solvente}
+		\label{fig:interacao_nasal_ctab}
+	\end{figure}
+	
+	Concentrações pequenas, tanto de surfactante quanto de NaSal são capazes de induzir o crescimento micelar, devido à grande afinidade que o salicilato possui pela paliçada. O sistema 100 \mM{} de CTAB e 100 \mM{} de NaSal forma uma solução bastante viscosa, porém uma solução 100 \mM{} de CTAB e 100 \mM{} de NaCl é completamente fluída, devido à baixa afinidade do íon Cl\textsuperscript{-} pela superfície micelar.
+	
+
+	
 	
 	O solvente, como já informado, possui uma papel muito importante na formação de estruturas de autoassociação. Por exemplo, é necessário que exista uma penalidade entrópica da solvatação do surfactante suficientemente grande para que a associação ocorra. Essa penalidade é bastante alta em água, mas muito pequena em solventes como hexano. Apesar de sua importância, não há muitos estudos sobre como o solvente afeta a formação de micelas gigantes. Geralmente, os estudos são feitos em algum solvente puro. Neste trabalho, será estudado o papel de misturas binárias líquidas de água com outro componente na formação de micelas gigantes de NaSal e surfactantes catiônicos.
 	
@@ -50,7 +94,9 @@
 	% todo: pensar sobre o que mais eu posso colocar nesta introdução.
 	
 	\chapter{Inspirações para o projeto}
+	%\section{Inspirações para o projeto}
 		\section{Estudos de Hoffmann sobre lamelas e micelas}
+		%\subsection{Estudos de Hoffmann sobre lamelas e micelas}
 		Hoffmann possui extensa experiência no campo de coloides, possuindo vários artigos importantes sobre micelas gigantes e outras estruturas de autoassociação.
 		% X, Y: \cite{Grabner2014, Song2008a}
 		
@@ -74,6 +120,7 @@
 		Com base nesses estudos prévios, iniciou-se este trabalho de doutorado, que observou o efeito do solvente em soluções de micelas gigantes, atentando-se à parâmetros do solvente, como o índice de refração e constante dielétrica. Outros fatores foram propostos, como o parâmetro de Gordon, relacionado à estruturação do solvente, e com o efeito interfacial dos aditivos nas micelas.
 		
 		\section{Estudos de Pedersen sobre cinética}
+		%\subsection{Estudos de Pedersen sobre cinética}
 
 		% todo: colocar a seção onde eu cito os trabalhos de itc
 		

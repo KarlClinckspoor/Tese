@@ -81,7 +81,7 @@
 						
 			\subsection{Fluidos Newtonianos}
 			
-			Os fluidos Newtonianos são caracterizados por possuírem somente um valor para viscosidade \(\eta\), independente da taxa de cisalhamento, relação simbolizada pela Eq. \ref{eqn:Newton}. Um modelo físico frequentemente utilizado para fluidos Newtonianos é o pistão.
+			Os fluidos Newtonianos são caracterizados por possuírem somente um valor para viscosidade \(\eta\), independente da taxa de cisalhamento, relação simbolizada pela Eq. \ref{eqn:Newton}. Um modelo físico frequentemente utilizado para fluidos Newtonianos é o dissipador viscoso (\emph{dashpot}).
 			
 			\begin{equation}
 				\tau = \eta\dot{\gamma}
@@ -290,8 +290,17 @@
 			
 			\subsection{Modelo de Maxwell}
 			
-			O modelo de Maxwell é construído juntando-se um elemento elástico (mola) e um elemento viscoso (pistão) ideais em série. É possível expressar a taxa de cisalhamento do modelo de Maxwell como a soma das taxas de cisalhamento dos elementos individuais (Eq. \ref{eqn:Maxwell_soma}). % todo: colocar uma ilustração desse modelo.
+			O modelo de Maxwell é construído juntando-se um elemento elástico (mola) e um elemento viscoso (dissipador), ideais, em série. A Figura \ref{fig:ilust_modelo_maxwell} ilustra essa construção.
 			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=1.5cm]{./imagens/reologia/maxwell_mola_dissipador}
+				\caption{Modelo de Maxwell: Mola com constante elástica \(G\) e dissipador com constante viscosa \(\eta\) em série}
+				\label{fig:ilust_modelo_maxwell}
+			\end{figure}
+
+			 É possível expressar a taxa de cisalhamento do modelo de Maxwell como a soma das taxas de cisalhamento dos elementos individuais (Eq. \ref{eqn:Maxwell_soma}). 
+			 
 			\begin{equation}
 				\dot{\gamma}_{\textrm{total}} =  \dot{\gamma}_{\textrm{viscoso}} + \dot{\gamma}_{\textrm{elástico}} \to
 				\dfrac{d\gamma}{dt} = \dfrac{1}{\eta}\tau + \dfrac{1}{G}\dfrac{d\tau}{dt}
@@ -319,7 +328,7 @@
 				\label{eqn:Maxwell_tempo_rel_def}
 			\end{equation}
 		
-			O tempo de relaxação é o tempo em que a tensão inicial demora para cair ao valor de \(\sfrac{1}{e}\) do valor inicial. É interessante notar que em tempos pequenos, relativos a \(\tau_{\textrm{rel}}\), o material responde com a tensão inicial total. Essa é a resposta imediata da mola. Porém, com o tempo, à medida que \(t\to\tau_{\textrm{rel}}\), a tensão começa a decair exponencialmente e depois, em \(t \gg \tau_{\textrm{rel}}\), tende a zero. Nessa situação, o pistão difundiu toda a energia inicial aplicada.
+			O tempo de relaxação é o tempo em que a tensão inicial demora para cair ao valor de \(\sfrac{1}{e}\) do valor inicial. É interessante notar que em tempos pequenos, relativos a \(\tau_{\textrm{rel}}\), o material responde com a tensão inicial total. Essa é a resposta imediata da mola. Porém, com o tempo, à medida que \(t\to\tau_{\textrm{rel}}\), a tensão começa a decair exponencialmente e depois, em \(t \gg \tau_{\textrm{rel}}\), tende a zero. Nessa situação, o dissipador difundiu toda a energia inicial aplicada.
 			
 			A expressão \ref{eqn:Maxwell_soma} pode ser rearranjada utilizando o tempo de relaxação (\ref{eqn:Maxwell_tempo_rel_def}).
 			
@@ -399,7 +408,7 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=0.7\textwidth]{./imagens/reologia/modelo_maxwell}
-				\caption{Modelo de Maxwell}
+				\caption{Espectro mecânico de acordo com o modelo de Maxwell}
 				\label{fig:modelo_maxwell}
 			\end{figure}
 						
@@ -446,7 +455,7 @@
 			
 			% todo: verificar na literatura essas equações.
 			
-			A Figura \ref{fig:comparativo_modelos} compara os modelos apresentados. 
+			A Figura \ref{fig:comparativo_modelos} compara os três modelos mais complexos apresentados com o modelo de Maxwell. 
 			
 			\begin{figure}[H]
 				\begin{subfigure}[t]{.5\textwidth}
@@ -480,8 +489,32 @@
 			\end{figure}
 			
 			% todo: pensar se eu devo descrever os detalhes de micelas gigantes aqui, ou na seção de micelas mesmo.
+			% todo: colocar o modelo de García-Saraji
 	\chapter{Calorimetria de titulação isotérmica}
+	
 		\section{Fundamentos}
+		
+		% todo: encontrar um termo melhor para ``caixa adiabática''
+		
+		A calorimetria de titulação isotérmica (ITC) é uma técnica baseada na liberação ou absorção de calor durante um processo de titulação. Há duas celas dentro de uma caixa adiabática, uma de referência, que contém somente água, e outra de amostra, onde ocorre a titulação em si. A cela de referência recebe uma quantidade fixa de calor através de uma resistência, e a cela de amostra recebe uma quantidade variável de calor. A figura \ref{fig:ITC_esquema} ilustra a construção de um calorímetro.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.5\textwidth]{./imagens/itc/esquema_itc_equipamento}
+			\caption{Esquema da construção de um calorímetro de titulação isotérmica}
+			\label{fig:ITC_esquema}
+		\end{figure}
+		
+		Durante uma titulação, caso ocorra liberação de calor na cela de amostra, menos energia, em relação ao valor basal, precisa ser fornecida para manter a temperatura igual entre as celas. Caso o sistema absorva energia, mais potência precisa ser fornecida à cela. Esse comportamento se expressa em picos positivos e negativos. A integração de cada pico no tempo fornece valores de energia que, quando divididos pelo número de mols injetados, obtemos valores de $\Delta H^0/kJ.mol^{-1}$ [X, Y]. A Figura \ref{fig:ITC_esquema} mostra esse processo.
+		
+		%\cite{Loh2016, Grolier2012}
+		% Processo de aquisição de um entalpograma. Uma solução de TTAB é titulada em NaSal (esquerda). A potência de \emph{feedback} responde ao $\Delta T$ formado entre a cela de referência e amostra (centro). A potência em função do tempo é integrada e dividida pela quantidade de TTAB adicionado por injeção, resultando no entalpograma (direita).
+		%%%%%%%%%%
+		Para micelas gigantes, fixa-se uma concentração de aditivo e depois surfactante é titulado. O padrão da curva de $\Delta H \times C_{\textsf{surf}}$ é bastante característico. No início há muito NaSal e pouco TTAB, e ocorre a formação de micelas esféricas com NaSal. À medida que mais NaSal é incorporado, são formadas micelas mistas cilíndricas curtas . Numa determinada concentração, ocorre uma queda bastante brusca no valor de $\Delta H$, devido à fusão de várias micelas cilíndricas, formando micelas gigantes. A diferença de entalpia entre os estados final e inicial dessa queda brusca caracteriza $\Delta H_{\mathsf{WLM}}$. A concentração no ponto mínimo caracteriza $c_{\mathsf{WLM}}$\cite{Ito2016}.
+		
+		Com a técnica de ITC, pode-se observar o quão favorável é a formação de micelas gigantes em determinadas condições. Quanto menor for $c_{\mathsf{WLM}}$, mais favorável é a formação das micelas. A $c_{\mathsf{WLM}}$ é referente ao grau de incorporação de aditivo na etapa de formação de micelas\cite{Ito2016}.
+		
+		
 			\subsection{Aquisição de dados}
 		\section{Calorimetria de micelas esféricas}
 		\section{Calorimetria de micelas gigantes}
@@ -527,6 +560,9 @@
 		% Falar sobre as G', G'' e o modelo de Maxwell.
 		% Falar sobre o tempo de relaxação micelar.
 		% Falar sobre os sticky contacts que o Hoffmann tanto gosta.
+		\section{Comportamento calorimétrico}
+		
+		\section{Espalhamento de luz}
 		\section{Efeito do solvente}
 		\label{sec:efeito_solvente}
 		% Falar mais profundamente sobre os estudos do Hoffmann
