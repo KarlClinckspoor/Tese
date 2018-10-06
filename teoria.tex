@@ -505,20 +505,69 @@
 			\label{fig:ITC_esquema}
 		\end{figure}
 		
-		Durante uma titulação, caso ocorra liberação de calor na cela de amostra, menos energia, em relação ao valor basal, precisa ser fornecida para manter a temperatura igual entre as celas. Caso o sistema absorva energia, mais potência precisa ser fornecida à cela. Esse comportamento se expressa em picos positivos e negativos. A integração de cada pico no tempo fornece valores de energia que, quando divididos pelo número de mols injetados, obtemos valores de $\Delta H^0/kJ.mol^{-1}$ [X, Y]. A Figura \ref{fig:ITC_esquema} mostra esse processo.
+		Durante uma titulação, caso ocorra liberação de calor na cela de amostra, menos energia, em relação ao valor basal, precisa ser fornecida para manter a temperatura igual entre as celas. Caso o sistema absorva energia, mais potência precisa ser fornecida à cela. Esse comportamento se expressa em picos acima ou abaixo da linha de base. A integração de cada pico no tempo fornece valores de energia que, quando divididos pelo número de mols injetados, obtemos valores de $\Delta H^0/kJ.mol^{-1}$ [X, Y]. A figura \ref{fig:ITC_exemplo} mostra um exemplo de um experimento de titulação de \TTAB{} em água.
 		
-		%\cite{Loh2016, Grolier2012}
-		% Processo de aquisição de um entalpograma. Uma solução de TTAB é titulada em NaSal (esquerda). A potência de \emph{feedback} responde ao $\Delta T$ formado entre a cela de referência e amostra (centro). A potência em função do tempo é integrada e dividida pela quantidade de TTAB adicionado por injeção, resultando no entalpograma (direita).
-		%%%%%%%%%%
-		Para micelas gigantes, fixa-se uma concentração de aditivo e depois surfactante é titulado. O padrão da curva de $\Delta H \times C_{\textsf{surf}}$ é bastante característico. No início há muito NaSal e pouco TTAB, e ocorre a formação de micelas esféricas com NaSal. À medida que mais NaSal é incorporado, são formadas micelas mistas cilíndricas curtas . Numa determinada concentração, ocorre uma queda bastante brusca no valor de $\Delta H$, devido à fusão de várias micelas cilíndricas, formando micelas gigantes. A diferença de entalpia entre os estados final e inicial dessa queda brusca caracteriza $\Delta H_{\mathsf{WLM}}$. A concentração no ponto mínimo caracteriza $c_{\mathsf{WLM}}$\cite{Ito2016}.
+		\begin{figure}[h]
+			\begin{subfigure}[t]{0.5\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{./imagens/itc/raw_itc_exemplo}
+				\caption{Dado bruto}
+				\label{fig:ITC_raw_exemplo}
+			\end{subfigure}%
+			\begin{subfigure}[t]{0.5\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{./imagens/itc/inj_itc_exemplo}
+				\caption{Entalpograma}
+				\label{fig:ITC_inj_exemplo}
+			\end{subfigure}
 		
-		Com a técnica de ITC, pode-se observar o quão favorável é a formação de micelas gigantes em determinadas condições. Quanto menor for $c_{\mathsf{WLM}}$, mais favorável é a formação das micelas. A $c_{\mathsf{WLM}}$ é referente ao grau de incorporação de aditivo na etapa de formação de micelas\cite{Ito2016}.
+			\caption{Titulação de \TTAB{} 42 \mM{} em água, mostrando o calor absorvido pela célula durante a titulação (\ref{fig:ITC_raw_exemplo}). A primeira injeção é descartada para garantir que as injeções subsequentes possuam um volume correto de injeção. A integração dos picos em relação à linha base, dividindo-se isso pela concentração de surfactante injetado, resulta no entalpograma (\ref{fig:ITC_inj_exemplo})}
+			\label{fig:ITC_exemplo}
+		\end{figure}
 		
+		\section{Calorimetria de micelização}
 		
-			\subsection{Aquisição de dados}
-		\section{Calorimetria de micelas esféricas}
-		\section{Calorimetria de micelas gigantes}
-		\section{Termodinâmica de micelização}
+		A partir de um conjunto de dados como os da figura \ref{fig:ITC_exemplo}, é possível calcular a \cmc{} e a entalpia de micelização, \DHmic. A \cmc{} é determinada pelo ponto de inflexão, onde a primeira derivada do entalpograma é maior (ou menor). A \DHmic{} é determinada realizando-se dois ajustes lineares das regiões iniciais e finais do entalpograma. A diferença de entalpia dos pontos de intersecção desses ajustes com uma reta horizontal na \cmc{} fornece o \DHmic{} sem correção. Após isso, é necessário corrigir pela concentração de surfactante não micelizado na seringa, que é igual à \cmc{}. A figura \ref{fig:itc_extracao_cmc_dh} mostra esse método.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/itc/extracao_cmc_dh_exemplo}
+			\caption{Método para extração da concentração micelar crítica (\cmc) e a entalpia de micelização \DHmic. A curva em verde é a derivada do entalpograma. Os pontos amarelos limitam as regiões onde são feitos ajustes lineares. A }
+			\label{fig:itc_extracao_cmc_dh}
+		\end{figure}  % todo: checar se as unidades estão corretas
+
+		Para corrigir a entalpia de micelização observada para obter a entalpia de micelização correta, utiliza-se a equação \ref{eqn:itc_obtencao_dhmic}. 
+		
+		\begin{equation}
+			\Delta H^0_{\textrm{mic}} = \Delta H^0_{\textrm{obs}} \times \dfrac{c_{\textrm{seringa}}}{c_{\textrm{seringa}-\textrm{cmc}}}
+			\label{eqn:itc_obtencao_dhmic}
+		\end{equation}  % todo: ficar de olho aqui porque tem termos que não estão em macros e precisam ser revistos quando algo mudar
+		
+		\noindent onde \(c_{\textrm{seringa}}\) é a concentração de surfactante na seringa.
+		
+		Pela \cmc{} é possível obter a energia livre de micelização a partir da equação \ref{eqn:itc_DeltaG_mic}, dependendo do tipo de surfactante e do meio.
+		
+		\begin{equation}
+			\Delta G_{\textrm{mic}}^0
+			\begin{cases}
+			= RT\ln(\chi_{\textrm{cmc}})      & \textrm{Surfactante não iônico}      \\
+			= (2-\alpha)RT\ln(\chi_{\textrm{cmc}}) & \textrm{Surfactante iônico}					\\
+			\end{cases}
+			\label{eqn:itc_DeltaG_mic}
+		\end{equation}
+		
+		\noindent onde \(\alpha\) é o grau de ionização das micelas e \(\chi_{\textrm{cmc}}\) é a concentração micelar crítica em fração molar. O cálculo para surfactantes iônicos assume que o solvente é água e/ou a força iônica seja baixa.
+		
+		Com a entalpia e energia livre de micelização, é possível encontrar a entropia de micelização pela equação de Gibbs (Eq. \ref{eqn:itc_gibbs_para_entropia}).
+		
+		\begin{equation}
+			T\Delta S^0_{\textrm{mic}} = \Delta H^0_{\textrm{mic}} - \Delta G^0_{\textrm{mic}}
+			\label{eqn:itc_gibbs_para_entropia}
+		\end{equation}
+
+		% todo: colocar que o termo isotérmico não significa que a tempteratura fica constante. Ela aumenta. Colocar um gráfico?
+		% todo: olhar a dissertação do césar para ver algumas dicas e para colocar alguns termos. Tem bastante coisa boa lá.
+
 	\chapter{SAXS}
 		\section{Fundamentos}
 		\section{Modelagem}
@@ -562,6 +611,9 @@
 		% Falar sobre os sticky contacts que o Hoffmann tanto gosta.
 		\section{Comportamento calorimétrico}
 		
+		%		Para micelas gigantes, fixa-se uma concentração de aditivo e depois surfactante é titulado. O padrão da curva de $\Delta H \times C_{\textrm{surf}}$ é bastante característico. No início há muito NaSal e pouco TTAB, e ocorre a formação de micelas esféricas com NaSal. À medida que mais NaSal é incorporado, são formadas micelas mistas cilíndricas curtas . Numa determinada concentração, ocorre uma queda bastante brusca no valor de $\Delta H$, devido à fusão de várias micelas cilíndricas, formando micelas gigantes. A diferença de entalpia entre os estados final e inicial dessa queda brusca caracteriza $\Delta H_{\textrm{WLM}}$. A concentração no ponto mínimo caracteriza $c_{\textrm{WLM}}$%\cite{Ito2016}.
+		%		
+		%		Com a técnica de ITC, pode-se observar o quão favorável é a formação de micelas gigantes em determinadas condições. Quanto menor for $c_{\textrm{WLM}}$, mais favorável é a formação das micelas. A $c_{\textrm{WLM}}$ é referente ao grau de incorporação de aditivo na etapa de formação de micelas%\cite{Ito2016}
 		\section{Espalhamento de luz}
 		\section{Efeito do solvente}
 		\label{sec:efeito_solvente}
