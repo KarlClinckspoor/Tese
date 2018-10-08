@@ -496,7 +496,7 @@
 		
 		% todo: encontrar um termo melhor para ``caixa adiabática''
 		
-		A calorimetria de titulação isotérmica (ITC) é uma técnica baseada na liberação ou absorção de calor durante um processo de titulação. Há duas celas dentro de uma caixa adiabática, uma de referência, que contém somente água, e outra de amostra, onde ocorre a titulação em si. A cela de referência recebe uma quantidade fixa de calor através de uma resistência, e a cela de amostra recebe uma quantidade variável de calor. A figura \ref{fig:ITC_esquema} ilustra a construção de um calorímetro.
+		A calorimetria de titulação isotérmica (ITC) é uma técnica baseada num processo de titulação, onde cada injeção resulta em uma ou mais reações químicas ou físicas que podem liberar ou absorver calor. O calor total observado é a somatória de todos os processos que ocorreram durante a injeção. No calorímetro há duas celas dentro de uma caixa adiabática, uma de referência, que contém somente água, e outra de amostra, onde ocorre a titulação em si. A cela de referência recebe uma quantidade fixa de calor através de uma resistência, e a cela de amostra recebe uma quantidade variável de calor. Isso significa que a temperatura das celas, no decorrer de uma titulação, aumenta ligeiramente, mas menos que 0,1°C. A figura \ref{fig:ITC_esquema} ilustra a construção de um calorímetro.
 		
 		\begin{figure}[h]
 			\centering
@@ -565,11 +565,36 @@
 			\label{eqn:itc_gibbs_para_entropia}
 		\end{equation}
 
-		% todo: colocar que o termo isotérmico não significa que a tempteratura fica constante. Ela aumenta. Colocar um gráfico?
 		% todo: olhar a dissertação do césar para ver algumas dicas e para colocar alguns termos. Tem bastante coisa boa lá.
 
 	\chapter{SAXS}
 		\section{Fundamentos}
+		
+		O espalhamento de luz é um fenômeno que ocorre devido à interação da luz com os elétrons de um átomo ou grupo de átomos. O feixe incidente excita os elétrons de modo que eles comecem a oscilar na mesma frequência do feixe incidente. Quando o feixe incidente é removido, os elétrons excitados emitem fótons do mesmo comprimento de onda incidente (chamado de espalhamento elástico), em qualquer direção. As ondas emitidas interagem de maneira construtiva e destrutiva, dependendo de sua posição relativa. Isso resulta em padrões de espalhamento diferentes, dependendo da disposição espacial dos centros espalhadores.
+		
+		Experimentalmente, isso é realizado utilizando-se uma fonte de raios-X, que é colimada e passada por um monocromador. O feixe incidente, idealmente monocromático e paralelo, incide na amostra e é espalhado, atingindo um detector. As intensidades de radiação que atingem cada pixel do detector são armazenadas como uma matriz \((m,n)\), que pode ser representada como uma imagem de cor falsa.
+		
+		 A figura \ref{fig:esquema_saxs} ilustra os feixes incidentes e espalhados, junto com o vetor de espalhamento \q{} (Eq. \ref{eqn:vetor_espalhamento_vetorial}) e a imagem de espalhamento obtida.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/saxs/Esquema_SAXS}
+			\caption{Diagrama mostrando o feixe incidente de raios-X \( \mathbf{k_i} \) sendo espalhado por um material, resultando num vetor espalhado \( \mathbf{k_s} \). O vetor de espalhamento, \q, resultado da subtração vetorial dos vetores incidente e espalhado, possui duas componentes angulares, \(\phi\) e \(\theta\). O feixe espalhado atinge o detector, e a imagem resultante é composta pela contagem de fótons em cada pixel.}
+			\label{fig:esquema_saxs}
+		\end{figure}
+
+		\begin{equation}
+			\mathbf{q} = \mathbf{k_i} - \mathbf{k_s}
+			\label{eqn:vetor_espalhamento_vetorial}
+		\end{equation}
+		
+		Caso a imagem formada seja radialmente simétrica, o que ocorre em amostras isotrópicas, o sinal pode ser integrado em \(\phi\), e o vetor de espalhamento é representado pela eq. \ref{eqn:vetor_espalhamento}.
+		
+		\begin{equation}
+			q = \dfrac{4\pi}{\lambda} \sin(\theta)
+			\label{eqn:vetor_espalhamento}
+		\end{equation}
+		
 		\section{Modelagem}
 			\subsection{Esferas}
 			\subsection{Micelas esféricas}
