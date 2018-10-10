@@ -570,12 +570,19 @@
 	\chapter{SAXS}
 		\section{Fundamentos}
 		
-		O espalhamento de luz é um fenômeno que ocorre devido à interação da luz com os elétrons de um átomo ou grupo de átomos. O feixe incidente excita os elétrons de modo que eles comecem a oscilar na mesma frequência do feixe incidente. Quando o feixe incidente é removido, os elétrons excitados emitem fótons do mesmo comprimento de onda incidente (chamado de espalhamento elástico), em qualquer direção. As ondas emitidas interagem de maneira construtiva e destrutiva, dependendo de sua posição relativa. Isso resulta em padrões de espalhamento diferentes, dependendo da disposição espacial dos centros espalhadores.
+		%O espalhamento de luz é um fenômeno que ocorre devido à interação da luz com os elétrons de um átomo ou grupo de átomos. O feixe incidente excita os elétrons de modo que eles comecem a oscilar na mesma frequência do feixe incidente. Quando o feixe incidente é removido, os elétrons excitados emitem fótons do mesmo comprimento de onda incidente (chamado de espalhamento elástico), em qualquer direção. As ondas emitidas interagem de maneira construtiva e destrutiva, dependendo de sua posição relativa. A somatória dessas ondas resulta num padrão de espalhamento específico para cada estrutura.
 		
-		Experimentalmente, isso é realizado utilizando-se uma fonte de raios-X, que é colimada e passada por um monocromador. O feixe incidente, idealmente monocromático e paralelo, incide na amostra e é espalhado, atingindo um detector. As intensidades de radiação que atingem cada pixel do detector são armazenadas como uma matriz \((m,n)\), que pode ser representada como uma imagem de cor falsa.
+		% todo: fonte tradicional? Pensar melhor.
+		% todo: vice versa?
+				
+		O espalhamento de raios-X em baixos ângulos é uma técnica baseada no espalhamento elástico de raios-X. O padrão de interferência das ondas espalhadas resulta num padrão de espalhamento dependente da estrutura da amostra. Experimentalmente, incide-se um feixe de raios-X colimados e monocromáticos, oriundos tanto de uma fonte de radiação síncrotron quanto de uma fonte tradicional de raios-X, sobre uma amostra. A radiação interage com os elétrons da amostra, que entram em ressonância com a frequência da radiação, e começam a emitir fótons do mesmo comprimento de incidência, mas em todas as direções. Essas ondas eletromagnéticas começam a interferir construtiva- e destrutivamente e formam um padrão de espalhamento característico, dependendo do formato e da disposição dos centros espalhadores da amostra. Esse padrão é captado por detector que fica a uma distância específica da amostra. A distância do detector está relacionada com os ângulos que são medidos. Um detector próximo consegue detectar ângulos altos, e vice versa.
 		
-		 A figura \ref{fig:esquema_saxs} ilustra os feixes incidentes e espalhados, junto com o vetor de espalhamento \q{} (Eq. \ref{eqn:vetor_espalhamento_vetorial}) e a imagem de espalhamento obtida.
+		O vetor de espalhamento, \q, é obtido pela subtração dos vetores dos feixes incidente e espalhado (Eq. \ref{eqn:vetor_espalhamento_vetorial}). É possível também representar o vetor de espalhamento como dependendo do ângulo do feixe espalhado em relação ao incidente, \(\theta\), e do comprimento de onda da radiação, \(\lambda\) (Eq. \ref{eqn:vetor_espalhamento}). Essa expressão é útil pois torna possível a comparação dos padrões de espalhamento de fontes com comprimentos de ondas diferentes.
 		
+		% todo: radialmente?
+		
+		A figura \ref{fig:esquema_saxs} mostra o feixe incidente e um dos feixes espalhados, junto com um desenho para calcular o vetor de espalhamento. O ângulo \(\phi\) é utilizado para descrever a dependência do padrão de espalhamento radialmente, e caso a amostra seja isotrópica, é possível integrar a intensidade de sinal em função de \(\phi\) para obter uma curva de espalhamento unidimensional (Fig. \ref{fig:exemplo_saxs}) A maior parte da intensidade da radiação se concentra em ângulos muito pequenos, onde não houve praticamente espalhamento, então é colocado um aparador de feixe (\emph{beam-stop}) para bloquear essa radiação. Isso pode ser visto como o círculo escuro na parte inferior do detector na fig. \ref{fig:esquema_saxs}.
+			
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/saxs/Esquema_SAXS}
@@ -588,19 +595,143 @@
 			\label{eqn:vetor_espalhamento_vetorial}
 		\end{equation}
 		
-		Caso a imagem formada seja radialmente simétrica, o que ocorre em amostras isotrópicas, o sinal pode ser integrado em \(\phi\), e o vetor de espalhamento é representado pela eq. \ref{eqn:vetor_espalhamento}.
-		
 		\begin{equation}
 			q = \dfrac{4\pi}{\lambda} \sin(\theta)
 			\label{eqn:vetor_espalhamento}
 		\end{equation}
 		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/saxs/exemplo_SAXS}
+			\caption{Curva de espalhamento resultante da integração em \(\phi\) do padrão de espalhamento obtido na fig. \ref{fig:esquema_saxs}. Os picos obtidos nessa figura são resultado da difração de raios-X devido à presença de uma estrutura lamelar em solução.}
+			\label{fig:exemplo_saxs}
+		\end{figure}
+
+		A função de onda genérica para uma das ondas espalhadas é dada pela Eq. \ref{eqn:funcao_onda_espalhamento}, onde \(\mathbf{r}\) é o vetor de posição na partícula. 
+		
+		\begin{equation}
+			\psi(\mathbf{q}) = \exp(-i \mathbf{q} \cdot \mathbf{r})
+			\label{eqn:funcao_onda_espalhamento}
+		\end{equation}
+		
+		A somatória das funções de onda, Eq. \ref{eqn:SAXS_somatoria_contribs}, resulta na amplitude de espalhamento. O termo \(b_j\) é chamado do comprimento de espalhamento do ponto.
+		
+		\begin{equation}
+			A(\mathbf{q}) = \sum_j b_j \exp(-i \mathbf{q} \cdot \mathbf{r})
+			\label{eqn:SAXS_somatoria_contribs}
+		\end{equation}
+		
+		Porém, a resolução de raios-X geralmente não permite a observação dos pontos individuais, isso é, elétrons, então utiliza-se a densidade de comprimento de espalhamento \(\rho\) (\emph{scattering length density}, SLD), que nada mais é do que a média do comprimento de espalhamento \(b\) por um pequeno volume \(v\) (Eq. \ref{eqn:SLD}).
+		
+		\begin{equation}
+			\rho(\mathbf{r}) = \sum_j \dfrac{b_j}{v}
+			\label{eqn:SLD}
+		\end{equation}
+		
+		Logo, a eq. \ref{eqn:SAXS_somatoria_contribs} passa de uma somatória para uma integral, eq. \ref{eqn:SAXS_integral_amplitude}.
+		
+		\begin{equation}
+			A(\mathbf{q}) = \int \rho(\mathbf{r}) \exp(-i \mathbf{q} \cdot \mathbf{r}) d\mathbf{r}
+			\label{eqn:SAXS_integral_amplitude}
+		\end{equation}
+		
 		\section{Modelagem}
-			\subsection{Esferas}
-			\subsection{Micelas esféricas}
-			\subsection{Micelas gigantes}
-			\subsection{Visualização dos parâmetros}
-			\subsection{Indexação de picos}
+		
+		Quando se considera o espalhamento de um único objeto não centro-simétrico, é necessário considerar a orientação do vetor de espalhamento \q{} para obter o padrão de espalhamento. Além disso, em solução, esses objetos estão possivelmente orientados aleatoriamente, sendo necessário realizar uma integração sobre todas as orientações possíveis. Porém, objetos centro-simétricos, como esferas, não necessitam disso, e a amplitude de espalhamento pode ser calculada pela eq. \ref{eqn:SAXS_amplitude_esfera}. 
+		
+		\begin{equation}
+			A(q) = 4\pi \int \dfrac{\sin(qr)}{qr} r^2 dr
+			\label{eqn:SAXS_amplitude_esfera}
+		\end{equation}
+		
+		O que o detector mede em SAXS é a intensidade de sinal, que é proporcional ao quadrado da amplitude de espalhamento. A eq. \ref{eqn:SAXS_I_funcao_A} correlaciona ambos os termos, utilizando o número \(n\) de partículas, a diferença de densidade eletrônica \(\Delta \rho\) e o volume das partículas \(V\)
+		
+		\begin{equation}
+			I(q) = n\Delta \rho^2 V^2 |A(q)|^2
+			\label{eqn:SAXS_I_funcao_A}
+		\end{equation}
+		
+		O termo \(\Delta \rho\) também é a diferença de densidade eletrônica entre a partícula e o solvente, também conhecido como contraste. Sistemas com alto contraste, por exemplo, partículas de ouro em água, espalham bastante raios-X, resultando em sinais de boa qualidade. Porém sistemas de baixo contraste, como o sistema \CTAB{} + NaSal, utilizado neste trabalho, não resultam em uma boa resolução sinal/ruído. Há programas, como o SASfit, que conseguem calcular o SLD a partir da fórmula molecular de uma espécie.\footnote{\url{https://github.com/SASfit/SASfit}}.
+		
+		Para obter a amplitude de espalhamento de uma esfera homogênea de raio R, é necessário realizar a integração da Eq. \ref{eqn:SAXS_amplitude_esfera} de 0 a R, pois além disso não há material que possa espalhar. O resultado dessa integração está nos apêndices, eq. \ref{eqn:AP_Fsphere}.
+		
+		Esse é o exemplo mais simples para a derivação da amplitude de espalhamento de um objeto. Quanto maior for a complexidade dos objetos modelados, mais difícil fica a derivação dos modelos, exigindo considerável experiência e conhecimento matemático. O Prof. Jan Skov Pedersen, da Dinamarca, adaptou modelos descritos na literatura para descrever sistemas alongados em solução, como polímeros e micelas gigantes. Uma descrição matemática superficial do modelo desenvolvido se encontra na no apêndice, seção \ref{sec:modelo_MG_matematica}, e uma adaptação desse modelo na linguagem Python se encontra na seção \ref{sec:modelo_MG_python}.
+		
+		O termo \(|A(q)|^2\) é conhecido também como fator forma, ou \(P(q)\). Em soluções diluídas, onde não há, por exemplo, repulsão entre as partículas, o fator forma é suficiente para descrever o comportamento das curvas de espalhamento. Porém, quando a concentração aumenta, fenômenos de interferência começam a se tornar relevantes, resultando no aparecimento do fator estrutura, \(S(q)\). \(I(q)\) é então dado pela Eq. \ref{eqn:SAXS_I_P_S}.
+		
+		\begin{equation}
+			I(q) = n\Delta \rho^2 V^2 P(q) S(q)
+			\label{eqn:SAXS_I_P_S}
+		\end{equation}
+		
+		% todo: pensar se eu devo colocar uma parte de mínimos quadrados, mostrando exemplo com código, ou Excel também.
+		
+		Frequentemente, o aparecimento de picos nos padrões de espalhamento é evidência da existência de correlação entre as partículas, devido ao formato da função \(S(q)\).
+		
+		A partir dos modelos teóricos, e uma ideia de qual é a estrutura presente em solução, é possível extrair informações estruturais do material através de um ajuste das curvas teóricas às curvas experimentais através do método dos mínimos quadrados. Esse método se baseia na variação das variáveis independentes de uma equação, seguido do cálculo do resíduo, isso é, o dado experimental subtraído do modelo, ao quadrado. Quando o resíduo é mínimo, as curvas se assemelham ao máximo, e os parâmetros escolhidos devem refletir a realidade.
+		
+		% Para obter o padrão de espalhamento de partículas caroço-casca (\emph{core-shell}), é necessário somente calcular o espalhamento do caroço e somá-lo ao espalhamento da casca. A casca é calculada como a subtração do espalhamento de uma partícula do tamanho do caroço, mas com composição da casca, do espalhamento de uma partícula com o raio da casca.
+		
+		\section{Indexação de picos}
+		\label{sec:teoria_SAXS}
+		
+		Caso existam mesofases, onde há uma estruturação bastante intensa, resultando na formação de, por exemplo, estruturas lamelares, hexagonais, cúbicas, ocorre o aparecimento de picos de difração de Bragg. A distância relativa desses picos é dependente da estrutura formada, permitindo sua identificação, assim como os picos de difração de um material cristalino permitem sua identificação. Além disso, com o valor de \q{} do primeiro pico, é possível determinar o parâmetro de rede (\emph{lattice parameter}) da mesofase. Para estruturas lamelares, que são de maior relevância para este trabalho, temos que o espaçamento dos picos é de \(1:2:3:4...\) e o parâmetro de rede é dado pela Eq. \ref{eqn:SAXS_param_rede_lamela}.
+		
+		\begin{equation}
+			q = \dfrac{2\pi}{d}
+			\label{eqn:SAXS_param_rede_lamela}
+		\end{equation}
+		
+		\noindent onde \(d\) é o parâmetro de rede de lamelas, também conhecido como distância interlamelar. O significado físico dessa distância está ilustrado na figura \ref{fig:saxs_distancia_interlamelar}.
+				
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.35\textwidth]{imagens/saxs/distancia_interlamelar}
+			\caption{Distância interlamelar}
+			\label{fig:saxs_distancia_interlamelar}
+		\end{figure}
+
+		% todo: colocar a referência do artigo do guilherme
+		Observando-se a construção da figura \ref{fig:saxs_distancia_interlamelar}, parece ser possível calcular a espessura lamelar (\(d_{\text{HC}}\)) caso a distância interlamelar \(d\) seja conhecida e caso a fração volumétrica de surfactante (\(\phi_s\)) e solvente (\(\phi_w\)) também sejam conhecidos. Nesse caso, seria necessário somente relacionar as proporções das regiões com o total, a distância interlamelar. Esse é o princípio do método descrito em X. A fração volumétrica de surfactante pode ser obtida pela Eq. \ref{eqn:SAXS_frac_volum}, cujos parâmetros estão explicados na tabela \ref{tab:ur_fracvol_descr}.
+		
+		\begin{equation}
+			\phi_s = \dfrac{V_{\textit{HC}}\left( \dfrac{w_{s}}{M_{s}} \right)}{\left( V_{\textit{HC}} + V_{P} \right)\dfrac{w_{s}}{M_{s}} + V_{w}\dfrac{w_{w}}{M_{w}}}
+			\label{eqn:SAXS_frac_volum}
+		\end{equation}
+		
+	% + V_{\textit{ur}}\dfrac{w_{\textit{ur}}}{M_{\textit{ur}}
+	
+		\begin{table}[H]
+			\IBGEtab{\caption{Descrições das variáveis da equação \ref{eqn:SAXS_frac_volum} \label{tab:ur_fracvol_descr}}}
+			{\begin{tabular}{r l}
+				\toprule
+				           Variável & Descrição                                               \\ \midrule
+				              \(s\) & Fração volumétrica de surfactante                       \\
+				\(V_{\textit{HC}}\) & Volume molar parcial da cadeia alquílica do surfactante \\
+				          \(V_{P}\) & Volume molar parcial da cabeça do surfactante           \\
+				          \(w_{s}\) & Fração mássica de surfactante                           \\
+				          \(M_{s}\) & Massa molar do surfactante                              \\ \midrule
+				          \(V_{w}\) & Volume molar parcial de água                            \\
+				          \(w_{w}\) & Fração mássica de água                                  \\
+				          \(M_{w}\) & Massa molar da água                                     \\ \bottomrule
+			\end{tabular}
+			}%
+			{}%
+		\end{table}
+		%					\midrule
+		%					\(V_{\textit{ur}}\)			&	Volume molar parcial de ureia				\\
+		%					\(w_{\textit{ur}}\)			&	Fração mássica de ureia						\\
+		%					\(M_{\textit{ur}}\)			&	Massa molar da ureia						\\
+		% todo: colocar como que esses valores podem ser estimados
+		
+		Para se calcular a espessura lamelar, utiliza-se a equação \ref{eqn:SAXS_espessura_lamelar}.
+		
+		\begin{equation} \label{eqn:SAXS_espessura_lamelar}
+			d_{\text{HC}} = \phi_s d
+		\end{equation}
+		
+		
+		
 	\chapter{Fluorescência}
 		\section{Fundamentos}
 			\subsection{Diagramas}

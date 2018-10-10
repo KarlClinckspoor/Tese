@@ -374,18 +374,11 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\label{fig:SAXS_dtabconc}
 	\end{figure}
 	
-		Para analisar a fase presente, é necessário indexar os picos. Isso é, determinar os valores de \q{} de seus máximos e observar a relação entre eles. Dependendo da relação, é possível afirmar que há um tipo de mesofase. Por exemplo, lamelas possuem espaçamento \(1:2:3\), já fases hexagonais possuem espaçamento \(1:\sqrt{3}:2:\sqrt{7}\). Em todas as curvas mostradas aqui, o espaçamento segue a regra \(1:2:3\), ou seja, são observadas lamelas.
-	
-	Para se determinar o parâmetro de rede de lamelas, que é a distância de repetição, utiliza-se a equação \ref{eqn:SAXS_param_rede} utilizando o valor do pico de menor \q{} para o cálculo.
+	Para analisar a fase presente, é necessário indexar os picos, como informado na seção \ref{sec:teoria_SAXS}. Isso é, determinar os valores de \q{} de seus máximos e observar a relação entre eles. Lamelas possuem espaçamento \(1:2:3\), e como em todas as curvas mostradas aqui, o espaçamento segue a regra \(1:2:3\), podemos concluir que todas as amostras formam lamelas. Com a eq. \ref{eqn:SAXS_param_rede_lamela} é possível determinar a distância de rede das lamelas, que é a distância entre o início de uma lamela, passando pela parte hidrofóbica e pelo solvente até atingir a superfície de outra lamela.
 	
 	% todo: colocar uma figura aqui mostrando o que é a distância de repetição
 	% todo: colocar uma foto das lamelas
-	
-	\begin{equation}
-	d = \frac{2\pi}{q}
-	\label{eqn:SAXS_param_rede}
-	\end{equation}
-	
+
 	As distâncias de repetição estão ilustradas junto com os valores dos picos nas figuras. É possível observar que as distâncias se tornam menores a medida que a concentração de surfactante aumenta, possivelmente porque mais surfactante resulta também em menos solvente. Além disso, é possível que a carga das micelas se torne menor devido à presença de mais contraíons em solução. Observa-se também que os picos se tornam melhor definidos e aparentemente menos largos com mais surfactante. É interessante notar que \DTAB{} possui picos muito bem definidos em 300 \mM, e que sua distância de repetição é muito menor que os outros casos. A espessura dos picos está inversamente relacionada com o tamanho dos ``cristalitos'', de acordo com a equação de Scherrer. Logo, o aumento de concentração de surfactante também aumenta 
 
 	% todo: encontrar a equação de Scherrer	
@@ -433,7 +426,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\label{fig:SAXS_ctab_q_corrs}
 	\end{figure}
 
-	Utilizando a equação \ref{eqn:SAXS_param_rede}, é possível encontrar a distância intermicelar média. A tabela X mostra as distâncias intermicelares calculadas por esse método.
+	Utilizando a equação \ref{eqn:SAXS_param_rede_lamela}, é possível encontrar a distância intermicelar média. A tabela X mostra as distâncias intermicelares calculadas por esse método.
 	
 %	\begin{table}
 %		\IBGEtab%
@@ -462,7 +455,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	
 		\begin{table}
 		\IBGEtab%
-		{\caption{Distâncias intermicelares \(d_{im}\)/nm de soluções de micelas esféricas de \CTDTAB{} 100, 200, 300 \mM{} calculadas a partir da eq. \ref{eqn:SAXS_param_rede}}
+		{\caption{Distâncias intermicelares \(d_{im}\)/nm de soluções de micelas esféricas de \CTDTAB{} 100, 200, 300 \mM{} calculadas a partir da eq. \ref{eqn:SAXS_param_rede_lamela}}
 			\label{tab:SAXS_dim}}%
 		{\begin{tabular}{c c c c}
 			\toprule
@@ -514,50 +507,18 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	
 	Testou-se a indexação das seguintes fases utilizando o programa SGI: H2, Fd3m, Pn3m, Im3m, Pm3n, la3d, P4332, Primitiva, Fm3m e lamelar. Nenhuma dessas fases teve picos coincidentes com os picos mostrados na figura. Portanto, não é possível realizar uma comparação direta com os padrões de espalhamento para as fases lamelares observadas (Figs. \ref{fig:SAXS_ctabconc}, \ref{fig:SAXS_ttabconc}, \ref{fig:SAXS_dtabconc}, \ref{fig:SAXS_ctab300ur37-45}).
 	
-	% todo: colocar a referência do artigo do guilherme
-	É possível calcular a espessura lamelar (\(d_{\text{HC}}\)) a partir da distância interlamelar \(d\), considerando-se a fração volumétrica de surfactante \(\phi_s\). Seguindo o método adaptado de X, a fração volumétrica de surfactante pode ser obtida pela Eq. \ref{eqn:SAXS_frac_volum}, cujos parâmetros estão explicados na tabela \ref{tab:ur_fracvol_descr}.
+	Como mostrado na seção \ref{sec:teoria_SAXS}, é possível calcular a espessura lamelar a partir da fração volumétrica dos componentes. No entanto, não é possível utilizar diretamente a equação \ref{eqn:SAXS_frac_volum}, pois é necessário considerar também o outro componente do solvente, a ureia. Por essa razão, foi realizada uma modificação, resultando na Eq. \ref{eqn:SAXS_frac_volum_com_ureia}.
 	
 	\begin{equation}
 		\phi_s = \dfrac{V_{\textit{HC}}\left( \dfrac{w_{s}}{M_{s}} \right)}{\left( V_{\textit{HC}} + V_{P} \right)\dfrac{w_{s}}{M_{s}} + V_{w}\dfrac{w_{w}}{M_{w}} + V_{\textit{ur}}\dfrac{w_{\textit{ur}}}{M_{\textit{ur}}}}
-		\label{eqn:SAXS_frac_volum}
+		\label{eqn:SAXS_frac_volum_com_ureia}
 	\end{equation}
 
-	\begin{table}[H]
-		\IBGEtab{\caption{Descrições das variáveis da equação \ref{eqn:SAXS_frac_volum} \label{tab:ur_fracvol_descr}}}
-		{\begin{tabular}{r l}
-				\toprule
-				Variável 					&	Descrição									\\
-				\midrule
-				\(s\) 						& 	Fração volumétrica de surfactante			\\
-				\(V_{\textit{HC}}\)			& 	Volume molar parcial da cadeia alquílica do surfactante \\
-				\(V_{P}\)						& 	Volume molar parcial da cabeça do surfactante \\
-				\(w_{s}\)						& 	Fração mássica de surfactante 				\\
-				\(M_{s}\)						&   Massa molar do surfactante					\\
-				\midrule
-				\(V_{w}\)						&   Volume molar parcial de água				\\
-				\(w_{w}\)						&	Fração mássica de água						\\
-				\(M_{w}\)						&	Massa molar da água							\\
-				\midrule
-				\(V_{\textit{ur}}\)			&	Volume molar parcial de ureia				\\
-				\(w_{\textit{ur}}\)			&	Fração mássica de ureia						\\
-				\(M_{\textit{ur}}\)			&	Massa molar da ureia						\\
-				\bottomrule
-			\end{tabular}
-		}%
-		{}%
-	\end{table}
+	\noindent onde os termos \(V_{\textit{ur}}\), \(w_{\textit{ur}}\) e \(M_{\textit{ur}}\)	se referem ao volume molar parcial de ureia, fração mássica de ureia e massa molar da ureia, respectivamente.
 	
-	% todo: colocar como que esses valores podem ser estimados
+	Isso necessita, porém, conhecer exatamente a composição das fases, para que os cálculos sejam corretos.	A natureza esbranquiçada das fases formadas sugere que ocorre espalhamento de luz de vários centros espalhadores pequenos, e que a fase lamelar não homogeneamente formada pela solução. Isso é compatível com a baixa concentração de surfactante no meio. Portanto, é necessário separar a fase lamelar da outra fase, o que pode ser realizado por centrifugação.
 	
-	Para se calcular a espessura lamelar, utiliza-se a equação \ref{eqn:SAXS_espessura_lamelar}.
-	
-	\begin{equation} \label{eqn:SAXS_espessura_lamelar}
-		d_{\text{HC}} = \phi_sd
-	\end{equation}
-	
-	Isso necessita, porém, conhecer exatamente a composição das fases, para que os cálculos sejam corretos.	A natureza esbranquiçada das fases formadas sugere que ocorre espalhamento de luz de vários centros espalhadores pequenos, e que a fase lamelar não homogeneamente formada pela solução. Isso é compatível com a baixa concentração de surfactante no meio.
-	
-	Além disso, observou-se que a consistência e a intensidade da cor branca é dependente da concentração de ureia e de surfactante. Isso sugere que mais agregados lamelares são formados quanto maior for a concentração de ureia e de surfactante. Seria necessário, então, separar a fase lamelar da fase aquosa, o que é realizado por centrifugação.
+%	Além disso, observou-se que a consistência e a intensidade da cor branca é dependente da concentração de ureia e de surfactante. Isso sugere que mais agregados lamelares são formados quanto maior for a concentração de ureia e de surfactante. Seria necessário, então, separar a fase lamelar da fase aquosa, o que é realizado por centrifugação.
 	                   
 	% todo: verificar quem é que foi o mais resistente
 	Quanto maior era a concentração de ureia, maior era a resistência das amostras à centrifugação. Além disso, foi necessário utilizar forças de 50000g (aproximadamente 25000 rpm) para realizar a separação das fases num tempo de algumas horas, pois velocidades de 5000 rpm não foram capazes de separar as fases. As partes superiores foram separadas das partes inferiores, onde estavam as lamelas, e foi feita uma correlação da massa de lamela e a massa do solvente. A partir disso, seria possível calcular a espessura lamelar com a concentração efetiva de surfactante formando a lamela.
