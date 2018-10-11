@@ -569,6 +569,7 @@
 
 	\chapter{SAXS}
 		\section{Fundamentos}
+		% todo: ler de fato um livro sobre SAXS para melhorar essa introdução, da mesma forma que eu fiz com fluorescência.
 		
 		%O espalhamento de luz é um fenômeno que ocorre devido à interação da luz com os elétrons de um átomo ou grupo de átomos. O feixe incidente excita os elétrons de modo que eles comecem a oscilar na mesma frequência do feixe incidente. Quando o feixe incidente é removido, os elétrons excitados emitem fótons do mesmo comprimento de onda incidente (chamado de espalhamento elástico), em qualquer direção. As ondas emitidas interagem de maneira construtiva e destrutiva, dependendo de sua posição relativa. A somatória dessas ondas resulta num padrão de espalhamento específico para cada estrutura.
 		
@@ -724,7 +725,7 @@
 		%					\(M_{\textit{ur}}\)			&	Massa molar da ureia						\\
 		% todo: colocar como que esses valores podem ser estimados
 		
-		Para se calcular a espessura lamelar, utiliza-se a equação \ref{eqn:SAXS_espessura_lamelar}.
+		Sabendo então a fração volumétrica de surfactante, podemos obter a espessura da lamela a partir da distância total pela simples relação da equação \ref{eqn:SAXS_espessura_lamelar}.
 		
 		\begin{equation} \label{eqn:SAXS_espessura_lamelar}
 			d_{\text{HC}} = \phi_s d
@@ -733,10 +734,64 @@
 		
 		
 	\chapter{Fluorescência}
-		\section{Fundamentos}
-			\subsection{Diagramas}
-			\subsection{Rendimento quântico}
-			\subsubsection{Lei de X (não importa onde incide para fluorescência)}
+		\section{Diagrama de Jablonski}
+		
+		O fenômeno de fluorescência é uma subdivisão do fenômeno luminescência, posição que compartilha com a fosforescência. A diferença entre os dois fenômenos está no mecanismo de transição eletrônica, que também altera os tempos de vida dos dois fenômenos. De forma geral, os tempos de vida de fluorescência são da ordem de \(10^{-8} s\), já a fosforescência os tempos de vida variam de milissegundos a segundos. Neste trabalho, somente o fenômeno da fluorescência é de importância.
+		
+		Uma maneira de se visualizar os fenômenos de luminescência é através do diagrama de Jablonski. Nesse tipo de diagrama, o eixo y representa energia, e as várias linhas representam níveis energéticos. A figura \ref{fig:diagrama_jablonski} mostra um diagrama de Jablonski onde os fenômenos de absorção, fluorescência e fosforescência estão ilustrados. Os níveis \(S\) representam os estados singleto, e seu subíndice representa o nível eletrônico, sendo 0 o fundamental, que é marcado como uma linha mais grossa. Os níveis vibracionais são marcados de 0 a 4 nesse diagrama, com uma linha mais fina. As linhas pontilhadas representam processos não-radiativos e as linhas cheias representam processos radiativos. As cores das linhas são proporcionais aos comprimentos de onda envolvidos, mas não descrevem as cores reais. O nível tripleto é representado como \(T_1\).  % todo: colocar o que é um singleto.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/fluor/diagrama_jablonski}
+			\caption[Diagrama de Jablonski]{Diagrama de Jablonski. As linhas horizontais indicam níveis energéticos, com níveis mais altos para cima. As setas indicam transições radiativas e as setas tracejadas indicam transições não radiativas. As cores das setas são proporcionais à energia de cada transição. Por simplicidade, não estão representados os fenômenos de extinção, transferência de energia e interação com o solvente. Adaptado de X}
+			\label{fig:diagrama_jablonski}  % todo: colocar a referência dessa adaptação
+		\end{figure}  
+		
+		\section{Origem do fenômeno de fluorescência}
+		
+		Quando uma molécula absorve radiação no comprimento de onda adequado, um de seus elétrons passa para um nível eletrônico maior, e geralmente para um nível vibracional maior também. Porém, a temperatura ambiente geralmente não é suficiente para manter esses elétrons em níveis vibracionais altos, então eles relaxam rapidamente (\(10^{-12} s\) ou menos) para o nível vibracional fundamental do nível eletrônico excitado, um processo chamado de conversão interna. Essa conversão pode ocorrer de estados eletrônicos mais elevados também. Como essa escala de tempo é muito menor do que a de fluorescência (\(10^{-8} s\)), os elétrons excitados relaxam completamente sua energia vibracional, atingindo um estado excitado termicamente equilibrado.
+		
+		Após esse equilíbrio térmico, um elétron pode decair para o nível eletrônico fundamental, tanto para níveis vibracionais elevados ou fundamentais, emitindo um fóton de energia igual à transição. Há uma diferença das energias de absorção e de emissão devido à conversão interna e à tendência de ocorrer transições para níveis vibracionais elevados. Essa diferença de energia resulta num deslocamento no comprimento de onda dos espectros de absorção e emissão, chamado de deslocamento de Stokes.
+		
+		O fenômeno de conversão interna também implica que o espectro de emissão geralmente é independente do comprimento de onda do fóton incidido, pois o espectro de emissão ocorre sempre do estado vibracional fundamental do estado excitado. Essa regra é conhecida como lei de Kasha.
+		
+		As transições eletrônicas ocorrem numa faixa de tempo muito rápida, de cerca de \(10^{-15} s\). Esse tempo é muito rápido para que tenha ocorrido mudanças nas posições dos núcleos. Isso é conhecido como o princípio de Frank-Condon. Uma das consequências desse princípio é que a probabilidade de uma transição \(S_1 \to S_0\) é igual à probabilidade de uma transição \(S_0 \to S_1\), o que resulta em espectros de emissão e absorção espelhados. Quando o espelhamento não é observado, é possível que o espectro de absorção possua uma absorção para um segundo estado excitado \(S_2\), onde o elétron relaxa rapidamente. Logo, observa-se o somente as transições espelhadas entre os estados \(S_1\) e \(S_0\).
+			
+		As transições para os estados excitados ocorrem sem alteração do spin do elétron. Porém, caso o elétron troque de spin, no fenômeno chamado de cruzamento intersistema, o novo estado, um tripleto, não possui uma transição permitida para o estado singleto fundamental. Isso faz com que as escalas de tempo para a transição sejam muito maiores do que a fluorescência, onde a transição é permitida.
+		
+		\section{Rendimento quântico e tempo de vida}
+				
+		O rendimento quântico é a eficiência de emissão relativo ao número de fótons absorvidos. Quanto mais próximo de 1 for o rendimento quântico, mais intensa é a fluorescência. O tempo de vida é o tempo em que o fluoróforo permanece em seu estado excitado. Quanto maior for o tempo de vida, mais interações podem ocorrer com moléculas ao redor do fluoróforo, e mais informações podem ser obtidas.
+		
+		A fluorescência é dependente da polaridade do solvente. Isso ocorre porque, geralmente, o fluoróforo no estado excitado possui um dipolo maior do que no estado fundamental. Isso faz com que as moléculas do solvente ao redor do fluoróforo se rearranjem ao redor dele, diminuindo a energia do sistema, aumentando o deslocamento de Stokes. O rearranjo de uma molécula de solvente ocorre na ordem de 40 ps ou menos, e o rearranjo total ocorre em cerca de \(10^{-10} s\). Dependendo da polaridade do solvente, os efeitos do rearranjo podem ser maiores ou menores, resultando em deslocamentos de Stokes diferentes e espectros de emissão de fluorescência deslocados.
+		
+		Na área de fluorescência existem dois métodos experimentais, a fluorescência estacionária e a fluorescência resolvida no tempo. Na fluorescência estacionária, a amostra é iluminada e observada constantemente. Como os fenômenos de fluorescência são muito rápidos, efetivamente observa-se uma média dos fenômenos que ocorreram durante a observação. Utilizando equipamentos bastante sofisticados, é possível emitir pulsos de radiação curtos e observar o decaimento da fluorescência com o tempo, em escalas de ns. Isso é conhecido como fluorescência resolvida no tempo. Neste trabalho, foi utilizado somente fluorescência estacionária e, de certo modo, uma combinação das duas técnicas, onde observou-se a variação de fluorescência em escalas de ms a minutos.
+		
+		% todo: colocar as equações para rendimento quÂntico e tempo de vida?
+		
+		\section{Extinção}
+		
+		Há fenômenos que conseguem impedir uma molécula de fluorescer, diminuindo a intensidade de fluorescência medido. Esses fenômenos são chamados de extinção (\emph{quenching}). Há pelo menos três mecanismos possíveis para a extinção:
+		
+		\begin{enumerate}[noitemsep]
+			\item Troca eletrônica
+			\item Cruzamento intersistemas, ou o efeito do átomo pesado
+			\item Transferência eletrônica fotoinduzida.
+		\end{enumerate}
+		
+		Para a extinção ocorrer, é necessário que haja contato entre a molécula do fluoróforo e do \emph{quencher}. No caso de troca eletrônica, há uma molécula que é pobre eletronicamente, chamada de aceptor e o fluoróforo, o doador. Entrando em contato, o doador transfere seu elétron excitado para o aceptor e recebe de volta um elétron no estado fundamental, concertadamente ou não. Isso equilibra as cargas no sistema, e faz com que o aceptor esteja no estado excitado. O aceptor em seguida pode tanto perder a energia por processos radiativos quanto não-radiativos. % todo: pode mesmo por porcesso radiativo?
+		% todo: colocar exemplos aqui
+		
+		O cruzamento intersistemas, mecanismo que também dá origem à fosforescência, pode ser induzido por átomos pesados, como halogênios, devido ao acoplamento spin-órbita. Em solução aquosa, um elétron no estado \(T_1\) relaxa por processos não radiativos pois o tempo de vida desse tipo de transição é muito alto. O oxigênio é um \emph{quencher} bastante comum e consegue extinguir a maior parte dos fluoróforos, sendo que em alguns casos é necessário removê-lo do meio para permitir a observação de fluorescência. O mecanismo de atuação do oxigênio ainda é debatido, porém o mais provável é que o oxigênio, paramagnético, causa um cruzamento intersistema, e o sistema depois perde energia não radiativamente. Outros estudos mostram que podem existir vários mecanismos em conjunto atuando, como, além do cruzamento, transferência de carga e troca eletrônica. % todo: colocar aqui um artigo que fala do brometo em micelas de CTAB
+		
+		A transferência eletrônica é resultante da formação de um completo entre um doador e um aceptor eletrônico (o fluoróforo pode ser ambos), formando um complexo do tipo \(D_p^+A_p^-\), que pode voltar ao estado fundamental sem emissão, porém em alguns casos é observada a emissão desse complexo. Após a relaxação, o elétron é retornado ao doador. 
+		
+		Outro parâmetro que pode influenciar a fluorescência é a viscosidade do meio onde o fluoróforo se encontra. Isso depende da estrutura e do mecanismo de emissão específico de cada fluoróforo. A molécula CCVJ possui um aumento de seu rendimento quântico com o aumento da viscosidade do solvente, em soluções de etileno glicol em glicol. Isso ocorre porque a maior viscosidade atrasa a rotação interna de certos grupos em sua estrutura e dificulta um mecanismo de transferência de carga que extingue a fluorescência, aumentando então o rendimento quântico.
+		
+		% 	Outra consequência do princípio de Frank-Condon é que o fenômeno de absorção, muito rápido, só fornece informações sobre o estado fundamental médio das moléculas e das moléculas de solvente nas imediações. Porém, como a fluorescência é mais demorada, é possível que ocorram interações com outras moléculas em solução, fornecendo informações sobre o ambiente químico do fluoróforo.
+		
+		% todo: colocar como se calcula singleto e tripleto.
+		
 	\chapter{Coloides}
 	% todo: falar sobre a constante de Hamaker e outras coisas importantes para a discussão
 		\section{Atração coloidal}
