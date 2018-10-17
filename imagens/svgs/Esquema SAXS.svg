@@ -14,10 +14,103 @@
    height="310.18301"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="Esquema SAXS.svg">
   <defs
      id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2560"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2558"
+         d="M 0,0 5,-5 -12.5,0 5,5 z"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker1146"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:collect="always">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 z"
+         id="path1144" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2586"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2584"
+         d="M 0,0 5,-5 -12.5,0 5,5 z"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker2178"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:collect="always">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 z"
+         id="path2176" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1362"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path1360"
+         d="M 0,0 5,-5 -12.5,0 5,5 z"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker1008"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 z"
+         id="path1006"
+         inkscape:connector-curvature="0" />
+    </marker>
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipEmfPath1-1">
@@ -158,52 +251,20 @@
          id="path5188" />
     </marker>
     <marker
-       inkscape:collect="always"
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker5448"
        refX="0"
        refY="0"
        orient="auto"
-       inkscape:stockid="Arrow1Mend">
+       inkscape:stockid="Arrow1Mend"
+       inkscape:collect="always">
       <path
          inkscape:connector-curvature="0"
          transform="matrix(-0.4,0,0,-0.4,-4,0)"
          style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1"
          d="M 0,0 5,-5 -12.5,0 5,5 z"
          id="path5450" />
-    </marker>
-    <marker
-       inkscape:collect="always"
-       inkscape:stockid="Arrow1Mend"
-       orient="auto"
-       refY="0"
-       refX="0"
-       id="marker5536"
-       style="overflow:visible"
-       inkscape:isstock="true">
-      <path
-         inkscape:connector-curvature="0"
-         id="path5538"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1"
-         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
-    </marker>
-    <marker
-       inkscape:collect="always"
-       inkscape:isstock="true"
-       style="overflow:visible"
-       id="marker5586"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="Arrow1Mend">
-      <path
-         inkscape:connector-curvature="0"
-         transform="matrix(-0.4,0,0,-0.4,-4,0)"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         id="path5588" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Mend"
@@ -243,9 +304,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.1152436"
-     inkscape:cx="332.00547"
-     inkscape:cy="135.07032"
+     inkscape:zoom="1.4957031"
+     inkscape:cx="169.42539"
+     inkscape:cy="151.2353"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -257,7 +318,8 @@
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -307,15 +369,6 @@
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600" />
     <path
-       sodipodi:nodetypes="cc"
-       inkscape:connector-curvature="0"
-       id="path4588"
-       d="m 255.36099,747.46326 345.799,33.3297"
-       style="fill:none;stroke:#ff0000;stroke-width:1.58007467;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.58007465, 1.58007465;stroke-dashoffset:0;marker-end:url(#marker4750)"
-       inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
-       inkscape:export-xdpi="600"
-       inkscape:export-ydpi="600" />
-    <path
        style="fill:none;stroke:#ff0000;stroke-width:1.58007455;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="path4578"
        sodipodi:type="arc"
@@ -326,132 +379,79 @@
        sodipodi:start="5.0077421"
        sodipodi:end="6.7179909"
        sodipodi:open="true"
-       d="m 319.64032,210.72716 a 32.033539,32.033539 0 0 1 19.72863,44.14009"
+       d="m 319.64032,210.72716 a 32.033539,32.033539 0 0 1 19.92105,17.57513 32.033539,32.033539 0 0 1 -0.19242,26.56496"
        inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600"
        transform="translate(45.098871,491.70911)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;font-family:sans-serif"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none"
        x="387.45953"
        y="725.51001"
        id="text4580"
        inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
        inkscape:export-xdpi="600"
-       inkscape:export-ydpi="600"
-       sodipodi:linespacing="0%"><tspan
+       inkscape:export-ydpi="600"><tspan
          sodipodi:role="line"
          id="tspan4582"
          x="387.45953"
          y="725.51001"
-         style="font-size:16.0506897px;font-family:sans-serif">2Ɵ</tspan></text>
-    <text
-       sodipodi:linespacing="0%"
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans-serif"
-       x="458.06799"
-       y="761.4079"
-       id="text4584"
-       inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
-       inkscape:export-xdpi="600"
-       inkscape:export-ydpi="600"><tspan
-         sodipodi:role="line"
-         id="tspan4586"
-         x="458.06799"
-         y="761.4079"
-         style="font-size:15.57543659px;fill:#ff0000;font-family:sans-serif">ɸ</tspan></text>
-    <path
-       d="m 407.71126,255.7384 a 36.179703,31.597101 0 0 1 -0.12344,19.07916"
-       sodipodi:end="6.5955393"
-       sodipodi:start="5.9821314"
-       sodipodi:ry="31.597101"
-       sodipodi:rx="36.179703"
-       sodipodi:cy="265.10779"
-       sodipodi:cx="373.15875"
-       sodipodi:type="arc"
-       id="path4590"
-       style="fill:none;stroke:#ff0000;stroke-width:1.58007455;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       sodipodi:open="true"
-       inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
-       inkscape:export-xdpi="600"
-       inkscape:export-ydpi="600"
-       transform="translate(45.098871,491.70911)" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:1.58007467px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5536)"
-       d="M 135.57273,648.7753 H 244.68226"
-       id="path4860"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
-       inkscape:export-xdpi="600"
-       inkscape:export-ydpi="600" />
+         style="font-size:16.0506897px;font-family:sans-serif">Ɵ</tspan></text>
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path5184"
-       d="m 135.57273,648.7753 89.38636,-46.71156"
-       style="fill:none;stroke:#ff0000;stroke-width:1.58007467;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.58007465, 1.58007465;stroke-dashoffset:0;marker-end:url(#marker5448)"
-       inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
-       inkscape:export-xdpi="600"
-       inkscape:export-ydpi="600" />
-    <path
-       sodipodi:nodetypes="cc"
-       inkscape:connector-curvature="0"
-       id="path5584"
-       d="m 227.80986,600.53862 18.72029,45.46697"
-       style="fill:none;stroke:#ff0000;stroke-width:1.58007467px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5586)"
+       d="m 176.22999,632.7015 88.44084,-59.94881"
+       style="fill:none;stroke:#ff0000;stroke-width:1.58007467;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.58007465, 1.58007465;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker5448)"
        inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600" />
     <text
-       sodipodi:linespacing="0%"
        id="text6106"
-       y="662.42651"
-       x="186.45105"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans-serif;-inkscape-font-specification:Sans Bold"
+       y="646.35272"
+       x="227.10831"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"
        inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600"><tspan
-         y="662.42651"
-         x="186.45105"
+         y="646.35272"
+         x="227.10831"
          id="tspan6108"
          sodipodi:role="line"
          style="font-family:sans-serif">k<tspan
    id="tspan6110"
-   style="font-size:8.42461967px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;baseline-shift:sub;font-family:sans-serif;-inkscape-font-specification:Sans Bold">i</tspan></tspan></text>
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.42461967px;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';baseline-shift:sub">i</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans-serif;-inkscape-font-specification:Sans Bold"
-       x="175.12524"
-       y="613.03595"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="205.14543"
+       y="595.54388"
        id="text6112"
        inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
        inkscape:export-xdpi="600"
-       inkscape:export-ydpi="600"
-       sodipodi:linespacing="0%"><tspan
+       inkscape:export-ydpi="600"><tspan
          sodipodi:role="line"
          id="tspan6114"
-         x="175.12524"
-         y="613.03595"
+         x="205.14543"
+         y="595.54388"
          style="font-family:sans-serif">k<tspan
-   style="font-size:8.42473698px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;baseline-shift:sub;font-family:sans-serif;-inkscape-font-specification:Sans Bold"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.42473698px;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';baseline-shift:sub"
    id="tspan6118">s</tspan></tspan></text>
     <text
-       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans-serif;-inkscape-font-specification:Sans Bold"
-       x="249.73456"
-       y="626.63855"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="154.38315"
+       y="590.18085"
        id="text6120"
        inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600"><tspan
          sodipodi:role="line"
          id="tspan6122"
-         x="249.73456"
-         y="626.63855"
+         x="154.38315"
+         y="590.18085"
          style="font-family:sans-serif">q</tspan></text>
     <path
        style="fill:none;stroke:#ff0000;stroke-width:1.58007467px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6134)"
@@ -462,54 +462,37 @@
        inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600" />
-    <text
-       id="text6636"
-       y="693.5506"
-       x="514.91699"
-       style="font-size:23.00540352px;font-style:normal;font-weight:normal;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#ffd700;fill-opacity:1;stroke:none;font-family:sans-serif"
-       xml:space="preserve"
-       inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
-       inkscape:export-xdpi="600"
-       inkscape:export-ydpi="600"
-       sodipodi:linespacing="0%"><tspan
-         y="693.5506"
-         x="514.91699"
-         id="tspan6638"
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffd700;font-family:sans-serif;-inkscape-font-specification:Sans Bold">q</tspan></text>
     <path
-       d="m 136.15085,135.33518 a 15.983072,15.983072 0 0 1 10.08319,21.48159"
-       sodipodi:end="6.6809104"
+       d="m 222.25472,603.51771 a 21.25672,21.25672 0 0 1 13.05502,11.30417 21.25672,21.25672 0 0 1 0.35514,17.26532"
+       sodipodi:end="0.39772509"
        sodipodi:start="5.0077421"
-       sodipodi:ry="15.983072"
-       sodipodi:rx="15.983072"
-       sodipodi:cy="150.62617"
-       sodipodi:cx="131.49854"
+       sodipodi:ry="21.25672"
+       sodipodi:rx="21.25672"
+       sodipodi:cy="623.854"
+       sodipodi:cx="216.06737"
        sodipodi:type="arc"
        id="path6640"
-       style="fill:none;stroke:#ff0000;stroke-width:1.6892817;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:none;stroke:#ff0000;stroke-width:1.147;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600"
-       sodipodi:open="true"
-       transform="translate(45.098871,491.70911)" />
+       sodipodi:open="true" />
     <text
-       sodipodi:linespacing="0%"
        id="text6646"
-       y="683.03809"
-       x="368.95172"
-       style="font-style:normal;font-weight:normal;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans-serif"
+       y="671.21912"
+       x="362.3331"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"
        inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600"><tspan
-         y="683.03809"
-         x="368.95172"
+         y="671.21912"
+         x="362.3331"
          id="tspan6648"
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:Sans Bold">k<tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'Sans Bold'">k<tspan
    id="tspan6650"
-   style="font-size:8.42473698px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;baseline-shift:sub;font-family:sans-serif;-inkscape-font-specification:Sans Bold">s</tspan></tspan></text>
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.42473698px;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';baseline-shift:sub">s</tspan></tspan></text>
     <g
        sodipodi:type="inkscape:box3d"
        style="fill:#695ba6;fill-opacity:0.69841273;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
@@ -582,36 +565,129 @@
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600" />
     <text
-       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans-serif"
-       x="81.705894"
-       y="741.85822"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="85.487968"
+       y="720.58405"
        id="text4503"
        inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600"><tspan
          sodipodi:role="line"
          id="tspan4505"
-         x="81.705894"
-         y="741.85822"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:Sans Bold">k<tspan
-   style="font-size:8.42461967px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;baseline-shift:sub;font-family:sans-serif;-inkscape-font-specification:Sans Bold"
+         x="85.487968"
+         y="720.58405"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'Sans Bold'">k<tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.42461967px;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';baseline-shift:sub"
    id="tspan4507">i</tspan></tspan></text>
     <text
-       sodipodi:linespacing="0%"
        inkscape:export-ydpi="600"
        inkscape:export-xdpi="600"
        inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;font-family:sans-serif"
-       x="194.59709"
-       y="638.90802"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none"
+       x="232.18143"
+       y="606.52405"
        id="text4598"><tspan
          sodipodi:role="line"
          id="tspan4600"
-         x="194.59709"
-         y="638.90802"
-         style="font-size:11.82562637px;font-family:sans-serif">2Ɵ</tspan></text>
+         x="232.18143"
+         y="606.52405"
+         style="font-size:11.82562637px;font-family:sans-serif">Ɵ/2</tspan></text>
+    <path
+       inkscape:export-ydpi="600"
+       inkscape:export-xdpi="600"
+       inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
+       style="fill:none;stroke:#ff0000;stroke-width:1.58000004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker1362)"
+       d="m 176.57808,633.00481 100.85548,0.25217"
+       id="path1358"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:transform-center-x="-51.216107"
+       inkscape:transform-center-y="-0.427292" />
+    <path
+       inkscape:transform-center-y="-0.19025972"
+       inkscape:transform-center-x="-22.804664"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path2174"
+       d="m 69.094433,726.72594 44.907267,0.11228"
+       style="fill:none;stroke:#ff0000;stroke-width:0.70351636;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2178)"
+       inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+    <path
+       inkscape:export-ydpi="600"
+       inkscape:export-xdpi="600"
+       inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
+       style="fill:none;stroke:#ff0000;stroke-width:0.70351636;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.70351636,0.70351636;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2586)"
+       d="M 354.04318,688.31453 395.3949,670.80136"
+       id="path2582"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:transform-center-x="-20.902089"
+       inkscape:transform-center-y="-9.1209347" />
+    <path
+       inkscape:transform-center-y="-0.427292"
+       inkscape:transform-center-x="-51.216107"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path1142"
+       d="M 279.87587,632.76843 267.50562,574.63489"
+       style="fill:none;stroke:#ff0000;stroke-width:1.58000004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker1146)"
+       inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+    <path
+       style="fill:none;stroke:#2a2aff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 127.06385,647.40425 273.61907,603.91044"
+       id="path2012"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       id="text2538"
+       y="626.14355"
+       x="240.21832"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none"
+       xml:space="preserve"
+       inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         style="font-size:11.82562637px;font-family:sans-serif"
+         y="626.14355"
+         x="240.21832"
+         id="tspan2536"
+         sodipodi:role="line">Ɵ/2</tspan></text>
+    <text
+       inkscape:export-ydpi="600"
+       inkscape:export-xdpi="600"
+       inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
+       id="text2544"
+       y="603.58075"
+       x="276.29562"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-family:sans-serif;baseline-shift:baseline"
+         y="603.58075"
+         x="276.29562"
+         id="tspan2542"
+         sodipodi:role="line">k<tspan
+   id="tspan2540"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';baseline-shift:baseline"><tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan2548">s</tspan>-k<tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan2546">i</tspan></tspan></tspan></text>
+    <path
+       inkscape:export-ydpi="600"
+       inkscape:export-xdpi="600"
+       inkscape:export-filename="C:\Users\Karl\Google Drive\Doutorado\Exame Qualificação\Apresentação\SAXS.png"
+       style="fill:none;stroke:#ff0000;stroke-width:1.58000004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2560)"
+       d="m 176.82138,632.53205 -19.46163,-94.0632"
+       id="path2556"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:transform-center-x="-51.216107"
+       inkscape:transform-center-y="-0.427292" />
   </g>
 </svg>

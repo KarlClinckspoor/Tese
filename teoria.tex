@@ -569,96 +569,158 @@
 
 	\chapter{SAXS}
 		\section{Fundamentos}
-		% todo: ler de fato um livro sobre SAXS para melhorar essa introdução, da mesma forma que eu fiz com fluorescência.
-		
+				
 		%O espalhamento de luz é um fenômeno que ocorre devido à interação da luz com os elétrons de um átomo ou grupo de átomos. O feixe incidente excita os elétrons de modo que eles comecem a oscilar na mesma frequência do feixe incidente. Quando o feixe incidente é removido, os elétrons excitados emitem fótons do mesmo comprimento de onda incidente (chamado de espalhamento elástico), em qualquer direção. As ondas emitidas interagem de maneira construtiva e destrutiva, dependendo de sua posição relativa. A somatória dessas ondas resulta num padrão de espalhamento específico para cada estrutura.
 		
-		% todo: fonte tradicional? Pensar melhor.
-		% todo: vice versa?
-				
-		O espalhamento de raios-X em baixos ângulos é uma técnica baseada no espalhamento elástico de raios-X. O padrão de interferência das ondas espalhadas resulta num padrão de espalhamento dependente da estrutura da amostra. Experimentalmente, incide-se um feixe de raios-X colimados e monocromáticos, oriundos tanto de uma fonte de radiação síncrotron quanto de uma fonte tradicional de raios-X, sobre uma amostra. A radiação interage com os elétrons da amostra, que entram em ressonância com a frequência da radiação, e começam a emitir fótons do mesmo comprimento de incidência, mas em todas as direções. Essas ondas eletromagnéticas começam a interferir construtiva- e destrutivamente e formam um padrão de espalhamento característico, dependendo do formato e da disposição dos centros espalhadores da amostra. Esse padrão é captado por detector que fica a uma distância específica da amostra. A distância do detector está relacionada com os ângulos que são medidos. Um detector próximo consegue detectar ângulos altos, e vice versa.
+		A radiação eletromagnética, quando incide sobre uma amostra fina, o campo elétrico variante da radiação irá interagir com os elétrons dos átomos dentro da região iluminada. Dependendo da frequência (\(\omega\)), pode ocorrer o fenômeno da absorção perto do limite de Lorentz, \(\omega \approx \omega_0\), de interesse em experimentos espectroscópicos, ou pode ocorrer uma polarização dos átomos que varia com a frequência da radiação quando \(\omega \ll \omega_0\) ou \(\omega \gg \omega_0\). Os dipolos emitem radiação pois toda carga elétrica emite um campo elétrico em direções praticamente aleatórias, com amplitude proporcional à aceleração. Isso é chamado de espalhamento. Essas ondas espalhadas interagem construtiva- e destrutivamente, originando em padrões de espalhamento dependendo da localização dos centros espalhadores.
 		
-		O vetor de espalhamento, \q, é obtido pela subtração dos vetores dos feixes incidente e espalhado (Eq. \ref{eqn:vetor_espalhamento_vetorial}). É possível também representar o vetor de espalhamento como dependendo do ângulo do feixe espalhado em relação ao incidente, \(\theta\), e do comprimento de onda da radiação, \(\lambda\) (Eq. \ref{eqn:vetor_espalhamento}). Essa expressão é útil pois torna possível a comparação dos padrões de espalhamento de fontes com comprimentos de ondas diferentes.
+		Raios-X possuem comprimentos de onda tão pequenos que se encontram no limite de Thomson, onde \(\omega \gg \omega_0\). No campo da matéria mole, a energia dos fótons é tão alta que todos os elétrons dos átomos, até suas camadas mais internas, oscilam junto com a radiação. Isso não acontece com o espalhamento de luz, onde a oscilação ocorre somente com os elétrons das camadas mais externas, dependendo da polarizabilidade dos átomos, que é proporcional ao índice de refração do material. % todo: pensar se eu coloco aqui a fórmula
 		
-		% todo: radialmente?
+		As ondas emitidas, quando comparadas com o feixe incidente, são coerentes, isso é, possuem somente uma diferença de fase \(\varphi\) fixa entre a radiação incidente e espalhada, e possuem o mesmo comprimento de onda da radiação incidente, isso é, o espalhamento é completamente elástico. Dessa maneira, os vetores incidentes \(\mathbf{k_i}\) e espalhados \(\mathbf{k_s}\) possuem a mesma amplitude, igual ao número de onda \(k\) (Eq. \ref{eqn:numero_onda}), e índice de refração próximo à unidade.
 		
-		A figura \ref{fig:esquema_saxs} mostra o feixe incidente e um dos feixes espalhados, junto com um desenho para calcular o vetor de espalhamento. O ângulo \(\phi\) é utilizado para descrever a dependência do padrão de espalhamento radialmente, e caso a amostra seja isotrópica, é possível integrar a intensidade de sinal em função de \(\phi\) para obter uma curva de espalhamento unidimensional (Fig. \ref{fig:exemplo_saxs}) A maior parte da intensidade da radiação se concentra em ângulos muito pequenos, onde não houve praticamente espalhamento, então é colocado um aparador de feixe (\emph{beam-stop}) para bloquear essa radiação. Isso pode ser visto como o círculo escuro na parte inferior do detector na fig. \ref{fig:esquema_saxs}.
-			
-		\begin{figure}[h]
-			\centering
-			\includegraphics[width=0.7\textwidth]{imagens/saxs/Esquema_SAXS}
-			\caption{Diagrama mostrando o feixe incidente de raios-X \( \mathbf{k_i} \) sendo espalhado por um material, resultando num vetor espalhado \( \mathbf{k_s} \). O vetor de espalhamento, \q, resultado da subtração vetorial dos vetores incidente e espalhado, possui duas componentes angulares, \(\phi\) e \(\theta\). O feixe espalhado atinge o detector, e a imagem resultante é composta pela contagem de fótons em cada pixel.}
-			\label{fig:esquema_saxs}
-		\end{figure}
-
 		\begin{equation}
-			\mathbf{q} = \mathbf{k_i} - \mathbf{k_s}
-			\label{eqn:vetor_espalhamento_vetorial}
+			k = \dfrac{2 \pi}{\lambda}
+			\label{eqn:numero_onda}
 		\end{equation}
 		
+		\noindent onde \(\lambda\) é o comprimento de onda da radiação.
+		
+		A única diferença entre os feixes espalhados é a fase \(\varphi\) da radiação, devido ao caminho diferente que cada feixe precisa fazer. A diferença de fase de um comprimento de onda é \(2\pi\). Essa fase está relacionada com a interferência dos feixes e, para obtê-la, é necessário subtrair os vetores incidente e espalhado, que passam por um ponto \(P\), cuja posição é dada pelo vetor \(r\), multiplicados pelo número de onda \(k\) (Eq. \ref{eqn:calculo_fase_saxs}):
+		
 		\begin{equation}
-			q = \dfrac{4\pi}{\lambda} \sin(\theta)
+			\varphi = - \left( \dfrac{2\pi}{\lambda} \right) \mathbf{r} \left( \mathbf{k_s} - \mathbf{k_i} \right)
+			\label{eqn:calculo_fase_saxs}
+		\end{equation}
+		
+		O sinal negativo na equação \ref{eqn:calculo_fase_saxs} é devido à inversão da ordem de subtração dos vetores \(\mathbf{k_i}\) e \(\mathbf{k_s}\). Assim, podemos introduzir o vetor de espalhamento \(\mathbf{q}\), também conhecido como vetor de transferência de momento (Eq. \ref{eqn:vetor_espalhamento}).
+		
+		\begin{equation}
+			\mathbf{q} = \left( \dfrac{2\pi}{\lambda} \right) \mathbf{r} \left( \mathbf{k_s} - \mathbf{k_i} \right)
 			\label{eqn:vetor_espalhamento}
 		\end{equation}
 		
+		Logo, a defasagem pode ser facilmente relacionada com a posição dos centros espalhadores e o vetor de espalhamento:
+		
+		\begin{equation}
+			\varphi = - \mathbf{qr}
+			\label{eqn:defasagem_qr}
+		\end{equation}
+		
+		Uma consequência do produto escalar da equação \ref{eqn:defasagem_qr} é que somente a componente de \(\mathbf{r}\) na direção de \(\mathbf{q}\) é relevante para a fase \(\varphi\). Isso implica que todos os pontos num plano perpendicular a \(\mathbf{q}\) possuirão a mesma fase. Isso dá origem à ideia de que o espalhamento ocorre como uma reflexão da radiação por um conjunto de planos, comumente utilizado em cristalografia.
+		
+		A amplitude do vetor de espalhamento é dado pela eq. \ref{eqn:amplitude_vetor_espalhamento}.
+		
+		\begin{equation}
+		q = \dfrac{4\pi}{\lambda} \sin\left(\dfrac{\theta}{2}\right)
+		\label{eqn:amplitude_vetor_espalhamento}
+		\end{equation}
+		
+		A figura \ref{fig:esquema_saxs} ilustra os vetores incidente e espalhado, assim como o cálculo do vetor.
+		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[width=0.7\textwidth]{imagens/saxs/exemplo_SAXS}
-			\caption{Curva de espalhamento resultante da integração em \(\phi\) do padrão de espalhamento obtido na fig. \ref{fig:esquema_saxs}. Os picos obtidos nessa figura são resultado da difração de raios-X devido à presença de uma estrutura lamelar em solução.}
-			\label{fig:exemplo_saxs}
+			\includegraphics[width=0.7\textwidth]{imagens/saxs/Esquema_SAXS}
+			\caption{Diagrama mostrando o feixe incidente de raios-X sendo espalhado por um material, resultando num vetor espalhado. O vetor de espalhamento, \(\mathbf{q}\) é paralelo à subtração vetorial dos vetores \( \mathbf{k_i} \) e \( \mathbf{k_s} \), paralelos à direção dos feixes incidente e espalhado. Os feixes, após interagirem, atingem o detector, e a imagem resultante é composta pela contagem de fótons em cada pixel. O ponto escuro é resultante do bloqueio da radiação não espalhada pelo \emph{beam-stop}.}
+			\label{fig:esquema_saxs}
 		\end{figure}
+		
+		Para pequenos valores de \(\sfrac{\theta}{2}\), \(\sin(\sfrac{\theta}{2}) \approx \sfrac{\theta}{2}\), então a magnitude do vetor de espalhamento \(\mathbf{q}\) (que será chamado de \q{} de agora em diante) é proporcional ao ângulo de espalhamento (em radianos). A unidade do vetor de espalhamento é tipicamente \(nm^{-1}\), dependendo claro do comprimento de onda utilizado. Uma grande utilidade de se utilizar o vetor de onda é que o espalhamento se torna independente da fonte de radiação, pois o comprimento de onda já é levado em consideração. Além disso, o inverso de \q{} informa o tamanho dos objetos que geralmente são observados em SAXS. Faixas comuns são de 0,006 a 6 \(nm^{-1}\), o que resulta em estruturas da faixa de 1\(\mu m\) a 1 \(nm\).
 
-		A função de onda genérica para uma das ondas espalhadas é dada pela Eq. \ref{eqn:funcao_onda_espalhamento}, onde \(\mathbf{r}\) é o vetor de posição na partícula. 
+		Para se determinar o padrão obtido na \ref{fig:esquema_saxs}, é necessário somar todas as ondas espalhadas. A função de onda genérica para uma das ondas espalhadas é dada pela Eq. \ref{eqn:funcao_onda_espalhamento}, onde \(\mathbf{r}\) é o vetor de posição na partícula.
 		
 		\begin{equation}
 			\psi(\mathbf{q}) = \exp(-i \mathbf{q} \cdot \mathbf{r})
 			\label{eqn:funcao_onda_espalhamento}
 		\end{equation}
 		
-		A somatória das funções de onda, Eq. \ref{eqn:SAXS_somatoria_contribs}, resulta na amplitude de espalhamento. O termo \(b_j\) é chamado do comprimento de espalhamento do ponto.
+		A somatória das funções de onda, Eq. \ref{eqn:SAXS_somatoria_contribs}, resulta na amplitude de espalhamento. O termo \(b_j\) é o comprimento de espalhamento de cada ponto. Para elétrons, seu comprimento de espalhamento é o raio do elétron, \(r_e = 0.2817 \times 10^{-12}\) cm.
 		
 		\begin{equation}
 			A(\mathbf{q}) = \sum_j b_j \exp(-i \mathbf{q} \cdot \mathbf{r})
 			\label{eqn:SAXS_somatoria_contribs}
 		\end{equation}
 		
-		Porém, a resolução de raios-X geralmente não permite a observação dos pontos individuais, isso é, elétrons, então utiliza-se a densidade de comprimento de espalhamento \(\rho\) (\emph{scattering length density}, SLD), que nada mais é do que a média do comprimento de espalhamento \(b\) por um pequeno volume \(v\) (Eq. \ref{eqn:SLD}).
+		Porém, a resolução de raios-X geralmente não permite a observação dos elétrons individuais, então a somatória dos comprimentos de espalhamento de todos os elétrons no átomo, dividido pelo seu volume, resulta na densidade de comprimento de espalhamento \(\rho\) (Eq. \ref{eqn:SLD}). Esse termo também é conhecido como SLD, do inglês \emph{scattering length density}.
 		
 		\begin{equation}
 			\rho(\mathbf{r}) = \sum_j \dfrac{b_j}{v}
 			\label{eqn:SLD}
 		\end{equation}
 		
-		Logo, a eq. \ref{eqn:SAXS_somatoria_contribs} passa de uma somatória para uma integral, eq. \ref{eqn:SAXS_integral_amplitude}.
+		Se a densidade for uniforme, podemos encontrar a densidade a partir da fórmula estrutural do material:
 		
 		\begin{equation}
-			A(\mathbf{q}) = \int \rho(\mathbf{r}) \exp(-i \mathbf{q} \cdot \mathbf{r}) d\mathbf{r}
+			\rho = \dfrac{n_e d_M N_a}{M_w} r_e
+			\label{eqn:rho_uniforme}
+		\end{equation}
+		
+		\noindent onde \(n_e\) é o número de elétrons do material, \(d_M\) é sua densidade (água é 1000 kg/m\textsuperscript{3}), \(N_a\) é o número de Avogadro, \(M_w\) é a massa molar do material e \(r_e\) é o raio do elétron.
+		
+		Assim, a eq. \ref{eqn:SAXS_somatoria_contribs} passa de uma somatória para uma integral, eq. \ref{eqn:SAXS_integral_amplitude}.
+		
+		\begin{equation}
+			A(\mathbf{q}) = \int_V \rho(\mathbf{r}) \exp(-i \mathbf{q} \cdot \mathbf{r}) d\mathbf{r}
 			\label{eqn:SAXS_integral_amplitude}
 		\end{equation}
 		
-		\section{Modelagem}
-		
-		Quando se considera o espalhamento de um único objeto não centro-simétrico, é necessário considerar a orientação do vetor de espalhamento \q{} para obter o padrão de espalhamento. Além disso, em solução, esses objetos estão possivelmente orientados aleatoriamente, sendo necessário realizar uma integração sobre todas as orientações possíveis. Porém, objetos centro-simétricos, como esferas, não necessitam disso, e a amplitude de espalhamento pode ser calculada pela eq. \ref{eqn:SAXS_amplitude_esfera}. 
+		A intensidade de espalhamento, detectada pelo equipamento, é obtida pela média pelo tempo de todas as posições e conformações possíveis das partículas, ao quadrado (multiplicando-se pelo complexo conjugado). É necessário utilizar constantes para normalizar essa intensidade, como o número \(n\) de partículas espalhadoras e o volume \(V\) das partículas. Além disso, como as partículas estão num meio, como um solvente, é necessário considerar a densidade eletrônica do solvente, e por isso utiliza-se \(\Delta \rho^2\), a diferença entre a densidade do solvente e do meio, também conhecido como contraste. Tudas essas considerações resultam na equação \ref{eqn:SAXS_I_funcao_A}.
 		
 		\begin{equation}
-			A(q) = 4\pi \int \dfrac{\sin(qr)}{qr} r^2 dr
+		I(q) = n\Delta \rho^2 V^2 |A(q)|^2
+		\label{eqn:SAXS_I_funcao_A}
+		\end{equation}
+		
+		Sistemas com alto contraste, por exemplo, partículas de ouro em água, espalham bastante raios-X, resultando em sinais de boa qualidade. Porém sistemas de baixo contraste, como a maior parte de sistemas de materia mole, incluindo o sistema \CTAB{} + NaSal, utilizado neste trabalho, não resultam em uma boa resolução sinal/ruído. Tipicamente, o contraste das cabeças é positivo em relação à água, mas o contraste das cadeias é negativo, o que resulta num contraste total baixo. Logo, é interessante calcular o contraste, o que pode ser feito por programas como o SASfit.\footnote{\url{https://github.com/SASfit/SASfit}}. Algumas vezes é possível melhorar o contraste adicionando-se sacarose ou glicerina ao solvente ao meio, porém isso só é válido para experimentos de SAXS, não de espalhamento de luz.
+		
+		\section{Modelagem e o problema inverso do espalhamento}
+		
+		O objetivo de análises de SAXS é obter informações estruturais das partículas presentes no meio. Esse é chamado o problema inverso do espalhamento, em contraste com o problema direto, onde estruturas são propostas e o padrão de espalhamento das mesmas é calculado. Para resolver o problema inverso, é necessário primeiramente obter os modelos necessários, um processo matematicamente bastante complexo, e depois ajustá-los às curvas obtidas, variando-se os parâmetros de ajuste pelo método dos mínimos quadrados. A etapa de ajuste também possui seu grau de dificuldade, necessitando frequentemente de técnicas complementares para a escolha de um modelo e para fornecer chutes iniciais para os parâmetros.
+		
+		\subsection{Partículas esféricas homogêneas em solução}
+		
+		Quando se considera o espalhamento de um único objeto não centro-simétrico, é necessário considerar a orientação do vetor de espalhamento \q{} para obter o padrão de espalhamento. Além disso, em solução, esses objetos estão possivelmente orientados aleatoriamente, sendo necessário realizar uma integração sobre todas as orientações possíveis. Porém, objetos centro-simétricos, como esferas de raio \(R\), não necessitam disso, e a amplitude de espalhamento pode ser calculada pela eq. \ref{eqn:SAXS_amplitude_esfera}. % Note que foi utilizada a relação de Euler.
+		
+		\begin{equation}
+			A(q) = \dfrac{4\pi\Delta\rho}{q} \int_0^R r\sin(qr) dr
 			\label{eqn:SAXS_amplitude_esfera}
 		\end{equation}
-		
-		O que o detector mede em SAXS é a intensidade de sinal, que é proporcional ao quadrado da amplitude de espalhamento. A eq. \ref{eqn:SAXS_I_funcao_A} correlaciona ambos os termos, utilizando o número \(n\) de partículas, a diferença de densidade eletrônica \(\Delta \rho\) e o volume das partículas \(V\)
+				
+		Realizando uma integração parcial, obtemos:
 		
 		\begin{equation}
-			I(q) = n\Delta \rho^2 V^2 |A(q)|^2
-			\label{eqn:SAXS_I_funcao_A}
+			A(q) = \Delta_rho \dfrac{4\pi R^3}{3} \left[ \dfrac{3 \left( \sin qR - qR \cos qR \right)}{\left(qR\right)^3} \right]
+			\label{eqn:SAXS_amplitude_esfera_integrado}
 		\end{equation}
 		
-		O termo \(\Delta \rho\) também é a diferença de densidade eletrônica entre a partícula e o solvente, também conhecido como contraste. Sistemas com alto contraste, por exemplo, partículas de ouro em água, espalham bastante raios-X, resultando em sinais de boa qualidade. Porém sistemas de baixo contraste, como o sistema \CTAB{} + NaSal, utilizado neste trabalho, não resultam em uma boa resolução sinal/ruído. Há programas, como o SASfit, que conseguem calcular o SLD a partir da fórmula molecular de uma espécie.\footnote{\url{https://github.com/SASfit/SASfit}}.
+		Essa equação, normalizada, é utilizada na descrição do modelo de micelas gigantes (Eq. \ref{eqn:AP_Fsphere}) que está presente no apêndice \ref{sec:modelo_MG_matematica}.
 		
-		Para obter a amplitude de espalhamento de uma esfera homogênea de raio R, é necessário realizar a integração da Eq. \ref{eqn:SAXS_amplitude_esfera} de 0 a R, pois além disso não há material que possa espalhar. O resultado dessa integração está nos apêndices, eq. \ref{eqn:AP_Fsphere}.
+		Como a intensidade de luz espalhada é o quadrado da amplitude:
 		
-		Esse é o exemplo mais simples para a derivação da amplitude de espalhamento de um objeto. Quanto maior for a complexidade dos objetos modelados, mais difícil fica a derivação dos modelos, exigindo considerável experiência e conhecimento matemático. O Prof. Jan Skov Pedersen, da Dinamarca, adaptou modelos descritos na literatura para descrever sistemas alongados em solução, como polímeros e micelas gigantes. Uma descrição matemática superficial do modelo desenvolvido se encontra na no apêndice, seção \ref{sec:modelo_MG_matematica}, e uma adaptação desse modelo na linguagem Python se encontra na seção \ref{sec:modelo_MG_python}.
+		\begin{equation}
+			I(q) = (\Delta \rho)^2 V^2 P_0=(\Delta \rho)^2 V^2 \left[ \dfrac{3 \left( \sin qR - qR \cos qR \right)}{\left( qR \right) ^3} \right]
+			\label{eqn:SAXS_intensidade_esfera}
+		\end{equation}
 		
-		O termo \(|A(q)|^2\) é conhecido também como fator forma, ou \(P(q)\). Em soluções diluídas, onde não há, por exemplo, repulsão entre as partículas, o fator forma é suficiente para descrever o comportamento das curvas de espalhamento. Porém, quando a concentração aumenta, fenômenos de interferência começam a se tornar relevantes, resultando no aparecimento do fator estrutura, \(S(q)\). \(I(q)\) é então dado pela Eq. \ref{eqn:SAXS_I_P_S}.
+		O termo à direita da equação \ref{eqn:SAXS_intensidade_esfera} é chamado de fator forma normalizado, \(P_0\). Esse fator forma possui vários mínimos em valores de \(qR\) em 4,493, 7,725, etc (figura \ref{fig:espalhamento_esfera}). A partir desses mínimos é possível obter o raio da partícula, apesar de que isso só é válido para partículas monodispersas, totalmente esféricas, homogêneas e em uma solução diluída.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/saxs/espalhamento_esfera_monodispersa}
+			\caption{Espalhamento de uma esfera monodispersa. Os mínimos estão relacionados com o raio da esfera. O código para fazer este gráfico se encontra na listagem \ref{lst:plot_micela_esferica}.}
+			\label{fig:espalhamento_esfera}
+		\end{figure}
+		
+		\begin{listing}[H]
+			\inputminted{python}{./python/plot_saxs_esfera.py}
+			\caption{Código utilizado para a criação da figura \ref{fig:espalhamento_esfera}}
+			\label{lst:plot_micela_esferica}
+		\end{listing}
+		
+		Esse é o exemplo mais simples para a derivação da amplitude de espalhamento de um objeto. Quanto maior for a complexidade dos objetos modelados, e mais concentrada for a solução, mais difícil fica a derivação dos modelos, exigindo considerável experiência e conhecimento matemático. O Prof. Jan Skov Pedersen, da Dinamarca, adaptou modelos descritos na literatura para descrever sistemas alongados em solução, como polímeros e micelas gigantes. Uma descrição matemática superficial do modelo desenvolvido se encontra na no apêndice, seção \ref{sec:modelo_MG_matematica}, e uma adaptação desse modelo na linguagem Python se encontra na seção \ref{sec:modelo_MG_python}.
+		
+		\subsection{Fator estrutura, concentrações altas}
+		
+		Quando a translação e orientação de uma partícula em solução começa a depender das outras, uma contribuição do espalhamento dessas correlações começa a se tornar visível. Esse fator adicional, chamado de fator estrutura, \(S(q)\), deve ser multiplicado ao \(P(q)\) para se obter o valor da intensidade correta (Eq. \ref{eqn:SAXS_I_P_S}). Em soluções diluídas, a contribuição do fator estrutura se cancela devido à posição e orientação arbitrárias das partículas, então \(S(q) \approx 1\).
 		
 		\begin{equation}
 			I(q) = n\Delta \rho^2 V^2 P(q) S(q)
@@ -666,17 +728,36 @@
 		\end{equation}
 		
 		% todo: pensar se eu devo colocar uma parte de mínimos quadrados, mostrando exemplo com código, ou Excel também.
+		Como as distâncias entre partículas são tipicamente maiores do que as distâncias dentro das partículas, as contribuições do fator estrutura geralmente aparecem com maior intensidade em valores de \q{} baixos.
 		
-		Frequentemente, o aparecimento de picos nos padrões de espalhamento é evidência da existência de correlação entre as partículas, devido ao formato da função \(S(q)\).
+		Existem vários modelos possíveis para o fator \(S(q)\), que dependem de uma função que descreve a probabilidade de se encontrar uma partícula a uma distância \(r\) de outra. Dentro dessa função, existe um potencial que pode descrever, por exemplo, se há atração ou repulsão eletrostática entre as partículas. O modelo das esferas rígidas sem carga, o mais simples, que possui o seguinte potencial (Eq. \ref{eqn:potencial_esfera_rígida}):
 		
-		A partir dos modelos teóricos, e uma ideia de qual é a estrutura presente em solução, é possível extrair informações estruturais do material através de um ajuste das curvas teóricas às curvas experimentais através do método dos mínimos quadrados. Esse método se baseia na variação das variáveis independentes de uma equação, seguido do cálculo do resíduo, isso é, o dado experimental subtraído do modelo, ao quadrado. Quando o resíduo é mínimo, as curvas se assemelham ao máximo, e os parâmetros escolhidos devem refletir a realidade.
+		\begin{equation}
+			u(r) = 
+			\begin{cases}
+				\infty  & r < (R_a + R_b) \\
+				0		& r > (R_a + R_b)
+			\end{cases}
+			\label{eqn:potencial_esfera_rígida}
+		\end{equation}
+
+		\noindent onde \(R_a\) e \(R_b\) são os raios de duas partículas que estão interagindo.
 		
-		% Para obter o padrão de espalhamento de partículas caroço-casca (\emph{core-shell}), é necessário somente calcular o espalhamento do caroço e somá-lo ao espalhamento da casca. A casca é calculada como a subtração do espalhamento de uma partícula do tamanho do caroço, mas com composição da casca, do espalhamento de uma partícula com o raio da casca.
+		A presença de fatores estrutura adicionam alguns parâmetros fortemente não lineares ao ajuste e aumentam grandemente a complexidade dos ajustes, tornando a determinação do fator forma e estrutura simultaneamentes uma tarefa bastante difícil. Além disso, quando há polidispersidade nos sistemas, não se torna possível a completa separação dos termos \(P(q)\) e \(S(q)\) (como é o caso das micelas gigantes do apêndice \ref{sec:modelo_MG_matematica}) e é necessário utilizar um fator estrutura efetivo, \(S_m(q)\).
 		
-		\section{Indexação de picos}
+		\subsection{Indexação de picos}
 		\label{sec:teoria_SAXS}
 		
-		Caso existam mesofases, onde há uma estruturação bastante intensa, resultando na formação de, por exemplo, estruturas lamelares, hexagonais, cúbicas, ocorre o aparecimento de picos de difração de Bragg. A distância relativa desses picos é dependente da estrutura formada, permitindo sua identificação, assim como os picos de difração de um material cristalino permitem sua identificação. Além disso, com o valor de \q{} do primeiro pico, é possível determinar o parâmetro de rede (\emph{lattice parameter}) da mesofase. Para estruturas lamelares, que são de maior relevância para este trabalho, temos que o espaçamento dos picos é de \(1:2:3:4...\) e o parâmetro de rede é dado pela Eq. \ref{eqn:SAXS_param_rede_lamela}.
+		Outro exemplo de estruturação é o que ocorre quando existem fases lamelares em solução. Geralmente, os picos oriundos do fator estrutura se superpõem ao fator forma, tornando-se bastante auto-evidentes. Esses picos são consequência da ordenação equidistante das bicamadas, e a posição dos picos está relacionada à distância média das lamelas. Outros tipos de mesofases também resultam em fatores estrutura, mas com a posição relativa dos picos em valores diferentes, o que permite a identificação da fase a partir de SAXS. A figura \ref{fig:exemplo_saxs} mostra o padrão de espalhamento de uma amostra real lamelar. Essa figura é resultado da integração azimutal da imagem da figura \ref{fig:esquema_saxs}.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/saxs/exemplo_SAXS}
+			\caption{Curva de espalhamento resultante da integração em \(\phi\) do padrão de espalhamento obtido na fig. \ref{fig:esquema_saxs}. Os picos obtidos nessa figura são resultado da difração de raios-X devido à presença de uma estrutura lamelar em solução.}
+			\label{fig:exemplo_saxs}
+		\end{figure}
+		
+		Com o valor de \q{} do primeiro pico, é possível determinar o parâmetro de rede (\emph{lattice parameter}) da mesofase. Para estruturas lamelares, que são de maior relevância para este trabalho, temos que o espaçamento dos picos é de \(1:2:3:4...\) e o parâmetro de rede é dado pela Eq. \ref{eqn:SAXS_param_rede_lamela}. É interessante notar a semelhança desse método de identificação com a determinação do raio de esferas pelos mínimos da figura \ref{fig:espalhamento_esfera}. Os picos observados também são chamados de picos de Bragg, mostrando a íntima relação com a área de difração de raios-X, e a modelagem desse tipo de curva de espalhamento utiliza os índices de Miller dos objetos.
 		
 		\begin{equation}
 			q = \dfrac{2\pi}{d}
@@ -731,7 +812,7 @@
 			d_{\text{HC}} = \phi_s d
 		\end{equation}
 		
-		
+		Em suma, o espalhamento de raios-X em baixos ângulos é uma técnica que permite a obtenção de parâmetros estruturais microscópicos médios do sistema, desde que se conheça qual são as estrutura mais prováveis presentes na amostra. Isso é feito através do ajuste de modelos desenvolvidos pela descrição matemática das estruturas, pelo método dos mínimos quadrados, ou também pela indexação de picos.
 		
 	\chapter{Fluorescência}
 		\section{Diagrama de Jablonski}
