@@ -576,7 +576,7 @@
 		
 		Raios-X possuem comprimentos de onda tão pequenos que se encontram no limite de Thomson, onde \(\omega \gg \omega_0\). No campo da matéria mole, a energia dos fótons é tão alta que todos os elétrons dos átomos, até suas camadas mais internas, oscilam junto com a radiação. Isso não acontece com o espalhamento de luz, onde a oscilação ocorre somente com os elétrons das camadas mais externas, dependendo da polarizabilidade dos átomos, que é proporcional ao índice de refração do material. % todo: pensar se eu coloco aqui a fórmula
 		
-		As ondas emitidas, quando comparadas com o feixe incidente, são coerentes, isso é, possuem somente uma diferença de fase \(\varphi\) fixa entre a radiação incidente e espalhada, e possuem o mesmo comprimento de onda da radiação incidente, isso é, o espalhamento é completamente elástico. Dessa maneira, os vetores incidentes \(\mathbf{k_i}\) e espalhados \(\mathbf{k_s}\) possuem a mesma amplitude, igual ao número de onda \(k\) (Eq. \ref{eqn:numero_onda}), e índice de refração próximo à unidade.
+		As ondas emitidas, quando comparadas com o feixe incidente, são coerentes, isso é, possuem somente uma diferença de fase \(\varphi\) fixa entre a radiação incidente e espalhada, e possuem o mesmo comprimento de onda da radiação incidente, isso é, o espalhamento é completamente elástico. Dessa maneira, os vetores incidentes \(\mathbf{k_i}\) e espalhados \(\mathbf{k_s}\) possuem a mesma amplitude, igual ao número de onda \(k\) (Eq. \ref{eqn:numero_onda}), com o índice de refração próximo à unidade.
 		
 		\begin{equation}
 			k = \dfrac{2 \pi}{\lambda}
@@ -585,30 +585,30 @@
 		
 		\noindent onde \(\lambda\) é o comprimento de onda da radiação.
 		
-		A única diferença entre os feixes espalhados é a fase \(\varphi\) da radiação, devido ao caminho diferente que cada feixe precisa fazer. A diferença de fase de um comprimento de onda é \(2\pi\). Essa fase está relacionada com a interferência dos feixes e, para obtê-la, é necessário subtrair os vetores incidente e espalhado, que passam por um ponto \(P\), cuja posição é dada pelo vetor \(r\), multiplicados pelo número de onda \(k\) (Eq. \ref{eqn:calculo_fase_saxs}):
+		A única diferença entre os feixes espalhados é a fase \(\varphi\) da radiação, devido ao caminho diferente que cada feixe precisa fazer. A diferença de fase de um comprimento de onda é \(2\pi\). Essa fase está relacionada com a interferência dos feixes e, para obtê-la, é necessário subtrair os vetores incidente e espalhado, que passam por um ponto \(P\), cuja posição é dada pelo vetor \(\mathbf{r}\), multiplicados pelo número de onda \(k\) (Eq. \ref{eqn:calculo_fase_saxs}):
 		
 		\begin{equation}
-			\varphi = - \left( \dfrac{2\pi}{\lambda} \right) \mathbf{r} \left( \mathbf{k_s} - \mathbf{k_i} \right)
+			\varphi = - \left( \dfrac{2\pi}{\lambda} \right) \mathbf{r} \cdot \left( \mathbf{k_s} - \mathbf{k_i} \right)
 			\label{eqn:calculo_fase_saxs}
 		\end{equation}
 		
 		O sinal negativo na equação \ref{eqn:calculo_fase_saxs} é devido à inversão da ordem de subtração dos vetores \(\mathbf{k_i}\) e \(\mathbf{k_s}\). Assim, podemos introduzir o vetor de espalhamento \(\mathbf{q}\), também conhecido como vetor de transferência de momento (Eq. \ref{eqn:vetor_espalhamento}).
 		
 		\begin{equation}
-			\mathbf{q} = \left( \dfrac{2\pi}{\lambda} \right) \mathbf{r} \left( \mathbf{k_s} - \mathbf{k_i} \right)
+			\mathbf{q} = \left( \dfrac{2\pi}{\lambda} \right) \mathbf{r} \cdot \left( \mathbf{k_s} - \mathbf{k_i} \right)
 			\label{eqn:vetor_espalhamento}
 		\end{equation}
 		
 		Logo, a defasagem pode ser facilmente relacionada com a posição dos centros espalhadores e o vetor de espalhamento:
 		
 		\begin{equation}
-			\varphi = - \mathbf{qr}
+			\varphi = - \mathbf{q} \cdot \mathbf{r}
 			\label{eqn:defasagem_qr}
 		\end{equation}
 		
 		Uma consequência do produto escalar da equação \ref{eqn:defasagem_qr} é que somente a componente de \(\mathbf{r}\) na direção de \(\mathbf{q}\) é relevante para a fase \(\varphi\). Isso implica que todos os pontos num plano perpendicular a \(\mathbf{q}\) possuirão a mesma fase. Isso dá origem à ideia de que o espalhamento ocorre como uma reflexão da radiação por um conjunto de planos, comumente utilizado em cristalografia.
 		
-		A amplitude do vetor de espalhamento é dado pela eq. \ref{eqn:amplitude_vetor_espalhamento}.
+		A amplitude do vetor de espalhamento é dado pela eq. \ref{eqn:amplitude_vetor_espalhamento}, onde \(\theta\) é o ângulo de espalhamento, entre os vetores \(\mathbf{k_i}\) e \(\mathbf{k_s}\).
 		
 		\begin{equation}
 		q = \dfrac{4\pi}{\lambda} \sin\left(\dfrac{\theta}{2}\right)
@@ -626,7 +626,7 @@
 		
 		Para pequenos valores de \(\sfrac{\theta}{2}\), \(\sin(\sfrac{\theta}{2}) \approx \sfrac{\theta}{2}\), então a magnitude do vetor de espalhamento \(\mathbf{q}\) (que será chamado de \q{} de agora em diante) é proporcional ao ângulo de espalhamento (em radianos). A unidade do vetor de espalhamento é tipicamente \(nm^{-1}\), dependendo claro do comprimento de onda utilizado. Uma grande utilidade de se utilizar o vetor de onda é que o espalhamento se torna independente da fonte de radiação, pois o comprimento de onda já é levado em consideração. Além disso, o inverso de \q{} informa o tamanho dos objetos que geralmente são observados em SAXS. Faixas comuns são de 0,006 a 6 \(nm^{-1}\), o que resulta em estruturas da faixa de 1\(\mu m\) a 1 \(nm\).
 
-		Para se determinar o padrão obtido na \ref{fig:esquema_saxs}, é necessário somar todas as ondas espalhadas. A função de onda genérica para uma das ondas espalhadas é dada pela Eq. \ref{eqn:funcao_onda_espalhamento}, onde \(\mathbf{r}\) é o vetor de posição na partícula.
+		Para se determinar o padrão obtido na figura \ref{fig:esquema_saxs}, é necessário somar todas as ondas espalhadas em cada uma das posições. A função de onda genérica para uma das ondas espalhadas é dada pela Eq. \ref{eqn:funcao_onda_espalhamento}.%, onde \(\mathbf{r}\) é o vetor de posição na partícula.
 		
 		\begin{equation}
 			\psi(\mathbf{q}) = \exp(-i \mathbf{q} \cdot \mathbf{r})
@@ -688,7 +688,7 @@
 		Realizando uma integração parcial, obtemos:
 		
 		\begin{equation}
-			A(q) = \Delta_rho \dfrac{4\pi R^3}{3} \left[ \dfrac{3 \left( \sin qR - qR \cos qR \right)}{\left(qR\right)^3} \right]
+			A(q) = \Delta_\rho \dfrac{4\pi R^3}{3} \left[ \dfrac{3 \left( \sin qR - qR \cos qR \right)}{\left(qR\right)^3} \right]
 			\label{eqn:SAXS_amplitude_esfera_integrado}
 		\end{equation}
 		
@@ -743,12 +743,12 @@
 
 		\noindent onde \(R_a\) e \(R_b\) são os raios de duas partículas que estão interagindo.
 		
-		A presença de fatores estrutura adicionam alguns parâmetros fortemente não lineares ao ajuste e aumentam grandemente a complexidade dos ajustes, tornando a determinação do fator forma e estrutura simultaneamentes uma tarefa bastante difícil. Além disso, quando há polidispersidade nos sistemas, não se torna possível a completa separação dos termos \(P(q)\) e \(S(q)\) (como é o caso das micelas gigantes do apêndice \ref{sec:modelo_MG_matematica}) e é necessário utilizar um fator estrutura efetivo, \(S_m(q)\).
+		A presença de fatores estrutura adicionam alguns parâmetros fortemente não lineares ao ajuste e aumentam grandemente a complexidade dos mesmos, tornando a determinação do fator forma e estrutura simultaneamente uma tarefa bastante difícil. Além disso, quando há polidispersidade nos sistemas, não se torna possível a completa separação dos termos \(P(q)\) e \(S(q)\) (como é o caso das micelas gigantes do apêndice \ref{sec:modelo_MG_matematica}) e é necessário utilizar um fator estrutura efetivo, \(S_m(q)\).
 		
 		\subsection{Indexação de picos}
 		\label{sec:teoria_SAXS}
 		
-		Outro exemplo de estruturação é o que ocorre quando existem fases lamelares em solução. Geralmente, os picos oriundos do fator estrutura se superpõem ao fator forma, tornando-se bastante auto-evidentes. Esses picos são consequência da ordenação equidistante das bicamadas, e a posição dos picos está relacionada à distância média das lamelas. Outros tipos de mesofases também resultam em fatores estrutura, mas com a posição relativa dos picos em valores diferentes, o que permite a identificação da fase a partir de SAXS. A figura \ref{fig:exemplo_saxs} mostra o padrão de espalhamento de uma amostra real lamelar. Essa figura é resultado da integração azimutal da imagem da figura \ref{fig:esquema_saxs}.
+		Outro exemplo de estruturação é o que ocorre quando existem fases lamelares em solução. Geralmente, os picos oriundos do fator estrutura se superpõem ao fator forma, tornando-se bastante evidentes. Esses picos são consequência da ordenação equidistante das bicamadas, e a posição dos picos está relacionada à distância média das lamelas. Outras mesofases também resultam em fatores estrutura, mas com a posição relativa dos picos em valores diferentes, o que permite a identificação da fase a partir de SAXS. A figura \ref{fig:exemplo_saxs} mostra o padrão de espalhamento de uma amostra lamelar real. Essa figura é resultado da integração azimutal da imagem da figura \ref{fig:esquema_saxs}.
 		
 		\begin{figure}[h]
 			\centering
@@ -757,15 +757,14 @@
 			\label{fig:exemplo_saxs}
 		\end{figure}
 		
-		Com o valor de \q{} do primeiro pico, é possível determinar o parâmetro de rede (\emph{lattice parameter}) da mesofase. Para estruturas lamelares, que são de maior relevância para este trabalho, temos que o espaçamento dos picos é de \(1:2:3:4...\) e o parâmetro de rede é dado pela Eq. \ref{eqn:SAXS_param_rede_lamela}. É interessante notar a semelhança desse método de identificação com a determinação do raio de esferas pelos mínimos da figura \ref{fig:espalhamento_esfera}. Os picos observados também são chamados de picos de Bragg, mostrando a íntima relação com a área de difração de raios-X, e a modelagem desse tipo de curva de espalhamento utiliza os índices de Miller dos objetos.
-		
+		Com o valor de \q{} do primeiro pico, é possível determinar o parâmetro de rede (\emph{lattice parameter}) da mesofase. Para estruturas lamelares, que são de maior relevância para este trabalho, temos que o espaçamento dos picos é de \(1:2:3:4...\). O parâmetro de rede, \(d\), é dado pela Eq. \ref{eqn:SAXS_param_rede_lamela}, e seu significado está ilustrado na figura \ref{fig:saxs_distancia_interlamelar}. É interessante notar a semelhança desse método de identificação com a determinação do raio de esferas pelos mínimos da figura \ref{fig:espalhamento_esfera}. Os picos observados também são chamados de picos de Bragg, mostrando a íntima relação com a área de difração de raios-X, e a modelagem desse tipo de curva de espalhamento utiliza os índices de Miller dos objetos.
+	
 		\begin{equation}
 			q = \dfrac{2\pi}{d}
 			\label{eqn:SAXS_param_rede_lamela}
 		\end{equation}
 		
-		\noindent onde \(d\) é o parâmetro de rede de lamelas, também conhecido como distância interlamelar. O significado físico dessa distância está ilustrado na figura \ref{fig:saxs_distancia_interlamelar}.
-				
+	
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.35\textwidth]{imagens/saxs/distancia_interlamelar}
@@ -774,7 +773,7 @@
 		\end{figure}
 
 		% todo: colocar a referência do artigo do guilherme
-		Observando-se a construção da figura \ref{fig:saxs_distancia_interlamelar}, parece ser possível calcular a espessura lamelar (\(d_{\text{HC}}\)) caso a distância interlamelar \(d\) seja conhecida e caso a fração volumétrica de surfactante (\(\phi_s\)) e solvente (\(\phi_w\)) também sejam conhecidos. Nesse caso, seria necessário somente relacionar as proporções das regiões com o total, a distância interlamelar. Esse é o princípio do método descrito em X. A fração volumétrica de surfactante pode ser obtida pela Eq. \ref{eqn:SAXS_frac_volum}, cujos parâmetros estão explicados na tabela \ref{tab:ur_fracvol_descr}.
+		A partir da distância interlamelar, é possível calcular a espessura lamelar (\(d_{\text{HC}}\)) caso a fração volumétrica de surfactante (\(\phi_s\)) e solvente (\(\phi_w\)) também sejam conhecidos. Nesse caso, seria necessário somente relacionar as proporções das regiões com o total, a distância interlamelar. Esse é o princípio do método descrito em X. A fração volumétrica de surfactante pode ser obtida pela Eq. \ref{eqn:SAXS_frac_volum}, cujos parâmetros estão explicados na tabela \ref{tab:ur_fracvol_descr}.
 		
 		\begin{equation}
 			\phi_s = \dfrac{V_{\textit{HC}}\left( \dfrac{w_{s}}{M_{s}} \right)}{\left( V_{\textit{HC}} + V_{P} \right)\dfrac{w_{s}}{M_{s}} + V_{w}\dfrac{w_{w}}{M_{w}}}
@@ -800,10 +799,7 @@
 			}%
 			{}%
 		\end{table}
-		%					\midrule
-		%					\(V_{\textit{ur}}\)			&	Volume molar parcial de ureia				\\
-		%					\(w_{\textit{ur}}\)			&	Fração mássica de ureia						\\
-		%					\(M_{\textit{ur}}\)			&	Massa molar da ureia						\\
+
 		% todo: colocar como que esses valores podem ser estimados
 		
 		Sabendo então a fração volumétrica de surfactante, podemos obter a espessura da lamela a partir da distância total pela simples relação da equação \ref{eqn:SAXS_espessura_lamelar}.

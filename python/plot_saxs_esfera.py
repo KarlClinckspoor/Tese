@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import scipy.special as sp
 
 def I_esfera (q, R):
     qR = q * R

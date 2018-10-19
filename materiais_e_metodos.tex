@@ -225,25 +225,30 @@
 		\section{Aquisição de dados}
 			\subsection{Determinação da absorção e emissão}
 			
-			Amostras de NaSal 1,5\mM{} com concentrações crescentes de TTAB foram preparadas de modo a medir o espectro de absorção e emissão do salicilato. As amostras foram preparadas a partir de um estoque e diluídas apropriadamente. As medidas foram realizadas no espectrômetro XYZ da ABC % todo: encontrar o nome do equipamento.
+			Amostras de NaSal 1,5\mM{} com concentrações crescentes de TTAB foram preparadas de modo a medir o espectro de absorção e emissão do salicilato. As amostras foram preparadas a partir de um estoque e diluídas apropriadamente. As medidas foram realizadas no espectrômetro LS 55 da Perkin Elmer.
 			
 			\subsection{Fluorescência resolvida no tempo}
 			
 			% todo: encontrar as características do laser
-			Amostras de NaSal 3,0\mM{} em água e com TTAB X\mM{} foram preparadas. Um aparato ótimo foi montado juntando-se o \emph{stopped-flow}, um detector da OceanOptics 4000 e uma fonte da XYZ. Veja a Figura X para um diagrama da montagem utilizado.
+			Amostras de NaSal 3,0\mM{} em água e com TTAB X\mM{} foram preparadas. Um aparato foi montado juntando-se o \emph{stopped-flow}, um detector da OceanOptics 4000 e uma fonte da XYZ. Veja a Figura \ref{fig:diagrama_stoppedflow_rene} para um diagrama da montagem utilizado.
 			
-			% \begin{figure} ...
+			\begin{figure}[h]
+				\centering
+				\includegraphics[width=0.7\textwidth]{imagens/fluor/diagrama_stopped_flow_rene}
+				\caption{Diagrama mostrando a montagem experimental para os experimentos de fluorescência resolvida no tempo}
+				\label{fig:diagrama_stoppedflow_rene}
+			\end{figure}
 			
 			Para a aquisição de dados, utilizou-se um programa escrito em LabView 2013, da National Instruments. O código de aquisição foi escrito pelo Prof. Dr. René Nome e modificado pelo aluno. O painel frontal do programa se encontra na Fig. \ref{fig:fluor_painelfrontal} e o código fonte, na Fig. \ref{fig:fluor_gravacaodados}.
 			
-			\begin{figure}[H]
+			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/fluor/painel_frontal}
 				\caption{Painel frontal do programa de aquisição de dados}
 				\label{fig:fluor_painelfrontal}
 			\end{figure}
 			
-			\begin{figure}[H]
+			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/fluor/gravacao_dados}
 				\caption{Código fonte do programa de aquisição de dados}
@@ -255,7 +260,7 @@
 			
 			Foi criado um mapa de cor para cada matriz. Dessa matriz, extraiu-se a coluna que continha informações do comprimento de onda no máximo do espectro de emissão, em 411 nm, junto com a coluna de tempos. Esse dado, após ser normalizado pelo máximo de intensidade, foi utilizado para realizar as análises quantitativas de cinética. A listagem \ref{lst:extracao_fluor1} mostra o código utilizado para realizar essas tarefas. Esse código foi colocado em um \emph{Jupyter Notebook}, e a cada novo experimento, o nome do arquivo era alterado e todas as tarefas eram aplicadas automaticamente, facilitando muito a visualização ágil dos dados.
 			
-			\begin{listing}[H]
+			\begin{listing}[h]
 				\inputminted{python}{./python/fluor_plot_inicial.py}
 				\caption{Código fonte para a criação de mapas de cor e extração de informações em 411 nm.}
 				\label{lst:extracao_fluor1}
