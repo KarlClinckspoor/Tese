@@ -67,6 +67,8 @@
 \usepackage{placeins}
 \graphicspath{{./figuras}}
 
+% Se eles reclamarem do espaço em branco antes e depois do \part, utilizar titlesec, https://ctan.org/pkg/titlesec, em especial o comando \titlespacing*
+
 % Python
 \usepackage{minted}
 \setminted[python]{mathescape,
@@ -92,13 +94,17 @@
 \newcommand{\q}{\(q\)}
 \newcommand{\menosUm}{\textsuperscript{-1}}
 \newcommand{\cmc}{CMC}
-\newcommand{\cwlm}{\(c_{WLM}\)}
+\newcommand{\cwlm}{\(C_{\textrm{WLM}}\)}
 \newcommand{\CTAB}{C\textsubscript{16}TAB}
 \newcommand{\TTAB}{C\textsubscript{14}TAB}
 \newcommand{\DTAB}{C\textsubscript{12}TAB}
 \newcommand{\CTDTAB}{C\textsubscript{16,14,12}TAB}
 \newcommand{\DHmic}{\(\Delta H^0_{\textrm{mic}}\)}
 \newcommand{\DHwlm}{\(\Delta H^0_{\textrm{WLM}}\)}
+\newcommand{\figheight}{0.3\textheight}
+% todo: pensar em trocar o tamanho de várias figuras por isto.
+% se for figure, height=\figheight,
+% se for subfigure, somente \figheight
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
