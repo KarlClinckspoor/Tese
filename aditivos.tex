@@ -281,23 +281,28 @@
 
 		Comparando-se as figuras \ref{fig:cwlm_dhwlm_por_n} e \ref{fig:cmc_dh_por_n}, pode-se observar que há uma correlação entre a formação de micelas gigantes e as concentrações críticas. Aparentemente há um grupo composto de 1,3BD, DMSO e ureia. Glicerina e sacarose se comportam bastante diferentemente, sendo que sacarose possui o comportamento mais diferenciado, não havendo mudança na \cwlm{} e uma diminuição da \cmc{}.
 		
-		Agrupamentos desse tipo não podem ser feitos com as entalpias, que parecem ter valores bastante variáveis. Porém, é necessário enfatizar que os valores de entalpia obtidos para a formação de micelas gigantes não são tão confiáveis quanto os de formação de micelas esféricas, já que estendeu-se a faixa de concentração de titulante, de modo a obter o perfil calorimétrico completo de todas as amostras. Isso reduz a precisão nos valores de entalpia iniciais. Esse problema possui menor relevância para \cwlm{}, que foi definida como sendo o ponto mínimo da curva, não uma subtração de duas regiões pré e pós-micelar. Apesar disso, o padrão observado para as mudanças de entalpia na presença de ureia podem ser explicadas pelo aumento da constante dielétrica do meio, como previamente mencionado.
-
+		Agrupamentos desse tipo não podem ser feitos com as entalpias, que parecem ter valores bastante variáveis. Porém, é necessário enfatizar que os valores de entalpia obtidos para a formação de micelas gigantes não são tão confiáveis quanto os de formação de micelas esféricas. Para obter os perfis completos de formação de micelas gigantes, foi necessário aumentar a concentração de surfactante na seringa. Isso reduz a precisão na região inicial do perfil, onde é calculado o \DHwlm. Além disso, a resolução dos entalpogramas obtidos pelo calorímetro PEAQ é menor (39 pontos) do que no VP-ITC (90 pontos). Esse problema possui menor relevância para \cwlm{}, que foi definida como sendo o ponto mínimo da curva, não uma subtração de duas regiões pré e pós-micelar.  Apesar disso, o padrão observado para as mudanças de entalpia na presença de ureia podem ser explicadas pelo aumento da constante dielétrica do meio, como previamente mencionado.
+	
+		É interessante notar que as figuras que comparam as concentrações de formação e entalpias com o índice de refração (Figs. \ref{fig:cwlm_dhwlm_por_n} e \ref{fig:cwlm_dhwlm_por_conc}, \ref{fig:cmc_dh_por_n} e \ref{fig:cmc_dh_por_conc}) e a concentração de aditivo são bastante semelhantes. Isso se deve à dependência praticamente linear em baixas concentrações do índice de refração com a concentração de aditivo na escala mássica, um dos motivos para essa escalar ser escolhida.
+		
 		\FloatBarrier
 		
 		\section{Constante dielétrica}
 		
 		A constante dielétrica está relacionada ao grau de dissociação de espécies iônicas em solução. Quanto maior a constante, maior o grau de dissociação. Isso resulta, por exemplo, no aumento da \cmc{} pois há menos contraíons para reduzir a carga superficial micelar. A contribuição desse parâmetro já havia sido levantada em um estudo anterior. % todo: ref.
-		A figura \ref{fig:cte_dieletrica} mostra como a constante dielétrica varia em função da concentração de aditivo. 
+		A figura \ref{fig:cte_dieletrica} mostra como a constante dielétrica varia em função da concentração de aditivo. %todo: refs
+
 		
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/propriedades/cte_dieletrica}
-			\caption{Constante dielétrica em função da concentração de aditivo}
+			\caption{Constante dielétrica em função da concentração de aditivo}  % todo: colocar quais são a 20°C e quais a 25°C
 			\label{fig:cte_dieletrica}
 		\end{figure}
 	
-		Da mesma maneira que o índice de refração, as concentrações micelares e entalpias dos processos serão comparados com a constante dielétrica do meio para tentar observar algum padrão.
+		Não há variação entre o comportamento da sacarose e glicerina, e o DMSO praticamente não afeta a constante dielétrica na faixa de concentração estudada. O 1,3BD possui sempre os menores valores de \(\varepsilon\), o que indica que nessas soluções há a menor dessorção de contraíons da superfície micelar. O aditivo que afeta a constante dielétrica mais diferentemente dos outros é a ureia, que aumenta \(\varepsilon\). Isso se mostrará crucial para explicar seu comportamento diferenciado.
+	
+		Da mesma maneira que o índice de refração, os parâmetros dos ITCs serão comparados com a constante dielétrica do meio para tentar observar algum padrão.
 		
 		\begin{figure}[h]
 			\begin{subfigure}[t]{0.5\textwidth}
@@ -330,15 +335,158 @@
 				\caption{\DHmic}
 				\label{fig:dh_por_eps}
 			\end{subfigure}
-			
-			\caption{\cmc{} e \DHmic{} em função da constante dielétrica \(\varepsilon\).}
+			\caption{\cmc{} e \DHmic{} em função da constante dielétrica \(\varepsilon\) do meio.}
 			\label{fig:cmc_dh_por_eps}
 		\end{figure}
 		
+		Algumas observações podem ser feitas quanto aos resultados observados. Aparentemente todos os aditivos possuem uma divergência única do ponto inicial, água, não havendo muita correlação entre eles, com exceção da \DHmic{}, onde a glicerina, sacarose e 1,3BD aparentam seguir uma tendência semelhante. A ureia, em todos os casos, diverge pois seu valor de constante dielétrica aumenta. O DMSO não afeta grandemente \(\varepsilon\), mas tanto as concentrações quanto entalpias são fortemente afetadas pelo aumento de sua concentração. Isso indica que a constante dielétrica, por si só, também não consegue explicar os fenômenos observados. Porém, ela é necessária para capturar a divergência observada com a ureia.
+		
+		% todo: mencionar reologia na seção do epsilon
+		
 		\FloatBarrier
-		\section{Parâmetro de Gordon}
+		\section{Coesão do solvente e Parâmetro de Gordon}  % todo: falar sobre estruturação do solvente aqui
+		
+		Devido à incapacidade dos outros parâmetros explicarem o comportamento reológico e calorimétrico, procuramos por outras propriedades que possam estar relacionadas. Vendo trabalhos anteriores, pensamos na coesão do solvente para explicar o comportamento reológico e calorimétrico. Solventes bastante estruturados, como a água, diminuem a \cmc{} devido ao aumento da penalidade entrópica. Além disso, estipulamos que solventes melhor estruturados devem dificultar a locomoção das micelas gigantes durante os processos de reptação, aumentando a viscosidade aparente. A partir disso, foram coletadas informações sobre a coesão dos solventes utilizados.
+		
+		Glicerina na concentração de 43\% m/m possui uma probabilidade reduzida de ligações de hidrogênio, portanto a percolação da rede de ligações de hidrogênio é reduzida. Já açúcares são desestruturadores em baixas concentrações e estruturadores em altas. Para a glicose, a estruturação acontece em torno de 25-30\% m/m, já outros estudos mencionam 37\% m/m. Sacarose foi descrita em trabalhos anteriores como aditivo para aumento da separação interlamelar, semelhante à glicerina. É possível que a sacarose afete as micelas e não as bicamadas devido à maior área de contato das micelas com o solvente. Além disso, a reologia observa a dinâmica das micelas ao fluir pelo solvente, já a distância interlamelar é uma propriedade estática, e seria melhor comparada com uma distância intermicelar média.
+		
+		DMSO foi demonstrado como um agente desestruturador em altas concentrações e estruturador em baixas, e essas propriedades foram descritas como fracas frente à capacidade do DMSO em solubilizar moléculas de surfactante. % todo: o que significa isso exatamente?
+		Já o papel da ureia é inconclusivo de acordo com a literatura, com vários mecanismos propostos em estudos. % todo: mencionar os três mecanismos.
+		
+		Para seguir a lógica das discussões na outra seção, é necessário levantar uma propriedade que traduza o conceito de coesão do solvente para um número mensurável. O parâmetro de Gordon já foi utilizado na literatura com esse propósito, então ele será utilizado neste trabalho. Porém, é necessário reforçar que esse parâmetro não traduz perfeitamente o conceito de estruturação, e será utilizado mais como uma maneira para facilitar a discussão. O parâmetro de Gordon é definido pela Eq. \ref{eqn:Gordon}, onde \(\gamma\) é a tensão superficial do líquido e \(\bar{V}_m\) é o volume molar médio do líquido, definido pela Eq. \ref{eqn:volume_molar_médio}. 
+		
+		\begin{equation}
+			G = \dfrac{\gamma}{\bar{V}_m^{\frac{1}{3}}}
+			\label{eqn:Gordon}
+		\end{equation}
+		
+		\begin{equation}
+			\bar{V}_m = \bar{V}_{m_{1}}x_1 + \bar{V}_{m_{2}}x_2
+			\label{eqn:volume_molar_médio}
+		\end{equation}
+		
+		Amostras com as composições desejadas foram preparadas e suas tensões superficiais foram medidas em quintuplicatas. As tensões obtidas estão na figura \ref{fig:tensao_superficial_por_conc} e os valores do parâmetro de Gordon obtidos estão na figura \ref{fig:param_gordon_por_conc}.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/propriedades/tensao_superficial}
+			\caption{Tensão superficial de misturas binárias dos aditivos em água}
+			\label{fig:tensao_superficial_por_conc}
+		\end{figure}
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/propriedades/param_gordon}
+			\caption{Parâmetro de Gordon das misturas binárias dos aditivos em água}
+			\label{fig:param_gordon_por_conc}
+		\end{figure}
+		
+		Podemos observar que os dois gráficos possuem basicamente o mesmo formato. A maior alteração ocorre devido à divisão pelo volume molar, onde a alta massa da sacarose mascara o aumento de sua tensão superficial, tornando os valores de \(G\) constantes. Essa divisão também diferencia as curvas de ureia e sacarose.
+		
+		Pelo posição relativa das retas observadas para cada aditivo, podemos construir a seguinte correlação de estruturação do solvente:
+		
+		\begin{equation*}
+			\textrm{1,3BD} < \textrm{DMSO} < \textrm{Glicerina} < \textrm{Ureia} < \textrm{Sacarose}
+		\end{equation*}
+		
+		Essa sequência possui grande correlação com o comportamento reológico (com exceção da ureia). 1,3BD, que possui a menor estruturação, reduz mais fortemente a viscosidade das micelas. Já a sacarose praticamente não afetou a estruturação do solvente, e também não afetou muito a viscosidade. Como mencionado, a ureia é uma exceção devido à grande alteração na constante dielétrica, que deve dessorver moléculas de salicilato das micelas e aumentar sua carga. Isso faz com que o mecanismo principal de relaxação seja a reptação na faixa de concentração estudada, então a viscosidade é sempre alta.
+		
+		Para compreender o efeito do parâmetro de Gordon nas titulações, foram criadas figuras comparativas, da mesma maneira que nas seções anteriores. Os comparativos para a formação de micelas gigantes e micelas esféricas estão nas figuras \ref{fig:cwlm_dhwlm_por_g} e \ref{fig:cmc_dh_por_g}, respectivamente.
+		
+		\begin{figure}[h]
+			\begin{subfigure}[t]{0.5\textwidth}
+				\centering
+				\includegraphics[width=\linewidth]{imagens/itc/Cwlm_por_G}
+				\caption{\cwlm}
+				\label{fig:cwlm_por_g}
+			\end{subfigure} %
+			\begin{subfigure}[t]{0.5\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{imagens/itc/DHwlm_por_G}
+				\caption{\DHwlm}
+				\label{fig:dhwlm_por_g}
+			\end{subfigure}
+			\caption{\cwlm{} e \DHwlm{} em função do parâmetro de Gordon}
+			\label{fig:cwlm_dhwlm_por_g}
+		\end{figure}
+		
+		\begin{figure}[h]
+			\begin{subfigure}[t]{0.5\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{imagens/itc/CMC_por_G}
+				\caption{\cmc}
+				\label{fig:cmc_por_g}
+			\end{subfigure} %
+			\begin{subfigure}[t]{0.5\textwidth}
+				\centering
+				\includegraphics[width=\linewidth]{imagens/itc/DH_por_G}
+				\caption{\DHmic}
+				\label{fig:dh_por_g}
+			\end{subfigure}
+			\caption{\cmc{} e \DHmic{} em função do parâmetro de Gordon}
+			\label{fig:cmc_dh_por_g}
+		\end{figure}
+		
+		Pela inclinação das retas observadas nas figuras \ref{fig:cwlm_por_g} e \ref{fig:cmc_por_g}, podemos observar o quão forte é o efeito de uma mudança no parâmetro de Gordon do aditivo específico na concentração de micelização. A ureia possui o efeito mais forte, onde uma pequena variação de \(G\) aumentou muito a \cmc, porém isso se deve principalmente ao aumento de \(\varepsilon\). Sacarose não afetou a \cwlm{} e diminuiu a \cmc, pelas razões já discutidas. Os outros três aditivos seguem uma tendência semelhante, onde uma diminuição de \(G\) resulta no aumento gradativo de \cwlm{} e \cmc. Pela inclinação, 1,3BD possui o efeito mais brando na \cwlm, mas se a concentração de aditivo for levada em consideração também, vemos que seu efeito é bastante forte, atingindo a \cwlm{} de 4 \mM{} com 25\% de aditivo, comparado com glicerina, que atingiu essa concentração com 60\%. Interessantemente, até 20\%, o efeito do 1,3BD na \cmc{} é bastante pequeno, menor que o DMSO, e há um salto em 30\%, equiparando-se ao DMSO.
+				
+		As \DHwlm{} não possuem uma ordenação clara. Ureia aparenta ter comportamentos divergentes entre soluções de concentrações baixas (\(<\) 15\%) e altas (\(\ge\) 15\%). Já a \DHmic{} possui padrões, como os valores de ureia agrupados, pois não há salicilato para ser dessorvido. Glicerina e DMSO novamente possuem um comportamento relativemente próximo, e 1,3BD tem o menor efeito na entalpia por variação de \(G\). A sacarose diminui a \DHmic{} e a \cmc{}, apesar de não afetar \(G\), indicando que seu papel está relacionado com a interação com as micelas, não somente seu efeito no solvente.
+		
+		A correlação do parâmetro de Gordon é especialmente forte com o comportamento reológico, e há algumas correlações que podem ser feitas com a calorimetria. Deve ser enfatizado que esse parâmetro, por si só, também não explica o comportamento completo. É necessário combinar todas essas considerações para entender o sistema.
+		\FloatBarrier
+		
 		\section{Interação dos aditivos com a superfície micelar}
+		% todo: pensar em desmembrar essas considerações e espalhar nas outras seções
+		
+		Uma propriedade importante que deve receber enfoque é a interação dos aditivos com a superfície micelar. Aditivos que interagem fortemente afetam muito os processos de autoassociação, como demonstra o salicilato de sódio. Efeitos semelhantes, mas menos intensos, podem complementar os parâmetros levantados até o momento.
+		
+		Estudos da influência de álcoois lineares na viscosidade de micelas gigantes de C\textsubscript{16}TASal e CPySal mostraram que quando álcoois de cadeia curta interagiam com a superfície micelar, agiam como um cossolvente e diminuiam o comprimento das micelas, logo diminuindo sua viscosidade. Caso 1,3-BD se comporte de maneira similar, esse é mais um efeito que pode resultar nas quedas fortes da viscosidade. Um estudo mostra que o 1,3-BD interage como cosurfactante em cristais líquidos, o que reforça a teoria de seu efeito em micelas gigantes. Além disso, o 1,3BD pode interagir com os grupos metil na superfície micelar, diminuindo a atração entre as micelas que ocorre devido a esses grupos, o que diminuiria a viscosidade. A glicerina, por ser mais polar, possivelmente não tem o mesmo efeito que 1,3BD, logo é menos eficaz em diminuir a viscosidade ou aumentar a \cmc. O DMSO pode se solubilizar na superfície micelar e interagir com os grupos metila, pois é menos polar que os outros aditivos, e isso pode resultar em uma diminuição maior na viscosidade. 
+		
+		%Ureia interage fortemente com a superfície micelar, mas não como agente intercalante. % todo: verificar o artigo na ACS Omega sobre o que eu falo sobre isso.
+	%	A concentração de ureia na superfície é cerca de 10-30\% menor do que no seio da solução. 
+		
+		% todo: refs
+		A sacarose diminui a \cmc{} de outros surfactantes, como SDS, CTAB e Brij 35, pela interação de suas hidroxilas com a superfície micelar reduzindo a repulsão, e pela estruturação do solvente. Logo, a diminuição de \(n\) e \(\varepsilon\), que deveriam aumentar a \cwlm{}, são compensadas e a \cwlm{} é mantida. Não há uma diminuição de \cwlm, como houve de \cmc, pois o salicilato interage mais fortemente com a superfície micelar, deslocando as hidroxilas da sacarose, logo seu efeito é principalmente na estruturação do solvente.
+
+		\section{Correlações simultâneas dos parâmetros com \cmc{} e \DHmic}
+		
+		% todo: colocar os ajustes feitos pelo método dos mínimos quadrados ordinários
+		
+		Até este momento, foram feitas correlações dos parâmetros do solvente com as propriedades calorimétricas mensuradas somente um a um, com raros casos explicados considerando-se outros parâmetros. Seria interessante tentar correlacionar todas essas propriedades simultaneamente, ou seja, realizar uma análise multivariada. Para isso, foi utilizado o software Pirouette para criar as correlações.
+		
+		\begin{subequations}
+			\begin{align}
+				\textrm{CMC} &= -7,206G + 0,225\varepsilon + 27,955n-31,871  \label{eqn:PLS_cmc} \\
+				\textrm{CMC}_{\textrm{AS}} &= -0,941G_\textrm{AS} + 0,864\varepsilon_\textrm{AS} +0,319n_\textrm{AS} \label{eqn:PLS_cmc_AS}
+			\end{align}
+		\end{subequations}
+		
+		\begin{subequations}
+			\begin{align}
+				\Delta H_\textrm{mic}^0 &= 7,64G + 0,395\varepsilon-119n+101  \label{eqn:PLS_dh} \\
+				\Delta H_\textrm{mic, AS}^0 &= 0,300G_\textrm{AS} + 0,458\varepsilon_\textrm{AS} - 0,414n_\textrm{AS}  \label{eqn:PLS_dh_AS}
+			\end{align}
+		\end{subequations}
+		
+%		\begin{equation}
+%			\textrm{CMC} = -7,206G + 0,225\varepsilon + 27,955n-31,871
+%		\end{equation}
+%		\begin{equation}
+%			\textrm{CMC}_{\textrm{AS}} = -0,941G_\textrm{AS} + 0,864\varepsilon_\textrm{AS} +0,319n_\textrm{AS}
+%		\end{equation}
+		
+%		\begin{equation}
+%			\Delta H_\textrm{mic}^0 = 7,64G + 0,395\varepsilon-119n+101
+%		\end{equation}
+%		\begin{equation}
+%			\Delta H_\textrm{mic, AS}^0 = 0,300G_\textrm{AS} + 0,458\varepsilon_\textrm{AS} - 0,414n_\textrm{AS}
+%		\end{equation}
+		
+		% todo: fazer em Python e comparar direito. Deu diferente...
+		% todo: encontrar o R2 desses ajustes
+		
 		\section{Decomposição em propriedades fundamentais}
-	\chapter{Correlações entre os parâmetros e as propriedades}
-		\section{Reologia}
-		\section{Calorimetria}
+		TODO
+		
+
+		
+		
