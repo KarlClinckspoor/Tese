@@ -448,8 +448,7 @@
 		A sacarose diminui a \cmc{} de outros surfactantes, como SDS, CTAB e Brij 35, pela interação de suas hidroxilas com a superfície micelar reduzindo a repulsão, e pela estruturação do solvente. Logo, a diminuição de \(n\) e \(\varepsilon\), que deveriam aumentar a \cwlm{}, são compensadas e a \cwlm{} é mantida. Não há uma diminuição de \cwlm, como houve de \cmc, pois o salicilato interage mais fortemente com a superfície micelar, deslocando as hidroxilas da sacarose, logo seu efeito é principalmente na estruturação do solvente.
 
 		\section{Correlações simultâneas dos parâmetros com \cmc{} e \DHmic}
-		
-		% todo: colocar os ajustes feitos pelo método dos mínimos quadrados ordinários
+		% todo: colocar que os gráficos resultantes são 4D
 		
 		Até este momento, foram feitas correlações dos parâmetros do solvente com as propriedades calorimétricas mensuradas somente um a um, com raros casos explicados considerando-se outros parâmetros. Seria interessante tentar correlacionar todas essas propriedades simultaneamente, ou seja, realizar uma análise multivariada.
 		
@@ -462,7 +461,7 @@
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/itc/PLS_cmc_pirouette}
-			\caption{Comportamento do modelo de \cmc{} criado, mostrando a correlação entre os valores observados e previstos. A reta mostra onde o modelo prevê os dados exatamente.}
+			\caption{Comportamento do modelo de \cmc{} criado, mostrando a correlação entre os valores observados e previstos. A reta preta tracejada o modelo perfeito, onde há uma relação 1:1 entre o observado e o previsto. A reta vermelha mostra o modelo criado.}
 			\label{fig:pls_cmc_pirouette}
 		\end{figure}
 	
@@ -476,9 +475,9 @@
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/itc/PLS_dh_pirouette}
-			\caption{Comportamento do modelo de \DHmic{} criado, mostrando a correlação entre os valores observados e previstos. A reta mostra onde o modelo prevê os dados exatamente.}
+			\caption{Comportamento do modelo de \DHmic{} criado, mostrando a correlação entre os valores observados e previstos. A reta preta tracejada o modelo perfeito, onde há uma relação 1:1 entre o observado e o previsto. A reta vermelha mostra o modelo criado, junto com a qualidade do ajuste.}
 			\label{fig:pls_dh_pirouette}
-		\end{figure}  % todo: colocar o padrão e micelar na notação do Delta H
+		\end{figure} 
 	
 %		\begin{figure}[h]
 %			\centering
@@ -495,7 +494,7 @@
 			\label{lst:pls_cmc_python}
 		\end{listing}
 		
-		O resultado desse modelo é um conjunto de coeficientes que, quando multiplicados pelos parâmetros escolhidos (\(n\), \(\varepsilon\), \(G\)), resultam em alguma das propriedades (\cmc, \DHmic). O vetor fornecido não possui unidades pois os dados foram autoescalados, então é necessário desfazer o autoescalamento para obter uma equação que utiliza coeficientes com as unidades utilizadas neste trabalho. As equações \ref{eqn:PLS_cmc} e \ref{eqn:PLS_dh} possuem tanto as relações em unidades usuais (a) quanto autoescaladas (b) para a \cmc{} e \DHmic, respectivamente.
+		O resultado desse modelo é um conjunto de coeficientes que, quando multiplicados pelos parâmetros escolhidos (\(n\), \(\varepsilon\), \(G\)), resultam em alguma das propriedades (\cmc, \DHmic). O vetor fornecido não possui unidades pois os dados foram autoescalados, então é necessário desfazer o autoescalamento para obter uma equação que utiliza coeficientes com as unidades utilizadas neste trabalho. As equações \ref{eqn:PLS_cmcs} e \ref{eqn:PLS_dhs} possuem tanto as relações em unidades usuais (a) quanto autoescaladas (b) para a \cmc{} e \DHmic, respectivamente.
 				
 		\begin{subequations}
 			\begin{align}
@@ -510,11 +509,66 @@
 				\Delta H_\textrm{mic}^0 &= 7,64G + 0,395\varepsilon-119n+101  \label{eqn:PLS_dh} \\
 				\Delta H_\textrm{mic, AS}^0 &= 0,300G_\textrm{AS} + 0,458\varepsilon_\textrm{AS} - 0,414n_\textrm{AS}  \label{eqn:PLS_dh_AS}
 			\end{align}
+			\label{eqn:PLS_dhs}
 		\end{subequations}
 		
-
-		% todo: fazer em Python e comparar direito. Deu diferente...
-		% todo: encontrar o R2 desses ajustes
+		\FloatBarrier
+		\subsection{OLS}
+		
+		Outra metodologia que pode ser utilizada para realizar essas correlações é a dos mínimos quadrados ordinários (\emph{ordinary least squares}, OLS). Esse método é mais simples do que o PLS. Neste caso, o ajuste é feito reduzindo-se os mínimos quadrados da equação \ref{eqn:ols_modelo_cmc}.
+		
+		\begin{equation}
+			\textrm{CMC} = a_G \cdot G + a_\varepsilon \cdot \varepsilon + a_n \cdot n + e
+			\label{eqn:ols_modelo_cmc}
+		\end{equation}
+		
+		Esse tipo de ajuste é igual ao ajuste de uma equação linear, porém com mais de uma variável independente. Foram feitos ajustes por mínimos quadrados ordinários tanto para a previsão da \cmc{} quanto a \DHmic. Os resultados dos ajustes estão nas figuras \ref{fig:ols_cmc_python} e \ref{fig:ols_dh_python}.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/itc/ols_cmc_python}
+			\caption{}
+			\label{fig:ols_cmc_python}
+		\end{figure}
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/itc/ols_dh_python}
+			\caption{}
+			\label{fig:ols_dh_python}
+		\end{figure}
+		
+		Para realizar as análises e criar a figura \ref{fig:ols_cmc_python}, utilizou-se o código \ref{lst:ols_cmc_python}.
+		
+		\begin{listing}[h]
+			\inputminted{python}{./python/ols_cmc_statsmodels.py}
+			\caption{Código utilizado para gerar a dependência de \cmc{} com os parâmetros estudados, resultando na Fig. \ref{fig:ols_cmc_python}. A tabela de dados utilizada possui em cada linha as misturas utilizadas, suas concentrações em \% m/m, as variáveis dependentes (\cmc{} e \DHmic) e as variáveis independentes (\(n\), \(\varepsilon\), \(G\)).}
+			\label{lst:ols_cmc_python}
+		\end{listing}
+		
+		Os modelos obtidos estão nas equações \ref{eqn:ols_cmcs} e \ref{eqn:ols_dhs}. O pacote fornece os parâmetros autoescalados. Para convertê-los em parâmetros nas unidades tradicionais, é necessário desescalá-los, o que foi feito com o código da listagem \ref{lst:ols_cmc_conversao}.
+		
+		\begin{subequations}
+			\begin{align}
+			\textrm{CMC}               & = -7,073G              + 0,239\varepsilon             + 43,5n              -54,67  \label{eqn:ols_cmc}     \\
+			\textrm{CMC}_{\textrm{AS}} & = -0,917G_\textrm{AS}  + 0,919\varepsilon_\textrm{AS} +0,497n_\textrm{AS}          \label{eqn:ols_cmc_AS}
+			\end{align}
+			\label{eqn:ols_cmcs}
+		\end{subequations}
+		
+		\begin{subequations}
+			\begin{align}
+			\Delta H_\textrm{mic}^0     &= 6,29G              + 0,372\varepsilon             - 138n               + 132  \label{eqn:ols_dh} \\
+			\Delta H_\textrm{mic, AS}^0 &= 0,258G_\textrm{AS} + 0,432\varepsilon_\textrm{AS} - 0,480n_\textrm{AS}        \label{eqn:ols_dh_AS}
+			\end{align}
+			\label{eqn:ols_dhs}
+		\end{subequations}
+		
+		\begin{listing}[h]
+			\inputminted{python}{./python/ols_cmc_conversão.py}
+			\caption{Código utilizado para transformar os parâmetros dos ajustes de autoescalados para valores habituais.}
+			\label{lst:ols_cmc_conversao}
+		\end{listing}
 		
 		\FloatBarrier
 		\section{Decomposição em propriedades fundamentais}
