@@ -451,13 +451,58 @@
 		
 		% todo: colocar os ajustes feitos pelo método dos mínimos quadrados ordinários
 		
-		Até este momento, foram feitas correlações dos parâmetros do solvente com as propriedades calorimétricas mensuradas somente um a um, com raros casos explicados considerando-se outros parâmetros. Seria interessante tentar correlacionar todas essas propriedades simultaneamente, ou seja, realizar uma análise multivariada. Para isso, foi utilizado o software Pirouette para criar as correlações.
+		Até este momento, foram feitas correlações dos parâmetros do solvente com as propriedades calorimétricas mensuradas somente um a um, com raros casos explicados considerando-se outros parâmetros. Seria interessante tentar correlacionar todas essas propriedades simultaneamente, ou seja, realizar uma análise multivariada.
 		
+		\subsection{PLS}
+		
+		Foram feitas análises de PLS (\emph{Partial Least Squares}) com o índice de refração, constante dielétrica e parâmetro de Gordon para tentar prever a \cmc{} e a \DHmic. Utilizou-se dois componentes principais (de 3) em ambos os casos, os dados foram autoescalados de modo a garantir que todas as parâmetros tenham o mesmo peso no modelo final. Utilizou-se validação cruzada com 1 elemento, e sem validação cruzada, e o vetor de previsão permaneceu igual. Essas análises foram realizadas com o software Pirouette 3.11, e comparadas com uma análise foi feita utilizando o objeto \emph{PLSRegression} do pacote \emph{sklearn}, em Python. Esse pacote é livre, ao contrário do Pirouette, então qualquer um pode reproduzir essas análises. Os resultados foram absolutamente iguais, então não serão mostradas as figuras resultantes de ambos os métodos, somente daqueles obtidos no Pirouette. As retas de \cmc{} e \DHmic{} medidos por \cmc{} e \DHmic{} observados estão presentes nas figuras \ref{fig:pls_cmc_pirouette} e \ref{fig:pls_dh_pirouette}, respectivamente.
+		
+		% todo: alterar os eixos para ficarem consistentes. Agrupar as figuras da melhor maneira. Pensar se eu devo mostrar as quatro figuras, ou eu mostro só as feitas pelo pirouette e depois falo que as outras foram obtidas pelo código depois, e assim é possível reproduzir os resultados.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/itc/PLS_cmc_pirouette}
+			\caption{Comportamento do modelo de \cmc{} criado, mostrando a correlação entre os valores observados e previstos. A reta mostra onde o modelo prevê os dados exatamente.}
+			\label{fig:pls_cmc_pirouette}
+		\end{figure}
+	
+%		\begin{figure}[h]
+%			\centering
+%			\includegraphics[width=0.7\textwidth]{imagens/itc/PLS_cmc_python}
+%			\caption{}
+%			\label{fig:pls_cmc_python}
+%		\end{figure}  
+	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/itc/PLS_dh_pirouette}
+			\caption{Comportamento do modelo de \DHmic{} criado, mostrando a correlação entre os valores observados e previstos. A reta mostra onde o modelo prevê os dados exatamente.}
+			\label{fig:pls_dh_pirouette}
+		\end{figure}  % todo: colocar o padrão e micelar na notação do Delta H
+	
+%		\begin{figure}[h]
+%			\centering
+%			\includegraphics[width=0.7\textwidth]{imagens/itc/PLS_dh_python}
+%			\caption{}
+%			\label{fig:pls_dh_python}
+%		\end{figure} 
+		
+		O código para fazer análise de PLS em Python, e uma figura semelhante à figura \ref{fig:pls_cmc_pirouette} está na listagem \ref{lst:pls_cmc_python}.
+		
+		\begin{listing}[h]
+			\inputminted{python}{./python/pls_cmc_sklearn.py}
+			\caption{Código utilizado para gerar a dependência de \cmc{} com os parâmetros estudados, resultando na Fig. \ref{fig:pls_cmc_pirouette}. A tabela de dados utilizada possui em cada linha as misturas utilizadas, suas concentrações em \% m/m, as variáveis dependentes (\cmc{} e \DHmic) e as variáveis independentes (\(n\), \(\varepsilon\), \(G\))}
+			\label{lst:pls_cmc_python}
+		\end{listing}
+		
+		O resultado desse modelo é um conjunto de coeficientes que, quando multiplicados pelos parâmetros escolhidos (\(n\), \(\varepsilon\), \(G\)), resultam em alguma das propriedades (\cmc, \DHmic). O vetor fornecido não possui unidades pois os dados foram autoescalados, então é necessário desfazer o autoescalamento para obter uma equação que utiliza coeficientes com as unidades utilizadas neste trabalho. As equações \ref{eqn:PLS_cmc} e \ref{eqn:PLS_dh} possuem tanto as relações em unidades usuais (a) quanto autoescaladas (b) para a \cmc{} e \DHmic, respectivamente.
+				
 		\begin{subequations}
 			\begin{align}
-				\textrm{CMC} &= -7,206G + 0,225\varepsilon + 27,955n-31,871  \label{eqn:PLS_cmc} \\
-				\textrm{CMC}_{\textrm{AS}} &= -0,941G_\textrm{AS} + 0,864\varepsilon_\textrm{AS} +0,319n_\textrm{AS} \label{eqn:PLS_cmc_AS}
+				\textrm{CMC}               & = -7,206G              + 0,225\varepsilon             + 27,955n -31,871  \label{eqn:PLS_cmc}     \\
+				\textrm{CMC}_{\textrm{AS}} & = -0,941G_\textrm{AS}  + 0,864\varepsilon_\textrm{AS} +0,319n_\textrm{AS} \label{eqn:PLS_cmc_AS}
 			\end{align}
+			\label{eqn:PLS_cmcs}
 		\end{subequations}
 		
 		\begin{subequations}
@@ -467,23 +512,11 @@
 			\end{align}
 		\end{subequations}
 		
-%		\begin{equation}
-%			\textrm{CMC} = -7,206G + 0,225\varepsilon + 27,955n-31,871
-%		\end{equation}
-%		\begin{equation}
-%			\textrm{CMC}_{\textrm{AS}} = -0,941G_\textrm{AS} + 0,864\varepsilon_\textrm{AS} +0,319n_\textrm{AS}
-%		\end{equation}
-		
-%		\begin{equation}
-%			\Delta H_\textrm{mic}^0 = 7,64G + 0,395\varepsilon-119n+101
-%		\end{equation}
-%		\begin{equation}
-%			\Delta H_\textrm{mic, AS}^0 = 0,300G_\textrm{AS} + 0,458\varepsilon_\textrm{AS} - 0,414n_\textrm{AS}
-%		\end{equation}
-		
+
 		% todo: fazer em Python e comparar direito. Deu diferente...
 		% todo: encontrar o R2 desses ajustes
 		
+		\FloatBarrier
 		\section{Decomposição em propriedades fundamentais}
 		TODO
 		
