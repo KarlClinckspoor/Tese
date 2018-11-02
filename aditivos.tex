@@ -446,7 +446,9 @@
 		
 		% todo: refs
 		A sacarose diminui a \cmc{} de outros surfactantes, como SDS, CTAB e Brij 35, pela interação de suas hidroxilas com a superfície micelar reduzindo a repulsão, e pela estruturação do solvente. Logo, a diminuição de \(n\) e \(\varepsilon\), que deveriam aumentar a \cwlm{}, são compensadas e a \cwlm{} é mantida. Não há uma diminuição de \cwlm, como houve de \cmc, pois o salicilato interage mais fortemente com a superfície micelar, deslocando as hidroxilas da sacarose, logo seu efeito é principalmente na estruturação do solvente.
-
+		
+		% todo: pensar em colocar uma seção falando sobre o DeltaG.
+		
 		\section{Correlações simultâneas dos parâmetros com \cmc{} e \DHmic}
 		% todo: colocar que os gráficos resultantes são 4D
 		
@@ -454,37 +456,25 @@
 		
 		\subsection{PLS}
 		
-		Foram feitas análises de PLS (\emph{Partial Least Squares}) com o índice de refração, constante dielétrica e parâmetro de Gordon para tentar prever a \cmc{} e a \DHmic. Utilizou-se dois componentes principais (de 3) em ambos os casos, os dados foram autoescalados de modo a garantir que todas as parâmetros tenham o mesmo peso no modelo final. Utilizou-se validação cruzada com 1 elemento, e sem validação cruzada, e o vetor de previsão permaneceu igual. Essas análises foram realizadas com o software Pirouette 3.11, e comparadas com uma análise foi feita utilizando o objeto \emph{PLSRegression} do pacote \emph{sklearn}, em Python. Esse pacote é livre, ao contrário do Pirouette, então qualquer um pode reproduzir essas análises. Os resultados foram absolutamente iguais, então não serão mostradas as figuras resultantes de ambos os métodos, somente daqueles obtidos no Pirouette. As retas de \cmc{} e \DHmic{} medidos por \cmc{} e \DHmic{} observados estão presentes nas figuras \ref{fig:pls_cmc_pirouette} e \ref{fig:pls_dh_pirouette}, respectivamente.
-		
-		% todo: alterar os eixos para ficarem consistentes. Agrupar as figuras da melhor maneira. Pensar se eu devo mostrar as quatro figuras, ou eu mostro só as feitas pelo pirouette e depois falo que as outras foram obtidas pelo código depois, e assim é possível reproduzir os resultados.
+		Foram feitas análises de PLS (\emph{Partial Least Squares}) com o índice de refração, constante dielétrica e parâmetro de Gordon para tentar prever a \cmc{} e a \DHmic. Utilizou-se dois componentes principais (de 3) em ambos os casos, os dados foram autoescalados de modo a garantir que todas as parâmetros tenham o mesmo peso no modelo final. Utilizou-se validação cruzada com 1 elemento, e sem validação cruzada, e o vetor de previsão permaneceu igual. Essas análises foram realizadas com o software Pirouette 3.11, e comparadas com uma análise foi feita utilizando pacote \emph{sklearn}, em Python. Esse pacote é livre, ao contrário do Pirouette, então qualquer um pode reproduzir essas análises. Os resultados foram absolutamente iguais, então não serão mostradas as figuras resultantes de ambos os métodos, somente daqueles obtidos no Pirouette. As retas de \cmc{} e \DHmic{} medidos por \cmc{} e \DHmic{} observados estão presentes nas figuras \ref{fig:pls_cmc_pirouette} e \ref{fig:pls_dh_pirouette}, respectivamente.
 		
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/itc/PLS_cmc_pirouette}
-			\caption{Comportamento do modelo de \cmc{} criado, mostrando a correlação entre os valores observados e previstos. A reta preta tracejada o modelo perfeito, onde há uma relação 1:1 entre o observado e o previsto. A reta vermelha mostra o modelo criado.}
+			\caption{Comportamento do modelo de \cmc{} criado por PLS, mostrando a correlação entre os valores observados e previstos. A reta preta tracejada mostra o modelo perfeito, onde há uma relação 1:1 entre o observado e o previsto. A reta vermelha mostra o modelo criado, junto com a qualidade do ajuste.}
 			\label{fig:pls_cmc_pirouette}
 		\end{figure}
-	
-%		\begin{figure}[h]
-%			\centering
-%			\includegraphics[width=0.7\textwidth]{imagens/itc/PLS_cmc_python}
-%			\caption{}
-%			\label{fig:pls_cmc_python}
-%		\end{figure}  
 	
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/itc/PLS_dh_pirouette}
-			\caption{Comportamento do modelo de \DHmic{} criado, mostrando a correlação entre os valores observados e previstos. A reta preta tracejada o modelo perfeito, onde há uma relação 1:1 entre o observado e o previsto. A reta vermelha mostra o modelo criado, junto com a qualidade do ajuste.}
+			\caption{Comportamento do modelo de \DHmic{} criado por PLS, mostrando a correlação entre os valores observados e previstos. A reta preta tracejada mostra o modelo perfeito, onde há uma relação 1:1 entre o observado e o previsto. A reta vermelha mostra o modelo criado, junto com a qualidade do ajuste.}
 			\label{fig:pls_dh_pirouette}
 		\end{figure} 
-	
-%		\begin{figure}[h]
-%			\centering
-%			\includegraphics[width=0.7\textwidth]{imagens/itc/PLS_dh_python}
-%			\caption{}
-%			\label{fig:pls_dh_python}
-%		\end{figure} 
+		
+		Pelas curvas de ajuste e do modelo ideal de \cmc, podemos observar que as amostras que mais divergem da região central são aquelas com alta concentração de aditivo, provavelmente porque a divergência entre suas propriedades e de água pura são muito grandes, e o processo de autoassociação é muito alterado. Além disso, observamos que todas as medidas com 1,3BD estão distantes da reta 1:1, e as concentrações de 5 a 20 \% m/m estão paralelas. Isso indica que esse aditivo possui um efeito adicional, aparentemente constante nessa faixa de concentração, que resulta em valores de \cmc{} menores do que o esperado, observando somente os parâmetros escolhidos. Possivelmente, esse é consequência da tendência do 1,3BD de interagir na superfície micelar, diminuir a repulsão e facilitar a autoassociação.
+		
+		A previsão de \DHmic{} é melhor que de \cmc, e os compostos que mais fogem do modelo são, novamente, as soluções com maior concentração de aditivo. Em especial, temos 50\% de sacarose, 60\% de glicerina e 30\% de 1,3BD.
 		
 		O código para fazer análise de PLS em Python, e uma figura semelhante à figura \ref{fig:pls_cmc_pirouette} está na listagem \ref{lst:pls_cmc_python}.
 		
@@ -494,28 +484,33 @@
 			\label{lst:pls_cmc_python}
 		\end{listing}
 		
-		O resultado desse modelo é um conjunto de coeficientes que, quando multiplicados pelos parâmetros escolhidos (\(n\), \(\varepsilon\), \(G\)), resultam em alguma das propriedades (\cmc, \DHmic). O vetor fornecido não possui unidades pois os dados foram autoescalados, então é necessário desfazer o autoescalamento para obter uma equação que utiliza coeficientes com as unidades utilizadas neste trabalho. As equações \ref{eqn:PLS_cmcs} e \ref{eqn:PLS_dhs} possuem tanto as relações em unidades usuais (a) quanto autoescaladas (b) para a \cmc{} e \DHmic, respectivamente.
+		O resultado desse modelo é um conjunto de coeficientes que, quando multiplicados pelos parâmetros escolhidos (\(n\), \(\varepsilon\), \(G\)), resultam nas propriedades (\cmc, \DHmic). Os membros do vetor não possuem unidades pois os dados foram autoescalados, então é necessário desfazer o autoescalamento para obter uma equação que utiliza coeficientes com as unidades utilizadas neste trabalho. As equações \ref{eqn:PLS_cmcs} e \ref{eqn:PLS_dhs} possuem tanto as relações em unidades usuais (a) quanto autoescaladas (b) para a \cmc{} e \DHmic, respectivamente. % (\mM, \(kJ.mol^{-1}\), \(J.mol^{-1/3}.m^{-3}\))
 				
 		\begin{subequations}
 			\begin{align}
-				\textrm{CMC}               & = -7,206G              + 0,225\varepsilon             + 27,955n -31,871  \label{eqn:PLS_cmc}     \\
-				\textrm{CMC}_{\textrm{AS}} & = -0,941G_\textrm{AS}  + 0,864\varepsilon_\textrm{AS} +0,319n_\textrm{AS} \label{eqn:PLS_cmc_AS}
+				\textrm{CMC}               & = -7,206G              + 0,225\varepsilon             + 27,955n            - 31,871  \label{eqn:PLS_cmc}     \\
+				\textrm{CMC}_{\textrm{AS}} & = -0,941G_\textrm{AS}  + 0,864\varepsilon_\textrm{AS} + 0,319n_\textrm{AS}           \label{eqn:PLS_cmc_AS}
 			\end{align}
 			\label{eqn:PLS_cmcs}
 		\end{subequations}
 		
 		\begin{subequations}
 			\begin{align}
-				\Delta H_\textrm{mic}^0 &= 7,64G + 0,395\varepsilon-119n+101  \label{eqn:PLS_dh} \\
-				\Delta H_\textrm{mic, AS}^0 &= 0,300G_\textrm{AS} + 0,458\varepsilon_\textrm{AS} - 0,414n_\textrm{AS}  \label{eqn:PLS_dh_AS}
+				\Delta H_\textrm{mic}^0     &= 7,64G              + 0,395\varepsilon             - 119n                + 101  \label{eqn:PLS_dh} \\
+				\Delta H_\textrm{mic, AS}^0 &= 0,300G_\textrm{AS} + 0,458\varepsilon_\textrm{AS} - 0,414n_\textrm{AS}         \label{eqn:PLS_dh_AS}
 			\end{align}
 			\label{eqn:PLS_dhs}
 		\end{subequations}
 		
+		Os coeficientes das equações autoescaladas estão relacionados com o quanto cada parâmetro afeta a propriedade. Em especial, os sinais mostram se um coeficiente aumenta ou diminui a propriedade modelada. Por exemplo, na equação \ref{eqn:PLS_cmc_AS}, o parâmetro de Gordon possui um sinal negativo. Isso significa que um aumento de \(G\) resulta numa diminuição de \cmc, o que está de acordo com a interpretação fornecida para \(G\), que é a coesividade do solvente. Solventes mais coesos resultam em penalidades entrópicas maiores, favorecendo a micelização. A constante dielétrica, por outro lado, promove a dissociação de íons da superfície micelar, logo um aumento de \(\varepsilon\) resulta num aumento de \cmc, pois a repulsão entre os surfactantes é maior. O índice de refração, ou melhor, a diferença entre o índice de refração do meio e do surfactante, está relacionado com a atração entre as moléculas de surfactante. Quanto maior for \(n\), mais próximos são os índices de refração, menor é a atração e maior é a \cmc.
+		
+		A visualização do efeito desses parâmetros na \DHmic é menos trivial. Para interpretar esse fenômeno, é necessário entender a origem da entalpia de micelização. % todo: pesquisar e colocar aqui.
+		Observamos que somente o índice de refração possui um sinal negativo, logo um aumento de \(n\) resulta numa diminuição de \DHmic{} (tornando-se mais negativo). Por outro lado, \(G\) e \(\varepsilon\) mostram que aumentos em seus valores resultam em uma diminuição na amplitude de \DHmic. 
+		
 		\FloatBarrier
 		\subsection{OLS}
 		
-		Outra metodologia que pode ser utilizada para realizar essas correlações é a dos mínimos quadrados ordinários (\emph{ordinary least squares}, OLS). Esse método é mais simples do que o PLS. Neste caso, o ajuste é feito reduzindo-se os mínimos quadrados da equação \ref{eqn:ols_modelo_cmc}.
+		Outra metodologia que pode ser utilizada para realizar essas correlações é a dos mínimos quadrados ordinários (\emph{ordinary least squares}, OLS). Esse método é mais simples do que o PLS, pois não ocorre uma decomposição em componentes principais. Neste caso, o ajuste é feito reduzindo-se os mínimos quadrados da equação \ref{eqn:ols_modelo_cmc}.
 		
 		\begin{equation}
 			\textrm{CMC} = a_G \cdot G + a_\varepsilon \cdot \varepsilon + a_n \cdot n + e
@@ -527,17 +522,17 @@
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/itc/ols_cmc_python}
-			\caption{}
+			\caption{Comportamento do modelo de \cmc{} criado por OLS, mostrando a correlação entre os valores observados e previstos. A reta preta tracejada o modelo perfeito, onde há uma relação 1:1 entre o observado e o previsto. A reta vermelha mostra o modelo criado, junto com a qualidade do ajuste.}
 			\label{fig:ols_cmc_python}
 		\end{figure}
 		
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/itc/ols_dh_python}
-			\caption{}
+			\caption{Comportamento do modelo de \DHmic{} criado por OLS, mostrando a correlação entre os valores observados e previstos. A reta preta tracejada o modelo perfeito, onde há uma relação 1:1 entre o observado e o previsto. A reta vermelha mostra o modelo criado, junto com a qualidade do ajuste.}
 			\label{fig:ols_dh_python}
 		\end{figure}
-		
+
 		Para realizar as análises e criar a figura \ref{fig:ols_cmc_python}, utilizou-se o código \ref{lst:ols_cmc_python}.
 		
 		\begin{listing}[h]
@@ -546,7 +541,7 @@
 			\label{lst:ols_cmc_python}
 		\end{listing}
 		
-		Os modelos obtidos estão nas equações \ref{eqn:ols_cmcs} e \ref{eqn:ols_dhs}. O pacote fornece os parâmetros autoescalados. Para convertê-los em parâmetros nas unidades tradicionais, é necessário desescalá-los, o que foi feito com o código da listagem \ref{lst:ols_cmc_conversao}.
+		Os modelos obtidos estão nas equações \ref{eqn:ols_cmcs} e \ref{eqn:ols_dhs}. O pacote fornece os parâmetros autoescalados, e para convertê-los em parâmetros nas unidades tradicionais, é necessário desescalá-los, o que pode ser feito com o código da listagem \ref{lst:ols_cmc_conversao}.
 		
 		\begin{subequations}
 			\begin{align}
@@ -558,8 +553,8 @@
 		
 		\begin{subequations}
 			\begin{align}
-			\Delta H_\textrm{mic}^0     &= 6,29G              + 0,372\varepsilon             - 138n               + 132  \label{eqn:ols_dh} \\
-			\Delta H_\textrm{mic, AS}^0 &= 0,258G_\textrm{AS} + 0,432\varepsilon_\textrm{AS} - 0,480n_\textrm{AS}        \label{eqn:ols_dh_AS}
+			\Delta H_\textrm{mic}^0     & = 6,29G              + 0,372\varepsilon             - 138n               + 132  \label{eqn:ols_dh} \\
+			\Delta H_\textrm{mic, AS}^0 & = 0,258G_\textrm{AS} + 0,432\varepsilon_\textrm{AS} - 0,480n_\textrm{AS}        \label{eqn:ols_dh_AS}
 			\end{align}
 			\label{eqn:ols_dhs}
 		\end{subequations}
@@ -570,10 +565,63 @@
 			\label{lst:ols_cmc_conversao}
 		\end{listing}
 		
+		Ambos os conjuntos de equações são bastante semelhantes, o que mostra que é possível realizar essas correlações tanto com o método mais complexo (PLS) quanto o método mais simples (OLS). Como o número de parâmetros utilizado é pequeno, é recomendado utilizar o método mais simples. % todo: checar o livro da Márcia e o que ele fala sobre isso.
+		
+		Assim como nas equações \ref{eqn:PLS_cmcs} e \ref{eqn:PLS_dhs}, os coeficientes dos parâmetros estão relacionados com o quanto cada parâmetro afeta os processos. Os sinais são iguais, logo as interpretações são as mesmas.
+		
+		Ambos os modelos apresentados possuem validade somente para os mesmos aditivos, nas faixas empregadas. Não há garantia de que esses modelos consigam prever outros aditivos, a não ser que parâmetros adicionais, mais gerais, sejam propostos.
+		
+		Além disso, os parâmetros escolhidos não são necessariamente independentes, ou seja, não são ortogonais. Isso diminui a qualidade dos modelos criados. Porém, o motivo principal para a criação desses modelos foi tentar interpretar o conjunto de informações simultaneamente, o que é difícil pois o conjunto de dados possui 5 dimensões. Logo, o objetivo desse estudo foi cumprido.% todo: encontrar a relação de eps e n.
+		
+		Foram feitas correlações dos parâmetros com as propriedades das micelas gigantes, porém os ajustes foram muito ruins. Isso se deve provavelmente à maior complexidade do sistema, devido à presença de NaSal, e não é possível explicar as variações considerando-se somente três parâmetros.
+		
+		
 		\FloatBarrier
-		\section{Decomposição em propriedades fundamentais}
-		TODO
 		
-
+		\section{Visualização das semelhanças dos solventes}
+		
+		Uma maneira de visualizar a similaridade das misturas binárias é utilizando um dendrograma. Esse tipo de gráfico é produzido calculando-se a distância entre pontos. Neste caso, cada ponto, representando cada mistura, está em um espaço tridimensional, de coordenadas \(n\), \(\varepsilon\) e \(G\). Inicialmente, calcula-se a distância entre os pontos, e agrupa-se os pontos que forem mais próximos, e repete-se o cálculo de distância, agora entre os grupos. O método de cálculo para a distância entre grupos varia, podendo ser feito, por exemplo, pelo ponto médio ou pela média das distâncias de todos os pontos. % todo: a completa é essa última descrita?
+		
+		Dito isso, foi montado um dendrograma das misturas binárias, que está presente na figura \ref{fig:dendrograma}. Do lado esquerdo do gráfico, os solventes estão sendo vistos com grande ``criteriosidade'', onde pequenas diferenças conseguem separá-los. À medida que se anda para a direita, a lupa se afasta e os solventes começam a se agrupar, até que todos os solventes são vistos como um só. A reta vertical simboliza o ponto onde a semelhança entre as misturas é de 50\%. Nessa região, os solventes podem ser separados em 6 grupos distintos, que foram coloridos.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/propriedades/dendrograma}
+			\caption{Dendrograma das propriedades das misturas binárias. A tabela de propriedades utilizada para esse gráfico é a mesma utilizada para os ajustes}
+			\label{fig:dendrograma}
+		\end{figure}
+		
+		Podemos observar a clara divisão entre dois grupos maiores. Um deles, acima, contém todas as misturas com alta concentração de aditivo, e todas as misturas de 1,3BD. Abaixo, temos todas as misturas de baixa concentração de aditivo, e todas as de ureia. Dentro do grupo da alta concentração, podemos observar que a sacarose se ajunta, assim como a glicerina. Além disso, concentrações altas de glicerina se assemelham à concentrações um pouco menores de DMSO. 1,3BD em baixas concentrações é parecido com DMSO em concentrações moderadas, e 1,3BD em altas concentrações se isola.
+		
+		No grupo de baixa concentração, temos que as misturas de 5-10\% dos aditivos estão próximos, e que sacarose e glicerina 5\% são as mais próximas da água. Ureia em baixas concentrações afetou pouco as propriedades da solução, e se assemelha também à esses compostos, mais do que DMSO 5-10\%. O resto das concentrações de ureia se assemelham à esse grupo, provavelmente se separando pela constante dielétrica, e se mantendo próximos pelo índice de refração e parâmetro de Gordon.
+		
+		Para criar esse dendrograma, utilizou-se o código da listagem \ref{lst:dendrograma}.
+		
+		\begin{listing}[h]
+			\inputminted{python}{./python/dendrograma.py}
+			\caption{Código utilizado para criar o dendrograma da figura \ref{fig:dendrograma}}
+			\label{lst:dendrograma}
+		\end{listing}
+		\FloatBarrier
+%		\section{Decomposição em propriedades fundamentais}
+%		TODO
 		
 		
+		\section{Conclusão Parcial}
+		
+		Nesta parte do trabalho, mostrou-se o efeito de diversos aditivos na reologia e na calorimetria de micelas gigantes. Os experimentos reológicos mostraram como a cinética dos processos de relaxação foi afetada pela adição dos aditivos, e por calorimetria observou-se a espontaneidade de formação de micelas gigantes.
+		
+		Todos os aditivos estudados tiveram efeitos diferentes nas micelas gigantes. Por um lado, sacarose praticamente não afetou tanto a reologia quanto a formação das micelas gigantes, apesar de promover a formação de micelas esféricas. Por outro lado, 1,3-butanodiol diminuiu fortemente a viscosidade das micelas, porém afetou a formação tanto quanto os outros aditivos. Ureia se mostrou o aditivo mais diferente de todos, aumentando a viscosidade da região de equimolaridade e diminuindo nas outras. Glicerina e DMSO tiveram efeitos semelhantes, tanto diminuindo a viscosidade das micelas quanto sua espontaneidade de formação, com DMSO tendo um efeito um pouco mais forte que glicerina.
+		
+		% todo: por ref
+		Para explicar esses fenômenos, considerou-se alguns parâmetros. Primeiramente, o índice de refração, levantado por Hoffmann e Abdel-Rahem, constante dielétrica, levantado por Abdel-Rahem, e parâmetro de Gordon, levantando também por Abdel-Rahem, mas aplicado somente para micelas esféricas. Combinando-se esses parâmetros com efeitos mais qualitativos, como a posição dos aditivos nas micelas, foi possível explicar bastante os fenômenos observados. O parâmetro com maior correspondência com o comportamento reológico foi o parâmetro de Gordon, relacionado à estruturação do solvente. Quanto mais próximo era o parâmetro de Gordon do solvente ao parâmetro da água pura, menos afetado era o diagrama de viscosidade. Isso pode se dever ao aditivo facilitar a movimentação das micelas durante seu processo de relaxação, desestruturando o solvente. A exceção é ureia, pois é o único aditivo que aumenta a constante dielétrica do meio, e então remove espécies carregadas, como \Sal, da superfície micelar, aumentando a quantidade de \Sal{} necessária para atingir a neutralidade de carga. A interação dos aditivos com a superfície micelar deve ser considerada também, pois 1,3-butanodiol pode agir como um cosurfactante de cadeia curta, diminuindo o tempo de relaxação das micelas, diminuindo sua viscosidade.
+		
+		As calorimetrias de formação de micelas gigantes foram afetadas pelo solvente. Todos os solventes, com exceção de sacarose, aumentaram a concentração de formação de micelas gigantes, \cwlm, por uma combinação dos efeitos levantados. O parâmetro de Gordon diminui a penalidade entrópica do solvente, desfavorecendo agregação. O aumento da constante dielétrica aumenta a dissociação de espécies, aumentando a repulsão, também levando ao desfavorecimento da agregação. O índice de refração está relacionado à atração das moléculas de surfactante, e quanto maior for o índice, menor é a atração e menor é a tendência de formação micelar.
+		
+		De modo a observar o efeito de todos os parâmetros simultaneamente, foram realizados ajustes para se obter equações empíricas relacionando os parâmetros às propriedades. Foi possível correlacionar somente as concentrações micelares críticas (\cmc) e entalpias de micelização (\DHmic) aos parâmetros escolhidos. Isso ocorreu possivelmente pela maior simplicidade do sistema sem NaSal.
+		
+		Como perspectivas futuras, pode-se estudar outros aditivos para verificar o quanto os parâmetros levantados conseguem explicar outros comportamentos. Além disso, quantificar a concentração de aditivo na superfície micelar, mostrar como esses aditivos interagem com as moléculas de surfactante, com as moléculas de salicilato, e seus efeitos na cinética de quebra e recombinação micelar aprofundariam o entendimento sobre micelas gigantes. Frequentemente micelas gigantes são empregadas em produtos de cuidados pessoais que possuem uma grande quantidade de aditivos, logo entender como esses aditivos afetam as micelas é de grande interesse comercial. Por exemplo, 1,3-butanodiol é um aditivo utilizado comercialmente como XYZ, porém se adicionado à uma formulação de xampu, notaria-se uma queda considerável na viscosidade, o que pode ser explicado pelos efeitos do 1,3BD no solvente e nas micelas.
+		
+		Além disso, seria interessante, com a ajuda de especialistas, desmembrar os parâmetros levantados em componentes mais fundamentais, necessariamente ortogonais, o que removeria problemas de interferência de um parâmetro nos outros.
+		
+		% todo: ler livro do Reichardt, Welton
