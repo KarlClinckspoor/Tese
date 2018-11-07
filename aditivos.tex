@@ -236,9 +236,122 @@
 	
 		\FloatBarrier
 		
-	\chapter{Parâmetros a serem estudados}
-		\section{Índice de refração}
+	\chapter{Parâmetros estudados}
+		
+		Existem vários parâmetros físico-químicos que descrevem solventes. Inicialmente, o índice de refração foi escolhido com base nos estudos anteriores de Hoffmann. Esse parâmetro, definido como a relação da velocidade da luz no vácuo e no material em um determinado comprimento de onda (eq. \ref{eqn:def_n}) é relevante para a discussão pois está diretamente associado à polarizabilidade das moléculas através da equação de Lorenz-Lorentz, eq. \ref{eqn:lorenz_lorentz}.
+		
+		\begin{equation}
+			n = \dfrac{c_0}{c}
+			\label{eqn:def_n}
+		\end{equation}
+		
+		\noindent onde \(n\) é o índice de refração, \(c_0\) é a velocidade da luz no vácuo e \(c\) é a velocidade da luz no meio.
+		
+		\begin{equation}
+			\dfrac{n^2 - 1}{n^2 + 2}\dfrac{1}{\rho} = \dfrac{4\pi N_A}{3} \alpha_e^0
+			\label{eqn:lorenz_lorentz}  % todo: ref olson1975
+		\end{equation}
+		
+		\noindent onde \(n\) é o índice de refração, \(\rho\) é a densidade molar, \(N_A\) é o número de Avogadro e \(\alpha_e^0\) é a polarizabilidade eletrônica molecular isolada.
+		
+		É possível transformar essa equação para encontrar a polarização molar \(P_m\)
 
+		\begin{equation}
+			P_m = \dfrac{n^2 - 1}{n^2 + 1} \cdot \dfrac{M_r}{\rho}
+		\end{equation}
+		
+		\noindent onde \(M_r\) é a massa molar relativa e \(\rho\) é a densidade do solvente.
+		
+		Quanto maior for a polarizabilidade, mais fortes são as interações dispersivas entre duas moléculas, como mostra a equação \ref{eqn:U_dispersiva}.
+		
+		\begin{equation}
+			U_{\textrm{dispersiva}} = - \dfrac{1}{(4 \pi \varepsilon_0)^2} \dfrac{3 \alpha_1 \alpha_2}{2 r^6} \left( \dfrac{I_1 \cdot I_2}{I_1 + I_2} \right)
+			\label{eqn:U_dispersiva}
+		\end{equation}  % todo: achar ref [33], cap2 do livro de solvente em reações orgânicas, 
+		
+		\noindent onde \(\varepsilon_0\) é a constante dielétrica do vácuo, \(\alpha_1\) e \(\alpha_2\) são as polarizabilidades de duas moléculas, \(r\) é a distância entre as moléculas e \(I_1\) e \(I_2\) são os potenciais de ionização das duas moléculas. Controlando-se a polarizabilidade das espécies é possível ajustar a atração dispersiva entre elas.
+		
+		Na área coloidal, é necessário somar todas as contribuições atrativas e repulsivas de todas as moléculas que compõem o coloide para se obter a atração ou repulsão coloidal. Isso se traduz na constante de Hamaker, que modula essas atrações (eq. \ref{eqn:Hamaker}). Essas atrações ocorrem através de um solvente, então é necessário considerá-lo no cálculo das atrações intercoloidais.
+		
+		\begin{equation}
+		H = \dfrac{3}{4}kT \left[  \dfrac{\varepsilon_a - \varepsilon_s}{\varepsilon_a + \varepsilon_s}  \right]^2 + %
+		    \dfrac{3}{16\sqrt{2}} h\nu \dfrac{ \left(  n_a^2 - n_s^2  \right)^2}{\left(  n_a^2 + n_s^2  \right)^{3/2}}
+		\label{eqn:hamaker}
+		\end{equation}
+		
+		\noindent onde $\varepsilon_a$ e $\varepsilon_s$ são as constantes dielétricas dos agregados e do solvente na frequência zero, respectivamente, $h$ é a constante de Planck e $\nu$ é a frequência da absorção dominante no UV (tipicamente $3 \times 10^{15} s^{-1}$) [XYZ]. O primeiro termo da expressão é pequeno, perto de $kT$, logo quando $n_s \rightarrow n_a$, $H \rightarrow 0$, a atração intermicelar se torna muito fraca.
+		% \cite{Israelachvili2011}
+	
+		A constante dielétrica \(\varepsilon\) é um parâmetro relacionado à polaridade do solvente. Quanto maior for a constante dielétrica, mais fácil é a separação de cargas no solvente pois menor é sua atração (\ref{eqn:U_eletrostatica}). A constante dielétrica (também chamada de permissividade) é medida colocando-se o material entre duas placas carregadas de um capacitor. O campo elétrico resultante \(E\) é menor do que o campo elétrico no vácuo, \(E_0\), e a razão \(\sfrac{E_0}{E}\) fornece a constante dielétrica do meio. Devido ao campo elétrico, as moléculas alinham seus dipolos, e caso o solvente não possua dipolos permanentes, serão criados dipolos induzidos devido ao campo, causando a polarização. Quanto maior for a polarização, maior é a queda, e maior é a constante dielétrica. Caso existam interações cooperativas solvente/solvente, como a associação em cadeias por ligações de hidrogênio intramoleculares, é possível obter valores de constante dielétrica muito altas, como 180 para amidas secundárias. Isso foi observado para a ureia, neste trabalho.
+		
+		\begin{equation}
+			U_{\textrm{eletrostática}} = \dfrac{1}{4 \pi \varepsilon_r} \dfrac{q_1 q_2}{r^2}
+			\label{eqn:U_eletrostatica}  % ref: Atkins Físico-Química
+		\end{equation}
+		
+		\noindent onde \(\varepsilon_r\) é a constante dielétrica relativa entre o meio e o vácuo, \(\varepsilon_r = \sfrac{\varepsilon}{\varepsilon_0}\).
+		
+		Interessantemente, a constante dielétrica também está relacionada à polarizabilidade molecular, através da equação de Clausius-Mossotti \ref{eqn:clausius_mossotti}, que não considera a contribuição do momento de dipolo permanente.
+		
+		\begin{equation}
+			\dfrac{\varepsilon_r - 1}{\varepsilon_r + 2} = \dfrac{\rho N_A \alpha}{3 M \varepsilon_0}
+			\label{eqn:clausius_mossotti}
+		\end{equation}
+		
+		Outro parâmetro relacionado à polaridade do solvente é o momento de dipolo, \(\mu\). É possível combinar ambos a constante dielétrica e o momento de dipolo no fator eletrostático, \emph{IT}, mas esses parâmetros não foram considerados neste trabalho pois os solventes são primariamente aquosos. % Ref [101] do capítulo 3
+		
+		Dois parâmetros podem ser utilizados para descrever a estruturação de um solvente, a densidade de energia coesiva \(c\) (eq. \ref{eqn:densidade_energia_coesiva}), e a pressão interna \(\pi\) (eq. \ref{eqn:pressao_interna}).  % refs [98-100, 175] do cap 3 do livro de propriedades de solvente
+		
+		\begin{equation}
+			c = \dfrac{\Delta U_V}{V_m} = \dfrac{\Delta H_V - R\cdot T}{V_m}
+			\label{eqn:densidade_energia_coesiva}
+		\end{equation}
+		
+		\begin{equation}
+			\pi = \left( \dfrac{\partial U}{\partial V_m} \right)_T
+			\label{eqn:pressao_interna}
+		\end{equation}
+		
+		\noindent onde \(\Delta U_V\) e \(\Delta H_V\) são a energia interna e entalpia de vaporização e \(V_m\) é o volume molar do líquido. A razão de se utilizar a entalpia/energia interna de vaporização é a seguinte. Ao levar um líquido de seu estado condensado para o estado gasoso, todas as ligações líquido-líquido tiveram que ser rompidas. Logo, dividindo-se essa energia pelo volume molar obtemos uma densidade de energia coesiva.
+		
+		A pressão interna, por sua vez, é a energia necessária para abrir uma cavidade no solvente, pois a variação de volume é necessariamente pequena, de modo a acomodar o soluto. Esse parâmetro é resultado das forças atrativas serem mais fortes que as repulsivas, e portanto está mais relacionado às interações dispersivas e dipolo-dipolo. Já \(c\) está relacionado à interações solvente-solvente específicas, como a ligação de hidrogênio.
+		
+		A diferença entre esses dois parâmetros (\(c - \pi\)) fornece uma medida da força das ligações de hidrogênio, e a razão \(n = \sfrac{\pi}{c}\) fornece uma medida da relação entre a força das ligações de hidrogênio e outras atrações. Essa razão se aproxima de 1 para hidrocarbonetos e é próxima de zero para solventes com fortes ligações de hidrogênio. O quadrado de \(c\) é conhecido também como o parâmetro de solubilidade de Hildebrand, \(\delta\).
+		
+		Porém, os solventes utilizados neste trabalho são todos compostos principalmente por água, e em alguns casos os aditivos são sólidos (ureia, sacarose). Além disso, obter esses parâmetros para as misturas não é uma tarefa para qual o laboratório está equipado. Portanto, é necessário utilizar outro parâmetro que esteja relacionado à estruturação do solvente.
+		
+		Um parâmetro que pode ser utilizado é o parâmetro de Gordon, definido na equação \ref{eqn:Gordon}, que é baseado na tensão superficial, equação \ref{eqn:tens_superficial}.
+
+		\begin{equation}
+			G = \dfrac{\gamma}{\bar{V}_m^{\frac{1}{3}}}
+			\label{eqn:Gordon}
+		\end{equation}
+		
+		\begin{equation}
+			\bar{V}_m = \bar{V}_{m_{1}}x_1 + \bar{V}_{m_{2}}x_2
+			\label{eqn:volume_molar_médio}
+		\end{equation}
+		
+		\noindent onde \(\gamma\) é a tensão superficial do líquido e \(\bar{V}_m\) é o volume molar do líquido que, quando houver mais de um, pode-se utilizar a equação \ref{eqn:volume_molar_médio} para calculá-lo.
+		
+		\begin{equation}
+		\gamma = \left( \dfrac{\partial G}{\partial A}  \right)_{T,P,n}
+		\label{eqn:tens_superficial}
+		\end{equation}
+		
+		\noindent onde, neste caso \(G\) se refere à energia livre de Gibbs e \(A\) a área de superfície.
+		
+		A razão de se utilizar o parâmetro de Gordon vem de um argumento semelhante ao parâmetro de densidade de energia coesiva. Neste caso, o aumento da área superficial de um líquido necessita da quebra de interações líquido-líquido das moléculas que vão para a superfície. Um líquido com interações intermoleculares fracas possui uma tensão superficial baixa, pois é fácil quebrar essas ligações. Por outro lado, um líquido com interações intermoleculares fortes, como a água, possui uma tensão superficial bastante alta. Uma grande vantagem de se utilizar o parâmetro de Gordon é que as medidas de tensão superficial de misturas são facilmente realizadas, necessitando então somente a conversão de \(\gamma\) para \(G\). Porém, [XYZ] nota que \(c\) é um parâmetro melhor para descrever a energia coesiva % todo: referenciar o livro Christian Reichardt
+	
+%		Devido à essa relação, é possível correlacionar o índice de refração à constante dielétrica, obtendo a eq. \ref{eqn:n_epsilon}
+%		
+%		\begin{equation}
+%			n = \varepsilon_r^{1/2}
+%			\label{eqn:n_epsilon}
+%		\end{equation}  % todo: pensar sobre essa equação e se ela realmente vale para as coisas aqui. Não parece ser tão assim
+		
+		\section{Índice de refração}
+		
 		A figura \ref{fig:indice_refracao} mostrou como o índice de refração varia com a concentração de aditivo. Como os resultados reológicos evidenciaram, considerar somente o índice de refração não é uma maneira muito boa para explicar o comportamento reológico.
 		
 		Caso contrário, haveria um padrão notável num gráfico comparativo das concentrações e entalpias. Isso está evidenciado nas figuras \ref{fig:cmc_dh_por_n} e \ref{fig:cwlm_dhwlm_por_n}, onde não há um padrão geral observado para todos os aditivos.
@@ -353,17 +466,7 @@
 		DMSO foi demonstrado como um agente desestruturador em altas concentrações e estruturador em baixas, e essas propriedades foram descritas como fracas frente à capacidade do DMSO em solubilizar moléculas de surfactante. % todo: o que significa isso exatamente?
 		Já o papel da ureia é inconclusivo de acordo com a literatura, com vários mecanismos propostos em estudos. % todo: mencionar os três mecanismos.
 		
-		Para seguir a lógica das discussões na outra seção, é necessário levantar uma propriedade que traduza o conceito de coesão do solvente para um número mensurável. O parâmetro de Gordon já foi utilizado na literatura com esse propósito, então ele será utilizado neste trabalho. Porém, é necessário reforçar que esse parâmetro não traduz perfeitamente o conceito de estruturação, e será utilizado mais como uma maneira para facilitar a discussão. O parâmetro de Gordon é definido pela Eq. \ref{eqn:Gordon}, onde \(\gamma\) é a tensão superficial do líquido e \(\bar{V}_m\) é o volume molar médio do líquido, definido pela Eq. \ref{eqn:volume_molar_médio}. 
-		
-		\begin{equation}
-			G = \dfrac{\gamma}{\bar{V}_m^{\frac{1}{3}}}
-			\label{eqn:Gordon}
-		\end{equation}
-		
-		\begin{equation}
-			\bar{V}_m = \bar{V}_{m_{1}}x_1 + \bar{V}_{m_{2}}x_2
-			\label{eqn:volume_molar_médio}
-		\end{equation}
+		Para seguir a lógica das discussões na outra seção, é necessário levantar uma propriedade que traduza o conceito de coesão do solvente para um número mensurável. O parâmetro de Gordon já foi utilizado na literatura com esse propósito, então ele será utilizado neste trabalho. Não foi utilizado o parâmetro de densidade de energia coesiva \(c\) devido à dificuldade de medir esse parâmetro. Porém, é necessário reforçar que \(G\) não traduz perfeitamente o conceito de estruturação, e será utilizado mais como uma maneira para facilitar a discussão. O parâmetro de Gordon já foi definido na equação \ref{eqn:Gordon}.
 		
 		Amostras com as composições desejadas foram preparadas e suas tensões superficiais foram medidas em quintuplicatas. As tensões obtidas estão na figura \ref{fig:tensao_superficial_por_conc} e os valores do parâmetro de Gordon obtidos estão na figura \ref{fig:param_gordon_por_conc}.
 		
@@ -450,9 +553,20 @@
 		% todo: pensar em colocar uma seção falando sobre o DeltaG.
 		
 		\section{Correlações simultâneas dos parâmetros com \cmc{} e \DHmic}
-		% todo: colocar que os gráficos resultantes são 4D
+		% todo: colocar que esse tipo de análise já foi utilizada para tentar descrever padrões em solventes
 		
-		Até este momento, foram feitas correlações dos parâmetros do solvente com as propriedades calorimétricas mensuradas somente um a um, com raros casos explicados considerando-se outros parâmetros. Seria interessante tentar correlacionar todas essas propriedades simultaneamente, ou seja, realizar uma análise multivariada.
+		Até este momento, foram feitas correlações dos parâmetros do solvente com as propriedades calorimétricas mensuradas somente um a um, com raros casos explicados considerando-se outros parâmetros simultaneamente. Seria interessante tentar correlacionar todas essas propriedades simultaneamente, ou seja, realizar uma análise multivariada.
+		
+		Esse tipo de análise, tanto utilizando métodos de regressão linear múltipla, ou ordinária (\emph{OLS}), e análise de componentes principais (\emph{PCA} e \emph{PLS}) são principalmente utilizados na área da química analítica, chamada de Quimiometria, mas também são utilizadas para classificar solventes orgânicos. %todo: refs
+		Uma das necessidades para esse tipo de análise é que as variáveis sejam verdadeiramente independentes umas das outras, aditivas e relevantes ao problema em questão. % todo: ref [144] do capítulo 3, um livro que eu não achei
+		
+		Estudos de classificação dos solventes utilizam os parâmetros já mencionados, e vários outros, como pontos de ebulição, coeficientes de partição, volume molar, constante dielétrica, índice de refração, energia de HOMO e LUMO, parâmetro \(E_T(30)\) obtidos a partir de uma sonda solvatocrômica, parâmetro de Hildebrand e momento de dipolo. % todo: colocar algumas referências aqui, como [Chastrette 1985]
+		Não necessariamente esses parâmetros são independentes, o que resultaria numa redução da dimensão dos dados.
+		
+		O objetivo desta seção é facilitar a interpretação dos resultados calorimétricos % todo: e reológicos?
+		através dos parâmetros da solução escolhidos (\(n\), \(\varepsilon\), \(G\)), e não realizar uma descrição quimiométrica completa, nem atribuir muitos significados físicos aos coeficientes encontrados. Não serão mostrados os resultados desses ajustes para reologia (utilizando a viscosidade como variável dependente, os parâmetros e concentração de NaSal como variável dependente) e calorimetria de micelas gigantes (utilizando \cwlm{} e \DHwlm{} como variáveis dependentes e os parâmetros como variáveis dependentes) pois não foi observado um ajuste bom.
+		
+		Inicialmente, será utilizado um método quimiométrico bastante empregado, o PLS (\emph{Partial Least Squares}), depois será utilizado um método de regressão linear mais simples, e por último as misturas binárias serão organizadas em grupos de acordo com suas similaridades, através de um dendrograma.
 		
 		\subsection{PLS}
 		
@@ -605,8 +719,7 @@
 		\FloatBarrier
 %		\section{Decomposição em propriedades fundamentais}
 %		TODO
-		
-		
+
 		\section{Conclusão Parcial}
 		
 		Nesta parte do trabalho, mostrou-se o efeito de diversos aditivos na reologia e na calorimetria de micelas gigantes. Os experimentos reológicos mostraram como a cinética dos processos de relaxação foi afetada pela adição dos aditivos, e por calorimetria observou-se a espontaneidade de formação de micelas gigantes.
@@ -622,6 +735,8 @@
 		
 		Como perspectivas futuras, pode-se estudar outros aditivos para verificar o quanto os parâmetros levantados conseguem explicar outros comportamentos. Além disso, quantificar a concentração de aditivo na superfície micelar, mostrar como esses aditivos interagem com as moléculas de surfactante, com as moléculas de salicilato, e seus efeitos na cinética de quebra e recombinação micelar aprofundariam o entendimento sobre micelas gigantes. Frequentemente micelas gigantes são empregadas em produtos de cuidados pessoais que possuem uma grande quantidade de aditivos, logo entender como esses aditivos afetam as micelas é de grande interesse comercial. Por exemplo, 1,3-butanodiol é um aditivo utilizado comercialmente como XYZ, porém se adicionado à uma formulação de xampu, notaria-se uma queda considerável na viscosidade, o que pode ser explicado pelos efeitos do 1,3BD no solvente e nas micelas.
 		
-		Além disso, seria interessante, com a ajuda de especialistas, desmembrar os parâmetros levantados em componentes mais fundamentais, necessariamente ortogonais, o que removeria problemas de interferência de um parâmetro nos outros.
+		%Além disso, seria interessante, com a ajuda de especialistas, desmembrar os parâmetros levantados em componentes mais fundamentais, necessariamente ortogonais, o que removeria problemas de interferência de um parâmetro nos outros.
 		
+		% todo: criar correlações agora utilizando outros parâmetros para índice de refração e cte dielétrica. Utilizar, por exemplo, (\varepsilon_r - 1 )/(2 \varepsilon_r + 1) e refração molar (V_m (n^2 - 1)/(n^2 - 2)) e cte dielétrica x dipolo, energia coesiva (raiz quadrada do param de hildebrand)
+		% todo: tentar correlacionar viscosidades utilizando os parâmetros, mais a conc de salicilato como variáveis independentes
 		% todo: ler livro do Reichardt, Welton
