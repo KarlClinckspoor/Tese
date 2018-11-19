@@ -237,22 +237,24 @@
 		\FloatBarrier
 		
 	\chapter{Parâmetros estudados}
+		% todo: retirar parte dessas descrições e colocar na teoria
+		% todo: definir a constante e permissividade elétricas, colocar a frequência nessas equações.
 		
 		Existem vários parâmetros físico-químicos que descrevem solventes. Inicialmente, o índice de refração foi escolhido com base nos estudos anteriores de Hoffmann. Esse parâmetro, definido como a relação da velocidade da luz no vácuo e no material em um determinado comprimento de onda (eq. \ref{eqn:def_n}) é relevante para a discussão pois está diretamente associado à polarizabilidade das moléculas através da equação de Lorenz-Lorentz, eq. \ref{eqn:lorenz_lorentz}.
 		
-		\begin{equation}
-			n = \dfrac{c_0}{c}
-			\label{eqn:def_n}
-		\end{equation}
+%		\begin{equation}
+%			n = \dfrac{c_0}{c}
+%			\label{eqn:def_n}
+%		\end{equation}
 		
 		\noindent onde \(n\) é o índice de refração, \(c_0\) é a velocidade da luz no vácuo e \(c\) é a velocidade da luz no meio.
 		
-		\begin{equation}
-			\dfrac{n^2 - 1}{n^2 + 2}\dfrac{1}{\rho} = \dfrac{4\pi N_A}{3} \alpha_e^0
-			\label{eqn:lorenz_lorentz}  % todo: ref olson1975
-		\end{equation}
+%		\begin{equation}
+%			\dfrac{n^2 - 1}{n^2 + 2}\dfrac{1}{\rho} = \dfrac{4\pi N_A}{3} \alpha_0
+%			\label{eqn:lorenz_lorentz}  % todo: ref olson1975
+%		\end{equation}
 		
-		\noindent onde \(n\) é o índice de refração, \(\rho\) é a densidade molar, \(N_A\) é o número de Avogadro e \(\alpha_e^0\) é a polarizabilidade eletrônica molecular isolada.
+		\noindent onde \(n\) é o índice de refração, \(\rho\) é a densidade molar, \(N_A\) é o número de Avogadro e \(\alpha_0\) é a polarizabilidade eletrônica molecular isolada.
 		
 		É possível transformar essa equação para encontrar a polarização molar \(P_m\)
 
@@ -282,7 +284,7 @@
 		\noindent onde $\varepsilon_a$ e $\varepsilon_s$ são as constantes dielétricas dos agregados e do solvente na frequência zero, respectivamente, $h$ é a constante de Planck e $\nu$ é a frequência da absorção dominante no UV (tipicamente $3 \times 10^{15} s^{-1}$) [XYZ]. O primeiro termo da expressão é pequeno, perto de $kT$, logo quando $n_s \rightarrow n_a$, $H \rightarrow 0$, a atração intermicelar se torna muito fraca.
 		% \cite{Israelachvili2011}
 	
-		A constante dielétrica \(\varepsilon\) é um parâmetro relacionado à polaridade do solvente. Quanto maior for a constante dielétrica, mais fácil é a separação de cargas no solvente pois menor é sua atração (\ref{eqn:U_eletrostatica}). A constante dielétrica (também chamada de permissividade) é medida colocando-se o material entre duas placas carregadas de um capacitor. O campo elétrico resultante \(E\) é menor do que o campo elétrico no vácuo, \(E_0\), e a razão \(\sfrac{E_0}{E}\) fornece a constante dielétrica do meio. Devido ao campo elétrico, as moléculas alinham seus dipolos, e caso o solvente não possua dipolos permanentes, serão criados dipolos induzidos devido ao campo, causando a polarização. Quanto maior for a polarização, maior é a queda, e maior é a constante dielétrica. Caso existam interações cooperativas solvente/solvente, como a associação em cadeias por ligações de hidrogênio intramoleculares, é possível obter valores de constante dielétrica muito altas, como 180 para amidas secundárias. Isso foi observado para a ureia, neste trabalho.
+		A constante dielétrica \(\varepsilon\) é um parâmetro relacionado à polaridade do solvente. Quanto maior for a constante dielétrica, mais fácil é a separação de cargas no solvente pois menor é sua atração (eq. \ref{eqn:U_eletrostatica}). 
 		
 		\begin{equation}
 			U_{\textrm{eletrostática}} = \dfrac{1}{4 \pi \varepsilon_r} \dfrac{q_1 q_2}{r^2}
@@ -291,12 +293,23 @@
 		
 		\noindent onde \(\varepsilon_r\) é a constante dielétrica relativa entre o meio e o vácuo, \(\varepsilon_r = \sfrac{\varepsilon}{\varepsilon_0}\).
 		
-		Interessantemente, a constante dielétrica também está relacionada à polarizabilidade molecular, através da equação de Clausius-Mossotti \ref{eqn:clausius_mossotti}, que não considera a contribuição do momento de dipolo permanente.
+%		Interessantemente, a constante dielétrica também está relacionada à polarizabilidade molecular total (\(\alpha\)), através da equação de Clausius-Mossotti \ref{eqn:clausius_mossotti}.
+%		
+%		\begin{equation}
+%			\dfrac{\varepsilon_r - 1}{\varepsilon_r + 2} = \dfrac{\rho N_A \alpha}{3 M \varepsilon_0}
+%			\label{eqn:clausius_mossotti}
+%		\end{equation}
+%		
+%		Devido à essa relação, é possível correlacionar o índice de refração à constante dielétrica, obtendo a eq. \ref{eqn:n_epsilon}. Neste caso é necessário notar a diferença entre a constante dielétrica e permissividade elétrica. A constante dielétrica é medida onde a frequência do campo elétrico é zero, já a permissividade é o nome dado para valores medidos em frequências diferentes. A relação \ref{eqn:n_epsilon} necessita que uma frequência seja estabelecida.  % todo: reler partes do Israelachvili e prestar atenção na polarizabilidade total e eletrônica \alpha_0
+%		
+%		\begin{equation}
+%			n = \varepsilon_r^{1/2}
+%			\label{eqn:n_epsilon}
+%		\end{equation}  % todo: pensar sobre essa equação e se ela realmente vale para as coisas aqui. Não parece ser tão assim
 		
-		\begin{equation}
-			\dfrac{\varepsilon_r - 1}{\varepsilon_r + 2} = \dfrac{\rho N_A \alpha}{3 M \varepsilon_0}
-			\label{eqn:clausius_mossotti}
-		\end{equation}
+		Porém, as equações \ref{eqn:lorenz_lorentz} e \ref{eqn:clausius_mossotti} consideram as moléculas num meio como sendo esferas com constantes dielétricas diferentes daquelas do meio. Comparando-se os valores calculados por essas equações e os valores medidos, há discrepâncias bastante altas para moléculas altamente polares.
+		
+		Esse tipo de equação não considera interações além daquelas oriundas totalmente da polarização eletrônica e dipolar. Alguns solventes conseguem deslocar cargas em comprimentos maiores que o tamanho molecular. Na água, acredita-se que sua alta constante dielétrica se deve também à movimentação eletrônica e protônica através de redes de ligação de hidrogênio. % ref: israelachvili2010.
 		
 		Outro parâmetro relacionado à polaridade do solvente é o momento de dipolo, \(\mu\). É possível combinar ambos a constante dielétrica e o momento de dipolo no fator eletrostático, \emph{IT}, mas esses parâmetros não foram considerados neste trabalho pois os solventes são primariamente aquosos. % Ref [101] do capítulo 3
 		
@@ -341,15 +354,9 @@
 		
 		\noindent onde, neste caso \(G\) se refere à energia livre de Gibbs e \(A\) a área de superfície.
 		
-		A razão de se utilizar o parâmetro de Gordon vem de um argumento semelhante ao parâmetro de densidade de energia coesiva. Neste caso, o aumento da área superficial de um líquido necessita da quebra de interações líquido-líquido das moléculas que vão para a superfície. Um líquido com interações intermoleculares fracas possui uma tensão superficial baixa, pois é fácil quebrar essas ligações. Por outro lado, um líquido com interações intermoleculares fortes, como a água, possui uma tensão superficial bastante alta. Uma grande vantagem de se utilizar o parâmetro de Gordon é que as medidas de tensão superficial de misturas são facilmente realizadas, necessitando então somente a conversão de \(\gamma\) para \(G\). Porém, [XYZ] nota que \(c\) é um parâmetro melhor para descrever a energia coesiva % todo: referenciar o livro Christian Reichardt
+		A razão de se utilizar o parâmetro de Gordon vem de um argumento semelhante ao parâmetro de densidade de energia coesiva. Nesse caso, o aumento da área superficial de um líquido necessita da quebra de interações líquido-líquido das moléculas que vão para a superfície. Um líquido com interações intermoleculares fracas possui uma tensão superficial baixa, pois é fácil quebrar essas ligações. Por outro lado, um líquido com interações intermoleculares fortes, como a água, possui uma tensão superficial bastante alta. Uma grande vantagem de se utilizar o parâmetro de Gordon é que as medidas de tensão superficial de misturas são facilmente realizadas, necessitando então somente a conversão de \(\gamma\) para \(G\). Porém, [XYZ] nota que \(c\) é um parâmetro melhor para descrever a energia coesiva % todo: referenciar o livro Christian Reichardt
 	
-%		Devido à essa relação, é possível correlacionar o índice de refração à constante dielétrica, obtendo a eq. \ref{eqn:n_epsilon}
-%		
-%		\begin{equation}
-%			n = \varepsilon_r^{1/2}
-%			\label{eqn:n_epsilon}
-%		\end{equation}  % todo: pensar sobre essa equação e se ela realmente vale para as coisas aqui. Não parece ser tão assim
-		
+
 		\section{Índice de refração}
 		
 		A figura \ref{fig:indice_refracao} mostrou como o índice de refração varia com a concentração de aditivo. Como os resultados reológicos evidenciaram, considerar somente o índice de refração não é uma maneira muito boa para explicar o comportamento reológico.
@@ -558,7 +565,7 @@
 		Até este momento, foram feitas correlações dos parâmetros do solvente com as propriedades calorimétricas mensuradas somente um a um, com raros casos explicados considerando-se outros parâmetros simultaneamente. Seria interessante tentar correlacionar todas essas propriedades simultaneamente, ou seja, realizar uma análise multivariada.
 		
 		Esse tipo de análise, tanto utilizando métodos de regressão linear múltipla, ou ordinária (\emph{OLS}), e análise de componentes principais (\emph{PCA} e \emph{PLS}) são principalmente utilizados na área da química analítica, chamada de Quimiometria, mas também são utilizadas para classificar solventes orgânicos. %todo: refs
-		Uma das necessidades para esse tipo de análise é que as variáveis sejam verdadeiramente independentes umas das outras, aditivas e relevantes ao problema em questão. % todo: ref [144] do capítulo 3, um livro que eu não achei
+		Uma das necessidades para esse tipo de análise é que as variáveis sejam verdadeiramente independentes umas das outras, aditivas e relevantes ao problema em questão. Como pode ser visto pela equação \ref{eqn:n_epsilon}, há certa colinearidade entre o índice de refração e a constante dielétrica. O que as diferencia é fundamentalmente o efeito do solvente e suas interações % todo: ref [144] do capítulo 3, um livro que eu não achei
 		
 		Estudos de classificação dos solventes utilizam os parâmetros já mencionados, e vários outros, como pontos de ebulição, coeficientes de partição, volume molar, constante dielétrica, índice de refração, energia de HOMO e LUMO, parâmetro \(E_T(30)\) obtidos a partir de uma sonda solvatocrômica, parâmetro de Hildebrand e momento de dipolo. % todo: colocar algumas referências aqui, como [Chastrette 1985]
 		Não necessariamente esses parâmetros são independentes, o que resultaria numa redução da dimensão dos dados.

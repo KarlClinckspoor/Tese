@@ -869,7 +869,151 @@
 		
 		% todo: colocar como se calcula singleto e tripleto.
 		
-	\chapter{Coloides}
+	\chapter{Forças intermoleculares e interagregados}
+	
+	Na natureza existem quatro forças distintas, porém, para o campo dos coloides, a força eletromagnética é de maior importância. As forças comumente estudadas na química, como as interações dipolares, e dispersivas, possuem uma origem fundamentalmente eletrostática. De forma geral, potenciais de interação de pares \(w\) podem ser escritos de acordo com a equação \ref{eqn:energia_livre_generica}. A força \(F\) é obtida pela derivada dessa equação em função da posição (eqn. \ref{eqn:forca_generica}).
+	
+	\begin{equation}
+		w(r) = -\dfrac{C}{r^n}
+		\label{eqn:energia_livre_generica}
+	\end{equation}
+	
+	\begin{equation}
+		F(r) = -\dfrac{\mathrm{d}w(r)}{\mathrm{d}r} = -n \dfrac{C}{n+1}
+		\label{eqn:forca_generica}
+	\end{equation}
+	
+	\noindent onde \(C\) é uma constante de interação, \(r\) é a distância e \(n\) é um fator de distância.
+	
+	As interações intermoleculares possuem valores de \(n\) entre 4 e 5. Isso permite que não seja necessário considerar o sistema como um todo para calcular as interações intermoleculares, pois as energia de interação decaem rapidamente, sendo efetivas somente em curtas distâncias. Mie propôs uma forma para o potencial de interação adicionando um componente repulsivo, a equação \ref{eqn:forca_mie}.
+	
+	\begin{equation}
+		w(r) = -\dfrac{A}{r^n} + \dfrac{B}{r^m}
+		\label{eqn:forca_mie}
+	\end{equation}
+	
+	\noindent onde \(A\) e \(B\) são as constantes de interação atrativa e repulsiva, respectivamente, e \(n\) e \(m\) são os fatores de distância. O potencial de Lennard Jones ocorre quando \(n = 6\), correspondente às atrações de van der Waals, \(m = 12\). Os valores comuns de \(A\) e \(B\) são \(10^{-77}\) J e \(10^{-134}\) J. % todo: isto é no vácuo?
+	
+	Quando as interações intermoleculares ocorrem através de um meio, como um solvente, é necessário incluir o efeito das moléculas do solvente nos potenciais de interação. Atrações que seriam previamente atrativas podem se tornar repulsivas num solvente, caso a energia necessária para remover as moléculas de solvente excede a energia de aproximação molecular. Além disso, a presença de moléculas de solvente podem alterar propriedades das moléculas de soluto, como seus momentos de dipolo.
+	
+	Os valores de energia somente serão úteis se comparados com outros fatores, por exemplo, a energia térmica, que age de modo a equilibrar o sistema e afastar as moléculas. A 1 atm, o valor da energia térmica do solvente é de \(\approx \sfrac{3}{2} kT\), onde \(k\) é a constante de Boltzmann e \(T\) é a temperatura, então interações com energias menores que \(\sfrac{3}{2}kT\) não conseguem so sobrepor ao movimento térmico das moléculas. % todo: ler essa parte e ver se é kT ou 3/2 kT.
+	
+	As interações intermoleculares possuem três origens distintas:
+	
+	\begin{enumerate}[noitemsep]
+		\item Origem puramente eletrostáticas, como no caso de interações entre íons, dipolos (e quadropolos, etc) permanentes, e interações de polarização.
+		\item Origem puramente entrópica, que surgem do comportamento coletivo das moléculas, como as forças osmóticas.
+		\item Origem mecânico quântica, como as ligações covalentes, forças de dispersão de van der Waals, ácido-base, forças estérica repulsivas devido ao princípio de exclusão de Pauli.
+	\end{enumerate}
+	
+	\section{Interações Coulombicas}
+	
+	As interação Coulombica depende do campo elétrico entre uma partícula carregada e a carga de outra partícula próxima. O campo elétrico é dado pela equação \ref{eqn:campo_eletrico}.
+	
+	\begin{equation}
+		E = \dfrac{Q_1}{4\pi\varepsilon_0\varepsilon r^2}
+		\label{eqn:campo_eletrico}
+	\end{equation}
+
+	\noindent onde \(Q_1\) é a carga da partícula, \(\varepsilon_0\) é a constante dielétrica do vácuo e \(\varepsilon\) é a constante dielétrica relativa do meio em questão. Como pode ser visto, a presença de um meio diminui a força da interação eletrostática por \(\varepsilon\), então em solventes com constantes dielétricas altas, a força eletrostática é bastante enfraquecida. É necessário enfatizar que os termos \(\varepsilon\) e \(\varepsilon_0\) são dependentes da frequência \(\nu\) do campo elétrico aplicado (por exemplo, o campo elétrico oscilatório da luz). Em frequência zero, em condições estáticas, esses termos recebem o nome de constante dielétrica, mas fora dessas condições recebem o nome de permissividade elétrica.
+	
+	O potencial de interação entre cargas é obtido pelo processo oposto da equação \ref{eqn:forca_generica}, ou seja, pela integração da força eletrostática, dada por \(F = Q_2 E\) (eqn. \ref{eqn:potencial_eletrostático}), utilizando o estado de referência das cargas como sendo no infinito.
+	
+	\begin{equation}
+		w(r) = \int_\infty^r -F(r)dr = \dfrac{z_1z_2e^2}{4\pi\varepsilon_0\varepsilon r}
+		\label{eqn:potencial_eletrostático}
+	\end{equation}
+	
+	Interessantemente, a força gravitacional e a interação Coulombica são comparáveis pois possuem um potencial da forma \(1/r\), portanto são de longo alcance, e também são aditivas, isso é, a interação entre dois corpos não é dependente da presença de outras moléculas ao redor. Esse conceito é importante, pois as interações de van der Waals, de grande relevância para coloides, não são aditivas. % todo: ver se é v.d.W. ou se é dispersiva só.
+	
+	\section{Interações dipolares}
+	
+	A maioria das moléculas não possui uma carga, mas sim um momento de dipolo, resultante da posição de cargas totais ou parciais em diferentes pontos da molécula. O momento de dipolo é definido como:
+	
+	\begin{equation}
+		u = ql
+		\label{eqn:momento_dipolo}
+	\end{equation}
+	
+	\noindent onde \(u\) é o momento de dipolo e \(l\) é a separação entre as cargas \(+q\) e \(-q\). Essas cargas não precisam estar alinhadas, sendo necessário então corrigir esse não alinhamento pela soma vetorial dos momentos de dipolo individuais.
+	
+	A energia de interação entre duas moléculas dipolares (sendo uma delas fixa) é dada pela equação \ref{eqn:energia_dipolo_dipolo}.
+	
+	\begin{equation}
+		w \left( r , \theta _ { 1 } , \theta _ { 2 } , \phi \right) = - \frac { u _ { 1 } u _ { 2 } } { 4 \pi \varepsilon \varepsilon _ { 0 } r ^ { 3 } } \left[ 2 \cos \theta _ { 1 } \cos \theta _ { 2 } - \sin \theta _ { 1 } \sin \theta _ { 2 } \cos \phi \right]
+		\label{eqn:energia_dipolo_dipolo}
+	\end{equation}
+	
+	\noindent onde \(\theta_{ 1 }\) e \(\theta_{ 2 }\) são os ângulos das duas moléculas dipolares em relação à reta que as liga, \(\phi\) é o ângulo de rotação perpendicular a \(\theta_{ 2 }\) de uma das moléculas. É interessante ver que essa interação também é dependente da constante dielétrica, além de ser dependente de \(r^3\).  % todo: pensar se eu devo deixar essa equação ou só colocar a de Keesom
+	
+	Se os dois dipolos puderem rodar livremente, a energia média dessa interação, conhecida como energia de Keesom é dada por:
+	
+	\begin{equation}
+		w(r) = - \dfrac{u _ { 1 } ^ { 2 } u _ { 2 } ^ { 2 } }{ 3 \left( 4 \pi \varepsilon \varepsilon _ { 0 } \right) ^ { 2 } k T r ^ { 6 } }
+		\label{eqn:energia_Keesom}
+	\end{equation}
+	
+	Note que aqui, a dependência com a distância é da ordem de \(r^6\). Essa é uma das componentes das interações de van der Waals.
+	
+	\section{Interações de polarização}
+	
+	Átomos ou moléculas submetidos a um campo elétrico se alinham no sentido contrário ao campo. A magnitude desse alinhamento é dependente da polarizabilidade das moléculas, \(\alpha\), e da intensidade do campo, \(E\)  (eq. \ref{eqn:dipolo_induzido}).
+	
+	\begin{equation}
+		u_{ind} = \alpha E
+		\label{eqn:dipolo_induzido}
+	\end{equation}
+	
+	A polarizabilidade do material é composta por uma componente devido ao dipolo inerente da molécula, se houver, e outra componente sempre presente, que aparece devido à distorção da nuvem eletrônica dos átomos ou moléculas, chamada de polarizabilidade eletrônica, \(\alpha_0\).
+	
+	A equação de Debye-Langevin relaciona a polarizabilidade total com a polarizabilidade eletrônica e o momento de dipolo (eq. \ref{eqn:debye_langevin}).
+	
+	\begin{equation}
+		\alpha = \dfrac{\alpha _ { 0 } + u ^ { 2 }}{ 3 k T }
+		\label{eqn:debye_langevin}
+	\end{equation}
+	
+	Uma maneira de se visualizar essa polarização é considerando um átomo de hidrogênio de Bohr. Na média temporal, não há um momento de dipolo, mas em um determinado momento, a posição relativa do elétron e o próton configura um dipolo. Esse dipolo instantâneo cria um campo que afeta outro átomo de hidrogênio, polarizando-o. De forma geral, átomos pesados, como iodo, possuem uma polarizabilidade muito maior do que átomos menores, como fluor.
+	
+	Uma consequência da polarização das moléculas é justamente a constante dielétrica, que é medida colocando-se o material entre duas placas carregadas de um capacitor. Devido ao campo elétrico, as moléculas alinham seus dipolos, naturais e induzidos, contrariamente ao campo. A soma desses dipolos alinhados gera um campo contrário ao campo aplicado \(E_0\), diminuindo o campo efetivo \(E\). A razão \(\sfrac{E_0}{E}\) resulta na constante dielétrica do meio. Quanto maior for a polarização, maior é a queda do campo efetivo, e maior é a constante dielétrica. Há solventes que possuem mecanismos adicionais para gerar polarização, como o deslocamento de cargas por distâncias significativamente maiores que os tamanhos moleculares. Um exemplo disso é a água, onde elétrons ou prótons sendo transportados pelas ligações de hidrogênio, e amidas secundárias, cujos valores de constante dielétrica podem chegar até 180.
+	
+	Quando moléculas estão em um meio composto por outras moléculas também com polarizabilidade eletrônica definida, as polarizabilidades de excesso se tornam relevantes, ou seja, é a diferença entre a polarizabilidade de uma molécula com a polarizabilidade natural do meio. Essa abordagem assume que as propriedades são contínuas, o que apresenta suas limitações quando as distâncias de interação são bastante curtas. A equação \ref{eqn:polarizabilidade_excesso} mostra como a polarizabilidade de uma molécula esférica \(i\), com constante dielétrica \(\varepsilon_i\) e volume \(v_i\), é afetada ao estar num meio de constante dielétrica \(\varepsilon\).
+	
+	\begin{equation}
+		\alpha_i = 3 \varepsilon_{ 0 } \varepsilon \left( \dfrac{\varepsilon_i - \varepsilon}{\varepsilon_i + 2 \varepsilon}  \right) v_i
+		\label{eqn:polarizabilidade_excesso}
+	\end{equation}
+	 
+	 Essa equação pode ser utilizada para descobrir a polarizabilidade total de uma molécula no estado gasoso (onde \(\varepsilon = 1\)), relação conhecida como a equação de Clausius-Mossotti (eq. \ref{eqn:clausius_mossotti}).
+	 
+	 \begin{equation}
+		\dfrac { \alpha } { \left( 4 \pi \varepsilon _ { 0 } \right) } = \left( \dfrac { \varepsilon - 1 } { \varepsilon + 2 } \right) \dfrac { 3 v } { 4 \pi }
+		\label{eqn:clausius_mossotti}
+	 \end{equation}
+	
+	A polarizabilidade eletrônica \(\alpha_0\) pode ser calculada por uma modificação da equação de Clausius-Mossotti. Ao invés de se utilizar as constantes dielétricas, onde a frequência de perturbação é zero, é necessário utilizar as permissividades na frequência do UV-visível. Na região do UV-visível, a equação \ref{eqn:permissividade_e_indice_refrac} relaciona o índice de refração, definido na equação \ref{eqn:def_n}, com a permissividade elétrica.
+	
+	\begin{equation}
+		\varepsilon(\nu) = n(\nu)^2
+		\label{eqn:permissividade_e_indice_refrac}
+	\end{equation}
+	
+	\begin{equation}
+		n = \dfrac{c_0}{c}
+		\label{eqn:def_n}
+	\end{equation}
+	
+	\noindent onde \(n\) é o índice de refração, \(c_0\) é a velocidade da luz no vácuo e \(c\) é a velocidade da luz no meio.
+	
+	Com isso, pode-se obter a equação de Lorenz-Lorentz, eq. \ref{eqn:lorenz_lorentz}, que relaciona a polarizabilidade eletrônica com o índice de refração. Em frequências altas, acima de \(10^{12}\) Hz, dipolos moleculares não possuem tempo suficiente para responder a um campo, então a polarização é devido somente à polarização eletrônica. Essa separação de comportamentos a frequência zero e frequência no UV-Vis, utilizando a constante dielétrica e o índice de refração ocorrerá em outras equações desta seção.
+	
+	\begin{equation}
+		\dfrac { \alpha _ { 0 } } { \left( 4 \pi \varepsilon _ { 0 } \right) } = \left( \dfrac { n ^ { 2 } - 1 } { n ^ { 2 } + 2 } \right) \dfrac { 3 v } { 4 \pi }
+		\label{eqn:lorenz_lorentz}
+	\end{equation}
+	
+	% todo: falar sobre a interação dipolar por volume
+	
 	% todo: falar sobre a constante de Hamaker e outras coisas importantes para a discussão
 		\section{Atração coloidal}
 		% Falar sobre como as atrações de vdW em coloides são aditivas, e sobre o problema enfrentado.

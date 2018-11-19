@@ -1,12 +1,12 @@
 Solvent and Solvent Effects on Organic Chemistry
 
-# Introdução
+# Introdução (1)
 
 * *simila similibus solvuntur*: semelhante dissolve semelhante
 * Wislicenus estudou o equilíbrio ceto-enólico e notou que as duas formas tautoméricas coexistiam, mas a proporção dependia do meio e seu poder solvatador, e sugeriu o uso de constantes dielétricas como esse poder. Isso acabou se desenvolvendo na noção atual de solventes próticos e apróticos.
 * Em solvatocromismo, Kundt propos uma lei em 1878 que aumentar o índice de refração de um meio está relacionado com um shift no máximo de absorção para comprimentos de onda maiores. Essa lei é relativamente limitada.
 
-# Interações Soluto-Solvente
+# Interações Soluto-Solvente (2)
 
 * Um solvente não deveria ser considerado como um contínuo macroscópico caracterizado somente por suas constantes físicas macroscópicas, como ponto de ebulição, pressão de vapor, rensidade, pressão coesiva, índice de refração, permissividade relativa, condutividade térmica, tensão superficial. Do ponto de vista molacular, um solvente é um descontínuo que consiste de moléculas de solvente individuais, interagindo mutuamente, caracterizadas por propriedades moleculares como momentos de dipolo, polarizabilidade eletrônica, capacidade de doação ou de acepção de ligações de hidrogênio, capacidade de doação e accepção de pares de elétrons. Isso pode resultam em solventes fortemente estruturados, como água, ou menos estruturados, como hidrocarbonetos.
 * As interações entre espécies em solventes e em solução são fortes demais para serem tratadas pela teoria cinética dos gases, mas muito fracas para as leis de física do estado sólido. Então o solvente não é um meio indiferente, e também não possui uma estrutura ordenada se assemelhando a um retículo cristalino. Devido à essa dificuldade teórica, os líquidos são o estado menos conhecido.
@@ -69,7 +69,7 @@ the geometrical size of the solute molecules [346].
     * Energia de interação anisotrópica resultante da formação específica de ligações de hidrogênio ou pares doador/acceptor de elétrons em pontos bem localizados nas moléculas dissolvidas.
 * Número de solvatação/coordenação refletem a ideia de que um íon ou molécula solvatada consiste da coordenação de moléculas de soluto e solvente. O número de coordenação é definido como o o número de moléculas de solvente na primeira esfera de coordenação de um íon em solução. Geralmente estão entre 4 e 9, geralmente 6 para íons.
 * O número de solvatação é definido como o número de moléculas de solvente por íon que permanecem ligadas ao dado íon por tempo suficiente que conseguem experienciar os movimentos translacionais.
-* Um número de modelos foram criados para descrever a estrutura fina das camadas de solvente de íons e moléculas. Geralmente os modelos são qualitativos (85, 91, 94, 95, 98). Dependendo da influência do soluto na estrutura do solvente, dois tipos de solvente podem ser distinguidos.
+* Um número de modelos foram criados para descrever a estrutura fina das camadas de solvente de íons e moléculas. Geralmente os modelos são qualitativos [85, 91, 94, 95, 98]. Dependendo da influência do soluto na estrutura do solvente, dois tipos de solvente podem ser distinguidos.
     * No caso de solventes pouco ordenados, as propriedades direcionais do íon dissolvido dominam numa região relativamente grande ao redor do centro e diminuem gradualmente ao chegar no centeúdo do bulk não perturbado. A solução consiste de uma esfera ordenada, a camada de solvatação primária A, e a fase bulk desordenada B.
     * No caso de solventes estruturados (como água), é possível dividir o solvente ao redor do soluto em três regiões. Primeiro, a esfera de coordenação, onde as moléculas de solvente estão fortemente ligadas ao íon e portanto aparecem estar mneos móveis que as moléculas do solvente bulk. A uma certa distância do íon, aparece a estrutura normal do solvente ordenado. No meio caminho existe uma região intermediária de desordem, com moléculas de solvente fortemente móveis. Isso foi introduzido para explicar o "structure making" e "structure breaking" de íons de diferentes cargas e tamanhos em soluções aquosas. Essa região intermediária foi chamada de "cosphere".
     * A importância relativa das regiões A, B e C (camada de hidratação, região desestruturada intermediária e solvente) permite classificar íons como estruturadores ("kosmotropes", os mais comuns) e desestruturadores ("chaotropes", observado para K+ e Cs+). As moléculas de água perto de íons carregados e pequenos estão fortemente coordenadas, levando a complexos bem definidos, e são chamados de "structure makers". Íons pequenos, grandes (baixa densidade de carga) possuem uma pequena influência na orientação das moléculas de água ao redor e atrapalham principalmente a rede de ligações de hidrogênio da água bulk, resultando no "structure breaking" [432].
@@ -84,7 +84,8 @@ the geometrical size of the solute molecules [346].
 * A capacidade de um solvente em transformar uma ligação covalente em uma ligação iônica (poder ionizante) não é determinado, em primeira instância, por sua permissividade relativa. Mas sim, depende da capacidade do solvente de ser um acceptor ou doador de pares eletrônicos. De certa forma a ionização pode ser vista como uma interação cooedenativa entre substrato e solvente.
 * A capacidade ionizante extraordinária da água se deve ao fato de poder ser tanto um doador quanto um acceptor de pares eletrônicos.
 
-# Classificação de solventes
+# Classificação de solventes (3)
+
 Extensive compilations of chemical and physical properties of non-aqueous solvents can be found in references [11–14, 104, 106, 175, 177].
 Serão dadas 5 formas de classificar os solventes.
 
@@ -136,7 +137,7 @@ common organic solvents, see references [175] \(260 solvents\) and [177] \(1141 
     * O mais extenso [138] utilizou 8 parâmetros, Kirkwood, refração molar (V_m (n^2 - 1)/(n^2 - 2)), parâmetro de hildebrand, índice de refração, ponto de ebulição, momento de dipolo, energias do HOMO e LUMO. Já que alguns dos oito descriptores são linearmente correlacionados um com o outro, a dimensionalidade espacial necessária para descrevelos deve ser menore do que oito. Foi reduzido para três, o primeiro envolvendo polarizbilidade, segundo polaridade. Esse mesmo artigo conseguiu classificar os solventes em várias classes e obteve informações congruentes com as classificações intuitivas de químicos.
     * Um estudo com QSPR e PCA [208b] chegou em três componentes com 80% da variÂncia. Esão relacionados às permissividades, dipolaridades e eletro/nucleo-filicidades. [244, 245]
 
-# Parâmetros empíricos da polaridade do solvente
+# Parâmetros empíricos da polaridade do solvente (7)
 
 * Explicar as reações químicas e polaridade com base na cte dielétrica e suas funções não foi bem sucedido.
 * Parâmetros empíricos de polaridade com base em medidas de equilíbrio
