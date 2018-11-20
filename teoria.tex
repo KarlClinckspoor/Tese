@@ -953,7 +953,7 @@
 		\label{eqn:energia_Keesom}
 	\end{equation}
 	
-	Note que aqui, a dependência com a distância é da ordem de \(r^6\). Essa é uma das componentes das interações de van der Waals.
+	Note que aqui, a dependência com a distância é da ordem de \(r^{-6}\). Essa é uma das componentes das interações de van der Waals.
 	
 	\section{Interações de polarização}
 	
@@ -969,13 +969,22 @@
 	A equação de Debye-Langevin relaciona a polarizabilidade total com a polarizabilidade eletrônica e o momento de dipolo (eq. \ref{eqn:debye_langevin}).
 	
 	\begin{equation}
-		\alpha = \dfrac{\alpha _ { 0 } + u ^ { 2 }}{ 3 k T }
+		\alpha = \alpha _ { 0 } + \dfrac{u ^ { 2 }}{ 3 k T }
 		\label{eqn:debye_langevin}
 	\end{equation}
 	
-	Uma maneira de se visualizar essa polarização é considerando um átomo de hidrogênio de Bohr. Na média temporal, não há um momento de dipolo, mas em um determinado momento, a posição relativa do elétron e o próton configura um dipolo. Esse dipolo instantâneo cria um campo que afeta outro átomo de hidrogênio, polarizando-o. De forma geral, átomos pesados, como iodo, possuem uma polarizabilidade muito maior do que átomos menores, como fluor.
+	Uma maneira de se visualizar essa polarização é considerando um átomo de hidrogênio de Bohr. Quando esse átomo é colocado em um campo elétrico, a posição relativa do elétron e do próton configura um dipolo, que irá interagir com o campo, apesar de que o átomo não possui um momento de dipolo permanente.
 	
 	Uma consequência da polarização das moléculas é justamente a constante dielétrica, que é medida colocando-se o material entre duas placas carregadas de um capacitor. Devido ao campo elétrico, as moléculas alinham seus dipolos, naturais e induzidos, contrariamente ao campo. A soma desses dipolos alinhados gera um campo contrário ao campo aplicado \(E_0\), diminuindo o campo efetivo \(E\). A razão \(\sfrac{E_0}{E}\) resulta na constante dielétrica do meio. Quanto maior for a polarização, maior é a queda do campo efetivo, e maior é a constante dielétrica. Há solventes que possuem mecanismos adicionais para gerar polarização, como o deslocamento de cargas por distâncias significativamente maiores que os tamanhos moleculares. Um exemplo disso é a água, onde elétrons ou prótons sendo transportados pelas ligações de hidrogênio, e amidas secundárias, cujos valores de constante dielétrica podem chegar até 180.
+
+	Outra consequência da polarização de moléculas é o surgimento de uma força entre os dipolos permanentes e dipolos induzidos, chamada de interação de Debye, cujo potencial de energia é dado pela equação \ref{eqn:energia_Debye}.
+	
+	\begin{equation}
+		w ( r ) = - \frac { \left[ u _ { 1 } ^ { 2 } \alpha _ { 02 } + u _ { 2 } ^ { 2 } \alpha _ { 01 } \right] } { \left( 4 \pi \varepsilon _ { 0 } \varepsilon \right) ^ { 2 } r ^ { 6 } }
+		\label{eqn:energia_Debye}
+	\end{equation}
+	
+	\noindent onde os subíndices \emph{1, 2} indicam as propriedades (momentos de dipolo \(u\) e polarizabilidades eletrônicas \(\alpha_0\)) de duas moléculas/átomos diferentes. Da mesma maneira que a energia de Keesom (eq. \ref{eqn:energia_Keesom}), a dependência da energia de Debye é proporcional a \(r^{-6}\).
 	
 	Quando moléculas estão em um meio composto por outras moléculas também com polarizabilidade eletrônica definida, as polarizabilidades de excesso se tornam relevantes, ou seja, é a diferença entre a polarizabilidade de uma molécula com a polarizabilidade natural do meio. Essa abordagem assume que as propriedades são contínuas, o que apresenta suas limitações quando as distâncias de interação são bastante curtas. A equação \ref{eqn:polarizabilidade_excesso} mostra como a polarizabilidade de uma molécula esférica \(i\), com constante dielétrica \(\varepsilon_i\) e volume \(v_i\), é afetada ao estar num meio de constante dielétrica \(\varepsilon\).
 	
@@ -1011,8 +1020,45 @@
 		\dfrac { \alpha _ { 0 } } { \left( 4 \pi \varepsilon _ { 0 } \right) } = \left( \dfrac { n ^ { 2 } - 1 } { n ^ { 2 } + 2 } \right) \dfrac { 3 v } { 4 \pi }
 		\label{eqn:lorenz_lorentz}
 	\end{equation}
-	
 	% todo: falar sobre a interação dipolar por volume
+	\section{Interações dispersivas}
+	
+	As forças de van der Waals são compostas pelas forças dispersivas, junto com as forças de Keesom e Debye. Esse nome vem da dispersão da luz na região do visível e ultravioleta. As forças dispersivas são as mais importantes das três forças, pois estão presentes em todas as moléculas e átomos, podem ser de longa distância, atrativas ou repulsivas, e não são aditivas.
+	
+	A origem das forças dispersivas está na eletrodinâmica quântica, porém sua natureza ainda é essencialmente eletrostática. Um átomo ou molécula não polar possui momento de dipolo temporal médio igual a zero, mas, como mencionado para o átomo de hidrogênio de Bohr, a cada momento existe um momento de dipolo devido à disposição da nuvem eletrônica ao redor do núcleo. Esse momento de dipolo instantâneo irá induzir um momento de dipolo num átomo vizinho, e estes irão interagir eletrostaticamente. A média temporal dessa atração é não nula, apesar da média temporal dos momentos de dipolo ser nula. O momento de dipolo instantâneo do átomo de hidrogênio de Bohr é de 2,5 Debye, o que não é pequeno.
+	
+	A energia de interação de van der Waals entre dois átomos, 1 e 2,  no vácuo pode ser descrita pela equação \ref{eqn:energia_dispersiva}, proposta por London em 1937.
+	
+	\begin{equation}
+		w(r) = - \frac { 3 } { 2 } \frac { \alpha _ { 01 } \alpha _ { 02 } } { \left( 4 \pi \varepsilon _ { 0 } \right) ^ { 2 } r ^ { 6 } } \frac { h \nu _ { 1 } \nu _ { 2 } } { \left( \nu _ { 1 } + \nu _ { 2 } \right) }
+		\label{eqn:energia_dispersiva}
+	\end{equation}
+	
+	\noindent onde \(h\) é a constante de Planck e \(\nu\) é a frequência de absorção do átomo. O termo \(h\nu_i\) pode ser substituído por \(I_i\), a energia de ionização do átomo \(i\). É possível notar a dependência de \(r^{-6}\) que as outras energias também possuem.
+	
+	% todo: mencionar a energia dispersiva por volume, e como ela é constante
+	
+	Com a terceira equação, é possível obter o panorama completo da energia de interação de van der Waals obtido pela soma das três energias (equação \ref{eqn:vdw}.
+	
+	\begin{subequations}
+	\begin{align}
+		w_{\mathrm{VDW}}(r) &= -C_{\mathrm{VDW}}/r^{6} = -\left[C_{\mathrm{Debye}}+C_{\mathrm{Keesom}}+C_{\mathrm{London}}\right]/r^{6} \label{eqn:vdw_geral} \\
+							&= - \left[ \left( u_{1}^{2}\alpha_{02} + u_{2}^{2}\alpha_{01} \right)   + \frac{u_{1}^{2}u_{2}^{2}}{3kT} + \frac{3\alpha_{01}\alpha_{02}h\nu_{1}\nu_{2}}{2\left(\nu_{1} + \nu_{2}\right)}\right]/\left(4\pi\varepsilon_{0}\right)^{2}r^{6} \label{eqn:vdw_completa}
+	\end{align}
+	\label{eqn:vdw}
+	\end{subequations}
+	
+	Porém, essa equação possui algumas limitações. Não são consideradas absorções além da primeira, e não é possível levar em consideração o meio. MacLachlan utilizou uma somatória de todas as absorções para expandir a abrangência da equação, e utilizou propriedades de excesso para poder considerar a presença de um meio. Assumindo que todos os meios possuem a mesma energia de absorção, e que as partículas \emph{1} e \emph{2} sejam iguais e dispersas no meio \emph{3}, é possível obter a equação \ref{eqn:energia_maclachlan}, onde as contribuições estáticas, onde \(\nu = 0\) (Debye e Keesom) foram separadas das contribuições de frequências altas, onde predominam as interações dispersivas.
+	
+	\begin{equation}
+		w ( r ) = w ( r ) _ { \nu = 0 } + w ( r ) _ { \nu > 0 } \approx - \left[ 3 k T \left( \frac { \varepsilon _ { 1 } ( 0 ) - \varepsilon _ { 3 } ( 0 ) } { \varepsilon _ { 1 } ( 0 ) + 2 \varepsilon _ { 3 } ( 0 ) } \right) ^ { 2 } + \frac { \sqrt { 3 } h \nu _ { e } } { 4 } \frac { \left( n _ { 1 } ^ { 2 } - n _ { 3 } ^ { 2 } \right) ^ { 2 } } { \left( n _ { 1 } ^ { 2 } + 2 n _ { 3 } ^ { 2 } \right) ^ { 3 / 2 } } \right] \frac { a _ { 1 } ^ { 6 } } { r ^ { 6 } }
+		\label{eqn:energia_maclachlan}
+	\end{equation}
+	
+	\noindent onde \(a_1\) é o raio da molécula 1.
+	
+	% Polarizabilidade de excesso
+	% \alpha _ { 1 } ( \nu ) = 4 \pi \varepsilon _ { 0 } \varepsilon _ { 3 } ( \nu ) \left( \frac { \varepsilon _ { 1 } ( \nu ) - \varepsilon _ { 3 } ( \nu ) } { \varepsilon _ { 1 } ( \nu ) + 2 \varepsilon _ { 3 } ( \nu ) } \right) a _ { 1 } ^ { 3 }
 	
 	% todo: falar sobre a constante de Hamaker e outras coisas importantes para a discussão
 		\section{Atração coloidal}
