@@ -265,6 +265,7 @@ Tipos de interação e os potenciais:
 * É possível combinar valores de cte de Hamaker, mas só vale para meios onde as interações são predominantemente dispersivas.
 * É possível estimar a cte de Hamaker para líquidos sem ligação de hidrogênio por suas tensões superficiais/energias superficiais: A \approx 2.1x10^-21 \gamma (em mJ.m-2).
 
+
 ## Forças eletrostáticas entre superfícies em Líquidos
 
 * Se as interações em nós fossem compostas somente de forças de v.d.W., as partículas se aglomerariam e precipitariam de solução, devido às suas atrações. Isso não acontece pq partículas em meios com alta cte dielétrica são carregadas e não se algomeram devido às forças eletrostáticas repulsivas. Forças estéricas e de solvatação também impedem.

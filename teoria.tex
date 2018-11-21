@@ -437,7 +437,7 @@
 			O modelo de Oldroyd é praticamente idêntico ao modelo de Maxwell, e introduz somente um termo relativo à viscosidade do solvente para altas frequências de G'' (Eq. \ref{eqn:modelo_oldroyd_g2}). G' é inalterado.
 			
 			\begin{equation}
-				G'' =\dfrac{  G \omega  \tau_{\textrm{rel}}        }{ 1 + \omega^2 \tau_{\textrm{rel}}^2 } + \eta_{\infty} * \omega
+				G'' =\dfrac{  G \omega  \tau_{\textrm{rel}}        }{ 1 + \omega^2 \tau_{\textrm{rel}}^2 } + \eta_{\infty} \times \omega
 				\label{eqn:modelo_oldroyd_g2}
 			\end{equation}
 			
@@ -1021,7 +1021,7 @@
 		\label{eqn:lorenz_lorentz}
 	\end{equation}
 	% todo: falar sobre a interação dipolar por volume
-	\section{Interações dispersivas}
+	\section{Forças de van der Waals}
 	
 	As forças de van der Waals são compostas pelas forças dispersivas, junto com as forças de Keesom e Debye. Esse nome vem da dispersão da luz na região do visível e ultravioleta. As forças dispersivas são as mais importantes das três forças, pois estão presentes em todas as moléculas e átomos, podem ser de longa distância, atrativas ou repulsivas, e não são aditivas.
 	
@@ -1048,7 +1048,7 @@
 	\label{eqn:vdw}
 	\end{subequations}
 	
-	Porém, essa equação possui algumas limitações. Não são consideradas absorções além da primeira, e não é possível levar em consideração o meio. MacLachlan utilizou uma somatória de todas as absorções para expandir a abrangência da equação, e utilizou propriedades de excesso para poder considerar a presença de um meio. Assumindo que todos os meios possuem a mesma energia de absorção, e que as partículas \emph{1} e \emph{2} sejam iguais e dispersas no meio \emph{3}, é possível obter a equação \ref{eqn:energia_maclachlan}, onde as contribuições estáticas, onde \(\nu = 0\) (Debye e Keesom) foram separadas das contribuições de frequências altas, onde predominam as interações dispersivas.
+	Porém, essa equação possui algumas limitações. Não são consideradas absorções além da primeira, e não é possível levar em consideração o meio. MacLachlan utilizou uma somatória de todas as absorções para expandir a abrangência da equação, e utilizou propriedades de excesso de um sistema contínuo para poder considerar a presença de um meio. Assumindo que todos os meios possuem a mesma energia de absorção, e que as partículas \emph{1} e \emph{2} sejam iguais e dispersas no meio \emph{3}, é possível obter a equação \ref{eqn:energia_maclachlan}, onde as contribuições estáticas, onde \(\nu = 0\) (Debye e Keesom) foram separadas das contribuições de frequências altas, onde predominam as interações dispersivas.
 	
 	\begin{equation}
 		w ( r ) = w ( r ) _ { \nu = 0 } + w ( r ) _ { \nu > 0 } \approx - \left[ 3 k T \left( \frac { \varepsilon _ { 1 } ( 0 ) - \varepsilon _ { 3 } ( 0 ) } { \varepsilon _ { 1 } ( 0 ) + 2 \varepsilon _ { 3 } ( 0 ) } \right) ^ { 2 } + \frac { \sqrt { 3 } h \nu _ { e } } { 4 } \frac { \left( n _ { 1 } ^ { 2 } - n _ { 3 } ^ { 2 } \right) ^ { 2 } } { \left( n _ { 1 } ^ { 2 } + 2 n _ { 3 } ^ { 2 } \right) ^ { 3 / 2 } } \right] \frac { a _ { 1 } ^ { 6 } } { r ^ { 6 } }
@@ -1057,11 +1057,59 @@
 	
 	\noindent onde \(a_1\) é o raio da molécula 1.
 	
+	Alguns fatores podem ser levantados sobre essa equação. Geralmente, a componente com \(\nu > 0\) é mais forte que a componente com \(\nu = 0\), exceto em solventes polares, como a água. Além disso, a força de van der Waals é reduzida num meio com solvente, devido às propriedades de excesso ser menor do que no vácuo. Por último, a força dispersiva é sempre atrativa entre moléculas iguais, mas a expressão expandida mostra que as interações podem ser tanto atrativas quanto repulsivas, quando a propriedade do solvente, como o índice de refração, é intermediário entre as duas partículas. Uma maneira de se visualizar isso é pensando no princípio de Arquimedes. A força gravitacional é, aparentemente, sempre atrativa. Porém, ao colocar uma esfera de isopor no fundo de uma banheira, a esfera irá subir para a superfície, sendo que uma esfera de aço afundaria. A causa da repulsão da esfera de isopor é a força gravitacional, que agiu com maior força no volume de água deslocado pelo isopor do que na própria esfera de isopor, e a deslocou para cima.
+	
+	\section{Ligações de hidrogênio e interações hidrofóbicas}
+	
+	Na molécula de água, há uma grande diferença de eletronegatividade entre O e H, resultando numa grande polarização dessa ligação. A molécula de água pode ser representada centrada no oxigênio, com duas cargas positivas nos hidrogênios e duas cargas negativas nos pares eletrônicos do oxigênio. Essa interação entre as regiões positiva e negativa das moléculas de água, de natureza eletrostática, é bastante forte, da ordem de 5-10 kT a 298K. Essa interação pode ser visualizada através das distâncias de ligação, onde a ligação intramolecular O --- H é de 0.10 nm, a distância intermolecular \(\mathrm{O} \cdots \mathrm{H}\) é 0.176 nm, e a soma dos raios de van der Waals de O e H é de 0.26 nm. Devido à essa forte interação, as moléculas de água formam uma estrutura tetraédrica, com quatro moléculas de água ao redor, no estado sólido, e uma média de 3,5 moléculas de água no estado líquido, ao invés de 12 moléculas para estruturas com empacotamento denso.
+	
+	A forte tendência da água de formar ligações de hidrogênio influencia quando algum soluto grande, que não consegue realizar ligações de hidrogênio, é adicionado. Não importa a disposição das moléculas de água, haverá alguma das cargas parciais que não conseguirá ser totalmente equilibrada. Uma consequência disso é o aparecimento de cargas negativas em superfícies hidrofóbicas, pois moléculas de água se direcionam preferencialmente com o oxigênio em direção à essas superfícies, ocorrendo um acúmulo das cargas negativas parciais. Outra consequência é que em solutos hidrofóbicos, como hidrocarbonetos longos, causam uma estruturação da água envolvendo o hidrocarboneto, que é bastante entropicamente desfavorável, já que rompe a estrutura existente e impõe uma estrutura ordenada. Por exemplo, a interação entre n-butano e água é entalpicamente favorável (\(\Delta H = -4,3\) kJ.mol\menosUm), porém é extremamente entropicamente desfavorável (\(-T\Delta S = +28,7\) kJ.mol\menosUm), resultando no \(\Delta G_{\mathrm{transferência}} = +24.5\) kJ.mol\menosUm. Essa energia é proporcional à área da superfície hidrofóbica, e é próxima à tensão superficial de água e um hidrocarboneto.
+	
+	A interação hidrofóbica é o nome dado à força de atração entre espécies hidrofóbicas em água, que é muito maior à força de atração daquelas em vácuo, devido ao efeito hidrofóbico. Quando duas moléculas solvatadas se aproximam, suas esferas de hidratação se sobrepõem, e moléculas de água se tornam livres. Do lado oposto, a interação hidrofílica resulta na repulsão de espécies em água, e ocorre em materiais conhecidos por absorver água do ar, isso é, hidroscópicos.
+	
+	O efeito de certos solutos em água pode, então, tanto estruturar quanto desestruturar as moléculas de água locais. Os agentes que desestruturam água são chamados de agentes caotrópicos, e são geralmente hidrofílicos. Por outro lado, agentes que estruturam a água são chamados de agentes cosmotrópicos. % todo: pesquisar melhor essa área, pq não tem no Israelachvili
+	
+	
 	% Polarizabilidade de excesso
 	% \alpha _ { 1 } ( \nu ) = 4 \pi \varepsilon _ { 0 } \varepsilon _ { 3 } ( \nu ) \left( \frac { \varepsilon _ { 1 } ( \nu ) - \varepsilon _ { 3 } ( \nu ) } { \varepsilon _ { 1 } ( \nu ) + 2 \varepsilon _ { 3 } ( \nu ) } \right) a _ { 1 } ^ { 3 }
+	\section{Coloides e atração coloidal}
 	
-	% todo: falar sobre a constante de Hamaker e outras coisas importantes para a discussão
-		\section{Atração coloidal}
+	Coloides são sistemas onde há uma dispersão de partículas em solução, onde pelo menos uma das dimensões das partículas está na faixa de 5 nm a 100 \(\mu\)m. Coloides podem ser tanto termodinamicamente estáveis, como podem ser instáveis mas com um tempo de vida muito grande. Como exemplos de coloides temos micelas, moléculas poliméricas e emulsões. % ref Israelachvili e Colloid Science do Cosgrove
+	
+	Para calcular as interações entre duas partículas, é necessário calcular as atrações e repulsões entre todas as moléculas de uma partícula com todas as moléculas da outra partícula. Logo, as energias se tornam proporcionais ao tamanho das partículas. Evidentemente, o problema da não aditividade se torna relevante nessa situação.
+	
+	Outro fator importante são as dimensões em estudo. As propriedades de gases e fases condensadas são determinadas principalmente pela energia de interação quando as partículas estão em contato. No caso de coloides, a situação se altera, e as interações principais são as de longo alcance. Além disso, quando as partículas são ``moles'' (do inglês \emph{soft}), isso é, não possuem uma estrutura rígida, as interações se tornam dependentes dos formatos transientes de ambas as partículas, como, por exemplo, as forças de ondulação de bicamadas. No total, as interações entre coloides são quantitativamente, e qualitativamente, diferentes daquelas de moléculas pequenas. % todo: verificar a afirmação sobre forças de ondulação.
+	
+	Como uma aproximação inicial, é possível calcular as interações de van der Waals entre partículas com diversos formatos, assumindo que as forças são aditivas. Por exemplo, a interação de van der Waals possui energia \(w(r) = -\sfrac{C}{r^6}\) (eq. \ref{eqn:vdw_geral}), mas a interação de van der Waals entre duas esferas de tamanhos coloidais de raios \(R_1\) e \(R_2\) separadas por uma distância \(D\) é dado pela equação \ref{eqn:interacao_duas_esferas}.
+	
+	\begin{equation}
+		\dfrac{-A}{6D} \left( \dfrac{R_1R_2}{R_1 + R_2}   \right)
+		\label{eqn:interacao_duas_esferas}
+	\end{equation}
+	
+	\noindent onde \(A\) é a constante de Hamaker, conceitualmente semelhante à constante \(C\) das interações entre moléculas. A constante de Hamaker é  definida pela equação \ref{eqn:constante_hamaker}.
+	
+	\begin{equation}
+		A = \pi^2 C \rho_1 \rho_2
+		\label{eqn:constante_hamaker}
+	\end{equation}
+	
+	\noindent onde \(C\) é a constante de interação de van der Waals, \(rho\) é a densidade numérica das partículas \emph{1, 2}. Valores típicos de \(A\) são da ordem de \(10^{-19}\) J, para \(C = 10^{-77}\) J.m\(^6\) e \(\rho\=3 \times 10^{28}\) m\(^-3\).
+	
+	É interessante notar a grande divergência entre a energia de interação de van der Waals entre moléculas quanto à sua dependência com a distância. Enquanto a interação intermolecular tem dependência de \(r^{-6}\), a interação interpartícula tem dependência de \(D^{-1}\), parecida com a força gravitacional, caracterizando seu longo alcance.
+	
+	Porém, a suposição de que as interações de van der Waals são aditivas é falsa. Isso ocorre porque quando um átomo 1 interage com um átomo 2 e um átomo 3, todos próximos, a polarização de 1 em 2 ocorrerá tanto diretamente, como também através da polarização de 1 em 3, que por sua vez irá polarizar 2. Logo, houve uma ``reflexão'' da polarização de 1 pelo átomo 3. Para resolver esse problema, Lifshitz criou uma teoria onde a estrutura atômica é ignorada, e as interações são descritas somente pelas propriedades do \emph{bulk}, como índices de refração e constantes dielétricas, semelhante à equação \ref{eqn:energia_maclachlan}. Com essa teoria, é possível calcular constantes de Hamaker sem o efeito de retardação (aumento da dependência com a distância devido ao tempo de propagação da força e a frequência de oscilação de dipolos), mas considerando a aditividade. Para o caso onde há duas partículas 1 interagindo num meio 3, a constante de Hamaker possui a forma da equação \ref{eqn:constante_hamaker_lifshitz}.
+	
+	\begin{equation}
+	A = A_{\nu=0} + A_{\nu>0}  = \frac{3}{4} kT \left( \frac { \varepsilon_{1}-\varepsilon_{3}} { \varepsilon_{1} + \varepsilon_{3} } \right)^{2} + \frac{3h\nu_{\mathrm{e} } } {16\sqrt{2}} \frac{\left(n_{1}^{2} - n_{3}^{2} \right)^{2}} {\left(n_{1}^{2} + n_{3}^{2} \right)^{3/2} }
+	\label{eqn:constante_hamaker_lifshitz}
+	\end{equation}
+	
+	\noindent onde \(\nu_e\) é a frequência da primeira absorção eletrônica dos componentes das fases, geralmente \(3 \times 10^{15}\) s\menosUm.
+	
+	% Falar sobre as interações sem considerar a aditividade, achar a cte de Hamaker.
+	% Depois voltar para o prob. da aditividade, descrever direito o que isso significa.
+	
 		% Falar sobre como as atrações de vdW em coloides são aditivas, e sobre o problema enfrentado.
 		% Falar sobre os estudos do físico para tentar contornar esse problema.
 		% Falar sobre DLVO
