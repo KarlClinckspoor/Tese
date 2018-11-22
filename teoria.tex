@@ -303,11 +303,11 @@
 			 
 			\begin{equation}
 				\dot{\gamma}_{\textrm{total}} =  \dot{\gamma}_{\textrm{viscoso}} + \dot{\gamma}_{\textrm{elástico}} \to
-				\dfrac{d\gamma}{dt} = \dfrac{1}{\eta}\tau + \dfrac{1}{G}\dfrac{d\tau}{dt}
+				\dfrac{\mathrm{d}\gamma}{\mathrm{d}t} = \dfrac{1}{\eta}\tau + \dfrac{1}{G}\dfrac{\mathrm{d}\tau}{\mathrm{d}t}
 				\label{eqn:Maxwell_soma}
 			\end{equation}
 			
-			Para uma deformação constante, \(\frac{d\gamma}{dt}=0\), a Eq. \ref{eqn:Maxwell_soma} se torna uma equação diferencial (Eq. \ref{eqn:Maxwell_diferencial}).
+			Para uma deformação constante, \(\frac{\mathrm{d}\gamma}{\mathrm{d}t}=0\), a Eq. \ref{eqn:Maxwell_soma} se torna uma equação diferencial (Eq. \ref{eqn:Maxwell_diferencial}).
 			
 			\begin{equation}
 				\dfrac{1}{\eta}\tau + \dfrac{1}{G}\dfrac{d\tau}{dt} = 0
@@ -333,9 +333,9 @@
 			A expressão \ref{eqn:Maxwell_soma} pode ser rearranjada utilizando o tempo de relaxação (\ref{eqn:Maxwell_tempo_rel_def}).
 			
 			\begin{equation}
-				\dfrac{d\gamma}{dt} = \dfrac{1}{\eta}\tau + \dfrac{1}{G}\dfrac{d\tau}{dt} \to 
-				\tau = -\dfrac{\eta}{G} \dfrac{d\tau}{dt} + \eta\dfrac{d\gamma}{dt} =
-				-\tau_{\textrm{rel}} \dfrac{d\tau}{dt} + \eta\dfrac{d\gamma}{dt}
+				\dfrac{\mathrm{d}\gamma}{\mathrm{d}t} = \dfrac{1}{\eta}\tau + \dfrac{1}{G}\dfrac{\mathrm{d}\tau}{\mathrm{d}t} \to 
+				\tau = -\dfrac{\eta}{G} \dfrac{\mathrm{d}\tau}{\mathrm{d}t} + \eta\dfrac{\mathrm{d}\gamma}{\mathrm{d}t} =
+				-\tau_{\textrm{rel}} \dfrac{\mathrm{d}\tau}{\mathrm{d}t} + \eta\dfrac{\mathrm{d}\gamma}{\mathrm{d}t}
 				\label{eqn:Maxwell_inicio_g1g2}
 			\end{equation}
 			
@@ -944,7 +944,7 @@
 		\label{eqn:energia_dipolo_dipolo}
 	\end{equation}
 	
-	\noindent onde \(\theta_{ 1 }\) e \(\theta_{ 2 }\) são os ângulos das duas moléculas dipolares em relação à reta que as liga, \(\phi\) é o ângulo de rotação perpendicular a \(\theta_{ 2 }\) de uma das moléculas. É interessante ver que essa interação também é dependente da constante dielétrica, além de ser dependente de \(r^3\).  % todo: pensar se eu devo deixar essa equação ou só colocar a de Keesom
+	\noindent onde \(\theta_{ 1 }\) e \(\theta_{ 2 }\) são os ângulos das duas moléculas dipolares em relação à reta que as liga, \(\phi\) é o ângulo de rotação perpendicular a \(\theta_{ 2 }\) de uma das moléculas. É interessante ver que essa interação também é dependente da constante dielétrica, além de ser dependente de \(r^{-3}\).  % todo: pensar se eu devo deixar essa equação ou só colocar a de Keesom
 	
 	Se os dois dipolos puderem rodar livremente, a energia média dessa interação, conhecida como energia de Keesom é dada por:
 	
@@ -1080,10 +1080,10 @@
 	
 	Outro fator importante são as dimensões em estudo. As propriedades de gases e fases condensadas são determinadas principalmente pela energia de interação quando as partículas estão em contato. No caso de coloides, a situação se altera, e as interações principais são as de longo alcance. Além disso, quando as partículas são ``moles'' (do inglês \emph{soft}), isso é, não possuem uma estrutura rígida, as interações se tornam dependentes dos formatos transientes de ambas as partículas, como, por exemplo, as forças de ondulação de bicamadas. No total, as interações entre coloides são quantitativamente, e qualitativamente, diferentes daquelas de moléculas pequenas. % todo: verificar a afirmação sobre forças de ondulação.
 	
-	Como uma aproximação inicial, é possível calcular as interações de van der Waals entre partículas com diversos formatos, assumindo que as forças são aditivas. Por exemplo, a interação de van der Waals possui energia \(w(r) = -\sfrac{C}{r^6}\) (eq. \ref{eqn:vdw_geral}), mas a interação de van der Waals entre duas esferas de tamanhos coloidais de raios \(R_1\) e \(R_2\) separadas por uma distância \(D\) é dado pela equação \ref{eqn:interacao_duas_esferas}.
+	Como uma aproximação inicial, é possível calcular as interações de van der Waals entre partículas com diversos formatos, assumindo que as forças são aditivas. Por exemplo, a interação de van der Waals possui energia \(w(r) = C/r^6\) (eq. \ref{eqn:vdw_geral}), mas a interação de van der Waals entre duas esferas de tamanhos coloidais de raios \(R_1\) e \(R_2\) separadas por uma distância \(D\) é dado pela equação \ref{eqn:interacao_duas_esferas}.
 	
 	\begin{equation}
-		\dfrac{-A}{6D} \left( \dfrac{R_1R_2}{R_1 + R_2}   \right)
+		w(D) = \dfrac{-A}{6D} \left( \dfrac{R_1R_2}{R_1 + R_2}   \right)
 		\label{eqn:interacao_duas_esferas}
 	\end{equation}
 	
@@ -1094,27 +1094,62 @@
 		\label{eqn:constante_hamaker}
 	\end{equation}
 	
-	\noindent onde \(C\) é a constante de interação de van der Waals, \(rho\) é a densidade numérica das partículas \emph{1, 2}. Valores típicos de \(A\) são da ordem de \(10^{-19}\) J, para \(C = 10^{-77}\) J.m\(^6\) e \(\rho\=3 \times 10^{28}\) m\(^-3\).
+	\noindent onde \(C\) é a constante de interação de van der Waals, \(\rho\) é a densidade numérica das partículas \emph{1, 2}. Valores típicos de \(A\) são da ordem de \(10^{-19}\) J, para \(C = 10^{-77}\) J.m\(^6\) e \(\rho=3 \times 10^{28}\) m\(^{-3}\).
 	
 	É interessante notar a grande divergência entre a energia de interação de van der Waals entre moléculas quanto à sua dependência com a distância. Enquanto a interação intermolecular tem dependência de \(r^{-6}\), a interação interpartícula tem dependência de \(D^{-1}\), parecida com a força gravitacional, caracterizando seu longo alcance.
 	
-	Porém, a suposição de que as interações de van der Waals são aditivas é falsa. Isso ocorre porque quando um átomo 1 interage com um átomo 2 e um átomo 3, todos próximos, a polarização de 1 em 2 ocorrerá tanto diretamente, como também através da polarização de 1 em 3, que por sua vez irá polarizar 2. Logo, houve uma ``reflexão'' da polarização de 1 pelo átomo 3. Para resolver esse problema, Lifshitz criou uma teoria onde a estrutura atômica é ignorada, e as interações são descritas somente pelas propriedades do \emph{bulk}, como índices de refração e constantes dielétricas, semelhante à equação \ref{eqn:energia_maclachlan}. Com essa teoria, é possível calcular constantes de Hamaker sem o efeito de retardação (aumento da dependência com a distância devido ao tempo de propagação da força e a frequência de oscilação de dipolos), mas considerando a aditividade. Para o caso onde há duas partículas 1 interagindo num meio 3, a constante de Hamaker possui a forma da equação \ref{eqn:constante_hamaker_lifshitz}.
+	Porém, a suposição de que as interações de van der Waals são aditivas é falsa. Isso ocorre porque quando um átomo 1 interage com um átomo 2 e um átomo 3, todos próximos, a polarização de 1 em 2 ocorrerá tanto diretamente, como também através da polarização de 1 em 3, que por sua vez irá polarizar 2. Logo, houve uma ``reflexão'' da polarização de 1 pelo átomo 3. Para resolver esse problema, Lifshitz criou uma teoria onde a estrutura atômica é ignorada, e as interações são descritas somente pelas propriedades do \emph{bulk}, como índices de refração e constantes dielétricas, semelhante à equação \ref{eqn:energia_maclachlan}. Com essa teoria, é possível calcular constantes de Hamaker sem o efeito de retardação, mas considerando a aditividade. Para o caso onde há duas partículas 1 interagindo num meio 3, a constante de Hamaker possui a forma da equação \ref{eqn:constante_hamaker_lifshitz}. Como a teoria de Lifshitz se baseia na teoria do contínuo, a separação dos materiais interagentes deve ser maior do que as dimensões moleculares.
 	
 	\begin{equation}
 	A = A_{\nu=0} + A_{\nu>0}  = \frac{3}{4} kT \left( \frac { \varepsilon_{1}-\varepsilon_{3}} { \varepsilon_{1} + \varepsilon_{3} } \right)^{2} + \frac{3h\nu_{\mathrm{e} } } {16\sqrt{2}} \frac{\left(n_{1}^{2} - n_{3}^{2} \right)^{2}} {\left(n_{1}^{2} + n_{3}^{2} \right)^{3/2} }
 	\label{eqn:constante_hamaker_lifshitz}
 	\end{equation}
 	
-	\noindent onde \(\nu_e\) é a frequência da primeira absorção eletrônica dos componentes das fases, geralmente \(3 \times 10^{15}\) s\menosUm.
+	\noindent onde \(\nu_e\) é a frequência da primeira absorção eletrônica dos componentes, geralmente \(3 \times 10^{15}\) s\menosUm.
 	
-	% Falar sobre as interações sem considerar a aditividade, achar a cte de Hamaker.
-	% Depois voltar para o prob. da aditividade, descrever direito o que isso significa.
+	Da mesma maneira que na equação de MacLachlan (eq. \ref{eqn:energia_maclachlan}), a constante de Hamaker pode ser dividida em duas componentes, uma relativa aos dipolos, nunca maior que \(\sfrac{3}{4}kT\), e uma componente relativa às interações dispersivas, geralmente mais relevante. Como visto anteriormente, as forças entre duas partículas iguais serão sempre atrativas, porém a magnitude da atração diminui à medida que os índices de refração do solvente e das partículas se tornam parecidos. Esse princípio será essencial para entender os estudos reológicos apresentados neste trabalho.
 	
-		% Falar sobre como as atrações de vdW em coloides são aditivas, e sobre o problema enfrentado.
-		% Falar sobre os estudos do físico para tentar contornar esse problema.
-		% Falar sobre DLVO
-		\section{Constante de Hamaker}
-		% Colocar a equação e falar como que se obtêm os valores
+	Um caso onde a contribuição em frequência zero é relevante é na interação de hidrocarbonetos e água, devido principalmente à alta constante dielétrica da água. Nesse caso, \(A = A_{\nu=0} + A_{\nu>0} = (0,28 + 0,17) \times 10^{-20} \) J a 300 K, ou seja, a contribuição dos dipolos é mais do que 50\% da contribuição total da atração, o que pode ser visualizado como uma consequência do efeito hidrofóbico. % todo: efeito hidrofóbico, é verdade?
+	
+	Ambos as duas contribuições da constante de Hamaker podem ser reduzidas com a distância. O termo \(A_{\nu > 0}\) é reduzido pelos efeitos de retardação (\emph{Retardation Effects}), que se tornam relevantes além de distâncias de 5 nm. Nesse caso, ao invés da energia depender de \(r^{-1}\), começa a depender de \(r^{-2}\). Esses efeitos são consequência do tempo de propagação da força e a frequência de oscilação de dipolos induzidos, que pode ter mudado de configuração no tempo que a energia foi propagada para interagir. Por outro lado, o termo \(A_{\nu = 0}\) não é afetado pelos efeitos de retardação, mas é dependente da blindagem por íons em soluções aquosas. Nesse caso, o decaimento é exponencial, dependendo do comprimento de blindagem de Debye. Para um eletrólito 1:1, o comprimento de Debye \(1/\kappa\) é dado pela equação \ref{eqn:comprimento_debye}.
+	
+	\begin{equation}
+		1/\kappa = \dfrac{0{,}304}{\sqrt{\left[ \mathrm{NaCl} \right] }} \textrm{nm}
+		\label{eqn:comprimento_debye}
+	\end{equation}
+	
+	Logo, para uma solução 0,1 mol.L\menosUm{} de NaCl possui um comprimento de Debye de aproximadamente 1 nm. A 2 nm, as forças eletrostáticas são da ordem de 13\% do valor inicial.
+	
+	Relacionado ao comprimento de Debye, há o comprimento de Bjerrum, que relaciona a distância onde a energia Coulombica entre duas cargas se iguala à energia térmica (equação \ref{eqn:comprimento_bjerrum}).
+	
+	\begin{equation}
+		\lambda_B = \dfrac{e^2}{4 \pi \varepsilon_{ 0 } \varepsilon kT}
+		\label{eqn:comprimento_bjerrum}
+	\end{equation}
+	
+	Em soluções aquosas, coloides podem adquirir carga devido à ionização ou dissociação de grupos superficiais, adsorção de íons da solução, ou mecanismos de troca de carga do tipo ácido-base. A carga superficial de íons é contrabalanceada por uma região de contraíons, sendo que parte estão ligados, transientemente, à superfície, na chamada camada de Stern. Outros íons mais distantes à superfície em movimento térmico configuram a dupla camada elétrica difusa, que se estende até o comprimento de Debye a partir da superfície do coloide. A distribuição de íons é dada pela equação de Poisson-Boltzmann.
+	
+	A maior parte dos contraíons que efetivamente contrabalanceiam a carga estão muito próximo à superfície, a uma distância de poucos \aa ngstrom. Logo, a repulsão entre duas superfícies carregadas num solvente tem origem entrópica (osmótica), não eletrostática. Quando as duas superfícies se aproximam, os contraíons da solução, que estão longe das superfícies por efeitos entrópicos, são forçados à retornar à superfície, perdendo liberdade conformacional, contrariando a força osmótica.
+	
+	A energia de interação de dupla camada elétrica para duas partículas esféricas de raios \(R_1\) e \(R_2\) a uma distância \(D\) é dada pela equação \ref{eqn:dupla_camada_esferas}.
+	
+	\begin{equation}
+		w(D) = \left(  \dfrac{R_1R_2}{R_1+R_2}  \right)Ze^{-\kappa D}
+		\label{eqn:dupla_camada_esferas}
+	\end{equation}
+	
+	\noindent onde \(Z\) é uma constante de interação análoga à constante de Hamaker, definida como (eq. \ref{eqn:constante_interacao_Z}.
+	
+	\begin{equation}
+		Z = 64 \pi \varepsilon _ { 0 } \varepsilon ( k T / e ) ^ { 2 } \tanh ^ { 2 } \left( z e \psi _ { 0 } / 4 k T \right)
+		\label{eqn:constante_interacao_Z}
+	\end{equation}
+	
+	\noindent onde \(z\) é a valência do eletrólito (\(z=1\) para NaCl), \(e\) é a carga do elétron e \(\psi_0\) é o potencial de superfície.
+	
+	A combinação das forças de van der Waals com as forças de dupla camada elétrica descreve as interações entre coloides. A teoria DLVO, nomeada a partir de seus criadores (Derjaguin, Landau, Verwey, Overbeek). Essa teoria consegue prever, através do equilíbrio entre as energias de van der Waals atrativas e as energias repulsivas de dupla camada, vários fenômenos coloidais, como a estabilidade cinética, coagulação/floculação e repeptização. Além das forças da teoria de DLVO, ainda há forças de solvatação, estruturais, hidratação, estéricas e ondulação.
+	
+
 	\chapter{Micelas gigantes}
 		\label{chap:micelas_gigantes}
 		\section{Crescimento de micelas}

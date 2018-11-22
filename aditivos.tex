@@ -240,78 +240,11 @@
 		% todo: retirar parte dessas descrições e colocar na teoria
 		% todo: definir a constante e permissividade elétricas, colocar a frequência nessas equações.
 		
-		Existem vários parâmetros físico-químicos que descrevem solventes. Inicialmente, o índice de refração foi escolhido com base nos estudos anteriores de Hoffmann. Esse parâmetro, definido como a relação da velocidade da luz no vácuo e no material em um determinado comprimento de onda (eq. \ref{eqn:def_n}) é relevante para a discussão pois está diretamente associado à polarizabilidade das moléculas através da equação de Lorenz-Lorentz, eq. \ref{eqn:lorenz_lorentz}.
+		Existem vários parâmetros físico-químicos que descrevem solventes. Inicialmente, o índice de refração foi escolhido com base nos estudos anteriores de Hoffmann, devido à conexão com a constante de Hamaker (eq. \ref{eqn:constante_hamaker_lifshitz}), que modula a atração/repulsão coloidal (para duas esferas, vide eq. \ref{eqn:interacao_duas_esferas}). Quanto mais próximos forem os índices de refração entre o solvente e as micelas gigantes, menor será a atração intermicelar.
 		
-%		\begin{equation}
-%			n = \dfrac{c_0}{c}
-%			\label{eqn:def_n}
-%		\end{equation}
+		A constante dielétrica \(\varepsilon\) é um parâmetro relacionado à polaridade do solvente. Quanto maior for a constante dielétrica, mais fracas são as interações eletrostáticas e dipolares (eqs. \ref{eqn:potencial_eletrostático}, \ref{eqn:energia_Keesom}, \ref{eqn:energia_Debye}) pois o campo elétrico oposto gerado pelas moléculas do solvente age no sentido contrário do campo elétrico criado por íons e dipolos. Logo, dois íons de cargas opostas não se atraem com tanta facilidade, já que o campo elétrico de um íon decai muito rapidamente, e as forças entrópicas os afastam. Na constante de Hamaker, a contribuição dipolar, que depende da constante dielétrica, é geralmente pequena, e nunca maior que \(\sfrac{3}{4}kT\), porém pode ser relevante na interação de hidrocarbonetos (núcleo micelar) e água.
 		
-		\noindent onde \(n\) é o índice de refração, \(c_0\) é a velocidade da luz no vácuo e \(c\) é a velocidade da luz no meio.
-		
-%		\begin{equation}
-%			\dfrac{n^2 - 1}{n^2 + 2}\dfrac{1}{\rho} = \dfrac{4\pi N_A}{3} \alpha_0
-%			\label{eqn:lorenz_lorentz}  % todo: ref olson1975
-%		\end{equation}
-		
-		\noindent onde \(n\) é o índice de refração, \(\rho\) é a densidade molar, \(N_A\) é o número de Avogadro e \(\alpha_0\) é a polarizabilidade eletrônica molecular isolada.
-		
-		É possível transformar essa equação para encontrar a polarização molar \(P_m\)
-
-		\begin{equation}
-			P_m = \dfrac{n^2 - 1}{n^2 + 1} \cdot \dfrac{M_r}{\rho}
-		\end{equation}
-		
-		\noindent onde \(M_r\) é a massa molar relativa e \(\rho\) é a densidade do solvente.
-		
-		Quanto maior for a polarizabilidade, mais fortes são as interações dispersivas entre duas moléculas, como mostra a equação \ref{eqn:U_dispersiva}.
-		
-		\begin{equation}
-			U_{\textrm{dispersiva}} = - \dfrac{1}{(4 \pi \varepsilon_0)^2} \dfrac{3 \alpha_1 \alpha_2}{2 r^6} \left( \dfrac{I_1 \cdot I_2}{I_1 + I_2} \right)
-			\label{eqn:U_dispersiva}
-		\end{equation}  % todo: achar ref [33], cap2 do livro de solvente em reações orgânicas, 
-		
-		\noindent onde \(\varepsilon_0\) é a constante dielétrica do vácuo, \(\alpha_1\) e \(\alpha_2\) são as polarizabilidades de duas moléculas, \(r\) é a distância entre as moléculas e \(I_1\) e \(I_2\) são os potenciais de ionização das duas moléculas. Controlando-se a polarizabilidade das espécies é possível ajustar a atração dispersiva entre elas.
-		
-		Na área coloidal, é necessário somar todas as contribuições atrativas e repulsivas de todas as moléculas que compõem o coloide para se obter a atração ou repulsão coloidal. Isso se traduz na constante de Hamaker, que modula essas atrações (eq. \ref{eqn:Hamaker}). Essas atrações ocorrem através de um solvente, então é necessário considerá-lo no cálculo das atrações intercoloidais.
-		
-		\begin{equation}
-		H = \dfrac{3}{4}kT \left[  \dfrac{\varepsilon_a - \varepsilon_s}{\varepsilon_a + \varepsilon_s}  \right]^2 + %
-		    \dfrac{3}{16\sqrt{2}} h\nu \dfrac{ \left(  n_a^2 - n_s^2  \right)^2}{\left(  n_a^2 + n_s^2  \right)^{3/2}}
-		\label{eqn:hamaker}
-		\end{equation}
-		
-		\noindent onde $\varepsilon_a$ e $\varepsilon_s$ são as constantes dielétricas dos agregados e do solvente na frequência zero, respectivamente, $h$ é a constante de Planck e $\nu$ é a frequência da absorção dominante no UV (tipicamente $3 \times 10^{15} s^{-1}$) [XYZ]. O primeiro termo da expressão é pequeno, perto de $kT$, logo quando $n_s \rightarrow n_a$, $H \rightarrow 0$, a atração intermicelar se torna muito fraca.
-		% \cite{Israelachvili2011}
-	
-		A constante dielétrica \(\varepsilon\) é um parâmetro relacionado à polaridade do solvente. Quanto maior for a constante dielétrica, mais fácil é a separação de cargas no solvente pois menor é sua atração (eq. \ref{eqn:U_eletrostatica}). 
-		
-		\begin{equation}
-			U_{\textrm{eletrostática}} = \dfrac{1}{4 \pi \varepsilon_r} \dfrac{q_1 q_2}{r^2}
-			\label{eqn:U_eletrostatica}  % ref: Atkins Físico-Química
-		\end{equation}
-		
-		\noindent onde \(\varepsilon_r\) é a constante dielétrica relativa entre o meio e o vácuo, \(\varepsilon_r = \sfrac{\varepsilon}{\varepsilon_0}\).
-		
-%		Interessantemente, a constante dielétrica também está relacionada à polarizabilidade molecular total (\(\alpha\)), através da equação de Clausius-Mossotti \ref{eqn:clausius_mossotti}.
-%		
-%		\begin{equation}
-%			\dfrac{\varepsilon_r - 1}{\varepsilon_r + 2} = \dfrac{\rho N_A \alpha}{3 M \varepsilon_0}
-%			\label{eqn:clausius_mossotti}
-%		\end{equation}
-%		
-%		Devido à essa relação, é possível correlacionar o índice de refração à constante dielétrica, obtendo a eq. \ref{eqn:n_epsilon}. Neste caso é necessário notar a diferença entre a constante dielétrica e permissividade elétrica. A constante dielétrica é medida onde a frequência do campo elétrico é zero, já a permissividade é o nome dado para valores medidos em frequências diferentes. A relação \ref{eqn:n_epsilon} necessita que uma frequência seja estabelecida.  % todo: reler partes do Israelachvili e prestar atenção na polarizabilidade total e eletrônica \alpha_0
-%		
-%		\begin{equation}
-%			n = \varepsilon_r^{1/2}
-%			\label{eqn:n_epsilon}
-%		\end{equation}  % todo: pensar sobre essa equação e se ela realmente vale para as coisas aqui. Não parece ser tão assim
-		
-		Porém, as equações \ref{eqn:lorenz_lorentz} e \ref{eqn:clausius_mossotti} consideram as moléculas num meio como sendo esferas com constantes dielétricas diferentes daquelas do meio. Comparando-se os valores calculados por essas equações e os valores medidos, há discrepâncias bastante altas para moléculas altamente polares.
-		
-		Esse tipo de equação não considera interações além daquelas oriundas totalmente da polarização eletrônica e dipolar. Alguns solventes conseguem deslocar cargas em comprimentos maiores que o tamanho molecular. Na água, acredita-se que sua alta constante dielétrica se deve também à movimentação eletrônica e protônica através de redes de ligação de hidrogênio. % ref: israelachvili2010.
-		
-		Outro parâmetro relacionado à polaridade do solvente é o momento de dipolo, \(\mu\). É possível combinar ambos a constante dielétrica e o momento de dipolo no fator eletrostático, \emph{IT}, mas esses parâmetros não foram considerados neste trabalho pois os solventes são primariamente aquosos. % Ref [101] do capítulo 3
+		A permissividade dielétrica e o índice de refração estão ambos relacionados pois dependem da polarizabilidade molecular das moléculas, e de seu momento de dipolo, \(u\). Efeitos adicionais de separação de carga, que podem ocorrer pela estruturação do solvente em ligações de hidrogênio, não são considerados por essa relação. Logo, é interessante utilizar a constante dielétrica, que considera esses efeitos adicionais do solvente, e o índice de refração, que é proporcional somente à polarizabilidade molecular. É possível combinar a constante dielétrica e o momento de dipolo no fator eletrostático, \emph{IT}, mas esses parâmetros não foram considerados neste trabalho devido à presença de misturas de solventes, e pela facilidade de se utilizar propriedades do contínuo na interpretação. % Ref [101] do capítulo 3
 		
 		Dois parâmetros podem ser utilizados para descrever a estruturação de um solvente, a densidade de energia coesiva \(c\) (eq. \ref{eqn:densidade_energia_coesiva}), e a pressão interna \(\pi\) (eq. \ref{eqn:pressao_interna}).  % refs [98-100, 175] do cap 3 do livro de propriedades de solvente
 		
@@ -333,7 +266,7 @@
 		
 		Porém, os solventes utilizados neste trabalho são todos compostos principalmente por água, e em alguns casos os aditivos são sólidos (ureia, sacarose). Além disso, obter esses parâmetros para as misturas não é uma tarefa para qual o laboratório está equipado. Portanto, é necessário utilizar outro parâmetro que esteja relacionado à estruturação do solvente.
 		
-		Um parâmetro que pode ser utilizado é o parâmetro de Gordon, definido na equação \ref{eqn:Gordon}, que é baseado na tensão superficial, equação \ref{eqn:tens_superficial}.
+		Um parâmetro que pode ser utilizado é o parâmetro de Gordon, definido na equação \ref{eqn:Gordon}, que é baseado na tensão superficial, equação \ref{eqn:tens_superficial}. % todo: ref livro efeito do solvente em reações orgânicas, para que pode se utilizar isso. Achar a def do param em outro lugar.
 
 		\begin{equation}
 			G = \dfrac{\gamma}{\bar{V}_m^{\frac{1}{3}}}
@@ -573,11 +506,42 @@
 		O objetivo desta seção é facilitar a interpretação dos resultados calorimétricos % todo: e reológicos?
 		através dos parâmetros da solução escolhidos (\(n\), \(\varepsilon\), \(G\)), e não realizar uma descrição quimiométrica completa, nem atribuir muitos significados físicos aos coeficientes encontrados. Não serão mostrados os resultados desses ajustes para reologia (utilizando a viscosidade como variável dependente, os parâmetros e concentração de NaSal como variável dependente) e calorimetria de micelas gigantes (utilizando \cwlm{} e \DHwlm{} como variáveis dependentes e os parâmetros como variáveis dependentes) pois não foi observado um ajuste bom.
 		
-		Inicialmente, será utilizado um método quimiométrico bastante empregado, o PLS (\emph{Partial Least Squares}), depois será utilizado um método de regressão linear mais simples, e por último as misturas binárias serão organizadas em grupos de acordo com suas similaridades, através de um dendrograma.
+		Inicialmente, será utilizado um método quimiométrico bastante empregado, o PLS (\emph{Partial Least Squares}), depois será utilizado um método de regressão linear múltipla, mais simples, e por último as misturas binárias serão organizadas em grupos de acordo com suas similaridades, através de um dendrograma.
 		
 		\subsection{PLS}
 		
-		Foram feitas análises de PLS (\emph{Partial Least Squares}) com o índice de refração, constante dielétrica e parâmetro de Gordon para tentar prever a \cmc{} e a \DHmic. Utilizou-se dois componentes principais (de 3) em ambos os casos, os dados foram autoescalados de modo a garantir que todas as parâmetros tenham o mesmo peso no modelo final. Utilizou-se validação cruzada com 1 elemento, e sem validação cruzada, e o vetor de previsão permaneceu igual. Essas análises foram realizadas com o software Pirouette 3.11, e comparadas com uma análise foi feita utilizando pacote \emph{sklearn}, em Python. Esse pacote é livre, ao contrário do Pirouette, então qualquer um pode reproduzir essas análises. Os resultados foram absolutamente iguais, então não serão mostradas as figuras resultantes de ambos os métodos, somente daqueles obtidos no Pirouette. As retas de \cmc{} e \DHmic{} medidos por \cmc{} e \DHmic{} observados estão presentes nas figuras \ref{fig:pls_cmc_pirouette} e \ref{fig:pls_dh_pirouette}, respectivamente.
+		O método de PLS (\emph{Partial Least Squares}) é baseado no método de PCR (\emph{Principal Component Regression}). No PCR, uma matriz as informações da amostra, \textbf{X} é decomposta em duas matrizes, uma denominada escores, \textbf{T}\textsubscript{A}, e outra matriz de pesos, \textbf{L}\textsubscript{A}, e uma matriz de resíduos \textbf{E} (eq. \ref{eqn:decomp_PCR}).
+		
+		\begin{equation}
+			\mathbf{X} = \mathbf{T}_A \mathbf{L}_A^T + \mathbf{E}
+			\label{eqn:decomp_PCR}
+		\end{equation}
+		
+		A partir da matriz de pesos, que contém a informação dos componentes principais, realiza-se um ajuste mostrado na equação \ref{eqn:modelo_PCR}.
+		
+		\begin{equation}
+			\mathbf{y} = \mathbf{T}_A\mathbf{q} + \mathbf{e}
+			\label{eqn:modelo_PCR}
+		\end{equation}
+		
+		\noindent onde \textbf{y} é a matriz com as variáveis dependentes que se pretende ajustar, \textbf{q} é o vetor de regressão, que contém os pesos de cada componente principal para realizar o ajuste, e \textbf{e} é uma matriz de resíduos. Outra maneira de se representar essa equação é por uma maneira estendida (eq. \ref{eqn:modelo_PCR_estendido}).
+		
+		\begin{equation}
+			\mathbf{y} = q_1\mathbf{t}_1 + \cdots + q_A\mathbf{t}_A + \mathbf{e}_y
+			\label{eqn:modelo_PCR_estendido}
+		\end{equation}
+		
+		O vetor de regressão \textbf{q} pode ser estimado pelo método dos mínimos quadrados, o que resulta na equação \ref{eqn:estimativa_regress_q}.
+		
+		\begin{equation}
+			\hat{\textbf{q}} = \left(  \mathbf{T}_A^T \mathbf{T}_A  \right)^{-1}\mathbf{y}
+			\label{eqn:estimativa_regress_q}
+		\end{equation}
+
+		A matriz de dados nesse caso é decomposta pela decomposição de valores singulares (\emph{singular value decomposition}, SVD). Porém, para a análise de PLS, uma restrição é imposta durante a decomposição da matriz de dados. Ocorre um compromisso entre a explicação da variância em \textbf{X} e a previsão da variável independente \textbf{y}, então um pouco da propriedade de interesse é colocada no cálculo das variáveis latentes. O algoritmo utilizado para isso neste trabalho foi o algoritmo de NIPALS, proposto por Wold.
+		
+		% todo: pensar se eu ponho as eqs 74, 80 do livro da Márcia aqui.
+		Foram feitas análises de PLS  com o índice de refração, constante dielétrica e parâmetro de Gordon para tentar prever a \cmc{} e a \DHmic. Utilizou-se dois componentes (de 3) em ambos os casos, os dados foram autoescalados de modo a garantir que todas as parâmetros tenham o mesmo peso no modelo final. Utilizou-se validação cruzada com 1 elemento, e sem validação cruzada, e o vetor de previsão permaneceu igual. Essas análises foram realizadas com o software Pirouette 3.11, e comparadas com uma análise foi feita utilizando pacote \emph{sklearn}, em Python. Esse pacote é livre, ao contrário do Pirouette, então qualquer um pode reproduzir essas análises. Os resultados foram absolutamente iguais, então não serão mostradas as figuras resultantes de ambos os métodos, somente daqueles obtidos no Pirouette. As retas de \cmc{} e \DHmic{} medidos por \cmc{} e \DHmic{} observados estão presentes nas figuras \ref{fig:pls_cmc_pirouette} e \ref{fig:pls_dh_pirouette}, respectivamente.
 		
 		\begin{figure}[h]
 			\centering
@@ -631,14 +595,25 @@
 		\FloatBarrier
 		\subsection{OLS}
 		
-		Outra metodologia que pode ser utilizada para realizar essas correlações é a dos mínimos quadrados ordinários (\emph{ordinary least squares}, OLS). Esse método é mais simples do que o PLS, pois não ocorre uma decomposição em componentes principais. Neste caso, o ajuste é feito reduzindo-se os mínimos quadrados da equação \ref{eqn:ols_modelo_cmc}.
-		
+		Outra metodologia que pode ser utilizada para realizar essas correlações é a dos mínimos quadrados ordinários (\emph{ordinary least squares}, OLS). Esse método é mais simples do que o PLS, pois não ocorre uma decomposição em componentes principais. Neste caso, o ajuste é feito reduzindo-se os mínimos quadrados da equação \ref{eqn:ols_modelo_matricial}.
+	
 		\begin{equation}
-			\textrm{CMC} = a_G \cdot G + a_\varepsilon \cdot \varepsilon + a_n \cdot n + e
-			\label{eqn:ols_modelo_cmc}
+			\mathbf{A} = \mathbf{CB} + \mathbf{E}
+			\label{eqn:ols_modelo_matricial}
 		\end{equation}
 		
-		Esse tipo de ajuste é igual ao ajuste de uma equação linear, porém com mais de uma variável independente. Foram feitos ajustes por mínimos quadrados ordinários tanto para a previsão da \cmc{} quanto a \DHmic. Os resultados dos ajustes estão nas figuras \ref{fig:ols_cmc_python} e \ref{fig:ols_dh_python}.
+		\noindent onde \textbf{A} é a matriz de resposta \(I \times J\), neste caso, ou \cmc{} ou \DHmic, \textbf{B} é uma matriz \(L \times J\) com os coeficientes que fornecem os pesos para as variáveis, \textbf{C} é uma matriz \(I \times L\) com as variáveis independentes e \textbf{E} é uma matriz \(I \times J\) com os erros de cada ponto. \(I\) é o número de amostras estudado, \(L\) é o número de coeficientes esperado e \(J\) é o número de variáveis independentes utilizado. A nomenclatura pode ser comparada à lei de Beer, \(A = (\varepsilon b)c + \mathrm{erro}\).
+		
+		Para o estudo da \cmc, a equação \ref{eqn:ols_modelo_cmc} pode ser reduzida para a equação \ref{eqn:ols_modelo_cmc}.
+		
+		\begin{equation}
+		\textrm{CMC} = a_G \cdot G + a_\varepsilon \cdot \varepsilon + a_n \cdot n + e
+		\label{eqn:ols_modelo_cmc}
+		\end{equation}
+		
+		Esse tipo de ajuste é igual ao ajuste de uma equação linear, porém com mais de uma variável independente, e é mais recomendado quando o número de variáveis independentes é pequeno.
+		
+		Foram feitos ajustes por mínimos quadrados ordinários tanto para a previsão da \cmc{} quanto a \DHmic. Os resultados dos ajustes estão nas figuras \ref{fig:ols_cmc_python} e \ref{fig:ols_dh_python}.
 		
 		\begin{figure}[h]
 			\centering
