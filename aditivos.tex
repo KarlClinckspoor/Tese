@@ -722,6 +722,152 @@
 		% todo: tentar correlacionar viscosidades utilizando os parâmetros, mais a conc de salicilato como variáveis independentes
 		
 	\chapter{Reologia oscilatória}
-		Os aditivos afetam a viscosidade das soluções, como visto na seção \ref{sec:efeito_aditivos_hidrofilicos}. Algumas amostras, nas concentrações de 60 \mM, 100\mM{} e 260\mM{} de NaSal, correspondendo aos máximos e vale de viscosidade em água. Para água, foram analisadas também as concentrações de 35, 72, 189 e 365 \mM.
+		Os aditivos afetam a viscosidade das soluções, como visto na seção \ref{sec:efeito_aditivos_hidrofilicos}. Neste capítulo, será estudado o efeito dos aditivos na reologia oscilatória das micelas gigantes, que está relacionada aos processos de relaxação das micelas. Para realizar isso, foram escolhidas algumas concentrações de base, localizadas nos picos de viscosidade e no vale. Essas concentrações são 60, 100 e 260\mM{} de NaSal. Na ausência de aditivo, também foram analisadas as concentrações de 35, 72, 189 e 365 \mM.
 		
-		Foram realizadas análises de reologia oscilatória de varredura de tensão e de varredura de frequência, na região linear. Os resultados foram ajustados aos modelos X, Y, Z, W.
+		As curvas foram ajustadas pelos modelos de Maxwell (Eqs. \ref{eqn:Maxwell_G1_def}, \ref{eqn:Maxwell_G2_def}), Oldroyd (Eqs. \ref{eqn:Maxwell_G1_def}, \ref{eqn:modelo_oldroyd_g2}), Jeffreys (Eqs. \ref{eqn:modelo_jeffreys_g1}, \ref{eqn:modelo_jeffreys_g2}) e um modelo com dois elementos Maxwellianos, que será chamado de Dois-Modos (Eqs. \ref{eqn:modelo_doismodos_g1}, \ref{eqn:modelo_doismodos_g2}). Dos ajustes, foram obtidos os módulos no platô, \(G_0\), e os tempos de relaxação \(\tau_r\), para cada dupla G' e G''. Além disso, foram calculados os coeficientes de determinação \(R^2\) (Eq. \ref{eqn:R2}), e os coeficientes de determinação ajustado \(R\mathrm{'}^{2}\) (Eq. \ref{eqn:R2lin}). Com essas informações, foram criados gráficos de Cole-Cole, onde se analisa G' em função de G'', normalizados por \(G_0\)
+		
+		\begin{equation}
+			R^2 = 1 - \dfrac{SQ_\mathrm{res}}{SQ_\mathrm{Tcor}}
+			\label{eqn:R2}
+		\end{equation}
+		
+		\begin{equation}
+			R\mathrm{'}^{2} = 1 - \dfrac{MQ_\mathrm{res}}{MQ_\mathrm{Tcor}}
+			\label{eqn:R2lin}
+		\end{equation}
+		
+		\noindent onde \(SQ_\mathrm{res}\) é a soma quadrática dos resíduos, \(SQ_\mathrm{Tcor}\) é a soma quadrática total corrigida, \(MQ_\mathrm{res}\) é a média quadrática dos resíduos e \(MQ_\mathrm{Tcor}\) é a média quadrática total corrigida. Esses termos estão definidos nas equações \ref{eqn:SQres} --- \ref{eqn:MQTcor}.
+		
+		\begin{equation}
+			SQ_\mathrm{res} = \sum_{i=1}^{I} \left( y_i - \hat{y}_i \right) ^ 2
+			\label{eqn:SQres}
+		\end{equation}
+		
+		\begin{equation}
+			SQ_\mathrm{Tcor} = \sum_{i=1}^{I} \left(y_i - \bar{y} \right)^2
+			\label{eqn:SQTcor}
+		\end{equation}
+		
+		\begin{equation}
+			MQ_\mathrm{res} = \dfrac{SQ_\mathrm{res}}{I-p}
+			\label{eqn:MQres}
+		\end{equation}
+		
+		\begin{equation}
+			MQ_\mathrm{Tcor} = \dfrac{SQ_\mathrm{Tcor}}{I - 1}
+			\label{eqn:MQTcor}
+		\end{equation}
+		
+		\noindent onde \(y_i\) é o i-ésimo ponto da curva, \(I\) é o número total de pontos, \(\hat{y}\) é a média dos valores de \(y\) (G' ou G''), \(\hat{y}_i\) é o i-ésimo valor previsto pelo modelo e \(p\) é o número de parâmetros do modelo (p.e. modelo de Maxwell possui \(G_0\), \(\tau_r\), \(p=2\)).
+		
+		\section{Água}
+		
+		Primeiramente, será analisado a reologia oscilatória de amostras com 100 \mM{} de CTAB e concentrações crescentes de NaSal. As concentrações foram escolhidas de forma a amostrar todas as regiões do diagrama de viscosidade no repouso, ou seja, antes do primeiro pico (35\mM), no primeiro máximo (60\mM), na primeira queda (72\mM), no vale (100\mM), antes do segundo pico (189\mM), no segundo máximo (260 \mM) e após o segundo máximo (360\mM). A figura \ref{fig:oscilatorio_agua} mostra todos os reogramas juntos.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/reologia/oscilatorio_agua}
+			\caption[Reogramas para água]{G' (símbolos cheios) e G''(símbolos vazados) em função da frequência de perturbação \(\omega\), em rad.s\menosUm, para amostras com CTAB 100\mM{} e NaSal em concentrações crescentes. Para facilitar a visualização, o ponto de cruzamento para cada curva está indicado por uma reta horizontal. As curvas de 189 e 365\mM{} de NaSal se sobrepuseram.}
+			\label{fig:oscilatorio_agua}
+		\end{figure}
+		
+		É possível ver que todas as curvas de G' atingem aproximadamente o mesmo valor em frequências altas, onde se encontra o módulo no platô, \(G_0\). Além disso, pode-se observar que o ponto de cruzamento, indicativo do inverso tempo de relaxação, também oscila, sendo mínimo em 60\mM, o máximo de viscosidade, e máximo em 100\mM, o mínimo de viscosidade.  % todo: pensar em colocar o gráfico de viscosidade da água aqui sozinho, para facilitar a comparação.
+		
+		Além disso, é possível observar que em frequências altas, os valores de G' e G'', principalmente, começam a oscilar. Essa oscilação não é real, e é devido a limitações de medida do equipamento. Para fazer os ajustes, todos os pontos a partir do momento em que começam a oscilar foram descartados. Os pontos que aparentam não seguir os modelos, mas que não mostram oscilação, foram mantidos.
+		
+		Os ajustes de Maxwell realizados para essas curvas estão na figura \ref{fig:oscilatorio_agua_maxwell}.
+		
+		\begin{figure}[h]
+			\begin{subfigure}[t]{0.5\textwidth}
+				\includegraphics[width=\textwidth]{imagens/reologia/oscilatorio_agua_35}
+				\caption{NaSal = 35\mM}
+				\label{fig:oscilatorio_agua_35}
+			\end{subfigure} %
+			\begin{subfigure}[t]{0.5\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{imagens/reologia/oscilatorio_agua_60}
+				\caption{[NaSal] = 60\mM}
+				\label{fig:oscilatorio_agua_60}
+			\end{subfigure}
+			
+			\begin{subfigure}[t]{0.5\textwidth}
+				\includegraphics[width=\textwidth]{imagens/reologia/oscilatorio_agua_72}
+				\caption{[NaSal] = 72\mM}
+				\label{fig:oscilatorio_agua_72}
+			\end{subfigure} %
+			\begin{subfigure}[t]{0.5\textwidth}
+				\includegraphics[width=\textwidth]{imagens/reologia/oscilatorio_agua_100}
+				\caption{[NaSal] = 100\mM}
+				\label{fig:oscilatorio_agua_100}
+			\end{subfigure}
+			
+			\begin{subfigure}[t]{0.5\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{imagens/reologia/oscilatorio_agua_189}
+				\caption{[NaSal] = 189\mM}
+				\label{fig:oscilatorio_agua_189}
+			\end{subfigure} %
+			\begin{subfigure}[t]{0.5\textwidth}
+				\includegraphics[width=\textwidth]{imagens/reologia/oscilatorio_agua_260}
+				\caption{[NaSal]=260\mM}
+				\label{fig:oscilatorio_agua_260}
+			\end{subfigure}
+	
+			\begin{subfigure}[t]{0.5\textwidth}
+				\includegraphics[width=\textwidth]{imagens/reologia/oscilatorio_agua_365}
+				\caption{[NaSal]=365\mM}
+				\label{fig:oscilatorio_agua_365}
+			\end{subfigure}
+		
+			\caption{Ajustes de Maxwell para as curvas da figura \ref{fig:oscilatorio_agua}}
+			\label{fig:oscilatorio_agua_maxwell}
+		\end{figure}
+	
+		Na a figura \ref{fig:oscilatorio_agua_35}, o ponto de cruzamento visual e o calculado divergem significantemente. Além disso, é observado um aumento de G'' em altas frequências não previsto pelo modelo, e G' também possui uma divergência da planaridade. Isso indica que não há somente um tempo de relaxação nesse sistema, e que outros modos de relaxação se tornam mais evidentes à medida que a frequência aumenta. O mesmo pode ser observado, mas em menor escala, para a curva \ref{fig:oscilatorio_agua_60}. % todo: comparar com o artigo do Hoffmann
+		
+		As outras amostras seguiram consideravelmente bem o modelo de Maxwell, com valores de \(R^2\) próximos à unidade. Além disso, observa-se que não há uma diferença significativa entre \(R^2\) e \(R\mathrm{'}^2\).
+		
+		O mesmo procedimento foi seguido para os outros modelos. Os ajustes não serão mostrados por brevidade. Os resultados dos ajustes se encontram nas tabelas X, Y, Z e nas figuras X, Y, Z.
+		
+		\begin{table}[h]
+        \IBGEtab{%
+			\caption{Valor do parâmetro \(G_0\) em Pa de todos os ajustes}
+			\label{tab:g0_agua}
+		}%
+		{%
+			\begin{tabular}{c c c c c c}
+				\toprule
+				[NaSal] & Maxwell               & OldroydB             & Jeffreys             & Dois Modos 1          & Dois Modos 2  \\ \midrule
+				35 & 30,818 \(\pm\) 0,459 & 30,804 \(\pm\) 0,431 & 30,810 \(\pm\) 0,431 & 26,797 \(\pm\)  0,304 & 7,277 \(\pm\) 0,366 \\
+				60 & 51,507 \(\pm\) 0,280 & 51,493 \(\pm\) 0,279 & 51,499 \(\pm\) 0,279 & 31,865 \(\pm\)  1,679 & 20,644\(\pm\)  1,662 \\
+				72 & 39,954 \(\pm\) 0,146 & 39,922 \(\pm\) 0,134 & 39,938 \(\pm\) 0,134 & 35,872 \(\pm\)  0,928 & 4,596 \(\pm\) 0,909 \\
+				100 & 52,310 \(\pm\) 0,137 & 52,086 \(\pm\) 0,118 & 52,196 \(\pm\) 0,113 & 3,585  \(\pm\) 0,465 & 49,705 \(\pm\) 0,514 \\
+				189 & 49,702 \(\pm\) 0,263 & 49,630 \(\pm\) 0,253 & 49,665 \(\pm\) 0,252 & 48,280 \(\pm\)  0,297 & 3,733 \(\pm\) 0,398 \\
+				260 & 51,589 \(\pm\) 0,331 & 51,511 \(\pm\) 0,314 & 51,549 \(\pm\) 0,313 & 49,691 \(\pm\)  1,051 & 2,918 \(\pm\) 1,007 \\ 
+				365 & 49,795 \(\pm\) 0,211 & 49,642 \(\pm\) 0,168 & 49,716 \(\pm\) 0,166 & 46,964 \(\pm\)  0,314 & 4,181 \(\pm\) 0,291 \\
+				\bottomrule
+			\end{tabular}
+		}{}
+		\end{table}  % todo: colocar os erros aqui
+	
+
+	
+		
+
+
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
