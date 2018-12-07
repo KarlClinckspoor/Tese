@@ -229,7 +229,7 @@
 			Amostras de NaSal 1,5\mM{} com concentrações crescentes de TTAB foram preparadas de modo a medir o espectro de absorção e emissão do salicilato. As amostras foram preparadas a partir de um estoque e diluídas apropriadamente. As medidas foram realizadas no espectrômetro LS 55 da Perkin Elmer.
 			
 			\subsection{Fluorescência resolvida no tempo}
-			
+			\label{sec:experimental_fluor_resolvida}
 			% todo: encontrar as características do laser
 			Amostras de NaSal 3,0\mM{} em água e com TTAB X\mM{} foram preparadas. Um aparato foi montado juntando-se o \emph{stopped-flow}, um detector da OceanOptics 4000 e uma fonte da XYZ. Veja a Figura \ref{fig:diagrama_stoppedflow_rene} para um diagrama da montagem utilizado.
 			
@@ -273,8 +273,13 @@
 			
 			Utilizou-se dois filtros de segundo grau, mas com tamanhos de janela diferente, para antes e depois da injeção. O ponto de injeção foi determinado manualmente. O tamanho da janela foi escolhido de acordo com o número total de pontos de cada parte. Antes da injeção, utilizou-se como janela o número de pontos, dividido por 2, arredondando para o número inteiro mais próximo, e caso seja ímpar, adicionou-se 1 ao número. Para o conjunto de dados depois da injeção, utilizou-se 201 pontos para conjuntos com 10000 pontos no total e 101 pontos para conjuntos com 5000 pontos. Esses valores foram determinados testando-se várias janelas e escolhendo aquelas com o melhor alisamento.
 			
-			Após o alisamento, estudou-se o tempo de injeção e a taxa de decaimento após a injeção. O tempo de injeção foi determinado contando-se o número de pontos alisados pertencentes à região de acréscimo de fluorescência. A taxa de decaimento foi determinada realizando-se ajustes monoexponenciais (\(y = y_0 + A_1 e^{\frac{-x}{t_1}}\)) e comparando-se os valores de \(R^2\). Outros modelos foram testados, mas o ajuste monoexponencial descrevia muito bem os dados, e era o mais simples.
-		
+			Após o alisamento, estudou-se o tempo de injeção e a taxa de decaimento após a injeção. O tempo de injeção foi determinado contando-se o número de pontos alisados pertencentes à região de acréscimo de fluorescência. A taxa de decaimento foi determinada realizando-se ajustes monoexponenciais (Eq. \ref{eqn:decaimento_exponencial}) e comparando-se os valores de \(R^2\) (Eq. \ref{eqn:R2}). Outros modelos foram testados, mas o ajuste monoexponencial descrevia muito bem os dados, e era o mais simples.
+			
+			\begin{equation}
+				y = y_0 + A_1 e^{\frac{-x}{t_1}}
+				\label{eqn:decaimento_exponencial}
+			\end{equation}
+			
 	\chapter{Técnicas adicionais}
 		\section{Calorimetria diferencial de varredura}
 		

@@ -142,7 +142,7 @@
 	
 	Todos os primeiros \emph{frames} das curvas possuem um formato diferente dos demais, que é mais pronunciado à medida que a concentração aumenta. Isso mostra que em 35 ms, as micelas possuíam uma estrutura diferente do que em 65 ms, e adiante. Essas curvas são, todavia, bastante próximas em formato ao estado final da figura \ref{fig:tr_comparacao_ttab}, o que significa que o crescimento micelar está quase completo em 35 ms e se completa em 65 ms. Uma possível explicação para esse acontecimento é a alta concentração de micelas no meio. Isso acelera a cinética de colisão entre micelas e cossolutos. Além disso, a rede micelar pode se tornar tão densa que o meio se torna homogêneo para SAXS, e não é possível distinguir entre uma micela e outra.
 	
-	Na maior parte das curvas, é possível observar que na região de baixo \q, há um decaimento exponencial. O modelo utilizado não prevê esse comportamento, que teve de ser incluído externamente. O valor do expoente, em todos os ajustes, foi de 4, isso é, \( \^{-4} \). Se essa região for verdadeira, a validade do modelo utilizado para o tratamento se torna questionável. Porém, essa queda não foi observada na cela de \emph{flow-through}, como mencionado anteriormente. Além disso, houveram ligeiras variações no valor do \emph{background} entre cada amostra, devido à limpeza, apesar de que se garantiu que nenhum sinal significativo era observado. A figura \ref{fig:problema_limpeza} mostra a minúscula diferença entre o \emph{background}, medido com o capilar seco e vazio, e o capilar após a primeira limpeza com água. Essa pequena diferença pode gerar o sinal em baixo \q{} com o decaimento observado devido à baixa intensidade nos sinais, devido ao curto tempo de integração, necessário para medidas cinéticas, e o baixo contraste entre as micelas e o solvente. Logo, a região em baixo \q{}, provavelmente, não possui significado físico, e o decaimento exponencial utilizado é somente um artifício matemático para auxiliar no ajuste das curvas.
+	Na maior parte das curvas, é possível observar que na região de baixo \q, há um decaimento exponencial. O modelo utilizado não prevê esse comportamento, que teve de ser incluído externamente. O valor do expoente, em todos os ajustes, foi de 4, isso é, o decaimento segue \( q^{-4} \). Se essa região for verdadeira, a validade do modelo utilizado para o tratamento se torna questionável. Porém, essa queda não foi observada na cela de \emph{flow-through}, como mencionado anteriormente. Além disso, houveram ligeiras variações no valor do \emph{background} entre cada amostra, devido à limpeza, apesar de que se garantiu que nenhum sinal significativo era observado. A figura \ref{fig:problema_limpeza} mostra a minúscula diferença entre o \emph{background}, medido com o capilar seco e vazio, e o capilar após a primeira limpeza com água. Essa pequena diferença pode gerar o sinal em baixo \q{} com o decaimento observado devido à baixa intensidade nos sinais, devido ao curto tempo de integração, necessário para medidas cinéticas, e o baixo contraste entre as micelas e o solvente. Logo, a região em baixo \q{}, provavelmente, não possui significado físico, e o decaimento exponencial utilizado é somente um artifício matemático para auxiliar no ajuste das curvas.
 	
 	\begin{figure}[h]
 		\centering
@@ -259,6 +259,113 @@
 	Seria possível também utilizar um sistema diferente, que também forma micelas gigantes e que possua, intrinsecamente, maior contraste. Esse foi o caso dos sistemas utilizados na literatura %todo: refs pedersen.
 	Isso permitiria que a concentração das espécies seja menor, diminuindo a velocidade da reação. Além disso, caso o sistema tenha contraste o suficiente, seria possível aliar estudos de calorimetria de titulação isotérmica com SAXS resolvido no tempo e o modelo desenvolvido aqui, para correlacionar o crescimento micelar com as várias regiões do entalpograma. Isso permitiria observar, por exemplo, se o crescimento das micelas na região do mínimo do ITC é mais lento do que, por exemplo, numa região com mais surfactante, onde o comprimento micelar final é menor.
 	
-	
-	
 	\chapter{Fluorescência resolvida no tempo}
+	
+	\section{Estudos preliminares}
+	
+	Primeiramente foi analisada as curvas de emissão e absorção da molécula de salicilato livre em água e incorporada em micelas. Foram preparadas soluções 1,5 \mM{} de NaSal, com concentrações de \TTAB{} de 0 a 4,5 \mM. As curvas de emissão e absorção de salicilato estão na figura \ref{fig:emissao_excitacao}. O comprimento de onda de excitação utilizado foi distante do máximo de absorção, devido à alta fluorescência. Isso não influencia no espectro de emissão, devido à lei de XYZ, pois as moléculas excitadas relaxam até o estado vibracional fundamental do primeiro nível eletrônico excitado, para depois fluorescer. As fendas no equipamento foram ajustadas de modo a maximizar a relação sinal/ruído mas ainda assim permitir medir todas as amostras. % todo: colocar o nome da lei
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagens/fluor/emissao_excitacao}
+		\caption{Curvas de emissão e excitação de NaSal. O comprimento de onda de excitação foi de 348 nm.}
+		\label{fig:emissao_excitacao}
+	\end{figure}
+
+	Pode-se observar que há dois máximos de absorção, em 260 e 325 nm, e um máximo de emissão. Com o aumento da concentração de \TTAB{}, e a intensidade do sinal de emissão também aumentou. Porém, como os sinais eram bastante ruidosos, ajustou-se uma função aos sinais, descrita na equação \ref{eqn:ajuste_extremo}, para facilitar a visualização. As curvas ajustadas estão na figura \ref{fig:emissao_nasal}.
+
+	\begin{subequations}
+		\begin{align}
+		y &= y_0 + A e^{-e^{z} - z + 1} \\
+		z &= \left( x - xc \right)/w 
+		\end{align}
+		\label{eqn:ajuste_extremo}
+	\end{subequations}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagens/fluor/emissao_nasal}
+		\caption{Emissão de fluorescência de soluções de NaSal com \TTAB{} em concentrações crescentes.}
+		\label{fig:emissao_nasal}
+	\end{figure}
+	
+	Os máximos de todos os espectros de emissão foi em 411 nm, e por essa razão, esse comprimento de onda foi utilizado em todos os experimentos posteriores. O aumento de fluorescência da molécula de salicilato se deve à mudança do ambiente, quando se dirige à palisada micelar. Isso aumenta o rendimento quântico do processo de fluorescência porque há uma menor proporção das moléculas excitadas que perde a sua energia por processos não radiativos, como colisão com moléculas de água.
+	
+	Portanto, a intensidade de fluorescência é dependente da inserção de salicilato nas micelas. Os processos de formação de micelas gigantes, observada por calorimetria, também ocorrem mediante a inserção de salicilato, logo os dois processos podem ser relacionados. A figura \ref{fig:itc_fluorescencia} relaciona experimentos de ITC com a fluorescência em 411 nm.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagens/fluor/itc_fluorescencia}
+		\caption{Titulação de TTAB 14 \mM{} em NaSal 1,5 \mM, comparado com o máximo de emissão, obtidos pela figura \ref{fig:emissao_nasal}.}
+		\label{fig:itc_fluorescencia}
+	\end{figure}
+	
+	Na literatura, há um estudo que correlaciona o entalpograma com a viscosidade da solução, que se altera devido ao crescimento de micelas gigantes. % todo: colocar a Ref. Thiago
+	A figura \ref{fig:combinacao_propriedades} mostra as três propriedades em função da concentração de \TTAB.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagens/fluor/combinacao_propriedades}
+		\caption{Viscosidade, em mPa.s, intensidade de fluorescência e entalpia de mistura de amostras com 1,5 \mM{} de NaSal e concentrações crescentes de \TTAB.}
+		\label{fig:combinacao_propriedades}
+	\end{figure}
+	
+	Como todas as propriedades são dependentes da inserção de \Sal{} nas micelas, foi estudado se há uma correlação mais direta entre elas. A fluorescência é dependente da quantidade total de \Sal{} inserida. Já as entalpias de mistura individuais são dependentes da quantidade de \Sal{} incorporados às micelas em cada etapa. A viscosidade é uma propriedade dependente da concentração de NaSal, onde uma determinada concentração é capaz de fornecer uma ``quantidade'' de viscosidade específica, que a adição de mais \TTAB{} esgota. Assim, a integração do entalpograma seria proporcional à incorporação de \Sal{}, e a integração da viscosidade seria proporcional à quantidade total de viscosidade ``consumida'' por \TTAB. A figura \ref{fig:correlacoes_propriedades_zoom} mostra a correlação entre viscosidade e calorimetria integradas, e normalizadas pelo valor máximo, e a intensidade de fluorescência.
+	
+%	\begin{figure}
+%		\begin{subfigure}{0.5\textwidth}
+%			\centering
+%			\includegraphics[width=0.7\textwidth]{imagens/fluor/correlacoes_propriedades}
+%			\caption{}
+%			\label{fig:correlacoes_propriedades_longe}
+%		\end{subfigure}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagens/fluor/correlacoes_propriedades_zoom}
+		\caption{}
+		\label{fig:correlacoes_propriedades_zoom}
+	\end{figure}
+%	\caption{text}
+%	\label{fig:correlacoes_propriedades}
+%	\end{figure}
+	
+	É possível ver então que, de fato, as três propriedades estão correlacionadas, e é possível relacionar uma determinada intensidade de fluorescência com a quantidade de salicilato incorporado, a viscosidade e a calorimetria.
+
+	\FloatBarrier	
+	
+	\section{Cinética medida por fluorescência}
+	
+	Mediante isso, foram realizados estudos de cinética misturando-se duas soluções, uma contendo somente NaSal 1,5 \mM{} e outra contendo tanto NaSal 1,5 \mM{} quanto \TTAB{} 1,7 \mM. Essa concentração de \TTAB{} está longe da região do mínimo, com baixa viscosidade. Quanto misturada à outra solução, o \TTAB{} seria diluído pela metade, atingindo a concentração de 0,85 \mM{}, próximo ao mínimo, portanto ainda viscosa, mas mais fluorescente do que as micelas no mínimo. A figura \ref{fig:itc_experimento_cinetica} ilustra a mistura que irá ocorrer.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagens/fluor/itc_experimento_cinetica}
+		\caption{}
+		\label{fig:itc_experimento_cinetica}
+	\end{figure}
+	
+	Com as amostras prontas, montou-se o aparato descrito na seção experimental (Seção \ref{sec:experimental_fluor_resolvida}), e foram injetadas as soluções. Em parte dos experimentos, a cela de medida foi lavada com água até que todo sinal de fluorescência do salicilato desaparecesse. Na outra parte, a cela não foi limpa, de modo a observar se há diferença no sinal de fluorescência imediatamente após a injeção, e após alguns minutos.
+	
+	Como resultado de cada análise, um mapa de cor é obtido, contendo os espectros medidos em y, o tempo em x, e as cores correspondendo à intensidade do sinal. Um mapa de cor padrão se encontra na figura XXXX.
+	
+	% todo: colocar um mapa
+	
+	Desse mapa, foi retirado a variação da intensidade em 411 nm, o máximo do sinal, em função do tempo. Cada sinal é extremamente ruidoso, devido ao baixo tempo de integração (5 ms). % todo: verificar se esse é o tempo mesmo.
+	Cada curva foi alisada pelo método de Savitzky-Golay, utilizando uma janela variável dependendo da região da curva. Antes do ponto de injeção, caracterizado por um salto na intensidade, foi utilizada uma janela pequena. Depois do ponto de injeção, foi utilizado uma janela muito maior, para aumentar a intensidade de alisamento. A figura XXXX mostra uma curva não alisada e alisada.
+	
+	Em determinada parte dos experimentos, observou-se que a intensidade de fluorescência diminuía em função do tempo, somente nas amostras contendo surfactante. Por essa razão, foram realizados experimentos utilizando NaSal 3,0 \mM{} em água, e em soluções de sacarose 4\% e 10\% m/m, que simulariam a viscosidade das micelas gigantes. Após a mistura, a concentração de NaSal atingiria 1,5 \mM, equivalente aos outros experimentos. Notou-se que não havia uma queda na intensidade de fluorescência, como mostrado na figura XXXX.
+	
+	Além disso, as injeções realizadas diretamente na cela de amostra contendo a corrida anterior também mostraram variação, mostrando que os estados iniciais e finais dessas misturas são diferente, e que ocorre uma evolução do sistema micelar durante o processo. Porém, as escalas de tempo não são da ordem de \(<\) 100 ms, como nos experimentos de cinética, mas sim de centenas de ms, atingindo até segundos.
+	
+	As regiões de decaimento após a mistura foram ajustadas por quatro modelos de decaimento exponencial, e o melhor ajuste foi o modelo monoexponencial (Eq. \ref{eqn:decaimento_exponencial}). Os valores da constante de decaimento \(t_1\) foram comparados, e observou-se uma clara diferenciação entre os experimentos com e sem \TTAB, mostrando que os efeitos observados são dependentes das micelas gigantes.
+	
+	Visto isso, foram realizados experimentos de stopped-flow em outro equipamento, utilizando tempos de integração muito maiores, para ver se o mesmo comportamento de queda de fluorescência poderia ser observado. Os resultados desses experimentos estão na figura XXX. Porém, nenhuma variação foi vista. 
+	
+	
+	% Todo: colocar sinal no máximo
+	
+	% todo: colocar gráfico alisado
+	
+	
+	
+\FloatBarrier
