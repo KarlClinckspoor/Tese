@@ -335,7 +335,7 @@
 	
 	\section{Cinética medida por fluorescência}
 	
-	Mediante isso, foram realizados estudos de cinética misturando-se duas soluções, uma contendo somente NaSal 1,5 \mM{} e outra contendo tanto NaSal 1,5 \mM{} quanto \TTAB{} 1,7 \mM. Essa concentração de \TTAB{} está longe da região do mínimo, com baixa viscosidade. Quanto misturada à outra solução, o \TTAB{} seria diluído pela metade, atingindo a concentração de 0,85 \mM{}, próximo ao mínimo, portanto ainda viscosa, mas mais fluorescente do que as micelas no mínimo. A figura \ref{fig:itc_experimento_cinetica} ilustra a mistura que irá ocorrer.
+	Foram realizados estudos de cinética misturando-se duas soluções, de forma que sua mistura resulte numa solução com micelas gigantes. Uma maneira de se fazer isso é misturando uma solução de NaSal 1,5 \mM{} e outra contendo tanto NaSal 1,5 \mM{} quanto \TTAB{} 1,7 \mM. Essa concentração de \TTAB{} está longe da região do mínimo, com baixa viscosidade. Quanto misturadas, a concentração de \TTAB{} será diminuída pela metade, atingindo a concentração de 0,85 \mM{}, próximo ao mínimo. Logo, observaria-se o crescimento das micelas, através de um salto de concentração. A figura \ref{fig:itc_experimento_cinetica} ilustra a mistura que irá ocorrer, e sua relação com o entalpograma e a fluorescência.  % todo: mencionar os estudos de cinética do Hoffmann onde ele observou crescimento de sistemas por saltos de pressão e temperatura.
 	
 	\begin{figure}[h]
 		\centering
@@ -346,26 +346,118 @@
 	
 	Com as amostras prontas, montou-se o aparato descrito na seção experimental (Seção \ref{sec:experimental_fluor_resolvida}), e foram injetadas as soluções. Em parte dos experimentos, a cela de medida foi lavada com água até que todo sinal de fluorescência do salicilato desaparecesse. Na outra parte, a cela não foi limpa, de modo a observar se há diferença no sinal de fluorescência imediatamente após a injeção, e após alguns minutos.
 	
-	Como resultado de cada análise, um mapa de cor é obtido, contendo os espectros medidos em y, o tempo em x, e as cores correspondendo à intensidade do sinal. Um mapa de cor padrão se encontra na figura XXXX.
+	Como resultado de cada análise, um mapa de cor é obtido, contendo os espectros medidos em y, o tempo em x, e as cores correspondendo à intensidade do sinal. Um mapa de cor padrão se encontra na figura \ref{fig:mapa_cor_fluorescencia}.
 	
-	% todo: colocar um mapa
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.6\textwidth]{imagens/fluor/mapa_cor_am49}
+		\caption{}
+		\label{fig:mapa_cor_fluorescencia}
+	\end{figure}
 	
-	Desse mapa, foi retirado a variação da intensidade em 411 nm, o máximo do sinal, em função do tempo. Cada sinal é extremamente ruidoso, devido ao baixo tempo de integração (5 ms). % todo: verificar se esse é o tempo mesmo.
-	Cada curva foi alisada pelo método de Savitzky-Golay, utilizando uma janela variável dependendo da região da curva. Antes do ponto de injeção, caracterizado por um salto na intensidade, foi utilizada uma janela pequena. Depois do ponto de injeção, foi utilizado uma janela muito maior, para aumentar a intensidade de alisamento. A figura XXXX mostra uma curva não alisada e alisada.
+	Desse mapa, foi retirado a variação da intensidade em 411 nm, o máximo do sinal, em função do tempo. Cada sinal é extremamente ruidoso, devido ao baixo tempo de integração de 6 ms. % todo: verificar se esse é o tempo mesmo.
+	A figura \ref{fig:curva_inicio_final_cortada} mostra essa seção do mapa de cor, evidenciando o ponto de injeção, onde a intensidade de fluorescência aumenta.
 	
-	Em determinada parte dos experimentos, observou-se que a intensidade de fluorescência diminuía em função do tempo, somente nas amostras contendo surfactante. Por essa razão, foram realizados experimentos utilizando NaSal 3,0 \mM{} em água, e em soluções de sacarose 4\% e 10\% m/m, que simulariam a viscosidade das micelas gigantes. Após a mistura, a concentração de NaSal atingiria 1,5 \mM, equivalente aos outros experimentos. Notou-se que não havia uma queda na intensidade de fluorescência, como mostrado na figura XXXX.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\textwidth]{imagens/fluor/curva_inicio_final_cortada}
+		\caption{}
+		\label{fig:curva_inicio_final_cortada}
+	\end{figure}
 	
-	Além disso, as injeções realizadas diretamente na cela de amostra contendo a corrida anterior também mostraram variação, mostrando que os estados iniciais e finais dessas misturas são diferente, e que ocorre uma evolução do sistema micelar durante o processo. Porém, as escalas de tempo não são da ordem de \(<\) 100 ms, como nos experimentos de cinética, mas sim de centenas de ms, atingindo até segundos.
+	Cada curva possui três regiões distintas. A primeira, antes da injeção, corresponde ao sinal de fluorescência do porta-amostra. Quando é feita a injeção, a intensidade de fluorescência aumenta abruptamente, devido à introdução de \TTAB{} ao porta-amostra. A terceira região começa após o pico de intensidade, onde há, aparentemente, um decaimento gradual e bastante lento de fluorescência.
 	
-	As regiões de decaimento após a mistura foram ajustadas por quatro modelos de decaimento exponencial, e o melhor ajuste foi o modelo monoexponencial (Eq. \ref{eqn:decaimento_exponencial}). Os valores da constante de decaimento \(t_1\) foram comparados, e observou-se uma clara diferenciação entre os experimentos com e sem \TTAB, mostrando que os efeitos observados são dependentes das micelas gigantes.
+	A região de inflexão foi analisada para obter-se o tempo de mistura das soluções. Possivelmente esse tempo de mistura seja relacionado ao crescimento micelar, pois ambos ocorrem em escalas de tempo próximas às observadas por SAXS. Além disso, a região após o máximo, onde ocorre o decaimento, também foi analisada, de modo a determinar se esse decaimento se deve à lenta transição das micelas de uma seringa para o estado final, próximo ao máximo de viscosidade. 
 	
-	Visto isso, foram realizados experimentos de stopped-flow em outro equipamento, utilizando tempos de integração muito maiores, para ver se o mesmo comportamento de queda de fluorescência poderia ser observado. Os resultados desses experimentos estão na figura XXX. Porém, nenhuma variação foi vista. 
+	Cada curva foi alisada pelo método de Savitzky-Golay de segundo grau, utilizando uma janela variável para cada região da curva. Para a região de inflexão, foi utilizada uma janela pequena, com aproximadamente a metade do número de pontos da região de inflexão. Para a região de decaimento, foi utilizada uma janela de 201 pontos, muito maior, para aumentar a intensidade de alisamento. A figura \ref{fig:decaimento_fluorescencia_mg1} mostra como a utilização de Savtizky-Golay é essencial para a análise das curvas. 
+
+	\begin{figure}[h]
+		\begin{subfigure}{\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{imagens/fluor/decaimento_mg1}
+			\caption{Sem Savitzky-Golay}
+			\label{fig:decaimento_mg1}
+		\end{subfigure}
+
+		\begin{subfigure}{\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{imagens/fluor/decaimento_mg1_SG}
+			\caption{Com Savitzky-Golay}
+			\label{fig:decaimento_mg1_sg}
+		\end{subfigure}
+		
+		\caption{Intensidades de fluorescência após a injeção de \TTAB{} 1,7 \mM{} com NaSal 1,5 \mM{} em NaSal 1,5 \mM{}, sem alisamento (\ref{fig:decaimento_mg1}) e com alisamento (\ref{fig:decaimento_mg1_sg}) de segundo grau e janela de 201 pontos.}
+		\label{fig:decaimento_fluorescencia_mg1}
+	\end{figure}	
+
+
+	\FloatBarrier
 	
+	Como comparativo, foram analisadas injeções de NaSal 3,0 \mM{} em água, e com soluções 4\% e 10\% de sacarose (em ambas as seringas), para simular a viscosidade das micelas. Assim, observaria-se se há decaimento de fluorescência, e se há diferenças na região de inflexão. Essas análises serão denominadas, de forma geral, como o branco do experimento.  Além disso, foram analisadas as misturas de \TTAB{} 1,7 \mM{} e NaSal 1,5 \mM{} em água, ao invés de NaSal, para observar se a intensidade de fluorescência basal interfere nos parâmetros medidos.
 	
-	% Todo: colocar sinal no máximo
+	A figura \ref{fig:fluorescencia_comparativo_cineticas} mostra cinco curvas de decaimento descritivas das cinco diferentes combinações utilizadas na mistura.
 	
-	% todo: colocar gráfico alisado
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\textwidth]{imagens/fluor/fluorescencia_comparativo}
+		\caption{}
+		\label{fig:fluorescencia_comparativo_cineticas}
+	\end{figure}
 	
+	Os tempos de aumento de fluorescência foram medidos manualmente, contando-se o número de pontos da linha base até o máximo de fluorescência. Já a região de decaimento após o alisamento foi analisada pelo ajuste de várias equações de decaimento, até observar-se, pelo valor de \(R^2\) e os erros dos parâmetros, que o melhor modelo é o de decaimento exponencial simples (Eq. \ref{eqn:decaimento_exponencial}). A tabela \ref{tab:params_ajuste_decaimento} mostra o valor médio do coeficiente de determinação para os ajustes exponenciais, o valor médio da constante de decaimento e o valor médio do tempo de injeção.
 	
+	\begin{table}[h]
+		\IBGEtab{%
+			\caption{Parâmetros médios dos ajustes exponenciais, e da contagem da região de inflexão, para várias diferentes misturas. MG significa solução de \TTAB{} 1,7 \mM{} e NaSal 1,5 \mM. As misturas com MG ocorreram com NaSal 1,5 \mM, e com os solventes, iguais em ambas as seringas, ocorreram com NaSal 3,0 \mM.}
+			\label{tab:params_ajuste_decaimento}
+		}%
+		{%
+			\begin{tabular}{p{4cm} c c c c}
+				\toprule
+				Mistura                           & replicatas & \(R^2\) & \(t_1\)/ms        & \(t_{\mathrm{inj}}\)/ms \\ \midrule
+				NaSal \(\to\) H\textsubscript{2}O & 8          & 0.934   & 23100 \(\pm\) 234 & 60 \(\pm\) 24           \\
+				NaSal \(\to\) Sacarose 4\%        & 7          & 0.946   & 25600 \(\pm\) 240 & 64 \(\pm\) 9            \\
+				NaSal \(\to\) Sacarose 10\%       & 5          & 0.956   & 26100 \(\pm\) 228 & 44 \(\pm\) 14           \\ \midrule
+				MG \(\to\) NaSal                  & 10         & 0.987   & 14540 \(\pm\) 48  & 64 \(\pm\) 9            \\
+				MG \(\to\) H\textsubscript{2}O    & 6          & 0.987   & 14190 \(\pm\) 41  & 62 \(\pm\) 34           \\ \bottomrule
+			\end{tabular}
+		}{}
+	\end{table}
+	
+	Observa-se que há uma diferença significativa tanto no coeficiente de determinação quanto na constante de decaimento entre as injeções com e sem \TTAB{}. Os valores menores de \(R^2\) e os erros maiores se devem à menor taxa de decaimento, isso é, a curva é mais próxima a uma reta horizontal.  Porém, não se observa uma diferença entre os tempos de injeção. Isso indica que o crescimento micelar ocorre após a injeção, e prossegue bastante lentamente.
+	
+	A hipótese de que o fenômeno que concede o decaimento exponencial é o crescimento micelar foi testado de uma maneira bastante simples. Um papel foi colocado na frente a fonte de luz. Caso o decaimento seja devido ao crescimento micelar, o mesmo deve prosseguir sem a incidência de radiação. Caso contrário, é possível que a incidência de luz esteja resultando em alguma modificação no sistema. A figura \ref{fig:fluorescencia_buraco} mostra a curva resultante, e a junção das duas regiões pré- e pós-bloqueio.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagens/fluor/buraco}
+		\caption{}
+		\label{fig:fluorescencia_buraco}
+	\end{figure}
+	
+	Observa-se claramente de que o decaimento recomeça assim que a luz começa a reincidir na amostra. Isso coloca em dúvida as conclusões observadas anteriormente. Possivelmente, o decaimento se deve a algum fenômeno fotoquímico ou fotofísico desconhecido.
+	
+	Como o decaimento aparenta ocorrer em tempos muito longos, foi utilizado outro equipamento para comparar os resultados, utilizando tempos de integração de 1s, mas com uma incidência de radiação muito menos intensa. A figura \ref{fig:fluor_claudia} mostra as curvas observadas para todas as misturas utilizadas na tabela \ref{tab:params_ajuste_decaimento}.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{imagens/fluor/exp_claudia}
+		\caption{Evolução da fluorescência em função do tempo em outro equipamento, com tempos de integração de 1s, para as diferentes injeções indicadas na tabela \ref{tab:params_ajuste_decaimento}. Não há diferença no decaimento das curvas.}
+		\label{fig:fluor_claudia}
+	\end{figure}
+	
+	Claramente não é observado nenhum decaimento. Essa informação, contraditória com os experimentos anteriores, indica que não foi observado, em nenhuma instância até agora, o crescimento micelar, somente processos relacionados ao processo de análise. Ou o crescimento micelar ocorreu em muito pouco tempo, como nos experimentos de SAXS, ou a incidência de luz auxilia nesse processo, ou o crescimento micelar não pode ser observado por fluorescência.
+	
+	\section{Conclusão parcial}	
+	
+	Resultados contraditórios mostram que a determinação de cinética de crescimento micelar através da fluorescência e stopped-flow, é experimentalmente difícil, e estudos posteriores, com técnicas experimentais mais refinadas, serão necessários para determinar, com total certeza, se o crescimento micelar pode ser diretamente observado por fluorescência.
+	
+	\chapter{Conclusões sobre a cinética de crescimento}
+	
+	Estudos de cinética de crescimento foram realizados tanto por SAXS resolvido no tempo quanto por fluorescência junto de um aparato de stopped-flow.
+	
+	Nos experimentos com SAXS, não foi possível observar o processo completo de crescimento micelar. Ou o processo termina por volta de 60 ms após a mistura, ou a concentração é tão alta que a técnica de SAXS, na faixa de \q{} utilizada, não é capaz de diferenciar faixas de tamanho maiores. Para essas análises, utilizou-se o ajuste de um modelo altamente complexo, descrito detalhadamente nos apêndices \ref{sec:modelo_MG_matematica} e \ref{sec:modelo_MG_python}. Esse modelo poderá ser utilizado posteriormente pelo grupo, e por outros, para a análise de objetos alongados \emph{core-shell} como micelas gigantes.
+	
+	Nos experimentos de fluorescência, observou-se alterações no decaimento de intensidade de fluorescência entre experimentos onde ocorre o crescimento micelar, e quando ocorre somente a diluição de NaSal. Porém, esses resultados foram invalidados por experimentos posteriores, que influenciaram a incidência de radiação no porta-amostra, levantando a hipótese de que a fonte utilizada está interferindo nos processos medidos. Para determinar isso, será necessário realizar experimentos mais refinados, com controle eletrônico de injeção com alta resolução temporal, controle de parada de amostra no porta-amostra (\emph{dead-stop}), sistemas de aquisição menos ruidosos e um método de excitação mais seletivo ao comprimento de onda desejado.
 	
 \FloatBarrier

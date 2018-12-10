@@ -1,4 +1,12 @@
     # ... continuação
+    primeiro_abaixo = interesse_abaixo.iloc[0, :]
+    primeiro_acima = interesse_acima.iloc[0, :]
+    ultimo_abaixo = interesse_abaixo.iloc[-1, :]
+    ultimo_acima = interesse_acima.iloc[-1, :]
+
+    dict_line = {'linestyle':'--', 'color':'k'}
+    dict_line2 = {'linestyle':'--', 'color':'r'}
+    dict_text = {'horizontalalignment':'center', 'verticalalignment':'center', 'color':'k', 'fontsize':'10'}
     fig, ax = plt.subplots(1, 1, figsize=(9,6))
     
     h1 = ax.plot(abaixo['T'], abaixo['Q'], label='Aquecimento')

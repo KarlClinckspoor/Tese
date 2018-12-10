@@ -2,6 +2,7 @@
 \chapter{Efeito da ureia}
 \label{sec:cap_efeito_ureia}
 % todo: adaptar as figuras e tabelas pelas figuras feitas trocando os dados de CTAB 300 mM pelos novos, alterando as tabelas e colocando o gráfico de CTAB 100 e CTAB 300.
+% todo: colocar SAXS antes do DSC
 \section{Motivação}
 A ureia demonstrou um comportamento que divergiu bastante dos outros aditivos. Por esse motivo, ela será estudada um pouco mais profundamente. Foi estudado principalmente o efeito da ureia em soluções de \CTAB{}, \TTAB{} e \DTAB, com concentrações diferentes de ureia e surfactante. O efeito do salicilato não foi muito estudado de modo a simplificar o sistema.
 
@@ -141,26 +142,32 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 %			\label{fig:DSC_Surf_300mm_45p}
 %		\end{figure}
 
-	\begin{figure}[h]
+\begin{figure}
+	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.60\textwidth]{./imagens/dsc/NaSal60}
-		\caption{Termogramas de soluções de NaSal 60\mM{} e \CTAB{} 100 \mM{}, em 35\%, 40\% e 45\% (m/m) de ureia}
+		\includegraphics[width=\textwidth]{./imagens/dsc/NaSal60}
+		\caption{NaSal 60\mM}
 		\label{fig:DSC_NaSal60}
-	\end{figure}
-
-	\begin{figure}[h]
+	\end{subfigure} \qquad %
+	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.60\textwidth]{./imagens/dsc/NaSal100}
-		\caption{Termogramas de soluções de NaSal 100\mM{} e \CTAB{} 100 \mM{}, em 35\%, 40\% e 45\% (m/m) de ureia}
+		\includegraphics[width=\textwidth]{./imagens/dsc/NaSal100}
+		\caption{NaSal 100\mM}
 		\label{fig:DSC_NaSal100}
-	\end{figure}
-
-	\begin{figure}[h]
+	\end{subfigure}
+	
+	\hspace{4cm} \begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.60\textwidth]{./imagens/dsc/NaSal250}
-		\caption{Termogramas de soluções de NaSal 250\mM{} e \CTAB{} 100 \mM{}, em 35\%, 40\% e 45\% (m/m) de ureia}
+		\includegraphics[width=\textwidth]{./imagens/dsc/NaSal250}
+		\caption{NaSal 250\mM}
 		\label{fig:DSC_NaSal250}
-	\end{figure}
+	\end{subfigure}
+
+	\caption{Termogramas de soluções de NaSal 60, 100 e 250 \mM{} e \CTAB{} 100 \mM{}, em 35\%, 40\% e 45\% (m/m) de ureia}
+	\label{fig:DSC_NaSals}
+
+\end{figure}
+
 %	
 %		\begin{figure}[H]
 %			\centering
@@ -194,11 +201,8 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	
 	A adição de NaSal causa uma diminuição na temperatura de transição, especialmente visível em 250\mM{} de NaSal. Em vários casos não foi possível medir valores para as áreas de transição de resfriamento.
 	
-	As tabelas \ref{tab:DSC_temp_areas} e \ref{tab:DSC_temp_areas_NaSal} mostram as ição no aquecimento e resfriamento, obtidas pelo valor do máximo do pico, as áreas de transição e as larguras a meia altura dos picos de todos os experimentos realizados.
+	As tabelas \ref{tab:DSC_temp_areas} e \ref{tab:DSC_temp_areas_NaSal} mostram as ição no aquecimento e resfriamento, obtidas pelo valor do máximo do pico, as áreas de transição e as larguras a meia altura dos picos de todos os experimentos realizados. A figura \ref{fig:DSC_propriedades_Ur_38_45} relaciona as propriedades com a concentração de ureia. % e a figura \ref{fig:DSC_propriedades_NaSal} mostra o efeito de salicilato nas propriedades dos termogramas. % As figuras \ref{fig:DSC_propriedades_surf_40_45} e \ref{fig:DSC_propriedades_surf_40_45_2} relacionam as propriedades dos termogramas em função da concentração de surfactante, a
 	
-	Foram criados alguns gráficos para facilitar a visualização da dependência das propriedades dos termogramas em função da composição das soluções. A figura \ref{fig:DSC_propriedades_surf_40_45} relaciona as propriedades dos termogramas em função da concentração de surfactante, a figura \ref{fig:DSC_propriedades_Ur_38_45} relaciona as propriedades com a concentração de ureia e a figura \ref{fig:DSC_propriedades_NaSal} mostra o efeito de salicilato nas propriedades dos termogramas.
-	
-	% TODO: refazer as tabelas e os gráficos, colocando os valores de área de transição em J/g ao invés de J/mol, porque nem todo o surfactante está na fase lamelar.
 	
     \begin{table}[h]
         \IBGEtab%
@@ -208,37 +212,37 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
         \label{tab:DSC_temp_areas}}%
         {\begin{tabular}{ccccccccc}
         	\toprule
-        	        Surfactante         &      \(C_{surf}\)      & \% Ureia & \(T_{aq}\) & \(T_{res}\) & \(A_{aq}\) & \(A_{res}\) & \(L_{aq}\) & \(L_{res}\) \\ \midrule
-        	\multirow{8}{*}{\CTAB} & \multirow{8}{*}{100} &   38   &   30,5   &   19,3    &   19,4   &   19,5    &   5,6    &    3,0    \\
-        	                      &                      &   39   &   32,5   &   25,2    &   22,6   &   22,8    &   6,4    &    2,4    \\
-        	                      &                      &   40   &   33,3   &   25,1    &   20,9   &   19,4    &   5,6    &    3,0    \\
-        	                      &                      &   41   &   34,1   &   27,2    &   18,1   &   18,4    &   5,3    &    1,6    \\
-        	                      &                      &   42   &   37,5   &   29,6    &   19,7   &   20,0    &   6,0    &    1,9    \\
-        	                      &                      &   43   &   38,7   &   31,1    &   19,7   &   19,7    &   5,4    &    1,8    \\
-        	                      &                      &   44   &   40,2   &   34,6    &   19,7   &   19,7    &   4,9    &    1,6    \\
-        	                      &                      &   45   &   41,0   &   34,6    &   20,4   &   20,2    &   4,6    &    1,5    \\ \midrule
-        	\multirow{2}{*}{\CTAB} &         200          &   40   &   31,6   &   23,6    &   48,8   &   49,4    &   6,4    &    2,4    \\
-        	                      &         200          &   45   &   41,6   &   34,9    &   34,8   &   39,0    &   10,3   &    3,5    \\ \midrule
-        	\multirow{8}{*}{\CTAB} & \multirow{8}{*}{300} &   38   &   33,7   &   26,2    &   52,8   &   54,3    &   17,1   &    5,8    \\
-        	                      &                      &   39   &   38,2   &   28,3    &   55,8   &   56,6    &   17,2   &    5,1    \\
-        	                      &                      &   40   &   40,0   &   29,7    &   52,5   &   54,0    &   15,7   &    5,5    \\
-        	                      &                      &   41   &   41,7   &   31,9    &   52,7   &   53,0    &   14,8   &    5,4    \\
-        	                      &                      &   42   &   42,9   &   32,8    &   53,7   &   53,2    &   14,1   &    6,3    \\
-        	                      &                      &   43   &   44,7   &   35,4    &   53,2   &   52,9    &   13,8   &    6,8    \\
-        	                      &                      &   44   &   46,8   &   37,5    &   52,6   &   50,9    &   13,2   &    6,9    \\
-        	                      &                      &   45   &   41,4   &   32,8    &   54,4   &   55,2    &   15,4   &    5,8    \\ \midrule
-        	\multirow{6}{*}{\DTAB} &         100          &   40   &   26,7   &   22,5    &   17,7   &   18,0    &   6,0    &    1,9    \\
-        	                      &         100          &   45   &   33,0   &   30,1    &   16,2   &   16,5    &   2,5    &    1,1    \\
-        	                      &         200          &   40   &   27,4   &   22,8    &   32,6   &   33,2    &   5,4    &    1,8    \\
-        	                      &         200          &   45   &   33,4   &   30,0    &   31,7   &   32,5    &   6,3    &    2,8    \\
-        	                      &         300          &   40   &   26,2   &   21,5    &   68,0   &   65,1    &   4,9    &    1,6    \\
-        	                      &         300          &   45   &   33,5   &   29,8    &   49,2   &   50,1    &   10,6   &    3,7    \\ \midrule
-        	\multirow{6}{*}{\TTAB} &         100          &   40   &   31,9   &   26,4    &   11,1   &   10,7    &   4,6    &    1,5    \\
-        	                      &         100          &   45   &   37,8   &   34,7    &   11,2   &   11,9    &   4,7    &    1,6    \\
-        	                      &         200          &   40   &   31,9   &   25,3    &   23,5   &   22,8    &   10,3   &    3,5    \\
-        	                      &         200          &   45   &   37,4   &   33,8    &   25,1   &   25,9    &   8,8    &    2,6    \\
-        	                      &         300          &   40   &   29,8   &   26,5    &   34,0   &   35,1    &   15,4   &    5,8    \\
-        	                      &         300          &   45   &   37,8   &   33,2    &   38,2   &   39,9    &   14,0   &    4,1    \\ \bottomrule
+        	     Surfactante       &     \(C_{surf}\)     & \% Ureia & \(T_{aq}\) & \(T_{res}\) & \(A_{aq}\) & \(A_{res}\) & \(L_{aq}\) & \(L_{res}\) \\ \midrule
+        	\multirow{8}{*}{\CTAB} & \multirow{8}{*}{100} &    38    &    30,5    &    19,3     &    19,4    &    19,5     &    5,6     &     3,0     \\
+        	                       &                      &    39    &    32,5    &    25,2     &    22,6    &    22,8     &    6,4     &     2,4     \\
+        	                       &                      &    40    &    33,3    &    25,1     &    20,9    &    19,4     &    5,6     &     3,0     \\
+        	                       &                      &    41    &    34,1    &    27,2     &    18,1    &    18,4     &    5,3     &     1,6     \\
+        	                       &                      &    42    &    37,5    &    29,6     &    19,7    &    20,0     &    6,0     &     1,9     \\
+        	                       &                      &    43    &    38,7    &    31,1     &    19,7    &    19,7     &    5,4     &     1,8     \\
+        	                       &                      &    44    &    40,2    &    34,6     &    19,7    &    19,7     &    4,9     &     1,6     \\
+        	                       &                      &    45    &    41,0    &    34,6     &    20,4    &    20,2     &    4,6     &     1,5     \\ \midrule
+        	\multirow{2}{*}{\CTAB} &         200          &    40    &    31,6    &    23,6     &    48,8    &    49,4     &    6,4     &     2,4     \\
+        	                       &         200          &    45    &    41,6    &    34,9     &    34,8    &    39,0     &    10,3    &     3,5     \\ \midrule
+        	\multirow{8}{*}{\CTAB} & \multirow{8}{*}{300} &    38    &    33,7    &    26,2     &    52,8    &    54,3     &    17,1    &     5,8     \\
+        	                       &                      &    39    &    38,2    &    28,3     &    55,8    &    56,6     &    17,2    &     5,1     \\
+        	                       &                      &    40    &    40,0    &    29,7     &    52,5    &    54,0     &    15,7    &     5,5     \\
+        	                       &                      &    41    &    41,7    &    31,9     &    52,7    &    53,0     &    14,8    &     5,4     \\
+        	                       &                      &    42    &    42,9    &    32,8     &    53,7    &    53,2     &    14,1    &     6,3     \\
+        	                       &                      &    43    &    44,7    &    35,4     &    53,2    &    52,9     &    13,8    &     6,8     \\
+        	                       &                      &    44    &    46,8    &    37,5     &    52,6    &    50,9     &    13,2    &     6,9     \\
+        	                       &                      &    45    &    41,4    &    32,8     &    54,4    &    55,2     &    15,4    &     5,8     \\ \midrule
+        	\multirow{6}{*}{\TTAB} &         100          &    40    &    31,9    &    26,4     &    11,1    &    10,7     &    4,6     &     1,5     \\
+        	                       &         100          &    45    &    37,8    &    34,7     &    11,2    &    11,9     &    4,7     &     1,6     \\
+        	                       &         200          &    40    &    31,9    &    25,3     &    23,5    &    22,8     &    10,3    &     3,5     \\
+        	                       &         200          &    45    &    37,4    &    33,8     &    25,1    &    25,9     &    8,8     &     2,6     \\
+        	                       &         300          &    40    &    29,8    &    26,5     &    34,0    &    35,1     &    15,4    &     5,8     \\
+        	                       &         300          &    45    &    37,8    &    33,2     &    38,2    &    39,9     &    14,0    &     4,1     \\ \midrule
+        	\multirow{6}{*}{\DTAB} &         100          &    40    &    26,7    &    22,5     &    17,7    &    18,0     &    6,0     &     1,9     \\
+        	                       &         100          &    45    &    33,0    &    30,1     &    16,2    &    16,5     &    2,5     &     1,1     \\
+        	                       &         200          &    40    &    27,4    &    22,8     &    32,6    &    33,2     &    5,4     &     1,8     \\
+        	                       &         200          &    45    &    33,4    &    30,0     &    31,7    &    32,5     &    6,3     &     2,8     \\
+        	                       &         300          &    40    &    26,2    &    21,5     &    68,0    &    65,1     &    4,9     &     1,6     \\
+        	                       &         300          &    45    &    33,5    &    29,8     &    49,2    &    50,1     &    10,6    &     3,7     \\ \bottomrule
         \end{tabular}}%
         {}
     \end{table}
@@ -270,60 +274,65 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
             {}
     \end{table}
 
-	\begin{figure}[h]
-	 	\centering
-	 	\begin{subfigure}[t]{0.45\textwidth}
-	 		\includegraphics[width=\textwidth]{./imagens/dsc/L_40p_1_300mM_aq_res}
-	 		\caption{\(L\) a 40\% de ureia}
-	 		\label{fig:DSC_L_40pUr}
-	 	\end{subfigure} \qquad %
-	 	\begin{subfigure}[t]{0.45\textwidth}
-	 		\includegraphics[width=\textwidth]{./imagens/dsc/L_45p_1_300mM_aq_res}
-	 		\caption{\(L\) a 45\% de Ureia}
-	 		\label{fig:DSC_L_45pUr}
-	 	\end{subfigure}
- 	
-	 	\begin{subfigure}[t]{0.45\textwidth}
-	 		\includegraphics[width=\textwidth]{./imagens/dsc/A_40p_1_300_aq_res}
-	 		\caption{\(A\) a 40\% de ureia}
-	 		\label{fig:DSC_A_40pUr}
-	 	\end{subfigure} \qquad %
-	 	\begin{subfigure}[t]{0.45\textwidth}
-	 		\includegraphics[width=\textwidth]{./imagens/dsc/A_45p_1_300_aq_res}
-	 		\caption{\(A\) a 45\% de Ureia}
-	 		\label{fig:DSC_A_45pUr}
-	 	\end{subfigure}
- 	
-	 	\begin{subfigure}[t]{0.45\textwidth}
-	 		\includegraphics[width=\textwidth]{./imagens/dsc/T_40p_1_300_aq_res}
-	 		\caption{\(T\) a 40\% de ureia}
-	 		\label{fig:DSC_T_40pUr}
-	 	\end{subfigure} \qquad %
-	 	\begin{subfigure}[t]{0.45\textwidth}
-	 		\includegraphics[width=\textwidth]{./imagens/dsc/T_45p_1_300_aq_res}
-	 		\caption{\(T\) a 45\% de Ureia}
-	 		\label{fig:DSC_T_45pUr}
-	 	\end{subfigure}
- 	
-	 	\caption{Variação da largura a meia altura \(L\) (\ref{fig:DSC_L_40pUr}, \ref{fig:DSC_L_45pUr}), área do pico \(A\) (\ref{fig:DSC_A_40pUr}, \ref{fig:DSC_A_45pUr}), temperatura de transição \(T\) (\ref{fig:DSC_T_40pUr}, \ref{fig:DSC_T_45pUr}) para os ciclos de aquecimento (\(aq\)) e resfriamento (\(res\)) de amostras de \CTAB, \DTAB{} e \TTAB{} a 35\% e 40\% de ureia, de 100 a 300 \mM{} de surfactante}
-	 	\label{fig:DSC_propriedades_surf_40_45}
-	 \end{figure}
+%	\begin{figure}[h]
+%	 	\centering
+%	 	\begin{subfigure}[t]{0.45\textwidth}
+%	 		\includegraphics[width=\textwidth]{./imagens/dsc/L_40p_1_300mM_aq_res}
+%	 		\caption{\(L\); 40\% de ureia}
+%	 		\label{fig:DSC_L_40pUr}
+%	 	\end{subfigure} \qquad %
+%	 	\begin{subfigure}[t]{0.45\textwidth}
+%	 		\includegraphics[width=\textwidth]{./imagens/dsc/L_45p_1_300mM_aq_res}
+%	 		\caption{\(L\); 45\% de Ureia}
+%	 		\label{fig:DSC_L_45pUr}
+%	 	\end{subfigure}
+% 	
+%	 	\begin{subfigure}[t]{0.45\textwidth}
+%	 		\includegraphics[width=\textwidth]{./imagens/dsc/A_40p_1_300_aq_res}
+%	 		\caption{\(A\); 40\% de ureia}
+%	 		\label{fig:DSC_A_40pUr}
+%	 	\end{subfigure} \qquad %
+%	 	\begin{subfigure}[t]{0.45\textwidth}
+%	 		\includegraphics[width=\textwidth]{./imagens/dsc/A_45p_1_300_aq_res}
+%	 		\caption{\(A\); 45\% de Ureia}
+%	 		\label{fig:DSC_A_45pUr}
+%	 	\end{subfigure}
+% 	
+%	 	\caption{Variação da largura a meia altura \(L\) (\ref{fig:DSC_L_40pUr}, \ref{fig:DSC_L_45pUr}), área do pico \(A\) (\ref{fig:DSC_A_40pUr}, \ref{fig:DSC_A_45pUr}) para os ciclos de aquecimento (\(aq\)) e resfriamento (\(res\)) de amostras de \CTAB, \DTAB{} e \TTAB{} a 35\% e 40\% de ureia, de 100 a 300 \mM{} de surfactante}
+%	 	\label{fig:DSC_propriedades_surf_40_45}
+%	 \end{figure}
+%	
+%	\begin{figure}
+%	 	\begin{subfigure}[t]{0.45\textwidth}
+%			\includegraphics[width=\textwidth]{./imagens/dsc/T_40p_1_300_aq_res}
+%			\caption{\(T\); 40\% de ureia}
+%			\label{fig:DSC_T_40pUr}
+%		\end{subfigure}  %
+%		\begin{subfigure}[t]{0.45\textwidth}
+%			\includegraphics[width=\textwidth]{./imagens/dsc/T_45p_1_300_aq_res}
+%			\caption{\(T\); 45\% de Ureia}
+%			\label{fig:DSC_T_45pUr}
+%		\end{subfigure}
+%	 
+%	 	\caption{Variação da temperatura de transição \(T\) (\ref{fig:DSC_T_40pUr}, \ref{fig:DSC_T_45pUr}) para os ciclos de aquecimento (\(aq\)) e resfriamento (\(res\)) de amostras de \CTAB, \DTAB{} e \TTAB{} a 35\% e 40\% de ureia, de 100 a 300 \mM{} de surfactante}
+%		\label{fig:DSC_propriedades_surf_40_45_2}
+%	\end{figure}
 	
-	\begin{figure}[h]
-		\centering
-		\begin{subfigure}[t]{0.60\textwidth}
+	
+	\begin{figure}[h]	
+		\begin{subfigure}[t]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{./imagens/dsc/L_100mM_aq_res}
 			\caption{\(L\) a 38\%---45\% de ureia}
 			\label{fig:DSC_L_38_45pUr}
-		\end{subfigure}
-		
-		\begin{subfigure}[t]{0.60\textwidth}
+		\end{subfigure} %
+		%
+		\begin{subfigure}[t]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{./imagens/dsc/A_100mM_aq_res}
 			\caption{\(A\) a 38\%---45\% de ureia}
 			\label{fig:DSC_A_38_45pUr}
 		\end{subfigure} 
 		
-		\begin{subfigure}[t]{0.60\textwidth}
+		\hspace{4cm} \begin{subfigure}[t]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{./imagens/dsc/T_100mM_aq_res}
 			\caption{\(T\) a 38\%---45\% de ureia}
 			\label{fig:DSC_T_38_45pUr}
@@ -333,22 +342,22 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\label{fig:DSC_propriedades_Ur_38_45}
 	\end{figure}
 		
-	\begin{figure}[h]
-		\centering
-		\begin{subfigure}[t]{0.45\textwidth}
-			\includegraphics[width=\textwidth]{./imagens/dsc/A_NaSal_c_UR_aq_res}
-			\caption{\(A\) a 35\% de ureia}
-			\label{fig:DSC_A_NaSal}
-		\end{subfigure} \qquad %
-		\begin{subfigure}[t]{0.45\textwidth}
-			\includegraphics[width=\textwidth]{./imagens/dsc/T_NaSal_c_UR_aq_res}
-			\caption{\(T\) a 40\% de Ureia}
-			\label{fig:DSC_T_NaSal}
-		\end{subfigure}
-		
-		\caption{Variações da área do pico \(A\) (\ref{fig:DSC_A_NaSal}), temperatura de transição \(T\) (\ref{fig:DSC_T_NaSal}) para os ciclos de aquecimento (\(aq\)) e resfriamento (\(res\)) de amostras de \CTAB{} e NaSal a 35\% a 40\% de ureia, de 60 a 250 \mM{} de NaSal}
-		\label{fig:DSC_propriedades_NaSal}
-	\end{figure}
+%	\begin{figure}[h]
+%		\centering
+%		\begin{subfigure}[t]{0.45\textwidth}
+%			\includegraphics[width=\textwidth]{./imagens/dsc/A_NaSal_c_UR_aq_res}
+%			\caption{\(A\) a 35\% de ureia}
+%			\label{fig:DSC_A_NaSal}
+%		\end{subfigure} \qquad %
+%		\begin{subfigure}[t]{0.45\textwidth}
+%			\includegraphics[width=\textwidth]{./imagens/dsc/T_NaSal_c_UR_aq_res}
+%			\caption{\(T\) a 40\% de Ureia}
+%			\label{fig:DSC_T_NaSal}
+%		\end{subfigure}
+%		
+%		\caption{Variações da área do pico \(A\) (\ref{fig:DSC_A_NaSal}), temperatura de transição \(T\) (\ref{fig:DSC_T_NaSal}) para os ciclos de aquecimento (\(aq\)) e resfriamento (\(res\)) de amostras de \CTAB{} e NaSal a 35\% a 40\% de ureia, de 60 a 250 \mM{} de NaSal}
+%		\label{fig:DSC_propriedades_NaSal}
+%	\end{figure}
 	
 	\FloatBarrier
 \section{SAXS}
@@ -537,7 +546,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		{
 			\begin{tabular}{c c | c c c c}
 				\toprule
-				        Surf.         & \(c_{\text{surf}}\)/\mM & \(|(m_{\text{líquido}})\)/g & \(m_{\text{sólido}}\)/g & \(m_{\text{surf}}\)/g & \(m_{\text{extra}}\)/g \\ \midrule
+				        Surf.         & \(c_{\text{surf}}\)/\mM & \(m_{\text{líquido}}\)/g & \(m_{\text{sólido}}\)/g & \(m_{\text{surf}}\)/g & \(m_{\text{extra}}\)/g \\ \midrule
 				\multirow{3}{*}{\CTAB} & 99,7                  & 2,5251                 & 2,4681                & 0,1608              & 2,3073               \\
 				                      & 199,2                 & 2,8278                 & 2,1766                & 0,3118              & 1,8648               \\
 				                      & 299,5                 & 2,9638                 & 2,0391                & 0,4544              & 1,5847               \\ \midrule
@@ -743,10 +752,16 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	Foi levantada também a hipótese de que a ureia está aumentando a concentração micelar crítica do surfactante, levando à sua desmicelização durante a titulação com \TTAB{}. Porém, o aumento da CMC somente ocorre de maneira apreciável em concentrações muito maiores de ureia, então os efeitos observados devem ser somente devido à interação de micelas de \TTAB{} com ureia.
 	
 	% todo: colocar as curvas de ``branco''.
-	O código utilizado para gerar a Fig. \ref{fig:itc_interacaoUrSurf_entalpograma} se encontra a seguir. As outras figuras foram geradas com códigos semelhantes, alterando-se os valores de y da linha 38.
+	O código utilizado para gerar a Fig. \ref{fig:itc_interacaoUrSurf_entalpograma} se encontra nas listagens \ref{lst:codigo_itc_ureia} e \ref{lst:codigo_itc_ureia2}. As outras figuras foram geradas com códigos semelhantes, alterando-se os valores de y.
 	
 	\begin{listing}[h]
 		\inputminted{python}{./python/ITC_tratamento_ureia_ttab.py}
-		\caption{Código utilizado para gerar a Fig. \ref{fig:itc_interacaoUrSurf_entalpograma}}
+		\caption{Código utilizado para gerar a Fig. \ref{fig:itc_interacaoUrSurf_entalpograma} (1/2)}
 		\label{lst:codigo_itc_ureia}
+	\end{listing}
+
+	\begin{listing}[h]
+		\inputminted{python}{./python/ITC_tratamento_ureia_ttab2.py}
+		\caption{Código utilizado para gerar a Fig. \ref{fig:itc_interacaoUrSurf_entalpograma} (1/2)}
+		\label{lst:codigo_itc_ureia2}
 	\end{listing}

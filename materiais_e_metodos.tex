@@ -11,21 +11,25 @@
 		\centering
 		\begin{tabular}{c c p{3.2cm}}
 			\toprule
-			Reagente  & Pureza                                      & Fabricante    \\ \midrule
-			  CTAB    & \(\geqslant 98\%\)                            & Sigma Aldrich \\
-			  TTAB    & \(\geqslant 99\%\)                            & Sigma Aldrich \\
-			  DTAB	  & \(\geqslant 98\%\)							& Sigma Aldrich \\
-			  NaSal   & \(99{,}5\%\)                                    & Sigma Aldrich \\
-			Glicerina & \(85\%\)/\(15\%\textnormal{H}_2\textnormal{O}\) & Merck         \\
-			Sacarose  & \(\geqslant 99{,}5\%\)                          & Sigma Aldrich \\
-	%		Sucralose & 											& 				\\  % todo: ver se coloco algo da sucralose aqui
-			  Ureia   & \(\geqslant 99{,}5\%\)                          & Sigma Aldrich \\
-			  DMSO    & \(\geqslant 99{,}5\%\)                          & Sigma Aldrich \\
-			  1,3BD   & \(99{,}5\%\)                                    & Sigma Aldrich \\ 
-			  Água    & \(\sigma = 18{,}2M\Omega\).cm					& Millipore Direct-Q\textregistered{} \newline 3 UV com bomba  \\ \bottomrule
+			Reagente  & Pureza                                          & Fabricante                                                  \\ \midrule
+			  CTAB    & \(\geqslant 98\%\)                              & Sigma Aldrich                                               \\
+			  TTAB    & \(\geqslant 99\%\)                              & Sigma Aldrich                                               \\
+			  DTAB    & \(\geqslant 98\%\)                              & Sigma Aldrich                                               \\
+			  NaSal   & \(99{,}5\%\)                                    & Sigma Aldrich                                               \\
+			Glicerina & \(85\%\)/\(15\%\textnormal{H}_2\textnormal{O}\) & Merck                                                       \\
+			Sacarose  & \(\geqslant 99{,}5\%\)                          & Sigma Aldrich                                               \\
+			  Ureia   & \(\geqslant 99{,}5\%\)                          & Sigma Aldrich                                               \\
+			  DMSO    & \(\geqslant 99{,}5\%\)                          & Sigma Aldrich                                               \\
+			  1,3BD   & \(99{,}5\%\)                                    & Sigma Aldrich                                               \\
+			  Água    & \(\sigma = 18{,}2M\Omega\).cm                   & Millipore Direct-Q\textregistered{} \newline 3 UV com bomba \\ \bottomrule
 		\end{tabular}}%
 		{}
 	\end{table}
+	
+	% Todo: colocar algum texto aqui para fazer volume
+	
+             %		Sucralose                       &                                                 &                                                             \\
+	% todo: ver se coloco algo da sucralose aqui
 	
 	\chapter{Reologia}
 		\section{Preparo das amostras}
@@ -283,18 +287,30 @@
 	\chapter{Técnicas adicionais}
 		\section{Calorimetria diferencial de varredura}
 		
-		Foram realizadas análises utilizando o equipamento institucional DSC Q100 da TA Instruments. O preparo de amostra seguiu as mesmas considerações descritas na seção \ref{sec:reologia_preparo_amostra}. O método de análise utilizado foi:
+		Foram realizadas análises utilizando o equipamento institucional DSC Q100 da TA Instruments. O preparo de amostra seguiu as mesmas considerações descritas na seção \ref{sec:reologia_preparo_amostra}. Foram programadas rampas de 2°C/min de 1°C a 60°C, e de volta, com intervalos de 3 minutos na temperatura final.
 		
-		\begin{enumerate}
-			\item Equilíbrio a 1°C
-			\item Rampa até 60°C na taxa de 2°C/min
-			\item Isotérmica por 3 minutos
-			\item Rampa até 1°C na taxa de 2°C/min
-			\item Isotérmica por 3 minutos
-		\end{enumerate}
+%		\begin{enumerate}[noitemsep]
+%			\item Equilíbrio a 1°C
+%			\item Rampa até 60°C na taxa de 2°C/min
+%			\item Isotérmica por 3 minutos
+%			\item Rampa até 1°C na taxa de 2°C/min
+%			\item Isotérmica por 3 minutos
+%		\end{enumerate}
 		
-		A análise foi realizada sob fluxo de nitrogênio a 50 ml/min e as massas utilizadas estavam na faixa de 10 a 20 mg. As áreas de transição e temperaturas de transição foram determinadas pelo software do equipamento. As larguras a meia-altura foram determinadas de acordo com o script localizado na seção \ref{sec:apendice_DSC}
+		A análise foi realizada sob fluxo de nitrogênio a 50 ml/min e as massas utilizadas estavam na faixa de 10 a 20 mg. As áreas de transição e temperaturas de transição foram determinadas pelo software do equipamento. As larguras a meia-altura foram determinadas de acordo com o script as listagens \ref{lst:meia_altura1} e \ref{lst:meia_altura2}.
 		
+		\begin{listing}[H]
+			\inputminted{python}{./python/meia_altura1.py}
+			\caption{Código fonte para o script de obtenção dos valores de largura a meia altura de curvas de DSC (1/2)} 
+			\label{lst:meia_altura1}
+		\end{listing}
+		
+		\begin{listing}[H]
+			\inputminted{python}{./python/meia_altura2.py}
+			\caption{Código fonte para o script de obtenção dos valores de largura a meia altura de curvas de DSC (2/2)} 
+			\label{lst:meia_altura2}
+		\end{listing}
+
 		\section{Espalhamento dinâmico de luz}
 		
 		% todo: colocar mais detalhes experimentais aqui.
