@@ -22,7 +22,7 @@
 		
 		\subsection{Número de Deborah}
 		
-		É possível relacionar materiais viscosos, elásticos e viscoelásticos através do número de Deborah (Eq. \ref{eqn:Deborah}), que relaciona o tempo de relaxação do material (\(\tau_{\text{rel}}\)) com o tempo de observação (\(t\)).
+		É possível relacionar materiais viscosos, elásticos e viscoelásticos através do número de Deborah (Eq. \ref{eqn:Deborah}), que relaciona o tempo de relaxação do material (\(\tau_{\mathrm{rel}}\)) com o tempo de observação (\(t\)).
 		
 		\begin{equation}
 			D_e = \dfrac{\tau_{\text{rel}}}{t}
@@ -50,7 +50,7 @@
 			\label{eqn:Deborah_casos}
 		\end{equation}
 		
-		O arco, em uso, possui \(D_e\gg1\), pois seu tempo de relaxação é bastante longo comparado com a ação de atirar uma flecha, mas \(D_e\ll1\) quando armazenado, o que pode durar meses. Dessa maneira, o arco e os outros materiais citados se comportam como materiais tanto elásticos quanto viscosos, dependendo do tempo de análise \(t\). O nome desse número vem de uma passagem bíblica, \emph{Os montes deslizaram diante do senhor} (Juízes 5:5). Mesmo as montanhas, que tradicionalmente não se movem, acabam deslizando mediante tempos de observação infinitos.
+		O arco, em uso, possui \(D_e \gg 1\), pois seu tempo de relaxação é bastante longo comparado com a ação de atirar uma flecha, mas \(D_e \ll 1\) quando armazenado, o que pode durar meses. Dessa maneira, o arco e os outros materiais citados se comportam como materiais tanto elásticos quanto viscosos, dependendo do tempo de análise \(t\). O nome desse número vem de uma passagem bíblica, \emph{Os montes deslizaram diante do senhor} (Juízes 5:5). Mesmo as montanhas, que tradicionalmente não se movem, acabam deslizando mediante tempos de observação infinitos.
 		
 		Para um estudo mais aprofundado de reologia, é necessário estabelecer um formalismo matemático, que será feito nas seções a seguir. Primeiramente se
 		
@@ -88,7 +88,7 @@
 				\label{eqn:Newton}
 			\end{equation}
 			
-			A figura \ref{fig:reol_newt_exemplos} mostra curvas de fluxo simuladas para um fluido Newtoniano de viscosidade \(\eta=10\:Pa.s^{-1}\).
+			A figura \ref{fig:reol_newt_exemplos} mostra curvas de fluxo simuladas para um fluido Newtoniano de viscosidade \(\eta=10\) Pa.s\menosUm.
 			
 			\begin{figure}[H]
 				\begin{subfigure}[t]{.5\textwidth}
@@ -121,7 +121,7 @@
 			% todo: colocar uma figura do Goodwin e Hughes de viscosidade, para mostrar o comportamento não Hookeano.
 			
 			\subsection{Fluidos não-Newtonianos}
-			
+			\label{sec:teoria_fluidos_NN}
 			Fluidos que não obedecem a lei de Newton (Eq. \ref{eqn:Newton}), portanto possuem valores de viscosidade dependentes da taxa de cisalhamento, são chamados de fluidos não-Newtonianos. Dentro dessa classificação, há vários tipos de fluido, dependendo de como \(\eta\) varia com (\(\dot{\gamma}\)). Alguns dos tipos possíveis são:
 			
 			\begin{itemize}[noitemsep]
@@ -136,7 +136,7 @@
 			
 			Sob taxas de cisalhamento baixas, micelas gigantes em solução estão emaranhadas. Isso dificulta a movimentação do solvente e da solução como um todo, resultado em uma viscosidade aparente alta. Nesse regime, o comportamento elástico predomina. Quanto maior for o entrelaçamento das micelas, maior é a contribuição do comportamento elástico, e maior é a viscosidade aparente. À medida que a taxa é aumentada, as micelas gigantes começam a se alinhar ao fluxo, de modo a diminuir o gradiente de velocidade que cada cadeia sente. Isso facilita o fluxo e diminui a estruturação que resulta no comportamento elástico, o que acaba diminuindo a viscosidade aparente.
 			
-			Após um valor específico de taxa de cisalhamento, a viscosidade atinja um mínimo pois não há mais como aumentar o alinhamento das micelas. Nessa situação, a viscosidade aparente é predominantemente devido ao solvente, e a contribuição Newtoniana é predominante. A figura \ref{fig:reol_pseudoplastico_exemplos} mostra a curva de fluxo de um material pseudoplástico, tanto .\footnote{Construção: vide apêndice \ref{sec:apn_tratamento_CF}. Parâmetros: Modelo de Carreau, \(\eta_0=10\), \(\eta_{\infty}=1\), \(\dot{\gamma}_b=10\), \(n=10\).} É possível que as cadeias comecem a se estruturar, formando \emph{shear induced structures}, mas isso não foi observado neste trabalho.
+			Após um valor específico de taxa de cisalhamento, a viscosidade atinja um mínimo pois não há mais como aumentar o alinhamento das micelas. Nessa situação, a viscosidade aparente é predominantemente devido ao solvente, e a contribuição Newtoniana é predominante. A figura \ref{fig:reol_pseudoplastico_exemplos} mostra a curva de fluxo de um material pseudoplástico, tanto .\footnote{Construção: vide seção \ref{sec:apn_tratamento_CF}. Parâmetros: Modelo de Carreau, \(\eta_0=10\), \(\eta_{\infty}=1\), \(\dot{\gamma}_b=10\), \(n=10\).} É possível que as cadeias comecem a se estruturar, formando \emph{shear induced structures}, mas isso não foi observado neste trabalho.
 	
 			\begin{figure}[H]
 				\begin{subfigure}[t]{.5\textwidth}
@@ -162,7 +162,7 @@
 				\label{fig:reol_pseudoplastico_loglog}
 			\end{figure}
 		
-			Para obter o valor da viscosidade no repouso, é possível tanto realizar um ajuste linear da região inicial na escala log-log, ou ajustar um modelo à curva, como o modelo de Cross, Carreau e Carreau-Yasuda. Mais informações sobre a modelagem estão no apêndice \ref{sec:apn_tratamento_CF}.
+			Para obter o valor da viscosidade no repouso, é possível tanto realizar um ajuste linear da região inicial na escala log-log, ou ajustar um modelo à curva, como o modelo de Cross, Carreau e Carreau-Yasuda. Mais informações sobre a modelagem estão na seção \ref{sec:modelagem_curva_fluxo}.
 
 		\section{Reologia oscilatória}
 			\subsection{Princípios e aquisição de dados}
@@ -323,14 +323,14 @@
 				\label{eqn:Maxwell_dif_resolvida}
 			\end{equation}
 			
-			O termo exponencial na Eq. \ref{eqn:Maxwell_dif_resolvida} possui unidade de tempo e é a relação entre as componentes elástica e viscosa do material. Essa relação recebe o nome de tempo de relaxação, \(\tau_{\textrm{rel}}\) (Eq. \ref{eqn:Maxwell_tempo_rel_def})
+			O termo exponencial na Eq. \ref{eqn:Maxwell_dif_resolvida} possui unidade de tempo e é a relação entre as componentes elástica e viscosa do material. Essa relação recebe o nome de tempo de relaxação, \(\tau_{\mathrm{rel}}\) (Eq. \ref{eqn:Maxwell_tempo_rel_def})
 			
 			\begin{equation}
 				\tau(t) = \tau_0 e^{\sfrac{-t}{\tau_{\textrm{rel}}}}
 				\label{eqn:Maxwell_tempo_rel_def}
 			\end{equation}
 		
-			O tempo de relaxação é o tempo em que a tensão inicial demora para cair ao valor de \(\sfrac{1}{e}\) do valor inicial. É interessante notar que em tempos pequenos, relativos a \(\tau_{\textrm{rel}}\), o material responde com a tensão inicial total. Essa é a resposta imediata da mola. Porém, com o tempo, à medida que \(t\to\tau_{\textrm{rel}}\), a tensão começa a decair exponencialmente e depois, em \(t \gg \tau_{\textrm{rel}}\), tende a zero. Nessa situação, o dissipador difundiu toda a energia inicial aplicada.
+			O tempo de relaxação é o tempo em que a tensão inicial demora para cair ao valor de \(\sfrac{1}{e}\) do valor inicial. É interessante notar que em tempos pequenos, relativos a \(\tau_{\mathrm{rel}}\), o material responde com a tensão inicial total. Essa é a resposta imediata da mola. Porém, com o tempo, à medida que \(t\to\tau_{\mathrm{rel}}\), a tensão começa a decair exponencialmente e depois, em \(t \gg \tau_{\mathrm{rel}}\), tende a zero. Nessa situação, o dissipador difundiu toda a energia inicial aplicada.
 			
 			A expressão \ref{eqn:Maxwell_soma} pode ser rearranjada utilizando o tempo de relaxação (\ref{eqn:Maxwell_tempo_rel_def}).
 			
@@ -348,7 +348,7 @@
 				\label{eqn:Maxwell_substituicao}
 			\end{equation}
 			
-			Em comum a todos os termos é a constante \(e^{i\omega t}\). Dividindo ambos os lados por essa constante, agrupando os termos com \(e^{-i\theta}\) e substituindo a viscosidade por \(G\tau_{\textrm{rel}}\), temos:
+			Em comum a todos os termos é a constante \(e^{i\omega t}\). Dividindo ambos os lados por essa constante, agrupando os termos com \(e^{-i\theta}\) e substituindo a viscosidade por \(G\tau_{\mathrm{rel}}\), temos:
 			
 			\begin{equation}
 				\tau_0e^{-i\theta} \left(   1 + i\omega\tau_{\textrm{rel}}  \right) = i\omega G\tau_{\textrm{rel}}\gamma_0 \to
@@ -363,7 +363,7 @@
 				\label{eqn:Maxwell_complexo_antes_sep}
 			\end{equation}
 			
-			Seguindo o princípio de que o módulo complexo \(\hat{G}\) pode ser dividido em uma parte imaginária e uma parte real, podemos realizar o mesmo com a Eq. \ref{eqn:Maxwell_complexo_antes_sep} multiplicando-se a fração por \(\frac{\left(   1 - i\omega\tau_{\textrm{rel}}  \right)}{\left(   1 - i\omega\tau_{\textrm{rel}}  \right)}\).
+			Seguindo o princípio de que o módulo complexo \(\hat{G}\) pode ser dividido em uma parte imaginária e uma parte real, podemos realizar o mesmo com a Eq. \ref{eqn:Maxwell_complexo_antes_sep} multiplicando-se a fração por \(\frac{\left(   1 - i\omega\tau_{\mathrm{rel}}  \right)}{\left(   1 - i\omega\tau_{\mathrm{rel}}  \right)}\).
 			
 			\begin{equation}
 				\hat{G} = \dfrac{  i\omega G\tau_{\textrm{rel}} - i^2 \omega^2 G \tau_{\textrm{rel}}^2        }{  1 - i^2\omega^2 \tau_{\textrm{rel}}^2          }
@@ -405,7 +405,7 @@
 				\label{eqn:Maxwell_cruzamento_Deborah}
 			\end{equation}
 
-			A reologia oscilatória geralmente é expressa em termos de G' e G'' em função da frequência, na escala logarítmica. A Fig. \ref{fig:modelo_maxwell} mostra duas curvas simuladas para um material com tempo de relaxação de 10 s.$rad^{-1}$ e um módulo \(G\) de 10 Pa. Nessa figura estão mostrado como se obtêm visualmente os parâmetros \(G\) e \(\tau_{\textrm{rel}}\).
+			A reologia oscilatória geralmente é expressa em termos de G' e G'' em função da frequência, na escala logarítmica. A Fig. \ref{fig:modelo_maxwell} mostra duas curvas simuladas para um material com tempo de relaxação de 10 s.$rad^{-1}$ e um módulo \(G\) de 10 Pa. Nessa figura estão mostrado como se obtêm visualmente os parâmetros \(G\) e \(\tau_{\mathrm{rel}}\).
 			
 			\begin{figure}[H]
 				\centering
@@ -463,26 +463,26 @@
 				\begin{subfigure}[t]{.5\textwidth}
 					\centering
 					\includegraphics[width=\textwidth]{./imagens/reologia/modelos_comparativo_max}
-					\caption{Maxwell. \(G=10, \tau_{\textrm{rel}}=10\)}
+					\caption{Maxwell. \(G=10, \tau_{\mathrm{rel}}=10\)}
 					\label{fig:comparativo_modelo_maxwell}
 				\end{subfigure}%
 				\begin{subfigure}[t]{.5\textwidth}
 					\centering
 					\includegraphics[width=\textwidth]{./imagens/reologia/modelos_comparativo_doismodos}
-					\caption{Dois-Modos. \(G_1=10, G=15, \tau_{\textrm{rel,1}}=1,  \tau_{\textrm{rel,2}}=5\)}
+					\caption{Dois-Modos. \(G_1=10, G=15, \tau_{\mathrm{rel,1}}=1,  \tau_{\mathrm{rel,2}}=5\)}
 					\label{fig:comparativo_modelo_doismodos}
 				\end{subfigure}
 			
 				\begin{subfigure}[t]{.5\textwidth}
 					\centering
 					\includegraphics[width=\textwidth]{./imagens/reologia/modelos_comparativo_oldroyd}
-					\caption{Oldroyd. \(G=10, \tau_{\textrm{rel}}=10, \eta_{\infty}=2\)}
+					\caption{Oldroyd. \(G=10, \tau_{\mathrm{rel}}=10, \eta_{\infty}=2\)}
 					\label{fig:comparativo_modelo_oldroyd}
 				\end{subfigure}%	
 				\begin{subfigure}[t]{.5\textwidth}
 					\centering
 					\includegraphics[width=\textwidth]{./imagens/reologia/modelos_comparativo_jeffreys}
-					\caption{Jeffreys. \(G=10, \tau_{\textrm{rel,1}}=35, \tau_{\textrm{rel,2}}=0.1 \)}
+					\caption{Jeffreys. \(G=10, \tau_{\mathrm{rel,1}}=35, \tau_{\mathrm{rel,2}}=0.1 \)}
 					\label{fig:comparativo_modelo_jeffreys}
 				\end{subfigure}
 			
@@ -545,7 +545,7 @@
 			\label{eqn:itc_obtencao_dhmic}
 		\end{equation}  % todo: ficar de olho aqui porque tem termos que não estão em macros e precisam ser revistos quando algo mudar
 		
-		\noindent onde \(c_{\textrm{seringa}}\) é a concentração de surfactante na seringa.
+		\noindent onde \(c_{\mathrm{seringa}}\) é a concentração de surfactante na seringa.
 		
 		Pela \cmc{} é possível obter a energia livre de micelização a partir da equação \ref{eqn:itc_DeltaG_mic}, dependendo do tipo de surfactante e do meio.
 		
@@ -558,7 +558,7 @@
 			\label{eqn:itc_DeltaG_mic}
 		\end{equation}
 		
-		\noindent onde \(\alpha\) é o grau de ionização das micelas e \(\chi_{\textrm{cmc}}\) é a concentração micelar crítica em fração molar. O cálculo para surfactantes iônicos assume que o solvente é água e/ou a força iônica seja baixa.
+		\noindent onde \(\alpha\) é o grau de ionização das micelas e \(\chi_{\mathrm{cmc}}\) é a concentração micelar crítica em fração molar. O cálculo para surfactantes iônicos assume que o solvente é água e/ou a força iônica seja baixa.
 		
 		Com a entalpia e energia livre de micelização, é possível encontrar a entropia de micelização pela equação de Gibbs (Eq. \ref{eqn:itc_gibbs_para_entropia}).
 		
@@ -790,7 +790,7 @@
 				\toprule
 				           Variável & Descrição                                               \\ \midrule
 				              \(s\) & Fração volumétrica de surfactante                       \\
-				\(V_{\textit{HC}}\) & Volume molar parcial da cadeia alquílica do surfactante \\
+				\(V_{\mathrm{HC}}\) & Volume molar parcial da cadeia alquílica do surfactante \\
 				          \(V_{P}\) & Volume molar parcial da cabeça do surfactante           \\
 				          \(w_{s}\) & Fração mássica de surfactante                           \\
 				          \(M_{s}\) & Massa molar do surfactante                              \\ \midrule
@@ -828,13 +828,13 @@
 		
 		\section{Origem do fenômeno de fluorescência}
 		
-		Quando uma molécula absorve radiação no comprimento de onda adequado, um de seus elétrons passa para um nível eletrônico maior, e geralmente para um nível vibracional maior também. Porém, a temperatura ambiente geralmente não é suficiente para manter esses elétrons em níveis vibracionais altos, então eles relaxam rapidamente (\(10^{-12} s\) ou menos) para o nível vibracional fundamental do nível eletrônico excitado, um processo chamado de conversão interna. Essa conversão pode ocorrer de estados eletrônicos mais elevados também. Como essa escala de tempo é muito menor do que a de fluorescência (\(10^{-8} s\)), os elétrons excitados relaxam completamente sua energia vibracional, atingindo um estado excitado termicamente equilibrado.
+		Quando uma molécula absorve radiação no comprimento de onda adequado, um de seus elétrons passa para um nível eletrônico maior, e geralmente para um nível vibracional maior também. Porém, a temperatura ambiente geralmente não é suficiente para manter esses elétrons em níveis vibracionais altos, então eles relaxam rapidamente (\(10^{-12}\) s ou menos) para o nível vibracional fundamental do nível eletrônico excitado, um processo chamado de conversão interna. Essa conversão pode ocorrer de estados eletrônicos mais elevados também. Como essa escala de tempo é muito menor do que a de fluorescência (\(10^{-8}\) s), os elétrons excitados relaxam completamente sua energia vibracional, atingindo um estado excitado termicamente equilibrado.
 		
 		Após esse equilíbrio térmico, um elétron pode decair para o nível eletrônico fundamental, tanto para níveis vibracionais elevados ou fundamentais, emitindo um fóton de energia igual à transição. Há uma diferença das energias de absorção e de emissão devido à conversão interna e à tendência de ocorrer transições para níveis vibracionais elevados. Essa diferença de energia resulta num deslocamento no comprimento de onda dos espectros de absorção e emissão, chamado de deslocamento de Stokes.
 		
 		O fenômeno de conversão interna também implica que o espectro de emissão geralmente é independente do comprimento de onda do fóton incidido, pois o espectro de emissão ocorre sempre do estado vibracional fundamental do estado excitado. Essa regra é conhecida como lei de Kasha.
 		
-		As transições eletrônicas ocorrem numa faixa de tempo muito rápida, de cerca de \(10^{-15} s\). Esse tempo é muito rápido para que tenha ocorrido mudanças nas posições dos núcleos. Isso é conhecido como o princípio de Frank-Condon. Uma das consequências desse princípio é que a probabilidade de uma transição \(S_1 \to S_0\) é igual à probabilidade de uma transição \(S_0 \to S_1\), o que resulta em espectros de emissão e absorção espelhados. Quando o espelhamento não é observado, é possível que o espectro de absorção possua uma absorção para um segundo estado excitado \(S_2\), onde o elétron relaxa rapidamente. Logo, observa-se o somente as transições espelhadas entre os estados \(S_1\) e \(S_0\).
+		As transições eletrônicas ocorrem numa faixa de tempo muito rápida, de cerca de \(10^{-15}\) s. Esse tempo é muito rápido para que tenha ocorrido mudanças nas posições dos núcleos. Isso é conhecido como o princípio de Frank-Condon. Uma das consequências desse princípio é que a probabilidade de uma transição \(S_1 \to S_0\) é igual à probabilidade de uma transição \(S_0 \to S_1\), o que resulta em espectros de emissão e absorção espelhados. Quando o espelhamento não é observado, é possível que o espectro de absorção possua uma absorção para um segundo estado excitado \(S_2\), onde o elétron relaxa rapidamente. Logo, observa-se o somente as transições espelhadas entre os estados \(S_1\) e \(S_0\).
 			
 		As transições para os estados excitados ocorrem sem alteração do spin do elétron. Porém, caso o elétron troque de spin, no fenômeno chamado de cruzamento intersistema, o novo estado, um tripleto, não possui uma transição permitida para o estado singleto fundamental. Isso faz com que as escalas de tempo para a transição sejam muito maiores do que a fluorescência, onde a transição é permitida.
 		
@@ -844,7 +844,7 @@
 				
 		O rendimento quântico é a eficiência de emissão relativo ao número de fótons absorvidos. Quanto mais próximo de 1 for o rendimento quântico, mais intensa é a fluorescência. O tempo de vida é o tempo em que o fluoróforo permanece em seu estado excitado. Quanto maior for o tempo de vida, mais interações podem ocorrer com moléculas ao redor do fluoróforo, e mais informações podem ser obtidas.
 		
-		A fluorescência é dependente da polaridade do solvente. Isso ocorre porque, geralmente, o fluoróforo no estado excitado possui um dipolo maior do que no estado fundamental. Isso faz com que as moléculas do solvente ao redor do fluoróforo se rearranjem ao redor dele, diminuindo a energia do sistema, aumentando o deslocamento de Stokes. O rearranjo de uma molécula de solvente ocorre na ordem de 40 ps ou menos, e o rearranjo total ocorre em cerca de \(10^{-10} s\). Dependendo da polaridade do solvente, os efeitos do rearranjo podem ser maiores ou menores, resultando em deslocamentos de Stokes diferentes e espectros de emissão de fluorescência deslocados.
+		A fluorescência é dependente da polaridade do solvente. Isso ocorre porque, geralmente, o fluoróforo no estado excitado possui um dipolo maior do que no estado fundamental. Isso faz com que as moléculas do solvente ao redor do fluoróforo se rearranjem ao redor dele, diminuindo a energia do sistema, aumentando o deslocamento de Stokes. O rearranjo de uma molécula de solvente ocorre na ordem de 40 ps ou menos, e o rearranjo total ocorre em cerca de \(10^{-10}\) s. Dependendo da polaridade do solvente, os efeitos do rearranjo podem ser maiores ou menores, resultando em deslocamentos de Stokes diferentes e espectros de emissão de fluorescência deslocados.
 		
 		Na área de fluorescência existem dois métodos experimentais, a fluorescência estacionária e a fluorescência resolvida no tempo. Na fluorescência estacionária, a amostra é iluminada e observada constantemente. Como os fenômenos de fluorescência são muito rápidos, efetivamente observa-se uma média dos fenômenos que ocorreram durante a observação. Utilizando equipamentos bastante sofisticados, é possível emitir pulsos de radiação curtos e observar o decaimento da fluorescência com o tempo, em escalas de ns. Isso é conhecido como fluorescência resolvida no tempo. Neste trabalho, foi utilizado somente fluorescência estacionária e, de certo modo, uma combinação das duas técnicas, onde observou-se a variação de fluorescência em escalas de ms a minutos.
 		
@@ -1077,7 +1077,7 @@
 	% Polarizabilidade de excesso
 	% \alpha _ { 1 } ( \nu ) = 4 \pi \varepsilon _ { 0 } \varepsilon _ { 3 } ( \nu ) \left( \frac { \varepsilon _ { 1 } ( \nu ) - \varepsilon _ { 3 } ( \nu ) } { \varepsilon _ { 1 } ( \nu ) + 2 \varepsilon _ { 3 } ( \nu ) } \right) a _ { 1 } ^ { 3 }
 	\section{Coloides e atração coloidal}
-	
+	\label{sec:coloides_atracao_coloidal}
 	Coloides são sistemas onde há uma dispersão de partículas em solução, onde pelo menos uma das dimensões das partículas está na faixa de 5 nm a 100 \(\mu\)m. Coloides podem ser tanto termodinamicamente estáveis, como podem ser instáveis mas com um tempo de vida muito grande. Como exemplos de coloides temos micelas, moléculas poliméricas e emulsões. % ref Israelachvili e Colloid Science do Cosgrove
 	
 	Para calcular as interações entre duas partículas, é necessário calcular as atrações e repulsões entre todas as moléculas de uma partícula com todas as moléculas da outra partícula. Logo, as energias se tornam proporcionais ao tamanho das partículas. Evidentemente, o problema da não aditividade se torna relevante nessa situação.
@@ -1155,26 +1155,173 @@
 	
 
 	\chapter{Micelas gigantes}
+	% todo: Falar sobre os tempos de relaxação vistos por Hoffmann por birrefringência elétrica
 		\label{chap:micelas_gigantes}
-		\section{Crescimento de micelas}
-		% Falar sobre o diagrama de fases de micelas
-		% Procurar um pouco, na tese da Danila e em teses anteriores do grupo, sobre o que falar a mais de micelas
-		% todo: completar esta seção
-		As micelas crescem.
-		% Falar sobre os tempos de relaxação vistos por Hoffmann por birrefringência elétrica
+		\section{Estrutura das micelas}  % todo: rever esse nome
+		
+		Como mencionado na introdução, micelas gigantes são formadas por moléculas de surfactante. O parâmetro de empacotamento dessas moléculas pode ser alterado pela adição de mais surfactante, sais inorgânicos, sais orgânicos, ou alterações nas características do solvente, como sua temperatura e pH. % todo: por refs aqui - Citar a classificação da Cécile
+		
+		A alteração do parâmetro de empacotamento leva a mudanças na curvatura micelar, que acaba levando à formação de estruturas diferentes. A adição de sais pode também alterar a curvatura. A figura X mostra um diagrama de fase em função da concentração de surfactante e da concentração de sal.
+		
+		% todo: colocar figura do Lequeux 2007 - tese Danila
+		% todo: mencionar a concentração c*
+		
+		As micelas gigantes possuem alguns comprimentos característicos. Começando do maior, temos o comprimento de contorno, \(\bar{L}_c\), que vai de uma ponta à outra da micela. Em solução, as micelas geralmente estão enoveladas, dependendo de sua rigidez, e o tamanho desse novelo é conhecido como raio de giro, \(R_g\).  Por sua vez, a rigidez intrínseca, cujo tamanho é definido pelo comprimento de persistência \(l_p\), também está relacionada ao comprimento de Kuhn, \(b\) pela relação \(b=2l_p\). A proporção entre o comprimento de contorno e de persistência de uma micela informa o quão flexível essa micela é. Por exemplo, micelas longas e com comprimento de persistência curto são bastante flexíveis, porém micelas curtas, da mesma ordem do comprimento de contorno, se comportam como cilindros rígidos. O menor dos comprimentos o raio da seção transversal (\(r_{\mathrm{CS}}\)) , que é da ordem do raio de micelas esféricas, em torno de poucos nanômetros. A figura XXX mostra as escalas de tamanho das micelas gigantes.
+		
+		% todo: colocar algumas estimativas do comprimento de persistência
+		% todo: colocar uma figura demonstrando as escalas de tamanho
+		
+		As micelas gigantes não possuem comprimentos infinitos, logo, a existência de duas pontas é essencial para a formação das micelas. Necessariamente, o empacotamento das pontas é diferente do corpo cilíndrico, caso contrário, não possuiriam a curvatura necessária para ``fechar'' um cilindro. Como o empacotamento das pontas está diferente do empacotamento ditado pelas condições da solução, possuem uma energia maior que o corpo micelar. Se a causa principal para a mudança no parâmetro de empacotamento seja a presença de sais como NaSal, segue que a concentração de NaSal incorporado às pontas deve ser diferente do corpo micelar. % todo: colocar uma foto de uma ponta bem inchada, dos cryo-TEM da Danino.
+				
+		As moléculas de surfactante no meio se particionam nas duas regiões das micelas dependendo da energia relativa dessas duas regiões. Caso mais moléculas de surfactante se dirijam ao corpo micelar, haverá a formação de micelas mais compridas, caso contrário, haverá um número maior de micelas mais curtas. Assim, quanto maior for a energia das pontas, maior será o comprimento da micela.
+		
+		Acima da concentração de sobreposição \(\phi^*\), é possível calcular, pela teoria do campo médio, o comprimento de contorno médio \(\bar{L_c}\), relacionando-o à energia das pontas, \(E_c\) (Eq. \ref{eqn:l_contorno_neutra}). Essa teoria considera que o comprimento de persistência é muito mais comprido que o raio de seção transversal, e que o volume excluído pelas cadeias pode ser considerado pelo sistema completo, ao invés de ser tratado localmente. %ref Cates Fielding 2006
+		
+		\begin{equation}
+			\bar{L_c} \approx \phi^{\frac{1}{2}} \exp \left(\dfrac{E_c}{2k_bT}\right)
+			\label{eqn:l_contorno_neutra}
+		\end{equation} % ref Cates
+		
+		\noindent onde \(\phi\) é a fração volumétrica de surfactante. 
+		
+		Porém, a contribuição eletrostática não foi considerada. A carga na superfície micelar tende a quebrar as micelas. Isso resulta numa diminuição de sua flexibilidade, e também do comprimento total das micelas, pois a energia das pontas é contrabalanceada pela energia dessa repulsão eletrostática, denominada \(E_e\). O comprimento de contorno médio ajustado é dado pela equação \ref{eqn:l_contorno_carregada}.
+		
+		\begin{equation}
+			\bar{L_c} \approx \phi^{\frac{1}{2}} \exp \left(\dfrac{E_c - E_e}{2k_bT}\right)
+			\label{eqn:l_contorno_carregada}
+		\end{equation} % ref Magid, Mackintosh 1990
+
+		A concentração de transição na presença de efeitos eletrostáticos é dada pela equação \ref{eqn:conc_overlap_por_Ec}, que é dependente do comprimento de Bjerrum \(\lambda_B\), descrito na seção Seção \ref{sec:coloides_atracao_coloidal}.
+		
+ 		\begin{equation}
+			\phi^* = \left( \frac{k_b T \lambda_B r_{\mathrm{CS}} \nu^{*2}}{E_c} \right) ^ 2
+			\label{eqn:conc_overlap_por_Ec}
+		\end{equation} % ref Magid, Mackintosh 1990
+	
+		\noindent onde \(\nu^{*2}\) é a carga efetiva por unidade de comprimento micelar.
+		 
+		O número de agregação característico \(\bar{N}\) é dado pela equação \ref{eqn:distrib_tamanhos_micelas}.
+		
+		\begin{equation}
+			\bar{N} = 2 \phi ^{\frac{1}{2}} \exp \left[ \frac{1}{2} \left( E_c - E_e \right) \right]
+			\label{eqn:distrib_tamanhos_micelas}
+		\end{equation} % ref Mackintosh 1990
+		 
+		Porém, essas equações não consideram a formação de \emph{loops} ou de pontos de ramificação. A formação de \emph{loops} elimina a energia das pontas, em troca de perda de entropia conformacional. Pontos de ramificação, assim como as pontas de micelas, possuem um empacotamento diferente do corpo micelar, mas com a curvatura oposta. % todo: pensar em colocar um gráfico mostrando as ramificações
+		A reologia de sistemas com redes diferem fortemente das cadeias lineares. % ref Cates Fielding 2006
+		Uma característica importante dos pontos de ramificação é que eles são lábeis, isso é, podem se mover pela cadeia. Nesse caso, o comprimento de contorno \(\bar{L_c}\) não possui o mesmo significado físico. Nesse caso, \(\bar{L_c}\) denota distância até a cadeia mais próxima, ou o ponto de junção na rede. Isso ocorre porque, o sistema ramificado, em escalas de tamanho maiores que \(\bar{L_c}\), oferece uma reserva para o comprimento de contorno, que pode ser armazenado, ou emprestado, para outras cadeias da rede. % ref Cates Fielding 2006.
+		
+		\section{Comportamento reológico}
+		
+		\subsection{Reologia oscilatória}
+		
+		Caso o comprimento das micelas seja longo o suficiente, isso é, a energia de cisão for grande, as soluções micelares começam a apresentar características elásticas. Isso é facilmente observado pelo fenômeno chamado de \emph{recoil}, quando uma solução é agitada numa direção, e se observa que o fluxo inverte de sentido após algum tempo, evidência de viscoelasticidade. Essa transição ocorre acima da concentração de sobreposição \(\phi^*\), e as micelas se encontram no regime semidiluído. A separação das cadeias nesse regime é conhecido como o tamanho da rede (\emph{mesh size}), \(\xi\)., % todo: verificar se o c* é a concentração de viscoelasticidade ou de viscoelasticidade forte, e se antes ainda tem isso.
+		% todo: colocar no texto que a concentração de overlap está relacionada à fração volumétrica por \phi* = C* v_0, onde v_0 é o volume dos amfífilos.
+		% todo: \xi é igual ao comprimento de correlação?
+		Caso a concentração e o comprimento das micelas aumente, as soluções podem se tornar bastante rígidas, semelhantes a géis.
+		
+		Quando essa rede de micelas é submetida a uma tensão, processos de relaxação começam a ocorrer no material. Micelas gigantes possuem, essencialmente, dois processos de relaxação de tensão, a reptação, presente também em polímeros, e a quebra e recombinação, oriunda de sua natureza autoassociativa. Nos modelos mais simples, o decaimento da tensão (\(\mu(t)\)) é exponencial, com um tempo de decaimento característico (\(\tau_{\mathrm{rel}}\)), que é modulado por \(G_0\). Essas relações estão expostas nas equações \ref{eqn:decaimento_stress} e \ref{eqn:decaimento_G_t}.
+		
+		\begin{equation}
+			\mu(t)  \approx \exp \left(  \frac{-t}{\tau_{\mathrm{rel}}} \right)
+			\label{eqn:decaimento_stress}
+		\end{equation} % ref Berret 1993
+		
+		\begin{equation}
+			G(t) \equiv G_0 \mu(t)	
+			\label{eqn:decaimento_G_t}
+		\end{equation} % ref Cates 1990
+		
+		A reptação é o movimento da cadeia através de um tubo formado pelos pontos de contato com cadeias vizinhas. Quando a micela alongada sai do tubo inicial, por movimentos em ambos os sentidos, seu processo de reptação terminou.
+		
+		% todo: colocar figura da reptação
+		
+		O tempo de reptação é, claramente, dependente do comprimento da cadeia, e pode ser estimado pela equação \ref{eqn:tau_rep_comprimento_contorno}.
+		
+		\begin{equation}
+			\tau_\mathrm{rep} \simeq \frac{\bar{L_c}^2}{D_c}
+			\label{eqn:tau_rep_comprimento_contorno}
+		\end{equation} % ref Cates 1990
+		
+		\noindent onde \(D_c\) é a constante de difusão curvilinear da cadeia dentro do tubo.
+		
+		Já o tempo que a micela demora para quebrar é dependente de seu comprimento e de uma constante de velocidade dessa ``reação'', \(k_\mathrm{cis}\). A teoria do campo médio assume que é improvável que essa recombinação ocorra entre as mesmas cadeias que se quebraram. Além disso, é estimado que o tempo para a recombinação é o mesmo que para a quebra.
+		
+		\begin{equation}
+			\tau_{\mathrm{quebra}} = \left(k_\mathrm{quebra}\bar{L_c}\right)^{-1}
+			\label{eqn:tempo_quebra_comp_contorno}
+		\end{equation} % ref Cates 1990
+		
+		Por último, o módulo no platô é dependente da quantidade de pontos de contato das micelas, que, por sua vez, é dependente da fração volumétrica de surfactante, \ref{eqn:scaling_g0}.
+		
+		\begin{equation}
+			G_0 \sim \phi^{2{,}3}  
+			\label{eqn:scaling_g0}
+		\end{equation} % ref Cates 1990
+		
+		Dois tempos de relaxação com magnitudes semelhantes resultaria em um decaimento diferente do monoexponencial. Porém, se a magnitude do tempo de quebra e recombinação for muito menor (mais rápido) do que o tempo de reptação, \( \tau_{\mathrm{quebra}} \ll \tau_\mathrm{rep} \), o tempo de relaxação total se reduz à média geométrica dos dois tempos (Eq. \ref{eqn:tau_rel_dois_taus}). Quando uma solução de micelas gigantes segue essa consideração, o modelo de Maxwell também pode ser aplicado para descrever seu comportamento reológico.  % ref Berret 1993
+		
+		\begin{equation}
+			\tau_{\mathrm{rel}} \simeq \left( \tau_\mathrm{rep} \tau_\mathrm{quebra} \right) ^ \frac{1}{2}
+			\label{eqn:tau_rel_dois_taus}
+		\end{equation}
+		
+		Neste trabalho, serão apresentados regimes que tanto seguem quanto não seguem essa consideração. Há duas maneiras de se determinar isso. Uma é pelo ajuste do modelo de Maxwell. Quanto melhor for o ajuste, mais correta é a consideração da equação \ref{eqn:tau_rel_dois_taus}. Outra maneira é pelos gráficos de Cole-Cole, onde G'' é plotado em função de G'. Caso haja somente um tempo de relaxação, será observado um semicírculo perfeito, de acordo com a equação \ref{eqn:cole_cole}. Esse tipo de gráfico por ser normalizado por \(G_0\), reduzindo a escala dos valores dos eixos e facilitando a comparação entre curvas diferentes.
+		
+		\begin{equation}
+			\left(G' - \frac{G_0}{2}\right)^2 + G''^2 = \frac{G_0^2}{4}
+			\label{eqn:cole_cole}
+		\end{equation}
+
+		% todo: colocar um Cole-Cole aqui, de preferência o do Berret, que possui boas regiões de freq. altas
+		
+		Diagramas de Cole-Cole ajudam a identificar a região onde outros mecanismos de relaxação começam a operar. Um desses modos é chamado de ``respiração'' das cadeias (\emph{breathing motions}), onde flutuações no comprimento do tubo ocorrem, ao invés da reptação completa das cadeias. Além disso, pode ocorrer a movimentação de Rouse, conhecida da área de polímeros. % ref Granek Cates 1992
+		A região onde esses modos começam a se tornar relevantes é observada no final do diagrama de Cole-Cole, quando, ao invés de permanecer no semicírculo, a curva começa a subir. No reograma (G' e G'' por \(\omega\)), isso é observado quando G'' atinge um valor mínimo e começa a subir, sendo que o modelo de Maxwell prevê somente sua queda.
+		
+		Nesse ponto, a diferença na altura entre o módulo no platô e o ponto onde G'' começa a subir é proporcional ao comprimento da cadeia entre dois pontos de entrelaçamento e ao comprimento das micelas, Eq. \ref{eqn:mesh_contorno_por_reologia}.
+		
+		\begin{equation}
+			\frac{G''_\mathrm{min}}{G'_\infty} \sim \frac{l_e}{\bar{L_c}}
+			\label{eqn:mesh_contorno_por_reologia}
+		\end{equation} % ref Berret 1993
+
+		\noindent onde \(G'_\infty\) é o módulo no platô extrapolado para a frequência onde ocorre o mínimo de G''.
+		
+		O valor de \(l_e\) é proporcional ao tamanho da rede polimérica \(xi\) e ao comprimento de persistência.
+		
+		\begin{equation}
+			l_e \sim \xi^{\sfrac{5}{3}} l_p^{\sfrac{-2}{3}}
+			\label{eqn:mesh_comprimento_entrelacamento}
+		\end{equation} % ref Berret 1993
+		
+		E por sua vez, o tamanho da rede é dependente de \(G'_\infty\), que é igual a \(G_0\), que, por sua vez, é dependente de \(\phi\).
+		
+		\begin{equation}
+			\xi \sim \left(  \frac{k_bT}{G'_\infty} \right) ^ \frac{1}{3}
+		\end{equation} % ref Berret 1993
+		
+		O reograma para soluções de micelas gigantes que seguem o modelo de Maxwell é bastante similar ao apresentado na figura \ref{fig:modelo_maxwell}. Neste trabalho, várias soluções seguiram esse modelo, como será visto na seção \ref{sec:reologia_oscilatoria_experimental_agua}. Uma interpretação física para o reograma é a seguinte. % todo: falar dos dois modelos, do deslizamento, etc
+		
+		% mencionar que o modelo de Oldroyd B é a extensão mais natural a sistemas quase Maxwellianos.
+		
+		\section{Curvas de fluxo e a dependência da concentração de NaSal na viscosidade no repouso}
+		
+		Soluções de micelas gigantes, quando submetidas à uma taxa de cisalhamento crescentes, começam a se alinhar ao fluxo, diminuindo a viscosidade aparente da solução. Isso as caracteriza como fluidos pseudoplásticos. Quando a taxa de cisalhamento é baixa, a viscosidade não se altera, e pode-se obter uma grandeza conhecida como viscosidade no repouso \(\eta_0\) por uma variedade de técnicas (seção \ref{sec:teoria_fluidos_NN}).
+		
+		% achar a correlação entre viscosidade e G0 e tr
+		% Falar sobre as várias estruturas que elas possuem, e como a concentração de salicilato afeta as estruturas
+		% Falar sobre os sticky contacts que o Hoffmann tanto gosta.
+		% Falar do diagrama de viscosidade no repouso (RH).
+		% falar sobre shear thinning
+
+		
 		\section{Termodinâmica de micelas}
 		% Falar sobre a energia das pontas. Pesquisar sobre o que falar.
 		% Fazer uma breve introdução sobre ITC e o que se observa.
 		% Falar sobre o ITC e como ele consegue enxergar os processos de micelização
 		% todo: fazer esta parte
 		As micelas tem pontas com energia superior.
-		\section{Comportamento reológico}
-		% Falar sobre como identificar visualmente micelas gigantes, como o recoil
-		% Falar sobre as várias estruturas que elas possuem, e como a concentração de salicilato afeta as estruturas
-		% Falar sobre as G', G'' e o modelo de Maxwell.
-		% Falar sobre o tempo de relaxação micelar.
-		% Falar sobre os sticky contacts que o Hoffmann tanto gosta.
-		% Falar do diagrama de viscosidade no repouso (RH).
+
 		\section{Comportamento calorimétrico}
 		
 		%		Para micelas gigantes, fixa-se uma concentração de aditivo e depois surfactante é titulado. O padrão da curva de $\Delta H \times C_{\textrm{surf}}$ é bastante característico. No início há muito NaSal e pouco TTAB, e ocorre a formação de micelas esféricas com NaSal. À medida que mais NaSal é incorporado, são formadas micelas mistas cilíndricas curtas . Numa determinada concentração, ocorre uma queda bastante brusca no valor de $\Delta H$, devido à fusão de várias micelas cilíndricas, formando micelas gigantes. A diferença de entalpia entre os estados final e inicial dessa queda brusca caracteriza $\Delta H_{\textrm{WLM}}$. A concentração no ponto mínimo caracteriza $c_{\textrm{WLM}}$%\cite{Ito2016}.
@@ -1187,12 +1334,3 @@
 		% Falar sobre a hidrofilicidade da superfície micelar, o t3 de relaxação e a relação com os perfis de viscosidade.
 		
 		
-%	\chapter{Análise Multivariada}
-%		\section{Técnicas de classificação}
-%			\subsection{Normalização dos dados}
-%			\subsection{PCA}
-%			\subsection{HCA}
-%		\section{Técnicas de regressão}
-%			\subsection{Regressão Multivariada}
-%			\subsection{PCR}
-%			\subsection{PLS}

@@ -1,17 +1,17 @@
-	
-%\part{Projetos menores}
-%	\chapter{Estudo sobre regiões Maxwellianas nos perfis de viscosidade}
-%	\chapter{Comparação de ITC de MG em dois sentidos opostos}
-	
 \part{Contribuições para outros projetos}
 
 	\chapter{Breve descrição sobre o projeto de fibrose cística}
 
-	Durante a execução do projeto de doutorado, foi estabelecida uma parceria com uma aluna de doutorado da Faculdade de Ciências Médicas na Unicamp, Carla Cristina S. Gomez, através do Professor Francisco Benedito Pessine, do Instituto de Química da Unicamp, para a análise de amostras de muco de pacientes com fibrose cística. Foram realizadas medidas de curva de fluxo e da reologia oscilatória de amostras de muco de pacientes com a doença genética chamada fibrose cística. Essa doença afeta X\% da população, sendo mais prevalente entre os grupos A e B (X\%) do que outros.
+	Durante a execução do projeto de doutorado, foi estabelecida uma parceria com uma aluna de doutorado da Faculdade de Ciências Médicas na Unicamp, Carla Cristina S. Gomez, através do Professor Francisco Benedito Pessine, do Instituto de Química da Unicamp, para a análise de amostras de muco de pacientes com fibrose cística. Nesta seção, uma pequena descrição sobre o projeto será apresentada, a contribuição do aluno será realçada, e os resultados do projeto serão mencionados.
 	
-	Essa doença possui vários níveis de gravidade, e afeta bastante negativamente o desenvolvimento corporal. Geralmente, os pacientes possuem pequena estatura e baixo peso, pela dificuldade do corpo de absorver alimentos, e pelos problemas respiratórios. Bastante escarro é produzido pelos pulmões, que não é liberado corretamente, sendo então expelido como escarro, após tosse, o que também acaba ferindo o pulmão. Infecções bacterianas são frequentes nos pacientes de fibrose cística. Os casos mais graves necessitam de transplante pulmonar para conseguir sobreviver.
+	Uma alteração genética no gene que controla a produção da proteína CFTR (Cystic Fibrosis Transmembrane Conductante Regulator), pode causar uma disfunção do transporte de íons cloreto. Essa alteração genética resulta numa série de problemas corporais, e essa doença é conhecida de forma geral como fibrose cística. % todo: procurar a incidência dessa doença
 	
-	Trabalhos anteriores observaram que na fibrose cística, há um problema nas enzimas/proteínas XYZ, que controlam os processos de transporte de ABC. Logo, imaginou-se que a reinserção do íon bicarbonato poderia aliviar os sintomas respiratórios. Isso foi realizado com a inalação de amostras de bicarbonato de sódio. Foram coletadas amostras antes da inalação, e após a inalação de bicarbonato, a cada 30 minutos. Cada paciente retornava para casa, continuava a inalação, e retornava para acompanhamento, e mais coleta de muco, a cada semana. As amostras de muco eram coletadas em tubos Falcon, o pH era medido, e depois eram mantidas refrigeradas, de modo a impedir a proliferação de bactérias. Entre 24-48h após a coleta, as amostras eram analisadas no reômetro.
+	Além de afetar o transporte de cloreto, recentemente foi notado que a secreção de bicarbonato na superfície das vias aéreas é bloqueada. Isso resulta em mais íons cálcio livres e uma capacidade tamponante enfraquecida. As mucinas, componentes do muco, secretadas para lubrificar o epitélio e servir como barreira contra patógenos, são afetadas pelo excesso de Ca2+ e pelo pH baixo. Ocorre sua desidratação, tornando o muco mais espesso, comprometendo sua função de lubrificação. Além disso, o pH baixo leva a uma promoção do crescimento de bactérias, acarretando na formação de biofilme e alteração da resposta imunológica.
+	
+	A principal causa de mortalidade da fibrose cística é a deterioração da função pulmonar através da inflamação e infecção das vias aéreas. Logo, se os sintomas causados pela fibrose cística no pulmão forem eficientemente combatidos, haveria uma melhoria tanto na qualidade quanto na expectativa de vida dos pacientes. Poucos estudos testaram o efeito do bicarbonato nas vias aéreas, porém observou-se que o bicarbonato possui efeitos positivos. Esses são, redução da viscosidade do muco, melhorando a lubrificação, diminuição das feridas causadas pela tosse, e remoção de detritos dos pulmões, além de aumento o pH, diminuindo a proliferação bacteriana. Logo, um estudo para verificar se essas alterações no muco pela inalação de bicarbonato afetariam positivamente os pacientes, e se a inalação em si é tolerável, é importante. Este é o primeiro estudo \emph{in vivo} dessa natureza.
+	
+	Uma série de 19 voluntários com fibrose cística participaram do estudo, porém 7 descontinuaram. Eles foram dosados com soluções 4,2\% e 8,4\% de NaHCO3 diluído em água destilada, por inalação, e depois de duas triagens, recebiam o produto para realizar a inalação domiciliarmente. Após isso, retornavam ao centro de pesquisa para escarrar, a cada meia hora, e o muco era coletado e depois analisado. Primeiramente o pH era medido, e depois as amostras eram enviadas para serem analisadas no instituto de química. Os parâmetros das análises foram determinados pelo autor da tese, e aproximadamente metade das amostras foram analisadas pelo mesmo (cerca de 250). As amostras restantes foram analisadas pela aluna Carla Gomez. Após isso, os resultados foram tratados, e o processo de tratamento de dados será descrito nesta parte.
+
 
 	\chapter{Contribuições ao projeto}
 	
@@ -19,14 +19,13 @@
 	
 		\section{Determinação dos parâmetros de análise}
 		
-		Foram analisadas algumas amostras inicialmente para se determinar a faixa necessária ... % todo: terminar
+		Foram analisadas algumas amostras inicialmente para se determinar as faixas de varredura para os estudos reológicos. Primeiramente, a faixa linear de tensão foi determinada com uma varredura de 0,01 Pa a 0,75 Pa, a 1 Hz. Após isso, a varredura oscilatória de frequência foi medida, geralmente com tensões de 0,5 Pa, entre 0,1 Hz a 5 Hz. As curvas de fluxo foram medidas entre 0,01 a 1 s\menosUm.
 	
 		\section{Criação de um software para tratamento de curvas de fluxo}
 		\label{sec:apn_tratamento_CF}
-		Para o tratamento de dados de curva de fluxo, foi criado um programa que permite o usuário aplicar três modelos mais complexos e um modelo simplificado para a obtenção de valores de viscosidade no repouso. Todas as amostras de muco, sem exceção, demonstraram ser pseudoplásticas, então não foram colocados mais modelos. A seguir, será mostrado os modelos utilizados e seções da lógica do programa, pois o código fonte inteiro é longo demais para ser incluido aqui (aproximadamente 1000 linhas).
+		Para o tratamento de dados de curva de fluxo, foi criado um programa que permite o usuário aplicar três modelos mais complexos e um modelo simplificado para a obtenção de valores de viscosidade no repouso. Todas as amostras de muco, sem exceção, demonstraram ser pseudoplásticas, então não foram colocados mais modelos. A seguir, será mostrado os modelos utilizados e seções da lógica do programa, pois o código fonte inteiro é longo demais para ser incluído aqui (aproximadamente 1000 linhas).
 		
 			\subsection{Modelos de curvas de fluxo pseudoplásticas}
-			
 		\label{sec:modelagem_curva_fluxo}
 		Foram implementados os modelos de \emph{Carreau-Yasuda} (Eq \ref{eqn:AP_CarreauYasuda}), \emph{Carreau} (Eq. \ref{eqn:AP_Carreau}), \emph{Cross} (Eq. \ref{eqn:AP_Cross}) e \emph{linear}, de maior para menor complexidade, respectivamente. Os modelos correlacionam a taxa de cisalhamento (\(\dot{\gamma}\), variável independente) à viscosidade (\(\eta\), variável dependente) utilizando alguns parâmetros.
 		
@@ -145,7 +144,7 @@
 			\item Os parâmetros dos ajustes que passaram pelo filtro de \(R^2\) são gravados em um arquivo \texttt{csv}. Além disso, são gravados a média dos valores de G' e G'' da região linear, o desvio dessa média, o valor de \(R^2\), os índices dos pontos utilizados para o ajuste e o valor de G' e G'' em 0,6813Hz. Esses parâmetros foram escolhidos com base em alguns artigos da literatura. % todo: ref?
 		\end{enumerate}
 		
-		Cerca de 500 dados experimentais únicos são tratados e plotados em cerca de 3 minutos, mostrando novamente o ganho enorme de eficiência com métodos computacionais. Após análise estatística, observou-se uma variação significativa em um dos conjuntos de dados. Porém devido à enorme variabilidade das amostras, houve pouca relevância estatística no resto do conjunto de dados. Contudo, os pacientes revelaram uma melhora física após o tratamento estabelecido, mostrando que de fato o tratamento foi eficiente. Mais informações sobre esse projeto podem ser encontrados na tese da aluna. O código fonte da parte de tratamento de dados está nas listagens \ref{lst:extracao_muco1} -- \ref{lst:extracao_muco6}. % todo: colocar uma referência pra tese dela.
+		Cerca de 500 dados experimentais únicos são tratados e plotados em cerca de 3 minutos, mostrando novamente o ganho enorme de eficiência com métodos computacionais. O código fonte da parte de tratamento de dados está nas listagens \ref{lst:extracao_muco1} -- \ref{lst:extracao_muco6}.
 		
 		\begin{listing}[H]
 			\inputminted{python}{./python/extracao_muco1.py}
@@ -185,11 +184,11 @@
 		
 		\chapter{Resultado da colaboração}
 		
-		OsObservou-se mudanças significativas na reologia oscilatória, mas não nas curvas de fluxo. Observou-se bastante correlação com a variação do pH. Além disso, todos os pacientes reportaram se sentir melhor após o tratamento, a taxa de infecção bacteriana diminuiu, devido ao aumento do pH, e alguns pacientes saíram da fila de transplante. Esse é o primeiro estudo em humanos realizado com bicarbonato, demonstrando a potencialidade da técnica para a melhoria do estado de pacientes com fibrose cística.
+		A muco é bastante heterogêneo, dependendo da concentração de diversas espécies, como eletrólitos e pH, e também possui regiões com maior concentração de saliva. A parte mais líquida era removida durante a análise no reômetro pelo simples ato de colocar a geometria na superfície da amostra. A secagem da amostra poderia descaracterizá-la, invalidando os resultados. Além disso, cada coleta de muco fornece o muco de regiões diferentes do pulmão, levando a uma variabilidade natural alta.
 		
-		Um artigo foi escrito, que será publicado na XYZ % todo: colocar o nome da revista
+		Essa alta variabilidade tornou a análise estatística dos dados muito difícil, então consultores externos foram utilizados. Notou-se que não houve variação significativa da viscosidade, utilizando qualquer um dos três modelos complexos e o ajuste linear.  Porém, houve correlação entre os valores de G', G'' e G\(^*\) à medida que o tratamento ocorria. De todas os fatores estudados, o pH mais fortemente se correlacionou ao tratamento, o que acabou resultando numa diminuição nos casos de infecção entre os pacientes.
 		
+		Porém, a parte mais relevante é a qualidade de vida dos pacientes. Todos demonstraram melhora, inclusive alguns pacientes saíram da fila de transplante por terem melhorado significativamente. No total, o estudo foi muito bem sucedido, e estudos de continuação serão realizados utilizando, também, reologia, continuando a colaboração entre os dois laboratórios.
 		
-%	\chapter{Previsão de temperaturas de fusão de triacilglicerídeos}
-%		\section{Breve descrição}
-%		\section{Contribuição}
+		Um artigo foi escrito, que será publicado em breve em revista de alto impacto da área. % todo: colocar o nome da revista.
+		

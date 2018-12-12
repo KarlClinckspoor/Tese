@@ -23,7 +23,7 @@ Porém, essa descrição matemática é de menor aplicabilidade, pois é necess�
 O modelo descreve cadeias alongadas caroço-casca (\emph{core-shell}) de Kratky-Porod, considerando volume excluído, com interações intercadeias modeladas pelo modelo PRISM (\emph{Polymer Reference Interaction Site Model}). No total, a equação de intensidade de espalhamento \(I\) em função do vetor de espalhamento \q (\(I(q)\), Eq. \ref{eqn:AP_saxs_MG_superficial}) possui 13 parâmetros, descritos na tabela \ref{tab_ap:simbolos}.
 
 \begin{equation}
-I = f(q, scale, d_{head}, r_{core}, \rho_{rel}, \sigma, back, L, k_L, \varepsilon, D_{CQ}, \nu_{RPA}, SC_{pow}, exp_{pow})
+I = f(q, \mathrm{scale}, d_{\mathrm{head}}, r_{\mathrm{core}}, \rho_{\mathrm{rel}}, \sigma, \mathrm{back}, L, k_L, \varepsilon, D_{\mathrm{CQ}}, \nu_{\mathrm{RPA}}, \mathrm{SC}_{\mathrm{pow}}, \mathrm{exp}_{\mathrm{pow}})
 \label{eqn:AP_saxs_MG_superficial}
 \end{equation}
 % TODO: colocar refs às equações que definem alguns desses termos
@@ -37,19 +37,19 @@ I = f(q, scale, d_{head}, r_{core}, \rho_{rel}, \sigma, back, L, k_L, \varepsilo
      Símbolo 			    & Descrição        						\\    \midrule
      \(I\)					& Intensidade de RX espalhado			\\
      \q					    & Vetor de espalhamento					\\    \midrule
-     \(scale\)				& Fator de escala						\\
-     \(d_{head}\)			& Espessura do \emph{shell}				\\
-     \(r_{core}\)			& Raio do \emph{core}					\\
-     \(\rho_{rel}\)		    & Diferença de densidade eletrônica entre \emph{core} e \emph{shell} \\
+     \(\mathrm{scale}\)				& Fator de escala						\\
+     \(d_{\mathrm{head}}\)			& Espessura do \emph{shell}				\\
+     \(r_{\mathrm{core}}\)			& Raio do \emph{core}					\\
+     \(\rho_{\mathrm{rel}}\)		    & Diferença de densidade eletrônica entre \emph{core} e \emph{shell} \\
      \(\sigma\)			    & Fator de \emph{smearing}, o quão definido é o limite entre regiões \\
-     \(back\)				& Constante referente ao \emph{background} \\
+     \(\mathrm{back}\)				& Constante referente ao \emph{background} \\
      \(L\)					& Comprimento de contorno das cadeias 	\\
      \(k_L\)				& Comprimento de \emph{Kuhn} das cadeias, igual ao dobro do comprimento de correlação \\ % TODO: Achar o que é esse comprimento exatamente
      \(\varepsilon\)		& Excentricidade radial das micelas		\\
-     \(D_{CQ}\)			    & Distância de correlação das micelas 	\\
-     \(\nu_{RPA}\)			& Fator de concentração					\\ \midrule
-     \(SC_{pow}\)			& Fator de escala (pre-exponencial) da exponencial em baixo q\\
-     \(exp_{pow}\)			& Fator exponencial, relativo à inclinação na escala log\\ \bottomrule
+     \(D_{\mathrm{CQ}}\)			    & Distância de correlação das micelas 	\\
+     \(\nu_{\mathrm{RPA}}\)			& Fator de concentração					\\ \midrule
+     \(\mathrm{SC}_{\mathrm{pow}}\)			& Fator de escala (pre-exponencial) da exponencial em baixo q\\
+     \(\mathrm{exp}_{\mathrm{pow}}\)			& Fator exponencial, relativo à inclinação na escala log\\ \bottomrule
     \end{tabular}}%
     {}%
 \end{table}
@@ -57,7 +57,7 @@ I = f(q, scale, d_{head}, r_{core}, \rho_{rel}, \sigma, back, L, k_L, \varepsilo
 A equação geral do modelo, e a descrição de seus fatores, estão descritos na Eq.\ref{eqn:AP_saxs_MG_geral} e na Tab. \ref{tab_ap:fatores_geral}.
 
 \begin{equation}
-I = \frac{scale\left(F_{KPchain_{ExV}}F_{rod_{CS}}\right)}{1 + \nu_{RPA} F_{sphere}\left( D_{CQ}\right) F_{KPchain_{ExV}}} + back + scale_{pow}^{-exp_{pow}}
+I = \frac{\mathrm{scale}\left(F_{\mathrm{KPchain}_{\mathrm{ExV}}}F_{\mathrm{rod}_{\mathrm{CS}}}\right)}{1 + \nu_{\mathrm{RPA}} F_{\mathrm{sphere}}\left( D_{\mathrm{CQ}}\right) F_{\mathrm{KPchain}_{\mathrm{ExV}}}} + \mathrm{back} + \mathrm{SC}_{\mathrm{pow}}^{-\mathrm{exp}_{\mathrm{pow}}}
 \label{eqn:AP_saxs_MG_geral}
 \end{equation}
 
@@ -69,9 +69,9 @@ I = \frac{scale\left(F_{KPchain_{ExV}}F_{rod_{CS}}\right)}{1 + \nu_{RPA} F_{sphe
     \toprule
     Termo 			& Descrição        						\\
     \midrule
-    \(F_{KPchain_{ExV}}\)  & Fator forma de cadeias de Kratky-Porod com volume excluído \\
-    \(F_{rod_{CS}}\)		 & Fator forma da seção transversão de um bastão	\\
-    \(F_{sphere}(D_{CQ})\) & Fator forma de uma esfera, cujo raio é a distância de correlação \\
+    \(F_{\mathrm{KPchain}_{\mathrm{ExV}}}\)  & Fator forma de cadeias de Kratky-Porod com volume excluído \\
+    \(F_{\mathrm{rod}_{\mathrm{CS}}}\)		 & Fator forma da seção transversão de um bastão	\\
+    \(F_{\mathrm{sphere}}(D_{\mathrm{CQ}})\) & Fator forma de uma esfera, cujo raio é a distância de correlação \\
     \bottomrule%
     \end{tabular}}
     {}%
@@ -81,7 +81,7 @@ I = \frac{scale\left(F_{KPchain_{ExV}}F_{rod_{CS}}\right)}{1 + \nu_{RPA} F_{sphe
 Já o modelo do PRISM é descrito pela Eq. \ref{eqn:AP_saxs_PRISM}. Note a similaridade com a Eq \ref{eqn:AP_saxs_MG_geral}.
 
 \begin{equation}
-I_{PRISM}= \frac{\varphi V_{mic}F_{wc}(q)F_{cs}(q)}{1 + \nu F_{rod}(qL_{c(q)})F_{wc}(q)}
+I_{\mathrm{PRISM}}= \frac{\varphi V_{\mathrm{mic}}F_{\mathrm{wc}}(q)F_{\mathrm{cs}}(q)}{1 + \nu F_{\mathrm{rod}}(qL_{c(q)})F_{\mathrm{wc}}(q)}
 \label{eqn:AP_saxs_PRISM}
 \end{equation}
 
@@ -95,12 +95,12 @@ I_{PRISM}= \frac{\varphi V_{mic}F_{wc}(q)F_{cs}(q)}{1 + \nu F_{rod}(qL_{c(q)})F_
      Termo 			& Descrição        						\\
      \midrule
      \(\varphi\)		& Fração volumétrica \\ % TODO: checar
-     \(V_{mic}\)		& Volume da micela   \\
-     \(F_{wc}\)		& Fator forma de uma \emph{wormlike chain} \\
-     \(F_{cs}\)		& Fator forma de uma seção transversal de cilindro \\ % TODO: checar se é cilindro
-     \(F_{rod}\)		& Fator forma de um bastão infinitamente longo \\
+     \(V_{\mathrm{mic}}\)		& Volume da micela   \\
+     \(F_{\mathrm{wc}}\)		& Fator forma de uma \emph{wormlike chain} \\
+     \(F_{\mathrm{cs}}\)		& Fator forma de uma seção transversal de cilindro \\ % TODO: checar se é cilindro
+     \(F_{\mathrm{rod}}\)		& Fator forma de um bastão infinitamente longo \\
      \(L_{c(q)}\)		& \(=6\xi\), comprimento característico \\
-     \(\xi\)			& Comprimento de correlação da função \(c(q) \approx F_{rod}\) \\
+     \(\xi\)			& Comprimento de correlação da função \(c(q) \approx F_{\mathrm{rod}}\) \\
      \bottomrule
      \end{tabular}}%
      {}%
@@ -113,11 +113,11 @@ A partir disso, podemos começar a adentrar nos termos.
 
 O modelo será dividido em duas partes, uma referente à cadeia micelar, \(F_{wc}\) e outra referente à seção transversal da cadeia, \(F_{cs}\).
 
-\subsection{Fator forma das cadeias \emph{wormlike}, \(F_{wc}\)}
+\subsection{Fator forma das cadeias \emph{wormlike}, \(F_{\mathrm{wc}}\)}
 \label{sec:equacoes_Fwc}
 
 \begin{equation}
-F_{wc} = \left[\left(1 - \chi\right)F_{chain_{ExV}} + \chi F_{rod}\right]\Gamma
+F_{\mathrm{wc}} = \left[\left(1 - \chi\right)F_{\mathrm{chain}_{\mathrm{ExV}}} + \chi F_{\mathrm{rod}}\right]\Gamma
 \label{eqn:AP_Fwc}
 \end{equation}
 
@@ -125,10 +125,10 @@ F_{wc} = \left[\left(1 - \chi\right)F_{chain_{ExV}} + \chi F_{rod}\right]\Gamma
 A equação \ref{eqn:AP_Fwc} pode ser simplificada dependendo da faixa de \q. A região de \q intermediária precisa ser descrita pelo termo \(\chi\) (Eq. \ref{eqn:AP_chi}) e corrigida por \(\Gamma\). Esses parâmetros são obtidos por simulações de Monte Carlo.
 
 \begin{equation}
-	F_{\text{wc}} \approx 
+	F_\mathrm{wc} \approx 
 		\begin{cases}
-			F_{\text{chain}_{\text{ExV}}}		& \text{q baixo}  \\
-			F_{\text{rod}}						& \text{q alto}
+			F_{\mathrm{chain}_\mathrm{ExV}}		& \mathrm{q baixo}  \\
+			F_\mathrm{rod}						& \mathrm{q alto}
 		\end{cases}
 	\label{eqn:AP_Fwc_dois_casos}
 \end{equation}
@@ -154,28 +154,28 @@ O termo \(\chi\) é descrito pela equação \ref{eqn:AP_chi}, que por sua vez é
 
 % todo: achar o significado do termo b
 \begin{equation}
-\xi = q k_L\left(\frac{\pi b}{1,103L}\right)^{3/2}\left(\frac{\left<R_g^2\right>}{k_L^2}\right)^{1,282}
+\xi = q k_L\left(\frac{\pi b}{1{,}103L}\right)^{3/2}\left(\frac{\left<R_g^2\right>}{k_L^2}\right)^{1{,}282}
 \label{eqn:AP_xi}
 \end{equation}
 
 \noindent onde \(\left<R_g^2\right>\) é a média do \emph{ensemble} do quadrado do raio de giro das cadeias, no modelo.
 
-\subsubsection{Fator forma de cadeias com volume excluído, \(F_{chain_{ExV}}\)}
+\subsubsection{Fator forma de cadeias com volume excluído, \(F_{\mathrm{chain}_{\mathrm{ExV}}}\)}
 \label{sec:F_chain_ExV_equacoes}
-O termo \(F_{chain_{ExV}}\) possui a seguinte forma (Eq. \ref{eqn:AP_FchainExV})
+O termo \(F_{\mathrm{chain}_{\mathrm{ExV}}}\) possui a seguinte forma (Eq. \ref{eqn:AP_FchainExV})
 
 % TODO: verificar se o \nu aqui é o \nu_RPA
 \begin{multline}
-F_{chain_{ExV}} = w(qR_g)F_{Debye}(q,L,k_L) + \left[1 - w(q R_g)\right] \\ \left[C_1(q R_g)^{\frac{1}{\nu}} + C_2(q R_g)^{-\frac{2}{\nu}} + 
+F_{\mathrm{chain}_{\mathrm{ExV}}} = w(qR_g)F_{\mathrm{Debye}}(q,L,k_L) + \left[1 - w(q R_g)\right] \\ \left[C_1(q R_g)^{\frac{1}{\nu}} + C_2(q R_g)^{-\frac{2}{\nu}} + 
 C_3(q R_g)^{-\frac{3}{\nu}}\right]
 \label{eqn:AP_FchainExV}
 \end{multline}
 % todo: colocar o valor de \nu, que está na Eq. S_EXV_APP
 % todo: incluir aqui uma tabela com os termos e as equações
 
-O termo \(F_{Debye}\), por sua vez, é dado pela Eq. \ref{eqn:AP_fdebye}.
+O termo \(F_{\mathrm{Debye}}\), por sua vez, é dado pela Eq. \ref{eqn:AP_fdebye}.
 \begin{equation}
-F_{Debye} = 2 \left(\frac{e^{-u} + u - 1}{u^2}\right)
+F_{\mathrm{Debye}} = 2 \left(\frac{e^{-u} + u - 1}{u^2}\right)
 \label{eqn:AP_fdebye}
 \end{equation}
 
@@ -256,29 +256,29 @@ B_{i} = \sum_{j = 0}^{2}{b_{1}\left( i,j \right)\left( \frac{L}{k_{L}} \right)^{
     {}%
 \end{table}
 
-\subsubsection{Fator forma de um cilindro \(F_{rod}\)}
+\subsubsection{Fator forma de um cilindro \(F_{\mathrm{rod}}\)}
 
 O fator forma de um cilindro segue a equação \ref{eqn:AP_Frod}.
 
 \begin{equation}
-F_{rod}(q, L) = \frac{2Si(qL)}{qL} - \frac{4\sin^2\frac{qL}{2}}{q^2L^2}
+F_{\mathrm{rod}}(q, L) = \frac{2\mathrm{Si}(qL)}{qL} - \frac{4\sin^2\frac{qL}{2}}{q^2L^2}
 \label{eqn:AP_Frod}
 \end{equation}
 
-\noindent onde \(Si\) é a função-integral de seno (Eq. \ref{eqn:AP_Si})
+\noindent onde \(\mathrm{Si}\) é a função-integral de seno (Eq. \ref{eqn:AP_Si})
 
 \begin{equation}
-Si(x) = \int_0^x \frac{\sin (t)}{t}dt
+\mathrm{Si}(x) = \int_0^x \frac{\sin (t)}{t}dt
 \label{eqn:AP_Si}
 \end{equation}
 
 % TODO: verificar se F_CS é de fator da seção de um cilindro. CS é cross section mesmo.
-\subsection{Fator forma da seção transversal de um cilindro \(F_{cs}\)}
+\subsection{Fator forma da seção transversal de um cilindro \(F_{\mathrm{cs}}\)}
 
 O fator forma da seção transversal de um cilindro é descrito pela equação \ref{eqn:AP_Fcs}. Seus parâmetros se encontram na tabela \ref{tab_ap:Fcs}
 
 \begin{equation}
-F_{\text{cs}} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}%
+F_{\mathrm{cs}} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}%
 %
 \left[ \left(\rho_{S} - \rho_{w} \right) \frac{2J_1 \left( qR_{S}\left( \varepsilon,\theta \right) \right)}{qR_{S}\left( \varepsilon,\theta \right)} % 
 %
@@ -329,7 +329,7 @@ R_C = \sqrt{\frac{V_{\textrm{surf, apolar}}}{V_{\textrm{surf, total}}}}R_S
 \noindent onde V é o volume molecular das regiões do surfactante.
 
 \subsection{Amplitude de uma esfera}
-Como uma aproximação, o modelo final utiliza \(F_{sphere}\) ao invés de \(F_{rod}\) no denominador (ver equações \ref{eqn:AP_saxs_MG_geral} e \ref{eqn:AP_saxs_PRISM}). Esse fator forma de esferas é dado por:
+Como uma aproximação, o modelo final utiliza \(F_{\mathrm{sphere}}\) ao invés de \(F_{\mathrm{rod}}\) no denominador (ver equações \ref{eqn:AP_saxs_MG_geral} e \ref{eqn:AP_saxs_PRISM}). Esse fator forma de esferas é dado por:
 
 \begin{equation}
 	F_{\textrm{sphere}} = \dfrac{3\sin(qR) - qR\cos(qR)}{(qR)^3}
@@ -632,7 +632,7 @@ As seguintes frases irão aparecer, e os procedimentos a seguir são os mais com
 	\item \texttt{INPUT SCALE FACTOR FOR THE FILE (1=def) :} não é necessário digitar nada, só apertar enter. Isso vale para a maior parte dos casos onde há um padrão, \emph{default}, \texttt{def}.
 	\item \texttt{INPUT BACKGROUND FOR THE FILE (0=def) :} novamente, só apertar enter.
 	\item \texttt{ADD EXTRA MC GENERATED NOISE (1/0=def)} só enter.
-	\item \texttt{ESRF OR AARHUS DATA (1/2)}, digite 1 se os dados estiverem em \(nm^{-1}\) ou 2 se estiverem em \AA\(^{-1}\).
+	\item \texttt{ESRF OR AARHUS DATA (1/2)}, digite 1 se os dados estiverem em nm\menosUm ou 2 se estiverem em \AA\menosUm.
 \end{itemize}
 
 O programa irá então mostrar todo o conteúdo do arquivo e perguntar como deseja plotar os dados, começando com uma pergunta sobre o eixo Y e uma pergunta sobre o eixo X.
@@ -783,7 +783,6 @@ Neste exemplo, eu liberei o SC\_POW, fiz o ajuste novamente e salvei os parâmet
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.5]{./imagens/saxs/supersaxs_gnuplot_fit2}
-	\centering
 	\caption{Mesmo ajuste que o anterior, mas liberando o parâmetro \texttt{SC\_POW}}
 \end{figure}
 
