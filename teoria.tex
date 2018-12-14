@@ -244,8 +244,17 @@
 				\label{eqn:osc_tan_teta}
 			\end{equation}
 			
+			Além disso, é possível definir a viscosidade complexa como função dos parâmetros G' e G'', Eq. \ref{eqn:visc_complexa}.
+			
+			\begin{equation}
+				| \eta^* |(\omega, \gamma) = \dfrac{\left[ G'^2(\omega, \gamma) + G''^2(\omega, \gamma) \right] ^ {\sfrac{1}{2}}} {\omega}
+				\label{eqn:visc_complexa}
+			\end{equation}  % ref Rehage Hoffmann 1991
+			
+			A viscosidade complexa possui uma correlação direta com a viscosidade dinâmica, da curva de fluxo, em valores iguais de frequência de oscilação e taxa de cisalhamento. Essa regra é conhecida como regra de Cox-Merz. % todo: ref Cox, W. P., and MERZ, E. H., 1958, J. Polym. Sci., 28, 619
+			
 			A Figura \ref{fig:osc_simulacoes} mostra uma série de simulações do modelo apresentado aqui. A deformação em função do tempo foi calculada, e o ângulo de defasagem foi aumentado gradativamente de 0° para 90°. 
-			% todo: descobrir e colocar os ângulos aqui
+
 			
 			\begin{figure}[H]
 				\begin{subfigure}[t]{0.3\textwidth}
@@ -267,8 +276,6 @@
 					\label{fig:osc_sim50}
 				\end{subfigure}
 			
-			
-			
 				\hspace{2.5cm} \begin{subfigure}[t]{0.3\textwidth}
 					\centering
 					\includegraphics[width=\textwidth]{./imagens/reologia/Simulacao_visc_75}
@@ -289,6 +296,7 @@
 			\caption{Simulações do comportamento de um fluido sob cisalhamento cossenoidal. As imagens mostram a deformação \(\gamma\) em função do tempo, a tensão total \(\tau\) de resposta em função do tempo, decomposta em suas componentes elástica e viscosa. No título de cada gráfico está a contribuição, em porcentagem, de cada componente do material. O ângulo de defasagem está ilustrado na figura.}
 			\label{fig:osc_simulacoes}
 			\end{figure}  % todo: colocar o código para essa figura nos apêndices
+			
 			
 			\subsection{Modelo de Maxwell}
 			
@@ -407,16 +415,32 @@
 
 			A reologia oscilatória geralmente é expressa em termos de G' e G'' em função da frequência, na escala logarítmica. A Fig. \ref{fig:modelo_maxwell} mostra duas curvas simuladas para um material com tempo de relaxação de 10 s.$rad^{-1}$ e um módulo \(G\) de 10 Pa. Nessa figura estão mostrado como se obtêm visualmente os parâmetros \(G\) e \(\tau_{\mathrm{rel}}\).
 			
-			\begin{figure}[H]
+			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{./imagens/reologia/modelo_maxwell}
 				\caption{Espectro mecânico de acordo com o modelo de Maxwell}
 				\label{fig:modelo_maxwell}
 			\end{figure}
-						
-			Micelas gigantes, em vários regimes, obedecem muito bem o modelo de Maxwell. É possível interpretar esse comportamento da seguinte maneira. Em baixas frequências de perturbação (longos tempos), as micelas possuem tempo suficiente para deslizar umas pelas outras, então a maior parte da energia fornecida é perdida, logo o módulo viscoso, ou de perda, possui valores altos. Em frequências altas, a rede micelar e os entrelaçamentos conseguem armazenar a energia, não possuindo tempo suficiente para deslizar, então o módulo elástico, ou de armazenamento, é alto. Na região intermediária, ambos os mecanismos estão presentes, parte da energia é perdida e parte é armazenada, sendo que no ponto de cruzamento, exatamente metade da energia é preservada e metade é perdida.
 			
-			Para a obtenção de valores mais confiáveis para os parâmetros, é necessário realizar um ajuste dessas curvas. Porém, existem duas curvas que são descritas pelos mesmos parâmetros. Ao invés de se fazer dois ajustes e encontrar quatro parâmetros, é ideal realizar um ajuste das duas curvas simultaneamente. Isso pode ser feito minimizando-se um vetor com os resíduos das duas curvas concatenados. Isso pode ser feito utilizando-se, por exemplo, o Excel, com a ferramenta \emph{Solver} para minimizar o resíduo.
+			Para o modelo de Maxwell, a viscosidade complexa segue a equação \ref{eqn:visc_complexa_maxwell}, sendo que \(\eta_0\) é equivalente à viscosidade no repouso (Fig. \ref{fig:reol_pseudoplastico_loglog}). Não há dependência da tensão \(\gamma\) porque as medidas oscilatórias são obtidas no regime linear. % ref Rehage Hoffmann 1991
+			
+			\begin{equation}
+				 \eta^* (\omega) = \dfrac{\eta_0}{\left( 1 + \omega^2 \tau_\mathrm{rel}^2 \right)^{\sfrac{1}{2}}}
+				\label{eqn:visc_complexa_maxwell}
+			\end{equation}
+			
+			É possível também relacionar a viscosidade no repouso, \(\eta_0\), obtida nas curvas de fluxo, com os parâmetros \(G_0\) e \(\tau_{\mathrm{rel}}\), obtidos na reologia oscilatória.
+			
+			\begin{equation}
+				\eta_0 = G_0 \tau_{\mathrm{rel}}
+				\label{eqn:eta0_g0_taurel}
+			\end{equation}  % ref Rehage Hoffmann 1991
+			
+%			Micelas gigantes, em vários regimes, obedecem muito bem o modelo de Maxwell. É possível interpretar esse comportamento da seguinte maneira. Em baixas frequências de perturbação (longos tempos), as micelas possuem tempo suficiente para deslizar umas pelas outras, então a maior parte da energia fornecida é perdida, logo o módulo viscoso, ou de perda, possui valores altos. Em frequências altas, a rede micelar e os entrelaçamentos conseguem armazenar a energia, não possuindo tempo suficiente para deslizar, então o módulo elástico, ou de armazenamento, é alto. Na região intermediária, ambos os mecanismos estão presentes, parte da energia é perdida e parte é armazenada, sendo que no ponto de cruzamento, exatamente metade da energia é preservada e metade é perdida.
+			
+			Para a obtenção de valores confiáveis para os parâmetros \(G_0\) e \(\tau_{\mathrm{rel}}\), é necessário realizar um ajuste dessas curvas. Porém, ambos G' e G'' são descritos pelo mesmo conjunto de parâmetros. Ao invés de se fazer dois ajustes e encontrar quatro parâmetros, é ideal realizar um ajuste das duas curvas simultaneamente. Isso pode ser feito minimizando-se um vetor com os resíduos das duas curvas concatenados. Isso pode ser feito utilizando-se, por exemplo, o Excel, com a ferramenta \emph{Solver} para minimizar o resíduo.
+			
+			
 			
 			\subsection{Modelos mais complexos}
 			
@@ -433,10 +457,10 @@
 				G'' = \dfrac{  G_1 \omega  \tau_{\textrm{rel,1}}        }{ 1 + \omega^2 \tau_{\textrm{rel,1}}^2 } + \dfrac{  G_2 \omega  \tau_{\textrm{rel,2}}        }{ 1 + \omega^2 \tau_{\textrm{rel,2}}^2 }
 			\label{eqn:modelo_doismodos_g2}
 			\end{equation}
+
 			
-			% todo: a viscosidade do Oldroyd é para isso mesmo?
-			
-			O modelo de Oldroyd é praticamente idêntico ao modelo de Maxwell, e introduz somente um termo relativo à viscosidade do solvente para altas frequências de G'' (Eq. \ref{eqn:modelo_oldroyd_g2}). G' é inalterado.
+			O modelo de Oldroyd é praticamente idêntico ao modelo de Maxwell, e introduz somente um termo relativo à resistência do solvente para altas frequências de G'' (Eq. \ref{eqn:modelo_oldroyd_g2}). G' é inalterado. Essa é a extensão natural de materiais quase Maxwellianos. % todo: ref Cates? Berret?
+			% Ref Rehage Hoffmann 1991, Fala de Thurn e Hess que resolveram uma equação.
 			
 			\begin{equation}
 				G'' =\dfrac{  G \omega  \tau_{\textrm{rel}}        }{ 1 + \omega^2 \tau_{\textrm{rel}}^2 } + \eta_{\infty} \times \omega
@@ -968,7 +992,8 @@
 		\label{eqn:dipolo_induzido}
 	\end{equation}
 	
-	A polarizabilidade do material é composta por uma componente devido ao dipolo inerente da molécula, se houver, e outra componente sempre presente, que aparece devido à distorção da nuvem eletrônica dos átomos ou moléculas, chamada de polarizabilidade eletrônica, \(\alpha_0\).
+	A polarizabilidade do material é composta por uma componente devido ao dipolo inerente da molécula, se houver, e outra componente sempre presente, que aparece devido à distorção da nuvem eletrônica dos átomos ou moléculas, chamada de polarizabilidade eletrônica, \(\
+	_0\).
 	
 	A equação de Debye-Langevin relaciona a polarizabilidade total com a polarizabilidade eletrônica e o momento de dipolo (eq. \ref{eqn:debye_langevin}).
 	
@@ -1166,19 +1191,19 @@
 		% todo: colocar figura do Lequeux 2007 - tese Danila
 		% todo: mencionar a concentração c*
 		
-		As micelas gigantes possuem alguns comprimentos característicos. Começando do maior, temos o comprimento de contorno, \(\bar{L}_c\), que vai de uma ponta à outra da micela. Em solução, as micelas geralmente estão enoveladas, dependendo de sua rigidez, e o tamanho desse novelo é conhecido como raio de giro, \(R_g\).  Por sua vez, a rigidez intrínseca, cujo tamanho é definido pelo comprimento de persistência \(l_p\), também está relacionada ao comprimento de Kuhn, \(b\) pela relação \(b=2l_p\). A proporção entre o comprimento de contorno e de persistência de uma micela informa o quão flexível essa micela é. Por exemplo, micelas longas e com comprimento de persistência curto são bastante flexíveis, porém micelas curtas, da mesma ordem do comprimento de contorno, se comportam como cilindros rígidos. O menor dos comprimentos o raio da seção transversal (\(r_{\mathrm{CS}}\)) , que é da ordem do raio de micelas esféricas, em torno de poucos nanômetros. A figura XXX mostra as escalas de tamanho das micelas gigantes.
+		As micelas gigantes possuem alguns comprimentos característicos. Começando do maior, temos o comprimento de contorno, \(\overline{L}_c\), que vai de uma ponta à outra da micela. Em solução, as micelas geralmente estão enoveladas, dependendo de sua rigidez, e o tamanho desse novelo é conhecido como raio de giro, \(R_g\).  Por sua vez, a rigidez intrínseca, cujo tamanho é definido pelo comprimento de persistência \(l_p\), também está relacionada ao comprimento de Kuhn, \(b\) pela relação \(b=2l_p\). A proporção entre o comprimento de contorno e de persistência de uma micela informa o quão flexível essa micela é. Por exemplo, micelas longas e com comprimento de persistência curto são bastante flexíveis, porém micelas curtas, da mesma ordem do comprimento de contorno, se comportam como cilindros rígidos. O menor dos comprimentos o raio da seção transversal (\(r_{\mathrm{CS}}\)) , que é da ordem do raio de micelas esféricas, em torno de poucos nanômetros. A figura XXX mostra as escalas de tamanho das micelas gigantes.
 		
 		% todo: colocar algumas estimativas do comprimento de persistência
 		% todo: colocar uma figura demonstrando as escalas de tamanho
 		
-		As micelas gigantes não possuem comprimentos infinitos, logo, a existência de duas pontas é essencial para a formação das micelas. Necessariamente, o empacotamento das pontas é diferente do corpo cilíndrico, caso contrário, não possuiriam a curvatura necessária para ``fechar'' um cilindro. Como o empacotamento das pontas está diferente do empacotamento ditado pelas condições da solução, possuem uma energia maior que o corpo micelar. Se a causa principal para a mudança no parâmetro de empacotamento seja a presença de sais como NaSal, segue que a concentração de NaSal incorporado às pontas deve ser diferente do corpo micelar. % todo: colocar uma foto de uma ponta bem inchada, dos cryo-TEM da Danino.
+		As micelas gigantes, por possuirem tamanhos finitos, necessitam de pontas. Necessariamente, o empacotamento das pontas é diferente do corpo cilíndrico, caso contrário, não possuiriam a curvatura necessária para ``fechar'' um cilindro. Como o empacotamento das pontas está diferente do empacotamento ditado pelas condições da solução, possuem uma energia maior que o corpo micelar. Se a causa principal para a mudança no parâmetro de empacotamento seja a presença de sais como NaSal, segue que a concentração de NaSal incorporado às pontas deve ser diferente do corpo micelar. % todo: colocar uma foto de uma ponta bem inchada, dos cryo-TEM da Danino.
 				
 		As moléculas de surfactante no meio se particionam nas duas regiões das micelas dependendo da energia relativa dessas duas regiões. Caso mais moléculas de surfactante se dirijam ao corpo micelar, haverá a formação de micelas mais compridas, caso contrário, haverá um número maior de micelas mais curtas. Assim, quanto maior for a energia das pontas, maior será o comprimento da micela.
 		
-		Acima da concentração de sobreposição \(\phi^*\), é possível calcular, pela teoria do campo médio, o comprimento de contorno médio \(\bar{L_c}\), relacionando-o à energia das pontas, \(E_c\) (Eq. \ref{eqn:l_contorno_neutra}). Essa teoria considera que o comprimento de persistência é muito mais comprido que o raio de seção transversal, e que o volume excluído pelas cadeias pode ser considerado pelo sistema completo, ao invés de ser tratado localmente. %ref Cates Fielding 2006
+		Acima da concentração de sobreposição \(\phi^*\), é possível calcular, pela teoria do campo médio, o comprimento de contorno médio \(\overline{L_c}\), relacionando-o à energia das pontas, \(E_c\) (Eq. \ref{eqn:l_contorno_neutra}). Essa teoria considera que o comprimento de persistência é muito mais comprido que o raio de seção transversal, e que o volume excluído pelas cadeias pode ser considerado pelo sistema completo, ao invés de ser tratado localmente. %ref Cates Fielding 2006
 		
 		\begin{equation}
-			\bar{L_c} \approx \phi^{\frac{1}{2}} \exp \left(\dfrac{E_c}{2k_bT}\right)
+			\overline{L_c} \approx \phi^{\frac{1}{2}} \exp \left(\dfrac{E_c}{2k_bT}\right)
 			\label{eqn:l_contorno_neutra}
 		\end{equation} % ref Cates
 		
@@ -1187,7 +1212,7 @@
 		Porém, a contribuição eletrostática não foi considerada. A carga na superfície micelar tende a quebrar as micelas. Isso resulta numa diminuição de sua flexibilidade, e também do comprimento total das micelas, pois a energia das pontas é contrabalanceada pela energia dessa repulsão eletrostática, denominada \(E_e\). O comprimento de contorno médio ajustado é dado pela equação \ref{eqn:l_contorno_carregada}.
 		
 		\begin{equation}
-			\bar{L_c} \approx \phi^{\frac{1}{2}} \exp \left(\dfrac{E_c - E_e}{2k_bT}\right)
+			\overline{L_c} \approx \phi^{\frac{1}{2}} \exp \left(\dfrac{E_c - E_e}{2k_bT}\right)
 			\label{eqn:l_contorno_carregada}
 		\end{equation} % ref Magid, Mackintosh 1990
 
@@ -1200,16 +1225,16 @@
 	
 		\noindent onde \(\nu^{*2}\) é a carga efetiva por unidade de comprimento micelar.
 		 
-		O número de agregação característico \(\bar{N}\) é dado pela equação \ref{eqn:distrib_tamanhos_micelas}.
+		O número de agregação característico \(\overline{N}\) é dado pela equação \ref{eqn:distrib_tamanhos_micelas}.
 		
 		\begin{equation}
-			\bar{N} = 2 \phi ^{\frac{1}{2}} \exp \left[ \frac{1}{2} \left( E_c - E_e \right) \right]
+			\overline{N} = 2 \phi ^{\frac{1}{2}} \exp \left[ \frac{1}{2} \left( E_c - E_e \right) \right]
 			\label{eqn:distrib_tamanhos_micelas}
 		\end{equation} % ref Mackintosh 1990
 		 
 		Porém, essas equações não consideram a formação de \emph{loops} ou de pontos de ramificação. A formação de \emph{loops} elimina a energia das pontas, em troca de perda de entropia conformacional. Pontos de ramificação, assim como as pontas de micelas, possuem um empacotamento diferente do corpo micelar, mas com a curvatura oposta. % todo: pensar em colocar um gráfico mostrando as ramificações
 		A reologia de sistemas com redes diferem fortemente das cadeias lineares. % ref Cates Fielding 2006
-		Uma característica importante dos pontos de ramificação é que eles são lábeis, isso é, podem se mover pela cadeia. Nesse caso, o comprimento de contorno \(\bar{L_c}\) não possui o mesmo significado físico. Nesse caso, \(\bar{L_c}\) denota distância até a cadeia mais próxima, ou o ponto de junção na rede. Isso ocorre porque, o sistema ramificado, em escalas de tamanho maiores que \(\bar{L_c}\), oferece uma reserva para o comprimento de contorno, que pode ser armazenado, ou emprestado, para outras cadeias da rede. % ref Cates Fielding 2006.
+		Uma característica importante dos pontos de ramificação é que eles são lábeis, isso é, podem se mover pela cadeia. Nesse caso, o comprimento de contorno \(\overline{L_c}\) não possui o mesmo significado físico. Nesse caso, \(\overline{L_c}\) denota distância até a cadeia mais próxima, ou o ponto de junção na rede. Isso ocorre porque, o sistema ramificado, em escalas de tamanho maiores que \(\overline{L_c}\), oferece uma reserva para o comprimento de contorno, que pode ser armazenado, ou emprestado, para outras cadeias da rede. % ref Cates Fielding 2006.
 		
 		\section{Comportamento reológico}
 		
@@ -1239,7 +1264,7 @@
 		O tempo de reptação é, claramente, dependente do comprimento da cadeia, e pode ser estimado pela equação \ref{eqn:tau_rep_comprimento_contorno}.
 		
 		\begin{equation}
-			\tau_\mathrm{rep} \simeq \frac{\bar{L_c}^2}{D_c}
+			\tau_\mathrm{rep} \simeq \frac{\overline{L_c}^2}{D_c}
 			\label{eqn:tau_rep_comprimento_contorno}
 		\end{equation} % ref Cates 1990
 		
@@ -1248,7 +1273,7 @@
 		Já o tempo que a micela demora para quebrar é dependente de seu comprimento e de uma constante de velocidade dessa ``reação'', \(k_\mathrm{cis}\). A teoria do campo médio assume que é improvável que essa recombinação ocorra entre as mesmas cadeias que se quebraram. Além disso, é estimado que o tempo para a recombinação é o mesmo que para a quebra.
 		
 		\begin{equation}
-			\tau_{\mathrm{quebra}} = \left(k_\mathrm{quebra}\bar{L_c}\right)^{-1}
+			\tau_{\mathrm{quebra}} = \left(k_\mathrm{quebra}\overline{L_c}\right)^{-1}
 			\label{eqn:tempo_quebra_comp_contorno}
 		\end{equation} % ref Cates 1990
 		
@@ -1266,7 +1291,8 @@
 			\label{eqn:tau_rel_dois_taus}
 		\end{equation}
 		
-		Neste trabalho, serão apresentados regimes que tanto seguem quanto não seguem essa consideração. Há duas maneiras de se determinar isso. Uma é pelo ajuste do modelo de Maxwell. Quanto melhor for o ajuste, mais correta é a consideração da equação \ref{eqn:tau_rel_dois_taus}. Outra maneira é pelos gráficos de Cole-Cole, onde G'' é plotado em função de G'. Caso haja somente um tempo de relaxação, será observado um semicírculo perfeito, de acordo com a equação \ref{eqn:cole_cole}. Esse tipo de gráfico por ser normalizado por \(G_0\), reduzindo a escala dos valores dos eixos e facilitando a comparação entre curvas diferentes.
+		Neste trabalho, serão apresentados regimes que tanto seguem quanto não seguem essa consideração. Há duas maneiras de se determinar isso. Uma é pelo ajuste do modelo de Maxwell. % todo: colocar referência para a parte da teoria que fala isso.
+		 Quanto melhor for o ajuste, mais correta é a consideração da equação \ref{eqn:tau_rel_dois_taus}. Outra maneira é pelos gráficos de Cole-Cole, onde G'' é plotado em função de G'. Caso haja somente um tempo de relaxação, será observado um semicírculo perfeito, de acordo com a equação \ref{eqn:cole_cole}. Esse tipo de gráfico por ser normalizado por \(G_0\), reduzindo a escala dos valores dos eixos e facilitando a comparação entre curvas diferentes.
 		
 		\begin{equation}
 			\left(G' - \frac{G_0}{2}\right)^2 + G''^2 = \frac{G_0^2}{4}
@@ -1275,13 +1301,13 @@
 
 		% todo: colocar um Cole-Cole aqui, de preferência o do Berret, que possui boas regiões de freq. altas
 		
-		Diagramas de Cole-Cole ajudam a identificar a região onde outros mecanismos de relaxação começam a operar. Um desses modos é chamado de ``respiração'' das cadeias (\emph{breathing motions}), onde flutuações no comprimento do tubo ocorrem, ao invés da reptação completa das cadeias. Além disso, pode ocorrer a movimentação de Rouse, conhecida da área de polímeros. % ref Granek Cates 1992
+		Diagramas de Cole-Cole ajudam a identificar a região onde outros mecanismos de relaxação começam a operar. Um desses modos é chamado de ``respiração'' das cadeias (\emph{breathing motions}), onde flutuações no comprimento do tubo ocorrem, ao invés da reptação completa das cadeias. Além disso, pode ocorrer a movimentação de Rouse, conhecida na área de polímeros. % ref Granek Cates 1992
 		A região onde esses modos começam a se tornar relevantes é observada no final do diagrama de Cole-Cole, quando, ao invés de permanecer no semicírculo, a curva começa a subir. No reograma (G' e G'' por \(\omega\)), isso é observado quando G'' atinge um valor mínimo e começa a subir, sendo que o modelo de Maxwell prevê somente sua queda.
 		
 		Nesse ponto, a diferença na altura entre o módulo no platô e o ponto onde G'' começa a subir é proporcional ao comprimento da cadeia entre dois pontos de entrelaçamento e ao comprimento das micelas, Eq. \ref{eqn:mesh_contorno_por_reologia}.
 		
 		\begin{equation}
-			\frac{G''_\mathrm{min}}{G'_\infty} \sim \frac{l_e}{\bar{L_c}}
+			\frac{G''_\mathrm{min}}{G'_\infty} \sim \frac{l_e}{\overline{L_c}}
 			\label{eqn:mesh_contorno_por_reologia}
 		\end{equation} % ref Berret 1993
 
@@ -1300,34 +1326,218 @@
 			\xi \sim \left(  \frac{k_bT}{G'_\infty} \right) ^ \frac{1}{3}
 		\end{equation} % ref Berret 1993
 		
-		O reograma para soluções de micelas gigantes que seguem o modelo de Maxwell é bastante similar ao apresentado na figura \ref{fig:modelo_maxwell}. Neste trabalho, várias soluções seguiram esse modelo, como será visto na seção \ref{sec:reologia_oscilatoria_experimental_agua}. Uma interpretação física para o reograma é a seguinte. % todo: falar dos dois modelos, do deslizamento, etc
+		O reograma para soluções de micelas gigantes que seguem o modelo de Maxwell é bastante similar ao apresentado na figura \ref{fig:modelo_maxwell}. Neste trabalho, várias soluções seguiram esse modelo, como será visto na seção \ref{sec:reologia_oscilatoria_experimental_agua}.
+		Esse comportamento pode ser interpretado da seguinte maneira. Em baixas frequências de perturbação (longos tempos), as micelas possuem tempo suficiente para deslizar umas pelas outras, então a maior parte da energia fornecida é perdida, logo o módulo viscoso, ou de perda, possui valores altos. Em frequências altas, a rede micelar e os entrelaçamentos conseguem armazenar a energia, não possuindo tempo suficiente para deslizar, então o módulo elástico, ou de armazenamento, é alto. Na região intermediária, ambos os mecanismos estão presentes, parte da energia é perdida e parte é armazenada, sendo que no ponto de cruzamento, exatamente metade da energia é preservada e metade é perdida.
 		
 		% mencionar que o modelo de Oldroyd B é a extensão mais natural a sistemas quase Maxwellianos.
 		
-		\section{Curvas de fluxo e a dependência da concentração de NaSal na viscosidade no repouso}
+		\section{Curvas de fluxo e a dependência da concentração de sal na viscosidade no repouso}
+			
+		Surfactantes catiônicos, como os haletos de alquiltrimetilamônio ou alquilpiridínio são frequentemente utilizados para a formação de micelas gigantes utilizando sais orgânicos, como o salicilato de sódio, porém vários outros sais conseguem induzir o crescimento micelar. Esse tipo de sistema foi bastante estudado por Hoffmann, para uma variedade de sais, e também por outros autores. % todo: por refs
 		
-		Soluções de micelas gigantes, quando submetidas à uma taxa de cisalhamento crescentes, começam a se alinhar ao fluxo, diminuindo a viscosidade aparente da solução. Isso as caracteriza como fluidos pseudoplásticos. Quando a taxa de cisalhamento é baixa, a viscosidade não se altera, e pode-se obter uma grandeza conhecida como viscosidade no repouso \(\eta_0\) por uma variedade de técnicas (seção \ref{sec:teoria_fluidos_NN}).
+		Tais sais orgânicos possuem uma região hidrofóbica que consegue se inserir na superfície micelar, e ao mesmo tempo manter o grupo carregado exposto à água, na superfície. Isso diminui a carga superficial micelar, aumentando o parâmetro de empacotamento e induzindo o crescimento das micelas. Sais inorgânicos, como Cl\menosUm{}, também podem promover o crescimento, mas necessitam de concentrações uma ordem de grandeza maiores. Por exemplo, para atingir a mesma viscosidade de uma solução de \CTAB{} e NaSal 100:100 \mM, é necessário a concentração de 3,5 mol.L\menosUm{} de NaCl. % todo: achar no meu trabalho e verificar se é essa concentração mesmo
 		
-		% achar a correlação entre viscosidade e G0 e tr
-		% Falar sobre as várias estruturas que elas possuem, e como a concentração de salicilato afeta as estruturas
-		% Falar sobre os sticky contacts que o Hoffmann tanto gosta.
-		% Falar do diagrama de viscosidade no repouso (RH).
-		% falar sobre shear thinning
-
+		A viscosidade das soluções de surfactantes catiônicos e sais é dependente da concentração de sal, e da afinidade do sal pela micela que, por sua vez, depende de sua estrutura. Além disso, a afinidade do sal altera o perfil de viscosidade. Sais com pouca afinidade, como orto-metilbenzoato de sódio, possuem um único máximo de viscosidade, já sais como o salicilato de sódio e o orto-hidroxicinamato de sódio geram perfis com dois máximos de viscosidade. % colocar ref do meu artigo do OHCA
+		A quantidade de salicilato que se concentra na superfície micelar é alta, cerca de 93\%, muito mais do que os íons Cl\menosUm{} e Br\menosUm{}. % ref Hoffmann Rehage 1991
+		
+		Tais soluções de surfactante e sal podem ser estudadas tanto por reologia oscilatória quanto por curvas de fluxo. Soluções de micelas gigantes, quando submetidas à uma taxa de cisalhamento crescentes, começam a se alinhar ao fluxo, diminuindo a viscosidade aparente da solução. Isso as caracteriza como fluidos pseudoplásticos. Quando a taxa de cisalhamento é baixa, a viscosidade não se altera, e pode-se obter uma grandeza conhecida como viscosidade no repouso \(\eta_0\) por uma variedade de técnicas (seção \ref{sec:teoria_fluidos_NN}).
+		
+		As alterações no perfil de viscosidade são devidas à mudanças nos mecanismos de relaxação das micelas, que por sua vez são dependentes da estrutura das micelas em solução, de sua carga e sua concentração. O perfil para \CTAB{} e NaSal, disposto na Fig. XXX, é geralmente dividido em cinco regiões.
+		
+		\begin{enumerate}
+			\item[I] Região altamente diluída, onde há micelas esféricas, seguido de micelas cilíndricas curtas e, em concentrações um pouco mais altas, de micelas gigantes muito distantes umas das outras.
+			\item[II] Região onde ocorre aumento no número de micelas e crescimento das mesmas, levando ao entrelaçamento e aumento rápido da viscosidade. As micelas estão positivamente carregadas, e lineares. O mecanismo principal de relaxação nesta região é a reptação, porém as soluções não seguem o modelo de Maxwell perfeitamente, pois há um espectro de processos de relaxação. % Hoffmann 1988
+			 O valor de \(G_0\) dessa região é menor do que nas próximas. % Hoffmann Rehage 1991
+			\item[III] Região onde a carga das micelas continua a diminuir com a incorporação crescente de NaSal, levando à uma diminuição da carga superficial. Ao invés de micelas lineares, ocorre a formação de uma rede ramificada de micelas, e a solução começa a seguir o modelo de Maxwell. Quando a solução se aproxima da equimolaridade, a carga superficial das micelas se aproxima a 0. Nessa região, o processo de relaxação principal é a quebra e recombinação.
+			\item[IV] Região onde a carga das micelas começa a ficar mais negativa devido ao excesso de salicilato em solução. Os trabalhos na literatura citam que a estrutura das micelas ainda é ramificada. A carga superficial pode levar à uma diminuição na taxa de colisão entre as micelas e no aumento do comprimento de persistência, aumentando o tempo de relaxação estrutural.
+			\item[V] Região onde a quantidade de salicilato aumentou em demasia, e, ao invés do crescimento micelar ocorrer, existe somente a transição para micelas cilíndricas curtas, ou esféricas, com grande excesso de salicilato.
+		\end{enumerate}
+		
+		% todo: colocar uma figura com o perfil de viscosidade
+		
+		Além desses fatores relativos ao salicilato, há uma contribuição do surfactante. A viscosidade do sistema \CTAB{} e NaSal é maior, em todas as proporções, que a viscosidade do sistema cloreto de hexadecilpiridínio (C\textsubscript{16}PyCl) e NaSal % ref: viviane lutz bueno langmuir
+		Essa diferença ocorre, de acordo com Hoffmann, % todo: achar a(s) referência(s)
+		devido aos contatos ``grudentos'' (\emph{sticky contacts}) causados pela atração entre grupos metila do \CTAB, hidrofóbicos, com os outros grupos metila de micelas vizinhas. Isso aumenta o tempo de relaxação estrutural, pois o deslizamento entre as micelas se torna mais lento, levando à maior viscosidade. O mesmo mecanismo não pode ocorrer, pois o grupo piridínio não possui tais metilas. 
+		
+		% todo: colocar uma imagem com as estruturas e a concentração dos aditivos
 		
 		\section{Termodinâmica de micelas}
-		% Falar sobre a energia das pontas. Pesquisar sobre o que falar.
+		
+		Numa solução acima da concentração micelar crítica, existem tanto moléculas de surfactante livres quanto moléculas de surfactante nos agregados. Necessariamente, essas moléculas devem possuir, todas, o mesmo potencial químico \(\mu\). % Israelachvili
+		
+		\begin{equation}
+			\mu = \mu_N = \mu_N^\circ + \dfrac{k_b T}{N} \log \left( \dfrac{X_N}{N} \right) = \mathrm{constante}
+			\label{eqn:potencial_quimico_micelas}
+		\end{equation}
+		
+		\noindent onde \(\mu_N^\circ\) é o potencial químico médio de uma molécula num agregado com número de agregação N, \(\mu_N^\circ\) é o potencial químico padrão médio para uma molécula e \(X_N\) é a concentração (ou atividade) de moléculas em agregados com o determinado \(N\). A energia por agregado é \(N\mu_N^\circ\). \(X_N\) pode ser descrito como fração volumétrica ou molar, dependendo das unidades de \(\mu\) utilizadas.
+		
+		Logo, no equilíbrio, temos que:
+		
+		\begin{equation}
+			\mu = \mu_1^\circ + k_b T \log X_1 = \mu_2^\circ + \dfrac{1}{2} k_b T \log \dfrac{X_2}{2} = \mu_3^\circ + \dfrac{1}{3} k_b T \log \dfrac{X_3}{3} = \cdots
+		\end{equation}
+		
+%		Para a agregação, é necessário que a energia coesiva entre as moléculas no agregado seja maior do que no estado disperso. É necessário que \(\mu_N^\circ\) seja menor que \(\mu_1^\circ\) para algum valor, ou conjunto de valores, de \(N\). Para micelas cilíndricas, a energia de um agregado pode ser aproximada assumindo uma energia de ``ligação'' entre os monômeros, \(-\alpha k_b T\), onde \(\alpha\) é uma constante positiva dependente da força das interações intermoleculares.
+%		
+%		\begin{equation}
+%			N \mu_N^\circ = -(N - 1) \alpha k_b T
+%			\label{eqn:potencial_quim_cilindro1}
+%		\end{equation}
+%		
+%		O potencial químico do agregado \(\mu_N^\circ\) é então dado por
+%		
+%		\begin{equation}
+%			\mu_N^\circ = \mu_\infty^\circ + \alpha k_b T / N
+%			\label{eqn:potencial_quim_cilindro2}
+%		\end{equation}
+%		
+%		\noindent onde \(\mu_\infty^\circ\) é o potencial químico numa molécula com um número infinito de agregação.
+	
+
+		De forma geral, o potencial químico dos agregados aumenta com o número de agregação. Para entender onde ocorre a transição entre monômeros e agregados, a \cmc, deve-se considerar a diferença no potencial químico dessas duas espécies,
+		
+		\begin{equation}
+			X_N = N \left[ X_1 \exp \left(\dfrac{\mu_1^\circ - \mu_N^\circ}{k_b T}\right) \right] ^ N
+			\label{eqn:termodinamica_diferenca_potencial_tamanho}
+		\end{equation}
+		
+		À medida que a concentração total de surfactante aumenta, \(X_1\) também aumenta. Porém, \(X_1\) não pode crescer ilimitadamente, pois a soma de todas as concentrações (frações, neste caso) deve ser igual a um. Logo, há um ponto onde \(X_1\) deve parar de crescer. Necessariamente, as moléculas adicionadas devem se dirigir aos agregados. A concentração micelar crítica, \cmc, é definida nesse ponto.
+		
+		\begin{equation}
+			X_{1, \mathrm{crit}} = \mathrm{CMC} \approx \exp \left(  - \dfrac{\mu_1^\circ - \mu_N^\circ}{k_b T} \right)
+			\label{eqn:cmc_termodinamica}
+		\end{equation}  % ref até aqui: Israelachvili
+		
+		Os agregados não possuem todos o mesmo tamanho, isso é, possuem certa polidispersidade, centrada em certo número de agregação \(M\). O número de agregados com outros tamanhos cai exponencialmente ao redor de \(M\).
+		
+		No caso de micelas gigantes, o potencial químico das moléculas nas pontas dos agregados é diferente do potencial químico no corpo cilíndrico, devido às energias de empacotamento. Isso foi visto anteriormente na discussão sobre o comprimento micelar (Eq. \ref{eqn:l_contorno_neutra}) Todavia, no equilíbrio, o potencial químico médio do agregado será igual ao de qualquer outra estrutura com \(N\) diferentes. É possível representar essa diferença de potenciais químicos pela equação \ref{eqn:potencial_quimico_MG}.
+		
+		\begin{equation}
+			\mu_N^\circ = \left( N - N_\mathrm{ponta} \right) \mu_\mathrm{cilindro}^\circ + N_\mathrm{ponta}\mu_\mathrm{ponta}^\circ
+			\label{eqn:potencial_quimico_MG}
+		\end{equation} % ref Giant Micelles Cap 1
+		
+%		Outra maneira de se representar isso é pela energia de excesso das pontas, \(\delta\)
+%		
+%		\begin{equation}
+%			\nu_N^\circ = N\mu_\mathrm{cilindro}^\circ + 2 \delta
+%			\label{eqn:potencial_quimico_MG_delta}
+%		\end{equation}
+		
+		Assim, a equação \ref{eqn:termodinamica_diferenca_potencial_tamanho} pode ser escrita em função dessa diferença dos potenciais químicos.
+		
+		\begin{equation}
+			X_N = \left[ X_1 \exp - \left( \dfrac{\Delta \mu_\mathrm{cilindro}^\circ}{k_b T} \right)  \right]^N \exp \left[ -N_\mathrm{ponta} \left( \dfrac{\Delta \mu_\mathrm{ponta}^\circ - \Delta \mu_\mathrm{cilindro}^\circ}{k_bT} \right)  \right]
+			\label{eqn:distribuicao_tamanho_MG}
+		\end{equation}
+		
+		\noindent onde \(\Delta \mu_\mathrm{cilindro}^\circ\) e \(\Delta \mu_\mathrm{ponta}^\circ\) são as diferenças nos potenciais químicos padrão entre a molécula de surfactante no corpo cilíndrico ou nas pontas e o potencial químico padrão dos monômeros. O segundo termo da equação \ref{eqn:distribuicao_tamanho_MG} é a penalidade energética de se colocar uma molécula de surfactante nas pontas, comparada ao corpo.
+		
+		O número de agregação médio ponderado pelo número de agregados, \(\overline{N}_n\), pode ser obtidos pela somatória da equação \ref{eqn:distribuicao_tamanho_MG},
+		
+		\begin{subequations}
+			\begin{align}
+			\overline{N}_n &= N_\mathrm{ponta} + \left( \dfrac{Y}{1 - Y} \right )  \\
+			Y  &= \left[ X_1 \exp - \left( \dfrac{\Delta \mu_\mathrm{cilindro}^\circ}{k_b T} \right) \right]
+			\end{align}
+			\label{eqn:distrib_tamanho_MG}
+		\end{subequations}
+				
+		\noindent que possui semelhança com a equação \ref{eqn:distrib_tamanhos_micelas}, exceto pelo termo eletrostático. Caso a diferença dos potenciais seja muito alta, isso é, a tendência de formação de micelas gigantes seja grande, longe da \cmc, o termo \(Y\) da equação \ref{eqn:distrib_tamanho_MG} se reduz a 1, e a equação se reduz a:
+		
+		\begin{equation}
+			\overline{N}_n = N_\mathrm{ponta} + \dfrac{1}{1 - Y}
+			\label{eqn:distrib_tamanho_MG_reduzida}
+		\end{equation}
+		
+		Já a o tamanho médio ponderado pela massa (\(\overline{X}_w\)) possui uma expressão semelhante,
+		
+		\begin{equation}
+			\overline{N}_w = N_\mathrm{ponta} + \dfrac{2}{1 - Y}
+			\label{eqn:distrib_tamanho_MG_reduzida_massa}
+		\end{equation}
+		
+		A polidispersidade, dada pela razão \(\overline{N}_w / \overline{N}_n\) vai da unidade (monodispersas), quando as micelas estão curtas, até 2, quando as micelas cresceram muito.
+		
+		Outra maneira de se entender o potencial químico é pelo modelo das forças opostas (OFM, \emph{opposing forces model}). Nesse modelo, o potencial químico é dependente da densidade local superficial das cabeças do surfactante (\(\sigma(s)\)) ao redor de um ponto \emph{s} no agregado \emph{S} e da energia livre local \(f(s)\).
+		
+		\begin{equation}
+		\mu_N^\circ = \int_S \sigma(s) f(s) ds
+		\label{eqn:OFM_potencial_quimico}
+		\end{equation} 		% Ref. Giant Micelles Avinoam Ben Shaoul Silvio May, de agora em diante
+		
+		
+		% todo: achar um termo melhor para cabeça
+		
+		\begin{itemize}
+			\item[\(f_h\)] Energia livre de interação entre cabeças
+			\item[\(f_s\)] Energia livre interfacial devido à area de contato (a) das cadeias hidrofóbicas com a solução
+			\item[\(f_c\)] Energia livre de empacotamento da cauda hidrofóbica.
+			\item[\(f_\mathrm{el}\)] Energia livre eletrostática de repulsão entre as cabeças
+		\end{itemize}
+		
+		Esses termos podem depender da geometria local e da curvatura, portanto sendo diferentes nas pontas das micelas. Os termos desse modelo podem ser calculados pelas seguintes equações
+		
+		\begin{subequations}
+			\begin{align}
+				f   &= f_h + f_s + f_c + f_\mathrm{el} \\
+				f_h &= B / a     \\
+				f_s &= \gamma a  \\
+				f_c &= \mathrm{constante}  \\
+				f_\mathrm{el} &= \dfrac{2\pi k_bT\lambda_B}{\kappa a}
+			\end{align}
+			\label{eqn:componentes_OFM}
+		\end{subequations}
+		
+		\noindent onde \(B\) é um termo que agrupa todas as repulsões das cabeças dos surfactantes, \(a\) é a área de contato da região hidrofóbica e a água e \(\gamma\) é a tensão interfacial entre hidrocarboneto e água. O termo \(f_c\) é constante, significando que o interior das micelas é considerado como um hidrocarboneto líquido. A área \(a\) e a área de seção transversal \(a_h\), do parâmetro de empacotamento, Eq. \ref{eqn:param_empacot}, estão relacionados através da duas curvaturas locais. O termo eletrostático depende do comprimento de Bjerrum \(\lambda_B\) e do comprimento de Debye \(1/\kappa\), introduzidos na seção \ref{sec:coloides_atracao_coloidal}.
+		
+		A contribuição eletrostática para a energia livre é dado por
+		
+		\begin{equation}
+			\mu_\mathrm{el}^\circ (N) = k_b T c \left[ N \ln (cN) - N \right]
+			\label{eqn:potencial_quim_eletrostatico}
+		\end{equation}
+		
+		\noindent onde \(c = a / (2 \pi r_\mathrm{cs} \lambda_B)\). Além disso, o fator \(k_bT\) substitui o termo \(e^2/4\pi\varepsilon_{ 0 }\varepsilon_\mathrm{água}\lambda_B\) da contribuição eletrostática. O termo positivo \(\sim N \ln N\) age contra o termo \((N - N_\mathrm{ponta}) \mu_\mathrm{cilindro}^\circ)\) (Eq. \ref{eqn:potencial_quimico_MG}), este que, por sua vez, leva ao crescimento das micelas. Somando a contribuição eletrostática ao potencial químico das micelas, chegamos à uma equação que leva as contribuições eletrostáticas em consideração
+		
+		\begin{equation}
+			\mu_N^\circ = (N - N_\mathrm{ponta})\mu_\mathrm{cilindro}^\circ + k_b T c \left[ N \ln (cN) - N \right] + N_\mathrm{ponta}\mu_\mathrm{ponta}^\circ
+		\end{equation}
+		
+		Esse resultado limita a distribuição de tamanho das micelas, mas somente em soluções diluídas. Quando o sistema aumenta de concentração, e passa para o regime semidiluído, quando o comprimento de contorno \(\overline{L_c}\) das micelas se torna maior que
+		
+		\begin{equation}
+		 	\tilde{L} \sim r_\mathrm{cs} / \phi^{\sfrac{1}{2}}
+		\end{equation}
+		
+		\noindent uma micela carregada observa um ambiente eletricamente neutro em distâncias maiores que \(\tilde{L}\), então qualquer interação eletrostática é blindada. Isso necessita modificar a equação \ref{eqn:potencial_quim_eletrostatico} para
+		
+		\begin{equation}
+			\mu_\mathrm{el}^\circ(N) = k_b T \lambda_B \dfrac{r_\mathrm{CS}}{a} \phi^{\sfrac{1}{2}} \left[ \ln \left( \lambda_B \dfrac{r_\mathrm{CS}}{a} \phi^{\sfrac{1}{2}} \right) - 1 \right]
+			\label{eqn:potencial_eletrostatico_semidiluido}
+		\end{equation}
+		
+		Nessa equação, o potencial eletrostático não é mais dependente de N, mas só de \(\phi\). A energia das pontas considerando a contribuição eletrostática se torna
+		
+		\begin{equation}
+			N_\mathrm{ponta}\mu_\mathrm{ponta, efetivo} = N_\mathrm{ponta}\mu_\mathrm{ponta} - k_b T \dfrac{\lambda_B r_\mathrm{CS} \Lambda^2}{X^{\sfrac{1}{2}}}
+		\end{equation}
+		
+		\noindent onde \(\Lambda\) é a densidade de carga linear ao longo do eixo micelar.
+		
 		% Fazer uma breve introdução sobre ITC e o que se observa.
 		% Falar sobre o ITC e como ele consegue enxergar os processos de micelização
-		% todo: fazer esta parte
-		As micelas tem pontas com energia superior.
-
+	
 		\section{Comportamento calorimétrico}
 		
 		%		Para micelas gigantes, fixa-se uma concentração de aditivo e depois surfactante é titulado. O padrão da curva de $\Delta H \times C_{\textrm{surf}}$ é bastante característico. No início há muito NaSal e pouco TTAB, e ocorre a formação de micelas esféricas com NaSal. À medida que mais NaSal é incorporado, são formadas micelas mistas cilíndricas curtas . Numa determinada concentração, ocorre uma queda bastante brusca no valor de $\Delta H$, devido à fusão de várias micelas cilíndricas, formando micelas gigantes. A diferença de entalpia entre os estados final e inicial dessa queda brusca caracteriza $\Delta H_{\textrm{WLM}}$. A concentração no ponto mínimo caracteriza $c_{\textrm{WLM}}$%\cite{Ito2016}.
 		%		
 		%		Com a técnica de ITC, pode-se observar o quão favorável é a formação de micelas gigantes em determinadas condições. Quanto menor for $c_{\textrm{WLM}}$, mais favorável é a formação das micelas. A $c_{\textrm{WLM}}$ é referente ao grau de incorporação de aditivo na etapa de formação de micelas%\cite{Ito2016}
 		\section{Espalhamento de luz}
+		
+		
+		
 		\section{Efeito do solvente}
 		\label{sec:efeito_solvente}
 		% Falar mais profundamente sobre os estudos do Hoffmann

@@ -265,23 +265,23 @@
 		
 		A pressão interna, por sua vez, é a energia necessária para abrir uma cavidade no solvente, pois a variação de volume é necessariamente pequena, de modo a acomodar o soluto. Esse parâmetro é resultado das forças atrativas serem mais fortes que as repulsivas, e portanto está mais relacionado às interações dispersivas e dipolo-dipolo. Já \(c\) está relacionado à interações solvente-solvente específicas, como a ligação de hidrogênio.
 		
-		A diferença entre esses dois parâmetros (\(c - \pi\)) fornece uma medida da força das ligações de hidrogênio, e a razão \(n = \sfrac{\pi}{c}\) fornece uma medida da relação entre a força das ligações de hidrogênio e outras atrações. Essa razão se aproxima de 1 para hidrocarbonetos e é próxima de zero para solventes com fortes ligações de hidrogênio. O quadrado de \(c\) é conhecido também como o parâmetro de solubilidade de Hildebrand, \(\delta\).
+		A diferença entre esses dois parâmetros (\(c - \pi\)) fornece uma medida da força das ligações de hidrogênio, e a razão \(n = \sfrac{\pi}{c}\) fornece uma medida da relação entre a força das ligações de hidrogênio e outras atrações. Essa razão se aproxima de 1 para hidrocarbonetos e é próxima de zero para solventes com fortes ligações de hidrogênio. O quadrado de \(c\) é conhecido também como o parâmetro de solubilidade de Hildyeebrand, \(\delta\).
 		
 		Porém, os solventes utilizados neste trabalho são todos compostos principalmente por água, e em alguns casos os aditivos são sólidos (ureia, sacarose). Além disso, obter esses parâmetros para as misturas não é uma tarefa para qual o laboratório está equipado. Portanto, é necessário utilizar outro parâmetro que esteja relacionado à estruturação do solvente.
 		
 		Um parâmetro que pode ser utilizado é o parâmetro de Gordon, definido na equação \ref{eqn:Gordon}, que é baseado na tensão superficial, equação \ref{eqn:tens_superficial}. % todo: ref livro efeito do solvente em reações orgânicas, para que pode se utilizar isso. Achar a def do param em outro lugar.
 
 		\begin{equation}
-			G = \dfrac{\gamma}{\bar{V}_m^{\frac{1}{3}}}
+			G = \dfrac{\gamma}{\overline{V}_m^{\frac{1}{3}}}
 			\label{eqn:Gordon}
 		\end{equation}
 		
 		\begin{equation}
-			\bar{V}_m = \bar{V}_{m_{1}}x_1 + \bar{V}_{m_{2}}x_2
+			\overline{V}_m = \overline{V}_{m_{1}}x_1 + \overline{V}_{m_{2}}x_2
 			\label{eqn:volume_molar_médio}
 		\end{equation}
 		
-		\noindent onde \(\gamma\) é a tensão superficial do líquido e \(\bar{V}_m\) é o volume molar do líquido que, quando houver mais de um, pode-se utilizar a equação \ref{eqn:volume_molar_médio} para calculá-lo.
+		\noindent onde \(\gamma\) é a tensão superficial do líquido e \(\overline{V}_m\) é o volume molar do líquido que, quando houver mais de um, pode-se utilizar a equação \ref{eqn:volume_molar_médio} para calculá-lo.
 		
 		\begin{equation}
 		\gamma = \left( \dfrac{\partial G}{\partial A}  \right)_{T,P,n}
@@ -747,7 +747,7 @@
 		\end{equation}
 		
 		\begin{equation}
-			SQ_\mathrm{Tcor} = \sum_{i=1}^{I} \left(y_i - \bar{y} \right)^2
+			SQ_\mathrm{Tcor} = \sum_{i=1}^{I} \left(y_i - \overline{y} \right)^2
 			\label{eqn:SQTcor}
 		\end{equation}
 		
@@ -789,6 +789,7 @@
 		Além disso, é possível observar que em frequências altas, os valores de G' e G'', principalmente, começam a oscilar. Essa oscilação não é real, e é devido a limitações de medida do equipamento. Para fazer os ajustes, todos os pontos a partir do momento em que começam a oscilar foram descartados. Os pontos que aparentam não seguir os modelos, mas que não mostram oscilação, foram mantidos. Os ajustes de Maxwell realizados para essas curvas estão nas figuras \ref{fig:oscilatorio_agua_maxwell1} e \ref{fig:oscilatorio_agua_maxwell2}. O código para esse ajuste se encontra na listagem \ref{lst:ajuste_maxwell}. Os outros modelos seguiram o mesmo modelo, variando-se as equações de acordo com o modelo.
 		
 		% todo: pensar se vale a pena mencionar a variação de \(G_0\). A Danila fala que isso ocorre mesmo, e que tem artigos que falam que isso deve ocorrer.
+		% todo: Rehage e Hoffmann em 1991 mostraram que não muda muito entre os picos. Transição sol-gel. O módulo é dependente da concentração de partículas ou o número de pontos de crosslinking por unidade de volume. Valor constante de G0 indica que a estrutura micelar não muda em função da força iônica. No mesmo artigo, ele fala que no segundo máximo as micelas ficaram negativas.
 		
 		\begin{figure}[h]
 			\begin{subfigure}[t]{0.5\textwidth}
