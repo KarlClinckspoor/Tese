@@ -341,7 +341,7 @@ Como uma aproximação, o modelo final utiliza \(F_{\mathrm{sphere}}\) ao invés
 \label{sec:modelo_MG_python}
 Esta seção mostrará as equações do modelo de micelas gigantes, utilizado neste trabalho. O modelo foi criado pelo Prof. Jan Skov Pedersen, em Fortran 77, e disponibilizado para o aluno para realizar os ajustes das curvas obtidas no ESRF. O aluno então transcreveu o código de Fortran para Python, uma linguagem mais clara, e criou um pequeno programa interativo que relaciona o modelo com seus parâmetros. O programa consegue também comparar uma curva teórica com dados experimentais, de modo a fornecer um bom chute inicial para o ajuste das curvas.
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{imagens/saxs/Modelo_dado_SAXS_python}
 	\caption{Dado real (azul) e modelo (vermelho) junto com os parâmetros de ajuste utilizados no modelo}
@@ -354,7 +354,7 @@ As equações descritas no apêndice anterior foram traduzidas em uma série de 
 
 Para facilitar o entendimento, a tabela \ref{tab:AP_corrs_blocos_equacoes} correlaciona as equações e os blocos de código onde aparecem.
 
-\begin{table}[H]
+\begin{table}[h]
 	\IBGEtab{%
 		\caption{Blocos de código e equações}
 		\label{tab:AP_corrs_blocos_equacoes}
@@ -375,7 +375,7 @@ Para facilitar o entendimento, a tabela \ref{tab:AP_corrs_blocos_equacoes} corre
 
 As seguintes equações não aparecem no código:
 
-\begin{table}[H]
+\begin{table}[h]
 	\IBGEtab{%
 		\caption{Equações não descritas}
 		\label{tab:AP_equacoes_n_descritas}
@@ -395,13 +395,13 @@ As seguintes equações não aparecem no código:
 
 \section{Código}
 
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/cadeias_WLM_1.py}
 	\caption{Cálculo das equações \ref{eqn:AP_saxs_MG_geral} e \ref{eqn:AP_Fsphere}}
 	\label{lst:WLM_geral}
 \end{listing}
 
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/cadeias_WLM_2.py}
 	\caption{Aplicação da equação \ref{eqn:AP_saxs_MG_geral} para uma faixa de \q. É esta a função que deve ser importada em outros pacotes para fazer uso da modelagem}
 	\label{lst:WLM_whole_q}
@@ -413,31 +413,31 @@ As seguintes equações não aparecem no código:
 %	\label{sec:apendice_F_KPchain}
 %	As equações da seção \ref{sec:equacoes_Fwc} relevantes ao cálculo do fator de cadeias com volume excluído então descritas nos códigos a seguir (listas \ref{lst:cadeia_KP_1}, \ref{lst:cadeia_KP_2}, \ref{lst:cadeia_KP_3}, \ref{lst:cadeia_KP_Debye}, \ref{lst:cadeia_KP_SI}).
 %	
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/cadeia_kratky_porod_inicial_1.py}
 	\caption{Cálculo do fator de cadeias de Kratky-Porod com volume excluído (Parte 1/3)}
 	\label{lst:cadeia_KP_1}
 \end{listing}
 
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/cadeia_kratky_porod_inicial_2.py}
 	\caption{Cálculo do fator de cadeias de Kratky-Porod com volume excluído (Parte 2/3)}
 	\label{lst:cadeia_KP_2}
 \end{listing}
 
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/cadeia_kratky_porod_inicial_3.py}
 	\caption{Cálculo do fator de cadeias de Kratky-Porod com volume excluído (Parte 3/3)}
 	\label{lst:cadeia_KP_3}
 \end{listing}
 
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/cadeia_kratky_porod_inicial_4.py}
 	\caption{Cálculo do fator de Debye}
 	\label{lst:cadeia_KP_Debye}
 \end{listing}
 
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/cadeia_kratky_porod_inicial_5.py}
 	\caption{Cálculo numérico da integral cardinal}  % todo: encontrar um nome melhor
 	\label{lst:cadeia_KP_SI}
@@ -447,7 +447,7 @@ As seguintes equações não aparecem no código:
 
 Agora que todas as equações necessárias para descrever as micelas gigantes estão corretamente descritas programaticamente, é possível utilizar o modelo facilmente em outros projetos. Supondo que todas as funções criadas estejam num pacote chamado \texttt{SAXS\_FF}, é possível chamar a função e plotar um gráfico igual ao da Fig. \ref{fig:saxs_modelo_dado_saxs_python} com o seguinte código (\ref{lst:utilizando_modelo_WLM}), bastante simples:
 
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/uso_modelo.py}
 	\caption{Exemplo de como utilizar o código de micelas gigantes para realizar um plot}  % todo: encontrar um nome melhor
 	\label{lst:utilizando_modelo_WLM}
@@ -850,27 +850,31 @@ Para acelerar o tratamento de dados, foram desenvolvidos alguns scripts para aux
 
 O programa SUPERSAXS necessita que existam duas linhas de comentário no cabeçalho do arquivo, seguido de uma linha com o número de pontos experimentais. Cada ponto experimental deve conter o valor de \q, em nm ou Å, intensidade e opcionalmente o erro (os valores de erro são estimados caso não estejam presentes). Além disso, o programa consegue analisar sequencialmente dados que possuem ajustes semelhantes, através de um arquivo \texttt{LIS}, que este script consegue criar também. Para executá-lo, basta rodar o comando \texttt{python converting\_files.py}. O código fonte se encontra nas listagens \ref{lst:conversao_supersaxs1} e \ref{lst:conversao_supersaxs2}.
 
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/converting_files1.py}
 	\caption{Código fonte para o script de conversão de dados do ESRF e LNLS para um formato compatível com o programa SUPERSAXS (1/2)}  
 	\label{lst:conversao_supersaxs1}
 \end{listing}
 
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/converting_files2.py}
 	\caption{Código fonte para o script de conversão de dados do ESRF e LNLS para um formato compatível com o programa SUPERSAXS (2/2)}  
 	\label{lst:conversao_supersaxs2}
 \end{listing}
 
+\FloatBarrier
+
 \section{Conversão do arquivo RESULT.DAT para um arquivo .csv}
 
 Os resultados dos ajustes do programa SUPERSAXS são gravados num arquivo chamado \texttt{RESULT.DAT}, sequencialmente. Porém, é trabalhoso importar esses dados para comparar os parâmetros de várias amostras, devido à sua formatação. Por esse motivo, foi criado um script que consegue converter esse arquivo em um arquivo \texttt{csv}.
 
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/converting_results.py}
 	\caption{Código fonte para o script de conversão de resultados de ajuste do programa SUPERSAXS para csv}  
 	\label{lst:conversao_resultados}
 \end{listing}
+
+\FloatBarrier
 
 \section{Conversão de .dat do LNLS para .pdh da Universidade de Graz}
 
@@ -878,11 +882,13 @@ O software \emph{SGI} desenvolvido pelo grupo do Prof. Otto Glatter da Universid
 
 O script encontra todos os arquivos \texttt{dat} da pasta onde o próprio se encontra e os transforma em \texttt{\_conv.dat}, que podem ser abertos diretamente pelo \emph{SGI}. O código fonte do script se encontra na listagem \ref{lst:LNLS_pdh}. Para utilizar este código, basta digitar no terminal \texttt{python LNLS\_dat\_to\_pdh.py} que a conversão será feita automaticamente.
 
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/LNLS_dat_to_pdh.py}
 	\caption{Código fonte para o script the conversão de \texttt{dat} para arquivo similar ao \texttt{pdh} da Universidade de Graz}  % todo: encontrar um nome melhor
 	\label{lst:LNLS_pdh}
 \end{listing}
+
+\FloatBarrier
 
 \section{Desmembramento de arquivos exportados pelo software \mbox{RheoWin}}
 
@@ -894,17 +900,42 @@ Como pré-requisitos, é necessário possuir o pacote \emph{pandas} do Python, q
 
 O código fonte se encontra nas listagens \ref{lst:extracao_reologia1} e \ref{lst:extracao_reologia2}.
 
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/extracao_reologia1.py}
 	\caption{Código fonte para o script de extração de dados de reologia fornecidos pelo software RheoWin (1/2)}  
 	\label{lst:extracao_reologia1}
 \end{listing}
 
-\begin{listing}[H]
+\begin{listing}[h]
 	\inputminted{python}{./python/extracao_reologia2.py}
 	\caption{Código fonte para o script de extração de dados de reologia fornecidos pelo software RheoWin (2/2)} 
 	\label{lst:extracao_reologia2}
 \end{listing}
+
+\FloatBarrier
+
+\chapter{Criação de figuras}
+
+Durante a elaboração deste projeto, uma animação foi criada, mostrando como a reologia é afetada pelas contribuições elásticas e viscosas (figura \ref{fig:osc_simulacoes}). O código para criar essa animação se encontra a seguir. Para gerar a animação, pode ser utilizado o comando a seguir, que depende do software \emph{ffmpeg}.
+
+\begin{small}
+\begin{verbatim}
+	ffmpeg -framerate 21 -i frame\%4d.png -c:v h264 -r 30 -s 1920x1080 ./anim.mp4
+\end{verbatim}
+\end{small}
+
+\begin{listing}[H]
+	\inputminted{python}{./python/grafico_reologia_oscilatoria.py}
+	\caption{Código fonte para o script de criação da figura \ref{fig:osc_simulacoes}, e para uma animação (1/2)}  
+	\label{lst:oscilatorio_animacao1}
+\end{listing}
+\FloatBarrier
+\begin{listing}[h]
+	\inputminted{python}{./python/grafico_reologia_oscilatoria2.py}
+	\caption{Código fonte para o script de criação da figura \ref{fig:osc_simulacoes}, e para uma animação (2/2)} 
+	\label{lst:oscilatorio_animacao2}
+\end{listing}
+
 
 \chapter{Curso de Python}
 

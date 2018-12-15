@@ -1,17 +1,97 @@
-% todo: pensar em colocar uma parte falando sobre o método dos mínimos quadrados
-\part{Teoria}
+
+\part{Introdução e teoria}
+
+			\chapter{Surfactantes e autoassociação}
+	
+	Surfactantes são moléculas anfifílicas, ou seja, possuem regiões com polaridades diferentes. Uma das regiões interage com com o solvente, e portanto é chamada de liofílica, e a outra interage mal, chamada de liofóbica. Quando o solvente é água, essas regiões são chamadas então hidrofílicas e hidrofóbicas, respectivamente. Essas diferenças de afinidade resultam na orientação das moléculas de surfactante de acordo com as moléculas ao redor, de maneira a maximizar a quantidade de interações favoráveis. A figura \ref{fig:estrutura_surfactantes} mostra a estrutura de alguns surfactantes.
+	
+	\begin{figure}[h]  % todo: aumentar o tamanho das letras nessa figura
+		\centering
+		\includegraphics[width=6cm]{./imagens/introducao/estrutura_surfactantes}
+		\caption{Estruturas de alguns surfactantes. (a) dodecilsulfato de sódio (SDS) (b) brometo de hexadeciltrimetilamônio (\CTAB) (c) 1-palmitoil-2-oleoil-3-sn-fosfatidilcolina (d) bis-(2-etilhexil) sulfosuccinato de sódio (AOT) (e) poli(etilenoglicol) p-(1,1,3,3-tetrametilbutil)-fenil éter (Triton X-100)}
+		\label{fig:estrutura_surfactantes}
+	\end{figure}
+	
+	Em solução aquosa, as moléculas de surfactante se orientam na interface com o ar, com a região apolar direcionada para o ar, e a região polar direcionada para a água (Fig. \ref{fig:superficie_surfactante}. Esse efeito está relacionado à maior favorabilidade das interações polares com a água. É necessário, entretanto, considerar também as moléculas de solvente. Para maximizar as ligações de hidrogênio, as moléculas de água devem se organizar ao redor da cadeia hidrofóbica, resultando numa perda alta de entropia. Caso essas moléculas de água sejam liberadas, por exemplo, orientando a região apolar para o ar, o ganho entrópico das moléculas de água se sobrepõe à perda entrópica das moléculas de surfactante. Esse efeito, conhecido como efeito hidrofóbico, é um força motriz bastante importante da química coloidal.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{./imagens/introducao/superficie_surfactante}
+		\caption{Interface de água e ar, com moléculas de surfactantes direcionadas}
+		\label{fig:superficie_surfactante}
+	\end{figure}
+	
+	À medida que mais surfactante é adicionado, mais moléculas se concentram na superfície, até uma concentração limite. Nessa concentração, chamada de concentração micelar crítica (\cmc) as moléculas começam a formar estruturas de autoassociação, como, por exemplo, micelas esféricas (Fig. \ref{fig:micela_esferica}). Da mesma forma que no caso das moléculas de surfactante na superfície, a perda entrópica da formação de micelas é compensada pelo ganho entrópico das moléculas de água. 
+
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=5cm]{./imagens/introducao/micela_esferica}
+		\caption{Micela esférica formada por surfactantes em água}
+		\label{fig:micela_esferica}
+	\end{figure}
+	
+	Outras estruturas de autoassociação, além de micelas esféricas, são possíveis. Micelas esféricas podem se deformar, gerando micelas esferoidais, podendo possuir até 3 raios diferentes. Após isso, as micelas podem crescer unidimensionalmente, formando micelas cilíndricas. Esse crescimento pode continuar, formando micelas que possuem uma variedade de nomes na literatura, como vermiformes (\emph{wormlike}), gigantes (\emph{giant}), alongadas (\emph{elongated}), filiformes (\emph{threadlike}), parecidas com polímeros (\emph{polymerlike}). Os nomes mais comuns são \emph{wormlike} em inglês e \emph{gigantes} em português. As micelas gigantes são o foco deste trabalho. Uma ilustração de micelas gigantes se encontra na Fig. \ref{fig:micela_gigante}.
+	
+	% todo: colocar citações com exemplos desses nomes
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{./imagens/introducao/micela_gigante}
+		\caption{Micela gigante formada pela interação de salicilato de sódio e brometo de hexadeciltrimetilamônio}
+		\label{fig:micela_gigante}
+	\end{figure}
+	
+	Continuando a adição de surfactante, é possível a formação de várias outras estruturas de autoassociação. O fator que diferencia essas estruturas é o empacotamento da molécula de surfactante, que acaba resultando em curvaturas diferentes. O parâmetro de empacotamento \(P\) (Eq. \ref{eqn:param_empacot}) é um parâmetro geométrico utilizado para racionalizar o empacotamento das moléculas de surfactante.
+	
+	\begin{equation}
+	P = \dfrac{\frac{V}{l}}{a_0}
+	\label{eqn:param_empacot}
+	\end{equation}
+	
+	\noindent onde \(V\) é o volume da cadeia hidrofóbica, \(l\) é o comprimento da mesma e \(a_0\) é a área da região polar do surfactante. A figura \ref{fig:param_empacotamento} ilustra os elementos que compõem o parâmetro de empacotamento.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=2cm]{imagens/introducao/param_empacotamento}
+		\caption{Ilustração do parâmetro de empacotamento}
+		\label{fig:param_empacotamento}
+	\end{figure}
+	
+	Esse parâmetro pode ser visualizado como uma comparação entre as áreas das bases de um cilindro, sendo uma dada por \({V}/{l}\) e a outra por \(a_0\). Quando o termo hidrofóbico é pequeno, temos praticamente um cone, e valores de \(P\) menores que \(\sfrac{1}{3}\). Como a região polar é muito grande, a estrutura de autoassociação necessariamente possuirá uma curvatura alta, o que resulta em micelas esféricas. Seguindo esse raciocínio, tanto aumentando a contribuição hidrofóbica quanto diminuindo a contribuição hidrofílica, é possível obter valores de \(\sfrac{1}{3} \leq P < \sfrac{1}{2}\). Nesse momento, são formadas micelas gigantes. Quando as contribuições das duas regiões são equivalentes, (\(P = 1\)), as moléculas de surfactante possuem um formato cilíndrico, sem curvatura. Nessa situação, são formadas estruturas de curvatura zero, como lamelas. Se a contribuição da parte hidrofóbica for muito grande, são formados agregados com grande curvatura, mas de maneira oposta à original são formadas micelas esféricas reversas.
+	
+	% todo: inserir uma figura com os Ps e as estruturas de autoassociação.
+	
+	É possível controlar a estrutura de autoassociação controlando-se os parâmetros de \(P\). A adição de um sal inorgânico a um surfactante iônico, por exemplo, blinda as cargas da superfície micelar, diminuindo \(a_0\). Isso diminui a \cmc{} de surfactantes iônicos e, com a adição de sal suficiente, pode causar a transição para micelas cilíndricas, ou até gigantes.
+	
+	De maneira similar, o aumento da cadeia hidrofóbica (\(l\)) de um surfactante induz a micelização em concentrações menores (diminui a \cmc). Surfactantes com duas caudas, por exemplo, sequer formam micelas esféricas, partindo diretamente para sistemas lamelares em solução. Uma alteração de \(V\) pode ser realizada tanto com o aumento do comprimento da cauda do surfactante, como também com a adição de moléculas apolares, como hidrocarbonetos, que também induzem a micelização. É importante ressaltar que o parâmetro de empacotamento se refere somente à estrutura do surfactante, mas é necessário também considerar o contexto químico do sistema, que pode alterar os parâmetros, se comparados com um surfactante isolado.
+	ltando em estruturas diferentes. 
+	
+	O sistema mais bem descrito na literatura para a formação de micelas gigantes é uma mistura de um surfactante catiônico, como brometo de hexadeciltrimetilamônio (\CTAB) com salicilato de sódio, NaSal. O íon \Sal{} consegue se inserir na superfície micelar, por ser planar, possuir uma região hidrofóbica e carga oposta ao surfactante, e assim diminui \(a_0\) (\ref{fig:interacao_nasal_ctab}). Além disso, as interações cátion-\(\pi\) entre o surfactante e o anel aromático e as interações das partes polares da molécula de salicilato reforçam o posicionamento da molécula na paliçada micelar.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=5cm]{imagens/introducao/interacao_nasal_ctab}
+		\caption{Interação da molécula de salicilato com um surfactante catiônico e com o solvente}
+		\label{fig:interacao_nasal_ctab}
+	\end{figure}
+	
+	Concentrações pequenas, tanto de surfactante quanto de NaSal são capazes de induzir o crescimento micelar, devido à grande afinidade que o salicilato possui pela paliçada. O sistema 100 \mM{} de CTAB e 100 \mM{} de NaSal forma uma solução bastante viscosa, porém uma solução 100 \mM{} de CTAB e 100 \mM{} de NaCl é completamente fluída, devido à baixa afinidade do íon Cl\textsuperscript{-} pela superfície micelar.
+	
+	O solvente, como já informado, possui uma papel muito importante na formação de estruturas de autoassociação. Por exemplo, é necessário que exista uma penalidade entrópica da solvatação do surfactante suficientemente grande para que a associação ocorra. Essa penalidade é bastante alta em água, mas muito pequena em solventes como hexano. Apesar de sua importância, não há muitos estudos sobre como o solvente afeta a formação de micelas gigantes. Geralmente, os estudos são feitos em algum solvente puro. Neste trabalho, será estudado o papel de misturas binárias líquidas de água com outro componente na formação de micelas gigantes de NaSal e surfactantes catiônicos.
+		
+	Uma descrição mais completa sobre micelas gigantes se encontra no capítulo \ref{chap:micelas_gigantes}.
+	
+
 	\chapter{Reologia}
 		\section{Fundamentos}
 		
-		% todo: Pensar se eu devo colocar que vem do grego rheos, corrente/rio/fluxo e logia, estudo/ciência
-		% todo: pensar se eu devo falar que foi cunhado pelo Prof. Bingham em 1929
-		A reologia é a área ciência que estuda o fluxo e a deformação da matéria. Para causar um fluxo ou deformação, é necessário que uma força externa seja aplicada ao corpo. Reagindo à essa força, o material se comporta de tal maneira que algumas de suas características estruturais podem ser inferidas. Isso é feito intuitivamente por qualquer pessoa, por exemplo, ao apertar uma fruta para determinar sua firmeza e assim, se ela está apropriada para consumo ou não, para desagrado do vendedor.  % todo: pensar se eu deixo essa piadinha aqui ou não
+		A reologia é a área ciência que estuda o fluxo e a deformação da matéria. O termo vem do grego \emph{rheos}, fluxo, e \emph{logia}, ciência, e foi cinhado por Bingham em 1929. Para causar um fluxo ou deformação, é necessário que uma força externa seja aplicada ao corpo. Reagindo à essa força, o material se comporta de tal maneira que algumas de suas características estruturais podem ser inferidas. % Isso é feito intuitivamente por qualquer pessoa, por exemplo, ao apertar uma fruta para determinar sua firmeza e assim, se ela está apropriada para consumo ou não, para desagrado do vendedor.
 		
 		No campo coloidal, a reologia é utilizada para estudar como os corpos coloidais estão dispostas no meio, suas interações entre si e com o meio, e como fluem mediante a força externa. Por exemplo, soluções de micelas gigantes são altamente viscosas, pois as cadeias das micelas se entrelaçam e ramificam, então existe um mecanismo para oferecer resistência à força aplicada. Já soluções de micelas esféricas possuem baixa viscosidade, pois o tamanho das micelas é pequeno, e não existe esse mecanismo. A resistência se deve principalmente ao solvente, nesse caso.
 		
-		A viscosidade pode ser definida, de maneira pouco rigorosa, como a resistência ao fluxo de um material. Então água possui baixa viscosidade, já mel, uma solução concentrada de açúcar, possui alta viscosidade. Porém, quando tenta-se aplicar essa definição para outros tipos de materiais, aparecem problemas. Manteiga mantém seu formato, ao contrário de mel, que sempre flui, mas é muito mais fácil passar manteiga num pedaço de pão do que mel. Qual seria mais viscoso? % todo: mencionar amido de milho funciona?
+		A viscosidade pode ser definida, de maneira pouco rigorosa, como a resistência ao fluxo de um material. Então água possui baixa viscosidade, já mel, uma solução concentrada de açúcar, possui alta viscosidade. Porém, quando tenta-se aplicar essa definição para outros tipos de materiais, aparecem problemas. Manteiga mantém seu formato, ao contrário de mel, que sempre flui, mas é muito mais fácil passar manteiga num pedaço de pão do que mel. Já amido de milho em água aparenta ser resistente quando forçado a se mover, mas flui quando para. Qual seria mais viscoso? 
 		
-		% todo: checar o tipo de emulsão da manteiga
 		O comportamento diferente da manteiga é causado por sua microestrutura coloidal. Manteiga é uma emulsão água em óleo, ou seja, há gotículas de água estabilizadas pelas proteínas do leite dispersas e compactadas num meio contínuo de óleo. As forças atrativas entre as gotículas, e a concentração relativa pequena de óleo, faz com que as gotículas consigam se estruturar no meio, impedindo o fluxo sob uma força externa bastante fraca como a gravidade. Porém, as forças entre as gotículas podem ser rompidas quando uma força externa um pouco mais forte é aplicada. Após o rompimento das interações intergotículas, o fluxo se torna fácil. Se a força for removida, as interações são reformadas e o material volta a assumir sua consistência característica.
 		
 		Portanto, a viscosidade da manteiga dependeu da força que estava sendo aplicada. Em forças baixas, o material aparentava ser altamente viscoso, já em forças maiores, o material aparentava ser pouco viscoso. Não existe um valor único de viscosidade que pode ser atribuído à manteira, da mesma maneira que é feito com água. Somente é possível estabelecer viscosidades aparentes dependentes da força aplicada.
@@ -56,14 +136,21 @@
 		
 			\subsection{Cisalhamento e curvas de fluxo}
 			
-			O cisalhamento é um tipo de movimento que ocorre no sentido do plano da amostra, perpendicular ao plano normal. A magnitude do cisalhamento \(\gamma\) é calculada a partir da altura \(z\) da amostra e o grau de deformação \(\Delta x\), como mostra a Eq. \ref{eqn:cisalhamento}. \(\gamma\) é adimensional.
+			O cisalhamento é um tipo de movimento que ocorre no sentido do plano da amostra, perpendicular ao plano normal (Fig. \ref{fig:cisalhamento}). A magnitude do cisalhamento \(\gamma\) é calculada a partir da altura \(z\) da amostra e o grau de deformação \(\Delta x\), como mostra a Eq. \ref{eqn:cisalhamento}. \(\gamma\) é adimensional.
 			
-			\begin{equation}  % todo: pensar em colocar isso em paralelo à uma figura semelhante à da Wikipedia
+			\begin{equation}  
 				\gamma = \frac{\Delta x}{z}
 				\label{eqn:cisalhamento}
 			\end{equation}
 			
-			A tensão de cisalhamento \(\tau\) é a força necessária para aplicar um cisalhamento divido pela área de aplicação (Eq. \ref{eqn:tensao_cisalhamento}). A unidade usual para \(\tau\) é Pa.
+			\begin{figure}[h]
+				\centering
+				\includegraphics[width=0.5\textwidth]{imagens/reologia/cisalhamento}
+				\caption{}
+				\label{fig:cisalhamento}
+			\end{figure}
+			
+			A tensão de cisalhamento \(\tau\) é a força \(F\) necessária para aplicar um cisalhamento divido pela área de aplicação (Eq. \ref{eqn:tensao_cisalhamento}). A unidade usual para \(\tau\) é Pa.
 			
 			\begin{equation}
 				\tau = \frac{F}{A}
@@ -90,7 +177,7 @@
 			
 			A figura \ref{fig:reol_newt_exemplos} mostra curvas de fluxo simuladas para um fluido Newtoniano de viscosidade \(\eta=10\) Pa.s\menosUm.
 			
-			\begin{figure}[H]
+			\begin{figure}[h]
 				\begin{subfigure}[t]{.5\textwidth}
 					\includegraphics[width=\textwidth]{./imagens/reologia/newtoniano_exemplo_tauGP}
 					\caption{\(\tau \times \dot{\gamma}\)}
@@ -116,29 +203,34 @@
 			
 			A deformação de um sólido Hookeano pode ser tanto compressiva quando extensiva, dependendo do sinal de \(\gamma\), e consequentemente a tensão retornada possui a direção oposta da tensão aplicada inicialmente. 
 			
-			O modelo físico associado ao sólido Hookeano é a mola. É possível que uma mola, quando estendida demasiadamente, não retorne à sua extensão original. Isso ocorre porque a Eq. \ref{eqn:Hooke} se aplica somente a uma região dos possíveis valores de \(\gamma\). A fig X mostra o comportamento Hookeano de amostras.
-			
-			% todo: colocar uma figura do Goodwin e Hughes de viscosidade, para mostrar o comportamento não Hookeano.
-			
+			O modelo físico associado ao sólido Hookeano é a mola. É possível que uma mola, quando estendida demasiadamente, não retorne à sua extensão original. Isso ocorre porque a Eq. \ref{eqn:Hooke} se aplica somente a uma região dos possíveis valores de \(\gamma\). A figura \ref{fig:naohookeano_goodwinhughes} mostra o comportamento Hookeano, e não Hookeano, de uma borracha vulcanizada.
+					
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.7\linewidth]{imagens/artigos/nao_hookeano_goodwin_hughes}
+				\caption{Tensão por extensão de cisalhamento de uma amostra de borracha vulcanizada. A região Hookeana está entre 40\% de deformação. Além disso, o comportamento da borracha desvia, e é possível que danos ocorram à estrutura. Retirado de % ref Goodwin Hughes
+				}
+				\label{fig:naohookeano_goodwinhughes}
+			\end{figure}
+
 			\subsection{Fluidos não-Newtonianos}
 			\label{sec:teoria_fluidos_NN}
 			Fluidos que não obedecem a lei de Newton (Eq. \ref{eqn:Newton}), portanto possuem valores de viscosidade dependentes da taxa de cisalhamento, são chamados de fluidos não-Newtonianos. Dentro dessa classificação, há vários tipos de fluido, dependendo de como \(\eta\) varia com (\(\dot{\gamma}\)). Alguns dos tipos possíveis são:
 			
 			\begin{itemize}[noitemsep]
-				\item Plásticos: Viscosidade inicial é muito alta ou, teoricamente, infinita, até a tensão atingir um valor específico, chamado de tensão limite ou \emph{yield-stress}, quando o material começa a fluir. Exemplo: Manteiga, géis. % todo: achar se o termo é tensão limite mesmo
+				\item Plásticos: Viscosidade inicial é muito alta ou, teoricamente, infinita, até a tensão atingir um valor específico, chamado de tensão limite ou \emph{yield-stress}, quando o material começa a fluir. Exemplo: Manteiga, géis.
 				\item Pseudoplásticos ou \emph{shear-thinning}: Viscosidade alta, mas finita, em baixas taxas de cisalhamento, e decai com o aumento da taxa de cisalhamento, atingindo um valor mínimo. Exemplo: soluções de micelas gigantes.
 				\item Dilatantes: Viscosidade baixa a baixas taxas de cisalhamento, e aumenta com o aumento da taxa. Exemplo: Dispersões de amido em água.
 			\end{itemize}
 			
-			% Todo: colocar a figura dos vários tipos de comportamento aqui.
 			
 			% todo: pensar melhor sobre isso de contribuições elásticas e viscosas. O que eu escrevi aqui é o oposto do que aparece no diagrama de frequência, com a viscosidade complexa. Qual é a relação?
 			
-			Sob taxas de cisalhamento baixas, micelas gigantes em solução estão emaranhadas. Isso dificulta a movimentação do solvente e da solução como um todo, resultado em uma viscosidade aparente alta. Nesse regime, o comportamento elástico predomina. Quanto maior for o entrelaçamento das micelas, maior é a contribuição do comportamento elástico, e maior é a viscosidade aparente. À medida que a taxa é aumentada, as micelas gigantes começam a se alinhar ao fluxo, de modo a diminuir o gradiente de velocidade que cada cadeia sente. Isso facilita o fluxo e diminui a estruturação que resulta no comportamento elástico, o que acaba diminuindo a viscosidade aparente.
+			Sob taxas de cisalhamento baixas, micelas gigantes em solução estão emaranhadas. Isso dificulta a movimentação do solvente e da solução como um todo, resultado em uma viscosidade aparente alta. Quanto maior for o entrelaçamento das micelas, maior é a viscosidade aparente. À medida que a taxa é aumentada, as micelas gigantes começam a se alinhar ao fluxo, de modo a diminuir o gradiente radial de velocidade que cada cadeia sente. Isso facilita o fluxo e diminui a estruturação que resulta no comportamento elástico, o que acaba diminuindo a viscosidade aparente.
 			
-			Após um valor específico de taxa de cisalhamento, a viscosidade atinja um mínimo pois não há mais como aumentar o alinhamento das micelas. Nessa situação, a viscosidade aparente é predominantemente devido ao solvente, e a contribuição Newtoniana é predominante. A figura \ref{fig:reol_pseudoplastico_exemplos} mostra a curva de fluxo de um material pseudoplástico, tanto .\footnote{Construção: vide seção \ref{sec:apn_tratamento_CF}. Parâmetros: Modelo de Carreau, \(\eta_0=10\), \(\eta_{\infty}=1\), \(\dot{\gamma}_b=10\), \(n=10\).} É possível que as cadeias comecem a se estruturar, formando \emph{shear induced structures}, mas isso não foi observado neste trabalho.
+			Após um valor específico de taxa de cisalhamento, a viscosidade atinja um mínimo pois não há mais como aumentar o alinhamento das micelas. Nessa situação, a viscosidade aparente é predominantemente devido ao solvente, e a contribuição Newtoniana é predominante. A figura \ref{fig:reol_pseudoplastico_exemplos} mostra a curva de fluxo de um material pseudoplástico.\footnote{Construção: vide seção \ref{sec:apn_tratamento_CF}. Parâmetros: Modelo de Carreau, \(\eta_0=10\), \(\eta_{\infty}=1\), \(\dot{\gamma}_b=10\), \(n=10\).} É possível que as cadeias comecem a se estruturar, formando \emph{shear induced structures}, mas isso não foi observado neste trabalho.
 	
-			\begin{figure}[H]
+			\begin{figure}[h]
 				\begin{subfigure}[t]{.5\textwidth}
 					\includegraphics[width=\textwidth]{./imagens/reologia/pseudoplastico_tau}
 					\caption{\(\tau \times \dot{\gamma}\)}
@@ -155,7 +247,7 @@
 			
 			No entanto, as curvas de fluxo são frequentemente plotadas na escala log-log. Nesse tipo de gráfico (Fig. \ref{fig:reol_pseudoplastico_loglog}), é possível observar a região com viscosidade constante em baixas taxas de cisalhamento, chamada de platô Newtoniano, devido à sua constância. Essa valor também é chamado de viscosidade no repouso, \(\eta_0\).
 			
-			\begin{figure}[H]
+			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{./imagens/reologia/Pseudoplastico_loglog}
 				\caption{Curva de fluxo de um fluído pseudoplástico na escala log-log, mostrando o valor da viscosidade no repouso, \(\eta_0\).}
@@ -163,6 +255,9 @@
 			\end{figure}
 		
 			Para obter o valor da viscosidade no repouso, é possível tanto realizar um ajuste linear da região inicial na escala log-log, ou ajustar um modelo à curva, como o modelo de Cross, Carreau e Carreau-Yasuda. Mais informações sobre a modelagem estão na seção \ref{sec:modelagem_curva_fluxo}.
+			
+			Curvas de fluxo são experimentos realizados no regime não linear, ao contrário da reologia oscilatória, descrita a seguir. 
+		\FloatBarrier
 
 		\section{Reologia oscilatória}
 			\subsection{Princípios e aquisição de dados}
@@ -176,7 +271,7 @@
 				\label{eqn:osc_gamma_t}
 			\end{equation}
 			
-			\noindent onde \(\gamma_0\) é a deformação máxima e \(\omega\) é a frequência de perturbação. As deformações aplicadas ao material devem ser tais que não ocorra desestruturação do mesmo. Por exemplo, uma deformação muito grande pode causar a quebra de ligações químicas de um polímero, o que altera irreversivelmente as suas características reológicas. Por esse motivo, é necessário modular também a tensão aplicada.
+			\noindent onde \(\gamma_0\) é a deformação máxima e \(\omega\) é a frequência de perturbação. As deformações aplicadas ao material devem ser tais que não ocorra desestruturação do mesmo, isso é, o sistema deve permanecer no regime linear. Por exemplo, uma deformação muito grande pode causar a quebra de ligações químicas de um polímero, o que altera irreversivelmente as suas características reológicas. Por esse motivo, é necessário modular também a tensão aplicada.
 			
 			Um material elástico responde à deformação imediatamente com uma força no sentido oposto ao sentido da deformação. Já materiais viscosos respondem à deformação quando há uma mudança na direção, ou seja, a resposta desses materiais é totalmente defasada em relação à aplicação da deformação. Já materiais viscoelásticos, por terem componentes de ambos os tipos, possuem uma defasagem intermediária. O grau dessa defasagem é proporcional ao grau de comportamento elástico e viscoso. Levando isso em consideração, a tensão \(\tau\)  é expressa de acordo com a Eq. \ref{eqn:osc_tau_t}.
 			
@@ -251,12 +346,12 @@
 				\label{eqn:visc_complexa}
 			\end{equation}  % ref Rehage Hoffmann 1991
 			
-			A viscosidade complexa possui uma correlação direta com a viscosidade dinâmica, da curva de fluxo, em valores iguais de frequência de oscilação e taxa de cisalhamento. Essa regra é conhecida como regra de Cox-Merz. % todo: ref Cox, W. P., and MERZ, E. H., 1958, J. Polym. Sci., 28, 619
+			A viscosidade complexa possui uma correlação direta com a viscosidade dinâmica, da curva de fluxo, em valores iguais de frequência de oscilação e taxa de cisalhamento. Essa regra é conhecida como regra de Cox-Merz. % todo: ref Cox, W. P., and MERZ, E. H., 1958, J. Polym. Sci., 28, 619, Manero et al. - 2002
 			
 			A Figura \ref{fig:osc_simulacoes} mostra uma série de simulações do modelo apresentado aqui. A deformação em função do tempo foi calculada, e o ângulo de defasagem foi aumentado gradativamente de 0° para 90°. 
 
 			
-			\begin{figure}[H]
+			\begin{figure}[h]
 				\begin{subfigure}[t]{0.3\textwidth}
 					\centering
 					\includegraphics[width=\textwidth]{./imagens/reologia/Simulacao_visc_0}
@@ -295,14 +390,16 @@
 %				\end{subfigure}
 			\caption{Simulações do comportamento de um fluido sob cisalhamento cossenoidal. As imagens mostram a deformação \(\gamma\) em função do tempo, a tensão total \(\tau\) de resposta em função do tempo, decomposta em suas componentes elástica e viscosa. No título de cada gráfico está a contribuição, em porcentagem, de cada componente do material. O ângulo de defasagem está ilustrado na figura.}
 			\label{fig:osc_simulacoes}
-			\end{figure}  % todo: colocar o código para essa figura nos apêndices
+			\end{figure} 
 			
+			\FloatBarrier
 			
 			\subsection{Modelo de Maxwell}
 			
+			
 			O modelo de Maxwell é construído juntando-se um elemento elástico (mola) e um elemento viscoso (dissipador), ideais, em série. A Figura \ref{fig:ilust_modelo_maxwell} ilustra essa construção.
 			
-			\begin{figure}[H]
+			\begin{figure}[h]
 				\centering
 				\includegraphics[width=1.5cm]{./imagens/reologia/maxwell_mola_dissipador}
 				\caption{Modelo de Maxwell: Mola com constante elástica \(G\) e dissipador com constante viscosa \(\eta\) em série}
@@ -327,14 +424,14 @@
 			Utilizando as condições de contorno necessárias, essa equação pode ser resolvida, resultando em (Eq. \ref{eqn:Maxwell_dif_resolvida}):
 			
 			\begin{equation}
-				\tau(t) = \tau_0 e^{\left( -\frac{G}{\eta}t \right)}
+				\tau(t) = \tau_0 \exp \left( -\dfrac{G}{\eta}t \right)
 				\label{eqn:Maxwell_dif_resolvida}
 			\end{equation}
 			
 			O termo exponencial na Eq. \ref{eqn:Maxwell_dif_resolvida} possui unidade de tempo e é a relação entre as componentes elástica e viscosa do material. Essa relação recebe o nome de tempo de relaxação, \(\tau_{\mathrm{rel}}\) (Eq. \ref{eqn:Maxwell_tempo_rel_def})
 			
 			\begin{equation}
-				\tau(t) = \tau_0 e^{\sfrac{-t}{\tau_{\textrm{rel}}}}
+				\tau(t) = \tau_0 \exp \left(\dfrac{-t}{\tau_{\textrm{rel}}}\right)
 				\label{eqn:Maxwell_tempo_rel_def}
 			\end{equation}
 		
@@ -348,6 +445,8 @@
 				-\tau_{\textrm{rel}} \dfrac{\mathrm{d}\tau}{\mathrm{d}t} + \eta\dfrac{\mathrm{d}\gamma}{\mathrm{d}t}
 				\label{eqn:Maxwell_inicio_g1g2}
 			\end{equation}
+			
+			% todo: trocar o G por G_0 e achar onde é melhor fazer isso
 			
 			É possível substituir as expressões de tensão e \ref{eqn:osc_gamma_im} e \ref{eqn:osc_tau_im} na expressão \ref{eqn:Maxwell_inicio_g1g2} para obter uma expressão em função do tempo, da frequência e do ângulo de fase. Já realizando as derivações, obtemos:
 			
@@ -399,7 +498,7 @@
 				\label{eqn:Maxwell_G2_def}
 			\end{equation}
 			
-			É interessante notar que a relação \(\sfrac{G''}{G'}\), que equivale a \(\tan(\theta)\) (\ref{eqn:osc_tan_teta}), também se relaciona com o tempo de relaxação:
+			É interessante notar que a relação \(\sfrac{G''}{G'}\), que equivale a \(\tan(\theta)\) (\ref{eqn:osc_tan_teta}), também se relaciona com o tempo de relaxação. 
 			
 			\begin{equation}
 				\tan(\theta) = \dfrac{G''}{G'} = \dfrac{1}{\omega\tau_{\textrm{rel}}}
@@ -440,8 +539,7 @@
 			
 			Para a obtenção de valores confiáveis para os parâmetros \(G_0\) e \(\tau_{\mathrm{rel}}\), é necessário realizar um ajuste dessas curvas. Porém, ambos G' e G'' são descritos pelo mesmo conjunto de parâmetros. Ao invés de se fazer dois ajustes e encontrar quatro parâmetros, é ideal realizar um ajuste das duas curvas simultaneamente. Isso pode ser feito minimizando-se um vetor com os resíduos das duas curvas concatenados. Isso pode ser feito utilizando-se, por exemplo, o Excel, com a ferramenta \emph{Solver} para minimizar o resíduo.
 			
-			
-			
+
 			\subsection{Modelos mais complexos}
 			
 			Experimentalmente, existem divergências entre o modelo de Maxwell e os espectros mecânicos dos materiais. Geralmente, essas divergências aparecem devido ao aparecimento de outros  mecanismos de relaxação em frequências mais altas. Para isso, existem alguns modelos que visam corrigir o modelo de Maxwell, afetando principalmente essa região.
@@ -483,7 +581,7 @@
 			
 			A Figura \ref{fig:comparativo_modelos} compara os três modelos mais complexos apresentados com o modelo de Maxwell. 
 			
-			\begin{figure}[H]
+			\begin{figure}[h]
 				\begin{subfigure}[t]{.5\textwidth}
 					\centering
 					\includegraphics[width=\textwidth]{./imagens/reologia/modelos_comparativo_max}
@@ -514,7 +612,29 @@
 				\label{fig:comparativo_modelos}
 			\end{figure}
 			
-			% todo: pensar se eu devo descrever os detalhes de micelas gigantes aqui, ou na seção de micelas mesmo.
+			Outro modelo, recentemente proposto por % García e Saraji
+			, oriundo do modelo de Cates, utiliza um tempo de relaxação para as micelas que é dependente da frequência de oscilação. Mais detalhes podem ser encontrados na referência. Nesse modelo, os módulos G' e G'' são praticamente idênticos aos módulos do modelo de Maxwell, porém o tempo de relaxação é composto por um termo \(\tau_{\textrm{rel}, 0}\), que multiplica uma exponencial que possui um termo empírico, \(\beta\).
+			
+			\begin{equation}
+			G' = \dfrac{ G \omega^2 \tau_{\textrm{rel}}(\omega)^2   }{  1 + \omega^2 \tau_{\textrm{rel}}(\omega)^2  } = %
+				 \dfrac{ G \omega^2 \left(  \tau_{\textrm{rel}, 0} e^{-0.5\beta(\omega)}  \right)^2   }{  1 + \omega^2 \left(  \tau_{\textrm{rel}, 0} e^{-0.5\beta(\omega)}  \right)^2  }
+			\label{eqn:garcia_saraji_g1}
+			\end{equation}
+			
+			\begin{equation}
+			G'' = \dfrac{ G \omega \tau_{\textrm{rel}}(\omega)   }{  1 + \omega^2 \tau_{\textrm{rel}}(\omega)^2  } = %
+			      \dfrac{ G \omega \tau_{\textrm{rel}, 0} e^{-0.5\beta(\omega)}   }{  1 + \omega^2 \left(  \tau_{\textrm{rel}, 0} e^{-0.5\beta(\omega)}  \right)^2  }
+			\label{eqn:garcia_saraji_g2}
+			\end{equation}
+			
+			sendo que \(\beta\) é
+			
+			\begin{equation}
+				\beta = a \omega^b
+			\end{equation}
+			
+			\noindent onde \(a\) é o tempo característico da solução viscoelástica, em segundos e \(b\) é a potência da solução viscoelástica, sem dimensão.
+			
 			% todo: colocar o modelo de García-Saraji
 	\chapter{Calorimetria de titulação isotérmica}
 	
@@ -552,7 +672,7 @@
 		\end{figure}
 		
 		\section{Calorimetria de micelização}
-		
+		\label{sec:calorimetria_micelizacao}
 		A partir de um conjunto de dados como os da figura \ref{fig:ITC_exemplo}, é possível calcular a \cmc{} e a entalpia de micelização, \DHmic. A \cmc{} é determinada pelo ponto de inflexão, onde a primeira derivada do entalpograma é maior (ou menor). A \DHmic{} é determinada realizando-se dois ajustes lineares das regiões iniciais e finais do entalpograma. A diferença de entalpia dos pontos de intersecção desses ajustes com uma reta horizontal na \cmc{} fornece o \DHmic{} sem correção. Após isso, é necessário corrigir pela concentração de surfactante não micelizado na seringa, que é igual à \cmc{}. A figura \ref{fig:itc_extracao_cmc_dh} mostra esse método.
 		
 		\begin{figure}[h]
@@ -565,7 +685,7 @@
 		Para corrigir a entalpia de micelização observada para obter a entalpia de micelização correta, utiliza-se a equação \ref{eqn:itc_obtencao_dhmic}. 
 		
 		\begin{equation}
-			\Delta H^0_{\textrm{mic}} = \Delta H^0_{\textrm{obs}} \times \dfrac{c_{\textrm{seringa}}}{c_{\textrm{seringa}-\textrm{cmc}}}
+			\Delta H^0_{\textrm{mic}} = \Delta H^0_{\textrm{obs}} \times \dfrac{c_{\textrm{seringa}}}{c_{\textrm{seringa}-\mathrm{CMC}}}
 			\label{eqn:itc_obtencao_dhmic}
 		\end{equation}  % todo: ficar de olho aqui porque tem termos que não estão em macros e precisam ser revistos quando algo mudar
 		
@@ -736,7 +856,7 @@
 			\label{fig:espalhamento_esfera}
 		\end{figure}
 		
-		\begin{listing}[H]
+		\begin{listing}[h]
 			\inputminted{python}{./python/plot_saxs_esfera.py}
 			\caption{Código utilizado para a criação da figura \ref{fig:espalhamento_esfera}}
 			\label{lst:plot_micela_esferica}
@@ -808,7 +928,7 @@
 		
 	% + V_{\textit{ur}}\dfrac{w_{\textit{ur}}}{M_{\textit{ur}}
 	
-		\begin{table}[H]
+		\begin{table}[h]
 			\IBGEtab{\caption{Descrições das variáveis da equação \ref{eqn:SAXS_frac_volum} \label{tab:ur_fracvol_descr}}}
 			{\begin{tabular}{r l}
 				\toprule
@@ -1186,17 +1306,36 @@
 		
 		Como mencionado na introdução, micelas gigantes são formadas por moléculas de surfactante. O parâmetro de empacotamento dessas moléculas pode ser alterado pela adição de mais surfactante, sais inorgânicos, sais orgânicos, ou alterações nas características do solvente, como sua temperatura e pH. % todo: por refs aqui - Citar a classificação da Cécile
 		
-		A alteração do parâmetro de empacotamento leva a mudanças na curvatura micelar, que acaba levando à formação de estruturas diferentes. A adição de sais pode também alterar a curvatura. A figura X mostra um diagrama de fase em função da concentração de surfactante e da concentração de sal.
+		A alteração do parâmetro de empacotamento leva a mudanças na curvatura micelar, que acaba levando à formação de estruturas diferentes. A adição de sais pode também alterar a curvatura. A figura \ref{fig:regimes_e_estruturas_lequeux} mostra um diagrama de fase esquemático para estruturas alongadas.
 		
-		% todo: colocar figura do Lequeux 2007 - tese Danila
-		% todo: mencionar a concentração c*
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.5\textwidth]{imagens/artigos/estruturas_regimes_concentracoes_cates_fielding}
+			\caption{Diagrama de fase esquemático mostrando as diferentes estruturas alongadas que podem ser formadas em sistemas com surfactantes e sais. Em especial, vale destacar a concentração micelar crítica, \cmc, e a concentração de sobreposição, \(\phi^*\), que será introduzida posteriormente no texto. Além disso, o sistema com micelas gigantes pode tanto possuir micelas lineares, ramificadas, e formando redes.}
+			\label{fig:regimes_e_estruturas_lequeux}
+		\end{figure}
 		
-		As micelas gigantes possuem alguns comprimentos característicos. Começando do maior, temos o comprimento de contorno, \(\overline{L}_c\), que vai de uma ponta à outra da micela. Em solução, as micelas geralmente estão enoveladas, dependendo de sua rigidez, e o tamanho desse novelo é conhecido como raio de giro, \(R_g\).  Por sua vez, a rigidez intrínseca, cujo tamanho é definido pelo comprimento de persistência \(l_p\), também está relacionada ao comprimento de Kuhn, \(b\) pela relação \(b=2l_p\). A proporção entre o comprimento de contorno e de persistência de uma micela informa o quão flexível essa micela é. Por exemplo, micelas longas e com comprimento de persistência curto são bastante flexíveis, porém micelas curtas, da mesma ordem do comprimento de contorno, se comportam como cilindros rígidos. O menor dos comprimentos o raio da seção transversal (\(r_{\mathrm{CS}}\)) , que é da ordem do raio de micelas esféricas, em torno de poucos nanômetros. A figura XXX mostra as escalas de tamanho das micelas gigantes.
 		
-		% todo: colocar algumas estimativas do comprimento de persistência
-		% todo: colocar uma figura demonstrando as escalas de tamanho
+		As micelas gigantes possuem alguns comprimentos característicos. Começando do maior, temos o comprimento de contorno, \(L_c\), que vai de uma ponta à outra da micela. Em solução, as micelas geralmente estão enoveladas, dependendo de sua rigidez, e o tamanho desse novelo é conhecido como raio de giro, \(R_g\).  Por sua vez, a rigidez intrínseca, cujo tamanho é definido pelo comprimento de persistência \(l_p\), também está relacionada ao comprimento de Kuhn, \(k_L\) pela relação \(k_L=2l_p\). A proporção entre o comprimento de contorno e de persistência de uma micela informa o quão flexível essa micela é. Por exemplo, micelas longas e com comprimento de persistência curto são bastante flexíveis, porém micelas curtas, da mesma ordem do comprimento de contorno, se comportam como cilindros rígidos. O menor dos comprimentos o raio da seção transversal (\(r_{\mathrm{CS}}\)) , que é da ordem do raio de micelas esféricas, em torno de poucos nanômetros. A figura \ref{fig:escalas_tamanho_mg} mostra as escalas de tamanho das micelas gigantes.
 		
-		As micelas gigantes, por possuirem tamanhos finitos, necessitam de pontas. Necessariamente, o empacotamento das pontas é diferente do corpo cilíndrico, caso contrário, não possuiriam a curvatura necessária para ``fechar'' um cilindro. Como o empacotamento das pontas está diferente do empacotamento ditado pelas condições da solução, possuem uma energia maior que o corpo micelar. Se a causa principal para a mudança no parâmetro de empacotamento seja a presença de sais como NaSal, segue que a concentração de NaSal incorporado às pontas deve ser diferente do corpo micelar. % todo: colocar uma foto de uma ponta bem inchada, dos cryo-TEM da Danino.
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=\textwidth]{imagens/artigos/escalas_tamanho_MG}
+			\caption{Escalas de tamanho de micelas gigantes. Da esquerda para a direita, temos o raio de seção transversal \(r_\mathrm{CS}\), o comprimento de contorno \(L_c\), o comprimento de persistência \(l_p\), o raio de giro \(R_g\), o tamanho da rede polimérica \(\xi\) e o comprimento entre dois pontos de entrelaçamento \(l_e\). Esses dois parâmetros serão introduzidos na seção \ref{sec:teo_reologia_oscilatoria}.}
+			\label{fig:escalas_tamanho_mg}
+		\end{figure}
+		
+		O raio de seção transversal das micelas é próximo ao comprimento da cadeia do surfactante, que está em torno de 2 nm. O comprimento de persistência varia de 15 a 1000 nm, e o comprimento de contorno varia de 4 a 3600 nm. %ref Cécile where do we stand.
+		
+		As micelas gigantes, por possuírem tamanhos finitos, necessitam de pontas. O empacotamento das pontas é diferente do corpo cilíndrico, caso contrário, não possuiriam a curvatura necessária para ``fechar'' um cilindro. Como o empacotamento das pontas está diferente do empacotamento ditado pelas condições da solução, possuem uma energia maior que o corpo micelar. Se a causa principal para a mudança no parâmetro de empacotamento seja a presença de sais como NaSal, segue que a concentração de NaSal incorporado às pontas deve ser diferente do corpo micelar. As pontas, de maneira geral, são inchadas, e isso pode facilmente ser observado em micelas mais espessas, como de copolímeros em bloco (figura \ref{fig:pontas_inchadas_danino2009}).
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.5\textwidth]{imagens/artigos/Cryo_TEM_Pontas_Danino_2009}
+			\caption{Imagens de microscopia de transmissão a temperaturas criogênicas (Cryo-TEM) e uma solução de copolímero em dibloco neutro P3017-BdEO na concentração de 10 mg.mL\menosUm em tampão de fosfato. Nessa mistura, há a coexistência de micelas esféricas e de micelas alongadas curtas. É possível observar o interior da micela, mais escuro, e a coroa, mais clara, indicada pela seta branca. Além disso, a ponta inchada se mostra muito evidente. A barra de escala é igual a 50 nm. Retirado com permissão de % ref Danino 2009
+		}
+			\label{fig:pontas_inchadas_danino2009}
+		\end{figure}
 				
 		As moléculas de surfactante no meio se particionam nas duas regiões das micelas dependendo da energia relativa dessas duas regiões. Caso mais moléculas de surfactante se dirijam ao corpo micelar, haverá a formação de micelas mais compridas, caso contrário, haverá um número maior de micelas mais curtas. Assim, quanto maior for a energia das pontas, maior será o comprimento da micela.
 		
@@ -1239,12 +1378,11 @@
 		\section{Comportamento reológico}
 		
 		\subsection{Reologia oscilatória}
+		\label{sec:teo_reologia_oscilatoria}
+		Caso o comprimento das micelas seja longo o suficiente, isso é, a energia de cisão for grande, as soluções micelares começam a apresentar características elásticas. Isso é facilmente observado pelo fenômeno chamado de \emph{recoil}, quando uma solução é agitada numa direção, e se observa que o fluxo inverte de sentido após algum tempo, evidência de viscoelasticidade. 
 		
-		Caso o comprimento das micelas seja longo o suficiente, isso é, a energia de cisão for grande, as soluções micelares começam a apresentar características elásticas. Isso é facilmente observado pelo fenômeno chamado de \emph{recoil}, quando uma solução é agitada numa direção, e se observa que o fluxo inverte de sentido após algum tempo, evidência de viscoelasticidade. Essa transição ocorre acima da concentração de sobreposição \(\phi^*\), e as micelas se encontram no regime semidiluído. A separação das cadeias nesse regime é conhecido como o tamanho da rede (\emph{mesh size}), \(\xi\)., % todo: verificar se o c* é a concentração de viscoelasticidade ou de viscoelasticidade forte, e se antes ainda tem isso.
-		% todo: colocar no texto que a concentração de overlap está relacionada à fração volumétrica por \phi* = C* v_0, onde v_0 é o volume dos amfífilos.
-		% todo: \xi é igual ao comprimento de correlação?
-		Caso a concentração e o comprimento das micelas aumente, as soluções podem se tornar bastante rígidas, semelhantes a géis.
-		
+		Quando a concentração é aumentada significativamente, e as micelas começam a se sobrepor e a entrelaçar (\(\phi^*\)). A separação das cadeias é conhecido como o tamanho da rede (\emph{mesh size}), \(\xi\). Caso a concentração e o comprimento das micelas aumente, as soluções podem se tornar bastante rígidas, semelhantes a géis.
+
 		Quando essa rede de micelas é submetida a uma tensão, processos de relaxação começam a ocorrer no material. Micelas gigantes possuem, essencialmente, dois processos de relaxação de tensão, a reptação, presente também em polímeros, e a quebra e recombinação, oriunda de sua natureza autoassociativa. Nos modelos mais simples, o decaimento da tensão (\(\mu(t)\)) é exponencial, com um tempo de decaimento característico (\(\tau_{\mathrm{rel}}\)), que é modulado por \(G_0\). Essas relações estão expostas nas equações \ref{eqn:decaimento_stress} e \ref{eqn:decaimento_G_t}.
 		
 		\begin{equation}
@@ -1257,9 +1395,17 @@
 			\label{eqn:decaimento_G_t}
 		\end{equation} % ref Cates 1990
 		
-		A reptação é o movimento da cadeia através de um tubo formado pelos pontos de contato com cadeias vizinhas. Quando a micela alongada sai do tubo inicial, por movimentos em ambos os sentidos, seu processo de reptação terminou.
-		
-		% todo: colocar figura da reptação
+		A reptação é o movimento da cadeia através de um tubo formado pelos pontos de contato com as cadeias vizinhas, que oferecem obstáculos para o movimento. O modelo considera uma cadeia primitiva no centro do tubo formado pela média das várias conformações possíveis de uma cadeia real.  % ref Rheology for Chemists
+		Quando a micela alongada sai do tubo inicial, por movimentos em ambos os sentidos, seu processo de reptação terminou. O termo reptação foi inventado por Pierre de Gennes, % Ref Premio nobem de Física http://www.nobelprize.org/nobel_prizes/physics/laureates/1991/press.html
+		que posteriormente ganhou o prêmio Nobel em 1991, e faz menção ao movimento de rastejar de répteis (do latim \emph{reptare}). % Ref. Rheology for Chemists
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.5\textwidth]{imagens/artigos/reptacao_cates_1987}
+			\caption{Reptação de uma cadeia primitiva pelo tubo formado pelos pontos de contato com as cadeias vizinhas. (a) Em \(t=0\), o tubo é definido. (b, c) A difusão da cadeia ocorre pelas extremidades do tubo, devido às barreiras de entrelaçamento. (d) Após um \(t \ge \tau_\mathrm{rep}\), nada do tubo original permanece, e o novo tubo não tem tensão acumulada. Imagem retirada de % Cates 1987 Macromolecules
+			}
+			\label{fig:reptacao_cates1987}
+		\end{figure}
 		
 		O tempo de reptação é, claramente, dependente do comprimento da cadeia, e pode ser estimado pela equação \ref{eqn:tau_rep_comprimento_contorno}.
 		
@@ -1292,15 +1438,24 @@
 		\end{equation}
 		
 		Neste trabalho, serão apresentados regimes que tanto seguem quanto não seguem essa consideração. Há duas maneiras de se determinar isso. Uma é pelo ajuste do modelo de Maxwell. % todo: colocar referência para a parte da teoria que fala isso.
-		 Quanto melhor for o ajuste, mais correta é a consideração da equação \ref{eqn:tau_rel_dois_taus}. Outra maneira é pelos gráficos de Cole-Cole, onde G'' é plotado em função de G'. Caso haja somente um tempo de relaxação, será observado um semicírculo perfeito, de acordo com a equação \ref{eqn:cole_cole}. Esse tipo de gráfico por ser normalizado por \(G_0\), reduzindo a escala dos valores dos eixos e facilitando a comparação entre curvas diferentes.
+	    Quanto melhor for o ajuste, mais correta é a consideração da equação \ref{eqn:tau_rel_dois_taus}. Outra maneira é pelos gráficos de Cole-Cole (\ref{fig:colecole_berret}), onde G'' é plotado em função de G'. Caso haja somente um tempo de relaxação, e um decaimento exponencial, será observado um semicírculo perfeito, de acordo com a equação \ref{eqn:cole_cole}. Esse tipo de gráfico por ser normalizado por \(G_0\), reduzindo a escala dos valores dos eixos e facilitando a comparação entre curvas diferentes.
 		
 		\begin{equation}
 			\left(G' - \frac{G_0}{2}\right)^2 + G''^2 = \frac{G_0^2}{4}
 			\label{eqn:cole_cole}
 		\end{equation}
-
-		% todo: colocar um Cole-Cole aqui, de preferência o do Berret, que possui boas regiões de freq. altas
 		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.5\textwidth]{imagens/artigos/ColeCole_Berret_Appel_Porte_1993}
+			\caption{Diagrama de Cole-Cole para cloreto de cetilpiridínio (C\textsubscript{16}PyCl) e salicilato de sódio diluídas em soluções de cloreto de sódio 500 \mM. A proporção \Sal:C\textsubscript{16}PyCl foi mantida constante em 0,5. A fração mássica de surfactante foi de 0,98\% a 4\%. O semicírculo indica o comportamento Maxwelliano ideal, com um único tempo de relaxação. Imagem retirada de 
+			% Berret, Appel, Porte 1993 
+			% todo: pedir permissão.
+		}
+			\label{fig:colecole_berret}
+		\end{figure}
+
+	
 		Diagramas de Cole-Cole ajudam a identificar a região onde outros mecanismos de relaxação começam a operar. Um desses modos é chamado de ``respiração'' das cadeias (\emph{breathing motions}), onde flutuações no comprimento do tubo ocorrem, ao invés da reptação completa das cadeias. Além disso, pode ocorrer a movimentação de Rouse, conhecida na área de polímeros. % ref Granek Cates 1992
 		A região onde esses modos começam a se tornar relevantes é observada no final do diagrama de Cole-Cole, quando, ao invés de permanecer no semicírculo, a curva começa a subir. No reograma (G' e G'' por \(\omega\)), isso é observado quando G'' atinge um valor mínimo e começa a subir, sendo que o modelo de Maxwell prevê somente sua queda.
 		
@@ -1313,7 +1468,7 @@
 
 		\noindent onde \(G'_\infty\) é o módulo no platô extrapolado para a frequência onde ocorre o mínimo de G''.
 		
-		O valor de \(l_e\) é proporcional ao tamanho da rede polimérica \(xi\) e ao comprimento de persistência.
+		O valor de \(l_e\) é proporcional ao tamanho da rede polimérica \(\xi\) e ao comprimento de persistência.
 		
 		\begin{equation}
 			l_e \sim \xi^{\sfrac{5}{3}} l_p^{\sfrac{-2}{3}}
@@ -1325,6 +1480,8 @@
 		\begin{equation}
 			\xi \sim \left(  \frac{k_bT}{G'_\infty} \right) ^ \frac{1}{3}
 		\end{equation} % ref Berret 1993
+		
+		% todo: Figura 3 do artigo do Hoffmann Rauscher 1992 tem uma figura boa. Ver os termos da figura desse artigo com essas aqui. O artigo da Cécile, where do we stand, tem os termos e facilita a comparação
 		
 		O reograma para soluções de micelas gigantes que seguem o modelo de Maxwell é bastante similar ao apresentado na figura \ref{fig:modelo_maxwell}. Neste trabalho, várias soluções seguiram esse modelo, como será visto na seção \ref{sec:reologia_oscilatoria_experimental_agua}.
 		Esse comportamento pode ser interpretado da seguinte maneira. Em baixas frequências de perturbação (longos tempos), as micelas possuem tempo suficiente para deslizar umas pelas outras, então a maior parte da energia fornecida é perdida, logo o módulo viscoso, ou de perda, possui valores altos. Em frequências altas, a rede micelar e os entrelaçamentos conseguem armazenar a energia, não possuindo tempo suficiente para deslizar, então o módulo elástico, ou de armazenamento, é alto. Na região intermediária, ambos os mecanismos estão presentes, parte da energia é perdida e parte é armazenada, sendo que no ponto de cruzamento, exatamente metade da energia é preservada e metade é perdida.
@@ -1342,7 +1499,7 @@
 		
 		Tais soluções de surfactante e sal podem ser estudadas tanto por reologia oscilatória quanto por curvas de fluxo. Soluções de micelas gigantes, quando submetidas à uma taxa de cisalhamento crescentes, começam a se alinhar ao fluxo, diminuindo a viscosidade aparente da solução. Isso as caracteriza como fluidos pseudoplásticos. Quando a taxa de cisalhamento é baixa, a viscosidade não se altera, e pode-se obter uma grandeza conhecida como viscosidade no repouso \(\eta_0\) por uma variedade de técnicas (seção \ref{sec:teoria_fluidos_NN}).
 		
-		As alterações no perfil de viscosidade são devidas à mudanças nos mecanismos de relaxação das micelas, que por sua vez são dependentes da estrutura das micelas em solução, de sua carga e sua concentração. O perfil para \CTAB{} e NaSal, disposto na Fig. XXX, é geralmente dividido em cinco regiões.
+		As alterações no perfil de viscosidade são devidas à mudanças nos mecanismos de relaxação das micelas, que por sua vez são dependentes da estrutura das micelas em solução, de sua carga e sua concentração. O perfil para \CTAB{} e NaSal, disposto na Fig. \ref{fig:regioes_rh}, é geralmente dividido em cinco regiões.
 		
 		\begin{enumerate}
 			\item[I] Região altamente diluída, onde há micelas esféricas, seguido de micelas cilíndricas curtas e, em concentrações um pouco mais altas, de micelas gigantes muito distantes umas das outras.
@@ -1353,8 +1510,13 @@
 			\item[V] Região onde a quantidade de salicilato aumentou em demasia, e, ao invés do crescimento micelar ocorrer, existe somente a transição para micelas cilíndricas curtas, ou esféricas, com grande excesso de salicilato.
 		\end{enumerate}
 		
-		% todo: colocar uma figura com o perfil de viscosidade
-		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagens/reologia/regioes_RH}
+			\caption{Perfil de viscosidade de soluções com \CTAB{} 100 \mM{} e concentrações crescentes de NaSal. As linhas verticais separam as cinco regiões, onde o comportamento e a estrutura micelar são diferentes}
+			\label{fig:regioes_rh}
+		\end{figure}
+
 		Além desses fatores relativos ao salicilato, há uma contribuição do surfactante. A viscosidade do sistema \CTAB{} e NaSal é maior, em todas as proporções, que a viscosidade do sistema cloreto de hexadecilpiridínio (C\textsubscript{16}PyCl) e NaSal % ref: viviane lutz bueno langmuir
 		Essa diferença ocorre, de acordo com Hoffmann, % todo: achar a(s) referência(s)
 		devido aos contatos ``grudentos'' (\emph{sticky contacts}) causados pela atração entre grupos metila do \CTAB, hidrofóbicos, com os outros grupos metila de micelas vizinhas. Isso aumenta o tempo de relaxação estrutural, pois o deslizamento entre as micelas se torna mais lento, levando à maior viscosidade. O mesmo mecanismo não pode ocorrer, pois o grupo piridínio não possui tais metilas. 
@@ -1499,7 +1661,7 @@
 			\label{eqn:potencial_quim_eletrostatico}
 		\end{equation}
 		
-		\noindent onde \(c = a / (2 \pi r_\mathrm{cs} \lambda_B)\). Além disso, o fator \(k_bT\) substitui o termo \(e^2/4\pi\varepsilon_{ 0 }\varepsilon_\mathrm{água}\lambda_B\) da contribuição eletrostática. O termo positivo \(\sim N \ln N\) age contra o termo \((N - N_\mathrm{ponta}) \mu_\mathrm{cilindro}^\circ)\) (Eq. \ref{eqn:potencial_quimico_MG}), este que, por sua vez, leva ao crescimento das micelas. Somando a contribuição eletrostática ao potencial químico das micelas, chegamos à uma equação que leva as contribuições eletrostáticas em consideração
+		\noindent onde \(c = a / (2 \pi r_\mathrm{cs} \lambda_B)\). Além disso, o fator \(k_bT\) substitui o termo \(e^2/4\pi\varepsilon_{ 0 }\varepsilon_\mathrm{água}\lambda_B\) da contribuição eletrostática. O termo positivo \(\sim N \ln N\) age contra o termo \((N - N_\mathrm{ponta}) \mu_\mathrm{cilindro}^\circ\) (Eq. \ref{eqn:potencial_quimico_MG}), este que, por sua vez, leva ao crescimento das micelas. Somando a contribuição eletrostática ao potencial químico das micelas, chegamos à uma equação que leva as contribuições eletrostáticas em consideração
 		
 		\begin{equation}
 			\mu_N^\circ = (N - N_\mathrm{ponta})\mu_\mathrm{cilindro}^\circ + k_b T c \left[ N \ln (cN) - N \right] + N_\mathrm{ponta}\mu_\mathrm{ponta}^\circ
@@ -1526,21 +1688,114 @@
 		
 		\noindent onde \(\Lambda\) é a densidade de carga linear ao longo do eixo micelar.
 		
-		% Fazer uma breve introdução sobre ITC e o que se observa.
-		% Falar sobre o ITC e como ele consegue enxergar os processos de micelização
-	
+
 		\section{Comportamento calorimétrico}
 		
-		%		Para micelas gigantes, fixa-se uma concentração de aditivo e depois surfactante é titulado. O padrão da curva de $\Delta H \times C_{\textrm{surf}}$ é bastante característico. No início há muito NaSal e pouco TTAB, e ocorre a formação de micelas esféricas com NaSal. À medida que mais NaSal é incorporado, são formadas micelas mistas cilíndricas curtas . Numa determinada concentração, ocorre uma queda bastante brusca no valor de $\Delta H$, devido à fusão de várias micelas cilíndricas, formando micelas gigantes. A diferença de entalpia entre os estados final e inicial dessa queda brusca caracteriza $\Delta H_{\textrm{WLM}}$. A concentração no ponto mínimo caracteriza $c_{\textrm{WLM}}$%\cite{Ito2016}.
-		%		
-		%		Com a técnica de ITC, pode-se observar o quão favorável é a formação de micelas gigantes em determinadas condições. Quanto menor for $c_{\textrm{WLM}}$, mais favorável é a formação das micelas. A $c_{\textrm{WLM}}$ é referente ao grau de incorporação de aditivo na etapa de formação de micelas%\cite{Ito2016}
-		\section{Espalhamento de luz}
+		A calorimetria de titulação isotérmica é uma técnica que vem recentemente sendo utilizada para estudar a autoassociação de micelas gigantes. % refs Marija e alguns outros, além dos nossos artigos
+		Numa titulação típica, como mostrado na seção \ref{sec:calorimetria_micelizacao}, o surfactante é titulado em água, ou em alguma solução com algum polímero. Dessa forma, à medida que a concentração de surfactante aumenta, o sistema prossegue ao ponto onde a micelização ocorre, e, tipicamente, uma variação no calor trocado é observada. Na titulação de micelas gigantes, o mesmo procedimento foi adotado, porém agora, ao invés de se titular o surfactante em água, se titula numa solução do aditivo, neste caso, NaSal. Como o salicilato induz a micelização, é necessário uma concentração menor de surfactante na seringa para se observar o processo de micelização, que possui um formato diferente daquele de micelização normal (Fig. \ref{fig:ITC_exemplo}), como será demonstrado nesta seção.
 		
+		A figura XXXX mostra o sinal de uma titulação de \TTAB{} em uma solução de NaSal 1,5 \mM{}. Esse gráfico mostra vários detalhes comuns que são observados durante uma titulação. Próximo à região onde ocorre a formação de micelas gigantes, o ruído da linha de base do sistema aumenta significativamente. Além disso, há o surgimento de um segundo pico em cada injeção, mais largo. Esse segundo pico pode tanto ser endotérmico como exotérmico. Esses picos largos podem estar relacionados à um processo lento no sistema, de incorporação de \Sal{} nas micelas ou de fusão das mesmas. Essa aparente lentidão motivou os estudos de cinética deste trabalho. % todo: pensar em colocar um estudo mais aprofundado desse tipo nos resultados, após a reologia oscilatória
+		Geralmente, utiliza-se \TTAB{} nesse tipo de experimento, ao invés de \CTAB{}, pois a agregação é menos favorecida, deslocando as curvas para uma faixa maior de concentração de surfactante, e as soluções são menos viscosas no mínimo, resultando em dados melhores.
 		
+		% figura com inset da região intermediária
+		
+		% glicerina 20p tem pico para baixo
+		% em água tb tem
+		% sacarose, q não tem sinais negativos, não mostra isso
+		
+		O entalpograma integrado (Fig XXXX) é semelhante para todos os sistemas estudados até agora, de micelas gigantes, e inclusive foi chamado de ``assinatura'' da formação de micelas gigantes. % ref nosso artigo
+		Na literatura, o entalpograma foi tipicamente dividido em algumas regiões, começando pela formação de micelas mistas, esféricas ou cilíndricas curtas, seguido da fusão das micelas, liberando a energia de excesso das pontas (Eq. \ref{eqn:distribuicao_tamanho_MG}), que leva à queda brusca nos valores de \(\Delta H\). Em seguida, com a adição de mais \TTAB, o sistema sai da proporção ideal entre as espécies, e as micelas começam a encurtar até que, em grandes excessos de \TTAB, os valores de entalpia de mistura se aproximam de zero, ou seja, somente ocorre a diluição do conteúdo da seringa.
+		
+		Do entalpograma é possível obter a concentração de formação de micelas gigantes, \cwlm, e a entalpia de formação de micelas gigantes, \DHwlm. A posição de \cwlm{} não é no ponto de inflexão, pois o máximo de viscosidade para os sistemas \TTAB{} e NaSal se encontra no ponto mínimo. % ref artigo thiago
+		
+		% figura com esses parâmetros
+		
+		Resultados recentes do grupo, baseados nos experimentos de fluorescência apresentados neste trabalho, de tensão superficial e de fluorescência resolvida no tempo (na escala de ps), mostraram que essa interpretação está parcialmente equivocada. A região com baixa concentração de \TTAB{} não contém micelas esféricas ou cilíndricas curtas, e o início da incorporação de NaSal se inicia no ponto de inflexão da queda. Nesse ponto, o \Sal{} e os monômeros de \TTAB{} começam a se juntar, formando micelas alongadas com carga negativa, que rapidamente se neutraliza no ponto onde os valores de entalpia são mínimos, a viscosidade e, consequentemente, o comprimento das micelas é máximo. A tendência de não formar micelas cilíndricas curtas se deve à energia de excesso das pontas, que seria grande demais, em comparação com a energia do corpo, para micelas curtas. Quando há surfactante suficiente para formar micelas mais compridas, diminuindo a penalidade das pontas, o processo de autoassociação ocorre. % todo: ref desse artigo, se sair a tempo
+		% todo: mencionar na parte de fluorescência que foi observado, no ponto de inflexão, o aumento da concentração de NaSal.
+		Todavia, neste trabalho, utilizou-se a concentração no ponto mínimo das curvas, tanto para o cálculo de \DHwlm{} e de \cwlm.
+		
+		Outra maneira de se observar a autoassociação de micelas gigantes é titulando uma solução do cossoluto numa solução de surfactante. Esse processo se aproximaria mais dos diagramas de viscosidade (Fig. XXXX). % todo: colocar a referência
+		Esse tipo de experimento foi muito pouco estudado, e a definição de parâmetros como a \cmc{} ficam difíceis de serem definidas. Caso a agregação seja observada em determinada concentração de NaSal, a concentração de \TTAB{} nesse ponto seria definida como sua \cwlm{} para tal concentração de NaSal? Estudos mais aprofundados, de viscosimetria e espalhamento de luz, dentre outras técnicas, são necessários para definir essa área.
+		
+		% todo: colocar uma figura aqui da ida e da volta
+		
+		Uma terceira maneira de se estudar a formação de micelas gigantes é titulando uma solução de micelas gigantes em água. Esse tipo de experimento não foi muito aprofundado, e forneceria um segundo valor para a concentração de formação de micelas gigantes, assumindo, neste caso, que a proporção entre surfactante e aditivo se mantém constante.
+		
+		% todo: colocar as figuras de um dos dois experimentos aqui
+
 		
 		\section{Efeito do solvente}
 		\label{sec:efeito_solvente}
-		% Falar mais profundamente sobre os estudos do Hoffmann
+		
+		%\subsection{Estudos de Hoffmann sobre lamelas e micelas}
+		Hoffmann possui extensa experiência no campo de coloides, possuindo vários artigos importantes sobre micelas gigantes e outras estruturas de autoassociação. Alguns desses estudos observam como o solvente afeta a estrutura de estruturas de autoassociação, em especial lamelas e micelas gigantes.
+
+		% X, Y: \cite{Grabner2014, Song2008a}		
+		Em [X, Y], Hoffmann observou que a formação de lamelas não era afetada pela adição de alguns aditivos ao solvente, porém a distância interlamelar aumentava significativamente. A interpretação de Hoffmann para o intumescimento se baseou no índice de refração (\(n\)) do surfactante e do solvente, propriedades importantes para descrever a atração coloidal, como visto pela constante de Hamaker, Eq. \ref{eqn:constante_hamaker_lifshitz}.
+				
+		Quando a concentração de glicerina em água atinge 60\% v/v, o índice de refração do solvente \(n_3\) e do agregado \(n_1\) se tornam iguais. Nessa situação, a atração interlamelar diminui muito, pois a constante de Hamaker, proporcional à diferença desses índices de refração, se torna próxima de zero. Com a atração interlamelar anulada, as forças repulsivas de ondulação das lamelas conseguem separá-las, intumescendo o sistema.
+		
+		Hoffmann observou o mesmo comportamento para outros sistemas. Os sistemas estudados foram: diacilfosfatidilcolina com glicerina, 1,3-butanodiol, 1,2-propanodiol [X], uma mistura de 5\% de um surfactante não iônico Genapol 070 (LA070) com 50\mM{} de octanol em DMSO, glicerina e sacarose, e lecitina com glicerol [Y].
+		
+		% Grabner: diacylphosphocholine: glycerol, 1,3-butyleneglycol, 1,2-propyleneglycol, 
+		% Song: 5% Non-Ionic Surfactant Genapol 070 (LA070) with 50mM octanol in DMSO/water mixtures and glycerol/water, sucrose (household sugar)/water.
+		%       phospholips, lecithin: glycerol, dimethylsulfoxide, sugar(sucrose)
+		%       Lecithing: glycerol
+		
+		% todo: colocar uma lista de sistemas que o Hoffmann observou, para MG
+		
+		Posteriormente, Hoffmann estudou o efeito do solvente, utilizando glicerina, porém em micelas gigantes de \CTAB{} e NaSal. Observaram que havia uma grande diminuição na viscosidade dos dois picos de viscosidade, mas a região central, de mínimo de viscosidade, era pouco afetada. Nas regiões afetadas, a relaxação micelar ocorre principalmente por meio da reptação, e como a atração intermicelar se torna menor, devido à constante de Hamaker ser próxima de zero, as micelas conseguem reptar mais rapidamente, diminuindo a viscosidade. Na região central, onde o mecanismo principal é a quebra e recombinação, a atração intermicelar é pouco importante, portanto a viscosidade é pouco afetada. Maiores explicações para esse fenômeno podem ser encontradas na seção \ref{sec:efeito_solvente}.
+		
+		Estudos posteriores foram realizados por Abdel-Rahem, onde foi estudado o efeito do 1,3-butanodiol. Observou-se a concentração de 1,3-butanodiol necessário para resultar numa queda de viscosidade é muito menor que glicerina, nas mesmas condições de índice de refração. Isso informa que considerar somente as interações intermicelares não é suficiente para explicar o efeito do aditivo. O autor levanta a hipótese que há um efeito adicional que está alterando o comportamento, a constante dielétrica, que afeta as interações eletrostáticas no meio. Ambos os parâmetros afetam os mecanismos de relaxação estrutural das micelas, alterando os tempos de relaxação e, consequentemente, as viscosidades.
+		% todo: completar os detalhes aqui do artigo do Abdel Rahem
+		
 		% Falar sobre a hidrofilicidade da superfície micelar, o t3 de relaxação e a relação com os perfis de viscosidade.
 		
+		Hoffmann também, em correspondências pessoais, mencionou que conseguiu observar um tempo de relaxação adicional por birrefringência elétrica que estariam relacionados ao tempo em que as micelas demoram para tocar umas às outras. Esse processo, determinado como ``sticky contact'', promove a maior viscosidade para sistemas com \CTAB{} do que com, por exemplo, C\textsubscript{16}PyCl, e estaria relacionado à hidrofilicidade da superfície micelar. Logo, micelas gigantes com superfícies mais hidrofílicas passariam menos tempo em contato, e os processos de relaxação seriam mais rápidos. 
+		
+		% todo: mencionar nas discussões sobre essa hidrofilicidade.
+		
+		% todo: mencionar Hofmeister
+		
+		% todo: citar a classificação da Cécile em vários tipos de micelas que podem ser formadas, tese Danila
+		
+		\chapter{Inspirações para o projeto}
+
+		Os estudos de Hoffmann inspiraram grande parte deste trabalho, devido à correlação entre parâmetros macroscópicos do solvente com as propriedades reológicas das micelas gigantes. O fato de que é possível modular a viscosidade das micelas, mantendo sua estrutura, pela adição de glicerina resultou em vários questionamentos e conversas durante a visita de Hoffmann ao grupo. Logo depois, decidiu-se continuar esses estudos, expandindo-os utilizando outros aditivos.
+		
+		Além disso, enquanto se , notou-se que haviam resultados de titulações de calorimetria isotérmica que indicavam que poderiam existir dois processos ocorrendo em cada injeção, devido à existência de dois picos. A cinética desse processo era bastante longa. Além disso, esses processos cinéticos lentos ocorriam na região de formação de micelas gigantes. Começou-se a estudar técnicas para a determinação da cinética de crescimento.
+		
+		Pedersen, em uma série de artigos, observou o crescimento de micelas alongadas utilizando espalhamento de raios-X em baixos ângulos, resolvido no tempo. Para iniciar o crescimento das micelas, foi utilizado um aparato de \emph{stopped-flow}, onde duas soluções, que não continham micelas gigantes, eram misturadas e, após o equilíbrio, as micelas eram formadas.
+		
+		Em paralelo, observou-se que a fluorescência do salicilato se alterava dependendo da concentração de surfactante no meio. Caso esse processo de inserção e crescimento fosse lento o suficiente, seria possível observá-lo por fluorescência resolvida no tempo, mas em escalas de ms, ao invés de ps dos experimentos tradicionais desse ramo. Assim, o mesmo fenômeno seria observado, em paralelo, pois duas técnicas diferentes.
+			
+		
+	\chapter{Objetivos}
+		Os objetivos deste projeto são:
+		
+		\begin{itemize}[noitemsep]
+			\item Estudar como o solvente afeta a reologia de micelas gigantes de \CTAB{} e NaSal.
+			\begin{itemize}[noitemsep]
+				\item Variar a concentração de NaSal e observar como a viscosidade no repouso, \(\eta_0\), se comporta à medida que mais aditivo é adicionado à água.
+				\begin{itemize}[noitemsep]
+					\item Aditivos: Glicerina, sacarose, dimetilsulfóxido, 1,3-butanodiol, ureia.
+					\item Concentrações: 0-60\% \(m_{\mathrm{aditivo}}/\left(m_{\mathrm{aditivo}}+m_{\mathrm{água}}\right)\), dependendo do aditivo.
+				\end{itemize}
+				\item Utilizar a teoria vigente na literatura para explicar o comportamento de \(\eta_0\).
+				\item Propor novos fatores para complementar a teoria vigente, caso seja necessário.
+			\end{itemize}
+			\item Estudar como o solvente afeta a formação de micelas gigantes de \TTAB{} e NaSal, através de calorimetria de titulação isotérmica. Os aditivos são os mesmos estudados para reologia.
+			\begin{itemize}[noitemsep]
+				\item Titular \TTAB{} em NaSal 1,5\mM{} em soluções com concentrações crescentes de aditivo em água.
+				\item Titular \TTAB{} nas mesmas misturas binárias.
+				\item Comparar os resultados calorimétricos entre si e correlacioná-los com as propriedades do solvente.
+				\item Comparar os resultados calorimétricos com os resultados reológicos
+			\end{itemize}
+			\item Estudar a cinética de crescimento de micelas gigantes através de:
+			\begin{itemize}[noitemsep]
+				\item Espalhamento de raios-X em baixos ângulos resolvido no tempo. Extrair informações de tamanho pelo ajuste de um modelo apropriado.
+				\item Fluorescência de NaSal resolvido no tempo. Extrair informações a partir da taxa de decaimento/crescimento de fluorescência.
+			\end{itemize}
+			\item Comparar os resultados de cinética com as informações disponíveis na literatura.
+		\end{itemize}
 		

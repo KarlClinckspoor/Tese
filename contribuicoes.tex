@@ -48,7 +48,7 @@
 		
 		Os parâmetros possuem os seguintes significados:
 		
-		\begin{table}[H]
+		\begin{table}[h]
 			\IBGEtab{%
 				\caption{Parâmetros dos modelos de fluidos pseudoplásticos}
 				\label{tab:params_pseudoplasticos}
@@ -70,7 +70,7 @@
 		
 		A Fig. \ref{fig:reologia_modelos} exemplifica os modelos de Carreau e Cross e como os parâmetros afetam o formato das curvas. Note que a escala dos eixos é logarítmica. Vemos que, essencialmente, ambas as curvas possuem formatos muito semelhantes, com os parâmetros escolhidos. A escolha de um modelo depende da qualidade dos dados e do desejo do experimentalista. Observando-se como os modelos variam com os parâmetros, nota-se que a queda de viscosidade do modelo de Carreau é menos abrupta que no modelo de Cross e se assemelha mais aos dados estudados, então esse modelo foi mais utilizado.
 		
-		\begin{figure}[H]
+		\begin{figure}[h]
 			\begin{subfigure}[t]{0.45\textwidth}
 				\centering
 				\includegraphics[width=\textwidth]{./imagens/reologia/Carreau}
@@ -93,7 +93,7 @@
 		
 		A listagem \ref{lst:exemplo_curva_de_fluxo} mostra duas seções do código completo do programa, uma mostrando o ciclo de ajuste utilizando o ajuste linear e \texttt{curve\_fit} e outro que realiza um ajuste não-linear utilizando o modelo de Carreau e \emph{lmfit}.
 		
-		\begin{listing}[H]
+		\begin{listing}[h]
 			\inputminted{python}{./python/curva_de_fluxo.py}
 			\caption{Seções do código mostrando o método de ajuste}  % todo: encontrar um nome melhor
 			\label{lst:exemplo_curva_de_fluxo}
@@ -103,13 +103,13 @@
 		
 		A listagem \ref{lst:exemplo_fitter} mostra como o programa pode ser utilizado por outros scripts, e o resultado do ajuste se encontra na Fig. \ref{fig:reologia_dado-exemplo}
 		
-		\begin{listing}[H]
+		\begin{listing}[h]
 			\inputminted{python}{./python/uso_fitter.py}
 			\caption{Exemplo de como utilizar a ferramenta de ajuste não linear}  % todo: encontrar um nome melhor
 			\label{lst:exemplo_fitter}
 		\end{listing}
 		
-		\begin{figure}[H]
+		\begin{figure}[h]
 			\centering
 			\includegraphics[width=\textwidth]{imagens/reologia/Dado-exemplo}
 			\caption{Figura resultante do ajuste não linear de Carreau e ajuste linear gerada pela função \texttt{plot\_error\_graphs()}. As barras de erro são oriundas da propagação de erro dos parâmetros e os números em vermelho indicam os pontos iniciais e finais considerados em cada ajuste.}
@@ -134,6 +134,7 @@
 		
 		O tempo de execução e de plotagem para cada experimento está na faixa de um segundo, o que é muito mais rápido do que realizar o ajuste manualmente em uma ferramenta como o Origin ou Excel, então é algo ideal para o tratamento de um grande volume de dados.
 		
+		\FloatBarrier
 
 		\section{Método de ajuste para reologia oscilatória de muco}
 		
@@ -146,41 +147,43 @@
 		
 		Cerca de 500 dados experimentais únicos são tratados e plotados em cerca de 3 minutos, mostrando novamente o ganho enorme de eficiência com métodos computacionais. O código fonte da parte de tratamento de dados está nas listagens \ref{lst:extracao_muco1} -- \ref{lst:extracao_muco6}.
 		
-		\begin{listing}[H]
+		\begin{listing}[h]
 			\inputminted{python}{./python/extracao_muco1.py}
 			\caption{Código fonte para a extração de informações de reologia oscilatória de muco (1/6)} 
 			\label{lst:extracao_muco1}
 		\end{listing}
 		
-		\begin{listing}[H]
+		\begin{listing}[h]
 			\inputminted{python}{./python/extracao_muco2.py}
 			\caption{Código fonte para a extração de informações de reologia oscilatória de muco (2/6)} 
 			\label{lst:extracao_muco2}
 		\end{listing}
 		
-		\begin{listing}[H]
+		\begin{listing}[h]
 			\inputminted{python}{./python/extracao_muco3.py}
 			\caption{Código fonte para a extração de informações de reologia oscilatória de muco (3/6)} 
 			\label{lst:extracao_muco3}
 		\end{listing}
 		
-		\begin{listing}[H]
+		\begin{listing}[h]
 			\inputminted{python}{./python/extracao_muco4.py}
 			\caption{Código fonte para a extração de informações de reologia oscilatória de muco (4/6)} 
 			\label{lst:extracao_muco4}
 		\end{listing}
 		
-		\begin{listing}[H]
+		\begin{listing}[h]
 			\inputminted{python}{./python/extracao_muco5.py}
 			\caption{Código fonte para a extração de informações de reologia oscilatória de muco (5/6)}
 			\label{lst:extracao_muco5}
 		\end{listing}
 		
-		\begin{listing}[H]
+		\begin{listing}[h]
 			\inputminted{python}{./python/extracao_muco6.py}
 			\caption{Código fonte para a extração de informações de reologia oscilatória de muco (6/6)} 
 			\label{lst:extracao_muco6}
 		\end{listing}
+		
+		\FloatBarrier
 		
 		\chapter{Resultado da colaboração}
 		

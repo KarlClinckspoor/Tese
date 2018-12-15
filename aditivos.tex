@@ -240,8 +240,7 @@
 		\FloatBarrier
 		
 	\chapter{Parâmetros estudados}
-		% todo: retirar parte dessas descrições e colocar na teoria
-		% todo: definir a constante e permissividade elétricas, colocar a frequência nessas equações.
+
 		
 		Existem vários parâmetros físico-químicos que descrevem solventes. Inicialmente, o índice de refração foi escolhido com base nos estudos anteriores de Hoffmann, devido à conexão com a constante de Hamaker (eq. \ref{eqn:constante_hamaker_lifshitz}), que modula a atração/repulsão coloidal (para duas esferas, vide eq. \ref{eqn:interacao_duas_esferas}). Quanto mais próximos forem os índices de refração entre o solvente e as micelas gigantes, menor será a atração intermicelar.
 		
@@ -265,7 +264,7 @@
 		
 		A pressão interna, por sua vez, é a energia necessária para abrir uma cavidade no solvente, pois a variação de volume é necessariamente pequena, de modo a acomodar o soluto. Esse parâmetro é resultado das forças atrativas serem mais fortes que as repulsivas, e portanto está mais relacionado às interações dispersivas e dipolo-dipolo. Já \(c\) está relacionado à interações solvente-solvente específicas, como a ligação de hidrogênio.
 		
-		A diferença entre esses dois parâmetros (\(c - \pi\)) fornece uma medida da força das ligações de hidrogênio, e a razão \(n = \sfrac{\pi}{c}\) fornece uma medida da relação entre a força das ligações de hidrogênio e outras atrações. Essa razão se aproxima de 1 para hidrocarbonetos e é próxima de zero para solventes com fortes ligações de hidrogênio. O quadrado de \(c\) é conhecido também como o parâmetro de solubilidade de Hildyeebrand, \(\delta\).
+		A diferença entre esses dois parâmetros (\(c - \pi\)) fornece uma medida da força das ligações de hidrogênio, e a razão \(n = \sfrac{\pi}{c}\) fornece uma medida da relação entre a força das ligações de hidrogênio e outras atrações. Essa razão se aproxima de 1 para hidrocarbonetos e é próxima de zero para solventes com fortes ligações de hidrogênio. O quadrado de \(c\) é conhecido também como o parâmetro de solubilidade de Hildebrand, \(\delta\).
 		
 		Porém, os solventes utilizados neste trabalho são todos compostos principalmente por água, e em alguns casos os aditivos são sólidos (ureia, sacarose). Além disso, obter esses parâmetros para as misturas não é uma tarefa para qual o laboratório está equipado. Portanto, é necessário utilizar outro parâmetro que esteja relacionado à estruturação do solvente.
 		
@@ -485,13 +484,17 @@
 		
 		Uma propriedade importante que deve receber enfoque é a interação dos aditivos com a superfície micelar. Aditivos que interagem fortemente afetam muito os processos de autoassociação, como demonstra o salicilato de sódio. Efeitos semelhantes, mas menos intensos, podem complementar os parâmetros levantados até o momento.
 		
-		Estudos da influência de álcoois lineares na viscosidade de micelas gigantes de C\textsubscript{16}TASal e CPySal mostraram que quando álcoois de cadeia curta interagiam com a superfície micelar, agiam como um cossolvente e diminuiam o comprimento das micelas, logo diminuindo sua viscosidade. Caso 1,3-BD se comporte de maneira similar, esse é mais um efeito que pode resultar nas quedas fortes da viscosidade. Um estudo mostra que o 1,3-BD interage como cosurfactante em cristais líquidos, o que reforça a teoria de seu efeito em micelas gigantes. Além disso, o 1,3BD pode interagir com os grupos metil na superfície micelar, diminuindo a atração entre as micelas que ocorre devido a esses grupos, o que diminuiria a viscosidade. A glicerina, por ser mais polar, possivelmente não tem o mesmo efeito que 1,3BD, logo é menos eficaz em diminuir a viscosidade ou aumentar a \cmc. O DMSO pode se solubilizar na superfície micelar e interagir com os grupos metila, pois é menos polar que os outros aditivos, e isso pode resultar em uma diminuição maior na viscosidade. 
+		Estudos da influência de álcoois lineares na viscosidade de micelas gigantes de C\textsubscript{16}TASal e CPySal mostraram que quando álcoois de cadeia curta interagiam com a superfície micelar, agiam como um cossolvente e diminuiam o comprimento das micelas, logo diminuindo sua viscosidade. Caso 1,3BD se comporte de maneira similar, esse é mais um efeito que pode resultar nas quedas fortes da viscosidade. Um estudo mostra que o 1,3BD interage como cosurfactante em cristais líquidos, o que reforça a teoria de seu efeito em micelas gigantes. A reologia oscilatória (seção \ref{sec:reologia_oscilatoria}) mostra que o módulo \(G_0\) para as soluções com 1,3BD é menor que nos outros aditivos, reforçando a ideia de que houve uma alteração na estrutura das micelas.
+		
+		A presença desses aditivos na superfície das micelas durante a relaxação também pode afetar a hidrofilicidade das mesmas, afetando o mecanismo de ``sticky contacts'', proposto por Hoffmann. Isso levaria a uma diminuição na viscosidade das micelas. O 1,3BD poderia se localizar na superfície micelar, aumentando sua hidrofilicidade, levando à uma diminuição na viscosidade. A glicerina, por ser mais polar, possivelmente não tem o mesmo efeito que 1,3BD, logo é menos eficaz em diminuir a viscosidade ou aumentar a \cmc. O DMSO pode se solubilizar na superfície micelar e interagir com os grupos metila, pois é menos polar que os outros aditivos, e isso pode resultar em uma diminuição maior na viscosidade que a glicerina, mas não tanto quanto o 1,3BD. 
 		
 		%Ureia interage fortemente com a superfície micelar, mas não como agente intercalante. % todo: verificar o artigo na ACS Omega sobre o que eu falo sobre isso.
 	%	A concentração de ureia na superfície é cerca de 10-30\% menor do que no seio da solução. 
 		
 		% todo: refs
 		A sacarose diminui a \cmc{} de outros surfactantes, como SDS, CTAB e Brij 35, pela interação de suas hidroxilas com a superfície micelar reduzindo a repulsão, e pela estruturação do solvente. Logo, a diminuição de \(n\) e \(\varepsilon\), que deveriam aumentar a \cwlm{}, são compensadas e a \cwlm{} é mantida. Não há uma diminuição de \cwlm, como houve de \cmc, pois o salicilato interage mais fortemente com a superfície micelar, deslocando as hidroxilas da sacarose, logo seu efeito é principalmente na estruturação do solvente.
+		
+		
 		
 		% todo: pensar em colocar uma seção falando sobre o DeltaG.
 		
@@ -725,9 +728,12 @@
 		% todo: tentar correlacionar viscosidades utilizando os parâmetros, mais a conc de salicilato como variáveis independentes
 		
 	\chapter{Reologia oscilatória}
+	\label{sec:reologia_oscilatoria}
+	% todo: mencionar que os próprios García-Saraji utilizaram essa metodologia de R2 e tal pra fazer os ajustes
+	
 		Os aditivos afetam a viscosidade das soluções, como visto na seção \ref{sec:efeito_aditivos_hidrofilicos}. Neste capítulo, será estudado o efeito dos aditivos na reologia oscilatória das micelas gigantes, que está relacionada aos processos de relaxação das micelas. Para realizar isso, foram escolhidas algumas concentrações de base, localizadas nos picos de viscosidade e no vale. Essas concentrações são 60, 100 e 260\mM{} de NaSal. Na ausência de aditivo, também foram analisadas as concentrações de 35, 72, 189 e 365 \mM.
 		
-		As curvas foram ajustadas pelos modelos de Maxwell (Eqs. \ref{eqn:Maxwell_G1_def}, \ref{eqn:Maxwell_G2_def}), Oldroyd (Eqs. \ref{eqn:Maxwell_G1_def}, \ref{eqn:modelo_oldroyd_g2}), Jeffreys (Eqs. \ref{eqn:modelo_jeffreys_g1}, \ref{eqn:modelo_jeffreys_g2}) e um modelo com dois elementos Maxwellianos, que será chamado de Dois-Modos (Eqs. \ref{eqn:modelo_doismodos_g1}, \ref{eqn:modelo_doismodos_g2}). Dos ajustes, foram obtidos os módulos no platô, \(G_0\), e os tempos de relaxação \(\tau_r\), para cada dupla G' e G''. Além disso, foram calculados os coeficientes de determinação \(R^2\) (Eq. \ref{eqn:R2}), e os coeficientes de determinação ajustado \(R\mathrm{'}^{2}\) (Eq. \ref{eqn:R2lin}). Com essas informações, foram criados gráficos de Cole-Cole, onde se analisa G' em função de G'', normalizados por \(G_0\).
+		As curvas foram ajustadas pelos modelos de Maxwell (Eqs. \ref{eqn:Maxwell_G1_def}, \ref{eqn:Maxwell_G2_def}), Oldroyd (Eqs. \ref{eqn:Maxwell_G1_def}, \ref{eqn:modelo_oldroyd_g2}), Jeffreys (Eqs. \ref{eqn:modelo_jeffreys_g1}, \ref{eqn:modelo_jeffreys_g2}), um modelo com dois elementos Maxwellianos, que será chamado de Dois-Modos (Eqs. \ref{eqn:modelo_doismodos_g1}, \ref{eqn:modelo_doismodos_g2}) e pelo recém proposto modelo de García-Saraji (Eqs. \ref{eqn:garcia_saraji_g1}, \ref{eqn:garcia_saraji_g2}). Dos ajustes, foram obtidos os módulos no platô, \(G_0\), e os tempos de relaxação \(\tau_\mathrm{rel}\), para cada dupla G' e G''. Além disso, foram calculados os coeficientes de determinação \(R^2\) (Eq. \ref{eqn:R2}), e os coeficientes de determinação ajustado \(R\mathrm{'}^{2}\) (Eq. \ref{eqn:R2lin}). Com essas informações, foram criados gráficos de Cole-Cole, onde se analisa G' em função de G'', normalizados por \(G_0\).
 		
 		\begin{equation}
 			R^2 = 1 - \dfrac{SQ_\mathrm{res}}{SQ_\mathrm{Tcor}}
@@ -784,12 +790,12 @@
 			\label{fig:oscilatorio_agua}
 		\end{figure}
 		
-		É possível ver que todas as curvas de G' atingem aproximadamente o mesmo valor em frequências altas, onde se encontra o módulo no platô, \(G_0\). Além disso, pode-se observar que o ponto de cruzamento, indicativo do inverso tempo de relaxação, também oscila, sendo mínimo em 60\mM, o máximo de viscosidade, e máximo em 100\mM, o mínimo de viscosidade.  % todo: pensar em colocar o gráfico de viscosidade da água aqui sozinho, para facilitar a comparação.
+		É possível ver que todas as curvas de G' atingem aproximadamente o mesmo valor em frequências altas, onde se encontra o módulo no platô, \(G_0\). Além disso, pode-se observar que o ponto de cruzamento, indicativo do inverso tempo de relaxação, também oscila, sendo mínimo em 60\mM, o máximo de viscosidade, e máximo em 100\mM, o mínimo de viscosidade. 
 		
 		Além disso, é possível observar que em frequências altas, os valores de G' e G'', principalmente, começam a oscilar. Essa oscilação não é real, e é devido a limitações de medida do equipamento. Para fazer os ajustes, todos os pontos a partir do momento em que começam a oscilar foram descartados. Os pontos que aparentam não seguir os modelos, mas que não mostram oscilação, foram mantidos. Os ajustes de Maxwell realizados para essas curvas estão nas figuras \ref{fig:oscilatorio_agua_maxwell1} e \ref{fig:oscilatorio_agua_maxwell2}. O código para esse ajuste se encontra na listagem \ref{lst:ajuste_maxwell}. Os outros modelos seguiram o mesmo modelo, variando-se as equações de acordo com o modelo.
 		
 		% todo: pensar se vale a pena mencionar a variação de \(G_0\). A Danila fala que isso ocorre mesmo, e que tem artigos que falam que isso deve ocorrer.
-		% todo: Rehage e Hoffmann em 1991 mostraram que não muda muito entre os picos. Transição sol-gel. O módulo é dependente da concentração de partículas ou o número de pontos de crosslinking por unidade de volume. Valor constante de G0 indica que a estrutura micelar não muda em função da força iônica. No mesmo artigo, ele fala que no segundo máximo as micelas ficaram negativas.
+
 		
 		\begin{figure}[h]
 			\begin{subfigure}[t]{0.5\textwidth}
@@ -848,65 +854,147 @@
 		
 		O mesmo procedimento foi seguido para os outros modelos. Os ajustes não serão mostrados por brevidade. Os resultados dos ajustes se encontram nas tabelas \ref{tab:g0_agua} --- \ref{tab:R2_agua}.
 		
+%		\begin{table}[h]
+%        \IBGEtab{%
+%			\caption{Módulos no platô, \(G_0\) em Pa, em função da concentração de NaSal em \mM, de todos os ajustes}
+%			\label{tab:g0_agua}
+%		}%
+%		{%
+%			\begin{tabular}{c | c c c c c}
+%				\toprule
+%				NaSal & Maxwell             & OldroydB             & Jeffreys             & Dois-Modos 1            & Dois-Modos 2            \\ \midrule
+%				 35   & 30,8    \(\pm\) 0,5 & 30,8     \(\pm\) 0,4 & 30,8     \(\pm\) 0,4 & 26,8        \(\pm\) 0,3 & 7,3         \(\pm\) 0,4 \\
+%				 60   & 51,5    \(\pm\) 0,3 & 51,5     \(\pm\) 0,3 & 51,5     \(\pm\) 0,3 & 32          \(\pm\) 2   & 21          \(\pm\) 2   \\
+%				 72   & 40,0    \(\pm\) 0,1 & 39,9     \(\pm\) 0,1 & 39,9     \(\pm\) 0,1 & 35,9        \(\pm\) 0,9 & 4,6         \(\pm\) 0,9 \\
+%				 100  & 52,3    \(\pm\) 0,1 & 52,1     \(\pm\) 0,1 & 52,2     \(\pm\) 0,1 & 3,6         \(\pm\) 0,5 & 49,7        \(\pm\) 0,5 \\
+%				 189  & 49,7    \(\pm\) 0,3 & 49,6     \(\pm\) 0,3 & 49,7     \(\pm\) 0,3 & 48,3        \(\pm\) 0,3 & 3,7         \(\pm\) 0,4 \\
+%				 260  & 51,6    \(\pm\) 0,3 & 51,5     \(\pm\) 0,3 & 51,5     \(\pm\) 0,3 & 50          \(\pm\) 1   & 3           \(\pm\) 1   \\
+%				 365  & 49,8    \(\pm\) 0,2 & 49,6     \(\pm\) 0,2 & 49,7     \(\pm\) 0,2 & 47,0        \(\pm\) 0,3 & 4,2         \(\pm\) 0,3 \\ \bottomrule
+%			\end{tabular}
+%		}{}
+%		\end{table}  
+
+
 		\begin{table}[h]
-        \IBGEtab{%
-			\caption{Módulos no platô, \(G_0\) em Pa, em função da concentração de NaSal em \mM, de todos os ajustes}
-			\label{tab:g0_agua}
-		}%
-		{%
-			\begin{tabular}{c | c c c c c}
-				\toprule
-				NaSal & Maxwell             & OldroydB             & Jeffreys             & Dois-Modos 1            & Dois-Modos 2            \\ \midrule
-				 35   & 30,8    \(\pm\) 0,5 & 30,8     \(\pm\) 0,4 & 30,8     \(\pm\) 0,4 & 26,8        \(\pm\) 0,3 & 7,3         \(\pm\) 0,4 \\
-				 60   & 51,5    \(\pm\) 0,3 & 51,5     \(\pm\) 0,3 & 51,5     \(\pm\) 0,3 & 32          \(\pm\) 2   & 21          \(\pm\) 2   \\
-				 72   & 40,0    \(\pm\) 0,1 & 39,9     \(\pm\) 0,1 & 39,9     \(\pm\) 0,1 & 35,9        \(\pm\) 0,9 & 4,6         \(\pm\) 0,9 \\
-				 100  & 52,3    \(\pm\) 0,1 & 52,1     \(\pm\) 0,1 & 52,2     \(\pm\) 0,1 & 3,6         \(\pm\) 0,5 & 49,7        \(\pm\) 0,5 \\
-				 189  & 49,7    \(\pm\) 0,3 & 49,6     \(\pm\) 0,3 & 49,7     \(\pm\) 0,3 & 48,3        \(\pm\) 0,3 & 3,7         \(\pm\) 0,4 \\
-				 260  & 51,6    \(\pm\) 0,3 & 51,5     \(\pm\) 0,3 & 51,5     \(\pm\) 0,3 & 50          \(\pm\) 1   & 3           \(\pm\) 1   \\
-				 365  & 49,8    \(\pm\) 0,2 & 49,6     \(\pm\) 0,2 & 49,7     \(\pm\) 0,2 & 47,0        \(\pm\) 0,3 & 4,2         \(\pm\) 0,3 \\ \bottomrule
-			\end{tabular}
-		}{}
-		\end{table}  
+	\IBGEtab{%
+		\caption{Módulos no platô, \(G_0\) em Pa, em função da concentração de NaSal em \mM, de todos os ajustes}
+		\label{tab:g0_agua}
+	}%
+	{%
+		\begin{tabular}{c | c c c c c c}
+			\toprule
+			NaSal & Maxwell             & OldroydB             & Jeffreys             & Dois-Modos 1            & Dois-Modos 2            & García-Saraji      \\ \midrule
+			 35   & 30,8    \(\pm\) 0,5 & 30,8     \(\pm\) 0,4 & 30,8     \(\pm\) 0,4 & 26,8        \(\pm\) 0,3 & 7,3         \(\pm\) 0,4 & 30,9  \(\pm\) 0,4  \\
+			 60   & 51,5    \(\pm\) 0,3 & 51,5     \(\pm\) 0,3 & 51,5     \(\pm\) 0,3 & 32          \(\pm\) 2   & 21          \(\pm\) 2   & 51,5  \(\pm\) 0,3  \\
+			 72   & 40,0    \(\pm\) 0,1 & 39,9     \(\pm\) 0,1 & 39,9     \(\pm\) 0,1 & 35,9        \(\pm\) 0,9 & 4,6         \(\pm\) 0,9 & 39,9  \(\pm\) 0,1  \\
+			 100  & 52,3    \(\pm\) 0,1 & 52,1     \(\pm\) 0,1 & 52,2     \(\pm\) 0,1 & 3,6         \(\pm\) 0,5 & 49,7        \(\pm\) 0,5 & 52,31 \(\pm\) 0,09 \\
+			 189  & 49,7    \(\pm\) 0,3 & 49,6     \(\pm\) 0,3 & 49,7     \(\pm\) 0,3 & 48,3        \(\pm\) 0,3 & 3,7         \(\pm\) 0,4 & 49,7  \(\pm\) 0,2  \\
+			 260  & 51,6    \(\pm\) 0,3 & 51,5     \(\pm\) 0,3 & 51,5     \(\pm\) 0,3 & 50          \(\pm\) 1   & 3           \(\pm\) 1   & 51,6  \(\pm\) 0,3  \\
+			 365  & 49,8    \(\pm\) 0,2 & 49,6     \(\pm\) 0,2 & 49,7     \(\pm\) 0,2 & 47,0        \(\pm\) 0,3 & 4,2         \(\pm\) 0,3 & 49,8  \(\pm\) 0,1  \\ \bottomrule
+		\end{tabular}
+	}{}
+\end{table}  
 	
+%		\begin{table}[h]
+%		\IBGEtab{%
+%			\caption{Tempos de relaxação, \(\tau_\mathrm{rel}\) em s, de todos os ajustes, em função da concentração de NaSal em \mM. O segundo tempo de relaxação do modelo de Jeffreys não foi incluído nesta tabela pois todos os valores eram da ordem de 1ms, e possuíam um desvio alto. Esses valores se encontram na tabela \ref{tab:outros_params_agua}.}
+%			\label{tab:tr_agua}
+%		}%
+%		{%
+%			\begin{tabular}{c | c c c c c c}
+%				\toprule
+%				NaSal & Maxwell               & OldroydB               & Jeffreys 1               & Dois Modos 1               & Dois Modos 2               &  \\ \midrule
+%				 35   & 24      \(\pm\) 1     & 24       \(\pm\) 1     & 24        \(\pm\) 1     & 29,3        \(\pm\) 0,8   & 0,76        \(\pm\) 0,08  &  \\
+%				 60   & 79      \(\pm\) 2     & 79       \(\pm\) 2     & 79        \(\pm\) 2     & 128         \(\pm\) 5     & 38          \(\pm\) 2     &  \\
+%				 72   & 4,47    \(\pm\) 0,05  & 4,49     \(\pm\) 0,05  & 4,49      \(\pm\) 0,05  & 4,99        \(\pm\) 0,09  & 1,4         \(\pm\) 0,2   &  \\
+%				 100  & 0,209   \(\pm\) 0,001 & 0,212    \(\pm\) 0,001 & 0,212     \(\pm\) 0,001 & 0,055       \(\pm\) 0,008 & 0,221       \(\pm\) 0,002 &  \\
+%				 189  & 1,01    \(\pm\) 0,01  & 1,02     \(\pm\) 0,01  & 1,02      \(\pm\) 0,01  & 1,06        \(\pm\) 0,01  & 0,06        \(\pm\) 0,01  &  \\
+%				 260  & 2,71    \(\pm\) 0,05  & 2,72     \(\pm\) 0,05  & 2,72      \(\pm\) 0,05  & 2,84        \(\pm\) 0,08  & 0,4         \(\pm\) 0,2   &  \\
+%				 365  & 0,90    \(\pm\) 0,01  & 0,911    \(\pm\) 0,008 & 0,911     \(\pm\) 0,008 & 0,971       \(\pm\) 0,007 & 0,15        \(\pm\) 0,02  &  \\ \bottomrule
+%			\end{tabular}
+%		}{}
+%	\end{table}  
+
 		\begin{table}[h]
-		\IBGEtab{%
-			\caption{Tempos de relaxação, \(\tau_\mathrm{rel}\) em s, de todos os ajustes, em função da concentração de NaSal em \mM. O segundo tempo de relaxação do modelo de Jeffreys não foi incluído nesta tabela pois todos os valores eram da ordem de 1ms, e possuíam um desvio alto. Esses valores se encontram na tabela \ref{tab:outros_params_agua}.}
-			\label{tab:tr_agua}
-		}%
-		{%
-			\begin{tabular}{c | c c c c c c}
-				\toprule
-				NaSal & Maxwell               & OldroydB               & Jeffreys 1               & Dois Modos 1               & Dois Modos 2               &  \\ \midrule
-				 35   & 24      \(\pm\) 1     & 24       \(\pm\) 1     & 24        \(\pm\) 1     & 29,3        \(\pm\) 0,8   & 0,76        \(\pm\) 0,08  &  \\
-				 60   & 79      \(\pm\) 2     & 79       \(\pm\) 2     & 79        \(\pm\) 2     & 128         \(\pm\) 5     & 38          \(\pm\) 2     &  \\
-				 72   & 4,47    \(\pm\) 0,05  & 4,49     \(\pm\) 0,05  & 4,49      \(\pm\) 0,05  & 4,99        \(\pm\) 0,09  & 1,4         \(\pm\) 0,2   &  \\
-				 100  & 0,209   \(\pm\) 0,001 & 0,212    \(\pm\) 0,001 & 0,212     \(\pm\) 0,001 & 0,055       \(\pm\) 0,008 & 0,221       \(\pm\) 0,002 &  \\
-				 189  & 1,01    \(\pm\) 0,01  & 1,02     \(\pm\) 0,01  & 1,02      \(\pm\) 0,01  & 1,06        \(\pm\) 0,01  & 0,06        \(\pm\) 0,01  &  \\
-				 260  & 2,71    \(\pm\) 0,05  & 2,72     \(\pm\) 0,05  & 2,72      \(\pm\) 0,05  & 2,84        \(\pm\) 0,08  & 0,4         \(\pm\) 0,2   &  \\
-				 365  & 0,90    \(\pm\) 0,01  & 0,911    \(\pm\) 0,008 & 0,911     \(\pm\) 0,008 & 0,971       \(\pm\) 0,007 & 0,15        \(\pm\) 0,02  &  \\ \bottomrule
-			\end{tabular}
-		}{}
-	\end{table}  
+			\IBGEtab{%
+				\caption{Tempos de relaxação, \(\tau_\mathrm{rel}\) em s, de todos os ajustes, em função da concentração de NaSal em \mM. O segundo tempo de relaxação do modelo de Jeffreys não foi incluído nesta tabela pois todos os valores eram da ordem de 1ms, e possuíam um desvio alto. Esses valores se encontram na tabela \ref{tab:outros_params_agua}.}
+				\label{tab:tr_agua}
+			}%
+			{%
+				\begin{tabular}{c | c c c c c c}
+					\toprule
+					NaSal & Maxwell               & OldroydB               & Jeffreys 1              & Dois Modos 1              & Dois Modos 2              & García-Saraji       \\ \midrule
+					 35   & 24      \(\pm\) 1     & 24       \(\pm\) 1     & 24        \(\pm\) 1     & 29,3        \(\pm\) 0,8   & 0,76        \(\pm\) 0,08  & 40    \(\pm\) 8     \\
+					 60   & 79      \(\pm\) 2     & 79       \(\pm\) 2     & 79        \(\pm\) 2     & 128         \(\pm\) 5     & 38          \(\pm\) 2     & 110   \(\pm\) 67    \\
+					 72   & 4,47    \(\pm\) 0,05  & 4,49     \(\pm\) 0,05  & 4,49      \(\pm\) 0,05  & 4,99        \(\pm\) 0,09  & 1,4         \(\pm\) 0,2   & 4,7   \(\pm\) 0,2   \\
+					 100  & 0,209   \(\pm\) 0,001 & 0,212    \(\pm\) 0,001 & 0,212     \(\pm\) 0,001 & 0,055       \(\pm\) 0,008 & 0,221       \(\pm\) 0,002 & 0,219 \(\pm\) 0,004 \\
+					 189  & 1,01    \(\pm\) 0,01  & 1,02     \(\pm\) 0,01  & 1,02      \(\pm\) 0,01  & 1,06        \(\pm\) 0,01  & 0,06        \(\pm\) 0,01  & 1,04  \(\pm\) 0,03  \\
+					 260  & 2,71    \(\pm\) 0,05  & 2,72     \(\pm\) 0,05  & 2,72      \(\pm\) 0,05  & 2,84        \(\pm\) 0,08  & 0,4         \(\pm\) 0,2   & 2,78  \(\pm\) 0,08  \\
+					 365  & 0,90    \(\pm\) 0,01  & 0,911    \(\pm\) 0,008 & 0,911     \(\pm\) 0,008 & 0,971       \(\pm\) 0,007 & 0,15        \(\pm\) 0,02  & 0,95  \(\pm\) 0,02  \\ \bottomrule
+				\end{tabular}
+			}{}
+		\end{table}  
+
+%	\begin{table}[h]
+%		\IBGEtab{%
+%			\caption{Valores da viscosidade em altas frequências \(\eta_{\infty}\), do modelo de Oldroyd, e do segundo tempo de relaxação do modelo de Jeffreys, em ms.}
+%			\label{tab:outros_params_agua}
+%		}%
+%		{%
+%			\begin{tabular}{c | p{3cm} | p{3cm}}
+%				\toprule
+%				NaSal  &  \(\eta_\infty\)/Pa.s          &  \(\tau_{rel,2}\)/ms            \\ \midrule
+%				35    &  0,14            \(\pm\) 0,05  &  5                \(\pm\) 1     \\
+%				60    &  0,5             \(\pm\) 0,4   &  10               \(\pm\) 8     \\
+%				72    &  0,07            \(\pm\) 0,02  &  1,8              \(\pm\) 0,6   \\
+%				100   &  0,023           \(\pm\) 0,004 &  0,45             \(\pm\) 0,08  \\
+%				189   &  0,04            \(\pm\) 0,02  &  0,7              \(\pm\) 0,3   \\
+%				260   &  0,10            \(\pm\) 0,04  &  2,0              \(\pm\) 0,8   \\
+%				365   &  0,07            \(\pm\) 0,01  &  1,4              \(\pm\) 0,3   \\ \bottomrule
+%			\end{tabular}
+%		}{} 
+%	\end{table}  
 
 	\begin{table}[h]
 		\IBGEtab{%
-			\caption{Valores da viscosidade em altas frequências \(\eta_{\infty}\), do modelo de Oldroyd, e do segundo tempo de relaxação do modelo de Jeffreys, em ms.}
+			\caption{Valores da viscosidade em altas frequências \(\eta_{\infty}\), do modelo de Oldroyd, do segundo tempo de relaxação do modelo de Jeffreys, em ms, e dos parâmetros \(a\), em s, e b, do modelo de García-Saraji}
 			\label{tab:outros_params_agua}
 		}%
 		{%
-			\begin{tabular}{c | p{3cm} | p{3cm}}
+			%\begin{tabular}{c | p{3cm} | p{3cm}}
+			\begin{tabular}{c | c c c c}
 				\toprule
-				NaSal  &  \(\eta_\infty\)/Pa.s          &  \(\tau_{rel,2}\)/ms            \\ \midrule
-				35    &  0,14            \(\pm\) 0,05  &  5                \(\pm\) 1     \\
-				60    &  0,5             \(\pm\) 0,4   &  10               \(\pm\) 8     \\
-				72    &  0,07            \(\pm\) 0,02  &  1,8              \(\pm\) 0,6   \\
-				100   &  0,023           \(\pm\) 0,004 &  0,45             \(\pm\) 0,08  \\
-				189   &  0,04            \(\pm\) 0,02  &  0,7              \(\pm\) 0,3   \\
-				260   &  0,10            \(\pm\) 0,04  &  2,0              \(\pm\) 0,8   \\
-				365   &  0,07            \(\pm\) 0,01  &  1,4              \(\pm\) 0,3   \\ \bottomrule
+                NaSal  &  \(\eta_\infty\)/Pa.s          &  \(\tau_{rel,2}\)/ms         & \(a\)/s      &  \(b\) \\ \midrule
+				35    &  0,14            \(\pm\) 0,05  &  5                \(\pm\) 1   & 2,8     0,6  &  0,3 0,1 \\
+				60    &  0,5             \(\pm\) 0,4   &  10               \(\pm\) 8   & 1,6     0,8  &  0,2 0,4 \\
+				72    &  0,07            \(\pm\) 0,02  &  1,8              \(\pm\) 0,6 & 0,2     0,1  &  0,6 0,2 \\
+				100   &  0,023           \(\pm\) 0,004 &  0,45             \(\pm\) 0,08& 0,03    0,02 &  0,6 0,2 \\
+				189   &  0,04            \(\pm\) 0,02  &  0,7              \(\pm\) 0,3 & 0,05    0,06 &  0,9 0,4 \\
+				260   &  0,10            \(\pm\) 0,04  &  2,0              \(\pm\) 0,8 & 0,10    0,09 &  1,0 0,4 \\
+				365   &  0,07            \(\pm\) 0,01  &  1,4              \(\pm\) 0,3 & 0,09    0,04 &  0,8 0,2 \\ \bottomrule
 			\end{tabular}
 		}{} 
 	\end{table}  
+
+%	\begin{table}[h]
+%		\IBGEtab{%
+%			\caption{Valores do coeficiente de determinação \(R^2\) de todos os ajustes. O valor de coeficiente ajustado não será incluso pois não diverge significantemente.}
+%			\label{tab:R2_agua}
+%		}%
+%		{%
+%			\begin{tabular}{c |c c c c}
+%				\toprule
+%				 NaSal  & Maxwell & OldroydB & Jeffreys & Dois-Modos \\ \midrule
+%				35  & 0,914   & 0,925    & 0,925    & 0,988      \\
+%				60  & 0,976   & 0,977    & 0,977    & 0,998      \\
+%				72  & 0,997   & 0,997    & 0,997    & 0,999      \\
+%				100 & 0,999   & 1,000    & 1,000    & 1,000      \\
+%				189 & 0,996   & 0,997    & 0,997    & 0,999      \\
+%				260 & 0,993   & 0,994    & 0,994    & 0,994      \\
+%				365 & 0,998   & 0,999    & 0,999    & 1,000      \\ \bottomrule
+%			\end{tabular}
+%			}{}
+%	\end{table}  
 
 	\begin{table}[h]
 		\IBGEtab{%
@@ -914,23 +1002,25 @@
 			\label{tab:R2_agua}
 		}%
 		{%
-			\begin{tabular}{c |c c c c}
+			\begin{tabular}{c |c c c c c}
 				\toprule
-				 NaSal  & Maxwell & OldroydB & Jeffreys & Dois-Modos \\ \midrule
-				35  & 0,914   & 0,925    & 0,925    & 0,988      \\
-				60  & 0,976   & 0,977    & 0,977    & 0,998      \\
-				72  & 0,997   & 0,997    & 0,997    & 0,999      \\
-				100 & 0,999   & 1,000    & 1,000    & 1,000      \\
-				189 & 0,996   & 0,997    & 0,997    & 0,999      \\
-				260 & 0,993   & 0,994    & 0,994    & 0,994      \\
-				365 & 0,998   & 0,999    & 0,999    & 1,000      \\ \bottomrule
+                 NaSal  & Maxwell & OldroydB & Jeffreys & Dois-Modos & García-Saraji \\ \midrule
+				35  & 0,914   & 0,925    & 0,925    & 0,988  & 0.941    \\
+				60  & 0,976   & 0,977    & 0,977    & 0,998  & 0.979    \\
+				72  & 0,997   & 0,997    & 0,997    & 0,999  & 0.998    \\
+				100 & 0,999   & 1,000    & 1,000    & 1,000  & 1.000    \\
+				189 & 0,996   & 0,997    & 0,997    & 0,999  & 0.997    \\
+				260 & 0,993   & 0,994    & 0,994    & 0,994  & 0.994    \\
+				365 & 0,998   & 0,999    & 0,999    & 1,000  & 0.999    \\ \bottomrule
 			\end{tabular}
-			}{}
+		}{}
 	\end{table}  
 
-	Os valores de módulo no platô foram todos próximos em todos os modelos. No modelo de Dois-Modos, não há uma restrição para os valores de \(G_{0,1}\) e \(G_{0,2}\), e observa-se que os dois módulos variam entre um valor perto de 50 Pa e outro entre 3-5 Pa, praticamente insignificante. Esse módulo existe, provavelmente, para ajustar a região final de G'', onde há uma divergência para cima. A amostra com 60 \mM{} de NaSal, porém, mostrou dois valores bastante diferentes de \(G_0\) quando comparados aos outros mas, se somados, resultam no módulo dos outros modelos, mostrando que os dois elementos do modelo são, de fato, aditivos. Isso ocorreu provavelmente porque há uma região pequena antes do cruzamento, então não foi possível ajustar muito bem a curva por completo. Adquirir pontos antes do cruzamento nesse caso é, experimentalmente, muito difícil, pois exigiria muitas horas para completar uma análise, e a secagem da amostra seria difícil de ser adequadamente prevenida. Os desvios de todos os parâmetros estão semelhantes, e são maiores para as amostras longe da concentração de 100 \mM. Uma exceção é, novamente, o modelo de Dois-Modos, que possui incertezas maiores, possivelmente porque variações nesses parâmetros não resultam em mudanças significativas na qualidade do ajuste, já que utilizar um único parâmetro foi adequado.
+	Os valores de módulo no platô foram todos próximos em todos os modelos, exceto pelas primeiras concentrações, quando a rede micelar ainda está sendo formada. Isso já foi observado anteriormente, e que \(G_0\) essencialmente não varia entre os dois picos, indicando que a estrutura lamelar se mantém constante.
+	% todo: Rehage e Hoffmann em 1991 mostraram que não muda muito entre os picos. Transição sol-gel. O módulo é dependente da concentração de partículas ou o número de pontos de crosslinking por unidade de volume. Valor constante de G0 indica que a estrutura micelar não muda em função da força iônica. No mesmo artigo, ele fala que no segundo máximo as micelas ficaram negativas.
+	No modelo de Dois-Modos, não há uma restrição para os valores de \(G_{0,1}\) e \(G_{0,2}\), e observa-se que os dois módulos variam entre um valor perto de 50 Pa e outro entre 3-5 Pa, praticamente insignificante. Esse módulo existe, provavelmente, para ajustar a região final de G'', onde há uma divergência para cima. A amostra com 60 \mM{} de NaSal, porém, mostrou dois valores bastante diferentes de \(G_0\) quando comparados aos outros mas, se somados, resultam no módulo dos outros modelos, mostrando que os dois elementos do modelo são, de fato, aditivos. Isso ocorreu provavelmente porque há uma região pequena antes do cruzamento, então não foi possível ajustar muito bem a curva por completo. Adquirir pontos antes do cruzamento nesse caso é, experimentalmente, muito difícil, pois exigiria muitas horas para completar uma análise, e a secagem da amostra seria difícil de ser adequadamente prevenida. Os desvios de todos os parâmetros estão semelhantes, e são maiores para as amostras longe da concentração de 100 \mM. Uma exceção é, novamente, o modelo de Dois-Modos, que possui incertezas maiores, possivelmente porque variações nesses parâmetros não resultam em mudanças significativas na qualidade do ajuste, já que utilizar um único parâmetro foi adequado.
 	
-	Os valores de tempo de relaxação seguem o mesmo perfil de viscosidade, como pode ser visto na figura \ref{fig:oscilatorio_agua_tr}. Seus valores também estão todos com valores próximos entre os modelos, com exceção do modelo de Dois Modos, onde um dos tempos se aproxima dos outros, e o outro tempo é diferente. Com 60 \mM, o mesmo fenômeno ocorreu com os tempos de relaxação, mas neste caso a média dos dois tempos (128 e 38), 83, é parecido com os outros tempos de relaxação. O segundo tempo de relaxação do modelo de Jeffreys, presente na tabela \ref{tab:outros_params_agua}, possui valores muito baixos e com incerteza alta, mostrando que esse parâmetro não é relevante ao ajuste, e também é diferente do segundo tempo de relaxação do modelo Dois-Modos. A viscosidade em frequências altas, do modelo de Oldroyd, que visa ajustar a região de alta frequência de G'', também não teve um ajuste muito bom, com altas incertezas.
+	Os valores de tempo de relaxação seguem o mesmo perfil de viscosidade, como pode ser visto na figura \ref{fig:oscilatorio_agua_tr}. Seus valores também estão todos com valores próximos entre os modelos, com exceção do modelo de Dois Modos e de García-Saraji. No modelo Dois Modos, um dos tempos se aproxima dos tempos dos outros modelos, e o outro tempo é diferente. Com 60 \mM, o mesmo fenômeno ocorreu com os tempos de relaxação, mas neste caso a média dos dois tempos (128 e 38), 83, é parecido com os outros tempos de relaxação. Os tempos de relaxação para as amostras com 35 e 60 \mM{} do modelo de García-Saraji demonstraram grande variabilidade em comparação com os outros modelos, em especial a amostra com 60 \mM. Isso pode se dever à falta de pontos antes do cruzamento, sendo que o modelo necessita do perfil completo de viscosidade para estimar como o tempo de relaxação varia com a frequência. O segundo tempo de relaxação do modelo de Jeffreys, presente na tabela \ref{tab:outros_params_agua}, possui valores muito baixos e com incerteza alta, mostrando que esse parâmetro não é relevante ao ajuste, e também é diferente do segundo tempo de relaxação do modelo Dois-Modos. A viscosidade em frequências altas, do modelo de Oldroyd, que visa ajustar a região de alta frequência de G'', também não teve um ajuste muito bom, com altas incertezas.
 	
 	\begin{figure}[h]
 		\centering
@@ -939,18 +1029,35 @@
 		\label{fig:oscilatorio_agua_tr}  
 	\end{figure}
 	
-	O coeficiente de determinação possuiu valores muito altos para as amostras com concentração de NaSal maior que 100 \mM, sendo máximo nesse caso. Para as amostras com 35 e 60, o ajuste foi pior. Além disso, pode-se observar que os modelos mais complexos possuem um ajuste melhor. Isso é esperado, pois com mais parâmetros é possível aproximar mais o modelo ao dado experimental. Porém, essa melhoria pode não possuir significado físico, sendo completamente um resultado matemático. Isso ocorreu mais evidentemente no modelo de Dois-Modos, onde os parâmetros, em geral, possuíam incertezas maiores pois acabavam descrevendo as mesmas regiões dos espectros mecânicos. A figura \ref{fig:ajuste_tm_35} mostra o ajuste do modelo de Dois-Modos para a amostra com 35 \mM{} de NaSal, evidenciando que o coeficiente de ajuste melhorado não implicou numa descrição melhor do sistema. Possivelmente, caso se soubesse o número de processos de relaxação, ou fosse utilizado um modelo como o de García-Saraji, seria possível descrever por completo essa curva. % todo: colocar referência do modelo García-Saraji
+	O coeficiente de determinação possuiu valores muito altos para as amostras com concentração de NaSal maior que 100 \mM, sendo máximo nesse caso. Para as amostras com 35 e 60, o ajuste foi pior. Além disso, pode-se observar que os modelos mais complexos possuem um ajuste melhor. Isso é esperado, pois com mais parâmetros é possível aproximar mais o modelo ao dado experimental. Porém, essa melhoria pode não possuir significado físico, sendo completamente um resultado matemático. Isso ocorreu mais evidentemente nos modelos de Dois Modos e de García-Saraji, onde os parâmetros, em geral, possuíam incertezas maiores pois acabavam descrevendo as mesmas regiões dos espectros mecânicos. A figura \ref{fig:ajuste_gs_tm_35} mostra os ajustes do modelo de Dois-Modos e García-Saraji para a amostra com 35 \mM{} de NaSal, evidenciando que o coeficiente de ajuste melhorado não implicou numa descrição melhor do sistema.
 	
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[width=0.7\textwidth]{imagens/reologia/ajuste_TM_35}
+%		\caption{Ajuste com o modelo de Dois-Modos do reograma completo para a amostra com 100 \mM{} de CTAB e 35 \mM{} de NaSal}
+%		\label{fig:ajuste_tm_35}
+%	\end{figure}
+
 	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.7\textwidth]{imagens/reologia/ajuste_TM_35}
-		\caption{Ajuste com o modelo de Dois-Modos do reograma completo para a amostra com 100 \mM{} de CTAB e 35 \mM{} de NaSal}
-		\label{fig:ajuste_tm_35}
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{imagens/reologia/ajuste_TM_35}
+			\caption{Dois-Modos}
+			\label{fig:ajuste_tm_35}
+		\end{subfigure} %
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{imagens/reologia/ajuste_GS_35}
+			\caption{García-Saraji}
+			\label{fig:ajuste_gs_35}
+		\end{subfigure}
+		\caption{Ajuste do reograma completo para a amostra com 100 \mM{} de \CTAB{} e 35 \mM{} de NaSal com os modelos de Dois Modos e de García-Saraji}
+		\label{fig:ajuste_gs_tm_35}
 	\end{figure}
 	
-	% todo: colocar uma discussão com base nos artigos da literatura, falando que no começo as micelas são mal descritas pelos modelos vigentes, mas melhoram depois
+	Os parâmetros \(a\) e \(b\) do modelo de García-Saraji estão próximos aos valores apresentados pelos autores no artigo onde o modelo foi proposto. % ref García-Saraji
 	
-	Utilizando os valores de \(G_0\) calculados pelos modelos, foi construído um diagrama de Cole-Cole, presente na figura \ref{fig:colecole_agua}. Esse tipo de diagrama possui um formato semicircular caso o conjunto de dados seguir bem o modelo de Maxwell. Essa é uma maneira alternativa de se visualizar o quão bons são os ajustes. É possível criar um diagrama sem normalizar G' e G'' por \(G_0\), mas isso torna a comparação entre sistemas diferentes mais difícil.
+	Utilizando os valores de \(G_0\) calculados pelos modelos, foi construído um diagrama de Cole-Cole, presente na figura \ref{fig:colecole_agua}. Utilizou-se o \(G_0\) do modelo de Maxwell, já que os valores entre modelos não variaram muito. Esse tipo de diagrama possui um formato semicircular caso o conjunto de dados seguir bem o modelo de Maxwell. Essa é uma maneira alternativa de se visualizar o quão bons são os ajustes. É possível criar um diagrama sem normalizar G' e G'' por \(G_0\), mas isso torna a comparação entre sistemas diferentes mais difícil.
 
 		\begin{figure}
 			\centering
@@ -959,7 +1066,7 @@
 			\label{fig:colecole_agua}
 		\end{figure}
 
-	Com o diagrama de Cole-Cole, é possível observar, graficamente, que as amostras com 35 e 60 \mM{} de NaSal são as que menos se ajustam ao modelo, já as outras são melhores. É possível, a partir de diagramas como esses, estimar outras propriedades das micelas, como comprimentos e tempos de relaxação XYZ, mas isso necessita de valores confiáveis para altas frequências (à direita no diagrama), o que não ocorreu.  % todo: verificar o que é possível fazer.
+	Com o diagrama de Cole-Cole, é possível observar, graficamente, que as amostras com 35 e 60 \mM{} de NaSal são as que menos se ajustam ao modelo, já as outras são melhores. É possível, a partir de diagramas como esses, estimar outras propriedades das micelas (Eq. \ref{eqn:mesh_contorno_por_reologia}) mas isso necessita de valores confiáveis para altas frequências (à direita no diagrama), o que não ocorreu. % todo: verificar mais o que é possível fazer. Tem outros detalhes.
 	
 	\begin{listing}[h]
 		\inputminted{python}{./python/ajuste_maxwell.py}
@@ -1063,45 +1170,85 @@
 	Com esses dados, foram realizados ajustes com os quatro modelos. Os coeficientes de determinação \(R^2\) se encontram na tabela \ref{tab:R2_aditivos}, os módulos no platô se encontram na tabela \ref{tab:g0_aditivos} e os tempos de relaxação se encontram na tabela \ref{tab:tr_aditivos}. 
 
 
+%	\begin{table}[h]
+%		\IBGEtab{%
+%			\caption{Valores do coeficiente de determinação \(R^2\) para os ajustes das amostras com CTAB 100 \mM{}, concentrações crescentes de NaSal, também em \mM, e seletas concentrações de aditivo, em \% m/m. O valor de coeficiente ajustado não será incluso pois não diverge significativamente.}
+%			\label{tab:R2_aditivos}
+%		}%
+%		{%
+%			\begin{tabular}{c c c | c c c c}
+%				\toprule
+%				 Aditivo  & \% Adit & [NaSal] & Maxwell & OldroydB & Jeffreys & Dois Modos \\ \midrule
+%				Glicerina & 30        & 60         & 0,981   & 0,988    & 0,988    & 0,997      \\
+%				Glicerina & 30        & 100        & 0,998   & 0,999    & 0,999    & 1,000      \\
+%				Glicerina & 30        & 260        & 0,998   & 0,999    & 0,999    & 1,000      \\
+%				Glicerina & 60        & 60         & 0,901   & 0,941    & 0,901    & 0,912      \\
+%				Glicerina & 60        & 100        & 0,991   & 0,999    & 0,999    & 1,000      \\
+%				Glicerina & 60        & 260        & 0,998   & 0,999    & 0,999    & 0,999      \\
+%				Sacarose  & 50        & 60         & 0,916   & 0,954    & 0,954    & 0,953      \\
+%				Sacarose  & 50        & 100        & 0,992   & 0,999    & 0,999    & 1,000      \\
+%				Sacarose  & 50        & 260        & 0,951   & 0,989    & 0,989    & 0,998      \\ \midrule
+%				  Ureia   & 5         & 60         & 0,989   & 0,990    & 0,990    & 0,999      \\
+%				  Ureia   & 5         & 100        & 0,999   & 0,999    & 0,999    & 1,000      \\
+%				  Ureia   & 5         & 260        & 0,998   & 0,999    & 0,999    & 0,999      \\
+%				  Ureia   & 15        & 60         & 0,913   & 0,928    & 0,928    & 0,969      \\
+%				  Ureia   & 15        & 100        & 0,998   & 0,999    & 0,999    & 1,000      \\
+%				  Ureia   & 15        & 260        & 0,997   & 0,998    & 0,998    & 0,999      \\
+%				  Ureia   & 30        & 60         & 0,765   & 0,786    & 0,786    & 0,938      \\
+%				  Ureia   & 30        & 100        & 0,996   & 0,997    & 0,997    & 0,999      \\
+%				  Ureia   & 30        & 260        & 0,997   & 0,998    & 0,998    & 1,000      \\ \midrule
+%				  DMSO    & 15        & 60         & 0,960   & 0,971    & 0,971    & 0,994      \\
+%				  DMSO    & 15        & 100        & 0,998   & 0,998    & 0,998    & 0,999      \\
+%				  DMSO    & 15        & 260        & 0,998   & 0,999    & 0,999    & 1,000      \\
+%				  DMSO    & 25        & 60         & 0,938   & 0,966    & 0,966    & 0,996      \\
+%				  DMSO    & 25        & 100        & 0,998   & 0,999    & 0,999    & 1,000      \\
+%				  DMSO    & 25        & 260        & 0,975   & 0,982    & 0,975    & 0,977      \\
+%				  1,3BD   & 15        & 100        & 0,999   & 0,999    & 0,999    & 0,999      \\
+%				  1,3BD   & 15        & 260        & 0,955   & 0,975    & 0,975    & 0,975      \\
+%				  1,3BD   & 25        & 100        & 0,571   & 0,602    & 0,602    & 0,571		\\ \bottomrule
+%			\end{tabular}
+%		}{}
+%	\end{table}  
+
 	\begin{table}[h]
-		\IBGEtab{%
-			\caption{Valores do coeficiente de determinação \(R^2\) para os ajustes das amostras com CTAB 100 \mM{}, concentrações crescentes de NaSal, também em \mM, e seletas concentrações de aditivo, em \% m/m. O valor de coeficiente ajustado não será incluso pois não diverge significativamente.}
-			\label{tab:R2_aditivos}
-		}%
-		{%
-			\begin{tabular}{c c c | c c c c}
-				\toprule
-				 Aditivo  & \% Adit & [NaSal] & Maxwell & OldroydB & Jeffreys & Dois Modos \\ \midrule
-				Glicerina & 30        & 60         & 0,981   & 0,988    & 0,988    & 0,997      \\
-				Glicerina & 30        & 100        & 0,998   & 0,999    & 0,999    & 1,000      \\
-				Glicerina & 30        & 260        & 0,998   & 0,999    & 0,999    & 1,000      \\
-				Glicerina & 60        & 60         & 0,901   & 0,941    & 0,901    & 0,912      \\
-				Glicerina & 60        & 100        & 0,991   & 0,999    & 0,999    & 1,000      \\
-				Glicerina & 60        & 260        & 0,998   & 0,999    & 0,999    & 0,999      \\
-				Sacarose  & 50        & 60         & 0,916   & 0,954    & 0,954    & 0,953      \\
-				Sacarose  & 50        & 100        & 0,992   & 0,999    & 0,999    & 1,000      \\
-				Sacarose  & 50        & 260        & 0,951   & 0,989    & 0,989    & 0,998      \\ \midrule
-				  Ureia   & 5         & 60         & 0,989   & 0,990    & 0,990    & 0,999      \\
-				  Ureia   & 5         & 100        & 0,999   & 0,999    & 0,999    & 1,000      \\
-				  Ureia   & 5         & 260        & 0,998   & 0,999    & 0,999    & 0,999      \\
-				  Ureia   & 15        & 60         & 0,913   & 0,928    & 0,928    & 0,969      \\
-				  Ureia   & 15        & 100        & 0,998   & 0,999    & 0,999    & 1,000      \\
-				  Ureia   & 15        & 260        & 0,997   & 0,998    & 0,998    & 0,999      \\
-				  Ureia   & 30        & 60         & 0,765   & 0,786    & 0,786    & 0,938      \\
-				  Ureia   & 30        & 100        & 0,996   & 0,997    & 0,997    & 0,999      \\
-				  Ureia   & 30        & 260        & 0,997   & 0,998    & 0,998    & 1,000      \\ \midrule
-				  DMSO    & 15        & 60         & 0,960   & 0,971    & 0,971    & 0,994      \\
-				  DMSO    & 15        & 100        & 0,998   & 0,998    & 0,998    & 0,999      \\
-				  DMSO    & 15        & 260        & 0,998   & 0,999    & 0,999    & 1,000      \\
-				  DMSO    & 25        & 60         & 0,938   & 0,966    & 0,966    & 0,996      \\
-				  DMSO    & 25        & 100        & 0,998   & 0,999    & 0,999    & 1,000      \\
-				  DMSO    & 25        & 260        & 0,975   & 0,982    & 0,975    & 0,977      \\
-				  1,3BD   & 15        & 100        & 0,999   & 0,999    & 0,999    & 0,999      \\
-				  1,3BD   & 15        & 260        & 0,955   & 0,975    & 0,975    & 0,975      \\
-				  1,3BD   & 25        & 100        & 0,571   & 0,602    & 0,602    & 0,571		\\ \bottomrule
-			\end{tabular}
-		}{}
-	\end{table}  
+	\IBGEtab{%
+		\caption{Valores do coeficiente de determinação \(R^2\) para os ajustes das amostras com CTAB 100 \mM{}, concentrações crescentes de NaSal, também em \mM, e seletas concentrações de aditivo, em \% m/m. O valor de coeficiente ajustado não será incluso pois não diverge significativamente.}
+		\label{tab:R2_aditivos}
+	}%
+	{%
+		\begin{tabular}{c c c | c c c c c}
+			\toprule
+            Aditivo  & \% Adit & [NaSal] & Maxwell & OldroydB & Jeffreys & Dois Modos  & Garcia-Saraji  \\ \midrule
+			Glicerina & 30        & 60         & 0,981   & 0,988    & 0,988    & 0,997 & 0,978    \\
+			Glicerina & 30        & 100        & 0,998   & 0,999    & 0,999    & 1,000 & 0,998    \\
+			Glicerina & 30        & 260        & 0,998   & 0,999    & 0,999    & 1,000 & 0,999    \\
+			Glicerina & 60        & 60         & 0,901   & 0,941    & 0,901    & 0,912 & 0,972    \\
+			Glicerina & 60        & 100        & 0,991   & 0,999    & 0,999    & 1,000 & 0,999    \\
+			Glicerina & 60        & 260        & 0,998   & 0,999    & 0,999    & 0,999 & 0,975    \\
+			Sacarose  & 50        & 60         & 0,916   & 0,954    & 0,954    & 0,953 & 0,999    \\
+			Sacarose  & 50        & 100        & 0,992   & 0,999    & 0,999    & 1,000 & 0,972    \\
+			Sacarose  & 50        & 260        & 0,951   & 0,989    & 0,989    & 0,998 & 0,758    \\ \midrule
+			Ureia   & 5         & 60         & 0,989   & 0,990    & 0,990    & 0,999   & 0,991  \\
+			Ureia   & 5         & 100        & 0,999   & 0,999    & 0,999    & 1,000   & 0,999  \\
+			Ureia   & 5         & 260        & 0,998   & 0,999    & 0,999    & 0,999   & 0,999  \\
+			Ureia   & 15        & 60         & 0,913   & 0,928    & 0,928    & 0,969   & 0,900  \\
+			Ureia   & 15        & 100        & 0,998   & 0,999    & 0,999    & 1,000   & 0,998  \\
+			Ureia   & 15        & 260        & 0,997   & 0,998    & 0,998    & 0,999   & 0,999  \\
+			Ureia   & 30        & 60         & 0,765   & 0,786    & 0,786    & 0,938   & 0,959  \\
+			Ureia   & 30        & 100        & 0,996   & 0,997    & 0,997    & 0,999   & 0,999  \\
+			Ureia   & 30        & 260        & 0,997   & 0,998    & 0,998    & 1,000   & 0,984  \\ \midrule
+			DMSO    & 15        & 60         & 0,960   & 0,971    & 0,971    & 0,994   & 0,989  \\
+			DMSO    & 15        & 100        & 0,998   & 0,998    & 0,998    & 0,999   & 0,999  \\
+			DMSO    & 15        & 260        & 0,998   & 0,999    & 0,999    & 1,000   & 0,999  \\
+			DMSO    & 25        & 60         & 0,938   & 0,966    & 0,966    & 0,996   & 0,940  \\
+			DMSO    & 25        & 100        & 0,998   & 0,999    & 0,999    & 1,000   & 0,999  \\
+			DMSO    & 25        & 260        & 0,975   & 0,982    & 0,975    & 0,977   & 0,999  \\
+			1,3BD   & 15        & 100        & 0,999   & 0,999    & 0,999    & 0,999   & 0,807  \\
+			1,3BD   & 15        & 260        & 0,955   & 0,975    & 0,975    & 0,975   & 0,998  \\
+			1,3BD   & 25        & 100        & 0,571   & 0,602    & 0,602    & 0,571   & 0,999    \\ \bottomrule
+		\end{tabular}
+	}{}
+\end{table} 
 
 	\begin{table}[h]
 		\begin{adjustbox}{angle=90}
@@ -1110,126 +1257,166 @@
 		\label{tab:g0_aditivos}
 	}%
 	{%
-		\begin{tabular}{c c c | c c c c c}
+		\begin{tabular}{c c c | c c c c c c}
 			\toprule
-			 Aditivo  & \% Adit & [NaSal] & Maxwell             & OldroydB             & Jeffreys             & Dois Modos 1            & Dois Modos 2            \\ \midrule
-			Glicerina & 30         & 60         & 35,5    \(\pm\) 0,3 & 35,4     \(\pm\) 0,2 & 35,5     \(\pm\) 0,2 & 33,3        \(\pm\) 0,3 & 3,8         \(\pm\) 0,3 \\
-			Glicerina & 30         & 100        & 53,8    \(\pm\) 0,2 & 53,4     \(\pm\) 0,2 & 53,6     \(\pm\) 0,1 & 5,3         \(\pm\) 0,2 & 52,3        \(\pm\) 0,1 \\
-			Glicerina & 30         & 260        & 52      \(\pm\) 0,2 & 51,7     \(\pm\) 0,1 & 51,8     \(\pm\) 0,1 & 50,3        \(\pm\) 0,2 & 4,5         \(\pm\) 0,2 \\ 
-			Glicerina & 60         & 60         & 26      \(\pm\) 2   & 65       \(\pm\) 14  & 26,27    \(\pm\) 0   & 2           \(\pm\) 2   & 26          \(\pm\) 2   \\
-			Glicerina & 60         & 100        & 43,4    \(\pm\) 0,5 & 41,9     \(\pm\) 0,2 & 42,6     \(\pm\) 0,2 & 39,7        \(\pm\) 0,1 & 12,5        \(\pm\) 0,3 \\
-			Glicerina & 60         & 260        & 45      \(\pm\) 0,3 & 43,3     \(\pm\) 0,5 & 44,1     \(\pm\) 0,3 & 31          \(\pm\) 15  & 16          \(\pm\) 16  \\ 
-			Sacarose  & 50         & 60         & 56,3    \(\pm\) 0,8 & 56,3     \(\pm\) 0,6 & 56,3     \(\pm\) 0,6 & 46          \(\pm\) 2   & 13          \(\pm\) 2   \\
-			Sacarose  & 50         & 100        & 59,9    \(\pm\) 0,6 & 58,5     \(\pm\) 0,2 & 59,2     \(\pm\) 0,2 & 57,05       \(\pm\) 0,1 & 18,8        \(\pm\) 0,7 \\
-			Sacarose  & 50         & 260        & 55,7    \(\pm\) 0,8 & 55,5     \(\pm\) 0,4 & 55,6     \(\pm\) 0,4 & 54          \(\pm\) 0,2 & 22          \(\pm\) 1   \\  \midrule
-			  Ureia   & 5          & 60         & 42,8    \(\pm\) 0,3 & 42,7     \(\pm\) 0,3 & 42,7     \(\pm\) 0,3 & 14          \(\pm\) 1   & 30          \(\pm\) 1   \\
-			  Ureia   & 5          & 100        & 63      \(\pm\) 0,2 & 62,9     \(\pm\) 0,2 & 62,9     \(\pm\) 0,2 & 61,5        \(\pm\) 0,2 & 3,7         \(\pm\) 0,3 \\
-			  Ureia   & 5          & 260        & 51      \(\pm\) 0,2 & 50,9     \(\pm\) 0,1 & 50,9     \(\pm\) 0,1 & 49,3        \(\pm\) 0,3 & 2,5         \(\pm\) 0,3 \\ 
-			  Ureia   & 15         & 60         & 35,3    \(\pm\) 0,3 & 35,3     \(\pm\) 0,3 & 35,3     \(\pm\) 0,3 & 33          \(\pm\) 0,4 & 3,6         \(\pm\) 0,4 \\
-			  Ureia   & 15         & 100        & 54,3    \(\pm\) 0,1 & 54,3     \(\pm\) 0,1 & 54,3     \(\pm\) 0,1 & 53,5        \(\pm\) 0,1 & 1,9         \(\pm\) 0,2 \\
-			  Ureia   & 15         & 260        & 53,6    \(\pm\) 0,2 & 53,4     \(\pm\) 0,2 & 53,5     \(\pm\) 0,2 & 51,4        \(\pm\) 0,3 & 3,6         \(\pm\) 0,3 \\ 
-			  Ureia   & 30         & 60         & 23      \(\pm\) 1   & 20       \(\pm\) 1   & 21       \(\pm\) 1   & 9,8         \(\pm\) 0,9 & 20          \(\pm\) 1   \\
-			  Ureia   & 30         & 100        & 50      \(\pm\) 0,2 & 49,9     \(\pm\) 0,2 & 49,9     \(\pm\) 0,2 & 47,1        \(\pm\) 0,7 & 3,5         \(\pm\) 0,7 \\
-			  Ureia   & 30         & 260        & 50,2    \(\pm\) 0,2 & 50       \(\pm\) 0,2 & 50,1     \(\pm\) 0,2 & 47,1        \(\pm\) 0,3 & 4,9         \(\pm\) 0,3 \\  \midrule
-			  DMSO    & 15         & 60         & 34,4    \(\pm\) 0,3 & 34,4     \(\pm\) 0,2 & 34,4     \(\pm\) 0,2 & 32,8        \(\pm\) 0,2 & 3,4         \(\pm\) 0,2 \\
-			  DMSO    & 15         & 100        & 51,1    \(\pm\) 0,2 & 51,1     \(\pm\) 0,3 & 51,1     \(\pm\) 0,2 & 48          \(\pm\) 1   & 5           \(\pm\) 1   \\
-			  DMSO    & 15         & 260        & 50      \(\pm\) 0,3 & 49,3     \(\pm\) 0,2 & 49,7     \(\pm\) 0,2 & 47,3        \(\pm\) 0,5 & 6,5         \(\pm\) 0,5 \\ 
-			  DMSO    & 25         & 60         & 25,4    \(\pm\) 0,5 & 25,2     \(\pm\) 0,4 & 25,3     \(\pm\) 0,4 & 22,2        \(\pm\) 0,2 & 8           \(\pm\) 0,3 \\
-			  DMSO    & 25         & 100        & 44,1    \(\pm\) 0,2 & 43,8     \(\pm\) 0,2 & 43,9     \(\pm\) 0,2 & 41,7        \(\pm\) 0,4 & 4,2         \(\pm\) 0,3 \\
-			  DMSO    & 25         & 260        & 57      \(\pm\) 1   & 61       \(\pm\) 2   & 56,52    \(\pm\) 0   & 8           \(\pm\) 13  & 50          \(\pm\) 12  \\ 
-			  13BD    & 15         & 100        & 47,6    \(\pm\) 0,3 & 47,6     \(\pm\) 0,4 & 47,55    \(\pm\) 0   & 6           \(\pm\) 5   & 43          \(\pm\) 4   \\
-			  13BD    & 15         & 260        & 55      \(\pm\) 4   & 13       \(\pm\) 2   & 23       \(\pm\) 3   & 13          \(\pm\) 5   & 2E6       \(\pm\) 3E9   \\
-			  13BD    & 25         & 100        & 0,8     \(\pm\) 0,1 & 0,4      \(\pm\) 0,2 & 0,5      \(\pm\) 0,2 & 0           \(\pm\) 0   & 0,76        \(\pm\) 0   \\ \bottomrule
+         Aditivo  & \% Adit & [NaSal] & Maxwell             & OldroydB             & Jeffreys             & Dois Modos 1            & Dois Modos 2                      & García-Saraji    \\ \midrule
+		Glicerina & 30         & 60         & 35,5    \(\pm\) 0,3 & 35,4     \(\pm\) 0,2 & 35,5     \(\pm\) 0,2 & 33,3        \(\pm\) 0,3 & 3,8         \(\pm\) 0,3 & 34,5  \(\pm\)  0,2 \\
+		Glicerina & 30         & 100        & 53,8    \(\pm\) 0,2 & 53,4     \(\pm\) 0,2 & 53,6     \(\pm\) 0,1 & 5,3         \(\pm\) 0,2 & 52,3        \(\pm\) 0,1 & 51,1  \(\pm\)  0,2 \\
+		Glicerina & 30         & 260        & 52      \(\pm\) 0,2 & 51,7     \(\pm\) 0,1 & 51,8     \(\pm\) 0,1 & 50,3        \(\pm\) 0,2 & 4,5         \(\pm\) 0,2 & 50,1  \(\pm\)  0,2 \\ 
+		Glicerina & 60         & 60         & 26      \(\pm\) 2   & 65       \(\pm\) 14  & 26,27    \(\pm\) 0   & 2           \(\pm\) 2   & 26          \(\pm\) 2   & 25,6  \(\pm\)  0,3 \\
+		Glicerina & 60         & 100        & 43,4    \(\pm\) 0,5 & 41,9     \(\pm\) 0,2 & 42,6     \(\pm\) 0,2 & 39,7        \(\pm\) 0,1 & 12,5        \(\pm\) 0,3 & 44,1  \(\pm\)  0,2 \\
+		Glicerina & 60         & 260        & 45      \(\pm\) 0,3 & 43,3     \(\pm\) 0,5 & 44,1     \(\pm\) 0,3 & 31          \(\pm\) 15  & 16          \(\pm\) 16  & 57    \(\pm\)  1 \\ 
+		Sacarose  & 50         & 60         & 56,3    \(\pm\) 0,8 & 56,3     \(\pm\) 0,6 & 56,3     \(\pm\) 0,6 & 46          \(\pm\) 2   & 13          \(\pm\) 2   & 47,5  \(\pm\)  0,3 \\
+		Sacarose  & 50         & 100        & 59,9    \(\pm\) 0,6 & 58,5     \(\pm\) 0,2 & 59,2     \(\pm\) 0,2 & 57,05       \(\pm\) 0,1 & 18,8        \(\pm\) 0,7 & 54    \(\pm\)   3 \\
+		Sacarose  & 50         & 260        & 55,7    \(\pm\) 0,8 & 55,5     \(\pm\) 0,4 & 55,6     \(\pm\) 0,4 & 54          \(\pm\) 0,2 & 22          \(\pm\) 1   & 1,4   \(\pm\)   0,4 \\  \midrule
+		Ureia   & 5          & 60         & 42,8    \(\pm\) 0,3 & 42,7     \(\pm\) 0,3 & 42,7     \(\pm\) 0,3 & 14          \(\pm\) 1   & 30          \(\pm\) 1   & 35,5  \(\pm\)  0,2 \\
+		Ureia   & 5          & 100        & 63      \(\pm\) 0,2 & 62,9     \(\pm\) 0,2 & 62,9     \(\pm\) 0,2 & 61,5        \(\pm\) 0,2 & 3,7         \(\pm\) 0,3 & 53,8  \(\pm\)  0,1 \\
+		Ureia   & 5          & 260        & 51      \(\pm\) 0,2 & 50,9     \(\pm\) 0,1 & 50,9     \(\pm\) 0,1 & 49,3        \(\pm\) 0,3 & 2,5         \(\pm\) 0,3 & 52,0  \(\pm\)  0,1 \\ 
+		Ureia   & 15         & 60         & 35,3    \(\pm\) 0,3 & 35,3     \(\pm\) 0,3 & 35,3     \(\pm\) 0,3 & 33          \(\pm\) 0,4 & 3,6         \(\pm\) 0,4 & 26  3\(\pm\) \\
+		Ureia   & 15         & 100        & 54,3    \(\pm\) 0,1 & 54,3     \(\pm\) 0,1 & 54,3     \(\pm\) 0,1 & 53,5        \(\pm\) 0,1 & 1,9         \(\pm\) 0,2 & 43,6  \(\pm\)  0,2 \\
+		Ureia   & 15         & 260        & 53,6    \(\pm\) 0,2 & 53,4     \(\pm\) 0,2 & 53,5     \(\pm\) 0,2 & 51,4        \(\pm\) 0,3 & 3,6         \(\pm\) 0,3 & 45,0  \(\pm\)  0,2 \\ 
+		Ureia   & 30         & 60         & 23      \(\pm\) 1   & 20       \(\pm\) 1   & 21       \(\pm\) 1   & 9,8         \(\pm\) 0,9 & 20          \(\pm\) 1   & 56,6  \(\pm\)  0,5 \\
+		Ureia   & 30         & 100        & 50      \(\pm\) 0,2 & 49,9     \(\pm\) 0,2 & 49,9     \(\pm\) 0,2 & 47,1        \(\pm\) 0,7 & 3,5         \(\pm\) 0,7 & 60,1  \(\pm\)  0,2 \\
+		Ureia   & 30         & 260        & 50,2    \(\pm\) 0,2 & 50       \(\pm\) 0,2 & 50,1     \(\pm\) 0,2 & 47,1        \(\pm\) 0,3 & 4,9         \(\pm\) 0,3 & 56,0  \(\pm\)  0,4 \\  \midrule
+		DMSO    & 15         & 60         & 34,4    \(\pm\) 0,3 & 34,4     \(\pm\) 0,2 & 34,4     \(\pm\) 0,2 & 32,8        \(\pm\) 0,2 & 3,4         \(\pm\) 0,2 & 43    \(\pm\)  0,00 \\
+		DMSO    & 15         & 100        & 51,1    \(\pm\) 0,2 & 51,1     \(\pm\) 0,3 & 51,1     \(\pm\) 0,2 & 48          \(\pm\) 1   & 5           \(\pm\) 1   & 63,0  \(\pm\)  0,2 \\
+		DMSO    & 15         & 260        & 50      \(\pm\) 0,3 & 49,3     \(\pm\) 0,2 & 49,7     \(\pm\) 0,2 & 47,3        \(\pm\) 0,5 & 6,5         \(\pm\) 0,5 & 51,0  \(\pm\)  0,1 \\ 
+		DMSO    & 25         & 60         & 25,4    \(\pm\) 0,5 & 25,2     \(\pm\) 0,4 & 25,3     \(\pm\) 0,4 & 22,2        \(\pm\) 0,2 & 8           \(\pm\) 0,3 & 35,3  \(\pm\)  0,2 \\
+		DMSO    & 25         & 100        & 44,1    \(\pm\) 0,2 & 43,8     \(\pm\) 0,2 & 43,9     \(\pm\) 0,2 & 41,7        \(\pm\) 0,4 & 4,2         \(\pm\) 0,3 & 54,33 \(\pm\)  0,09 \\
+		DMSO    & 25         & 260        & 57      \(\pm\) 1   & 61       \(\pm\) 2   & 56,52    \(\pm\) 0   & 8           \(\pm\) 13  & 50          \(\pm\) 12  & 53,6  \(\pm\)  0,1 \\ 
+		13BD    & 15         & 100        & 47,6    \(\pm\) 0,3 & 47,6     \(\pm\) 0,4 & 47,55    \(\pm\) 0   & 6           \(\pm\) 5   & 43          \(\pm\) 4   & 22  1\(\pm\) \\
+		13BD    & 15         & 260        & 55      \(\pm\) 4   & 13       \(\pm\) 2   & 23       \(\pm\) 3   & 13          \(\pm\) 5   & 2E6       \(\pm\) 3E9   & 50,0  \(\pm\)  0,2 \\
+		13BD    & 25         & 100        & 0,8     \(\pm\) 0,1 & 0,4      \(\pm\) 0,2 & 0,5      \(\pm\) 0,2 & 0           \(\pm\) 0   & 0,76        \(\pm\) 0   & 50,2  \(\pm\)  0,2 \\ \bottomrule
 		\end{tabular}
 	}{} \end{adjustbox}
 \end{table} 
 
 %	\begin{table}[h]
+%		\begin{adjustbox}{angle=90}
 %	\IBGEtab{%
-%		\caption{Tempos de relaxação \(\tau_\mathrm{rel}\), em s, para os ajustes de Maxwell, OldroydB e o primeiro tempo de relaxação do modelo de Jeffreys.}
-%		\label{tab:tr_aditivos1}
+%		\caption{Tempos de relaxação \(\tau_\mathrm{rel}\), em s, dos ajustes realizados. O segundo tempo de relaxação do modelo de Jeffreys está em ms.}
+%		\label{tab:tr_aditivos}
 %	}%
 %	{%
-%		\begin{tabular}{c c c | c c c }
+%		\begin{tabular}{c c c | c c c c c c}
 %			\toprule
-%			 Aditivo  & \% Adit & [NaSal] & Maxwell                & OldroydB                & Jeffreys 1                \\ \midrule
-%			Glicerina & 30         & 60         & 6,4     \(\pm\) 0,2    & 6,5      \(\pm\) 0,1    & 6,5       \(\pm\) 0,1    \\
-%			Glicerina & 30         & 100        & 0,428   \(\pm\) 0,005  & 0,436    \(\pm\) 0,003  & 0,436     \(\pm\) 0,003  \\
-%			Glicerina & 30         & 260        & 0,631   \(\pm\) 0,007  & 0,642    \(\pm\) 0,004  & 0,642     \(\pm\) 0,004  \\
-%			Glicerina & 60         & 60         & 0,027   \(\pm\) 0,002  & 0,013    \(\pm\) 0,002  & 0,03      \(\pm\) 0      \\
-%			Glicerina & 60         & 100        & 0,196   \(\pm\) 0,004  & 0,213    \(\pm\) 0,002  & 0,213     \(\pm\) 0,002  \\
-%			Glicerina & 60         & 260        & 0,0444  \(\pm\) 0,0004 & 0,0464   \(\pm\) 0,0006 & 0,0464    \(\pm\) 0,0006 \\
-%			Sacarose  & 50         & 60         & 25      \(\pm\) 1      & 24,6     \(\pm\) 1      & 24,6      \(\pm\) 1      \\
-%			Sacarose  & 50         & 100        & 0,24    \(\pm\) 0,005  & 0,255    \(\pm\) 0,002  & 0,255     \(\pm\) 0,002  \\
-%			Sacarose  & 50         & 260        & 2,6     \(\pm\) 0,1    & 2,65     \(\pm\) 0,06   & 2,65      \(\pm\) 0,06   \\ \midrule
-%			  Ureia   & 5          & 60         & 55      \(\pm\) 1      & 55       \(\pm\) 1      & 55        \(\pm\) 1      \\
-%			  Ureia   & 5          & 100        & 0,753   \(\pm\) 0,006  & 0,759    \(\pm\) 0,006  & 0,759     \(\pm\) 0,006  \\
-%			  Ureia   & 5          & 260        & 2,53    \(\pm\) 0,02   & 2,54     \(\pm\) 0,02   & 2,54      \(\pm\) 0,02   \\
-%			  Ureia   & 15         & 60         & 14,2    \(\pm\) 0,6    & 14,2     \(\pm\) 0,5    & 14,2      \(\pm\) 0,5    \\
-%			  Ureia   & 15         & 100        & 4,37    \(\pm\) 0,04   & 4,38     \(\pm\) 0,03   & 4,38      \(\pm\) 0,03   \\
-%			  Ureia   & 15         & 260        & 1,47    \(\pm\) 0,02   & 1,48     \(\pm\) 0,01   & 1,48      \(\pm\) 0,01   \\
-%			  Ureia   & 30         & 60         & 0,1     \(\pm\) 0,01   & 0,15     \(\pm\) 0,02   & 0,15      \(\pm\) 0,02   \\
-%			  Ureia   & 30         & 100        & 6,71    \(\pm\) 0,09   & 6,75     \(\pm\) 0,08   & 6,75      \(\pm\) 0,08   \\
-%			  Ureia   & 30         & 260        & 0,573   \(\pm\) 0,007  & 0,581    \(\pm\) 0,006  & 0,581     \(\pm\) 0,006  \\  \midrule
-%			  DMSO    & 15         & 60         & 9,3     \(\pm\) 0,3    & 9,4      \(\pm\) 0,2    & 9,4       \(\pm\) 0,2    \\
-%			  DMSO    & 15         & 100        & 0,238   \(\pm\) 0,003  & 0,239    \(\pm\) 0,003  & 0,239     \(\pm\) 0,003  \\
-%			  DMSO    & 15         & 260        & 0,154   \(\pm\) 0,002  & 0,159    \(\pm\) 0,002  & 0,159     \(\pm\) 0,002  \\
-%			  DMSO    & 25         & 60         & 1,42    \(\pm\) 0,08   & 1,49     \(\pm\) 0,06   & 1,49      \(\pm\) 0,06   \\
-%			  DMSO    & 25         & 100        & 0,218   \(\pm\) 0,002  & 0,222    \(\pm\) 0,002  & 0,222     \(\pm\) 0,002  \\
-%			  DMSO    & 25         & 260        & 0,041   \(\pm\) 0,002  & 0,036    \(\pm\) 0,002  & 0,04      \(\pm\) 0      \\
-%			  13BD    & 15         & 100        & 0,0515  \(\pm\) 0,0004 & 0,0515   \(\pm\) 0,0007 & 0,05      \(\pm\) 0      \\
-%			  13BD    & 15         & 260        & 0,0081  \(\pm\) 0,0006 & 0,024    \(\pm\) 0,003  & 0,024     \(\pm\) 0,003  \\
-%			  13BD    & 25         & 100        & 0,07    \(\pm\) 0,02   & 0,12     \(\pm\) 0,06   & 0,12      \(\pm\) 0,06		\\ \bottomrule
-%		\end{tabular}
-%	}{}
+%			 Aditivo  &\% Adit & [NaSal]      & Maxwell                & OldroydB                & Jeffreys 1                & Jeffreys 2    & Dois Modos 1               & Dois Modos 2               \\ \midrule
+%			Glicerina & 30         & 60       & 6,4     \(\pm\) 0,2    & 6,5      \(\pm\) 0,1    & 6,5       \(\pm\) 0,1     & 8\(\pm\)2     & 7           \(\pm\) 0,1    & 0,61        \(\pm\) 0,09   \\
+%			Glicerina & 30         & 100      & 0,428   \(\pm\) 0,005  & 0,436    \(\pm\) 0,003  & 0,436     \(\pm\) 0,003   & 1,4\(\pm\)0,2 & 0,029       \(\pm\) 0,002  & 0,448       \(\pm\) 0,002  \\
+%			Glicerina & 30         & 260      & 0,631   \(\pm\) 0,007  & 0,642    \(\pm\) 0,004  & 0,642     \(\pm\) 0,004   & 1,8\(\pm\)0,2 & 0,662       \(\pm\) 0,003  & 0,05        \(\pm\) 0,005  \\
+%			Glicerina & 60         & 60       & 0,027   \(\pm\) 0,002  & 0,013    \(\pm\) 0,002  & 0,03      \(\pm\) 0       & 0\(\pm\)0     & 0,2         \(\pm\) 0,2    & 0,023       \(\pm\) 0,004  \\
+%			Glicerina & 60         & 100      & 0,196   \(\pm\) 0,004  & 0,213    \(\pm\) 0,002  & 0,213     \(\pm\) 0,002   & 3,4\(\pm\)0,2 & 0,2248      \(\pm\) 0,0009 & 0,0196      \(\pm\) 0,0009 \\
+%			Glicerina & 60         & 260      & 0,0444  \(\pm\) 0,0004 & 0,0464   \(\pm\) 0,0006 & 0,0464    \(\pm\) 0,000   & 0,9\(\pm\)0,2 & 0,035       \(\pm\) 0,007  & 0,06        \(\pm\) 0,02   \\
+%			Sacarose  & 50         & 60       & 25      \(\pm\) 1      & 24,6     \(\pm\) 1      & 24,6      \(\pm\) 1       & 5\(\pm\)0,7   & 33          \(\pm\) 2      & 3,1         \(\pm\) 0,9    \\
+%			Sacarose  & 50         & 100      & 0,24    \(\pm\) 0,005  & 0,255    \(\pm\) 0,002  & 0,255     \(\pm\) 0,002   & 2,7\(\pm\)0,1 & 0,2622      \(\pm\) 0,0007 & 0,0109      \(\pm\) 0,0005 \\
+%			Sacarose  & 50         & 260      & 2,6     \(\pm\) 0,1    & 2,65     \(\pm\) 0,06   & 2,65      \(\pm\) 0,06    & 4,7\(\pm\)0,4 & 2,74        \(\pm\) 0,02   & 0,016       \(\pm\) 0,001  \\ \midrule
+%			Ureia   & 5          & 60       & 55      \(\pm\) 1      & 55       \(\pm\) 1      & 55        \(\pm\) 1       & 40\(\pm\)20   & 26          \(\pm\) 2      & 75          \(\pm\) 2      \\
+%			Ureia   & 5          & 100      & 0,753   \(\pm\) 0,006  & 0,759    \(\pm\) 0,006  & 0,759     \(\pm\) 0,006   & 0,8\(\pm\)0,2 & 0,78        \(\pm\) 0,005  & 0,054       \(\pm\) 0,008  \\
+%			Ureia   & 5          & 260      & 2,53    \(\pm\) 0,02   & 2,54     \(\pm\) 0,02   & 2,54      \(\pm\) 0,02    & 1,5\(\pm\)0,3 & 2,64        \(\pm\) 0,02   & 0,31        \(\pm\) 0,06   \\
+%			Ureia   & 15         & 60       & 14,2    \(\pm\) 0,6    & 14,2     \(\pm\) 0,5    & 14,2      \(\pm\) 0,5     & 2,9\(\pm\)1   & 16          \(\pm\) 0,5    & 0,9         \(\pm\) 0,2    \\
+%			Ureia   & 15         & 100      & 4,37    \(\pm\) 0,04   & 4,38     \(\pm\) 0,03   & 4,38      \(\pm\) 0,03    & 1,3\(\pm\)0,2 & 4,46        \(\pm\) 0,02   & 0,19        \(\pm\) 0,03   \\
+%			Ureia   & 15         & 260      & 1,47    \(\pm\) 0,02   & 1,48     \(\pm\) 0,01   & 1,48      \(\pm\) 0,01    & 1,4\(\pm\)0,3 & 1,55        \(\pm\) 0,01   & 0,16        \(\pm\) 0,02   \\
+%			Ureia   & 30         & 60       & 0,1     \(\pm\) 0,01   & 0,15     \(\pm\) 0,02   & 0,15      \(\pm\) 0,02    & 5\(\pm\)2     & 0,55        \(\pm\) 0,09   & 0,03        \(\pm\) 0,004  \\
+%			Ureia   & 30         & 100      & 6,71    \(\pm\) 0,09   & 6,75     \(\pm\) 0,08   & 6,75      \(\pm\) 0,08    & 2,9\(\pm\)0,9 & 7,2         \(\pm\) 0,1    & 1,5         \(\pm\) 0,3    \\
+%			Ureia   & 30         & 260      & 0,573   \(\pm\) 0,007  & 0,581    \(\pm\) 0,006  & 0,581     \(\pm\) 0,006   & 1,2\(\pm\)0,2 & 0,622       \(\pm\) 0,004  & 0,091       \(\pm\) 0,008  \\ \midrule
+%			DMSO    & 15         & 60       & 9,3     \(\pm\) 0,3    & 9,4      \(\pm\) 0,2    & 9,4       \(\pm\) 0,2     & 3,1\(\pm\)0,8 & 10,1        \(\pm\) 0,1    & 0,32        \(\pm\) 0,04   \\
+%			DMSO    & 15         & 100      & 0,238   \(\pm\) 0,003  & 0,239    \(\pm\) 0,003  & 0,239     \(\pm\) 0,003   & 0,1\(\pm\)0,2 & 0,256       \(\pm\) 0,006  & 0,06        \(\pm\) 0,02   \\
+%			DMSO    & 15         & 260      & 0,154   \(\pm\) 0,002  & 0,159    \(\pm\) 0,002  & 0,159     \(\pm\) 0,002   & 1,1\(\pm\)0,2 & 0,166       \(\pm\) 0,002  & 0,022       \(\pm\) 0,004  \\
+%			DMSO    & 25         & 60       & 1,42    \(\pm\) 0,08   & 1,49     \(\pm\) 0,06   & 1,49      \(\pm\) 0,06    & 7\(\pm\)1     & 1,78        \(\pm\) 0,03   & 0,089       \(\pm\) 0,006  \\
+%			DMSO    & 25         & 100      & 0,218   \(\pm\) 0,002  & 0,222    \(\pm\) 0,002  & 0,222     \(\pm\) 0,002   & 0,9\(\pm\)0,2 & 0,233       \(\pm\) 0,002  & 0,043       \(\pm\) 0,006  \\
+%			DMSO    & 25         & 260      & 0,041   \(\pm\) 0,002  & 0,036    \(\pm\) 0,002  & 0,04      \(\pm\) 0       & 0\(\pm\)0     & 0,1         \(\pm\) 0,1    & 0,035       \(\pm\) 0,006  \\
+%			13BD    & 15         & 100      & 0,0515  \(\pm\) 0,0004 & 0,0515   \(\pm\) 0,0007 & 0,05      \(\pm\) 0       & 0\(\pm\)0     & 0,11        \(\pm\) 0,03   & 0,046       \(\pm\) 0,003  \\
+%			13BD    & 15         & 260      & 0,0081  \(\pm\) 0,0006 & 0,024    \(\pm\) 0,003  & 0,024     \(\pm\) 0,003   & 11\(\pm\)2    & 0,024       \(\pm\) 0,006  & 0           \(\pm\) 0,002  \\
+%			13BD    & 25         & 100      & 0,07    \(\pm\) 0,02   & 0,12     \(\pm\) 0,06   & 0,12      \(\pm\) 0,06   & 30\(\pm\)30   & 10,78       \(\pm\) 0      & 0,07        \(\pm\) 0		\\ \bottomrule
+%		\end{tabular} 
+%	
+%	}{} \end{adjustbox}
 %\end{table} 
 
-
-
 	\begin{table}[h]
-		\begin{adjustbox}{angle=90}
-	\IBGEtab{%
-		\caption{Tempos de relaxação \(\tau_\mathrm{rel}\), em s, dos ajustes realizados. O segundo tempo de relaxação do modelo de Jeffreys está em ms.}
-		\label{tab:tr_aditivos}
-	}%
-	{%
-		\begin{tabular}{c c c | c c c c c c}
-			\toprule
-			 Aditivo  &\% Adit & [NaSal]      & Maxwell                & OldroydB                & Jeffreys 1                & Jeffreys 2    & Dois Modos 1               & Dois Modos 2               \\ \midrule
-			Glicerina & 30         & 60       & 6,4     \(\pm\) 0,2    & 6,5      \(\pm\) 0,1    & 6,5       \(\pm\) 0,1     & 8\(\pm\)2     & 7           \(\pm\) 0,1    & 0,61        \(\pm\) 0,09   \\
-			Glicerina & 30         & 100      & 0,428   \(\pm\) 0,005  & 0,436    \(\pm\) 0,003  & 0,436     \(\pm\) 0,003   & 1,4\(\pm\)0,2 & 0,029       \(\pm\) 0,002  & 0,448       \(\pm\) 0,002  \\
-			Glicerina & 30         & 260      & 0,631   \(\pm\) 0,007  & 0,642    \(\pm\) 0,004  & 0,642     \(\pm\) 0,004   & 1,8\(\pm\)0,2 & 0,662       \(\pm\) 0,003  & 0,05        \(\pm\) 0,005  \\
-			Glicerina & 60         & 60       & 0,027   \(\pm\) 0,002  & 0,013    \(\pm\) 0,002  & 0,03      \(\pm\) 0       & 0\(\pm\)0     & 0,2         \(\pm\) 0,2    & 0,023       \(\pm\) 0,004  \\
-			Glicerina & 60         & 100      & 0,196   \(\pm\) 0,004  & 0,213    \(\pm\) 0,002  & 0,213     \(\pm\) 0,002   & 3,4\(\pm\)0,2 & 0,2248      \(\pm\) 0,0009 & 0,0196      \(\pm\) 0,0009 \\
-			Glicerina & 60         & 260      & 0,0444  \(\pm\) 0,0004 & 0,0464   \(\pm\) 0,0006 & 0,0464    \(\pm\) 0,000   & 0,9\(\pm\)0,2 & 0,035       \(\pm\) 0,007  & 0,06        \(\pm\) 0,02   \\
-			Sacarose  & 50         & 60       & 25      \(\pm\) 1      & 24,6     \(\pm\) 1      & 24,6      \(\pm\) 1       & 5\(\pm\)0,7   & 33          \(\pm\) 2      & 3,1         \(\pm\) 0,9    \\
-			Sacarose  & 50         & 100      & 0,24    \(\pm\) 0,005  & 0,255    \(\pm\) 0,002  & 0,255     \(\pm\) 0,002   & 2,7\(\pm\)0,1 & 0,2622      \(\pm\) 0,0007 & 0,0109      \(\pm\) 0,0005 \\
-			Sacarose  & 50         & 260      & 2,6     \(\pm\) 0,1    & 2,65     \(\pm\) 0,06   & 2,65      \(\pm\) 0,06    & 4,7\(\pm\)0,4 & 2,74        \(\pm\) 0,02   & 0,016       \(\pm\) 0,001  \\ \midrule
-			Ureia   & 5          & 60       & 55      \(\pm\) 1      & 55       \(\pm\) 1      & 55        \(\pm\) 1       & 40\(\pm\)20   & 26          \(\pm\) 2      & 75          \(\pm\) 2      \\
-			Ureia   & 5          & 100      & 0,753   \(\pm\) 0,006  & 0,759    \(\pm\) 0,006  & 0,759     \(\pm\) 0,006   & 0,8\(\pm\)0,2 & 0,78        \(\pm\) 0,005  & 0,054       \(\pm\) 0,008  \\
-			Ureia   & 5          & 260      & 2,53    \(\pm\) 0,02   & 2,54     \(\pm\) 0,02   & 2,54      \(\pm\) 0,02    & 1,5\(\pm\)0,3 & 2,64        \(\pm\) 0,02   & 0,31        \(\pm\) 0,06   \\
-			Ureia   & 15         & 60       & 14,2    \(\pm\) 0,6    & 14,2     \(\pm\) 0,5    & 14,2      \(\pm\) 0,5     & 2,9\(\pm\)1   & 16          \(\pm\) 0,5    & 0,9         \(\pm\) 0,2    \\
-			Ureia   & 15         & 100      & 4,37    \(\pm\) 0,04   & 4,38     \(\pm\) 0,03   & 4,38      \(\pm\) 0,03    & 1,3\(\pm\)0,2 & 4,46        \(\pm\) 0,02   & 0,19        \(\pm\) 0,03   \\
-			Ureia   & 15         & 260      & 1,47    \(\pm\) 0,02   & 1,48     \(\pm\) 0,01   & 1,48      \(\pm\) 0,01    & 1,4\(\pm\)0,3 & 1,55        \(\pm\) 0,01   & 0,16        \(\pm\) 0,02   \\
-			Ureia   & 30         & 60       & 0,1     \(\pm\) 0,01   & 0,15     \(\pm\) 0,02   & 0,15      \(\pm\) 0,02    & 5\(\pm\)2     & 0,55        \(\pm\) 0,09   & 0,03        \(\pm\) 0,004  \\
-			Ureia   & 30         & 100      & 6,71    \(\pm\) 0,09   & 6,75     \(\pm\) 0,08   & 6,75      \(\pm\) 0,08    & 2,9\(\pm\)0,9 & 7,2         \(\pm\) 0,1    & 1,5         \(\pm\) 0,3    \\
-			Ureia   & 30         & 260      & 0,573   \(\pm\) 0,007  & 0,581    \(\pm\) 0,006  & 0,581     \(\pm\) 0,006   & 1,2\(\pm\)0,2 & 0,622       \(\pm\) 0,004  & 0,091       \(\pm\) 0,008  \\ \midrule
-			DMSO    & 15         & 60       & 9,3     \(\pm\) 0,3    & 9,4      \(\pm\) 0,2    & 9,4       \(\pm\) 0,2     & 3,1\(\pm\)0,8 & 10,1        \(\pm\) 0,1    & 0,32        \(\pm\) 0,04   \\
-			DMSO    & 15         & 100      & 0,238   \(\pm\) 0,003  & 0,239    \(\pm\) 0,003  & 0,239     \(\pm\) 0,003   & 0,1\(\pm\)0,2 & 0,256       \(\pm\) 0,006  & 0,06        \(\pm\) 0,02   \\
-			DMSO    & 15         & 260      & 0,154   \(\pm\) 0,002  & 0,159    \(\pm\) 0,002  & 0,159     \(\pm\) 0,002   & 1,1\(\pm\)0,2 & 0,166       \(\pm\) 0,002  & 0,022       \(\pm\) 0,004  \\
-			DMSO    & 25         & 60       & 1,42    \(\pm\) 0,08   & 1,49     \(\pm\) 0,06   & 1,49      \(\pm\) 0,06    & 7\(\pm\)1     & 1,78        \(\pm\) 0,03   & 0,089       \(\pm\) 0,006  \\
-			DMSO    & 25         & 100      & 0,218   \(\pm\) 0,002  & 0,222    \(\pm\) 0,002  & 0,222     \(\pm\) 0,002   & 0,9\(\pm\)0,2 & 0,233       \(\pm\) 0,002  & 0,043       \(\pm\) 0,006  \\
-			DMSO    & 25         & 260      & 0,041   \(\pm\) 0,002  & 0,036    \(\pm\) 0,002  & 0,04      \(\pm\) 0       & 0\(\pm\)0     & 0,1         \(\pm\) 0,1    & 0,035       \(\pm\) 0,006  \\
-			13BD    & 15         & 100      & 0,0515  \(\pm\) 0,0004 & 0,0515   \(\pm\) 0,0007 & 0,05      \(\pm\) 0       & 0\(\pm\)0     & 0,11        \(\pm\) 0,03   & 0,046       \(\pm\) 0,003  \\
-			13BD    & 15         & 260      & 0,0081  \(\pm\) 0,0006 & 0,024    \(\pm\) 0,003  & 0,024     \(\pm\) 0,003   & 11\(\pm\)2    & 0,024       \(\pm\) 0,006  & 0           \(\pm\) 0,002  \\
-			13BD    & 25         & 100      & 0,07    \(\pm\) 0,02   & 0,12     \(\pm\) 0,06   & 0,12      \(\pm\) 0,06   & 30\(\pm\)30   & 10,78       \(\pm\) 0      & 0,07        \(\pm\) 0		\\ \bottomrule
-		\end{tabular} 
-	
-	}{} \end{adjustbox}
+	\begin{adjustbox}{angle=90}
+		\IBGEtab{%
+			\caption{Tempos de relaxação \(\tau_\mathrm{rel}\), em s, dos ajustes realizados. O segundo tempo de relaxação do modelo de Jeffreys está em ms.}
+			\label{tab:tr_aditivos}
+		}%
+		{%
+			\begin{tabular}{c c c | c c c c c c c}
+				\toprule
+                Aditivo  &\% Adit & [NaSal]      & Maxwell                & OldroydB                & Jeffreys 1                & Jeffreys 2    & Dois Modos 1               & Dois Modos 2                & García-Saraji \\ \midrule
+				Glicerina & 30         & 60       & 6,4     \(\pm\) 0,2    & 6,5      \(\pm\) 0,1    & 6,5       \(\pm\) 0,1     & 8\(\pm\)2     & 7           \(\pm\) 0,1    & 0,61        \(\pm\) 0,09   & 11,1  \(\pm\)  0,9  \\
+				Glicerina & 30         & 100      & 0,428   \(\pm\) 0,005  & 0,436    \(\pm\) 0,003  & 0,436     \(\pm\) 0,003   & 1,4\(\pm\)0,2 & 0,029       \(\pm\) 0,002  & 0,448       \(\pm\) 0,002  & 0,26  \(\pm\)  0,07  \\
+				Glicerina & 30         & 260      & 0,631   \(\pm\) 0,007  & 0,642    \(\pm\) 0,004  & 0,642     \(\pm\) 0,004   & 1,8\(\pm\)0,2 & 0,662       \(\pm\) 0,003  & 0,05        \(\pm\) 0,005  & 0,158 \(\pm\)  0,002  \\
+				Glicerina & 60         & 60       & 0,027   \(\pm\) 0,002  & 0,013    \(\pm\) 0,002  & 0,03      \(\pm\) 0       & 0\(\pm\)0     & 0,2         \(\pm\) 0,2    & 0,023       \(\pm\) 0,004  & 1,9   \(\pm\)   0,2  \\
+				Glicerina & 60         & 100      & 0,196   \(\pm\) 0,004  & 0,213    \(\pm\) 0,002  & 0,213     \(\pm\) 0,002   & 3,4\(\pm\)0,2 & 0,2248      \(\pm\) 0,0009 & 0,0196      \(\pm\) 0,0009 & 0,228 \(\pm\)  0,006  \\
+				Glicerina & 60         & 260      & 0,0444  \(\pm\) 0,0004 & 0,0464   \(\pm\) 0,0006 & 0,0464    \(\pm\) 0,000   & 0,9\(\pm\)0,2 & 0,035       \(\pm\) 0,007  & 0,06        \(\pm\) 0,02   & 0     \(\pm\)   2  \\
+				Sacarose  & 50         & 60       & 25      \(\pm\) 1      & 24,6     \(\pm\) 1      & 24,6      \(\pm\) 1       & 5\(\pm\)0,7   & 33          \(\pm\) 2      & 3,1         \(\pm\) 0,9    & 868   \(\pm\)      5570025  \\
+				Sacarose  & 50         & 100      & 0,24    \(\pm\) 0,005  & 0,255    \(\pm\) 0,002  & 0,255     \(\pm\) 0,002   & 2,7\(\pm\)0,1 & 0,2622      \(\pm\) 0,0007 & 0,0109      \(\pm\) 0,0005 & 0,010 \(\pm\)  0,001  \\
+				Sacarose  & 50         & 260      & 2,6     \(\pm\) 0,1    & 2,65     \(\pm\) 0,06   & 2,65      \(\pm\) 0,06    & 4,7\(\pm\)0,4 & 2,74        \(\pm\) 0,02   & 0,016       \(\pm\) 0,001  & 0,06  \(\pm\)  0,02  \\ \midrule
+				Ureia   & 5          & 60       & 55      \(\pm\) 1      & 55       \(\pm\) 1      & 55        \(\pm\) 1       & 40\(\pm\)20   & 26          \(\pm\) 2      & 75          \(\pm\) 2        & 7,1   \(\pm\)   0,4  \\
+				Ureia   & 5          & 100      & 0,753   \(\pm\) 0,006  & 0,759    \(\pm\) 0,006  & 0,759     \(\pm\) 0,006   & 0,8\(\pm\)0,2 & 0,78        \(\pm\) 0,005  & 0,054       \(\pm\) 0,008    & 0,443 \(\pm\)  0,005  \\
+				Ureia   & 5          & 260      & 2,53    \(\pm\) 0,02   & 2,54     \(\pm\) 0,02   & 2,54      \(\pm\) 0,02    & 1,5\(\pm\)0,3 & 2,64        \(\pm\) 0,02   & 0,31        \(\pm\) 0,06     & 0,661 \(\pm\)  0,008  \\
+				Ureia   & 15         & 60       & 14,2    \(\pm\) 0,6    & 14,2     \(\pm\) 0,5    & 14,2      \(\pm\) 0,5     & 2,9\(\pm\)1   & 16          \(\pm\) 0,5    & 0,9         \(\pm\) 0,2      & 1     \(\pm\)   241415  \\
+				Ureia   & 15         & 100      & 4,37    \(\pm\) 0,04   & 4,38     \(\pm\) 0,03   & 4,38      \(\pm\) 0,03    & 1,3\(\pm\)0,2 & 4,46        \(\pm\) 0,02   & 0,19        \(\pm\) 0,03     & 0,217 \(\pm\)  0,005  \\
+				Ureia   & 15         & 260      & 1,47    \(\pm\) 0,02   & 1,48     \(\pm\) 0,01   & 1,48      \(\pm\) 0,01    & 1,4\(\pm\)0,3 & 1,55        \(\pm\) 0,01   & 0,16        \(\pm\) 0,02     & 0,051 \(\pm\)  0,008  \\
+				Ureia   & 30         & 60       & 0,1     \(\pm\) 0,01   & 0,15     \(\pm\) 0,02   & 0,15      \(\pm\) 0,02    & 5\(\pm\)2     & 0,55        \(\pm\) 0,09   & 0,03        \(\pm\) 0,004    & 37    \(\pm\)      5  \\
+				Ureia   & 30         & 100      & 6,71    \(\pm\) 0,09   & 6,75     \(\pm\) 0,08   & 6,75      \(\pm\) 0,08    & 2,9\(\pm\)0,9 & 7,2         \(\pm\) 0,1    & 1,5         \(\pm\) 0,3      & 0,256 \(\pm\)  0,003  \\
+				Ureia   & 30         & 260      & 0,573   \(\pm\) 0,007  & 0,581    \(\pm\) 0,006  & 0,581     \(\pm\) 0,006   & 1,2\(\pm\)0,2 & 0,622       \(\pm\) 0,004  & 0,091       \(\pm\) 0,008    & 2,9   \(\pm\)   0,1  \\ \midrule
+				DMSO    & 15         & 60       & 9,3     \(\pm\) 0,3    & 9,4      \(\pm\) 0,2    & 9,4       \(\pm\) 0,2     & 3,1\(\pm\)0,8 & 10,1        \(\pm\) 0,1    & 0,32        \(\pm\) 0,04     & 55    \(\pm\)   0  \\
+				DMSO    & 15         & 100      & 0,238   \(\pm\) 0,003  & 0,239    \(\pm\) 0,003  & 0,239     \(\pm\) 0,003   & 0,1\(\pm\)0,2 & 0,256       \(\pm\) 0,006  & 0,06        \(\pm\) 0,02     & 0,78  \(\pm\)  0,01  \\
+				DMSO    & 15         & 260      & 0,154   \(\pm\) 0,002  & 0,159    \(\pm\) 0,002  & 0,159     \(\pm\) 0,002   & 1,1\(\pm\)0,2 & 0,166       \(\pm\) 0,002  & 0,022       \(\pm\) 0,004    & 2,62  \(\pm\)  0,03  \\
+				DMSO    & 25         & 60       & 1,42    \(\pm\) 0,08   & 1,49     \(\pm\) 0,06   & 1,49      \(\pm\) 0,06    & 7\(\pm\)1     & 1,78        \(\pm\) 0,03   & 0,089       \(\pm\) 0,006    & 18    \(\pm\)      3  \\
+				DMSO    & 25         & 100      & 0,218   \(\pm\) 0,002  & 0,222    \(\pm\) 0,002  & 0,222     \(\pm\) 0,002   & 0,9\(\pm\)0,2 & 0,233       \(\pm\) 0,002  & 0,043       \(\pm\) 0,006    & 4,50  \(\pm\)  0,05  \\
+				DMSO    & 25         & 260      & 0,041   \(\pm\) 0,002  & 0,036    \(\pm\) 0,002  & 0,04      \(\pm\) 0       & 0\(\pm\)0     & 0,1         \(\pm\) 0,1    & 0,035       \(\pm\) 0,006    & 1,57  \(\pm\)  0,03  \\
+				13BD    & 15         & 100      & 0,0515  \(\pm\) 0,0004 & 0,0515   \(\pm\) 0,0007 & 0,05      \(\pm\) 0       & 0\(\pm\)0     & 0,11        \(\pm\) 0,03   & 0,046       \(\pm\) 0,003    & 1000  \(\pm\)  428081  \\
+				13BD    & 15         & 260      & 0,0081  \(\pm\) 0,0006 & 0,024    \(\pm\) 0,003  & 0,024     \(\pm\) 0,003   & 11\(\pm\)2    & 0,024       \(\pm\) 0,006  & 0           \(\pm\) 0,002    & 7,1   \(\pm\)   0,2  \\
+				13BD    & 25         & 100      & 0,07    \(\pm\) 0,02   & 0,12     \(\pm\) 0,06   & 0,12      \(\pm\) 0,06   & 30\(\pm\)30   & 10,78       \(\pm\) 0      & 0,07        \(\pm\) 0         & 0,62  \(\pm\)  0,02  \\ \bottomrule
+			\end{tabular} 
+			
+		}{} \end{adjustbox}
 \end{table} 
 
+	\begin{table}[h]
+		\IBGEtab{%
+			\caption{Valores da viscosidade em altas frequências \(\eta_{\infty}\), do modelo de Oldroyd e dos parâmetros \(a\), em s, e b, do modelo de García-Saraji}
+			\label{tab:etainf_gs_aditivos}
+		}%
+		{%
+			\begin{tabular}{c c c c c c}
+				\toprule
+				 Aditivo  & \% Adit & [NaSal] & \(\eta_{\infty}\)   & a/s                         & b                        \\ \midrule
+				Glicerina & 30      & 60      & 0,11  \(\pm\) 0,03  & 0,9     \(\pm\)     0,3     & 0,6   \(\pm\)   0,1     \\
+				Glicerina & 30      & 100     & 0,005 \(\pm\) 0,010 & 0,1     \(\pm\)     0,5     & 0,2   \(\pm\)   0,6     \\
+				Glicerina & 30      & 260     & 0,055 \(\pm\) 0,008 & 0,0010  \(\pm\)     0,0017  & 1,7   \(\pm\)   0,4     \\
+				Glicerina & 60      & 60      & 0,18  \(\pm\) 0,03  & 0,7     \(\pm\)     0,3     & 0,6   \(\pm\)       0,1  \\
+				Glicerina & 60      & 100     & 0,039 \(\pm\) 0,009 & 0,02    \(\pm\)     0,03    & 0,9   \(\pm\)    0,4      \\
+				Glicerina & 60      & 260     & -0,08 \(\pm\) 0,02  & 0       \(\pm\)     94      & 0     \(\pm\)    34       \\
+				Sacarose  & 50      & 60      & 0,000 \(\pm\) 0,009 & 19      \(\pm\)  12876      & 0     \(\pm\)     1      \\
+				Sacarose  & 50      & 100     & 0,24  \(\pm\) 0,02  & 0,001   \(\pm\)       0,001 & 1,6   \(\pm\)    0,9  \\
+				Sacarose  & 50      & 260     & 0,02  \(\pm\) 0,01  & 0,001   \(\pm\)      0,003  & 3     \(\pm\)    1      \\ \midrule
+				  Ureia   & 5       & 60      & 0,30  \(\pm\) 0,06  & 0,6     \(\pm\)     0,2     & 0,7   \(\pm\)   0,2     \\
+				  Ureia   & 5       & 100     & 0,076 \(\pm\) 0,008 & 0,0134  \(\pm\)      0,0079 & 1,2   \(\pm\)   0,2     \\
+				  Ureia   & 5       & 260     & 0,10  \(\pm\) 0,01  & 0,04    \(\pm\)       0,01  & 1,0   \(\pm\)       0,1   \\
+				  Ureia   & 15      & 60      & -0,34 \(\pm\) 0,09  & 8       \(\pm\)  344090     & 0     \(\pm\)    44     \\
+				  Ureia   & 15      & 100     & 0,147 \(\pm\) 0,010 & 0,02    \(\pm\)        0,01 & 1,1   \(\pm\)   0,2    \\
+				  Ureia   & 15      & 260     & 0,038 \(\pm\) 0,009 & 0,1     \(\pm\)     0,2     & 0,3   \(\pm\)   0,4     \\
+				  Ureia   & 30      & 60      & 0,28  \(\pm\) 0,04  & 2,6     \(\pm\)     0,4     & 0,38  \(\pm\)  0,04     \\
+				  Ureia   & 30      & 100     & 0,159 \(\pm\) 0,008 & 0,0100  \(\pm\)      0,0045 & 1,3   \(\pm\)    0,1     \\
+				  Ureia   & 30      & 260     & 0,26  \(\pm\) 0,02  & 0,4     \(\pm\)     0,1     & 0,75  \(\pm\)  0,08     \\ \midrule
+				  DMSO    & 15      & 60      & 2  \(\pm\) 1        & 90      \(\pm\)    0        & 207   \(\pm\)        0     \\
+				  DMSO    & 15      & 100     & 0,05  \(\pm\) 0,01  & 0,04    \(\pm\) 0,03        & 0,8   \(\pm\)       0,2  \\
+				  DMSO    & 15      & 260     & 0,07  \(\pm\) 0,01  & 0,11    \(\pm\) 0,03        & 0,9   \(\pm\)       0,1  \\
+				  DMSO    & 25      & 60      & 0,10  \(\pm\) 0,03  & 1,3     \(\pm\)     0,5     & 0,5   \(\pm\)    0,1     \\
+				  DMSO    & 25      & 100     & 0,07  \(\pm\) 0,01  & 0,14    \(\pm\) 0,03        & 0,89  \(\pm\)       0,10 \\
+				  DMSO    & 25      & 260     & 0,08  \(\pm\) 0,01  & 0,14    \(\pm\) 0,05        & 0,7   \(\pm\)       0,1  \\
+				  13BD    & 15      & 100     & 0,09  \(\pm\) 0,03  & 17      \(\pm\)     172     & 0,0   \(\pm\)       0,3  \\
+				  13BD    & 15      & 260     & 0,14  \(\pm\) 0,04  & 0,3     \(\pm\)     0,1     & 0,8   \(\pm\)    0,2     \\
+				  13BD    & 25      & 100     & 0,06  \(\pm\) 0,01  & 0,08    \(\pm\) 0,04        & 0,7   \(\pm\)       0,2  \\ \bottomrule
+			\end{tabular} 
+		}{} 
+\end{table} 
 
 		\FloatBarrier
+		% todo: discorrer sobre os termos eta_inf, a e b no texto
 		
 		Observa-se novamente que o modelo de Dois Modos possui valores de \(R^2\) mais próximos que 1 do que os outros modelos mas, novamente, isso não significa que o modelo forneça informações melhores sobre o sistema.
 		
