@@ -3,7 +3,7 @@
 	
 	Os reagentes utilizados, suas respectivas purezas e os fabricantes se encontram na tabela \ref{tab:reagentes}.
 	
-	\begin{table}[H]
+	\begin{table}[h]
 		\IBGEtab%
 		{\caption{Reagentes, pureza e fabricantes}
 		\label{tab:reagentes}}%
@@ -26,7 +26,7 @@
 		{}
 	\end{table}
 	
-	% Todo: colocar algum texto aqui para fazer volume
+	% Todo: colocar a estrutura das moléculas aqui
 	
              %		Sucralose                       &                                                 &                                                             \\
 	% todo: ver se coloco algo da sucralose aqui
@@ -38,7 +38,7 @@
 		
 		Após a pesagem dos componentes em balanças de precisão, frequentemente partindo de soluções estoque altamente concentradas, as amostras são aquecidas até 50°C em banho maria e homogeneizadas por meio de agitação manual e com vórtex. Temperaturas elevadas auxiliam na dissolução dos componentes e diminuem a viscosidade do meio, por também desfavorecerem o crescimento das micelas. Após já homogeneizadas, as amostras são mantidas a 50°C, e depois são resfriadas lentamente até temperatura ambiente removendo-se o aquecimento do banho maria. Neste instante, as amostras estão prontas para análise reológica. As amostras eram preparadas no mínimo com 24h de antecedência.
 		
-		\section{Análises reológicas}
+		\section{Análises reológicas} \index{reologia!preparo de amostra}
 
 		% todo: checar se só foi utilizado esse reômetro
 		Todas as análises reológicas foram realizadas utilizando a geometria placa-placa de 35 mm de diâmetro (P35 Ti L) no reômetro Haake Mars III da Thermo Scientific. Antes de cada análise, a inércia do porta-rotor (\emph{spindle}) e do rotor eram determinadas de modo a controlar por erros relacionados ao encaixe manual do rotor. Também era determinado o ponto zero de altura, onde há o contato do rotor com a base, de modo a estabelecer um espaçamento de 1,000 mm durante as análises. A temperatura era controlada pela combinação de um banho termostatizado e de aquecimento na base, e monitorada por meio de sensores na base.
@@ -47,13 +47,13 @@
 		
 		Os métodos de análise são montados de acordo com as necessidades de cada amostra. Em comum, somente há a etapa de termostatização por 5 minutos na temperatura de análise. As etapas possíveis são:
 		
-		\begin{itemize}
+		\begin{itemize} 
 			\item Análise de varredura de tensão. A faixa de valores de tensão estudados foram geralmente de 0,01 Pa até 5 Pa, espaçados logaritmicamente, analisados a 1 Hz. Com essa análise é possível determinar a região linear, onde os valores de G' e G'' estão constantes, independente da tensão aplicada. Caso uma tensão alta demais seja aplicada, começa a ocorrer a desestruturação do material, e os valores de G' e G'' diminuem.
 			
 			\item Análise de varredura de frequência, numa tensão dentro da região linear, geralmente 1 Pa. A faixa de frequência estudada varia de acordo com as necessidades da amostra e com o tempo disponível, pois quanto menor a frequência estudada, maior é o tempo de análise. A faixa de frequência habitual é de 0,01 Hz a 10 Hz (ou 0,0628 rad.s\menosUm{} a 62,83 rad.s\menosUm), e 6 medidas por década, espaçadas logaritmicamente. Este tipo de experimento demora cerca de 20 minutos. O modo utilizado em todas as análises foi CS (Control Shear).
 			
 			\item Análise de curva de fluxo. As taxas de cisalhamento (\(\dot{\gamma}\)) utilizadas geralmente variavam de 0,001 s\menosUm{} a 10 s\menosUm. Caso o platô Newtoniano não fosse observado, diminuia-se a taxa aplicada. Obtinha-se entre 10 e 20 pontos espaçados logaritmicamente. As medidas eram obtidas no modo CR (Control Rate).
-		\end{itemize}
+		\end{itemize} \index{reologia!sequência experimental}
 		
 		Ao montar-se um plano experimental, pode-se configurar o equipamento para exportar os dados obtidos de acordo com uma configuração tabular específica, para um arquivo de texto. Isso facilita posteriormente o tratamento de dados. Além disso, o nome do arquivo pode ser gerado automaticamente pela composição da amostra, a hora e a data de análise.
 		
@@ -65,14 +65,14 @@
 		% todo: colocar referência das seções relevantes.
 		% todo: quando eu analisar novamente os dados de reologia oscilatória das amostras com aditivos, onde eu farei também análises de Cole Cole e descobrirei outros tempos de relaxação, colocar aqui como que esses métodos foram feitos
 		
-		\section{Tratamento de dados de curvas de fluxo}
+		\section{Tratamento de dados de curvas de fluxo} \index{reologia!curva de fluxo}
 		
 		Micelas gigantes são fluídos conhecidamente pseudoplásticos, ou seja, sua viscosidade aparente (\(\eta\)) diminui com o aumento da taxa de cisalhamento (\(\dot{\gamma}\)). Em baixos valores de \(\dot{\gamma}\), a viscosidade aparente é constante, e esse valor é chamado de viscosidade no repouso, \(\eta_0\). Esse valor é de maior interesse para este trabalho. Para obter esse valor, é possível realizar ajustes lineares da região onde a viscosidade é constante, forçando-se a inclinação da reta a zero. Em suma, isso obtém o valor médio da viscosidade no repouso. Há também modelos matemáticos que podem ser usados, como Carreau e Cross, e a viscosidade no repouso, dentre outros parâmetros, podem ser obtidos pelo método dos mínimos quadrados.
 		
 		Dados de curva de fluxo também são passíveis de desvios, que dificultam os ajustes. Nas amostras observadas aqui, geralmente há problemas em baixas taxas de cisalhamento. Para contornar esse problema, é necessário selecionar uma faixa de valores para o ajuste, o que pode ser feito manualmente e programaticamente. O apêndice \ref{sec:apn_tratamento_CF} mostra brevemente como o programa para tratamento de curva de fluxo funciona, os problemas frequentes encontrados com curvas de fluxo e como contorná-los.
 		
-	\chapter{Calorimetria de titulação isotérmica}
-		\section{Preparo de amostra e uso do equipamento}
+	\chapter{Calorimetria de titulação isotérmica} 
+		\section{Preparo de amostra e uso do equipamento} \index{ITC!experimental}
 		\label{sec:preparo_amostra_itc}
 		% todo: verificar qual é a variação de volume
 		
@@ -93,7 +93,7 @@
 		Os parâmetros de análise são: % todo: pensar melhor nessa frase
 		% todo: pesquisar em trabalhos meus anteriores para ver o que eu coloco
 		
-		\begin{itemize}
+		\begin{itemize}[noitemsep]
 			
 			\item Concentração: A concentração das espécies na seringa e na cela devem ser conhecidas com precisão, e podem ser alteradas após o experimento.
 			
@@ -120,13 +120,13 @@
 		
 		Após a verificação das integrações e da linha de base, exporta-se a tabela de injeções, que contém os valores de concentração do titulante e titulado, corrigidos pela diluição, e os valores de entalpia de cada injeção. Essa tabela é posteriormente importada para um software adequado de tratamento, e as curvas comparativas são formadas. É importante notar que a tabela fornecida pelo equipamento possui n+1 injeções registradas, e alguns valores das colunas estão transladados de 1. Isso é alterado antes do tratamento comparativo.
 		
-	\chapter{SAXS}
+	\chapter{SAXS} \index{SAXS!experimental}
 		\section{Preparo de amostra}
 		
 		A metodologia de preparo de amostra para SAXS é igual à metodologia apresentada na seção \ref{sec:reologia_preparo_amostra}. Para as amostras de stopped-flow, é necessário preparar amostras com o dobro de concentração final desejada, devido à mistura 1:1 no aparato. Por esse motivo, utilizou-se TTAB, ao invés de CTAB, devido à sua maior solubilidade e menor temperatura Krafft.
 		
 		\section{Aquisição de dados}
-			\subsection{LNLS}
+			\subsection{LNLS} \index{SAXS!LNLS}
 			
 			As amostras foram analisadas na linha SAXS01 do Laboratório Nacional de Luz Síncrotron (LNLS). Em sua maioria, eram pastosas, pois eram compostas por surfactante, ureia e água. Para analisá-las, eram preparados porta-amostras da seguinte maneira: Um filme de Kapton era colocado de um dos lados do porta-amostra de acrílico, o gel era transferido com uma espátula para preencher por completo a região interna do porta-amostra, e outro filme de Kapton era colocado para selar a amostra dentro do porta-amostra. Tomou-se cuidado para impedir a formação de bolhas. Depois, os porta-amostras eram encaixadas em depressões num trilho. A cabana era aberta e o trilho era colocado no equipamento, e a cabana era fechada. % todo: achar um nome melhor para isso. Trilho?
 					
@@ -140,10 +140,10 @@
 			
 			Os perfis de espalhamento obtidos no LNLS não foram ajustados por nenhum modelo, sendo necessário somente a indexação dos picos de espalhamento para a obtenção de informações sobre o sistema.		
 			
-			\subsection{ESRF}
+			\subsection{ESRF}  \index{SAXS!ESRF}
 			As medidas de SAXS resolvido no tempo foram realizadas na linha ID02 no \emph{European Scattering Radiation Facility} (ESRF) em Grenoble, França. Esses estudos contaram com a colaboração do Professor Jan Skov Pedersen da Universidade de \AA rhus, Dinamarca. Inicialmente, o contato local realizou as seguintes tarefas:
 			
-			\begin{itemize}
+			\begin{itemize}[noitemsep]
 				\item Alinhamento do feixe de raios-X
 				\item Limpeza dos capilares utilizando-se \emph{Hellmanex 2\%} por 10 minutos
 				\item Determinação do \emph{Dead-Time} do equipamento de \emph{stopped-flow} (SF) por meio da injeção de uma solução 400 mM de KBr. O aparato de \emph{stopped-flow} (SF) é da marca BioLogic SFM-400.
@@ -170,7 +170,7 @@
 				\texttt{ccdmvdc <n\_frames> <dead1> <dead\_start> <dead\_factor> <live>\\ <live\_factor> 	<salvar(0/1)> <dark> <título>}
 			\end{center}
 
-			\begin{table}[H]
+			\begin{table}[h]
 				\IBGEtab{%
 					\caption{Parâmetros do comando \texttt{ccdmvdc}}
 					\label{tab:ccdmvdc_par}}%
@@ -201,7 +201,7 @@
 			Os comandos \texttt{so} e \texttt{sc} abrem e fecham o obturador (abreviações de \emph{shutter open} e \emph{shutter close}). Cada comando desses gerava 30 arquivos de texto, no formato q | I | err, um para cada frame de aquisição. 
 
 
-		\section{Tratamento de dados}
+		\section{Tratamento de dados}  \index{SAXS!tratamento de dados}
 			\subsection{Subtração do ``branco''}
 			
 			O branco utilizado para as medidas com o capilar de \emph{flow-through} foi obtido medindo-se o capilar com água. Para o \emph{stopped-flow}, mediu-se o capilar com água. O equipamento fornecia dados que não variavam em intensidade com o aumento do tempo de integração, portanto foi possível obter brancos de baixo ruído. Todas as curvas tiveram o branco subtraído utilizando o programa \href{http://www.sztucki.de/SAXSutilities/}{SAXSUtilities}, desenvolvido por Michael Sztucki, do ESRF. Esse programa é baseado em Matlab e, no momento de escrita desta tese, requer o \emph{Runtime environment} do Matlab R2016a 64 bits.
@@ -222,7 +222,7 @@
 			
 			Com os parâmetros importados no software de escolha, seus valores foram comparados para obter a cinética de crescimento das micelas.
 			
-	\chapter{Fluorescência}
+	\chapter{Fluorescência}  \index{Fluorescência!experimental}
 		\section{Preparo de amostra}
 		
 		As amostras para fluorescência foram preparadas utilizando a mesma metodologia usada para calorimetria de titulação isotérmica (Sec. \ref{sec:preparo_amostra_itc}), devido aos paralelos que se deseja criar entre as duas técnicas. Para o uso de stopped-flow com fluorescência, as amostras foram preparadas com o dobro de concentração final desejada, para que com a mistura 1:1 resulte na diluição correta.
@@ -271,7 +271,7 @@
 				\label{lst:extracao_fluor1}
 			\end{listing}
 			
-		\section{Tratamento de dados}
+		\section{Tratamento de dados}  \index{Fluorescência!tratamento de dados}
 		
 			As informações de intensidade por tempo, em 411 nm, de cada amostra foram plotadas comparativamente. Notou-se que os dados eram bastante ruidosos, mas que havia uma tendência geral. Para facilitar as comparações, aplicou-se o filtro de Savitzky-Golay. Esse filtro ajusta um polinômio de grau \(n\) sobre um conjunto de dados de tamanho ímpar (janela), \(j\). O ponto médio experimental então é substituído pelo ponto médio do ajuste. Para os pontos nas extremidades, onde não há pontos suficientes para o tamanho da janela, utilizou-se o modo padrão do pacote \emph{scipy}, interpolação. Por exemplo, no início da aplicação do filtro, há \(\frac{j}{2}\) pontos à direita mas menos de \(\frac{j}{2}\) pontos à esquerda. Para completar essa falta, é feito um ajuste de grau \(n\) dos primeiros \(j\) pontos, e esse ajuste é estendido para antes do primeiro ponto, garantindo então que existam \(\frac{j}{2}\) à direita e à esquerda do ponto médio.
 			
@@ -285,7 +285,7 @@
 			\end{equation}
 			
 	\chapter{Técnicas adicionais}
-		\section{Calorimetria diferencial de varredura}
+		\section{Calorimetria diferencial de varredura}  \index{calorimetria diferencial de varredura DSC}
 		
 		Foram realizadas análises utilizando o equipamento institucional DSC Q100 da TA Instruments. O preparo de amostra seguiu as mesmas considerações descritas na seção \ref{sec:reologia_preparo_amostra}. Foram programadas rampas de 2°C/min de 1°C a 60°C, e de volta, com intervalos de 3 minutos na temperatura final.
 		
@@ -299,24 +299,24 @@
 		
 		A análise foi realizada sob fluxo de nitrogênio a 50 ml/min e as massas utilizadas estavam na faixa de 10 a 20 mg. As áreas de transição e temperaturas de transição foram determinadas pelo software do equipamento. As larguras a meia-altura foram determinadas de acordo com o script as listagens \ref{lst:meia_altura1} e \ref{lst:meia_altura2}.
 		
-		\begin{listing}[H]
+		\begin{listing}[h]
 			\inputminted{python}{./python/meia_altura1.py}
 			\caption{Código fonte para o script de obtenção dos valores de largura a meia altura de curvas de DSC (1/2)} 
 			\label{lst:meia_altura1}
 		\end{listing}
 		
-		\begin{listing}[H]
+		\begin{listing}[h]
 			\inputminted{python}{./python/meia_altura2.py}
 			\caption{Código fonte para o script de obtenção dos valores de largura a meia altura de curvas de DSC (2/2)} 
 			\label{lst:meia_altura2}
 		\end{listing}
 
-		\section{Espalhamento dinâmico de luz}
+		\section{Espalhamento dinâmico de luz} \index{espalhamento dinâmico de luz DLS}
 		
 		% todo: colocar mais detalhes experimentais aqui.
 		Foram realizadas análises de espalhamento dinâmico de luz no Malvern ZetasizerNano Zs-Zen3600 com o objetivo de observar o tamanho dos objetos das amostras de surfactante e ureia acima da temperatura de transição. Desse modo, a temperatura de análise foi fixada em 50°C e as amostras foram termostatizadas nessa temperatura por 10 minutos antes das medidas. As medidas foram realizadas em triplicata.
 		
-		\section{Tensiometria}
+		\section{Tensiometria} \index{tensiometria}
 		
 		% todo: checar o diâmetro da agulha.
 		Para a determinação do parâmetro de Gordon das misturas aquosas binárias, mediu-se a tensão superficial no equipamento Attension Theta da Biolin Scientific pelo método da gota pendente. Preparou-se misturas com composições e densidades conhecidas, e certificou-se de que estavam homogêneas. Utilizou-se uma agulha com 0,7mm de diâmetro, previamente limpa. A câmera foi focada na agulha e foi calibrada utilizando-se o diâmetro conhecido da mesma. Os parâmetros da câmera foram ajustados pelo método automático. A temperatura da sala onde foram realizadas as medidas era de 18°C. Após confirmação de que os parâmetros de análise estão corretos, medindo-se a tensão superficial de água, iniciou-se as medidas das amostras. Gerava-se uma gota com o maior volume possível de líquido, de modo que a gota estivesse na iminência de cair. Em seguida, iniciou-se a captura de fotos pela câmera, a 12 fotos por segundo, por 10 segundos. Em seguida, cada frame individual foi ajustado pelo método de Young-Laplace de modo a obter um valor de tensão superficial, corrigido pela densidade do líquido. Os valores de tensão superficial foram somados, e considerou-se o desvio padrão dessas medidas como o erro experimental. Esse processo foi repetido cinco vezes por amostra.
