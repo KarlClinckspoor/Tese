@@ -20,7 +20,7 @@ Porém, essa descrição matemática é de menor aplicabilidade, pois é necess�
 
 \section{Resumo do modelo}
 
-O modelo descreve cadeias alongadas caroço-casca (\emph{core-shell}) de Kratky-Porod, considerando volume excluído, com interações intercadeias modeladas pelo modelo PRISM (\emph{Polymer Reference Interaction Site Model}). No total, a equação de intensidade de espalhamento \(I\) em função do vetor de espalhamento \q (\(I(q)\), Eq. \ref{eqn:AP_saxs_MG_superficial}) possui 13 parâmetros, descritos na tabela \ref{tab_ap:simbolos}.
+O modelo descreve cadeias alongadas caroço-casca (\emph{core-shell}) de Kratky-Porod, considerando volume excluído, com interações intercadeias modeladas pelo modelo PRISM (\emph{Polymer Reference Interaction Site Model}). No total, a equação de intensidade de espalhamento \(I\) em função do vetor de espalhamento \q (\(I(q)\), \autoref{eqn:AP_saxs_MG_superficial}) possui 13 parâmetros, descritos na \autoref{tab_ap:simbolos}.
 
 \begin{equation}
 I = f(q, \mathrm{scale}, d_{\mathrm{head}}, r_{\mathrm{core}}, \rho_{\mathrm{rel}}, \sigma, \mathrm{back}, L, k_L, \varepsilon, D_{\mathrm{CQ}}, \nu_{\mathrm{RPA}}, \mathrm{SC}_{\mathrm{pow}}, \mathrm{exp}_{\mathrm{pow}})
@@ -63,7 +63,7 @@ I = \frac{\mathrm{scale}\left(F_{\mathrm{KPchain}_{\mathrm{ExV}}}F_{\mathrm{rod}
 
 \begin{table}
     \IBGEtab%
-    {\caption{Parâmetros da equação \ref{eqn:AP_saxs_MG_geral}}
+    {\caption{Parâmetros da \autoref{eqn:AP_saxs_MG_geral}}
      \label{tab_ap:fatores_geral} }%
     {\begin{tabular}{r p{8cm}}
     \toprule
@@ -78,7 +78,7 @@ I = \frac{\mathrm{scale}\left(F_{\mathrm{KPchain}_{\mathrm{ExV}}}F_{\mathrm{rod}
 \end{table}
 
 
-Já o modelo do PRISM é descrito pela Eq. \ref{eqn:AP_saxs_PRISM}. Note a similaridade com a Eq \ref{eqn:AP_saxs_MG_geral}.
+Já o modelo do PRISM é descrito pela \autoref{eqn:AP_saxs_PRISM}. Note a similaridade com a \autoref{eqn:AP_saxs_MG_geral}.
 
 \begin{equation}
 I_{\mathrm{PRISM}}= \frac{\varphi V_{\mathrm{mic}}F_{\mathrm{wc}}(q)F_{\mathrm{cs}}(q)}{1 + \nu F_{\mathrm{rod}}(qL_{c(q)})F_{\mathrm{wc}}(q)}
@@ -87,7 +87,7 @@ I_{\mathrm{PRISM}}= \frac{\varphi V_{\mathrm{mic}}F_{\mathrm{wc}}(q)F_{\mathrm{c
 
 \begin{table}
     \IBGEtab{%
-      	\caption{Termos da equação \ref{eqn:AP_saxs_PRISM}}
+      	\caption{Termos da \autoref{eqn:AP_saxs_PRISM}}
     \label{tab_ap:PRISM_geral}}%
     {%
      \begin{tabular}{r p{8cm}}
@@ -122,7 +122,7 @@ F_{\mathrm{wc}} = \left[\left(1 - \chi\right)F_{\mathrm{chain}_{\mathrm{ExV}}} +
 \end{equation}
 
 % TODO: colocar a equação do \Gamma
-A equação \ref{eqn:AP_Fwc} pode ser simplificada dependendo da faixa de \q. A região de \q intermediária precisa ser descrita pelo termo \(\chi\) (Eq. \ref{eqn:AP_chi}) e corrigida por \(\Gamma\). Esses parâmetros são obtidos por simulações de Monte Carlo.
+A \autoref{eqn:AP_Fwc} pode ser simplificada dependendo da faixa de \q. A região de \q intermediária precisa ser descrita pelo termo \(\chi\) (\autoref{eqn:AP_chi}) e corrigida por \(\Gamma\). Esses parâmetros são obtidos por simulações de Monte Carlo.
 
 \begin{equation}
 	F_\mathrm{wc} \approx 
@@ -145,7 +145,7 @@ A equação \ref{eqn:AP_Fwc} pode ser simplificada dependendo da faixa de \q. A 
 %	\end{longtable}
 
 \subsubsection{Fator de correção \(\chi\)}
-O termo \(\chi\) é descrito pela equação \ref{eqn:AP_chi}, que por sua vez é dependente da equação \ref{eqn:AP_xi}.
+O termo \(\chi\) é descrito pela \autoref{eqn:AP_chi}, que por sua vez é dependente da \autoref{eqn:AP_xi}.
 
 \begin{equation}
 \chi = \exp{\xi^{-5}}
@@ -162,7 +162,7 @@ O termo \(\chi\) é descrito pela equação \ref{eqn:AP_chi}, que por sua vez é
 
 \subsubsection{Fator forma de cadeias com volume excluído, \(F_{\mathrm{chain}_{\mathrm{ExV}}}\)}
 \label{sec:F_chain_ExV_equacoes}
-O termo \(F_{\mathrm{chain}_{\mathrm{ExV}}}\) possui a seguinte forma (Eq. \ref{eqn:AP_FchainExV})
+O termo \(F_{\mathrm{chain}_{\mathrm{ExV}}}\) possui a seguinte forma (\autoref{eqn:AP_FchainExV})
 
 % TODO: verificar se o \nu aqui é o \nu_RPA
 \begin{multline}
@@ -173,13 +173,13 @@ C_3(q R_g)^{-\frac{3}{\nu}}\right]
 % todo: colocar o valor de \nu, que está na Eq. S_EXV_APP
 % todo: incluir aqui uma tabela com os termos e as equações
 
-O termo \(F_{\mathrm{Debye}}\), por sua vez, é dado pela Eq. \ref{eqn:AP_fdebye}.
+O termo \(F_{\mathrm{Debye}}\), por sua vez, é dado pela \autoref{eqn:AP_fdebye}.
 \begin{equation}
 F_{\mathrm{Debye}} = 2 \left(\frac{e^{-u} + u - 1}{u^2}\right)
 \label{eqn:AP_fdebye}
 \end{equation}
 
-\noindent onde \(u = R_g^2q^2\). \(R_g\) é a raiz quadrada do raio de giro médio ao quadrado, \(R_g = \left<R_g^2\right>^{1/2}\), considerando o volume excluído. Por sua vez, esse valor é dado pela Eq. \ref{eqn:AP_Rg2}
+\noindent onde \(u = R_g^2q^2\). \(R_g\) é a raiz quadrada do raio de giro médio ao quadrado, \(R_g = \left<R_g^2\right>^{1/2}\), considerando o volume excluído. Por sua vez, esse valor é dado pela \autoref{eqn:AP_Rg2}
 
 % todo: Achar o que significam os termos faltantes aqui.
 \begin{equation}
@@ -187,14 +187,14 @@ F_{\mathrm{Debye}} = 2 \left(\frac{e^{-u} + u - 1}{u^2}\right)
 \label{eqn:AP_Rg2}
 \end{equation}
 
-O termo \(w\) é uma equação empírica, da forma: (Eq \ref{eqn:AP_w})
+O termo \(w\) é uma equação empírica, da forma: (\autoref{eqn:AP_w})
 
 \begin{equation}
 w(x) = \frac{\left[1 + \frac{\tanh(x-C_4)}{C_5}\right]}{2}
 \label{eqn:AP_w}
 \end{equation}
 
-As constantes \(C_1\), \(C_2\), \(C_3\), \(C_4\) e \(C_5\) foram obtidas a partir de um ajuste, e estão na tabela \ref{tab_ap:C1C5}, assim como o valor de \(\nu\).
+As constantes \(C_1\), \(C_2\), \(C_3\), \(C_4\) e \(C_5\) foram obtidas a partir de um ajuste, e estão na \autoref{tab_ap:C1C5}, assim como o valor de \(\nu\).
 \begin{table}
     \IBGEtab%
     {\caption{Constantes}
@@ -217,7 +217,7 @@ As constantes \(C_1\), \(C_2\), \(C_3\), \(C_4\) e \(C_5\) foram obtidas a parti
 
 \subsubsection{Fator de correção \(\Gamma\)}
 
-O fator de correção \(\Gamma\) (Eq. \ref{eqn:AP_Gamma}) é dependente de dois conjuntos de constantes, \(A\) (Eq. \ref{eqn:AP_Ai}) e B (Eq. \ref{eqn:AP_Bi}) determinadas empiricamente (Tab \ref{tab_ap:AiBi}).
+O fator de correção \(\Gamma\) (\autoref{eqn:AP_Gamma}) é dependente de dois conjuntos de constantes, \(A\) (\autoref{eqn:AP_Ai}) e B (\autoref{eqn:AP_Bi}) determinadas empiricamente (\autoref{tab_ap:AiBi}).
 
 \begin{equation}
 \Gamma\left( q,L,k_{L} \right) = 1 + \left( 1 - \chi \right)\sum_{i = 2}^{5}{A_{i}\xi^{i}} + \chi\sum_{i = 0}^{2}{B_{i}\xi^{- i}}
@@ -258,14 +258,14 @@ B_{i} = \sum_{j = 0}^{2}{b_{1}\left( i,j \right)\left( \frac{L}{k_{L}} \right)^{
 
 \subsubsection{Fator forma de um cilindro \(F_{\mathrm{rod}}\)}
 
-O fator forma de um cilindro segue a equação \ref{eqn:AP_Frod}.
+O fator forma de um cilindro segue a \autoref{eqn:AP_Frod}.
 
 \begin{equation}
 F_{\mathrm{rod}}(q, L) = \frac{2\mathrm{Si}(qL)}{qL} - \frac{4\sin^2\frac{qL}{2}}{q^2L^2}
 \label{eqn:AP_Frod}
 \end{equation}
 
-\noindent onde \(\mathrm{Si}\) é a função-integral de seno (Eq. \ref{eqn:AP_Si})
+\noindent onde \(\mathrm{Si}\) é a função-integral de seno (\autoref{eqn:AP_Si})
 
 \begin{equation}
 \mathrm{Si}(x) = \int_0^x \frac{\sin (t)}{t}dt
@@ -275,7 +275,7 @@ F_{\mathrm{rod}}(q, L) = \frac{2\mathrm{Si}(qL)}{qL} - \frac{4\sin^2\frac{qL}{2}
 % TODO: verificar se F_CS é de fator da seção de um cilindro. CS é cross section mesmo.
 \subsection{Fator forma da seção transversal de um cilindro \(F_{\mathrm{cs}}\)}
 
-O fator forma da seção transversal de um cilindro é descrito pela equação \ref{eqn:AP_Fcs}. Seus parâmetros se encontram na tabela \ref{tab_ap:Fcs}
+O fator forma da seção transversal de um cilindro é descrito pela \autoref{eqn:AP_Fcs}. Seus parâmetros se encontram na \autoref{tab_ap:Fcs}
 
 \begin{equation}
 F_{\mathrm{cs}} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}%
@@ -295,7 +295,7 @@ F_{\mathrm{cs}} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}%
 % Todo: verificar se Rc e Rs são funções de \varepsilon e \theta
 
 \begin{table}
-    \IBGEtab{\caption{Parâmetros para a equação \ref{eqn:AP_Fcs}}
+    \IBGEtab{\caption{Parâmetros para a \autoref{eqn:AP_Fcs}}
     \label{tab_ap:Fcs} }%
     {\begin{tabular}{r l}
             \toprule
@@ -329,7 +329,7 @@ R_C = \sqrt{\frac{V_{\textrm{surf, apolar}}}{V_{\textrm{surf, total}}}}R_S
 \noindent onde V é o volume molecular das regiões do surfactante.
 
 \subsection{Amplitude de uma esfera}
-Como uma aproximação, o modelo final utiliza \(F_{\mathrm{sphere}}\) ao invés de \(F_{\mathrm{rod}}\) no denominador (ver equações \ref{eqn:AP_saxs_MG_geral} e \ref{eqn:AP_saxs_PRISM}). Esse fator forma de esferas é dado por:
+Como uma aproximação, o modelo final utiliza \(F_{\mathrm{sphere}}\) ao invés de \(F_{\mathrm{rod}}\) no denominador (ver Equações \ref{eqn:AP_saxs_MG_geral} e \ref{eqn:AP_saxs_PRISM}). Esse fator forma de esferas é dado por:
 
 \begin{equation}
 	F_{\textrm{sphere}} = \dfrac{3\sin(qR) - qR\cos(qR)}{(qR)^3}
@@ -352,7 +352,7 @@ Uma das motivações para realizar essa tarefa foi a grande dificuldade de nosso
 
 As equações descritas no apêndice anterior foram traduzidas em uma série de funções e termos dentro dessas funções. Para ajudar no entendimento, há comentários no código que referenciam as equações à medida que elas são utilizadas. Note, porém, que a lógica utilizada para descrever um modelo matematicamente e computacionalmente são diferentes. Matematicamente, iniciei descrevendo o modelo de forma geral e depois descrevi as partes mais detalhadas, enquanto que, computacionalmente, essa ordem pode se inverter.
 
-Para facilitar o entendimento, a tabela \ref{tab:AP_corrs_blocos_equacoes} correlaciona as equações e os blocos de código onde aparecem.
+Para facilitar o entendimento, a \autoref{tab:AP_corrs_blocos_equacoes} correlaciona as equações e os blocos de código onde aparecem.
 
 \begin{table}[h]
 	\IBGEtab{%
@@ -362,13 +362,13 @@ Para facilitar o entendimento, a tabela \ref{tab:AP_corrs_blocos_equacoes} corre
 	{%
 		\begin{tabular}{c c}
 			\toprule
-			Bloco           & Equações                                                                                                       \\ \midrule
-			\ref{lst:WLM_geral}    & \ref{eqn:AP_Fcs}, \ref{eqn:AP_Fwc}, \ref{eqn:AP_Rc}, \ref{eqn:AP_Rs}, \ref{eqn:AP_saxs_MG_geral}, \ref{eqn:AP_Fsphere}  \\
-			\ref{lst:cadeia_KP_1}   & Tab. \ref{tab_ap:AiBi}                                                                                                  \\
-			\ref{lst:cadeia_KP_2}   & \ref{eqn:AP_Si}, \ref{eqn:AP_xi}, \ref{eqn:AP_Fwc}, \ref{eqn:AP_chi}                                                  \\
-			\ref{lst:cadeia_KP_3}   & \ref{eqn:AP_Ai}, \ref{eqn:AP_Bi}, \ref{eqn:AP_Gamma}, \ref{eqn:AP_Fwc}                                                \\
-			\ref{lst:cadeia_KP_Debye} & \ref{eqn:AP_fdebye}, \ref{eqn:AP_w}, \ref{eqn:AP_FchainExV}                                                          \\
-			\ref{lst:cadeia_KP_SI}   & \ref{eqn:AP_Si}                                                                                                    \\ \bottomrule
+			          Bloco           & Equações                                                                                                               \\ \midrule
+			   \ref{lst:WLM_geral}    & \ref{eqn:AP_Fcs}, \ref{eqn:AP_Fwc}, \ref{eqn:AP_Rc}, \ref{eqn:AP_Rs}, \ref{eqn:AP_saxs_MG_geral}, \ref{eqn:AP_Fsphere} \\
+			  \ref{lst:cadeia_KP_1}   & \autoref{tab_ap:AiBi}                                                                                                 \\
+			  \ref{lst:cadeia_KP_2}   & \ref{eqn:AP_Si}, \ref{eqn:AP_xi}, \ref{eqn:AP_Fwc}, \ref{eqn:AP_chi}                                                   \\
+			  \ref{lst:cadeia_KP_3}   & \ref{eqn:AP_Ai}, \ref{eqn:AP_Bi}, \ref{eqn:AP_Gamma}, \ref{eqn:AP_Fwc}                                                 \\
+			\ref{lst:cadeia_KP_Debye} & \ref{eqn:AP_fdebye}, \ref{eqn:AP_w}, \ref{eqn:AP_FchainExV}                                                            \\
+			 \ref{lst:cadeia_KP_SI}   & \ref{eqn:AP_Si}                                                                                                        \\ \bottomrule
 		\end{tabular}%
 	}{}
 \end{table}
@@ -384,8 +384,8 @@ As seguintes equações não aparecem no código:
 		\begin{tabular}{c p{10cm}}
 			\toprule
 			Equação   & Motivo  \\ \midrule
-			\ref{eqn:AP_saxs_MG_superficial} & Melhor descrita pela Eq. \ref{eqn:AP_saxs_MG_geral} \\
-			\ref{eqn:AP_saxs_PRISM} & O modelo PRISM, com uma aproximação, é calculado dentro da Eq. \ref{eqn:AP_saxs_MG_geral}  \\
+			\ref{eqn:AP_saxs_MG_superficial} & Melhor descrita pela \autoref{eqn:AP_saxs_MG_geral} \\
+			\ref{eqn:AP_saxs_PRISM} & O modelo PRISM, com uma aproximação, é calculado dentro da \autoref{eqn:AP_saxs_MG_geral}  \\
 			\ref{eqn:AP_Fwc_dois_casos} & Os dois casos são considerados simulaneamente durante os cálculos, então não é preciso realizar uma divisão explícita no código dos fatores \\
 			\ref{eqn:AP_Rg2} & Devido aos parâmetros iniciais, o modelo não necessita calcular o raio de giro. \\
 			\ref{eqn:AP_Frod}  & O modelo utiliza uma função para esfera ao invés de bastão no denominador, como uma aproximação \\ \bottomrule
@@ -397,13 +397,13 @@ As seguintes equações não aparecem no código:
 
 \begin{listing}[h]
 	\inputminted{python}{./python/cadeias_WLM_1.py}
-	\caption{Cálculo das equações \ref{eqn:AP_saxs_MG_geral} e \ref{eqn:AP_Fsphere}}
+	\caption{Cálculo das Equações \ref{eqn:AP_saxs_MG_geral} e \ref{eqn:AP_Fsphere}}
 	\label{lst:WLM_geral}
 \end{listing}
 
 \begin{listing}[h]
 	\inputminted{python}{./python/cadeias_WLM_2.py}
-	\caption{Aplicação da equação \ref{eqn:AP_saxs_MG_geral} para uma faixa de \q. É esta a função que deve ser importada em outros pacotes para fazer uso da modelagem}
+	\caption{Aplicação da \autoref{eqn:AP_saxs_MG_geral} para uma faixa de \q. É esta a função que deve ser importada em outros pacotes para fazer uso da modelagem}
 	\label{lst:WLM_whole_q}
 \end{listing}
 
@@ -411,7 +411,7 @@ As seguintes equações não aparecem no código:
 
 %	\subsection{Fator \(F_{KPchain_{ExV}}\)}
 %	\label{sec:apendice_F_KPchain}
-%	As equações da seção \ref{sec:equacoes_Fwc} relevantes ao cálculo do fator de cadeias com volume excluído então descritas nos códigos a seguir (listas \ref{lst:cadeia_KP_1}, \ref{lst:cadeia_KP_2}, \ref{lst:cadeia_KP_3}, \ref{lst:cadeia_KP_Debye}, \ref{lst:cadeia_KP_SI}).
+%	As equações da \autoref{sec:equacoes_Fwc} relevantes ao cálculo do fator de cadeias com volume excluído então descritas nos códigos a seguir (listas \ref{lst:cadeia_KP_1}, \ref{lst:cadeia_KP_2}, \ref{lst:cadeia_KP_3}, \ref{lst:cadeia_KP_Debye}, \ref{lst:cadeia_KP_SI}).
 %	
 \begin{listing}[h]
 	\inputminted{python}{./python/cadeia_kratky_porod_inicial_1.py}
@@ -445,7 +445,7 @@ As seguintes equações não aparecem no código:
 
 \section{Uso do código}
 
-Agora que todas as equações necessárias para descrever as micelas gigantes estão corretamente descritas programaticamente, é possível utilizar o modelo facilmente em outros projetos. Supondo que todas as funções criadas estejam num pacote chamado \texttt{SAXS\_FF}, é possível chamar a função e plotar um gráfico igual ao da Fig. \ref{fig:saxs_modelo_dado_saxs_python} com o seguinte código (\ref{lst:utilizando_modelo_WLM}), bastante simples:
+Agora que todas as equações necessárias para descrever as micelas gigantes estão corretamente descritas programaticamente, é possível utilizar o modelo facilmente em outros projetos. Supondo que todas as funções criadas estejam num pacote chamado \texttt{SAXS\_FF}, é possível chamar a função e plotar um gráfico igual ao da \autoref{fig:saxs_modelo_dado_saxs_python} com o seguinte código (\ref{lst:utilizando_modelo_WLM}), bastante simples:
 
 \begin{listing}[h]
 	\inputminted{python}{./python/uso_modelo.py}
@@ -916,7 +916,7 @@ O código fonte se encontra nas listagens \ref{lst:extracao_reologia1} e \ref{ls
 
 \chapter{Criação de figuras}
 
-Durante a elaboração deste projeto, uma animação foi criada, mostrando como a reologia é afetada pelas contribuições elásticas e viscosas (figura \ref{fig:osc_simulacoes}). O código para criar essa animação se encontra a seguir. Para gerar a animação, pode ser utilizado o comando a seguir, que depende do software \emph{ffmpeg}.
+Durante a elaboração deste projeto, uma animação foi criada, mostrando como a reologia é afetada pelas contribuições elásticas e viscosas (\autoref{fig:osc_simulacoes}). O código para criar essa animação se encontra a seguir. Para gerar a animação, pode ser utilizado o comando a seguir, que depende do software \emph{ffmpeg}.
 
 \begin{small}
 \begin{verbatim}
@@ -926,13 +926,13 @@ Durante a elaboração deste projeto, uma animação foi criada, mostrando como 
 
 \begin{listing}[H]
 	\inputminted{python}{./python/grafico_reologia_oscilatoria.py}
-	\caption{Código fonte para o script de criação da figura \ref{fig:osc_simulacoes}, e para uma animação (1/2)}  
+	\caption{Código fonte para o script de criação da \autoref{fig:osc_simulacoes}, e para uma animação (1/2)}  
 	\label{lst:oscilatorio_animacao1}
 \end{listing}
 \FloatBarrier
 \begin{listing}[h]
 	\inputminted{python}{./python/grafico_reologia_oscilatoria2.py}
-	\caption{Código fonte para o script de criação da figura \ref{fig:osc_simulacoes}, e para uma animação (2/2)} 
+	\caption{Código fonte para o script de criação da \autoref{fig:osc_simulacoes}, e para uma animação (2/2)} 
 	\label{lst:oscilatorio_animacao2}
 \end{listing}
 

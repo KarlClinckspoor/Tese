@@ -27,7 +27,7 @@
 		
 			\subsection{Modelos de curvas de fluxo pseudoplásticas}
 		\label{sec:modelagem_curva_fluxo}
-		Foram implementados os modelos de \emph{Carreau-Yasuda} (Eq \ref{eqn:AP_CarreauYasuda}), \emph{Carreau} (Eq. \ref{eqn:AP_Carreau}), \emph{Cross} (Eq. \ref{eqn:AP_Cross}) e \emph{linear}, de maior para menor complexidade, respectivamente. Os modelos correlacionam a taxa de cisalhamento (\(\dot{\gamma}\), variável independente) à viscosidade (\(\eta\), variável dependente) utilizando alguns parâmetros.
+		Foram implementados os modelos de \emph{Carreau-Yasuda} (\ref{eqn:AP_CarreauYasuda}), \emph{Carreau} (\autoref{eqn:AP_Carreau}), \emph{Cross} (\autoref{eqn:AP_Cross}) e \emph{linear}, de maior para menor complexidade, respectivamente. Os modelos correlacionam a taxa de cisalhamento (\(\dot{\gamma}\), variável independente) à viscosidade (\(\eta\), variável dependente) utilizando alguns parâmetros.
 		
 		\begin{equation}
 		\eta = \eta_{\infty} + \frac{\eta_0 - \eta_{\infty}}{\left[  1 + \left(  \dfrac{\dot{\gamma}}{\dot{\gamma}_b}  \right)^{a}  \right]^{\frac{ \left(  n - 1  \right) }{a}}}
@@ -68,7 +68,7 @@
 		% todo: pensar em colocar os gráficos mostrando como esses parâmetros afetam as curvas
 		% todo: pensar um pouco mais sobre o Carreau-Yasuda e como que o a deve se comportar
 		
-		A Fig. \ref{fig:reologia_modelos} exemplifica os modelos de Carreau e Cross e como os parâmetros afetam o formato das curvas. Note que a escala dos eixos é logarítmica. Vemos que, essencialmente, ambas as curvas possuem formatos muito semelhantes, com os parâmetros escolhidos. A escolha de um modelo depende da qualidade dos dados e do desejo do experimentalista. Observando-se como os modelos variam com os parâmetros, nota-se que a queda de viscosidade do modelo de Carreau é menos abrupta que no modelo de Cross e se assemelha mais aos dados estudados, então esse modelo foi mais utilizado.
+		A \autoref{fig:reologia_modelos} exemplifica os modelos de Carreau e Cross e como os parâmetros afetam o formato das curvas. Note que a escala dos eixos é logarítmica. Vemos que, essencialmente, ambas as curvas possuem formatos muito semelhantes, com os parâmetros escolhidos. A escolha de um modelo depende da qualidade dos dados e do desejo do experimentalista. Observando-se como os modelos variam com os parâmetros, nota-se que a queda de viscosidade do modelo de Carreau é menos abrupta que no modelo de Cross e se assemelha mais aos dados estudados, então esse modelo foi mais utilizado.
 		
 		\begin{figure}[h]
 			\begin{subfigure}[t]{0.45\textwidth}
@@ -101,7 +101,7 @@
 		
 		Essas funções estão dentro de uma classe chamada \texttt{Fitter}. Para utilizar essa classe em outros códigos, é necessário inicializar uma instância da classe \texttt{Settings} e depois inicializar uma instância da classe \texttt{Fitter} utilizando as configurações da classe \texttt{Settings}. Caso não haja um arquivo \texttt{settings.dat} na pasta, um arquivo com valores padrão será criado. Após isso, é possível tanto editar o arquivo \texttt{settings.dat} quando utilizar as funções \texttt{print\_settings, edit\_settings} do objeto \texttt{Settings}. Ao criar um objeto \emph{Fitter}, por padrão os ajustes configurados já são realizados e os resultados são mostrados na tela. Caso se deseja criar um gráfico mostrando o resultado dos ajustes, pode-se chamar a função \texttt{plot\_error\_graphs()}. 
 		
-		A listagem \ref{lst:exemplo_fitter} mostra como o programa pode ser utilizado por outros scripts, e o resultado do ajuste se encontra na Fig. \ref{fig:reologia_dado-exemplo}
+		A listagem \ref{lst:exemplo_fitter} mostra como o programa pode ser utilizado por outros scripts, e o resultado do ajuste se encontra na \autoref{fig:reologia_dado-exemplo}
 		
 		\begin{listing}[h]
 			\inputminted{python}{./python/uso_fitter.py}
@@ -116,7 +116,7 @@
 			\label{fig:reologia_dado-exemplo}
 		\end{figure}
 		
-		Note que no dado utilizado, não há muitos problemas de desvio da curva, então os ajustes foram bem comportados. Os exemplos das figuras \ref{fig:reologia_dado-problemadescida} e \ref{fig:reologia_dado-problemasubida} mostram problemas reais na região de baixos valores de \(\dot{\gamma}\).
+		Note que no dado utilizado, não há muitos problemas de desvio da curva, então os ajustes foram bem comportados. Os exemplos das Figuras \ref{fig:reologia_dado-problemadescida} e \ref{fig:reologia_dado-problemasubida} mostram problemas reais na região de baixos valores de \(\dot{\gamma}\).
 		
 		\begin{figure}
 			\centering
