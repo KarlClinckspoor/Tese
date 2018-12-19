@@ -27,7 +27,8 @@
 		
 			\subsection{Modelos de curvas de fluxo pseudoplásticas}
 		\label{sec:modelagem_curva_fluxo}
-		Foram implementados os modelos de \emph{Carreau-Yasuda} (\ref{eqn:AP_CarreauYasuda}), \emph{Carreau} (\autoref{eqn:AP_Carreau}), \emph{Cross} (\autoref{eqn:AP_Cross}) e \emph{linear}, de maior para menor complexidade, respectivamente. Os modelos correlacionam a taxa de cisalhamento (\(\dot{\gamma}\), variável independente) à viscosidade (\(\eta\), variável dependente) utilizando alguns parâmetros.
+		Foram implementados os modelos de \emph{Carreau-Yasuda} (\ref{eqn:AP_CarreauYasuda}), \emph{Carreau} (\autoref{eqn:AP_Carreau}), \emph{Cross} (\autoref{eqn:AP_Cross}) e \emph{linear}, de maior para menor complexidade, respectivamente. Os modelos correlacionam a taxa de cisalhamento (\(\dot{\gamma}\), variável independente) à viscosidade (\(\eta\), variável dependente) utilizando alguns parâmetros. % Carreau e Cross: Boger1989
+		% Carreau Yasuda: Kwiatkowski2016a
 		
 		\begin{equation}
 		\eta = \eta_{\infty} + \frac{\eta_0 - \eta_{\infty}}{\left[  1 + \left(  \dfrac{\dot{\gamma}}{\dot{\gamma}_b}  \right)^{a}  \right]^{\frac{ \left(  n - 1  \right) }{a}}}
@@ -46,7 +47,7 @@
 		
 		O modelo linear considera somente valores de viscosidade em \(\dot{\gamma}\) próximos de zero, ou seja, \(\eta = \eta_0 + 0 \times \dot{\gamma}\).
 		
-		Os parâmetros possuem os seguintes significados:
+		Os parâmetros possuem os seguintes significados\cite{WLM_Advances}:
 		
 		\begin{table}[h]
 			\IBGEtab{%
@@ -59,9 +60,9 @@
 					    Parâmetro      & Unidade   & Significado                                                       \\ \midrule
 					    \(\eta_0\)     & Pa.s      & Viscosidade no repouso*                                           \\
 					\(\eta_{\infty}\)  & Pa.s      & Viscosidade no infinito                                           \\
-					      \(n\)        & --        & Inclinação da região de decaimento de viscosidade                 \\
+					      \(n\)        & --        & Inclinação da região de decaimento de viscosidade, índice da pseudoplasticidade                 \\
 					\(\dot{\gamma}_b\) & s\menosUm & \(\dot{\gamma}\) de início da região de decaimento de viscosidade \\ \midrule
-					      \(a\)        & --        & Afeta tanto a inclinação quanto o ponto de inflexão               \\ \bottomrule
+					      \(a\)        & --        & curvatura               \\ \bottomrule
 				\end{tabular}%
 			}{}
 		\end{table}
