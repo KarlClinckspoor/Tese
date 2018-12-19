@@ -1,7 +1,7 @@
 % todo: verificar k_b ou k_B
 % todo: verificar 1,3BD ou 1,3-BD
 % todo: verificar seção por seção se as imagens são melhores h, ht, htb
-% todo: trocar \ref por \autoref{}
+
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
@@ -123,7 +123,7 @@
 % ---
 % Pacotes de citações
 % ---
-%%\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[num]{abntex2cite}	% Citações padrão ABNT
 %\usepackage[style=chem-acs, backend=biber,sorting=none,hyperref=true]{biblatex}
 %\addbibresource{library.bib}
@@ -506,7 +506,7 @@ Agradeço ao CNPq pelo financiamento.
 % ----------------------------------------------------------
 
 % Referências bibliográficas
-%\bibliography{library}
+\bibliography{library}
 
 % Apêndices
 \include{apendices}

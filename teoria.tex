@@ -3,16 +3,21 @@
 
 	\chapter{Surfactantes e autoassociação}
 	\index{surfactantes}
-	Surfactantes são moléculas anfifílicas, ou seja, possuem regiões com polaridades diferentes. Uma das regiões interage com com o solvente, e portanto é chamada de liofílica, e a outra interage mal, chamada de liofóbica. Quando o solvente é água, essas regiões são chamadas então hidrofílicas e hidrofóbicas, respectivamente. Essas diferenças de afinidade resultam na orientação das moléculas de surfactante de acordo com as moléculas ao redor, de maneira a maximizar a quantidade de interações favoráveis. A  \autoref{fig:estrutura_surfactantes} mostra a estrutura de alguns surfactantes.
+	Surfactantes são moléculas que são ativas em superfícies, como o nome já indica.\cite{Lindman_livro} Isso ocorre devido a sua estrutura molecular, que possui regiões com polaridades diferentes. A \autoref{fig:estrutura_surfactantes} mostra a estrutura de alguns surfactantes comumente utilizados.
 	
 	\begin{figure}[h]  % todo: aumentar o tamanho das letras nessa figura
 		\centering
-		\includegraphics[width=6cm]{./imagens/introducao/estrutura_surfactantes}
+		\includegraphics[width=0.7\textwidth]{./imagens/introducao/estrutura_surfactantes}
 		\caption{Estruturas de alguns surfactantes. (a) dodecilsulfato de sódio (SDS) (b) brometo de hexadeciltrimetilamônio (\CTAB) (c) 1-palmitoil-2-oleoil-3-sn-fosfatidilcolina (d) bis-(2-etilhexil) sulfosuccinato de sódio (AOT) (e) poli(etilenoglicol) p-(1,1,3,3-tetrametilbutil)-fenil éter (Triton X-100)}
 		\label{fig:estrutura_surfactantes}
 	\end{figure} \index{surfactantes!estrutura}
 	
-	Em solução aquosa, as moléculas de surfactante se orientam na interface com o ar, com a região apolar direcionada para o ar, e a região polar direcionada para a água (\autoref{fig:superficie_surfactante}. Esse efeito está relacionado à maior favorabilidade das interações polares com a água. É necessário, entretanto, considerar também as moléculas de solvente. Para maximizar as ligações de hidrogênio, as moléculas de água devem se organizar ao redor da cadeia hidrofóbica, resultando numa perda alta de entropia. Caso essas moléculas de água sejam liberadas, por exemplo, orientando a região apolar para o ar, o ganho entrópico das moléculas de água se sobrepõe à perda entrópica das moléculas de surfactante. Esse efeito, conhecido como efeito hidrofóbico, é um força motriz bastante importante da química coloidal. 
+	Essa dualidade os caracteriza como anfífilos,\cite{ColloidalDomain}, do grego \emph{amphi}, ``de dois tipos'', da mesma raiz de anfíbio, e \emph{philos}, ``amigável''. As duas regiões são chamadas de região liofílica (interage bem com o solvente) e liofóbica (interage mal com o solvente). Quando o solvente é água, essas regiões são chamadas então hidrofílicas e hidrofóbicas, respectivamente, e essa será a nomenclatura adotada neste trabalho, por clareza. Dessa diferença de afinidade se origina sua atividade superficial. Por exemplo, na interface água-ar, a região hidrofílica de um surfactante pode permanecer em água, enquanto a região hidrofóbica se orienta a evitar contato com a água, no ar, como mostra a \autoref{fig:superficie_surfactante}. Isso diminui a tensão superficial \(\gamma\), que relaciona a variação da energia superficial \(G\) com a variação na área superficial \(A\),
+	
+	\begin{equation}
+		\gamma = \left( \dfrac{\partial G}{\partial A}  \right)_{T,P,n}
+		\label{eqn:tens_superficial}
+	\end{equation}
 	
 	\begin{figure}[h]
 		\centering
@@ -20,9 +25,11 @@
 		\caption{Interface de água e ar, com moléculas de surfactantes direcionadas}
 		\label{fig:superficie_surfactante}
 	\end{figure} \index{surfactantes!atividade superficial}
+		
+	Devido à sua ação interfacial e a característica anfifílica, os surfactantes possuem uma grande variedade de possíveis aplicações, desde produtos básicos inventados na antiguidade, como o sabão\cite{Gibbs1939, Levey1954}, na biologia, na forma de membranas celulares e sais biliares\cite{Wennerstrom1979}, na indústria alimentícia\cite{Lauridsen1976}, na indústria química e de petróleo\cite{Surfactants_petroleum}, e inclusive, como catalizadores\cite{Minch1978a}.
 	
-	À medida que mais surfactante é adicionado, mais moléculas se concentram na superfície, até uma concentração limite. Nessa concentração, chamada de concentração micelar crítica (\cmc) \index{surfactantes!concentração micelar crítica} as moléculas começam a formar estruturas de autoassociação, como, por exemplo, micelas esféricas (\autoref{fig:micela_esferica}). Da mesma forma que no caso das moléculas de surfactante na superfície, a perda entrópica da formação de micelas é compensada pelo ganho entrópico das moléculas de água. 
-	
+	À medida que mais surfactante é adicionado, mais moléculas se concentram na superfície, até uma concentração limite, chamada de concentração micelar crítica (\cmc). \index{surfactantes!concentração micelar crítica} A partir desse ponto, as moléculas de surfactante começam a formar estruturas de autoassociação, como, por exemplo, micelas esféricas, ilustradas na \autoref{fig:micela_esferica}.\cite{Lindman_livro}
+		
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=5cm]{./imagens/introducao/micela_esferica}
@@ -30,27 +37,37 @@
 		\label{fig:micela_esferica}
 	\end{figure}
 	
-	Outras estruturas de autoassociação, além de micelas esféricas, são possíveis. Micelas esféricas podem se deformar, gerando micelas esferoidais, podendo possuir até 3 raios diferentes. Após isso, as micelas podem crescer unidimensionalmente, formando micelas cilíndricas. Esse crescimento pode continuar, formando micelas que possuem uma variedade de nomes na literatura, como vermiformes (\emph{wormlike}), gigantes (\emph{giant}), alongadas (\emph{elongated}), filiformes (\emph{threadlike}), parecidas com polímeros (\emph{polymerlike}). Os nomes mais comuns são \emph{wormlike} em inglês e \emph{gigantes} em português. As micelas gigantes são o foco deste trabalho. Uma ilustração de micelas gigantes se encontra na \autoref{fig:micela_gigante}. \index{micelas gigantes}
+	Para entender esses processos, é necessário não só observar as moléculas do surfactante, mas também as moléculas de água. A água possui interações intermoleculares muito fortes, em especial, a ligação de hidrogênio. Para maximizar o número de ligações de hidrogênio, as moléculas de água devem se organizar ao redor da cadeia hidrofóbica do surfactante, uma organização que inclusive já foi chamada de ``iceberg''\cite{FrankEvans1945}. Esse efeito, conhecido como efeito hidrofóbico\cite{Tanford1978}, é de natureza fundamentalmente entrópica. Quando as moléculas de água são liberadas, pela orientação ou formação de micelas, o ganho entrópico das moléculas de água se sobressai em relação à perda entrópica da organização das moléculas desse surfactante. Mais detalhes sobre interações intermoleculares e o efeito hidrofóbico podem ser encontradas na \autoref{sec:forcas_intermoleculares}.
+
+	Outras estruturas de autoassociação, além de micelas esféricas, são possíveis. Micelas esféricas podem se deformar, gerando micelas esferoidais, podendo possuir até 3 raios diferentes. Após isso, as micelas podem crescer unidimensionalmente, formando micelas cilíndricas. Esse crescimento pode continuar, formando micelas que possuem uma variedade de nomes na literatura, como 
 	
-	% todo: colocar citações com exemplos desses nomes
+	\begin{itemize}[noitemsep]
+		\item 670 artigos: Vermiformes, \emph{wormlike}\cite{Calabrese2018, Chu2010b, Ito2016, Lin2010a, Dreiss2007},
+		\item 44 artigos: gigantes, \emph{giant}\cite{Giant_Micelles, Cates2006, Messager1988a},
+		\item 27 artigos: alongadas, \emph{elongated}\cite{Shikata1987, Porte1980a, Oda1999a, Makhloufi1989},
+		\item 51 artigos: filiformes, \emph{threadlike}\cite{Danino1995a, Shi2014, Imai2001a,Brown1989a},
+		\item 56 artigos: parecidas com polímeros, \emph{polymer-like}\cite{Appel1990, BaldelliBombelli2002a, Garamus2000},
+	\end{itemize}
 	
+	\noindent e inclusive combinações dos termos\cite{Won1999, Georgieva2016}. Logo, uma boa pesquisa bibliográfica necessita da inclusão de todos esses termos, o que pode ser feito pelos mecanismos de busca mais comuns utilizando operadores binários como \texttt{AND} e \texttt{OR}. Os nomes mais comuns são \emph{wormlike} em inglês e \emph{gigantes} em português. As micelas gigantes são o foco deste trabalho. Uma ilustração de micelas gigantes se encontra na \autoref{fig:micela_gigante}. \index{micelas gigantes}
+		
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.7\textwidth]{./imagens/introducao/micela_gigante}
-		\caption{Micela gigante formada pela interação de salicilato de sódio e brometo de hexadeciltrimetilamônio}
+		\caption{Micela gigante formada pela interação de salicilato de sódio e brometo de hexadeciltrimetilamônio. Figura adaptada de \citeauthor{Sabadini2017}.}
 		\label{fig:micela_gigante}
 	\end{figure}
 	
-	Continuando a adição de surfactante, é possível a formação de várias outras estruturas de autoassociação. O fator que diferencia essas estruturas é o empacotamento da molécula de surfactante, que acaba resultando em curvaturas diferentes. O parâmetro de empacotamento \(P\) (\autoref{eqn:param_empacot}) é um parâmetro geométrico utilizado para racionalizar o empacotamento das moléculas de surfactante.
+	Continuando a adição de surfactante, é possível a formação de várias outras estruturas de autoassociação. O fator que diferencia essas estruturas é o empacotamento da molécula de surfactante, que acaba resultando em curvaturas diferentes. O parâmetro de empacotamento \(P\), definido na \autoref{eqn:param_empacot} é um parâmetro geométrico utilizado para racionalizar o empacotamento das moléculas de surfactante.\cite{Israelachvili1976c}
 	
 	\begin{equation}
-	P = \dfrac{\frac{V}{l}}{a_0}
+	P = \dfrac{\dfrac{V}{l}}{a_0}
 	\label{eqn:param_empacot}
 	\end{equation} 
 	%\index{surfactantes!parâmetro de empacotamento|see{parâmetro de empacotamento}} 
 	\index{surfactantes!parâmetro de empacotamento!definição}
 	
-	\noindent onde \(V\) é o volume da cadeia hidrofóbica, \(l\) é o comprimento da mesma e \(a_0\) é a área da região polar do surfactante. A \autoref{fig:param_empacotamento} ilustra os elementos que compõem o parâmetro de empacotamento.
+	\(V\) é o volume da cadeia hidrofóbica, \(l\) é o comprimento da mesma e \(a_0\) é a área da região polar do surfactante. A \autoref{fig:param_empacotamento} ilustra os elementos que compõem o parâmetro de empacotamento.
 	
 	\begin{figure}[h]
 		\centering
@@ -1006,7 +1023,7 @@
 		% 	Outra consequência do princípio de Frank-Condon é que o fenômeno de absorção, muito rápido, só fornece informações sobre o estado fundamental médio das moléculas e das moléculas de solvente nas imediações. Porém, como a fluorescência é mais demorada, é possível que ocorram interações com outras moléculas em solução, fornecendo informações sobre o ambiente químico do fluoróforo.
 
 		
-	\chapter{Forças intermoleculares e interagregados} \index{forças intermoleculares}
+	\chapter{Forças intermoleculares e interagregados} \index{forças intermoleculares} \label{sec:forcas_intermoleculares}
 	
 	Na natureza existem quatro forças distintas, porém, para o campo dos coloides, a força eletromagnética é de maior importância. As forças comumente estudadas na química, como as interações dipolares, e dispersivas, possuem uma origem fundamentalmente eletrostática. De forma geral, potenciais de interação de pares \(w\) podem ser escritos de acordo com a \autoref{eqn:energia_livre_generica}. A força \(F\) é obtida pela derivada dessa equação em função da posição (eqn. \ref{eqn:forca_generica}).
 	
@@ -1175,7 +1192,7 @@
 	
 	% todo: mencionar a energia dispersiva por volume, e como ela é constante
 	
-	Com a terceira equação, é possível obter o panorama completo da energia de interação de van der Waals obtido pela soma das três energias (\autoref{eqn:vdw}.
+	Com a terceira equação, é possível obter o panorama completo da energia de interação de van der Waals obtido pela soma das três energias (\autoref{eqn:vdw}).
 	
 	\begin{subequations}
 	\begin{align}
@@ -1196,7 +1213,7 @@
 	
 	Alguns fatores podem ser levantados sobre essa equação. Geralmente, a componente com \(\nu > 0\) é mais forte que a componente com \(\nu = 0\), exceto em solventes polares, como a água. Além disso, a força de van der Waals é reduzida num meio com solvente, devido às propriedades de excesso ser menor do que no vácuo. Por último, a força dispersiva é sempre atrativa entre moléculas iguais, mas a expressão expandida mostra que as interações podem ser tanto atrativas quanto repulsivas, quando a propriedade do solvente, como o índice de refração, é intermediário entre as duas partículas. Uma maneira de se visualizar isso é pensando no princípio de Arquimedes. A força gravitacional é, aparentemente, sempre atrativa. Porém, ao colocar uma esfera de isopor no fundo de uma banheira, a esfera irá subir para a superfície, sendo que uma esfera de aço afundaria. A causa da repulsão da esfera de isopor é a força gravitacional, que agiu com maior força no volume de água deslocado pelo isopor do que na própria esfera de isopor, e a deslocou para cima. \index{forças intermoleculares!repulsão}
 	
-	\section{Ligações de hidrogênio e interações hidrofóbicas} \index{forças intermoleculares!ligação de hidrogênio} \index{forças intermoleculares!interação hidrofóbica}
+	\section{Ligações de hidrogênio e interações hidrofóbicas} \index{forças intermoleculares!ligação de hidrogênio} \index{forças intermoleculares!interação hidrofóbica} \label{sec:ligacoes_hidrogenio}
 	
 	Na molécula de água, há uma grande diferença de eletronegatividade entre O e H, resultando numa grande polarização dessa ligação. A molécula de água pode ser representada centrada no oxigênio, com duas cargas positivas nos hidrogênios e duas cargas negativas nos pares eletrônicos do oxigênio. Essa interação entre as regiões positiva e negativa das moléculas de água, de natureza eletrostática, é bastante forte, da ordem de 5-10 kT a 298K. Essa interação pode ser visualizada através das distâncias de ligação, onde a ligação intramolecular O --- H é de 0.10 nm, a distância intermolecular \(\mathrm{O} \cdots \mathrm{H}\) é 0.176 nm, e a soma dos raios de van der Waals de O e H é de 0.26 nm. Devido à essa forte interação, as moléculas de água formam uma estrutura tetraédrica, com quatro moléculas de água ao redor, no estado sólido, e uma média de 3,5 moléculas de água no estado líquido, ao invés de 12 moléculas para estruturas com empacotamento denso.
 	
