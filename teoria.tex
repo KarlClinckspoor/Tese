@@ -455,7 +455,7 @@
 				\label{eqn:Maxwell_dif_resolvida}
 			\end{equation}
 			
-			O termo exponencial na \autoref{eqn:Maxwell_dif_resolvida} possui unidade de tempo e é a relação entre as componentes elástica e viscosa do material. Essa relação recebe o nome de tempo de relaxação, \(\tau_{\mathrm{rel}}\) (\autoref{eqn:Maxwell_tempo_rel_def})
+			O termo exponencial na \autoref{eqn:Maxwell_dif_resolvida} possui unidade de tempo e é a relação entre as componentes elástica e viscosa do material. Essa relação recebe o nome de tempo de relaxação, \(\tau_{\mathrm{rel}}\)
 			
 			\begin{equation}
 				\sigma(t) = \sigma_0 \exp \left(\dfrac{-t}{\tau_{\textrm{rel}}}\right)
@@ -540,14 +540,14 @@
 				\label{eqn:Maxwell_cruzamento}
 			\end{equation} \index{reologia!oscilatória!ângulo de defasagem \(\theta\)} %\index{reologia!Modelos!Maxwell|textbf}
 			
-			Lembrando que \(\omega\) é a frequência de perturbação, e o inverso da frequência é o tempo de observação, podemos relacionar essa relação com o número de Deborah,
+			Quando G' = G'', \(\tan \theta = 1\) (\autoref{fig:osc_sim50}), e temos a mesma relação que a \autoref{eqn:Maxwell_cruzamento}. Lembrando que \(\omega\) é a frequência de perturbação, e o inverso da frequência é o tempo de observação, podemos relacionar o número de Deborah com \(\tau_\mathrm{rel}\),
 			
 			\begin{equation}
 				\dfrac{1}{\omega\tau_{\textrm{rel}}} = \dfrac{ t_{\textrm{observação}  }}{ \tau_{\textrm{rel}}  } = \dfrac{1}{D_e}
 				\label{eqn:Maxwell_cruzamento_Deborah}
 			\end{equation} \index{reologia!Número de Deborah}
 
-			A reologia oscilatória geralmente é expressa em termos de G' e G'' em função da frequência, na escala logarítmica. A \autoref{fig:modelo_maxwell} mostra duas curvas simuladas para um material com tempo de relaxação de 10 s.$rad^{-1}$ e um módulo \(G\) de 10 Pa. Nessa figura estão mostrado como se obtêm visualmente os parâmetros \(G\) e \(\tau_{\mathrm{rel}}\).
+			A reologia oscilatória geralmente é ilustrada em termos de G' e G'' em função da frequência, na escala logarítmica. A \autoref{fig:modelo_maxwell} mostra duas curvas simuladas para um material com tempo de relaxação de 10 s.$rad^{-1}$ e um módulo \(G\) de 10 Pa. Nessa figura estão mostrado como se obtêm visualmente os parâmetros \(G\) e \(\tau_{\mathrm{rel}}\).
 			
 			\begin{figure}[h]
 				\centering
@@ -556,30 +556,29 @@
 				\label{fig:modelo_maxwell}
 			\end{figure} \index{reologia!espectro mecânico}
 			
-			Para o modelo de Maxwell, a viscosidade complexa segue a \autoref{eqn:visc_complexa_maxwell}, sendo que \(\eta_0\) é equivalente à viscosidade no repouso (\autoref{fig:reol_pseudoplastico_loglog}). Não há dependência da tensão \(\gamma\) porque as medidas oscilatórias são obtidas no regime linear. % ref Rehage Hoffmann 1991
+			Para o modelo de Maxwell, a viscosidade complexa segue a \autoref{eqn:visc_complexa_maxwell}, sendo que \(\eta_0\) é equivalente à viscosidade no repouso (\autoref{fig:reol_pseudoplastico_loglog}). Não há dependência da tensão \(\gamma\) porque as medidas oscilatórias são obtidas no regime linear.\cite{Rehage1991}
 			
 			\begin{equation}
 				 \eta^* (\omega) = \dfrac{\eta_0}{\left( 1 + \omega^2 \tau_\mathrm{rel}^2 \right)^{\sfrac{1}{2}}}
 				\label{eqn:visc_complexa_maxwell}
 			\end{equation} \index{reologia!viscosidade complexa \(\eta^*\)}
 			
-			É possível também relacionar a viscosidade no repouso, \(\eta_0\), obtida nas curvas de fluxo, com os parâmetros \(G\) e \(\tau_{\mathrm{rel}}\), obtidos na reologia oscilatória. \index{reologia!relação entre linear e não linear}
+			É possível também relacionar a viscosidade no repouso, \(\eta_0\), obtida nas curvas de fluxo, com os parâmetros \(G\) e \(\tau_{\mathrm{rel}}\), obtidos na reologia oscilatória.\cite{Rehage1991} \index{reologia!relação entre linear e não linear}
 			
 			\begin{equation}
 				\eta_0 = G \tau_{\mathrm{rel}}
 				\label{eqn:eta0_g0_taurel}
-			\end{equation}  % ref Rehage Hoffmann 1991
+			\end{equation}  
 			
 %			Micelas gigantes, em vários regimes, obedecem muito bem o modelo de Maxwell. É possível interpretar esse comportamento da seguinte maneira. Em baixas frequências de perturbação (longos tempos), as micelas possuem tempo suficiente para deslizar umas pelas outras, então a maior parte da energia fornecida é perdida, logo o módulo viscoso, ou de perda, possui valores altos. Em frequências altas, a rede micelar e os entrelaçamentos conseguem armazenar a energia, não possuindo tempo suficiente para deslizar, então o módulo elástico, ou de armazenamento, é alto. Na região intermediária, ambos os mecanismos estão presentes, parte da energia é perdida e parte é armazenada, sendo que no ponto de cruzamento, exatamente metade da energia é preservada e metade é perdida.
 			
-			Para a obtenção de valores confiáveis para os parâmetros \(G\) e \(\tau_{\mathrm{rel}}\), é necessário realizar um ajuste dessas curvas. Porém, ambos G' e G'' são descritos pelo mesmo conjunto de parâmetros. Ao invés de se fazer dois ajustes e encontrar quatro parâmetros, é ideal realizar um ajuste das duas curvas simultaneamente. Isso pode ser feito minimizando-se um vetor com os resíduos das duas curvas concatenados. Isso pode ser feito utilizando-se, por exemplo, o Excel, com a ferramenta \emph{Solver} para minimizar o resíduo.
+			Para a obtenção de valores confiáveis para os parâmetros \(G\) e \(\tau_{\mathrm{rel}}\), é necessário realizar um ajuste dessas curvas. Porém, ambos G' e G'' são descritos pelo mesmo conjunto de parâmetros. Ao invés de se fazer dois ajustes e encontrar quatro parâmetros, é ideal realizar um ajuste das duas curvas simultaneamente. Isso pode ser feito pelo software Origin\textregistered, escolhendo uma opção de ajuste de equações, não de expressão. Além disso, é possível utilizar o Excel, com a ferramenta \emph{Solver} para minimizar o conjunto dos resíduos de ambas as curvas. Esse foi o princípio dos ajustes neste trabalho, mas utilizando Python.
 			
-
 			\subsection{Modelos mais complexos}
 			
-			Experimentalmente, existem divergências entre o modelo de Maxwell e os espectros mecânicos dos materiais. Geralmente, essas divergências aparecem devido ao aparecimento de outros  mecanismos de relaxação em frequências mais altas. Para isso, existem alguns modelos que visam corrigir o modelo de Maxwell, afetando principalmente essa região.
+			Experimentalmente, existem divergências entre o modelo de Maxwell e os espectros mecânicos dos materiais, especialmente em frequências mais altas, onde modos de movimentação Rouseanos e \emph{breathing modes} podem afetar a reologia.\cite{Berret1993a} Para isso, existem alguns modelos que visam corrigir o modelo de Maxwell, afetando principalmente essa região.\cite{Garcia2018}
 			
-			Uma possível correção é utilizar dois elementos de Maxwell em série, produzindo um modelo que tem dois tempos de relaxação e dois módulos (\autoref{eqn:modelo_doismodos_g1}, \autoref{eqn:modelo_doismodos_g2}). \index{reologia!Modelos!Dois Modos}
+			Uma possível correção é utilizar dois elementos de Maxwell em série, produzindo um modelo que tem dois tempos de relaxação e dois módulos.\cite{Helgeson2010d} Inclusive, é possível construir um modelo com um número arbitrário de elementos Maxwellianos.\cite{Lyklema_rheology} \index{reologia!Modelos!Dois Modos}
 			
 			\begin{equation}
 				G' = \dfrac{ G_1 \omega^2 \tau_{\textrm{rel,1}}^2   }{  1 + \omega^2 \tau_{\textrm{rel,1}}^2      } + \dfrac{ G_2 \omega^2 \tau_{\textrm{rel,2}}^2   }{  1 + \omega^2 \tau_{\textrm{rel,2}}^2      }
@@ -591,8 +590,7 @@
 			\label{eqn:modelo_doismodos_g2}
 			\end{equation}
 
-			O modelo de Oldroyd é praticamente idêntico ao modelo de Maxwell, e introduz somente um termo relativo à resistência do solvente para altas frequências de G'' (\autoref{eqn:modelo_oldroyd_g2}). G' é inalterado. Essa é a extensão natural de materiais quase Maxwellianos. % todo: ref Cates? Berret?
-			% Ref Rehage Hoffmann 1991, Fala de Thurn e Hess que resolveram uma equação.
+			O modelo de Oldroyd é praticamente idêntico ao modelo de Maxwell, e introduz somente um termo relativo à resistência do solvente para altas frequências de G'' (\autoref{eqn:modelo_oldroyd_g2}). G' é inalterado.\cite{Rehage1991, CalabreseTese} Essa é a extensão natural de materiais quase Maxwellianos.\cite{Giant_Micelles}
 			\index{reologia!Modelos!Oldroyd}
 			
 			\begin{equation}
@@ -600,7 +598,7 @@
 				\label{eqn:modelo_oldroyd_g2}
 			\end{equation}
 			
-			O modelo mais diferente do modelo de Maxwell é o modelo de Jeffreys, que possui as seguintes formas: \index{reologia!Modelos!Jeffreys}
+			O modelo mais diferente do modelo de Maxwell é o modelo de Jeffreys, que possui as seguintes formas\cite{Lu2015}: \index{reologia!Modelos!Jeffreys}
 			
 			\begin{equation}
 				G' = \dfrac{G \omega^{2} \tau_{\textrm{rel,1}} \left(\tau_{\textrm{rel,1}} - \tau_{\textrm{rel,2}}\right)}{1 + \omega^{2} \tau_{\textrm{rel,1}}^{2}}
@@ -645,8 +643,7 @@
 				\label{fig:comparativo_modelos}
 			\end{figure}
 			
-			Outro modelo, recentemente proposto por % García e Saraji
-			, oriundo do modelo de Cates, utiliza um tempo de relaxação para as micelas que é dependente da frequência de oscilação. Mais detalhes podem ser encontrados na referência. Nesse modelo, os módulos G' e G'' são praticamente idênticos aos módulos do modelo de Maxwell, porém o tempo de relaxação é composto por um termo \(\tau_{\textrm{rel}, 0}\), que multiplica uma exponencial que possui um termo empírico, \(\beta\). \index{reologia!Modelos!García-Saraji}
+			Outro modelo, recentemente proposto por \citeauthor{Garcia2018}, oriundo do modelo de Cates, utiliza um tempo de relaxação para as micelas que é dependente da frequência de oscilação. Nesse modelo, os módulos G' e G'' são praticamente idênticos aos módulos do modelo de Maxwell, porém o tempo de relaxação é composto por um termo \(\tau_{\textrm{rel}, 0}\), que multiplica uma exponencial que possui um termo empírico, \(\beta\). \index{reologia!Modelos!García-Saraji}
 			
 			\begin{equation}
 			G' = \dfrac{ G \omega^2 \tau_{\textrm{rel}}(\omega)^2   }{  1 + \omega^2 \tau_{\textrm{rel}}(\omega)^2  } = %
@@ -660,7 +657,7 @@
 			\label{eqn:garcia_saraji_g2}
 			\end{equation}
 			
-			sendo que \(\beta\) é
+			\noindent sendo que \(\beta\) é
 			
 			\begin{equation}
 				\beta = a \omega^b
@@ -674,7 +671,7 @@
 		
 		% todo: encontrar um termo melhor para ``caixa adiabática''
 		
-		A calorimetria de titulação isotérmica (ITC) é uma técnica baseada num processo de titulação, onde cada injeção resulta em uma ou mais reações químicas ou físicas que podem liberar ou absorver calor. O calor total observado é a somatória de todos os processos que ocorreram durante a injeção. No calorímetro há duas celas dentro de uma caixa adiabática, uma de referência, que contém somente água, e outra de amostra, onde ocorre a titulação em si. A cela de referência recebe uma quantidade fixa de calor através de uma resistência, e a cela de amostra recebe uma quantidade variável de calor. Isso significa que a temperatura das celas, no decorrer de uma titulação, aumenta ligeiramente, mas menos que 0,1°C. A \autoref{fig:ITC_esquema} ilustra a construção de um calorímetro.
+		A calorimetria de titulação isotérmica (ITC) é uma técnica baseada num processo de titulação, onde cada gota resulta em uma ou mais reações químicas ou físicas que podem liberar ou absorver calor. O calor total observado é a somatória do calor de todos esses processos, sendo assim difícil desmembrar as contribuições de cada processo.\cite{Loh2016} No calorímetro há duas celas dentro de uma caixa adiabática, uma de referência, que contém somente água, e outra de amostra, onde ocorre a titulação em si.\cite{Bouchemal2010a} A cela de referência recebe uma quantidade fixa de calor através de uma resistência, e a cela de amostra recebe uma quantidade variável de calor. Isso significa que a temperatura das celas, no decorrer de uma titulação, aumenta ligeiramente, mas menos que 0,1°C. A \autoref{fig:ITC_esquema} ilustra a construção de um calorímetro.
 		
 		\begin{figure}[h]
 			\centering
@@ -683,7 +680,7 @@
 			\label{fig:ITC_esquema}
 		\end{figure} \index{ITC!construção do equipamento}
 		
-		Durante uma titulação, caso ocorra liberação de calor na cela de amostra, menos energia, em relação ao valor basal, precisa ser fornecida para manter a temperatura igual entre as celas. Caso o sistema absorva energia, mais potência precisa ser fornecida à cela. Esse comportamento se expressa em picos acima ou abaixo da linha de base. A integração de cada pico no tempo fornece valores de energia que, quando divididos pelo número de mols injetados, obtemos valores de $\Delta H^0/kJ.mol^{-1}$ [X, Y]. A \autoref{fig:ITC_exemplo} mostra um exemplo de um experimento de titulação de \TTAB{} em água.
+		Durante uma titulação, caso ocorra liberação de calor na cela de amostra, menos energia, em relação ao valor basal, precisa ser fornecida para manter a temperatura igual entre as celas. Caso o sistema absorva calor, mais potência precisa ser fornecida à cela, e vice-versa. Esse comportamento se expressa em picos acima ou abaixo da linha de base. A integração de cada pico no tempo fornece valores de energia que, quando divididos pelo número de mols injetados, obtemos valores de \(\Delta H^0\)/kJ.mol\menosUm. Um diagrama da entalpia pela concentração de titulante é chamada de entalpograma, ou termograma.\cite{Bouchemal2010a}. A \autoref{fig:ITC_exemplo} mostra um exemplo de um experimento de titulação de \TTAB{} em água.
 		
 		\begin{figure}[h]
 			\begin{subfigure}[t]{0.5\textwidth}
@@ -703,9 +700,11 @@
 			\label{fig:ITC_exemplo}
 		\end{figure}
 		
+		\FloatBarrier
+		
 		\section{Calorimetria de micelização} \index{ITC!micelização}
 		\label{sec:calorimetria_micelizacao}
-		A partir de um conjunto de dados como os da \autoref{fig:ITC_exemplo}, é possível calcular a \cmc{} e a entalpia de micelização, \DHmic. A \cmc{} é determinada pelo ponto de inflexão, onde a primeira derivada do entalpograma é maior (ou menor). A \DHmic{} é determinada realizando-se dois ajustes lineares das regiões iniciais e finais do entalpograma. A diferença de entalpia dos pontos de intersecção desses ajustes com uma reta horizontal na \cmc{} fornece o \DHmic{} sem correção. Após isso, é necessário corrigir pela concentração de surfactante não micelizado na seringa, que é igual à \cmc{}. A \autoref{fig:itc_extracao_cmc_dh} mostra esse método.
+		A partir de um conjunto de dados como os da \autoref{fig:ITC_exemplo}, é possível calcular a \cmc{} e a entalpia de micelização, \DHmic. A \cmc{} pelo ponto onde a primeira derivada do entalpograma é máxima (ou mínima)\cite{Bouchemal2010a}, ou onde a segunda derivada é igual a zero.\cite{Sarac2009}  A \DHmic{} é determinada realizando-se dois ajustes lineares das regiões iniciais e finais do entalpograma.\cite{Loh2016} A diferença de entalpia dos pontos de intersecção desses ajustes com uma reta horizontal na \cmc{} fornece o \DHmic{} sem correção.  A \autoref{fig:itc_extracao_cmc_dh} mostra esse método.
 		
 		\begin{figure}[h] \index{ITC!\cmc}
 			\centering
@@ -714,7 +713,7 @@
 			\label{fig:itc_extracao_cmc_dh}
 		\end{figure} 
 
-		Para corrigir a entalpia de micelização observada para obter a entalpia de micelização correta, utiliza-se a \autoref{eqn:itc_obtencao_dhmic}.  \index{ITC!cálculo de \DHmic}
+		Para corrigir a entalpia de micelização observada para obter a entalpia de micelização correta, utiliza-se a \autoref{eqn:itc_obtencao_dhmic}.\cite{Loh2016}  \index{ITC!cálculo de \DHmic}
 		
 		\begin{equation}
 			\Delta H^0_{\textrm{mic}} = \Delta H^0_{\textrm{obs}} \times \dfrac{c_{\textrm{seringa}}}{c_{\textrm{seringa}-\mathrm{CMC}}}
@@ -723,7 +722,7 @@
 		
 		\noindent onde \(c_{\mathrm{seringa}}\) é a concentração de surfactante na seringa.
 		
-		Pela \cmc{} é possível obter a energia livre de micelização a partir da \autoref{eqn:itc_DeltaG_mic}, dependendo do tipo de surfactante e do meio.
+		Pela \cmc{} é possível obter a energia livre de micelização a partir da \autoref{eqn:itc_DeltaG_mic}, oriunda do modelo de ação das massas\cite{Loh2016} dependendo do tipo de surfactante e do meio.
 		
 		\begin{equation}
 			\Delta G_{\textrm{mic}}^0
@@ -734,7 +733,7 @@
 			\label{eqn:itc_DeltaG_mic}
 		\end{equation} \index{ITC!relações termodinâmicas}
 		
-		\noindent onde \(\alpha\) é o grau de ionização das micelas e \(\chi_{\mathrm{cmc}}\) é a concentração micelar crítica em fração molar. O cálculo para surfactantes iônicos assume que o solvente é água e/ou a força iônica seja baixa.
+		\noindent onde \(\alpha\) é o grau de ionização das micelas e \(\chi_{\mathrm{cmc}}\) é a concentração micelar crítica em fração molar. O cálculo para surfactantes iônicos assume que o solvente é água e/ou a força iônica seja baixa. Não considerar os contraíons geralmente leva a erros altos.\cite{Bouchemal2010a}
 		
 		Com a entalpia e energia livre de micelização, é possível encontrar a entropia de micelização pela equação de Gibbs (\autoref{eqn:itc_gibbs_para_entropia}).
 		
@@ -742,88 +741,91 @@
 			T\Delta S^0_{\textrm{mic}} = \Delta H^0_{\textrm{mic}} - \Delta G^0_{\textrm{mic}}
 			\label{eqn:itc_gibbs_para_entropia}
 		\end{equation}
-
+		
+		Outra maneira de se obter esses parâmetros é pelo ajuste de um modelo, como mostrado em \citeauthor{Sarac2017a}.
+		
+		Geralmente, em artigos sobre calorimetria, são calculados esses parâmetros termodinâmicos, além da variação de capacidade calorífica \(\Delta C_p\), e com isso se discute a contribuição hidrofóbica\cite{Sarac2017a, Kfouri2019}, o efeito de um sal/aditivo\cite{Sarac2009, Liu2011a, Ito2016}, a espontaneidade de agregação\cite{Ito2016}, e inclusive, cinética de processos.\cite{Kfouri2019,Lof2007a}
+		
 	\chapter{SAXS} \index{SAXS} \index{espalhamento de raios-X em baixos ângulos |see {SAXS}}
 		\section{Fundamentos} \index{SAXS!fundamentos}
-				
-		%O espalhamento de luz é um fenômeno que ocorre devido à interação da luz com os elétrons de um átomo ou grupo de átomos. O feixe incidente excita os elétrons de modo que eles comecem a oscilar na mesma frequência do feixe incidente. Quando o feixe incidente é removido, os elétrons excitados emitem fótons do mesmo comprimento de onda incidente (chamado de espalhamento elástico), em qualquer direção. As ondas emitidas interagem de maneira construtiva e destrutiva, dependendo de sua posição relativa. A somatória dessas ondas resulta num padrão de espalhamento específico para cada estrutura.
 		
-		A radiação eletromagnética, quando incide sobre uma amostra fina, o campo elétrico variante da radiação irá interagir com os elétrons dos átomos dentro da região iluminada. Dependendo da frequência (\(\omega\)), pode ocorrer o fenômeno da absorção perto do limite de Lorentz, \(\omega \approx \omega_0\), de interesse em experimentos espectroscópicos, ou pode ocorrer uma polarização dos átomos que varia com a frequência da radiação quando \(\omega \ll \omega_0\) ou \(\omega \gg \omega_0\). Os dipolos emitem radiação pois toda carga elétrica emite um campo elétrico em direções praticamente aleatórias, com amplitude proporcional à aceleração. Isso é chamado de espalhamento. Essas ondas espalhadas interagem construtiva- e destrutivamente, originando em padrões de espalhamento dependendo da localização dos centros espalhadores.
+		%Este capítulo foi fortemente inspirado pelo livro de \citeauthor{Glatter2018livro}, uma excelente, e acessível, introdução à técnica. Os trabalhos de Pedersen também são de boa qualidade, e, quando utilizados, serão indicados.
 		
-		Raios-X possuem comprimentos de onda tão pequenos que se encontram no limite de Thomson, onde \(\omega \gg \omega_0\). No campo da matéria mole, a energia dos fótons é tão alta que todos os elétrons dos átomos, até suas camadas mais internas, oscilam junto com a radiação. Isso não acontece com o espalhamento de luz, onde a oscilação ocorre somente com os elétrons das camadas mais externas, dependendo da polarizabilidade dos átomos, que é proporcional ao índice de refração do material. % todo: pensar se eu coloco aqui a fórmula
+		A radiação eletromagnética é composta com um campo magnético e um campo elétrico oscilantes. Quando um feixe eletromagnético incide sobre uma amostra fina, o campo elétrico variante irá interagir com os elétrons dos átomos dentro da região iluminada. Dependendo da frequência (\(\omega\)), pode ocorrer o fenômeno da absorção perto do limite de Lorentz, \(\omega \approx \omega_0\), de interesse em experimentos espectroscópicos, ou pode ocorrer uma polarização dos átomos que varia com a frequência da radiação quando \(\omega \ll \omega_0\) ou \(\omega \gg \omega_0\). Os dipolos emitem radiação pois toda carga elétrica emite um campo elétrico em direções praticamente aleatórias, com amplitude proporcional à aceleração. Isso é chamado de espalhamento. Essas ondas espalhadas interagem construtiva- e destrutivamente, originando em padrões de espalhamento dependendo da localização dos centros espalhadores.\cite{Glatter2018livro}
 		
-		As ondas emitidas, quando comparadas com o feixe incidente, são coerentes, isso é, possuem somente uma diferença de fase \(\varphi\) fixa entre a radiação incidente e espalhada, e possuem o mesmo comprimento de onda da radiação incidente, isso é, o espalhamento é completamente elástico. Dessa maneira, os vetores incidentes \(\mathbf{k_i}\) e espalhados \(\mathbf{k_s}\) possuem a mesma amplitude, igual ao número de onda \(k\) (\autoref{eqn:numero_onda}), com o índice de refração próximo à unidade.
+		Raios-X possuem comprimentos de onda tão pequenos que se encontram no limite de Thomson, onde \(\omega \gg \omega_0\). No campo da matéria mole, a energia dos fótons é tão alta que todos os elétrons dos átomos, até suas camadas mais internas, oscilam junto com a radiação. Isso não acontece com o espalhamento de luz, onde a oscilação ocorre somente com os elétrons das camadas mais externas, dependendo da polarizabilidade dos átomos, que é proporcional ao índice de refração do material (\autoref{eqn:lorenz_lorentz}).\citeauthor{Glatter2018livro}
+		
+		As ondas emitidas, quando comparadas com o feixe incidente, são coerentes, isso é, possuem somente uma diferença de fase \(\varphi\) fixa entre a radiação incidente e espalhada. Além disso, possuem o mesmo comprimento de onda da radiação incidente, então o espalhamento é completamente elástico. Dessa maneira, os vetores incidentes \(\mathbf{k_i}\) e espalhados \(\mathbf{k_s}\) possuem a mesma amplitude, igual ao número de onda \(k\) (\autoref{eqn:numero_onda}), com o índice de refração próximo à unidade, 
 		
 		\begin{equation} 
 			k = \dfrac{2 \pi}{\lambda}
 			\label{eqn:numero_onda}
 		\end{equation} \index{SAXS!número de onda}
 		
-		\noindent onde \(\lambda\) é o comprimento de onda da radiação.
+		\noindent onde \(\lambda\) é o comprimento de onda da radiação.\citeauthor{Glatter2018livro}
 		
-		A única diferença entre os feixes espalhados é a fase \(\varphi\) da radiação, devido ao caminho diferente que cada feixe precisa fazer. A diferença de fase de um comprimento de onda é \(2\pi\). Essa fase está relacionada com a interferência dos feixes e, para obtê-la, é necessário subtrair os vetores incidente e espalhado, que passam por um ponto \(P\), cuja posição é dada pelo vetor \(\mathbf{r}\), multiplicados pelo número de onda \(k\) (\autoref{eqn:calculo_fase_saxs}):
+		A única diferença entre os feixes espalhados é a fase \(\varphi\) da radiação, devido ao caminho diferente que cada feixe precisa fazer. A diferença de fase de um comprimento de onda é \(2\pi\). Essa fase está relacionada com a interferência dos feixes e, para obtê-la, é necessário subtrair os vetores incidente e espalhado, que passam por um ponto \(P\), cuja posição é dada pelo vetor \(\mathbf{r}\), multiplicados pelo número de onda \(k\),
 		
 		\begin{equation}
 			\varphi = - \left( \dfrac{2\pi}{\lambda} \right) \mathbf{r} \cdot \left( \mathbf{k_s} - \mathbf{k_i} \right)
 			\label{eqn:calculo_fase_saxs}
 		\end{equation}
 		
-		O sinal negativo na \autoref{eqn:calculo_fase_saxs} é devido à inversão da ordem de subtração dos vetores \(\mathbf{k_i}\) e \(\mathbf{k_s}\). Assim, podemos introduzir o vetor de espalhamento \(\mathbf{q}\), também conhecido como vetor de transferência de momento (\autoref{eqn:vetor_espalhamento}).
+		O sinal negativo na \autoref{eqn:calculo_fase_saxs} é devido à inversão da ordem de subtração dos vetores \(\mathbf{k_i}\) e \(\mathbf{k_s}\).\cite{Glatter2018livro} Assim, podemos introduzir o vetor de espalhamento \(\mathbf{q}\), também conhecido como vetor de transferência de momento,\cite{Glatter2018livro}
 		
 		\begin{equation}
 			\mathbf{q} = \left( \dfrac{2\pi}{\lambda} \right) \mathbf{r} \cdot \left( \mathbf{k_s} - \mathbf{k_i} \right)
 			\label{eqn:vetor_espalhamento}
 		\end{equation} 
 		
-		Logo, a defasagem pode ser facilmente relacionada com a posição dos centros espalhadores e o vetor de espalhamento:
+		Logo, a defasagem pode ser relacionada com a posição dos centros espalhadores e o vetor de espalhamento\cite{Glatter2018livro}
 		
 		\begin{equation}
 			\varphi = - \mathbf{q} \cdot \mathbf{r}
 			\label{eqn:defasagem_qr}
 		\end{equation}
 		
-		Uma consequência do produto escalar da \autoref{eqn:defasagem_qr} é que somente a componente de \(\mathbf{r}\) na direção de \(\mathbf{q}\) é relevante para a fase \(\varphi\). Isso implica que todos os pontos num plano perpendicular a \(\mathbf{q}\) possuirão a mesma fase. Isso dá origem à ideia de que o espalhamento ocorre como uma reflexão da radiação por um conjunto de planos, comumente utilizado em cristalografia.
+		Uma consequência do produto escalar da \autoref{eqn:defasagem_qr} é que somente a componente de \(\mathbf{r}\) na direção de \(\mathbf{q}\) é relevante para a fase \(\varphi\). Isso implica que todos os pontos num plano perpendicular a \(\mathbf{q}\) possuirão a mesma fase. Isso dá origem à ideia de que o espalhamento ocorre como uma reflexão da radiação por um conjunto de planos, comumente utilizado em cristalografia.\cite{Glatter2018livro}
 		
-		A amplitude do vetor de espalhamento é dado pela \autoref{eqn:amplitude_vetor_espalhamento}, onde \(\theta\) é o ângulo de espalhamento, entre os vetores \(\mathbf{k_i}\) e \(\mathbf{k_s}\).
+		A amplitude do vetor de espalhamento é dado pela \autoref{eqn:amplitude_vetor_espalhamento}, onde \(\theta\) é o ângulo de espalhamento, entre os vetores \(\mathbf{k_i}\) e \(\mathbf{k_s}\). A \autoref{fig:esquema_saxs} ilustra os vetores incidente e espalhado, assim como o cálculo do vetor.\cite{Glatter2018livro}
 		
 		\begin{equation}
 		q = \dfrac{4\pi}{\lambda} \sin\left(\dfrac{\theta}{2}\right)
 		\label{eqn:amplitude_vetor_espalhamento}
 		\end{equation} \index{SAXS!vetor de espalhamento \q}
 		
-		A \autoref{fig:esquema_saxs} ilustra os vetores incidente e espalhado, assim como o cálculo do vetor.
-		
+
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/saxs/Esquema_SAXS}
-			\caption{Diagrama mostrando o feixe incidente de raios-X sendo espalhado por um material, resultando num vetor espalhado. O vetor de espalhamento, \(\mathbf{q}\) é paralelo à subtração vetorial dos vetores \( \mathbf{k_i} \) e \( \mathbf{k_s} \), paralelos à direção dos feixes incidente e espalhado. Os feixes, após interagirem, atingem o detector, e a imagem resultante é composta pela contagem de fótons em cada pixel. O ponto escuro é resultante do bloqueio da radiação não espalhada pelo \emph{beam-stop}.}
+			\caption[Diagrama mostrando o feixe incidente de raios-X sendo espalhado por um material, resultando num vetor espalhado.]{Diagrama mostrando o feixe incidente de raios-X sendo espalhado por um material, resultando num vetor espalhado. O vetor de espalhamento, \(\mathbf{q}\) é paralelo à subtração vetorial dos vetores \( \mathbf{k_i} \) e \( \mathbf{k_s} \), paralelos à direção dos feixes incidente e espalhado. Os feixes, após interagirem, atingem o detector, e a imagem resultante é composta pela contagem de fótons em cada pixel. O ponto escuro é resultante do bloqueio da radiação não espalhada pelo \emph{beam-stop}. Imagem inspirada em \citeauthor{Narayanan2008a}}
 			\label{fig:esquema_saxs}
 		\end{figure}
 		
-		Para pequenos valores de \(\sfrac{\theta}{2}\), \(\sin(\sfrac{\theta}{2}) \approx \sfrac{\theta}{2}\), então a magnitude do vetor de espalhamento \(\mathbf{q}\) (que será chamado de \q{} de agora em diante) é proporcional ao ângulo de espalhamento (em radianos). A unidade do vetor de espalhamento é tipicamente \(nm^{-1}\), dependendo claro do comprimento de onda utilizado. Uma grande utilidade de se utilizar o vetor de onda é que o espalhamento se torna independente da fonte de radiação, pois o comprimento de onda já é levado em consideração. Além disso, o inverso de \q{} informa o tamanho dos objetos que geralmente são observados em SAXS. Faixas comuns são de 0,006 a 6 \(nm^{-1}\), o que resulta em estruturas da faixa de 1\(\mu m\) a 1 \(nm\).
+		Para pequenos valores de \(\sfrac{\theta}{2}\), \(\sin(\sfrac{\theta}{2}) \approx \sfrac{\theta}{2}\), então a magnitude do vetor de espalhamento \(\mathbf{q}\) (que será chamado de \q{} de agora em diante) é proporcional ao ângulo de espalhamento (em radianos).\cite{Glatter2018livro} A unidade do vetor de espalhamento é tipicamente \(nm^{-1}\), mas outra unidade comum é \AA\menosUm. dependendo claro do comprimento de onda utilizado. Uma grande utilidade de se utilizar o vetor de onda é que o espalhamento se torna independente da fonte de radiação, pois o comprimento de onda já é levado em consideração. Além disso, o inverso de \q{} informa o tamanho dos objetos que geralmente são observados em SAXS. Faixas comuns são de 0,006 a 6 \(nm^{-1}\), o que resulta em estruturas da faixa de 1\(\mu m\) a 1 \(nm\).\cite{Narayanan2008a}
 
-		Para se determinar o padrão obtido na \autoref{fig:esquema_saxs}, é necessário somar todas as ondas espalhadas em cada uma das posições. A função de onda genérica para uma das ondas espalhadas é dada pela \autoref{eqn:funcao_onda_espalhamento}.%, onde \(\mathbf{r}\) é o vetor de posição na partícula.
+		Para se determinar o padrão obtido na \autoref{fig:esquema_saxs}, é necessário obter a intensidade de espalhamento em cada ponto. Isso necessita, primeiramente, na soma de todas as ondas espalhadas em cada uma das posições. A função de onda genérica para uma das ondas espalhadas é dada por\cite{Pedersen_Aula1}
 		
 		\begin{equation}
 			\psi(\mathbf{q}) = \exp(-i \mathbf{q} \cdot \mathbf{r})
 			\label{eqn:funcao_onda_espalhamento}
 		\end{equation}
-		
-		A somatória das funções de onda, \autoref{eqn:SAXS_somatoria_contribs}, resulta na amplitude de espalhamento. O termo \(b_j\) é o comprimento de espalhamento de cada ponto. Para elétrons, seu comprimento de espalhamento é o raio do elétron, \(r_e = 0.2817 \times 10^{-12}\) cm.
+				
+		A somatória das funções de onda, \autoref{eqn:SAXS_somatoria_contribs}, resulta na amplitude de espalhamento.\cite{Pedersen_Aula1} O termo \(b_j\) é o comprimento de espalhamento de cada ponto. Para elétrons, seu comprimento de espalhamento é o raio do elétron, \(r_e = 0.2817 \times 10^{-12}\) cm.
 		
 		\begin{equation}
 			A(\mathbf{q}) = \sum_j b_j \exp(-i \mathbf{q} \cdot \mathbf{r})
 			\label{eqn:SAXS_somatoria_contribs}
 		\end{equation}
 		
-		Porém, a resolução de raios-X geralmente não permite a observação dos elétrons individuais, então a somatória dos comprimentos de espalhamento de todos os elétrons no átomo, dividido pelo seu volume, resulta na densidade de comprimento de espalhamento \(\rho\) (\autoref{eqn:SLD}). Esse termo também é conhecido como SLD, do inglês \emph{scattering length density}.
+		Porém, a resolução de raios-X geralmente não permite a observação dos elétrons individuais, então a somatória dos comprimentos de espalhamento de todos os elétrons no átomo, dividido pelo seu volume, resulta na densidade de comprimento de espalhamento \(\rho\) (\autoref{eqn:SLD}). Esse termo também é conhecido como SLD, do inglês \emph{scattering length density}.\cite{Pedersen_Aula1}
 		
 		\begin{equation}
 			\rho(\mathbf{r}) = \sum_j \dfrac{b_j}{v}
 			\label{eqn:SLD}
 		\end{equation} \index{SAXS!densidade de espalhamento de luz SLD}
 		
-		Se a densidade for uniforme, podemos encontrar a densidade a partir da fórmula estrutural do material:
+		Se a densidade for uniforme, podemos encontrar a densidade a partir da fórmula estrutural do material, \cite{Narayanan2008a}
 		
 		\begin{equation}
 			\rho = \dfrac{n_e d_M N_a}{M_w} r_e
@@ -832,52 +834,54 @@
 		
 		\noindent onde \(n_e\) é o número de elétrons do material, \(d_M\) é sua densidade (água é 1000 kg/m\textsuperscript{3}), \(N_a\) é o número de Avogadro, \(M_w\) é a massa molar do material e \(r_e\) é o raio do elétron.
 		
-		Assim, a \autoref{eqn:SAXS_somatoria_contribs} passa de uma somatória para uma integral, \autoref{eqn:SAXS_integral_amplitude}.
+		Assim, a \autoref{eqn:SAXS_somatoria_contribs} passa de uma somatória para uma integral, \autoref{eqn:SAXS_integral_amplitude}, \cite{Narayanan2008a}
 		
 		\begin{equation}
 			A(\mathbf{q}) = \int_V \rho(\mathbf{r}) \exp(-i \mathbf{q} \cdot \mathbf{r}) d\mathbf{r}
 			\label{eqn:SAXS_integral_amplitude}
 		\end{equation}
 		
-		A intensidade de espalhamento, detectada pelo equipamento, é obtida pela média pelo tempo de todas as posições e conformações possíveis das partículas, ao quadrado (multiplicando-se pelo complexo conjugado). É necessário utilizar constantes para normalizar essa intensidade, como o número \(n\) de partículas espalhadoras e o volume \(V\) das partículas. Além disso, como as partículas estão num meio, como um solvente, é necessário considerar a densidade eletrônica do solvente, e por isso utiliza-se \(\Delta \rho^2\), a diferença entre a densidade do solvente e do meio, também conhecido como contraste. Tudas essas considerações resultam na \autoref{eqn:SAXS_I_funcao_A}.
+		A intensidade de espalhamento, detectada pelo equipamento, é obtida pela média pelo tempo de todas as posições e conformações possíveis das partículas, ao quadrado (multiplicando-se pelo complexo conjugado).\cite{Pecora2008a} É necessário utilizar constantes para normalizar essa intensidade, como o número \(n\) de partículas espalhadoras e o volume \(V\) das partículas. Além disso, como as partículas estão num meio, como um solvente, é necessário considerar a densidade eletrônica do solvente, e por isso utiliza-se \(\Delta \rho^2\), a diferença entre a densidade do solvente e do meio, também conhecido como contraste. Todas essas considerações resultam em\cite{Pedersen_Aula1}
 		
 		\begin{equation}
 		I(q) = n\Delta \rho^2 V^2 |A(q)|^2
 		\label{eqn:SAXS_I_funcao_A}
 		\end{equation}
+
+		Mais informações sobre o cálculo de figuras de espalhamento podem ser encontrados em \citeauthor{Alves2017}.
 		
-		Sistemas com alto contraste, por exemplo, partículas de ouro em água, espalham bastante raios-X, resultando em sinais de boa qualidade. Porém sistemas de baixo contraste, como a maior parte de sistemas de materia mole, incluindo o sistema \CTAB{} + NaSal, utilizado neste trabalho, não resultam em uma boa resolução sinal/ruído. Tipicamente, o contraste das cabeças é positivo em relação à água, mas o contraste das cadeias é negativo, o que resulta num contraste total baixo. Logo, é interessante calcular o contraste, o que pode ser feito por programas como o SASfit.\footnote{\url{https://github.com/SASfit/SASfit}}. Algumas vezes é possível melhorar o contraste adicionando-se sacarose ou glicerina ao solvente ao meio, porém isso só é válido para experimentos de SAXS, não de espalhamento de luz.
+		Sistemas com alto contraste, por exemplo, partículas de ouro em água, espalham bastante raios-X, resultando em sinais de boa qualidade. Porém sistemas de baixo contraste, como a maior parte de sistemas de materia mole, incluindo o sistema \CTAB{} + NaSal, utilizado neste trabalho, não resultam em uma boa resolução sinal/ruído. Tipicamente, o contraste das cabeças é positivo em relação à água, mas o contraste das cadeias é negativo, o que resulta num contraste total baixo. Logo, é interessante calcular o contraste, o que pode ser feito por programas como o SASfit.\footnote{\url{https://github.com/SASfit/SASfit}}. Algumas vezes é possível melhorar o contraste adicionando-se sacarose ou glicerina ao solvente ao meio, porém isso só é válido para experimentos de SAXS, não de espalhamento de luz, onde a igualdade do índice de refração efetivamente faria os agregados serem invisíveis.
 		
 		\section{Modelagem e o problema inverso do espalhamento}
 		
-		O objetivo de análises de SAXS é obter informações estruturais das partículas presentes no meio. Esse é chamado o problema inverso do espalhamento, em contraste com o problema direto, onde estruturas são propostas e o padrão de espalhamento das mesmas é calculado. Para resolver o problema inverso, é necessário primeiramente obter os modelos necessários, um processo matematicamente bastante complexo, e depois ajustá-los às curvas obtidas, variando-se os parâmetros de ajuste pelo método dos mínimos quadrados. A etapa de ajuste também possui seu grau de dificuldade, necessitando frequentemente de técnicas complementares para a escolha de um modelo e para fornecer chutes iniciais para os parâmetros.
+		O objetivo de análises de SAXS é obter informações estruturais das partículas presentes no meio. Esse é chamado o problema inverso do espalhamento, em contraste com o problema direto, onde estruturas são propostas e o padrão de espalhamento das mesmas é calculado. Para resolver o problema inverso, é necessário primeiramente obter os modelos necessários, um processo matematicamente bastante complexo, e depois ajustá-los às curvas obtidas, variando-se os parâmetros de ajuste pelo método dos mínimos quadrados.\cite{Glatter2018livro} A etapa de ajuste também possui seu grau de dificuldade, necessitando frequentemente de técnicas complementares para a escolha de um modelo e para fornecer chutes iniciais para os parâmetros. 
 		
 		\subsection{Partículas esféricas homogêneas em solução} \index{SAXS!modelagem de esferas}
 		
-		Quando se considera o espalhamento de um único objeto não centro-simétrico, é necessário considerar a orientação do vetor de espalhamento \q{} para obter o padrão de espalhamento. Além disso, em solução, esses objetos estão possivelmente orientados aleatoriamente, sendo necessário realizar uma integração sobre todas as orientações possíveis. Porém, objetos centro-simétricos, como esferas de raio \(R\), não necessitam disso, e a amplitude de espalhamento pode ser calculada pela \autoref{eqn:SAXS_amplitude_esfera}. % Note que foi utilizada a relação de Euler.
+		Quando se considera o espalhamento de um único objeto não centro-simétrico, é necessário considerar a orientação do vetor de espalhamento \q{} para obter o padrão de espalhamento. Além disso, em solução, esses objetos estão possivelmente orientados aleatoriamente, sendo necessário realizar uma integração sobre todas as orientações possíveis. Porém, objetos centro-simétricos, como esferas de raio \(R\), não necessitam disso.  A amplitude de espalhamento de uma esfera pode ser calculada por \cite{Narayanan2008a, Pedersen_Aula1}
 		
 		\begin{equation}
-			A(q) = \dfrac{4\pi\Delta\rho}{q} \int_0^R r\sin(qr) dr
+			A(q) = \dfrac{4\pi\Delta\rho}{q} \int_0^R \dfrac{\sin(qr)}{r} rdr
 			\label{eqn:SAXS_amplitude_esfera}
 		\end{equation}
 				
-		Realizando uma integração parcial, obtemos:
+		Realizando uma integração parcial, obtemos\cite{Pedersen_Aula1}
 		
 		\begin{equation}
-			A(q) = \Delta_\rho \dfrac{4\pi R^3}{3} \left[ \dfrac{3 \left( \sin qR - qR \cos qR \right)}{\left(qR\right)^3} \right]
+			A(q) = \Delta\rho \dfrac{4\pi R^3}{3} \left[ \dfrac{3 \left( \sin (qR) - (qR) \cos (qR) \right)}{\left(qR\right)^3} \right]
 			\label{eqn:SAXS_amplitude_esfera_integrado}
 		\end{equation}
 		
 		Essa equação, normalizada, é utilizada na descrição do modelo de micelas gigantes (\autoref{eqn:AP_Fsphere}) que está presente no \autoref{sec:modelo_MG_matematica}.
 		
-		Como a intensidade de luz espalhada é o quadrado da amplitude:
+		Como a intensidade de luz espalhada é o quadrado da amplitude, \cite{Narayanan2008a}
 		
 		\begin{equation}
-			I(q) = (\Delta \rho)^2 V^2 P_0=(\Delta \rho)^2 V^2 \left[ \dfrac{3 \left( \sin qR - qR \cos qR \right)}{\left( qR \right) ^3} \right]
+			I(q) = |A(q)|^2 = (\Delta \rho)^2 V_\mathrm{esfera}^2 P_0=(\Delta \rho)^2 V^2 \left[ \dfrac{3 \left( \sin qR - qR \cos qR \right)}{\left( qR \right) ^3} \right]^2
 			\label{eqn:SAXS_intensidade_esfera}
 		\end{equation}
 		
-		O termo à direita da \autoref{eqn:SAXS_intensidade_esfera} é chamado de fator forma normalizado, \(P_0\). \index{SAXS!fator forma} Esse fator forma possui vários mínimos em valores de \(qR\) em 4,493, 7,725, etc (\autoref{fig:espalhamento_esfera}). A partir desses mínimos é possível obter o raio da partícula, apesar de que isso só é válido para partículas monodispersas, totalmente esféricas, homogêneas e em uma solução diluída.
+		O termo à direita da \autoref{eqn:SAXS_intensidade_esfera} é chamado de fator forma \(P\). \index{SAXS!fator forma} Esse fator forma possui vários mínimos em valores de \(qR\) em 4,493, 7,725, etc, como mostra a \autoref{fig:espalhamento_esfera}. Gerar essa figura é fácil, como mostra a listagem \ref{lst:plot_micela_esferica}. A partir desses mínimos é possível obter o raio da partícula, apesar de que isso só é válido para partículas monodispersas, totalmente esféricas, homogêneas e em uma solução diluída. \cite{Pedersen_Aula1, Narayanan2008a}
 		
 		\begin{figure}[h]
 			\centering
@@ -892,20 +896,20 @@
 			\label{lst:plot_micela_esferica}
 		\end{listing}
 		
-		Esse é o exemplo mais simples para a derivação da amplitude de espalhamento de um objeto. Quanto maior for a complexidade dos objetos modelados, e mais concentrada for a solução, mais difícil fica a derivação dos modelos, exigindo considerável experiência e conhecimento matemático. O Prof. Jan Skov Pedersen, da Dinamarca, adaptou modelos descritos na literatura para descrever sistemas alongados em solução, como polímeros e micelas gigantes. Uma descrição matemática superficial do modelo desenvolvido se encontra no \autoref{sec:modelo_MG_matematica}, e uma adaptação desse modelo na linguagem Python se encontra no \ref{sec:modelo_MG_python}.
+		Esse é o exemplo mais simples para a derivação da amplitude de espalhamento de um objeto. Quanto maior for a complexidade dos objetos modelados, e mais concentrada for a solução, mais difícil fica a derivação dos modelos, exigindo considerável experiência e conhecimento matemático. \citeauthor{Pedersen1997b} mostra uma lista de modelos para vários formatos de partículas. Durante a execução deste trabalho, o Prof. Jan Skov Pedersen, da Dinamarca, adaptou modelos descritos na literatura para descrever sistemas alongados em solução, como polímeros e micelas gigantes. Uma descrição matemática superficial do modelo desenvolvido se encontra no \autoref{sec:modelo_MG_matematica}, e uma adaptação desse modelo na linguagem Python se encontra no \ref{sec:modelo_MG_python}.
 		
 		\subsection{Fator estrutura, concentrações altas} \index{SAXS!fator estrutura}
 		
-		Quando a translação e orientação de uma partícula em solução começa a depender das outras, uma contribuição do espalhamento dessas correlações começa a se tornar visível. Esse fator adicional, chamado de fator estrutura, \(S(q)\), deve ser multiplicado ao \(P(q)\) para se obter o valor da intensidade correta (\autoref{eqn:SAXS_I_P_S}). Em soluções diluídas, a contribuição do fator estrutura se cancela devido à posição e orientação arbitrárias das partículas, então \(S(q) \approx 1\).
+		Quando a translação e orientação de uma partícula em solução começa a depender das outras, uma contribuição do espalhamento dessas correlações começa a se tornar visível. Esse fator adicional, chamado de fator estrutura, \(S(q)\), deve ser multiplicado ao \(P(q)\) para se obter o valor da intensidade correta (\autoref{eqn:SAXS_I_P_S}). Em soluções diluídas, a contribuição do fator estrutura se cancela devido à posição e orientação arbitrárias das partículas, então \(S(q) \approx 1\).\cite{Narayanan2008a}
 		
 		\begin{equation}
 			I(q) = n\Delta \rho^2 V^2 P(q) S(q)
 			\label{eqn:SAXS_I_P_S}
 		\end{equation}
 		
-		Como as distâncias entre partículas são tipicamente maiores do que as distâncias dentro das partículas, as contribuições do fator estrutura geralmente aparecem com maior intensidade em valores de \q{} baixos.
+		Como as distâncias entre partículas são tipicamente maiores do que as distâncias dentro das partículas, as contribuições do fator estrutura geralmente aparecem com maior intensidade em valores de \q{} baixos.\cite{Glatter2018livro}
 		
-		Existem vários modelos possíveis para o fator \(S(q)\), que dependem de uma função que descreve a probabilidade de se encontrar uma partícula a uma distância \(r\) de outra. Dentro dessa função, existe um potencial que pode descrever, por exemplo, se há atração ou repulsão eletrostática entre as partículas. O modelo das esferas rígidas sem carga, o mais simples, que possui o seguinte potencial (\autoref{eqn:potencial_esfera_rígida}):
+		Existem vários modelos possíveis para o fator \(S(q)\), que dependem de uma função que descreve a probabilidade de se encontrar uma partícula a uma distância \(r\) de outra. Dentro dessa função, existe um potencial que pode descrever, por exemplo, se há atração ou repulsão eletrostática entre as partículas. Por exemplo, o modelo das esferas rígidas sem carga, o mais simples, que possui o seguinte potencial \cite{Glatter2018livro}
 		
 		\begin{equation}
 			u(r) = 
@@ -918,12 +922,12 @@
 
 		\noindent onde \(R_a\) e \(R_b\) são os raios de duas partículas que estão interagindo.
 		
-		A presença de fatores estrutura adicionam alguns parâmetros fortemente não lineares ao ajuste e aumentam grandemente a complexidade dos mesmos, tornando a determinação do fator forma e estrutura simultaneamente uma tarefa bastante difícil. Além disso, quando há polidispersidade nos sistemas, não se torna possível a completa separação dos termos \(P(q)\) e \(S(q)\) (como é o caso das micelas gigantes do \autoref{sec:modelo_MG_matematica}) e é necessário utilizar um fator estrutura efetivo, \(S_m(q)\).
+		A presença de fatores estrutura adicionam alguns parâmetros fortemente não lineares ao ajuste e aumentam grandemente a complexidade dos mesmos, tornando a determinação do fator forma e estrutura simultaneamente uma tarefa bastante difícil. Além disso, quando há polidispersidade nos sistemas, não se torna possível a completa separação dos termos \(P(q)\) e \(S(q)\) (como é o caso das micelas gigantes do \autoref{sec:modelo_MG_matematica}) e é necessário utilizar um fator estrutura efetivo, \(S_m(q)\).\cite{Narayanan2008a}
 		
 		\subsection{Indexação de picos} \index{SAXS!indexação de picos}
 		\label{sec:teoria_SAXS}
 		
-		Outro exemplo de estruturação é o que ocorre quando existem fases lamelares em solução. Geralmente, os picos oriundos do fator estrutura se superpõem ao fator forma, tornando-se bastante evidentes. Esses picos são consequência da ordenação equidistante das bicamadas, e a posição dos picos está relacionada à distância média das lamelas. Outras mesofases também resultam em fatores estrutura, mas com a posição relativa dos picos em valores diferentes, o que permite a identificação da fase a partir de SAXS. A \autoref{fig:exemplo_saxs} mostra o padrão de espalhamento de uma amostra lamelar real. Essa figura é resultado da integração azimutal da imagem da \autoref{fig:esquema_saxs}.
+		Outro exemplo de estruturação é o que ocorre quando existem fases lamelares em solução. Geralmente, os picos oriundos do fator estrutura se superpõem ao fator forma, tornando-se bastante evidentes. Esses picos são consequência da ordenação equidistante das bicamadas, e a posição dos picos está relacionada à distância média das lamelas.\cite{Glatter2018livro} Outras mesofases também resultam em fatores estrutura, mas com a posição relativa dos picos em valores diferentes, o que permite a identificação da fase a partir de SAXS.\cite{Narayanan2008a} A \autoref{fig:exemplo_saxs} mostra o padrão de espalhamento de uma amostra lamelar, obtido neste trabalho. Essa figura é resultado da integração azimutal da imagem da \autoref{fig:esquema_saxs}.
 		
 		\begin{figure}[h]
 			\centering
@@ -932,14 +936,13 @@
 			\label{fig:exemplo_saxs}
 		\end{figure}
 		
-		Com o valor de \q{} do primeiro pico, é possível determinar o parâmetro de rede (\emph{lattice parameter}) da mesofase. Para estruturas lamelares, que são de maior relevância para este trabalho, temos que o espaçamento dos picos é de \(1:2:3:4...\). O parâmetro de rede, \(d\), \index{SAXS!parâmetro de rede} é dado pela \autoref{eqn:SAXS_param_rede_lamela}, e seu significado está ilustrado na \autoref{fig:saxs_distancia_interlamelar}. É interessante notar a semelhança desse método de identificação com a determinação do raio de esferas pelos mínimos da \autoref{fig:espalhamento_esfera}. Os picos observados também são chamados de picos de Bragg, mostrando a íntima relação com a área de difração de raios-X, e a modelagem desse tipo de curva de espalhamento utiliza os índices de Miller dos objetos.
+		Com o valor de \q{} do primeiro pico, é possível determinar o parâmetro de rede (\emph{lattice parameter}) da mesofase.\cite{Percebom2018} Para estruturas lamelares, que são de maior relevância para este trabalho, temos que o espaçamento dos picos é de \(1:2:3:4\dots\)\cite{Narayanan2008a} O parâmetro de rede, \(d\), \index{SAXS!parâmetro de rede} é dado pela \autoref{eqn:SAXS_param_rede_lamela}, e seu significado está ilustrado na \autoref{fig:saxs_distancia_interlamelar}. É interessante notar a semelhança desse método de identificação com a determinação do raio de esferas pelos mínimos da \autoref{fig:espalhamento_esfera}. Os picos observados também são chamados de picos de Bragg, mostrando a íntima relação com a área de difração de raios-X, e a modelagem desse tipo de curva de espalhamento utiliza os índices de Miller dos objetos.\cite{Narayanan2008a}
 	
 		\begin{equation}
 			q = \dfrac{2\pi}{d}
 			\label{eqn:SAXS_param_rede_lamela}
 		\end{equation} 
 		
-	
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.35\textwidth]{imagens/saxs/distancia_interlamelar}
@@ -947,22 +950,19 @@
 			\label{fig:saxs_distancia_interlamelar}
 		\end{figure}
 
-		% todo: colocar a referência do artigo do guilherme
-		A partir da distância interlamelar, é possível calcular a espessura lamelar (\(d_{\text{HC}}\)) caso a fração volumétrica de surfactante (\(\phi_s\)) e solvente (\(\phi_w\)) também sejam conhecidos. Nesse caso, seria necessário somente relacionar as proporções das regiões com o total, a distância interlamelar. Esse é o princípio do método descrito em X. A fração volumétrica de surfactante pode ser obtida pela \autoref{eqn:SAXS_frac_volum}, cujos parâmetros estão explicados na \autoref{tab:ur_fracvol_descr}. \index{SAXS!fração volumétrica de surfactante}
+		A partir da distância interlamelar, é possível calcular a espessura lamelar (\(d_{\text{HC}}\)) caso a fração volumétrica de surfactante (\(\phi_s\)) e solvente (\(\phi_w\)) também sejam conhecidos. Nesse caso, seria necessário somente relacionar as proporções das regiões com o total, a distância interlamelar. Esse é o princípio do método descrito em \citeauthor{Ferreira2016}. A fração volumétrica de surfactante pode ser obtida pela \autoref{eqn:SAXS_frac_volum}, cujos parâmetros estão explicados na \autoref{tab:ur_fracvol_descr}. \index{SAXS!fração volumétrica de surfactante}
 		
 		\begin{equation}
-			\phi_s = \dfrac{V_{\textit{HC}}\left( \dfrac{w_{s}}{M_{s}} \right)}{\left( V_{\textit{HC}} + V_{P} \right)\dfrac{w_{s}}{M_{s}} + V_{w}\dfrac{w_{w}}{M_{w}}}
+			\phi_s = \dfrac{V_{\textrm{HC}}\left( \dfrac{w_{s}}{M_{s}} \right)}{\left( V_{\textrm{HC}} + V_{P} \right)\dfrac{w_{s}}{M_{s}} + V_{w}\dfrac{w_{w}}{M_{w}}}
 			\label{eqn:SAXS_frac_volum}
 		\end{equation}
 		
-	% + V_{\textit{ur}}\dfrac{w_{\textit{ur}}}{M_{\textit{ur}}
-	
 		\begin{table}[h]
 			\IBGEtab{\caption{Descrições das variáveis da \autoref{eqn:SAXS_frac_volum} \label{tab:ur_fracvol_descr}}}
 			{\begin{tabular}{r l}
 				\toprule
 				           Variável & Descrição                                               \\ \midrule
-				              \(s\) & Fração volumétrica de surfactante                       \\
+				         \(\phi_s\) & Fração volumétrica de surfactante                       \\
 				\(V_{\mathrm{HC}}\) & Volume molar parcial da cadeia alquílica do surfactante \\
 				          \(V_{P}\) & Volume molar parcial da cabeça do surfactante           \\
 				          \(w_{s}\) & Fração mássica de surfactante                           \\
@@ -975,14 +975,13 @@
 			{}%
 		\end{table}
 
-
-		Sabendo então a fração volumétrica de surfactante, podemos obter a espessura da lamela a partir da distância total pela simples relação da \autoref{eqn:SAXS_espessura_lamelar}.
+		Sabendo então a fração volumétrica de surfactante, podemos obter a espessura da lamela a partir da distância total pela simples relação \cite{Ferreira2016}
 		
 		\begin{equation} \label{eqn:SAXS_espessura_lamelar} 
 			d_{\text{HC}} = \phi_s d
 		\end{equation} \index{SAXS!espessura lamelar}
 		
-		Em suma, o espalhamento de raios-X em baixos ângulos é uma técnica que permite a obtenção de parâmetros estruturais microscópicos médios do sistema, desde que se conheça qual são as estrutura mais prováveis presentes na amostra. Isso é feito através do ajuste de modelos desenvolvidos pela descrição matemática das estruturas, pelo método dos mínimos quadrados, ou também pela indexação de picos.
+		Em suma, o espalhamento de raios-X em baixos ângulos é uma técnica que permite a obtenção de parâmetros estruturais médios microscópicos do sistema, desde que se conheça qual são as estrutura mais prováveis presentes na amostra. Isso é feito através do ajuste de modelos desenvolvidos pela descrição matemática das estruturas, pelo método dos mínimos quadrados, ou também pela indexação de picos.
 		
 	\chapter{Fluorescência} \index{Fluorescência}
 		\section{Diagrama de Jablonski} \index{Fluorescência!Diagrama de Jablonski}
@@ -1530,8 +1529,17 @@
 		\end{equation} % ref Berret 1993
 		\index{micelas gigantes!módulo no platô \(G\)}
 		
+		Alguns autores reportam ser possível obter o tempo de relaxação pelo inverso da frequência onde \(G''_\textrm{min}\),
+		
+		\begin{equation}
+			\dfrac{1}{\tau_{\mathrm{quebra}}} \approx \omega_{\textrm{min}}
+			\label{eqn:tauquebra_g2min}
+		\end{equation}
+		
+		\noindent porém, essa estimativa não é estritamente correta e não possui base física.\cite{CalabreseTese}
 	
 		O reograma para soluções de micelas gigantes que seguem o modelo de Maxwell é bastante similar ao apresentado na página \pageref{fig:modelo_maxwell}. Neste trabalho, várias soluções seguiram esse modelo, como será visto na \autoref{sec:reologia_oscilatoria_experimental_agua}.
+		
 		Esse comportamento pode ser interpretado da seguinte maneira. Em baixas frequências de perturbação (longos tempos), as micelas possuem tempo suficiente para deslizar umas pelas outras, então a maior parte da energia fornecida é perdida, logo o módulo viscoso, ou de perda, possui valores altos. Em frequências altas, a rede micelar e os entrelaçamentos conseguem armazenar a energia, não possuindo tempo suficiente para deslizar, então o módulo elástico, ou de armazenamento, é alto. Na região intermediária, ambos os mecanismos estão presentes, parte da energia é perdida e parte é armazenada, sendo que no ponto de cruzamento, exatamente metade da energia é preservada e metade é perdida.
 		
 		% mencionar que o modelo de Oldroyd B é a extensão mais natural a sistemas quase Maxwellianos.
