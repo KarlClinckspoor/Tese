@@ -23,72 +23,9 @@
 	
 		\section{Criação de um software para tratamento de curvas de fluxo}
 		\label{sec:apn_tratamento_CF}
-		Para o tratamento de dados de curva de fluxo, foi criado um programa que permite o usuário aplicar três modelos mais complexos e um modelo simplificado para a obtenção de valores de viscosidade no repouso. Todas as amostras de muco, sem exceção, demonstraram ser pseudoplásticas, então não foram colocados mais modelos. A seguir, será mostrado os modelos utilizados e seções da lógica do programa, pois o código fonte inteiro é longo demais para ser incluído aqui (aproximadamente 1000 linhas).
+		Para o tratamento de dados de curva de fluxo, foi criado um programa que permite o usuário aplicar três modelos mais complexos, descritos na \autoref{sec:modelagem_curva_fluxo} e um modelo simplificado, o linear, para a obtenção de valores de viscosidade no repouso. Todas as amostras de muco, sem exceção, demonstraram ser pseudoplásticas, então não foram colocados mais modelos. A seguir, será mostrada somente a lógica do programa, pois o código fonte inteiro é longo demais para ser incluído aqui (aproximadamente 1000 linhas).
 		
-			\subsection{Modelos de curvas de fluxo pseudoplásticas}
-		\label{sec:modelagem_curva_fluxo}
-		Foram implementados os modelos de \emph{Carreau-Yasuda} (\ref{eqn:AP_CarreauYasuda}), \emph{Carreau} (\autoref{eqn:AP_Carreau}), \emph{Cross} (\autoref{eqn:AP_Cross}) e \emph{linear}, de maior para menor complexidade, respectivamente. Os modelos correlacionam a taxa de cisalhamento (\(\dot{\gamma}\), variável independente) à viscosidade (\(\eta\), variável dependente) utilizando alguns parâmetros. % Carreau e Cross: Boger1989
-		% Carreau Yasuda: Kwiatkowski2016a
-		
-		\begin{equation}
-		\eta = \eta_{\infty} + \frac{\eta_0 - \eta_{\infty}}{\left[  1 + \left(  \dfrac{\dot{\gamma}}{\dot{\gamma}_b}  \right)^{a}  \right]^{\frac{ \left(  n - 1  \right) }{a}}}
-		\label{eqn:AP_CarreauYasuda}
-		\end{equation}
-		
-		\begin{equation}
-		\eta = \eta_{\infty} + \frac{\eta_0 - \eta_{\infty}}{\left[  1 + \left(  \dfrac{\dot{\gamma}}{\dot{\gamma}_b}  \right)^{2}  \right]^{\frac{n}{2}}}
-		\label{eqn:AP_Carreau}
-		\end{equation}
-		
-		\begin{equation}
-		\eta = \eta_{\infty} + \frac{\eta_0 - \eta_{\infty}}{1 + \left(  \dfrac{\dot{\gamma}}{\dot{\gamma}_b}  \right)^{n}}
-		\label{eqn:AP_Cross}
-		\end{equation}
-		
-		O modelo linear considera somente valores de viscosidade em \(\dot{\gamma}\) próximos de zero, ou seja, \(\eta = \eta_0 + 0 \times \dot{\gamma}\).
-		
-		Os parâmetros possuem os seguintes significados\cite{WLM_Advances}:
-		
-		\begin{table}[h]
-			\IBGEtab{%
-				\caption{Parâmetros dos modelos de fluidos pseudoplásticos}
-				\label{tab:params_pseudoplasticos}
-			}%
-			{%
-				\begin{tabular}{c c p{9cm}}
-					\toprule
-					    Parâmetro      & Unidade   & Significado                                                       \\ \midrule
-					    \(\eta_0\)     & Pa.s      & Viscosidade no repouso*                                           \\
-					\(\eta_{\infty}\)  & Pa.s      & Viscosidade no infinito                                           \\
-					      \(n\)        & --        & Inclinação da região de decaimento de viscosidade, índice da pseudoplasticidade                 \\
-					\(\dot{\gamma}_b\) & s\menosUm & \(\dot{\gamma}\) de início da região de decaimento de viscosidade \\ \midrule
-					      \(a\)        & --        & curvatura               \\ \bottomrule
-				\end{tabular}%
-			}{}
-		\end{table}
-		% todo: pensar em colocar os gráficos mostrando como esses parâmetros afetam as curvas
-		% todo: pensar um pouco mais sobre o Carreau-Yasuda e como que o a deve se comportar
-		
-		A \autoref{fig:reologia_modelos} exemplifica os modelos de Carreau e Cross e como os parâmetros afetam o formato das curvas. Note que a escala dos eixos é logarítmica. Vemos que, essencialmente, ambas as curvas possuem formatos muito semelhantes, com os parâmetros escolhidos. A escolha de um modelo depende da qualidade dos dados e do desejo do experimentalista. Observando-se como os modelos variam com os parâmetros, nota-se que a queda de viscosidade do modelo de Carreau é menos abrupta que no modelo de Cross e se assemelha mais aos dados estudados, então esse modelo foi mais utilizado.
-		
-		\begin{figure}[h]
-			\begin{subfigure}[t]{0.45\textwidth}
-				\centering
-				\includegraphics[width=\textwidth]{./imagens/reologia/Carreau}
-				\caption{Modelo de Carreau}
-				\label{fig:reologia_modelo_carreau}
-			\end{subfigure} \qquad %
-			\begin{subfigure}[t]{0.45\textwidth}
-				\centering
-				\includegraphics[width=\textwidth]{./imagens/reologia/Cross}
-				\caption{Modelo de Cross}
-				\label{fig:reologia_modelo_cross}
-			\end{subfigure}
-			\caption{Exemplos de curvas de fluxo descritas pelos modelos de Carreau e Cross, com os parâmetros utilizados.}
-			\label{fig:reologia_modelos}
-		\end{figure}
-		
-		De maior interesse para os estudos neste trabalho é a viscosidade no repouso, \(\eta_0\), e portanto esse é o foco do programa. Porém, o ajuste indiscriminado de um modelo a um dado experimental é problemático caso a qualidade do dado não seja boa, seja pela própria característica da amostra, ou pela sensibilidade do equipamento. Por exemplo, é frequente que apareçam artefatos de medida em baixos valores de \(\dot{\gamma}\), resultando ou num decréscimo ou acréscimo gradual de \(\eta\). Além disso, é possível que não seja observada a região descrita por \(\eta_{\infty}\), em altos valores de \(\dot{\gamma}\), o que atribui grande incerteza na determinação desse parâmetro. Dessa forma, é necessário que uma região das curvas seja escolhida para que o ajuste seja bem sucedido e informativo, o que representa a maior dificuldade nesse tipo de análise, devido à certa subjetividade no critério de escolha da região de ajuste.
+		De maior interesse para os estudos neste trabalho é a viscosidade no repouso, \(\eta_0\), e portanto esse é o foco do programa. Porém, o ajuste indiscriminado de um modelo a um dado experimental é problemático caso a qualidade do dado não seja boa, seja pela própria característica da amostra, ou pela sensibilidade do equipamento. Por exemplo, é frequente que apareçam artefatos de medida em baixos valores de \(\dot{\gamma}\), resultando ou num decréscimo ou acréscimo gradual de \(\eta\). Além disso, é possível que não seja observada a região descrita por \(\eta_{\infty}\), em altos valores de \(\dot{\gamma}\), o que atribui grande incerteza na determinação desse parâmetro. Dessa forma, é necessário que uma região das curvas seja escolhida para que o ajuste seja bem sucedido e informativo, o que representa a maior dificuldade nesse tipo de análise, devido à certa subjetividade no critério de escolha da região de ajuste. %Observando-se como os modelos variam com os parâmetros, nota-se que a queda de viscosidade do modelo de Carreau é menos abrupta que no modelo de Cross e se assemelha mais aos dados estudados, então esse modelo foi mais utilizado.
 		
 		Por essa razão, e outras, como velocidade de análise, foi escrito o método de ajuste. O método consiste em realizar ajustes sucessivos, entre um ponto inicial \(P_i\) até um ponto final \(P_f\), e depois comparar os resultados dos ajustes para escolher um deles. Podem ser comparados, por exemplo, os parâmetros \(R^2\), \(\chi^2\) ou \(\chi_{red}^2\). Escolhido o melhor ajuste, observando-se, por exemplo, a maior proximidade de \(R^2\) a 1 ou de \(\chi^2\) a 0, tomando cuidado para não escolher uma faixa muito estreita de pontos, os resultados são graficados, gravados num arquivo de texto e passa-se para o próximo dado experimental.
 		
