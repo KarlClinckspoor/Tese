@@ -1,26 +1,30 @@
-% todo: colocar algumas imagens do desenvolvimento da ureia em função do tempo, obtidas a partir do filme.
 \chapter{Efeito da ureia}
 \label{sec:cap_efeito_ureia}
-% todo: adaptar as figuras e tabelas pelas figuras feitas trocando os dados de CTAB 300 mM pelos novos, alterando as tabelas e colocando o gráfico de CTAB 100 e CTAB 300.
-% todo: colocar SAXS antes do DSC
+
 \section{Motivação}
 A ureia demonstrou um comportamento que divergiu bastante dos outros aditivos. Por esse motivo, ela será estudada um pouco mais profundamente. Foi estudado principalmente o efeito da ureia em soluções de \CTAB{}, \TTAB{} e \DTAB, com concentrações diferentes de ureia e surfactante. O efeito do salicilato não foi muito estudado de modo a simplificar o sistema.
 
-% TODO: Verificar se o nome "esbranquiçada" realmente é bom o suficiente.
+Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase esbranquiçada, viscosa, a temperatura ambiente. A amostra se torna totalmente transparente e pouco viscosa quando aquecida. A \autoref{fig:resfriamento_ureia} mostra o resfriamento de uma amostra de \CTAB{} 300 \mM{} com 37\% de ureia, partindo de 60°C e atingindo a temperatura ambiente de 25°C. Essa temperatura de transição foi estudada utilizando-se calorimetria diferencial de varredura (DSC). A identidade da mesofase, por sua vez, foi estudada a partir de espalhamento de raios-X em baixos ângulos (SAXS). A estruturação das soluções em temperaturas acima da temperatura de transição foi estudada por espalhamento dinâmico de luz (DLS). Também foram estudadas a reologia da fase esbranquiçada e o calor de interação entre surfactante e ureia por calorimetria de titulação isotérmica.
 
-Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase esbranquiçada, viscosa, a temperatura ambiente. A amostra se torna totalmente transparente e pouco viscosa quando aquecida. Essa temperatura de transição foi estudada utilizando-se calorimetria diferencial de varredura (DSC). A identidade da mesofase, por sua vez, foi estudada a partir de espalhamento de raios-X em baixos ângulos (SAXS). A estruturação das soluções em temperaturas acima da temperatura de transição foi estudada por espalhamento dinâmico de luz (DLS). Também foram estudadas a reologia da fase esbranquiçada e o calor de interação entre surfactante e ureia por calorimetria de titulação isotérmica.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{imagens/ureia/tempos}
+	\caption{Resfriamento de uma amostra de \CTAB{} 300 \mM{} e 37\% m/m de ureia. A contagem do tempo se iniciou no instante que a amostra foi removida do banho a 60°C e terminou quando a amostra se mostrou totalmente sólida, e em temperatura ambiente.}
+	\label{fig:resfriamento_ureia}
+\end{figure}
+
 
 \section{Calorimetria diferencial de varredura (DSC)}
 
-	Foram preparadas soluções de ureia, em várias concentrações, com três surfactantes (\CTAB, \TTAB{} e \DTAB), em três concentrações. Os termogramas resultantes foram organizados em figuras de modo a facilitar comparações. A \autoref{tab:refs_DSC} lista as comparações realizadas e em quais figuras estão.
+	Foram preparadas soluções de ureia, em várias concentrações, com três surfactantes (\CTAB, \TTAB{} e \DTAB), em nas concentrações de 100, 200 e 300 \mM{} (equivalentes a 3, 6, e 9\% de surfactante, aproximadamente). Os termogramas resultantes foram organizados em figuras de modo a facilitar comparações. A \autoref{tab:refs_DSC} lista as comparações realizadas e em quais figuras estão.
     
     \begin{table}[h]
         \IBGEtab{%
-            \caption{Comparações de termogramas de amostras de surfactante (concentração em \mM)e ureia (\% m/m), e suas respectivas figuras}
+            \caption{Comparações de termogramas de amostras de surfactante (concentração em \mM) e ureia (\% m/m), e suas respectivas figuras}
             \label{tab:refs_DSC}
             }%
             {%
-            \begin{tabular}{l c c}
+            \begin{tabular}{l p{1.5cm} p{1.5cm}}
                 \toprule
     			%\centering
 				Surf. e Conc. em \mM             & \% Ureia		 & Figura 			\\
@@ -29,7 +33,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 				\CTAB{} 300	                     & 38---45		 & \ref{fig:DSC_CTAB300_UR38-45}\\
 				\CTAB{} 100, 200, 300	             & 45, 40	     & \ref{fig:DSC_CTAB_UR40-45}	\\
 				\TTAB{} 100, 200, 300	             & 45, 40	     & \ref{fig:DSC_TTAB_UR_40-45}	\\
-				\DTAB 100, 200, 300	             & 45, 40	     & \ref{fig:DSC_DTAB_UR_40-45}	\\
+				\DTAB{} 100, 200, 300	             & 45, 40	     & \ref{fig:DSC_DTAB_UR_40-45}	\\
 				% CTAB, TTAB, DTAB 100	         & 45	         & \ref{fig:DSC_Surf_100mm_45p}	\\
 				% CTAB, TTAB, DTAB 200	         & 45	         & \ref{fig:DSC_Surf_200mm_45p}	\\
 				% CTAB, TTAB, DTAB 300	         & 45	         & \ref{fig:DSC_Surf_300mm_45p}	\\
@@ -54,13 +58,13 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 %	\end{figure}
 
 	\begin{figure}[h]
-		\begin{subfigure}[t]{0.45\textwidth}
+		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{./imagens/dsc/CTAB_porc_ur}
 			\caption{\CTAB{} 100 \mM{}}
 			\label{fig:DSC_CTAB100_UR38-45}	
-		\end{subfigure}\qquad%
-		\begin{subfigure}[t]{0.45\textwidth}
+		\end{subfigure}%
+		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{./imagens/dsc/CTAB_300_porc_ur}
 			\caption{\CTAB{} 300 \mM}
@@ -71,13 +75,13 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	\end{figure}
 	
 	\begin{figure}[h]
-		\begin{subfigure}[t]{0.45\textwidth}
+		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{./imagens/dsc/CTAB_45p}
 			\caption{45\% de ureia}
 			\label{fig:DSC_CTAB_UR45}
-		\end{subfigure} \qquad %
-		\begin{subfigure}[t]{0.45\textwidth}
+		\end{subfigure}  %
+		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{./imagens/dsc/CTAB_40p}
 			\caption{40\% de ureia}
@@ -88,13 +92,12 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	\end{figure}
 
 	\begin{figure}[h]
-		\centering
-		\begin{subfigure}[t]{0.45\textwidth}
+		\begin{subfigure}[t]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{./imagens/dsc/TTAB_45p}
 			\caption{45\% de ureia}
 			\label{fig:DSC_TTAB_UR45}
-		\end{subfigure} \qquad %
-		\begin{subfigure}[t]{0.45\textwidth}
+		\end{subfigure}%
+		\begin{subfigure}[t]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{./imagens/dsc/TTAB_40p}
 			\caption{40\% de ureia}
 			\label{fig:DSC_TTAB_UR40}
@@ -104,13 +107,12 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	\end{figure}
 	
 	\begin{figure}[h]
-		\centering
-		\begin{subfigure}[t]{0.45\textwidth}
+		\begin{subfigure}[t]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{./imagens/dsc/DTAB_45p}
 			\caption{45\% de ureia}
 			\label{fig:DSC_DTAB_UR45}
-		\end{subfigure} \qquad %
-		\begin{subfigure}[t]{0.45\textwidth}
+		\end{subfigure}%
+		\begin{subfigure}[t]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{./imagens/dsc/DTAB_40p}
 			\caption{40\% de ureia}
 			\label{fig:DSC_DTAB_UR40}
@@ -148,7 +150,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\includegraphics[width=\textwidth]{./imagens/dsc/NaSal60}
 		\caption{NaSal 60\mM}
 		\label{fig:DSC_NaSal60}
-	\end{subfigure} \qquad %
+	\end{subfigure}  %
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{./imagens/dsc/NaSal100}
@@ -199,7 +201,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	
 	Observa-se também que com o aumento na concentração de ureia, \(L\) é pouco afetada, porém \(T\) aumenta gradativamente, já a área \(A\) varia dependendo da natureza do surfactante, com \CTAB{} e \TTAB{} sendo próximos entre si, e diferentes de \DTAB.
 	
-	A adição de NaSal causa uma diminuição na temperatura de transição, especialmente visível em 250\mM{} de NaSal. Em vários casos não foi possível medir valores para as áreas de transição de resfriamento.
+	A adição de NaSal causa uma diminuição na temperatura de transição, especialmente visível em 250 \mM{} de NaSal. Em vários casos não foi possível medir valores para as áreas de transição de resfriamento.
 	
 	As tabelas \ref{tab:DSC_temp_areas} e \ref{tab:DSC_temp_areas_NaSal} mostram as ição no aquecimento e resfriamento, obtidas pelo valor do máximo do pico, as áreas de transição e as larguras a meia altura dos picos de todos os experimentos realizados. A \autoref{fig:DSC_propriedades_Ur_38_45} relaciona as propriedades com a concentração de ureia. % e a figura \ref{fig:DSC_propriedades_NaSal} mostra o efeito de salicilato nas propriedades dos termogramas. % As figuras \ref{fig:DSC_propriedades_surf_40_45} e \ref{fig:DSC_propriedades_surf_40_45_2} relacionam as propriedades dos termogramas em função da concentração de surfactante, a
 	
@@ -386,16 +388,12 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	\end{figure}
 	
 	Para analisar a fase presente, é necessário indexar os picos, como informado na \autoref{sec:teoria_SAXS}. Isso é, determinar os valores de \q{} de seus máximos e observar a relação entre eles. Lamelas possuem espaçamento \(1:2:3\), e como em todas as curvas mostradas aqui, o espaçamento segue a regra \(1:2:3\), podemos concluir que todas as amostras formam lamelas. Com a \autoref{eqn:SAXS_param_rede_lamela} é possível determinar a distância de rede das lamelas, que é a distância entre o início de uma lamela, passando pela parte hidrofóbica e pelo solvente até atingir a superfície de outra lamela.
-	
-	% todo: colocar uma figura aqui mostrando o que é a distância de repetição
-	% todo: colocar uma foto das lamelas
 
-	As distâncias de repetição estão ilustradas junto com os valores dos picos nas figuras. É possível observar que as distâncias se tornam menores a medida que a concentração de surfactante aumenta, possivelmente porque mais surfactante resulta também em menos solvente. Além disso, é possível que a carga das micelas se torne menor devido à presença de mais contraíons em solução. Observa-se também que os picos se tornam melhor definidos e aparentemente menos largos com mais surfactante. É interessante notar que \DTAB{} possui picos muito bem definidos em 300 \mM, e que sua distância de repetição é muito menor que os outros casos. A espessura dos picos está inversamente relacionada com o tamanho dos ``cristalitos'', de acordo com a equação de Scherrer. Logo, o aumento de concentração de surfactante também aumenta 
-
-	% todo: encontrar a equação de Scherrer	
-	% todo: pesquisar um termo melhor que cristalito.
+	As distâncias de repetição estão ilustradas junto com os valores dos picos nas figuras. É possível observar que as distâncias se tornam menores a medida que a concentração de surfactante aumenta, possivelmente porque mais surfactante resulta também em menos solvente. Além disso, é possível que a carga das micelas se torne menor devido à presença de mais contraíons em solução. Observa-se também que os picos se tornam melhor definidos e aparentemente menos largos com mais surfactante. É interessante notar que \DTAB{} possui picos muito bem definidos em 300 \mM, e que sua distância de repetição é muito menor que os outros casos. A espessura dos picos está inversamente relacionada com o tamanho dos ``cristalitos'', de acordo com a equação de Scherrer.\cite{Kockrick2008} Logo, o aumento de concentração de surfactante também aumenta 
 	
-	Também foi analisado o efeito da concentração de ureia em amostras de 300 \mM{} de \CTAB{} (\autoref{fig:SAXS_ctab300ur37-45}).
+	Também foi analisado o efeito da concentração de ureia em amostras de 300 \mM{} de \CTAB{} (\autoref{fig:SAXS_ctab300ur37-45}). Interessantemente, a adição de ureia aparenta diminuir o tamanho dos cristalitos, tanto que o trio de picos na faixa de \q{} acima de 1 nm\textsuperscript{-1} se junta, formando uma banda só em concentrações de ureia acima de 39\%. Observamos também que a distância de repetição é um pouco afetada pela adição de ureia, aumentando de 14,5 para 18,3 nm.
+	
+	Além disso, foram analisadas amostras a 50°C para obter informações sobre a fase transparente (\autoref{fig:SAXS_surf50c}). Observa-se que os padrões de espalhamento se alteraram drasticamente, e que o padrão para \CTAB{} e \TTAB{} são bastante diferentes. Não foi possível medir \DTAB{} pois havia muito pouco contraste.
 	
 	\begin{figure}[h]
 		\centering
@@ -404,10 +402,6 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\label{fig:SAXS_ctab300ur37-45}
 	\end{figure}
 	
-	Interessantemente, a adição de ureia aparenta diminuir o tamanho dos cristalitos, tanto que o trio de picos na faixa de \q{} acima de 1 nm\textsuperscript{-1} se junta, formando uma banda só em concentrações de ureia acima de 39\%. Observamos também que a distância de repetição é um pouco afetada pela adição de ureia, aumentando de 14,5 para 18,3 nm.
-	
-	Além disso, foram analisadas amostras a 50°C para obter informações sobre a fase transparente (\autoref{fig:SAXS_surf50c}).
-	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.7\textwidth]{imagens/saxs/Surf_50C}
@@ -415,20 +409,16 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\label{fig:SAXS_surf50c}
 	\end{figure}
 
-	Observa-se que os padrões de espalhamento se alteraram drasticamente, e que o padrão para \CTAB{} e \TTAB{} são bastante diferentes. Não foi possível medir \DTAB{} pois havia muito pouco contraste.
-	% todo: verificar porque não foi possível medir o DTAB de verdade.
-	
-	Essas soluções são pouco viscosas, transparentes e isotrópicas. Essas características sugerem que há alguma estrutura como micelas esféricas, micelas cilíndricas curtas ou vesículas nessas soluções. Seria interessante comparar os perfis de espalhamento da estruturas similares, e a maneira mais fácil de realizar isso é medir soluções com a mesma concentração de surfactante, mas sem ureia. A \autoref{fig:SAXS_micelas_esfericas} mostra os padrões de espalhamento de micelas em água para os três surfactantes, a 100, 200 e 300 \mM.
+	Em temperaturas elevadas, as soluções são pouco viscosas, transparentes e isotrópicas. Essas características sugerem que há alguma estrutura como micelas esféricas, micelas cilíndricas curtas ou vesículas nessas soluções. Seria interessante comparar os perfis de espalhamento da estruturas similares, e a maneira mais fácil de realizar isso é medir soluções com a mesma concentração de surfactante, mas sem ureia. A \autoref{fig:SAXS_micelas_esfericas} mostra os padrões de espalhamento de micelas em água para os três surfactantes, a 100, 200 e 300 \mM.
 	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.7\textwidth]{imagens/saxs/micelas_esfericas}
 		\caption{Curvas de SAXS de \CTAB, \TTAB{} e \DTAB{} 100, 200 e 300 \mM{} em água, mostrando o perfil característico de micelas globulares carregadas.}
 		\label{fig:SAXS_micelas_esfericas}
-	\end{figure}  % todo: extrair os ``tamanhos'' dessas micelas, possivelmente por ajuste com o SUPERSAXS, e colocar em uma tabela aqui.
+	\end{figure}
 	
-	% ref: Lutz-Bueno2017
-	Observa-se o perfil característico de micelas carregadas, com um pico do correlação \(q_{corr}\) em valores de \q{} menores e outro pico estrutural (\q{} maior). Quanto mais carregadas forem as micelas, maior será o pico de correlação. A \autoref{fig:SAXS_ctab_q_corrs} evidencia os picos de correlação. 
+	Observa-se o perfil característico de micelas carregadas, com um pico do correlação \(q_{corr}\) em valores de \q{} menores e outro pico estrutural (\q{} maior).\cite{Lutz-Bueno2017} Quanto mais carregadas forem as micelas, maior será o pico de correlação. A \autoref{fig:SAXS_ctab_q_corrs} evidencia os picos de correlação. 
 	
 	\begin{figure}[h]
 		\centering
@@ -437,7 +427,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\label{fig:SAXS_ctab_q_corrs}
 	\end{figure}
 
-	Utilizando a \autoref{eqn:SAXS_param_rede_lamela}, é possível encontrar a distância intermicelar média. A tabela X mostra as distâncias intermicelares calculadas por esse método.
+	Utilizando a \autoref{eqn:SAXS_param_rede_lamela}, é possível encontrar a distância intermicelar média. A \autoref{tab:SAXS_dim} mostra as distâncias intermicelares calculadas por esse método.
 	
 %	\begin{table}
 %		\IBGEtab%
@@ -476,23 +466,22 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 			    300      & 9.578 & 7.552 & 6.315 \\ \bottomrule
 		\end{tabular}}%
 		{}
-	\end{table}  % todo: utilizar o SUPERSAXS pra tentar fitar esses dados
+	\end{table}
 	
-	Observamos então que a distância intermicellar diminui com o aumento da concentração de surfactante, possivelmente porque a presença de uma maior quantidade de contraíons diminui a carga superficial micelar, logo a repulsão intermicelar diminui. Considerando esse fato, há uma semelhança entre as curvas das soluções de surfactante com ureia a 50°C (\autoref{fig:SAXS_surf50c}) e as soluções de surfactante em água a 25°C (\autoref{fig:SAXS_micelas_esfericas}). Se as micelas estiverem com menos íons adsorvidos, o pico de correlação \(q_{corr}\) se tornará mais intenso, sendo possível até obscurecer o pico estrutural. As curvas estão comparadas na \autoref{fig:SAXS_com_sem_ureia}.
-	
-	% todo: encontrar palavra melhor que obscurecer
+	Observamos então que a distância intermicellar diminui com o aumento da concentração de surfactante, possivelmente porque a presença de uma maior quantidade de contraíons diminui a carga superficial micelar, logo a repulsão intermicelar diminui. Considerando esse fato, há uma semelhança entre as curvas das soluções de surfactante com ureia a 50°C (\autoref{fig:SAXS_surf50c}) e as soluções de surfactante em água a 25°C (\autoref{fig:SAXS_micelas_esfericas}). Se as micelas estiverem com menos íons adsorvidos, o pico de correlação \(q_{corr}\) se tornará mais intenso, sendo possível até encobrir o pico estrutural. As curvas estão comparadas na \autoref{fig:SAXS_com_sem_ureia}.
+
 	
 	\begin{figure}[h]
-		\begin{subfigure}[t]{0.45\textwidth}
+		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{./imagens/saxs/micelas_CTAB_agua_ureia}
 			\caption{\CTAB}
 			\label{fig:SAXS_CTAB_com_sem_ureia}
-		\end{subfigure} \qquad %
-		\begin{subfigure}[t]{0.45\textwidth}
+		\end{subfigure} %
+		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{./imagens/saxs/micelas_TTAB_agua_ureia}
-			\caption{TTAB}
+			\caption{\TTAB}
 			\label{fig:SAXS_TTAB_com_sem_ureia}
 		\end{subfigure}
 		\caption{Curvas de SAXS de \CTAB{} (\ref{fig:SAXS_CTAB_com_sem_ureia}) e \TTAB{} (\ref{fig:SAXS_TTAB_com_sem_ureia}) em água a 25°C e em ureia 45\% a 50°C}
@@ -500,12 +489,8 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	\end{figure}
 	
 	Vemos então a grande similaridade das curvas. Há diferenças na intensidade de espalhamento, provavelmente devido à composição diferente das regiões espalhadoras e devido à uma mudança na temperatura. Na região de baixo \q{} da \autoref{fig:SAXS_TTAB_com_sem_ureia} há uma queda que não existe nas outras curvas. Isso pode ser um erro experimental, devido à uma subtração pouco ideal do \emph{background}, ou também pode haver estruturas maiores nessa amostra, possivelmente vesículas. Dessa maneira, há fortes indícios que ao se aquecer a solução, ocorre uma transição lamela---micela esférica.
-	% todo: verificar se essa explicação é a mesma do artigo da Viviane.
-	% todo: colocar o label dessa seção.
 	
 	Na \autoref{sec:Ureia-DLS}, mostra-se que em temperaturas elevadas, há estruturas com um tamanho de aproximadamente 100-300 nm e outras com tamanhos de 3-5 nm. Esses dados foram obtidos por espalhamento dinâmico de luz. Isso reforça a ideia de que há estruturas pequenas, micelares, nessa temperatura.
-
-	% todo: colocar uma boa discussão sobre a diferença nos perfis de (C|T|D)TAB com o aumento da concentração de surfactante.
 	 
 	De modo a comparar as estruturas lamelares observadas com a estrutura lamelar do surfactante puro, obteve-se as curvas de SAXS dos três surfactantes sólidos. Os padrões de espalhamento para os surfactantes sólidos estão na \autoref{fig:SAXS_surf_sólido}.
 
@@ -514,25 +499,51 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\includegraphics[width=0.7\textwidth]{imagens/saxs/surfactante_solido}
 		\caption{Curvas de SAXS de \CTAB{}, \TTAB{} e \DTAB{} sólidos, a 25°C. O \emph{inset} mostra o perfil de espalhamento em valores baixos de \q}
 		\label{fig:SAXS_surf_sólido}
-	\end{figure}  % todo: extrair os ``tamanhos'' dessas micelas, possivelmente por ajuste com o SUPERSAXS, e colocar em uma tabela aqui.
+	\end{figure} 
 	
 	Testou-se a indexação das seguintes fases utilizando o programa SGI: H2, Fd3m, Pn3m, Im3m, Pm3n, la3d, P4332, Primitiva, Fm3m e lamelar. Nenhuma dessas fases teve picos coincidentes com os picos mostrados na figura. Portanto, não é possível realizar uma comparação direta com os padrões de espalhamento para as fases lamelares observadas (Figuras \ref{fig:SAXS_ctabconc}, \ref{fig:SAXS_ttabconc}, \ref{fig:SAXS_dtabconc}, \ref{fig:SAXS_ctab300ur37-45}).
 	
-	Como mostrado na \autoref{sec:teoria_SAXS}, é possível calcular a espessura lamelar a partir da fração volumétrica dos componentes. No entanto, não é possível utilizar diretamente a \autoref{eqn:SAXS_frac_volum}, pois é necessário considerar também o outro componente do solvente, a ureia. Por essa razão, foi realizada uma modificação, resultando na \autoref{eqn:SAXS_frac_volum_com_ureia}.
+	Como mostrado na \autoref{sec:teoria_SAXS}, é possível calcular a espessura lamelar a partir da fração volumétrica dos componentes. No entanto, não é possível utilizar diretamente a \autoref{eqn:SAXS_frac_volum}, pois é necessário considerar também o outro componente do solvente, a ureia. Por essa razão, foi realizada uma modificação, resultando em
 	
 	\begin{equation}
 		\phi_s = \dfrac{V_{\textit{HC}}\left( \dfrac{w_{s}}{M_{s}} \right)}{\left( V_{\textit{HC}} + V_{P} \right)\dfrac{w_{s}}{M_{s}} + V_{w}\dfrac{w_{w}}{M_{w}} + V_{\textit{ur}}\dfrac{w_{\textit{ur}}}{M_{\textit{ur}}}}
 		\label{eqn:SAXS_frac_volum_com_ureia}
-	\end{equation}  % todo: colocar os valores calculados, de qq forma, para mostrar que são pouco confiáveis
+	\end{equation} 
 
-	\noindent onde os termos \(V_{\textit{ur}}\), \(w_{\textit{ur}}\) e \(M_{\textit{ur}}\)	se referem ao volume molar parcial de ureia, fração mássica de ureia e massa molar da ureia, respectivamente.
+	\noindent onde os termos \(V_{\textit{ur}}\), \(w_{\textit{ur}}\) e \(M_{\textit{ur}}\)	se referem ao volume molar parcial de ureia, fração mássica de ureia e massa molar da ureia, respectivamente. Para estimar o comprimento das cadeias, pode-se utilizar a equação de Tanford,\cite{Israelachvili2011}
 	
-	Isso necessita, porém, conhecer exatamente a composição das fases, para que os cálculos sejam corretos.	A natureza esbranquiçada das fases formadas sugere que ocorre espalhamento de luz de vários centros espalhadores pequenos, e que a fase lamelar não homogeneamente formada pela solução. Isso é compatível com a baixa concentração de surfactante no meio. Portanto, é necessário separar a fase lamelar da outra fase, o que pode ser realizado por centrifugação.
+	\begin{equation}
+		l = 0{,}150 + 0{,}126n
+		\label{eqn:tanford}
+	\end{equation}
 	
-%	Além disso, observou-se que a consistência e a intensidade da cor branca é dependente da concentração de ureia e de surfactante. Isso sugere que mais agregados lamelares são formados quanto maior for a concentração de ureia e de surfactante. Seria necessário, então, separar a fase lamelar da fase aquosa, o que é realizado por centrifugação.
-	                   
-	% todo: verificar quem é que foi o mais resistente
-	Quanto maior era a concentração de ureia, maior era a resistência das amostras à centrifugação. Além disso, foi necessário utilizar forças de 50000g (aproximadamente 25000 rpm) para realizar a separação das fases num tempo de algumas horas, pois velocidades de 5000 rpm não foram capazes de separar as fases. As partes superiores foram separadas das partes inferiores, onde estavam as lamelas, e foi feita uma correlação da massa de lamela e a massa do solvente. A partir disso, seria possível calcular a espessura lamelar com a concentração efetiva de surfactante formando a lamela.
+	\noindent onde \(l\) é o comprimento da cadeia de surfactante em nm e \(n\) é o número de carbonos na cadeia. Os volumes das cadeias também podem ser estimadas por uma equação, mas optou-se o site \href{www.chemicalize.com}{Chemicalize}\footnote{Acessado em 28/05/2018} para isso. Com isso, foram calculadas as distâncias interlamelares (\autoref{tab:SAXS_distancias_interlamelares}). Foram estimados erros para o máximo dos picos, com base em sua largura e para os volumes para se obter valores de \(d_\mathrm{HC}\) com incerteza.
+	
+		\begin{table}[H]
+			\IBGEtab{%
+			\caption{Distâncias interlamelares e espessuras lamelares calculadas pelo método de \citeauthor{Ferreira2016}}
+			\label{tab:SAXS_distancias_interlamelares}
+		}%
+		{%
+		\begin{tabular}{c c c c c}
+			\toprule
+			   Surfactante  & Concentração/\mM     & $d$/nm       & \(d_\mathrm{HC}\)/nm & \(l\)/nm               \\ \midrule
+			\multirow{3}{*}{\CTAB} & 100              & 36$\pm$5     & 0,9$\pm$0,2          & \multirow{3}{*}{2,16}  \\
+			                      & 200              & 23$\pm$1     & 1,1$\pm$0,2          &                        \\
+			                      & 300              & 14,6$\pm$0,2 & 1,0$\pm$0,2          &                        \\ \midrule
+			\multirow{3}{*}{\TTAB} & 100              & 38$\pm$3     & 0,8$\pm$0,2          & \multirow{3}{*}{1,91}  \\
+			                      & 200              & 27$\pm$1     & 1,1$\pm$0,2          &                        \\
+			                      & 300              & 13,2$\pm$0,2 & 0,8$\pm$0,1          &                        \\ \midrule
+			\multirow{3}{*}{\DTAB} & 100              & 26$\pm$2     & 0,5$\pm$0,1          & \multirow{3}{*}{1,6}   \\
+			                      & 200              & 13$\pm$1     & 0,50$\pm$0,08        &                        \\
+			                      & 300              & 10,9$\pm$0,3 & 0,58$\pm$0,09        &                        \\ \bottomrule
+		\end{tabular}
+	}{}
+	\end{table} 
+	
+	Os valores calculados estão muito longe de serem aceitáveis. Isso ocorreu porque é necessário saber qual é a composição das fases, isso é, quanta água está na fase límpida e quanta água está na fase lamelar. Portanto, é necessário separar a fase lamelar da outra fase, o que pode ser realizado por centrifugação.
+
+	Quanto maior era a concentração de ureia, maior era a resistência das amostras à centrifugação. Além disso, foi necessário utilizar forças de 50000g (aproximadamente 25000 rpm) para realizar a separação das fases num tempo de algumas horas, pois velocidades de 5000 rpm não foram capazes de separar em 7 dias. As partes superiores foram separadas das partes inferiores, onde estavam as lamelas, e foi feita uma correlação da massa de lamela e a massa do solvente. A partir disso, seria possível calcular a espessura lamelar com a concentração efetiva de surfactante formando a lamela.
 	
 	Foi realizado um experimento com 35\% (m/m) de ureia de modo a diminuir o tempo de centrifugação. A \autoref{tab:SAXS_centrifug_ur35} mostra as massas obtidas para ambas as fases após a centrifugação de amostras de \CTDTAB{} 100, 200 e 300 \mM{}.
 	
@@ -546,69 +557,66 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		{
 			\begin{tabular}{c c | c c c c}
 				\toprule
-				        Surf.         & \(c_{\text{surf}}\)/\mM & \(m_{\text{líquido}}\)/g & \(m_{\text{sólido}}\)/g & \(m_{\text{surf}}\)/g & \(m_{\text{extra}}\)/g \\ \midrule
-				\multirow{3}{*}{\CTAB} & 99,7                  & 2,5251                 & 2,4681                & 0,1608              & 2,3073               \\
-				                      & 199,2                 & 2,8278                 & 2,1766                & 0,3118              & 1,8648               \\
-				                      & 299,5                 & 2,9638                 & 2,0391                & 0,4544              & 1,5847               \\ \midrule
-				\multirow{3}{*}{\TTAB} & 103,6                 & 3,6639                 & 1,3548                & 0,1551              & 1,1997               \\
-				                      & 199,3                 & 3,6479                 & 1,3523                & 0,2891              & 1,0632               \\
-				                      & 296,6                 & 3,6396                 & 1,3628                & 0,4186              & 0,9442               \\ \midrule
-				\multirow{3}{*}{\DTAB} & 97,6                  & 4,5646                 & 0,4443                & 0,1342              & 0,3101               \\
-				                      & 195,8                 & 4,5670                 & 0,4405                & 0,2622              & 0,1783               \\
-				                      & 299,9                 & 4,5839                 & 0,4347                & 0,3916              & 0,0431               \\ \bottomrule
+				        Surf.          & \(c_{\text{surf}}\)/\mM & \(m_{\text{líquido}}\)/g & \(m_{\text{sólido}}\)/g & \(m_{\text{surf}}\)/g & \(m_{\text{extra}}\)/g \\ \midrule
+				\multirow{3}{*}{\CTAB} & 99,7                    & 2,5251                   & 2,4681                  & 0,1608                & 2,3073                 \\
+				                       & 199,2                   & 2,8278                   & 2,1766                  & 0,3118                & 1,8648                 \\
+				                       & 299,5                   & 2,9638                   & 2,0391                  & 0,4544                & 1,5847                 \\ \midrule
+				\multirow{3}{*}{\TTAB} & 103,6                   & 3,6639                   & 1,3548                  & 0,1551                & 1,1997                 \\
+				                       & 199,3                   & 3,6479                   & 1,3523                  & 0,2891                & 1,0632                 \\
+				                       & 296,6                   & 3,6396                   & 1,3628                  & 0,4186                & 0,9442                 \\ \midrule
+				\multirow{3}{*}{\DTAB} & 97,6                    & 4,5646                   & 0,4443                  & 0,1342                & 0,3101                 \\
+				                       & 195,8                   & 4,5670                   & 0,4405                  & 0,2622                & 0,1783                 \\
+				                       & 299,9                   & 4,5839                   & 0,4347                  & 0,3916                & 0,0431                 \\ \bottomrule
 			\end{tabular}
 		}
 		{}
 	\end{table}
 	
-	É interessante observar que a massa da fase lamelar parece ser independente da concentração de surfactante, ou seja, a quantidade de ureia no meio está determinando a concentração da fase lamelar produzida. O \CTAB{} parece ser uma exceção, porem isso pode se dever ao fato de que, mesmo com as velocidades de rotação utilizadas, não foi possível completar a separação. Além disso, observou-se que com o resfriamento da solução de 3°C (para 17°C), ocorreu a formação de mais fase lamelar, visualmente diferente da fase compacta formada após a centrifugação. Possivelmente, há uma proporção entre surfactante e ureia que está compondo essa fase, ou seja, ainda há tanto ureia como surfactante na fase límpida que foi removida após a centrifugação.
-	
-	Dessa maneira, não é possível realizar um cálculo da espessura lamelar, pois não foi possível quantificar a concentração das espécies. Caso os cálculos sejam realizados, a estimativa da espessura lamelar será muito menor do que um valor real, devido à superestimação da concentração de surfactante, gerando valores menores que o comprimento da cadeia de surfactante.
+	A massa da fase lamelar parece ser independente da concentração de surfactante, isso é, a quantidade de ureia no meio está determinando a concentração da fase lamelar produzida. O \CTAB{} parece ser uma exceção, porém isso pode se dever ao fato de que, mesmo com as velocidades de rotação utilizadas, não foi possível garantir uma separação completa (determinado visualmente). Além disso, observou-se que com o resfriamento da solução de 3°C (para 17°C), ocorreu a formação de mais fase branca, com cristais mais aciculares, visualmente diferente da fase compacta formada após a centrifugação. Possivelmente, há uma proporção entre surfactante e ureia que está compondo a fase límpida. Dessa maneira, não é possível calcular \(d_\mathrm{HC}\) com precisão, pois não foi possível quantificar a concentração das espécies. 
 	\FloatBarrier
 \section{DLS}
 \label{sec:Ureia-DLS}
 
-	De modo a obter informações complementares sobre as soluções em temperaturas elevadas, foram realizadas medidas de DLS de amostras de (C|T)TAB 100, 200, 300 \mM{} a 50°C. \DTAB{} não foi analisado por possuir essencialmente os mesmos padrões dos outros surfactantes. As distribuições de tamanho (Figuras \ref{fig:DLS_ctab_distrib}, \ref{fig:DLS_ttab_distrib}), obtidas a partir de um ajuste das curvas de correlação (Figuras \ref{fig:DLS_ctab_cc}, \ref{fig:DLS_ttab_cc}). Cada medida foi feita em triplicata, resultando em uma curva para cada medida.
+	De modo a obter informações complementares sobre as soluções em temperaturas elevadas, foram realizadas medidas de DLS de amostras de \CTTAB{} 100, 200, 300 \mM{} a 50°C. \DTAB{} não foi analisado por possuir essencialmente os mesmos padrões dos outros surfactantes. As distribuições de tamanho (Figuras \ref{fig:DLS_ctab_distrib}, \ref{fig:DLS_ttab_distrib}), obtidas a partir de um ajuste das curvas de correlação (Figuras \ref{fig:DLS_ctab_cc}, \ref{fig:DLS_ttab_cc}). Cada medida foi feita em triplicata, resultando em uma curva para cada medida.
 	
-%% Distribuições e CC de CTAB
+
 \begin{figure}[h]
-	\begin{subfigure}{0.47\textwidth}
+	\begin{subfigure}{0.50\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{imagens/dls/ctab_distrib}
 		\caption{Distribuições de raio hidrodinâmico}
 		\label{fig:DLS_ctab_distrib}
-	\end{subfigure} \qquad %
-	\begin{subfigure}{0.47\textwidth}
+	\end{subfigure} %
+	\begin{subfigure}{0.50\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{imagens/dls/ctab_CC}
 		\caption{Curvas de correlação}
 		\label{fig:DLS_ctab_cc}
 	\end{subfigure}
-	\caption{DLS de \CTAB{} 100, 200 e 300 \mM{} a 50°C}
+	\caption{DLS de \CTAB{} 100, 200 e 300 \mM{} a 50°C, obtidos em triplicatas}
 	\label{fig:DLS_ctab}
 \end{figure}
 
 %% Distribuições e CC de TTAB
 \begin{figure}[h]
-	\begin{subfigure}{0.47\textwidth}
+	\begin{subfigure}{0.50\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{imagens/dls/ttab_distrib}
 		\caption{Distribuições de raio hidrodinâmico}
 		\label{fig:DLS_ttab_distrib}
-	\end{subfigure} \qquad %
-	\begin{subfigure}{0.47\textwidth}
+	\end{subfigure} %
+	\begin{subfigure}{0.50\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{imagens/dls/ttab_CC}
 		\caption{Curvas de correlação}
 		\label{fig:DLS_ttab_cc}
 	\end{subfigure}
-	\caption{DLS de \TTAB{} 100, 200 e 300 \mM{} a 50°C}
+	\caption{DLS de \TTAB{} 100, 200 e 300 \mM{} a 50°C, obtidos em triplicatas}
 	\label{fig:DLS_ttab}
 \end{figure}
 
 	As Figuras \ref{fig:DLS_distrib_conc} e \ref{fig:DLS_CC_conc} comparam as distribuições de tamanho e curvas de correlação, respectivamente, para amostras de concentrações iguais de surfactante, \CTAB{} ou \TTAB.
 
-%% Distribuição de tamanhos em função da concentração %%
 \begin{figure}[h]
 	\begin{subfigure}{0.3\textwidth}
 		\centering
@@ -628,38 +636,36 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\caption{300\mM}
 		\label{fig:DLS_300_distrib}
 	\end{subfigure}
-	\caption{Distribuição de tamanhos de \CTTAB{} 100 (\ref{fig:DLS_100_distrib}), 200 (\ref{fig:DLS_200_distrib}) e 300 (\ref{fig:DLS_300_distrib}) \mM{} a 50°C}
+	\caption{Distribuição de tamanhos de \CTTAB{} 100, 200 e 300 \mM{} a 50°C}
 	\label{fig:DLS_distrib_conc}
 \end{figure}
 
-%% CC em função da concentração
-% TODO: corrigir as figuras, não foram plotadas corretamente
 \begin{figure}[h]
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{imagens/dls/100_CC}
-		\caption{100\mM}
+		\caption{100 \mM}
 		\label{fig:DLS_100_CC}
 	\end{subfigure} %
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{imagens/dls/200_CC}
-		\caption{200\mM}
+		\caption{200 \mM}
 		\label{fig:DLS_200_CC}
 	\end{subfigure} %
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{imagens/dls/300_CC}
-		\caption{300\mM}
+		\caption{300 \mM}
 		\label{fig:DLS_300_CC}
 	\end{subfigure}
-	\caption{Distribuição de tamanhos de \CTTAB 100 (\ref{fig:DLS_100_CC}), 200 (\ref{fig:DLS_200_CC}) e 300 (\ref{fig:DLS_300_CC}) \mM{} a 50°C}
+	\caption{Distribuição de tamanhos de \CTTAB 100, 200 e 300 \mM{} a 50°C}
 	\label{fig:DLS_CC_conc}
 \end{figure}
 
 	Pode-se observar que não há diferenças muito significativas entre as amostras, tanto se comparadas concentrações diferentes quanto surfactantes diferentes. Nota-se que há estruturas pequenas, na faixa de 3-5 nm de diâmetro, muito provavelmente micelas esféricas, como visto anteriormente por SAXS. Além disso, há estruturas com tamanhos de 100 a 300 nm. Devido à baixa viscosidade e transparência das soluções, é possível que existam lamelas em forma de vesículas nessas condições, em conjunto com micelas esféricas.
 	
-	A qualidade das curvas de correlação é muito ruim, havendo muitas irregularidades, como valores de \(g_1\) maiores que 1, e vários perfis de decaimento sobrepostos, indicativos de várias estruturas com raios diferentes. No entanto, juntando as informações obtidas por SAXS e por DLS, é possível concluir, com relativa certeza, de que acima da temperatura de transição, são formadas micelas esferóides. 
+	A qualidade das curvas de correlação é muito ruim, havendo muitas irregularidades, como valores de \(g_1\) maiores que 1, e vários perfis de decaimento sobrepostos, indicativos de várias estruturas com raios diferentes. No entanto, juntando as informações obtidas por SAXS e por DLS, é possível concluir, com relativa certeza, de que acima da temperatura de transição, são formadas micelas esféricas. 
 	
 %%% Imagens DTAB %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\begin{figure}[H]
@@ -723,34 +729,29 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	 Para facilitar a comparação, a \autoref{fig:itc_comparativo_tit_ureia_agua_ureia_ttab} mostra os calores registrados pelo equipamento tanto na titulação de ureia em água quanto na titulação de ureia em \TTAB{} 12 \mM. 
 	 
 \begin{figure}[h]
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{imagens/itc/interacao_ureia_surf_dq}
+		\caption{Titulação ureia em \TTAB{} 12 \mM{} com subtração do branco}
+		\label{fig:itc_interacaoUreiaSurfDq}
+	\end{subfigure} %
+	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{imagens/itc/interacao_branco_dq}
 		\caption{Titulação ureia em água}
 		\label{fig:itc_interacaoUreiaAguaDq}
-	\end{subfigure} \qquad%
-	\begin{subfigure}{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{imagens/itc/interacao_ureia_surf_dq}
-		\caption{Titulação ureia em \TTAB{} 12\mM{} com subtração do branco}
-		\label{fig:itc_interacaoUreiaSurfDq}
-	\end{subfigure}
+	\end{subfigure} 
 
-	\caption{Calores experimentais sem normalização para as titulações de ureia em água e em solução de \TTAB{} 12\mM. A \autoref{fig:itc_interacaoUreiaAguaDq} faz paralelo com a \autoref{fig:itc_interacaoUrAgua} e a \autoref{fig:itc_interacaoUreiaSurfDq} faz paralelo com a \autoref{fig:itc_interacaoUrSurf_entalpograma}. As retas representam a tendência de cada curva, obtidas através de um ajuste linear.}
+	\caption{Calores experimentais sem normalização para as titulações de ureia em água e em solução de \TTAB{} 12 \mM. A a \autoref{fig:itc_interacaoUreiaSurfDq} faz paralelo com a \autoref{fig:itc_interacaoUrSurf_entalpograma} e a \autoref{fig:itc_interacaoUreiaAguaDq} faz paralelo com a \autoref{fig:itc_interacaoUrAgua}. As retas representam a tendência de cada curva, obtidas através de um ajuste linear.}
 	\label{fig:itc_comparativo_tit_ureia_agua_ureia_ttab}
 \end{figure}
 	
 	Há uma notável semelhança entre as curvas da \autoref{fig:itc_interacaoUreiaAguaDq} e \autoref{fig:itc_interacaoUrAgua}, com primariamente um deslocamento nos valores absolutos das curvas, pois não houve a normalização pela concentração de espécie na cela. Já a \autoref{fig:itc_interacaoUreiaSurfDq} difere grandemente da \autoref{fig:itc_interacaoUrSurf_entalpograma} principalmente porque a concentração de \TTAB{} diminui no decorrer da titulação, então o valor de \(\Delta H/J.mol^{-1} \text{de surfactante na cela}\) difere de \(\Delta q/J\). Vemos o mesmo padrão, com as curvas de 40, 80 e 120 \mM{} de ureia na seringa partindo do mesmo ponto e a curva de 160 \mM{} de ureia na seringa paralela à curva de 120 \mM.
 	
-	% todo: achar uma referencia pra entalpia de mistura com ureia.
-	
-	A entalpia de dissolução de ureia em água é negativa, como foi observado durante a mistura dos componentes durante o preparo de amostra. Logo, é razoável que a entalpia de diluição de ureia também seja, pois interações ureia-ureia e ureia-água estão sendo trocadas por interações ureia-água e água-água, respectivamente.
-	
-	% todo: colocar a referência da seção onde foram medidas as CMCs de TTAB em ureia.
+	A entalpia de dissolução de ureia em água é positiva, como foi observado durante a mistura dos componentes durante o preparo de amostra. Logo, é razoável que a entalpia de diluição de ureia também seja, pois interações ureia-ureia e ureia-água estão sendo trocadas por interações ureia-água e água-água, respectivamente.
 	
 	Foi levantada também a hipótese de que a ureia está aumentando a concentração micelar crítica do surfactante, levando à sua desmicelização durante a titulação com \TTAB{}. Porém, o aumento da CMC somente ocorre de maneira apreciável em concentrações muito maiores de ureia, então os efeitos observados devem ser somente devido à interação de micelas de \TTAB{} com ureia.
 	
-	% todo: colocar as curvas de ``branco''.
 	O código utilizado para gerar a \autoref{fig:itc_interacaoUrSurf_entalpograma} se encontra nas listagens \ref{lst:codigo_itc_ureia} e \ref{lst:codigo_itc_ureia2}. As outras figuras foram geradas com códigos semelhantes, alterando-se os valores de y.
 	
 	\begin{listing}[h]
@@ -765,5 +766,11 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\label{lst:codigo_itc_ureia2}
 	\end{listing}
 
+
+	\FloatBarrier
+	
 	\section{Conclusão}
-% todo: colocar uma conclusão para essa seção
+	
+	A ureia demonstrou possuir um comportamento muito diferente dos outros aditivos estudados. Ocorre a formação de fases lamelares com temperaturas de transição entre 20 e 40°C, dependendo da concentração de ureia, e do comprimento da cadeia do surfactante. Essa fase lamelar se separa da outra fase, que é límpida e fluida, mas somente após forte centrifugação. A formação das lamelas é fundamentalmente regida pela ureia, pois a adição de mais surfactante não levou à sua incorporação na fase lamelar, já que era possível precipitar o excesso de surfactante com o abaixamento da temperatura. Em temperaturas acima da temperatura de transição, a fase lamelar se transformava numa fase límpida e pouco viscosa, semelhante à outra fase em temperaturas baixas, que contém principalmente micelas esféricas, mas possivelmente contém vesículas. Com isso, a fase lamelar foi caracterizada com a clareza necessária para este trabalho.
+	
+	Como próximos estudos, seria interessante obter um diagrama de fase completo de surfactante e ureia, e determinar a concentração de ureia, e de surfactante, em ambas as fases. Assim, seria mais fácil propor um modelo para as estruturas formadas, qual seria o papel da ureia na formação dos agregados, e porque ocorre a separação de fases.

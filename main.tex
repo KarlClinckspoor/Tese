@@ -1,7 +1,7 @@
 % todo: verificar k_b ou k_B
 % todo: verificar 1,3BD ou 1,3-BD
 % todo: verificar seção por seção se as imagens são melhores h, ht, htb
-
+% todo: alterar a legenda das figuras muito compridas
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
@@ -103,6 +103,7 @@
 \newcommand{\CTAB}{C\textsubscript{16}TAB}
 \newcommand{\TTAB}{C\textsubscript{14}TAB}
 \newcommand{\DTAB}{C\textsubscript{12}TAB}
+\newcommand{\BD}{1,3-BD}  % todo: substituir isso no texto
 \newcommand{\CTDTAB}{C\textsubscript{16,14,12}TAB}
 \newcommand{\CTTAB}{C\textsubscript{16,14}TAB}
 \newcommand{\DHmic}{\(\Delta H^\circ_{\mathrm{mic}}\)}
@@ -126,6 +127,7 @@
 % ---
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[num]{abntex2cite}	% Citações padrão ABNT
+\usepackage{notoccite} % impede de colocar números na LOF e tal
 %\usepackage[style=chem-acs, backend=biber,sorting=none,hyperref=true]{biblatex}
 %\addbibresource{library.bib}
 % --- 
@@ -308,37 +310,37 @@
 %
 \begin{folhadeaprovacao}
 %
-%  \begin{center}
-%    {\ABNTEXchapterfont\large\imprimirautor}
-%
-%    \vspace*{\fill}\vspace*{\fill}
-%    \begin{center}
-%      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
-%    \end{center}
-%    \vspace*{\fill}
-%    
-%    \hspace{.45\textwidth}
-%    \begin{minipage}{.5\textwidth}
-%        \imprimirpreambulo
-%    \end{minipage}%
-%    \vspace*{\fill}
-%   \end{center}
-%        
-%   Trabalho aprovado. \imprimirlocal, 24 de novembro de 2012:
-%
-%   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-%   \assinatura{\textbf{Professor} \\ Convidado 1}
-%   \assinatura{\textbf{Professor} \\ Convidado 2}
-%   \assinatura{\textbf{Professor} \\ Convidado 3}
-%   \assinatura{\textbf{Professor} \\ Convidado 4}
-%      
-%   \begin{center}
-%    \vspace*{0.5cm}
-%    {\large\imprimirlocal}
-%    \par
-%    {\large\imprimirdata}
-%    \vspace*{1cm}
-%  \end{center}
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vspace*{\fill}\vspace*{\fill}
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+    \end{center}
+    \vspace*{\fill}
+    
+    \hspace{.45\textwidth}
+    \begin{minipage}{.5\textwidth}
+        \imprimirpreambulo
+    \end{minipage}%
+    \vspace*{\fill}
+   \end{center}
+        
+   %Trabalho aprovado. \imprimirlocal, 24 de novembro de 2012:
+
+   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+   \assinatura{\textbf{Professor} \\ Convidado 1}
+   \assinatura{\textbf{Professor} \\ Convidado 2}
+   \assinatura{\textbf{Professor} \\ Convidado 3}
+   \assinatura{\textbf{Professor} \\ Convidado 4}
+      
+   \begin{center}
+    \vspace*{0.5cm}
+    {\large\imprimirlocal}
+    \par
+    {\large\imprimirdata}
+    \vspace*{1cm}
+  \end{center}
   
 \end{folhadeaprovacao}
 % ---
@@ -350,8 +352,9 @@
    \vspace*{\fill}
    \centering
    \noindent
-   \textit{ Este trabalho é dedicado às crianças adultas que,\\
-   quando pequenas, sonharam em se tornar cientistas.} \vspace*{\fill}
+   \textit{
+   	Este trabalho é dedicado ao meu pai, Guido, que me inspirou a mergulhar na Química, e à minha mãe, Hiris, que me ensinou todo o resto.   
+} \vspace*{\fill}
 \end{dedicatoria}
 % ---
 
@@ -362,9 +365,9 @@
 
 Agradeço à minha mãe, a quem amo muito, por ter sempre me apoiado em toda minha vida. Agradeço à Karen, minha maravilhosa namorada, por todos os singelos momentos vividos até agora. Agradeço à Lia, por ter sido uma ótima companhia, desde o início da graduação.
 
-Agradeço ao Prof. Edvaldo, que dirigiu e focou minha, por vezes dispersa, atenção, e me apoiou nas diversas decisões que eu tive que tomar durante minha pós graduação. Agradeço o Prof. Heinz Hoffmann, por tantas discussões científicas, e por ter me abrigado em sua casa por uma semana em Setembro de 2018. Agradeço ao Prof. Jan Skov Pedersen, por ter aceitado me receber em seu laboratório por um mês, mesmo eu sendo um completo amador em sua área de especialização.
+Agradeço ao Prof. Edvaldo, que dirigiu e focou minha, por vezes dispersa, atenção, e me apoiou nas diversas decisões que eu tive que tomar durante minha pós graduação. Agradeço o Prof. Heinz Hoffmann pela paciência, por tantas discussões científicas, e por ter me abrigado em sua casa por uma semana em Setembro de 2018. Agradeço ao Prof. Jan Skov Pedersen, por ter aceitado me receber em seu laboratório por um mês, mesmo eu sendo um completo amador em SAXS, e depois tendo me ensinado muito sobre a área.
 
-Agradeço aos colegas do laboratório B145, pelas discussões e companhia durante esses anos.
+Agradeço aos colegas e ex-colegas do laboratório B145, pelas discussões e companhia durante esses anos.
 
 Agradeço ao CNPq pelo financiamento.
 
@@ -373,7 +376,8 @@ Agradeço ao CNPq pelo financiamento.
 
 % ---
 % Epígrafe
-% ---
+% --- 
+% todo: pensar numa boa epígrafe
 \begin{epigrafe}
     \vspace*{\fill}
 	\begin{flushright}
@@ -390,24 +394,31 @@ Agradeço ao CNPq pelo financiamento.
 % RESUMOS
 % ---
 
-% TODO: completar os resumos
 % resumo em português
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
- O objetivo deste trabalho é estudar o processo de formação de micelas -- tanto sua cinética quanto sua termodinâmica -- e, após sua formação, estudar a cinética de relaxação das micelas, quando presentes em solventes diferentes. Para isso, foram utilizadas técnicas como fluorescência, espalhamento de radiação, calorimetria e reologia. Foi possível estimar tempos de crescimento para micelas em dois regimes de concentração diferentes. Além disso, observou-se que é necessário considerar várias contribuições, além das citadas na literatura, para explicar as diferenças de comportamento reológico de micelas em misturas binárias com glicerina, sacarose, ureia, 1,3-butanodiol e dimetilsulfóxido.
-
- \textbf{Palavras-chave}: latex. abntex. editoração de texto.
+ 	O objetivo deste trabalho é estudar o efeito de cinco aditivos, a saber, glicerina, sacarose, 1,3-butanodiol, dimetilsulfóxido e ureia, na reologia de micelas gigantes de brometo de hexadeciltrimetilamônio e salicilato de sódio. Isso foi realizado através da análise da viscosidade no repouso em função da concentração de salicilato, para uma concentração fixa de surfactante. A viscosidade no repouso é proporcional ao tempo de relaxação das micelas e, assim, se observaria alterações na relaxação micelar. Esses estudos foram complementados com calorimetria de titulação isotérmica, onde se observou a tendência de formação e entalpia de formação de micelas gigantes e de micelas esféricas, porém, desta vez, utilizando brometo de tetradeciltrimetilamônio. Além disso, a reologia oscilatória foi estudada, de modo a verificar se os aditivos alteram a estruturação da micela.
+ 	
+	Os resultados reológicos e calorimétricos foram explicados com base em parâmetros macroscópicos do solvente, o índice de refração, relacionado à atração entre coloides, a constante dielétrica, relacionada à estabilização de espécies iônicas, e ao parâmetro de Gordon, relacionado à estruturação do solvente. Observou-se que o parâmetro de Gordon possuía a melhor correlação com as medidas reológicas. Isso é, quanto menos estruturado fosse o solvente, mais a viscosidade no repouso foi afetada. Porém, é necessário considerar o efeito desses aditivos na superfície micelar, que podem também afetar tanto estruturalmente, quanto nos mecanismos de relaxação.
+	
+	Além disso, estudou-se a interação de ureia, em altas concentrações, e surfactantes catiônicos. Notou-se que ocorria a formação de fases lamelares, cuja quantidade era dependente da concentração de ureia, não de surfactante. Também foram realizados estudos sobre a cinética de crescimento das micelas através de espalhamento de raios-X resolvido no tempo, em Grenoble, na França. Infelizmente, os resultados de cinética forneceram somente um tempo de crescimento em torno de 35 ms. Foi observado que a fluorescência do salicilato era afetada pela quantidade de surfactante em solução, resultado que foi atribuído à incorporação do mesmo nas micelas. Com isso, foi desenvolvido um método para a medida de fluorescência resolvida no tempo, porém na escala de ms, para se observar a incorporação de salicilato. Novamente, não foi possível obter a cinética de crescimento micelar.
+	
+ \textbf{Palavras-chave}: micelas gigantes, aditivos, reologia, calorimetria, cinética, espalhamento de raios-X, surfactantes
 \end{resumo}
 
 % resumo em inglês
 \begin{resumo}[Abstract]
  \begin{english}
-   This is the english abstract.
+   The objective of this work is to study the effect of five additive, i.e., glycerine, sucrose, 1,3-butanediol, dimethylsulfoxide and urea, on the rheology of wormlike micelles of hexadecyltrimethylammonium bromide and sodium salicylate. This was done through the analysis of the zero-shear viscosity as a function of the concentration of salicylate, for a fixed surfactant concentration. The zero-shear viscosity is proportional to the relaxation time of the micelles and, therefore, changes in the micellar relaxation could be seen. These studies were complemented by isothermal titration calorimetry, where the tendency and enthalpy of formation of wormlike and spherical micelles were observed. However, this time, tetradecyltrimethylammonium bromide was used. In addition to that, oscillatory rheology was studied in order to verify if the additives alter the structure of the micelles.
+   
+   The rheological and calorimetric results were explained based on the macroscopia parameters of the solvent, the refractive index, related to inter-colloid attraction, dielectric constant, related to the stabilization of ionic species, and the Gordon parameter, related to the structuring of the solvent. We observed that the Gordon parameter had the best correlation with the rheological measurements, that is, the less structured the solvent is, the more the zero-shear viscosity was affected. However, it is also necessary to consider the effect these additives have on the micellar surface, which can also affect them structurally and in their relaxation mechanisms.
+   
+   Secondly, the interaction of high concentrations of urea and cationic surfactants was studied. We noted that the formation of lamellar phases occured, which was dependent on the concentration of urea, not surfactant. We also performed measurements of the growth kinetics of the micelles through time-resolved small angle X-ray scattering in Grenoble, France. Unfortunately, the results showed only an estimate for the timescape of growth, 35 ms. Lastly, we observed that the fluorescence of salicylate varied with the concentration of surfactant, which was attributed to the incorporation of salicylate into the micellar palisade. Using this, a method to study the time-resolved fluorescence, in the scale of ms, was developed, in order to observe the rate that salicylate entered. Again, it was not possible to observe the growth kinetics.
 
    \vspace{\onelineskip}
  
    \noindent 
-   \textbf{Keywords}: latex. abntex. text editoration.
+   \textbf{Keywords}: wormlike micelles, additives, rheology, calorimetry, kinetics, x-ray scattering, surfactants
  \end{english}
 \end{resumo}
 
@@ -442,7 +453,7 @@ Agradeço ao CNPq pelo financiamento.
   \item[\TTAB] Brometo de tetradeciltrimetilamônio
   \item[\DTAB] Brometo de dodeciltrimetilamônio
   \item[DMSO] Dimetilsulfóxido
-  \item[1,3BD] 1,3-butanodiol
+  \item[\BD] 1,3-butanodiol
   \item[SAXS] Espalhamento de Raios-X em baixos ângulos
   \item[DLS] Espalhamento dinâmico de luz
   \item[ITC] Calorimetria de titulação isotérmica
@@ -453,11 +464,11 @@ Agradeço ao CNPq pelo financiamento.
 % ---
 % inserir lista de símbolos
 % ---
-\begin{simbolos}
-    \item  Nada ainda
-    % todo: colocar a lista de símbolos
-\end{simbolos}
-% ---
+%\begin{simbolos}
+%    \item  Nada ainda
+%    % todo: colocar a lista de símbolos
+%\end{simbolos}
+%% ---
 
 % ---
 % inserir o sumario
@@ -486,9 +497,6 @@ Agradeço ao CNPq pelo financiamento.
 %\chapter*[Introdução]{Introdução}
 %\addcontentsline{toc}{chapter}{Introdução}
 %% ----------------------------------------------------------
-
-% todo: alterar as legendas de todas as figuras para colocar uma legenda curta e uma comprida. 
-% todo: colocar nas descrições que foi mais fácil dissolver (C|T|D)TAB quando havia ureia.
 
 %\include{introducao}
 \include{teoria}

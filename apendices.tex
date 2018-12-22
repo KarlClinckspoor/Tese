@@ -1,7 +1,6 @@
 % todo: colocar script de tratamento dos dados de ITC, pra determinar a cmc
 % todo: colocar uma tabela com correlações de concentração (m/m, v/v, mol/l, mol/mol)
 % todo: verificar a nomenclatura da descrição matemática de MG para ver se eu acertei fator forma e etc.
-% TODO: colocar \mathrm{} nas partes que precisam, como pow, head, core
 \begin{apendicesenv}
 \partapendices
 
@@ -9,14 +8,7 @@
 \label{sec:modelo_MG_matematica}
 \section{Introdução e motivação}
 
-% TODO: colocar as referências.
-Esta seção mostrará as equações utilizadas para descrever o modelo de espalhamento de micelas gigantes. As equação foram baseadas numa série de artigos de X, Y, Z. Aqui, esses artigos serão agrupados, de modo a facilitar o entendimento do modelo.
-
-Porém, essa descrição matemática é de menor aplicabilidade, pois é necessário transcrever as equações em código que consiga realizar ajustes. Essa tarefa não é trivial, especialmente para não especialistas. Logo, será disponibilizado, na seção X, uma transcrição dessas equações, na linguagem Python.
-
-% TODO: colocar a seção onde o modelo foi utilizado
-% TODO: colocar a seção onde a descrição de Python foi escrita
-% TODO: reescrever essas equações, colocando os termos qe são texto em \text e o resto normal
+Esta seção mostrará as equações utilizadas para descrever o modelo de espalhamento de micelas gigantes, que foi utilizada na \autoref{sec:tr-saxs}. As equação foram baseadas numa série de artigos\cite{Pedersen1996, Yoshizaki1980, Cannavacciuolo2002, Pedersen2007a, Arleth2002}, que serão agrupados para facilitar o entendimento do modelo. Porém, essa descrição matemática é de menor aplicabilidade, pois é necessário transcrever as equações em código que consiga realizar ajustes. Essa tarefa não é trivial, especialmente para não especialistas. Logo, será disponibilizado uma transcrição dessas equações, na linguagem Python, no \autoref{sec:modelo_MG_python}.
 
 \section{Resumo do modelo}
 
@@ -26,7 +18,6 @@ O modelo descreve cadeias alongadas caroço-casca (\emph{core-shell}) de Kratky-
 I = f(q, \mathrm{scale}, d_{\mathrm{head}}, r_{\mathrm{core}}, \rho_{\mathrm{rel}}, \sigma, \mathrm{back}, L, k_L, \varepsilon, D_{\mathrm{CQ}}, \nu_{\mathrm{RPA}}, \mathrm{SC}_{\mathrm{pow}}, \mathrm{exp}_{\mathrm{pow}})
 \label{eqn:AP_saxs_MG_superficial}
 \end{equation}
-% TODO: colocar refs às equações que definem alguns desses termos
 
 \begin{table}
     \IBGEtab%
@@ -44,7 +35,7 @@ I = f(q, \mathrm{scale}, d_{\mathrm{head}}, r_{\mathrm{core}}, \rho_{\mathrm{rel
      \(\sigma\)			    & Fator de \emph{smearing}, o quão definido é o limite entre regiões \\
      \(\mathrm{back}\)				& Constante referente ao \emph{background} \\
      \(L\)					& Comprimento de contorno das cadeias 	\\
-     \(k_L\)				& Comprimento de \emph{Kuhn} das cadeias, igual ao dobro do comprimento de correlação \\ % TODO: Achar o que é esse comprimento exatamente
+     \(k_L\)				& Comprimento de \emph{Kuhn} das cadeias\\
      \(\varepsilon\)		& Excentricidade radial das micelas		\\
      \(D_{\mathrm{CQ}}\)			    & Distância de correlação das micelas 	\\
      \(\nu_{\mathrm{RPA}}\)			& Fator de concentração					\\ \midrule
@@ -94,7 +85,7 @@ I_{\mathrm{PRISM}}= \frac{\varphi V_{\mathrm{mic}}F_{\mathrm{wc}}(q)F_{\mathrm{c
      \toprule
      Termo 			& Descrição        						\\
      \midrule
-     \(\varphi\)		& Fração volumétrica \\ % TODO: checar
+     \(\varphi\)		& Fração volumétrica \\
      \(V_{\mathrm{mic}}\)		& Volume da micela   \\
      \(F_{\mathrm{wc}}\)		& Fator forma de uma \emph{wormlike chain} \\
      \(F_{\mathrm{cs}}\)		& Fator forma de uma seção transversal de cilindro \\ % TODO: checar se é cilindro

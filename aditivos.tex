@@ -1,108 +1,97 @@
 \part{Efeito dos aditivos hidrofílicos}
 	\label{sec:efeito_aditivos_hidrofilicos} 
 
-
-	
-	\chapter{Resultados}
+	\chapter{Resultados reológicos e calorimétricos}
 		
-	Esta é a parte principal desta tese, onde a maior parte do tempo foi dedicada ao entendimento dos efeitos dos aditivos hidrofílicos no comportamento das micelas gigantes. Os resultados foram publicados na revista \emph{Journal of Colloid and Interface Science}, sob o título ``\emph{Rheological and calorimetric study of alkyltrimethylammonium bromide-sodium salicylate wormlike micelles in aqueous binary systems}"\cite{Clinckspoor2018}.
+	Esta é a parte principal desta tese, onde a maior parte do tempo foi dedicada. Aqui, pesquisou-se sobre efeitos dos aditivos hidrofílicos no comportamento das micelas gigantes. Parte dos resultados foram publicados na revista \emph{Journal of Colloid and Interface Science}, sob o título ``\emph{Rheological and calorimetric study of alkyltrimethylammonium bromide-sodium salicylate wormlike micelles in aqueous binary systems}"\cite{Clinckspoor2018}.
 	
-	Serão apresentados inicialmente os resultados reológicos em função do efeito dos aditivos, e em seguida serão levantados alguns parâmetros que podem ser utilizados para descrever o efeito dos aditivos.
+	Serão apresentados inicialmente os resultados de curva de fluxo (\autoref{sec:efeito_aditivos_viscosidade}), seguindo a lógica de \citeauthor{Hoffmann2010}. Em conjunto, serão apresentados os resultados calorimétricos, tanto de formação de micelas gigantes (\autoref{sec:efeito_aditivos_calorimetria_mg}) quanto de formação de micelas esféricas (\autoref{sec:efeito_aditivos_calorimetria_me}). Em seguida, serão levantados alguns parâmetros que podem ser utilizados para descrever o efeito dos aditivos (\autoref{sec:efeito_aditivos_viscosidade}). Os resultados calorimétricos serão correlacionados aos parâmetros (\autoref{sec:correlacao_params_cmc_dh}). Como complemento aos estudos com as curvas de fluxo, será avaliada a reologia oscilatória (\autoref{sec:reologia_oscilatoria}), e, como será mostrado, a ureia possui um efeito muito diferente, e será estudado mais a fundo no \autoref{sec:cap_efeito_ureia}.
 	
-	Inicialmente, escolheu-se sacarose pois possui tipos de interação semelhantes à glicerina, e já havia sido testada em outros sistemas como, por exemplo, sistemas lamelares, onde teve o mesmo efeito da glicerina. 1,3-butanodiol (1,3BD) foi um aditivo escolhido devido a um estudo feito por Rami Abdel-Rahem, e seu estudo foi reproduzido e complementado com informações calorimétricas. Dimetilsulfóxido (DMSO) também é utilizado na literatura como um aditivo. A ureia é um aditivo que é frequentemente descrito na literatura como um agente desestruturante da água, que leva à desnaturação de proteínas. 	% todo: encontrar o motivo para DMSO.
+	A inspiração para a glicerina e o DMSO vieram de outros estudos, onde se mostrou que ambos possuíam a capacidade de melhorar o armazenamento crigênico de células animais, como hemácias e esperma\cite{Butler1959, Polge1949}, sendo que essa propriedade do DMSO está relacionado à sua capacidade de permear membranas\cite{Notman2006}. Logo, se esses aditivos foram capazes de preservar células vivas após o congelamento, qual seria seu efeito em sistemas de autoassociação? Desse tipo de questionamento vieram os estudos de Hoffmann\cite{Grabner2014, Song2008a, Shinto2012}. Em seguida, \citeauthor{Abdel-Rahem2014} utilizou o 1,3-butanodiol, devido às suas aplicações como aditivo para fixar fragrâncias e agente antimicrobiano. A sacarose foi escolhida, devido à similaridade de suas interações com a água, e à similaridade da constante dielétrica, com a glicerina, e por já ter sido estudada anteriormente, com lamelas.\cite{Song2008a} Por último, a ureia é um aditivo frequentemente descrito como agente desestruturante da água, que leva à desnaturação de proteínas, aumenta a solubilidade de hidrocarbonetos e inibe a agregação micelar.\cite{Kuharski1984} 
 	
-		\section{Efeitos dos aditivos na viscosidade do repouso} \index{micelas gigantes!efeito do solvente}
+		\section{Efeitos dos aditivos na viscosidade do repouso} \index{resultados!efeito do solvente}
+			\label{sec:efeito_aditivos_viscosidade} \index{resultados!índice de refração} \index{resultados!índice de refração}
+			A reologia é uma técnica que pode fornecer informações sobre a dinâmica de relaxação de um material, através da viscosidade. Em especial, o perfil de viscosidade em repouso \(\eta_0\) (\autoref{fig:regioes_rh}) está relacionado com mudanças no processo de relaxação das micelas. Com o intuito de se estudar como a relaxação das micelas é afetado pelos aditivos, foram construídos vários diagramas de viscosidade, sempre com 100 \mM{} de \CTAB, para várias concentrações de aditivo.
 			
-			A reologia é uma técnica que pode fornecer informações sobre a dinâmica de relaxação de um material, através da viscosidade. Em especial, o perfil de viscosidade em repouso (\(\eta_0\)) em função da concentração de cossoluto está relacionado com mudanças no processo de relaxação das micelas. Com o intuito de se estudar como a relaxação das micelas é afetado pelos aditivos, foram construídos vários diagramas de viscosidade em função da concentração de salicilato de sódio.
-			
-			Dos cinco aditivos selecionados, foram feitas comparações para realçar as diferenças e semelhanças entre os aditivos. Neste momento, os resultados serão discutidos com base somente no índice de refração das soluções. A \autoref{fig:indice_refracao} mostra como o índice de refração das soluções com os aditivos variam em função da fração mássica de aditivo.
+			Neste momento, os resultados serão discutidos com base somente no índice de refração das soluções, partindo da primeira premissa. A \autoref{fig:indice_refracao} mostra como o índice de refração das soluções com os aditivos variam em função da fração mássica de aditivo.
 					
 			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/propriedades/indice_refracao}
-				\caption{Índice de refração em função da concentração de aditivo}
+				\caption{Índice de refração  em função da concentração de glicerina, sacarose e ureia a 20°C\cite{Lide2003}, e de DMSO\cite{Lebel1962} e 1,3-butanodiol\cite{Piekarski1995} a 25°C}
 				\label{fig:indice_refracao}
-			\end{figure}
+			\end{figure} \index{propriedades!índice de refração \(n\)}
 	
-			Inicialmente, comparou-se o sistema melhor estudado (glicerina) com sacarose, escolhida pois também possuía efeitos semelhantes à glicerina no intumescimento lamelar. A \autoref{fig:rh_sacarose_glicerina} mostra os diagramas de viscosidade para soluções de micelas gigantes com 100 \mM{} de \CTAB, em concentrações crescentes de glicerina, e no ponto de igualdade no índice de refração de sacarose, 50\%.
+			Inicialmente, comparou-se glicerina com sacarose, devido às suas semelhanças no índice. A \autoref{fig:rh_sacarose_glicerina} mostra os diagramas de viscosidade, em concentrações crescentes de glicerina, e no ponto de igualdade no índice de refração de sacarose, 50\%. Em seguida, notou-se que 1,3-BD e DMSO possuiam efeitos semelhantes, como mostra a \autoref{fig:rh_13bd_dmso}. Por último, a ureia mostrou um comportamento muito diferente dos outros aditivos (\autoref{fig:rh_ureia}).
 			
-			\begin{figure}[h]
+			\begin{figure}[htb]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/reologia/RH_sacarose_glicerina}
-				\caption{Viscosidade no repouso \(\eta_0\) em função da concentração de salicilato de sódio (NaSal) em várias concentrações dos aditivos glicerina e sacarose. 60\% de glicerina (V/V) e 50\% de sacarose (m/m) estão no ponto de equivalência do índice de refração. As curvas com 30, 45 e 60 \% de glicerina foram obtidas pela aluna de mestrado Laila Lorenzetti, coautora do trabalho.}
+				\caption[Diagrama de viscosidade para glicerina e sacarose]{Viscosidade no repouso \(\eta_0\) em função da concentração de salicilato de sódio (NaSal) em várias concentrações dos aditivos glicerina e sacarose. 60\% de glicerina (V/V) e 50\% de sacarose (m/m) estão no ponto de equivalência do índice de refração. As curvas com 30, 45 e 60 \% de glicerina foram obtidas pela aluna de mestrado Laila Lorenzetti, coautora do trabalho.}
 				\label{fig:rh_sacarose_glicerina}
-			\end{figure}
+			\end{figure} \index{resultados!sacarose} \index{resultados!glicerina} \index{resultados!\CTAB}
 			
-			Podemos observar que os dois picos de viscosidade observados em pequenas concentrações de glicerina, diminuem, e a região central permanece pouco afetada, como já havia sido descrito por Hoffmann. Porém, vemos que a adição de 50\% de sacarose praticamente não afetou a viscosidade das soluções, apesar da igualdade no índice de refração dessas soluções. Isso mostra que considerar somente o índice de refração não permite a previsão do comportamento dessas soluções, e isso motivou a realização de estudos posteriores.
-			
-			A \autoref{fig:rh_13bd_dmso} mostra como os aditivos 1,3-butanodiol e dimetilsulfóxido afetam o perfil de viscosidade.
-			
-			\begin{figure}[h]
+			\begin{figure}[htb]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/reologia/RH_13BD_DMSO}
-				\caption{Viscosidade no repouso \(\eta_0\) em função da concentração de salicilato de sódio (NaSal) em várias concentrações dos aditivos 1,3-butanodiol (1,3BD) e dimetilsulfóxido (DMSO). As concentrações de igualdade do índice de refração são 77\% (m/m) e 57\% (m/m), respectivamente}
+				\caption[Diagrama de viscosidade para DMSO e 1,3BD]{Viscosidade no repouso \(\eta_0\) em função da concentração de salicilato de sódio (NaSal) em várias concentrações dos aditivos 1,3-butanodiol (\BD) e dimetilsulfóxido (DMSO). As concentrações de igualdade do índice de refração são 77\% (m/m) e 57\% (m/m), respectivamente}
 				\label{fig:rh_13bd_dmso}
-			\end{figure}
-		
-			O perfil de viscosidade dessas soluções foi muito mais afetado pelos aditivos do que era esperado observando-se somente o índice de refração, em especial o 1,3-butanodiol, onde 15\% (m/m) possui o mesmo efeito na viscosidade que 60\% de glicerina.
+			\end{figure} \index{resultados!dimetilsulfóxido} \index{resultados!1,3-butanodiol}
 			
-			A ureia possui o comportamento que mais difere dos outros aditivos, como mostra a \autoref{fig:rh_ureia}.
-			
-			\begin{figure}[h]
+			\begin{figure}[htb]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/reologia/RH_ureia}
 				\caption{Viscosidade no repouso \(\eta_0\) em função da concentração de salicilato de sódio (NaSal) em várias concentrações de ureia. A concentração de igualdade de índice de refração é em torno de 55\%.}
 				\label{fig:rh_ureia}
-			\end{figure}
-
-			Nesse caso, a viscosidade na região central aumentou, algo não observado nos outros cossolutos. Outro caso que possui um comportamento semelhante é o diagrama de orto-hidróxicinamato e \CTAB{} em pH 9. %todo: citar o artigo do OHCA
-		
+			\end{figure} \index{resultados!ureia}
+			
+			Os dois picos de viscosidade observados em pequenas concentrações de glicerina diminuem, e a região central permanece pouco afetada, como já havia sido observado.\cite{Hoffmann2010} Porém, vemos que a adição de 50\% de sacarose praticamente não afetou a viscosidade das soluções, apesar da igualdade no índice de refração dessas soluções. Isso mostra que considerar somente o índice de refração não permite a previsão do comportamento dessas soluções. O perfil de viscosidade de DMSO e 1,3-BD foi muito mais afetado pelos aditivos do que era esperado observando-se somente o índice de refração, em especial o 1,3-butanodiol, onde 15\% (m/m) possui o mesmo efeito na viscosidade que 60\% de glicerina. No caso da ureia, a viscosidade na região central aumentou, algo não observado nos outros aditivos, porém possui semelhança ao perfil já observado em água, com outro hidrótropo, o orto-hidróxicinamato e \CTAB{} em pH 9. \cite{Clinckspoor2015}
+			
 		\FloatBarrier
 		
-		\section{Efeito dos aditivos na calorimetria de micelas gigantes}
-		
-			A calorimetria de titulação isotérmica fornece informações sobre o quão favorável é a formação das micelas, através da concentração de formação de micelas gigantes, \cwlm. As Figuras \ref{fig:itc_mg_glicerina} -- \ref{fig:itc_mg_ureia} mostram os perfis de formação de micelas gigantes para glicerina, sacarose, 1,3-butanodiol, dimetilsulfóxido e ureia.
+		\section{Efeito dos aditivos na calorimetria de micelas gigantes} \index{resultados!ITC de micelas gigantes} \index{resultados!\TTAB}
+		\label{sec:efeito_aditivos_calorimetria_mg}
+			A calorimetria de titulação isotérmica fornece informações sobre o quão favorável é a formação das micelas, através da concentração de formação de micelas gigantes, \cwlm. As Figuras \ref{fig:itc_mg_glicerina}, \ref{fig:itc_mg_sacarose}, \ref{fig:itc_mg_13bd}, \ref{fig:itc_mg_dmso} e \ref{fig:itc_mg_ureia} mostram os perfis de formação de micelas gigantes para glicerina, sacarose, 1,3-butanodiol, dimetilsulfóxido e ureia, respectivamente.
 		
 			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/itc/ITC_MG_glic}
 				\caption{Efeito da concentração de glicerina nas curvas de titulação de formação de micelas gigantes. A concentração de salicilato de sódio na cela de amostra é de 1,5\mM. A concentração do aditivo está em \% (V/V).}
 				\label{fig:itc_mg_glicerina}
-			\end{figure} 
+			\end{figure}  \index{resultados!glicerina}
 			
 			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/itc/ITC_MG_sac}
 				\caption{Efeito da concentração de sacarose nas curvas de titulação de formação de micelas gigantes. A concentração de salicilato de sódio na cela de amostra é de 1,5\mM. A concentração do aditivo está em \% (m/m).}
 				\label{fig:itc_mg_sacarose}
-			\end{figure}
+			\end{figure} \index{resultados!sacaorse}
 			
-			As diferenças entre glicerina e sacarose, novamente, se evidenciaram. Da mesma maneira que na reologia, a presença de sacarose não afetou a formação de micelas gigantes. Já a glicerina teve um efeito deletério, aumentando significativamente a concentração necessária para o crescimento.
 						
 			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/itc/ITC_MG_13BD}
 				\caption{Efeito da concentração de 1,3-butanodiol nas curvas de titulação de formação de micelas gigantes. A concentração de salicilato de sódio na cela de amostra é de 1,5\mM. A concentração do aditivo está em \% (m/m).}
 				\label{fig:itc_mg_13bd}
-			\end{figure}
+			\end{figure} \index{resultados!1,3-butanodiol}
 			
 			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/itc/ITC_MG_dmso}
 				\caption{Efeito da concentração de dimetilsulfóxido nas curvas de titulação de formação de micelas gigantes. A concentração de salicilato de sódio na cela de amostra é de 1,5\mM. A concentração do aditivo está em \% (m/m).}
-				\label{fig:itc_mg_dmso}
+				\label{fig:itc_mg_dmso} \index{resultados!dimetilsulfóxido}
 			\end{figure}
 
-			1,3-BD e DMSO não se mostraram muito diferentes, apesar dos perfis reológicos serem bastante distintos, algo não totalmente inesperado, já que ambas as técnicas observam fenômenos diferentes. Isso indica que a queda de viscosidade com 1,3-BD não se deve à uma desestabilização micelar, o que levaria à uma diminuição na quantidade de micelas.
+			As diferenças entre glicerina e sacarose, novamente, se evidenciaram. Da mesma maneira que na reologia, a presença de sacarose não afetou a formação de micelas gigantes. Já a glicerina teve um efeito deletério na autoassociação, aumentando significativamente a concentração necessária para o crescimento. 1,3-BD e DMSO não se mostraram muito diferentes, apesar dos perfis reológicos serem bastante distintos, algo não totalmente inesperado, já que ambas as técnicas observam fenômenos diferentes. Isso indica que a queda de viscosidade com 1,3-BD não se deve à uma desestabilização micelar, o que levaria à uma diminuição na quantidade de micelas, mas a outros efeitos.
 
 			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/itc/ITC_MG_ur}
 				\caption{Efeito da concentração de ureia nas curvas de titulação de formação de micelas gigantes. A concentração de salicilato de sódio na cela de amostra é de 1,5\mM. A concentração do aditivo está em \% (m/m).}
 				\label{fig:itc_mg_ureia}
-			\end{figure}
+			\end{figure} \index{resultados!ureia}
 		
-			O comportamento da ureia seguiu o esperado, de acordo com a literatura, com um aumento de \cwlm{}. É interessante notar que o \DHwlm{} diminui com o aumento da concentração de ureia, o que sugere uma diminuição na adsorção de salicilato nas micelas. Em 35\% de ureia observa-se um perfil bastante diferente dos outros, porém nessa situação, ocorre a formação de um precipitado, cuja natureza será discutida na \autoref{sec:cap_efeito_ureia}.
+			O comportamento da ureia seguiu o esperado, de acordo com a literatura\cite{Souza2012, Bruning1961}, com um aumento de \cwlm{}. É interessante notar que o \DHwlm{} diminui com o aumento da concentração de ureia, o que sugere uma diminuição na adsorção de salicilato nas micelas. Em 35\% de ureia observa-se um perfil bastante diferente dos outros, porém nessa situação, ocorre a formação de um precipitado, cuja natureza será discutida na \autoref{sec:cap_efeito_ureia}.
 			
 			Uma maneira de se resumir as curvas calorimétricas é através da concentração de formação de micelas gigantes (\cwlm) e a entalpia de micelização (\DHwlm). Dessa forma, podemos analisar o comportamento de todos os aditivos mais facilmente. A \autoref{fig:cwlm_dhwlm_por_aditivo} resume isso, mostrando como essas propriedades variam com os aditivos, separadamente. A \autoref{fig:cwlm_dhwlm_por_conc} mostra o mesmo, porém em função da concentração de aditivo.
 			
@@ -120,7 +109,7 @@
 					\label{fig:dhwlm_por_aditivo}
 				\end{subfigure}
 				\caption{\cwlm{} e \DHwlm{} em função dos aditivos e de sua concentração}
-				\label{fig:cwlm_dhwlm_por_aditivo}
+				\label{fig:cwlm_dhwlm_por_aditivo} % todo: se tiver tempo, alterar o Delta H 0 para Delta H \circ
 			\end{figure} 
 		
 			\begin{figure}[h]
@@ -146,9 +135,9 @@
 		
 		\FloatBarrier
 		
-		\section{Efeito dos aditivos na calorimetria de micelização}
-		
-		A calorimetria de formação de micelas gigantes possui uma complexidade maior devido à presença do salicilato. Para facilitar a interpretação, foram obtidas informações da formação de micelas esféricas, titulando-se \TTAB{} em água. As Figuras \ref{fig:itc_glicerina} -- \ref{fig:itc_ureia} mostram as curvas de titulação para glicerina, sacarose, 1,3-butanodiol, dimetilsulfóxido e ureia.
+		\section{Efeito dos aditivos na calorimetria de micelização} \index{resultados!ITC de micelas esféricas} \index{resultados!\TTAB}
+		\label{sec:efeito_aditivos_calorimetria_me}
+		A calorimetria de formação de micelas gigantes possui uma complexidade maior devido à presença do salicilato. Para facilitar a interpretação, foram obtidas informações da formação de micelas esféricas, titulando-se \TTAB{} em água. As Figuras \ref{fig:itc_glicerina}, \ref{fig:itc_sacarose}, \ref{fig:itc_13bd}, \ref{fig:itc_dmso} e \ref{fig:itc_ureia} mostram as curvas de titulação para glicerina, sacarose, 1,3-butanodiol, dimetilsulfóxido e ureia, respectivamente.
 					
 %			\begin{figure}[h]
 %				\centering
@@ -162,46 +151,42 @@
 				\includegraphics[width=0.7\textwidth]{imagens/itc/ITC_glic}
 				\caption{Efeito da glicerina na titulação de \TTAB.}
 				\label{fig:itc_glicerina}
-			\end{figure}
+			\end{figure} \index{resultados!glicerina}
 		
 			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/itc/ITC_sac}
 				\caption{Efeito de sacarose na titulação de \TTAB}
 				\label{fig:itc_sacarose}
-			\end{figure}
+			\end{figure} \index{resultados!sacarose}
 			
-			O efeito da glicerina na formação de micelas é semelhante ao efeito em micelas gigantes, exceto pelo aumento do \DHmic{}. Mais interessante, porém, é que sacarose levou à uma diminuição da \cmc{}. Isso levanta duas perguntas. Em primeiro lugar, qual é o mecanismo de estabilização micelar, e depois, porque esse mecanismo não afeta a formação de micelas gigantes?
-			
-			% todo: ref
-			A literatura aponta que os grupos hidroxila pode interagir com a superfície micelar, diminuindo a repulsão entre as cabeças, estabilizando as micelas. Porém, nas micelas gigantes, o grupo carboxilato do salicilato se encontra nessa mesma região, então há uma competição entre esses dois grupos. Como o carboxilato é carregado, interage mais fortemente com as micelas e impede que a sacarose exerça sua influência estabilizadora. 
+			O efeito da glicerina na formação de micelas é semelhante ao efeito em micelas gigantes, exceto pelo aumento do \DHmic{}.\cite{Moya2007a} Mais interessante, porém, é que sacarose levou à uma diminuição da \cmc{}. Isso já foi observado para SDS\cite{Bakshi1993a, Chauhan2014}, \CTAB\cite{Banipal2016a} e Brij 35\cite{Sharma1989}. A literatura sugere que a sacarose pode estruturar a água, portanto aumentando a penalidade entrópica e diminuindo a \cmc,\cite{Chauhan2014, Banipal2016a, Sharma1989}, assim como pode interagir com a superfície micelar, diminuindo a repulsão entre as cabeças, estabilizando as micelas.\cite{Bakshi1993a, Chauhan2014, Banipal2016a}. Porém, nas micelas gigantes, o grupo carboxilato do salicilato se encontra nessa mesma região, então há uma competição entre hidroxilas e carboxilatos. Como o carboxilato é carregado, interage mais fortemente com as micelas e impede que a sacarose exerça sua influência estabilizadora, logo não afeta as micelas. O efeito do aumento do índice de refração pode ter sido contrabalanceado pela estruturação do solvente, neste caso.
 			
 			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/itc/ITC_13BD}
 				\caption{Efeito de 1,3-butanodiol na titulação de \TTAB}
 				\label{fig:itc_13bd}
-			\end{figure} 
+			\end{figure}  \index{resultados!1,3-butanodiol}
 		
 			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/itc/ITC_dmso}
 				\caption{Efeito de dimetilsulfóxido na titulação de \TTAB.}
 				\label{fig:itc_dmso}
-			\end{figure}
+			\end{figure} \index{resultados!dimetilsulfóxido}
 			
-			Novamente, o 1,3-BD e DMSO mostraram possuir comportamentos semelhantes entre si, portanto o mecanismo que influencia ambas as micelas gigantes quanto esféricas deve ser semelhante.
 			
 			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/itc/ITC_ur}
 				\caption{Efeito de ureia na titulação de \TTAB.}
 				\label{fig:itc_ureia}
-			\end{figure}
+			\end{figure} \index{resultados!ureia}
 		
-		A ureia influencia aumentando a \cmc{}, como esperado, porém não afeta muito o \DHmic{}. Logo, como não há \Sal{} para ser dessorvido das micelas, devido à alta constante dielétrica do meio, não há variações de \DHmic.
+		Novamente, o \BD{} e DMSO mostraram possuir comportamentos semelhantes entre si, portanto o mecanismo que influencia ambas as micelas gigantes quanto esféricas deve ser semelhante. O aumento na \cmc{} já foi observado anteriormente, tanto para o DMSO\cite{Bakshi1993a} quando para \BD.\cite{Abdel-Rahem2012}. A ureia influencia aumentando a \cmc{}, como esperado,\cite{Dias2002} porém não afeta muito o \DHmic{}. Logo, como não há \Sal{} para ser dessorvido das micelas, não grandes variações de \DHmic.
 		
-		As concentrações micelares críticas (\cmc) e entalpias de micelização (\DHmic) foram utilizadas para resumir as informações desta seção. A \autoref{fig:cmc_dh_por_composto} mostra como as propriedades são afetadas pelos vários aditivos e suas concentrações, separadamente, e a \autoref{fig:cmc_dh_por_conc} faz o mesmo, porém em função da concentração de aditivo.
+		Da mesma maneira que anteriormente, essas informações foram resumidas em duas figuras. A \autoref{fig:cmc_dh_por_composto} mostra como as propriedades são afetadas pelos vários aditivos e suas concentrações, separadamente, e a \autoref{fig:cmc_dh_por_conc} faz o mesmo, porém em função da concentração de aditivo.
 		
 		\begin{figure}[h]
 			\begin{subfigure}[t]{0.5\textwidth}
@@ -242,15 +227,16 @@
 		\FloatBarrier
 		
 	\chapter{Parâmetros estudados}
-
+	\label{sec:parametros_estudados}
 		
-		Existem vários parâmetros físico-químicos que descrevem solventes. Inicialmente, o índice de refração foi escolhido com base nos estudos anteriores de Hoffmann, devido à conexão com a constante de Hamaker (\autoref{eqn:constante_hamaker_lifshitz}), que modula a atração/repulsão coloidal (para duas esferas, vide \autoref{eqn:interacao_duas_esferas}). Quanto mais próximos forem os índices de refração entre o solvente e as micelas gigantes, menor será a atração intermicelar.
+		Existem vários parâmetros físico-químicos que descrevem solventes. Inicialmente, o índice de refração foi escolhido com base nos estudos anteriores de Hoffmann, devido à conexão com a constante de Hamaker (\autoref{eqn:constante_hamaker_lifshitz}), que modula a atração/repulsão coloidal (para duas esferas, vide \autoref{eqn:interacao_duas_esferas}). Quanto mais próximos forem os índices de refração entre o solvente e as micelas gigantes, menor será a atração intermicelar. \index{micelas gigantes!constante de Hamaker}
 		
-		A constante dielétrica \(\varepsilon\) é um parâmetro relacionado à polaridade do solvente. Quanto maior for a constante dielétrica, mais fracas são as interações eletrostáticas e dipolares (Equações \ref{eqn:potencial_eletrostático}, \ref{eqn:energia_Keesom}, \ref{eqn:energia_Debye}) pois o campo elétrico oposto gerado pelas moléculas do solvente age no sentido contrário do campo elétrico criado por íons e dipolos. Logo, dois íons de cargas opostas não se atraem com tanta facilidade, já que o campo elétrico de um íon decai muito rapidamente, e as forças entrópicas os afastam. Na constante de Hamaker, a contribuição dipolar, que depende da constante dielétrica, é geralmente pequena, e nunca maior que \(\sfrac{3}{4}kT\), porém pode ser relevante na interação de hidrocarbonetos (núcleo micelar) e água.
+		A constante dielétrica \(\varepsilon\) é um parâmetro relacionado à polaridade do solvente. Quanto maior for a constante dielétrica, mais fracas são as interações eletrostáticas e dipolares (Equações \ref{eqn:potencial_eletrostático}, \ref{eqn:energia_Keesom}, \ref{eqn:energia_Debye}) pois o campo elétrico oposto gerado pelas moléculas do solvente age no sentido contrário do campo elétrico criado por íons e dipolos. Logo, dois íons de cargas opostas não se atraem com tanta facilidade, já que o campo elétrico de um íon decai muito rapidamente, e as forças entrópicas os afastam. Na constante de Hamaker, a contribuição dipolar, que depende da constante dielétrica, é geralmente pequena, e nunca maior que \(\sfrac{3}{4}kT\), porém pode ser relevante na interação de hidrocarbonetos (núcleo micelar) e água.  \index{micelas gigantes!constante dielétrica}
 		
-		A permissividade dielétrica e o índice de refração estão ambos relacionados pois dependem da polarizabilidade molecular das moléculas, e de seu momento de dipolo, \(u\). Efeitos adicionais de separação de carga, que podem ocorrer pela estruturação do solvente em ligações de hidrogênio, não são considerados por essa relação. Logo, é interessante utilizar a constante dielétrica, que considera esses efeitos adicionais do solvente, e o índice de refração, que é proporcional somente à polarizabilidade molecular. É possível combinar a constante dielétrica e o momento de dipolo no fator eletrostático, \emph{IT}, mas esses parâmetros não foram considerados neste trabalho devido à presença de misturas de solventes, e pela facilidade de se utilizar propriedades do contínuo na interpretação. % Ref [101] do capítulo 3
+		A permissividade dielétrica e o índice de refração estão ambos relacionados pois dependem da polarizabilidade molecular das moléculas, e de seu momento de dipolo, \(u\). Efeitos adicionais de separação de carga, que podem ocorrer pela estruturação do solvente em ligações de hidrogênio, não são considerados por essa relação. Logo, é interessante utilizar a constante dielétrica, que considera esses efeitos adicionais do solvente, e o índice de refração, que é proporcional somente à polarizabilidade molecular. É possível combinar a constante dielétrica e o momento de dipolo no fator eletrostático, \emph{IT}, mas esses parâmetros não foram considerados neste trabalho devido à presença de misturas de solventes, e pela facilidade de se utilizar propriedades do contínuo na interpretação.\cite{ReichardtSolvents}
 		
-		Dois parâmetros podem ser utilizados para descrever a estruturação de um solvente, a densidade de energia coesiva \(c\) (\autoref{eqn:densidade_energia_coesiva}), e a pressão interna \(\pi\) (\autoref{eqn:pressao_interna}).  % refs [98-100, 175] do cap 3 do livro de propriedades de solvente
+		Dois parâmetros podem ser utilizados para descrever a estruturação de um solvente, a densidade de energia coesiva \(c\) (\autoref{eqn:densidade_energia_coesiva}), e a pressão interna \(\pi\) (\autoref{eqn:pressao_interna}). \cite{ReichardtSolvents}
+		% refs [98-100, 175] do cap 3 do livro de propriedades de solvente
 		
 		\begin{equation}
 			c = \dfrac{\Delta U_V}{V_m} = \dfrac{\Delta H_V - R\cdot T}{V_m}
@@ -262,15 +248,14 @@
 			\label{eqn:pressao_interna}
 		\end{equation}
 		
-		\noindent onde \(\Delta U_V\) e \(\Delta H_V\) são a energia interna e entalpia de vaporização e \(V_m\) é o volume molar do líquido. A razão de se utilizar a entalpia/energia interna de vaporização é a seguinte. Ao levar um líquido de seu estado condensado para o estado gasoso, todas as ligações líquido-líquido tiveram que ser rompidas. Logo, dividindo-se essa energia pelo volume molar obtemos uma densidade de energia coesiva.
+		\noindent onde \(\Delta U_V\) e \(\Delta H_V\) são a energia interna e entalpia de vaporização e \(V_m\) é o volume molar do líquido. A razão de se utilizar a entalpia/energia interna de vaporização é a seguinte. Ao levar um líquido de seu estado condensado para o estado gasoso, todas as ligações líquido-líquido tiveram que ser rompidas. Logo, dividindo-se essa energia pelo volume molar obtemos uma densidade de energia coesiva.\cite{ReichardtSolvents} 
 		
-		A pressão interna, por sua vez, é a energia necessária para abrir uma cavidade no solvente, pois a variação de volume é necessariamente pequena, de modo a acomodar o soluto. Esse parâmetro é resultado das forças atrativas serem mais fortes que as repulsivas, e portanto está mais relacionado às interações dispersivas e dipolo-dipolo. Já \(c\) está relacionado à interações solvente-solvente específicas, como a ligação de hidrogênio.
 		
-		A diferença entre esses dois parâmetros (\(c - \pi\)) fornece uma medida da força das ligações de hidrogênio, e a razão \(n = \sfrac{\pi}{c}\) fornece uma medida da relação entre a força das ligações de hidrogênio e outras atrações. Essa razão se aproxima de 1 para hidrocarbonetos e é próxima de zero para solventes com fortes ligações de hidrogênio. O quadrado de \(c\) é conhecido também como o parâmetro de solubilidade de Hildebrand, \(\delta\).
+		A pressão interna, por sua vez, é a energia necessária para abrir uma cavidade no solvente, pois a variação de volume é necessariamente pequena, de modo a acomodar o soluto. Esse parâmetro é resultado das forças atrativas serem mais fortes que as repulsivas, e portanto está mais relacionado às interações dispersivas e dipolo-dipolo. Já \(c\) está relacionado à interações solvente-solvente específicas, como a ligação de hidrogênio.\cite{ReichardtSolvents}
 		
-		Porém, os solventes utilizados neste trabalho são todos compostos principalmente por água, e em alguns casos os aditivos são sólidos (ureia, sacarose). Além disso, obter esses parâmetros para as misturas não é uma tarefa para qual o laboratório está equipado. Portanto, é necessário utilizar outro parâmetro que esteja relacionado à estruturação do solvente.
+		A diferença entre esses dois parâmetros (\(c - \pi\)) fornece uma medida da força das ligações de hidrogênio, e a razão \(n = \sfrac{\pi}{c}\) fornece uma medida da relação entre a força das ligações de hidrogênio e outras atrações. Essa razão se aproxima de 1 para hidrocarbonetos e é próxima de zero para solventes com fortes ligações de hidrogênio. O quadrado de \(c\) é conhecido também como o parâmetro de solubilidade de Hildebrand, \(\delta\). Esse parâmetro foi extendido para sistemas polares, por Hansen.\cite{ReichardtSolvents}
 		
-		Um parâmetro que pode ser utilizado é o parâmetro de Gordon, definido na \autoref{eqn:Gordon}, que é baseado na tensão superficial, \autoref{eqn:tens_superficial}. % todo: ref livro efeito do solvente em reações orgânicas, para que pode se utilizar isso. Achar a def do param em outro lugar.
+		Porém, os solventes utilizados neste trabalho são todos compostos principalmente por água, e em alguns casos os aditivos são sólidos (ureia, sacarose). Além disso, obter esses parâmetros para as misturas não é uma tarefa para qual o laboratório está equipado. Portanto, é necessário utilizar outro parâmetro que esteja relacionado à estruturação do solvente. Um parâmetro relacionado aos parâmetros de Hildebrand e de Hansen, e que já foi previamente utilizado para discutir sistemas micelares,\cite{Moya2007a, Abdel-Rahem2012} é o parâmetro de Gordon, definido na \autoref{eqn:Gordon}, que é baseado na tensão superficial, \autoref{eqn:tens_superficial}.\cite{ReichardtSolvents}
 
 		\begin{equation}
 			G = \dfrac{\gamma}{\overline{V}_m^{\frac{1}{3}}}
@@ -284,11 +269,9 @@
 		
 		\noindent onde \(\gamma\) é a tensão superficial do líquido e \(\overline{V}_m\) é o volume molar do líquido que, quando houver mais de um, pode-se utilizar a \autoref{eqn:volume_molar_médio} para calculá-lo.
 		
-				
-		A razão de se utilizar o parâmetro de Gordon vem de um argumento semelhante ao parâmetro de densidade de energia coesiva. Nesse caso, o aumento da área superficial de um líquido necessita da quebra de interações líquido-líquido das moléculas que vão para a superfície. Um líquido com interações intermoleculares fracas possui uma tensão superficial baixa, pois é fácil quebrar essas ligações. Por outro lado, um líquido com interações intermoleculares fortes, como a água, possui uma tensão superficial bastante alta. Uma grande vantagem de se utilizar o parâmetro de Gordon é que as medidas de tensão superficial de misturas são facilmente realizadas, necessitando então somente a conversão de \(\gamma\) para \(G\). Porém, [XYZ] nota que \(c\) é um parâmetro melhor para descrever a energia coesiva % todo: referenciar o livro Christian Reichardt
-	
+		A razão de se utilizar o parâmetro de Gordon vem de um argumento semelhante ao parâmetro de densidade de energia coesiva. Nesse caso, o aumento da área superficial de um líquido necessita da quebra de interações líquido-líquido das moléculas que vão para a superfície. Um líquido com interações intermoleculares fracas possui uma tensão superficial baixa, pois é fácil quebrar essas ligações. Por outro lado, um líquido com interações intermoleculares fortes, como a água, possui uma tensão superficial bastante alta. Uma grande vantagem de se utilizar o parâmetro de Gordon é que as medidas de tensão superficial de misturas são facilmente realizadas, necessitando então somente a conversão de \(\gamma\) para \(G\). Porém, \citeauthor{ReichardtSolvents} nota que \(c\) é um parâmetro melhor para descrever a energia coesiva.
 
-		\section{Índice de refração}
+		\section{Índice de refração} \index{propriedades!índice de refração \(n\)}
 		
 		A \autoref{fig:indice_refracao} mostrou como o índice de refração varia com a concentração de aditivo. Como os resultados reológicos evidenciaram, considerar somente o índice de refração não é uma maneira muito boa para explicar o comportamento reológico.
 		
@@ -330,7 +313,7 @@
 			\label{fig:cmc_dh_por_n}
 		\end{figure}
 
-		Comparando-se as Figuras \ref{fig:cwlm_dhwlm_por_n} e \ref{fig:cmc_dh_por_n}, pode-se observar que há uma correlação entre a formação de micelas gigantes e as concentrações críticas. Aparentemente há um grupo composto de 1,3BD, DMSO e ureia. Glicerina e sacarose se comportam bastante diferentemente, sendo que sacarose possui o comportamento mais diferenciado, não havendo mudança na \cwlm{} e uma diminuição da \cmc{}.
+		Comparando-se as Figuras \ref{fig:cwlm_dhwlm_por_n} e \ref{fig:cmc_dh_por_n}, pode-se observar que há uma correlação entre a formação de micelas gigantes e as concentrações críticas. Aparentemente há um grupo composto de \BD, DMSO e ureia. Glicerina e sacarose se comportam bastante diferentemente, sendo que sacarose possui o comportamento mais diferenciado, não havendo mudança na \cwlm{} e uma diminuição da \cmc{}.
 		
 		Agrupamentos desse tipo não podem ser feitos com as entalpias, que parecem ter valores bastante variáveis. Porém, é necessário enfatizar que os valores de entalpia obtidos para a formação de micelas gigantes não são tão confiáveis quanto os de formação de micelas esféricas. Para obter os perfis completos de formação de micelas gigantes, foi necessário aumentar a concentração de surfactante na seringa. Isso reduz a precisão na região inicial do perfil, onde é calculado o \DHwlm. Além disso, a resolução dos entalpogramas obtidos pelo calorímetro PEAQ é menor (39 pontos) do que no VP-ITC (90 pontos). Esse problema possui menor relevância para \cwlm{}, que foi definida como sendo o ponto mínimo da curva, não uma subtração de duas regiões pré e pós-micelar.  Apesar disso, o padrão observado para as mudanças de entalpia na presença de ureia podem ser explicadas pelo aumento da constante dielétrica do meio, como previamente mencionado.
 	
@@ -338,16 +321,15 @@
 		
 		\FloatBarrier
 		
-		\section{Constante dielétrica}
+		\section{Constante dielétrica} \index{propriedades!constante dielétrica \(\varepsilon\)}
 		
-		A constante dielétrica está relacionada ao grau de dissociação de espécies iônicas em solução. Quanto maior a constante, maior o grau de dissociação. Isso resulta, por exemplo, no aumento da \cmc{} pois há menos contraíons para reduzir a carga superficial micelar. A contribuição desse parâmetro já havia sido levantada em um estudo anterior. % todo: ref.
-		A \autoref{fig:cte_dieletrica} mostra como a constante dielétrica varia em função da concentração de aditivo. %todo: refs
-
+		A constante dielétrica está relacionada ao grau de dissociação de espécies iônicas em solução. Quanto maior a constante, maior o grau de dissociação. Isso resulta, por exemplo, no aumento da \cmc{} pois há menos contraíons para reduzir a carga superficial micelar. A contribuição desse parâmetro já havia sido levantada em um estudo anterior.\cite{Abdel-Rahem2012}
+		A \autoref{fig:cte_dieletrica} mostra como a constante dielétrica varia em função da concentração de aditivo.
 		
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/propriedades/cte_dieletrica}
-			\caption{Constante dielétrica em função da concentração de aditivo}  % todo: colocar quais são a 20°C e quais a 25°C
+			\caption{Constante dielétrica em função da concentração de, a 25°C, de sacarose,\cite{Malmberg1950a} DMSO,\cite{Kaatze1989a} \BD,\cite{Piekarski1995} ureia\cite{Wyman1933}, e a 20°C, glicerina.\cite{Akerlof1932}}  % ureia: 25°C. DMSO: 25°C, sacarose: 25°C, Glicerina:20°C, 1,3BD:25°C
 			\label{fig:cte_dieletrica}
 		\end{figure}
 	
@@ -356,7 +338,7 @@
 		É possível que, com a dessorção de \Sal{} das micelas, as amostras com maior concentração de ureia se tornem mais carregadas positivamente. Logo, a formação de uma rede ramificada de micelas é menos favorável, pela carga superficial. Por essa razão, não se observa a região intermediária de viscosidade menor, e a viscosidade observada é próxima àquela do sistema altamente carregado.
 		
 		Os outros aditivos agem de maneira contrária, porém, a quantidade de \Sal{} incorporado já é bastante alto, então a ação de incorporar mais salicilato não tem um efeito tão forte. % todo: achar ref que fala do grau de incorporação de nasal.
-		Todavia, ainda é necessário considerar se o aumento da hidrofobicidade do solvente acarretaria numa dessorção de salicilato, apesar de que, devido à sua carga, sua interação com a superfície micelar deve ser mais forte.
+		Todavia, ainda é necessário considerar se o aumento da hidrofobicidade do solvente acarretaria numa dessorção de salicilato, apesar de que, devido à sua carga, sua interação com a superfície micelar deve ser mais forte em solventes mais apolares.
 	
 		Da mesma maneira que o índice de refração, os parâmetros dos ITCs serão comparados com a constante dielétrica do meio para tentar observar algum padrão.
 		
@@ -399,18 +381,18 @@
 		
 		
 		\FloatBarrier
-		\section{Coesão do solvente e Parâmetro de Gordon}  % todo: falar sobre estruturação do solvente aqui
+		\section{Coesão do solvente e Parâmetro de Gordon} \index{propriedades!coesão do solvente} \index{propriedades!parâmetro de Gordon}
 		
 		Devido à incapacidade dos outros parâmetros explicarem o comportamento reológico e calorimétrico, procuramos por outras propriedades que possam estar relacionadas. Vendo trabalhos anteriores, pensamos na coesão do solvente para explicar o comportamento reológico e calorimétrico. Solventes bastante estruturados, como a água, diminuem a \cmc{} devido ao aumento da penalidade entrópica. Além disso, estipulamos que solventes melhor estruturados devem dificultar a locomoção das micelas gigantes durante os processos de reptação, aumentando a viscosidade aparente. A partir disso, foram coletadas informações sobre a coesão dos solventes utilizados.
 		
-		Glicerina na concentração de 43\% m/m possui uma probabilidade reduzida de ligações de hidrogênio, portanto a percolação da rede de ligações de hidrogênio é reduzida. Já açúcares são desestruturadores em baixas concentrações e estruturadores em altas. Para a glicose, a estruturação acontece em torno de 25-30\% m/m, já outros estudos mencionam 37\% m/m. Sacarose foi descrita em trabalhos anteriores como aditivo para aumento da separação interlamelar, semelhante à glicerina. É possível que a sacarose afete as micelas e não as bicamadas devido à maior área de contato das micelas com o solvente. Além disso, a reologia observa a dinâmica das micelas ao fluir pelo solvente, já a distância interlamelar é uma propriedade estática, e seria melhor comparada com uma distância intermicelar média.
+		Glicerina na concentração de 43\% m/m possui uma probabilidade reduzida de ligações de hidrogênio, portanto a percolação da rede de ligações de hidrogênio é reduzida.\cite{Parsons2001a, Dashnau2006}. Já açúcares são desestruturadores em baixas concentrações e estruturadores em altas. Para a glicose, a estruturação acontece em torno de 25-30\% m/m,\cite{Giangiacomo2006} já outros estudos mencionam 37\% m/m.\cite{Ueberreiter1982} Sacarose foi descrita em trabalhos anteriores\cite{Song2008a} como aditivo para aumento da separação interlamelar, semelhante à glicerina. É possível que a sacarose afete as micelas e não as bicamadas devido à maior área de contato das micelas com o solvente. Além disso, a reologia observa a dinâmica das micelas ao fluir pelo solvente, já a distância interlamelar é uma propriedade estática, e seria melhor comparada com uma distância intermicelar média.
 		
-		DMSO foi demonstrado como um agente desestruturador em altas concentrações e estruturador em baixas, e essas propriedades foram descritas como fracas frente à capacidade do DMSO em solubilizar moléculas de surfactante. % todo: o que significa isso exatamente?
-		Já o papel da ureia é inconclusivo de acordo com a literatura, com vários mecanismos propostos em estudos. % todo: mencionar os três mecanismos.
+		DMSO foi demonstrado como um agente desestruturador em altas concentrações e estruturador em baixas, e essas propriedades foram descritas como fracas frente à capacidade do DMSO em solubilizar moléculas de surfactante.\cite{Bertoluzza1979b}
+		Já o papel da ureia é inconclusivo de acordo com a literatura, com três mecanismos propostos em estudos.\cite{Dias2002}, a saber, um mecanismo direto, um mecanismo indireto, e simplesmente um solvente mais polar. O mecanismo direto estabelece que ligações de hidrogênio favoráveis entre água e ureia contribuem para a troca de moléculas de solvente ao redor de regiões hidrofóbicas, aumentando sua solubilidade. O mecanismo indireto se baseia na desestruturação da água, diminuindo o custo energético/penalidade entrópica para solubilizar grupos apolares. O terceiro mecanismo propõe que a ureia aumenta a estabilidade de íons livres e grupos polares em solução devido ao aumento da constante dielétrica do meio.\cite{Dias2002}
 		
-		Para seguir a lógica das discussões na outra seção, é necessário levantar uma propriedade que traduza o conceito de coesão do solvente para um número mensurável. O parâmetro de Gordon já foi utilizado na literatura com esse propósito, então ele será utilizado neste trabalho. Não foi utilizado o parâmetro de densidade de energia coesiva \(c\) devido à dificuldade de medir esse parâmetro. Porém, é necessário reforçar que \(G\) não traduz perfeitamente o conceito de estruturação, e será utilizado mais como uma maneira para facilitar a discussão. O parâmetro de Gordon já foi definido na \autoref{eqn:Gordon}.
+		Para seguir a lógica das discussões na outra seção, é necessário levantar uma propriedade que traduza o conceito de coesão do solvente para um número mensurável. O parâmetro de Gordon já foi utilizado na literatura com esse propósito, então ele será utilizado neste trabalho.\cite{Moya2007a, Abdel-Rahem2012} Não foi utilizado o parâmetro de densidade de energia coesiva \(c\) devido à dificuldade de medir esse parâmetro. Porém, é necessário reforçar que \(G\) não traduz perfeitamente o conceito de estruturação, e será utilizado mais como uma maneira para facilitar a discussão. O parâmetro de Gordon já foi definido na \autoref{eqn:Gordon}.
 		
-		Amostras com as composições desejadas foram preparadas e suas tensões superficiais foram medidas em quintuplicatas. As tensões obtidas estão na \autoref{fig:tensao_superficial_por_conc} e os valores do parâmetro de Gordon obtidos estão na \autoref{fig:param_gordon_por_conc}.
+		As tensões obtidas estão na \autoref{fig:tensao_superficial_por_conc} e os valores do parâmetro de Gordon obtidos estão na \autoref{fig:param_gordon_por_conc}. \index{propriedades!tensão superficial}
 		
 		\begin{figure}[h]
 			\centering
@@ -434,7 +416,7 @@
 			\textrm{1,3BD} < \textrm{DMSO} < \textrm{Glicerina} < \textrm{Ureia} < \textrm{Sacarose}
 		\end{equation*}
 		
-		Essa sequência possui grande correlação com o comportamento reológico (com exceção da ureia). 1,3BD, que possui a menor estruturação, reduz mais fortemente a viscosidade das micelas. Já a sacarose praticamente não afetou a estruturação do solvente, e também não afetou muito a viscosidade. Como mencionado, a ureia é uma exceção devido à grande alteração na constante dielétrica, que deve dessorver moléculas de salicilato das micelas e aumentar sua carga. Isso faz com que o mecanismo principal de relaxação seja a reptação na faixa de concentração estudada, então a viscosidade é sempre alta.
+		Essa sequência possui grande correlação com o comportamento reológico (com exceção da ureia). \BD, que possui a menor estruturação, reduz mais fortemente a viscosidade das micelas. Já a sacarose praticamente não afetou a estruturação do solvente, e também não afetou muito a viscosidade. Como mencionado, a ureia é uma exceção devido à grande alteração na constante dielétrica, que deve dessorver moléculas de salicilato das micelas e aumentar sua carga. Isso faz com que o mecanismo principal de relaxação seja a reptação na faixa de concentração estudada, então a viscosidade é sempre alta.
 		
 		Para compreender o efeito do parâmetro de Gordon nas titulações, foram criadas figuras comparativas, da mesma maneira que nas seções anteriores. Os comparativos para a formação de micelas gigantes e micelas esféricas estão nas Figuras \ref{fig:cwlm_dhwlm_por_g} e \ref{fig:cmc_dh_por_g}, respectivamente.
 		
@@ -480,59 +462,52 @@
 		\FloatBarrier
 		
 		\section{Interação dos aditivos com a superfície micelar}
-		% todo: pensar em desmembrar essas considerações e espalhar nas outras seções
 		
 		Uma propriedade importante que deve receber enfoque é a interação dos aditivos com a superfície micelar. Aditivos que interagem fortemente afetam muito os processos de autoassociação, como demonstra o salicilato de sódio. Efeitos semelhantes, mas menos intensos, podem complementar os parâmetros levantados até o momento.
 		
-		Estudos da influência de álcoois lineares na viscosidade de micelas gigantes de C\textsubscript{16}TASal e CPySal mostraram que quando álcoois de cadeia curta interagiam com a superfície micelar, agiam como um cossolvente e diminuiam o comprimento das micelas, logo diminuindo sua viscosidade. Caso 1,3BD se comporte de maneira similar, esse é mais um efeito que pode resultar nas quedas fortes da viscosidade. Um estudo mostra que o 1,3BD interage como cosurfactante em cristais líquidos, o que reforça a teoria de seu efeito em micelas gigantes. A reologia oscilatória (\autoref{sec:reologia_oscilatoria}) mostra que o módulo \(G\) para as soluções com 1,3BD é menor que nos outros aditivos, reforçando a ideia de que houve uma alteração na estrutura das micelas.
+		Estudos da influência de álcoois lineares na viscosidade de micelas gigantes de C\textsubscript{16}TASal e CPySal\cite{Bayer1986} mostraram que quando álcoois de cadeia curta interagiam com a superfície micelar, agiam como um cossolvente e diminuiam o comprimento das micelas, logo diminuindo sua viscosidade. Caso \BD{} se comporte de maneira similar, esse é mais um efeito que pode resultar nas quedas fortes da viscosidade. Um estudo mostra que o 1,3BD interage como cosurfactante em cristais líquidos, o que reforça a teoria de seu efeito em micelas gigantes.\cite{Iwanaga1998a} A reologia oscilatória (\autoref{sec:reologia_oscilatoria}) mostra que o módulo \(G\) para as soluções com \BD{} é menor que nos outros aditivos, reforçando a ideia de que houve uma alteração na estrutura das micelas. DMSO aparentemente se localiza na superfície micelar, logo abaixo da cabeça dos surfactantes, e altera a flexibilidade de lamelas,\cite{Notman2006} portanto é possível que o mesmo ocorra com as micelas gigantes, o DMSO iria aumentar a flexibilidade. A interação entre \Sal{} e DMSO na superfície merece mais estudos.
 		
-		A presença desses aditivos na superfície das micelas durante a relaxação também pode afetar a hidrofilicidade das mesmas, afetando o mecanismo de ``sticky contacts'', proposto por Hoffmann. Isso levaria a uma diminuição na viscosidade das micelas. O 1,3BD poderia se localizar na superfície micelar, aumentando sua hidrofilicidade, levando à uma diminuição na viscosidade. A glicerina, por ser mais polar, possivelmente não tem o mesmo efeito que 1,3BD, logo é menos eficaz em diminuir a viscosidade ou aumentar a \cmc. O DMSO pode se solubilizar na superfície micelar e interagir com os grupos metila, pois é menos polar que os outros aditivos, e isso pode resultar em uma diminuição maior na viscosidade que a glicerina, mas não tanto quanto o 1,3BD. 
+		A presença desses aditivos na superfície das micelas durante a relaxação também pode afetar a hidrofilicidade das mesmas, afetando o mecanismo de ``sticky contacts''. Isso levaria a uma diminuição na viscosidade das micelas. O \BD{} poderia se localizar na superfície micelar, aumentando sua hidrofilicidade, em comparação com as metilas do grupo trimetilamônio, levando à uma diminuição na viscosidade. A glicerina, por ser mais polar, possivelmente não se localizaria na mesma região que \BD, logo seria menos eficaz em diminuir a viscosidade ou aumentar a \cmc. O DMSO pode se solubilizar na superfície micelar e interagir com os grupos metila, pois é menos polar que os outros aditivos, e isso pode resultar em uma diminuição maior na viscosidade que a glicerina, mas não tanto quanto o 1,3BD. 
 		
-		%Ureia interage fortemente com a superfície micelar, mas não como agente intercalante. % todo: verificar o artigo na ACS Omega sobre o que eu falo sobre isso.
-	%	A concentração de ureia na superfície é cerca de 10-30\% menor do que no seio da solução. 
-		
-		% todo: refs
 		A sacarose diminui a \cmc{} de outros surfactantes, como SDS, \CTAB{} e Brij 35, pela interação de suas hidroxilas com a superfície micelar reduzindo a repulsão, e pela estruturação do solvente. Logo, a diminuição de \(n\) e \(\varepsilon\), que deveriam aumentar a \cwlm{}, são compensadas e a \cwlm{} é mantida. Não há uma diminuição de \cwlm, como houve de \cmc, pois o salicilato interage mais fortemente com a superfície micelar, deslocando as hidroxilas da sacarose, logo seu efeito é principalmente na estruturação do solvente.
 		
 		\section{Correlações simultâneas dos parâmetros com \cmc{} e \DHmic}
-		% todo: colocar que esse tipo de análise já foi utilizada para tentar descrever padrões em solventes
+		\label{sec:correlacao_params_cmc_dh}
 		
-		Até este momento, foram feitas correlações dos parâmetros do solvente com as propriedades calorimétricas mensuradas somente um a um, com raros casos explicados considerando-se outros parâmetros simultaneamente. Seria interessante tentar correlacionar todas essas propriedades simultaneamente, ou seja, realizar uma análise multivariada.
+		Até este momento, foram feitas correlações dos parâmetros do solvente com as propriedades calorimétricas mensuradas somente um a um, com raros casos explicados considerando-se outros parâmetros simultaneamente. Seria interessante tentar correlacionar todas essas propriedades simultaneamente, ou seja, realizar uma análise multivariada. Na literatura, existem estudos que tentam utilizar análise de fatores e regressões para classificar e estudar as propriedades de solventes na química orgânica\cite{Bohle1977,Chastrette1982, ReichardtSolvents} e também na área coloidal \cite{Moya2007a}. Esses tipos de análise, chamados de regressão linear múltipla, ou ordinária (\emph{OLS}), regressão de componentes principais \emph{PLS} e regressão dos mínimos quadrados parciais \emph{PLS} são principalmente utilizados na área da química analítica, chamada de Quimiometria.\cite{MarciaQuimiometria}
 		
-		Esse tipo de análise, tanto utilizando métodos de regressão linear múltipla, ou ordinária (\emph{OLS}), e análise de componentes principais (\emph{PCA} e \emph{PLS}) são principalmente utilizados na área da química analítica, chamada de Quimiometria, mas também são utilizadas para classificar solventes orgânicos. %todo: refs
-		Uma das necessidades para esse tipo de análise é que as variáveis sejam verdadeiramente independentes umas das outras, aditivas e relevantes ao problema em questão. Como pode ser visto pela \autoref{eqn:n_epsilon}, há certa colinearidade entre o índice de refração e a constante dielétrica. O que as diferencia é fundamentalmente o efeito do solvente e suas interações % todo: ref [144] do capítulo 3, um livro que eu não achei
+		Uma das necessidades para esse tipo de análise é que as variáveis sejam verdadeiramente independentes umas das outras, aditivas e relevantes ao problema em questão. Como pode ser visto pela \autoref{eqn:permissividade_e_indice_refrac}, há certa colinearidade entre o índice de refração e a constante dielétrica. O que as diferencia é fundamentalmente o efeito do solvente e suas interações.
 		
-		Estudos de classificação dos solventes utilizam os parâmetros já mencionados, e vários outros, como pontos de ebulição, coeficientes de partição, volume molar, constante dielétrica, índice de refração, energia de HOMO e LUMO, parâmetro \(E_T(30)\) obtidos a partir de uma sonda solvatocrômica, parâmetro de Hildebrand e momento de dipolo. % todo: colocar algumas referências aqui, como [Chastrette 1985]
-		Não necessariamente esses parâmetros são independentes, o que resultaria numa redução da dimensão dos dados.
+		Estudos de classificação dos solventes utilizam os parâmetros já mencionados, e vários outros, como pontos de ebulição, coeficientes de partição, volume molar, constante dielétrica, índice de refração, energia de HOMO e LUMO, parâmetro \(E_T(30)\) obtidos a partir de uma sonda solvatocrômica, parâmetro de Hildebrand e momento de dipolo. Não necessariamente esses parâmetros são independentes, o que resultaria numa redução da dimensão dos dados.\cite{ReichardtSolvents}
 		
-		O objetivo desta seção é facilitar a interpretação dos resultados calorimétricos através dos parâmetros da solução escolhidos (\(n\), \(\varepsilon\), \(G\)), e não realizar uma descrição quimiométrica completa, nem atribuir muitos significados físicos aos coeficientes encontrados. Não serão mostrados os resultados desses ajustes para reologia (utilizando a viscosidade como variável dependente, os parâmetros e concentração de NaSal como variável dependente) e calorimetria de micelas gigantes (utilizando \cwlm{} e \DHwlm{} como variáveis dependentes e os parâmetros como variáveis dependentes) pois não foi observado um ajuste bom.
+		O objetivo desta seção é facilitar a interpretação dos resultados calorimétricos através dos parâmetros da solução escolhidos (\(n\), \(\varepsilon\), \(G\)), e não realizar uma descrição quimiométrica completa, nem atribuir muitos significados físicos aos coeficientes encontrados. Não serão mostrados os resultados desses ajustes para reologia (utilizando a viscosidade como variável dependente, os parâmetros e concentração de NaSal como variável dependente) e calorimetria de micelas gigantes (utilizando \cwlm{} e \DHwlm{} como variáveis dependentes e os parâmetros como variáveis dependentes) pois não foram observadas boas correlações.
 		
 		Inicialmente, será utilizado um método quimiométrico bastante empregado, o PLS (\emph{Partial Least Squares}), depois será utilizado um método de regressão linear múltipla, mais simples, e por último as misturas binárias serão organizadas em grupos de acordo com suas similaridades, através de um dendrograma.
 		
-		\subsection{PLS}
+		\subsection{PLS} \index{partial least squares@\textsl{partial least squares}}
 		
-		O método de PLS (\emph{Partial Least Squares}) é baseado no método de PCR (\emph{Principal Component Regression}). No PCR, uma matriz as informações da amostra, \textbf{X} é decomposta em duas matrizes, uma denominada escores, \textbf{T}\textsubscript{A}, e outra matriz de pesos, \textbf{L}\textsubscript{A}, e uma matriz de resíduos \textbf{E} (\autoref{eqn:decomp_PCR}).
+		Aqui será dada uma breve descrição do método de PLS (\emph{Partial Least Squares}). Mais informações podem ser encontradas no excelente livro de \citeauthor{MarciaQuimiometria}. O PLS é baseado no método de PCR (\emph{Principal Component Regression}). No PCR, uma matriz as informações da amostra, \textbf{X} é decomposta em duas matrizes, uma denominada escores, \textbf{T}\textsubscript{A}, e outra matriz de pesos, \textbf{L}\textsubscript{A}, e uma matriz de resíduos \textbf{E},
 		
 		\begin{equation}
 			\mathbf{X} = \mathbf{T}_A \mathbf{L}_A^T + \mathbf{E}
 			\label{eqn:decomp_PCR}
 		\end{equation}
 		
-		A partir da matriz de pesos, que contém a informação dos componentes principais, realiza-se um ajuste mostrado na \autoref{eqn:modelo_PCR}.
+		A partir da matriz de pesos, que contém a informação dos componentes principais, realiza-se um ajuste de \cite{MarciaQuimiometria}
 		
 		\begin{equation}
 			\mathbf{y} = \mathbf{T}_A\mathbf{q} + \mathbf{e}
 			\label{eqn:modelo_PCR}
 		\end{equation}
 		
-		\noindent onde \textbf{y} é a matriz com as variáveis dependentes que se pretende ajustar, \textbf{q} é o vetor de regressão, que contém os pesos de cada componente principal para realizar o ajuste, e \textbf{e} é uma matriz de resíduos. Outra maneira de se representar essa equação é por uma maneira estendida (\autoref{eqn:modelo_PCR_estendido}).
+		\noindent onde \textbf{y} é a matriz com as variáveis dependentes que se pretende ajustar, \textbf{q} é o vetor de regressão, que contém os pesos de cada componente principal para realizar o ajuste, e \textbf{e} é uma matriz de resíduos. Outra maneira de se representar essa equação é por uma maneira estendida
 		
 		\begin{equation}
 			\mathbf{y} = q_1\mathbf{t}_1 + \cdots + q_A\mathbf{t}_A + \mathbf{e}_y
 			\label{eqn:modelo_PCR_estendido}
 		\end{equation}
 		
-		O vetor de regressão \textbf{q} pode ser estimado pelo método dos mínimos quadrados, o que resulta na \autoref{eqn:estimativa_regress_q}.
+		O vetor de regressão \textbf{q} pode ser estimado pelo método dos mínimos quadrados, o que resulta em
 		
 		\begin{equation}
 			\hat{\textbf{q}} = \left(  \mathbf{T}_A^T \mathbf{T}_A  \right)^{-1}\mathbf{y}
@@ -542,7 +517,9 @@
 		A matriz de dados nesse caso é decomposta pela decomposição de valores singulares (\emph{singular value decomposition}, SVD). Porém, para a análise de PLS, uma restrição é imposta durante a decomposição da matriz de dados. Ocorre um compromisso entre a explicação da variância em \textbf{X} e a previsão da variável independente \textbf{y}, então um pouco da propriedade de interesse é colocada no cálculo das variáveis latentes. O algoritmo utilizado para isso neste trabalho foi o algoritmo de NIPALS, proposto por Wold.
 		
 		% todo: pensar se eu ponho as eqs 74, 80 do livro da Márcia aqui.
-		Foram feitas análises de PLS  com o índice de refração, constante dielétrica e parâmetro de Gordon para tentar prever a \cmc{} e a \DHmic. Utilizou-se dois componentes (de 3) em ambos os casos, os dados foram autoescalados de modo a garantir que todas as parâmetros tenham o mesmo peso no modelo final. Utilizou-se validação cruzada com 1 elemento, e sem validação cruzada, e o vetor de previsão permaneceu igual. Essas análises foram realizadas com o software Pirouette 3.11, e comparadas com uma análise foi feita utilizando pacote \emph{sklearn}, em Python. Esse pacote é livre, ao contrário do Pirouette, então qualquer um pode reproduzir essas análises. Os resultados foram absolutamente iguais, então não serão mostradas as figuras resultantes de ambos os métodos, somente daqueles obtidos no Pirouette. As retas de \cmc{} e \DHmic{} medidos por \cmc{} e \DHmic{} observados estão presentes nas Figuras \ref{fig:pls_cmc_pirouette} e \ref{fig:pls_dh_pirouette}, respectivamente.
+		Foram feitas análises de PLS  com o índice de refração, constante dielétrica e parâmetro de Gordon para tentar prever a \cmc{} e a \DHmic. Utilizou-se dois componentes (de 3) em ambos os casos, os dados foram autoescalados de modo a garantir que todas as parâmetros tenham o mesmo peso no modelo final. Logo, os valores de constante dielétrica, na faixa de 50-80, não teriam um peso 50 vezes maior do que os valores de índice de refração, que estão entre 1 e 1,5. 
+		
+		Utilizou-se validação cruzada com 1 elemento, e sem validação cruzada, e o vetor de previsão permaneceu igual. Essas análises foram realizadas com o software Pirouette 3.11, e comparadas com uma análise foi feita utilizando pacote \emph{sklearn}, em Python. Esse pacote é livre, ao contrário do Pirouette, então qualquer um pode reproduzir essas análises. Os resultados foram absolutamente iguais, então não serão mostradas as figuras resultantes de ambos os métodos, somente daqueles obtidos no Pirouette. As retas de \cmc{} e \DHmic{} medidos por \cmc{} e \DHmic{} observados estão presentes nas Figuras \ref{fig:pls_cmc_pirouette} e \ref{fig:pls_dh_pirouette}, respectivamente.
 		
 		\begin{figure}[h]
 			\centering
@@ -558,7 +535,7 @@
 			\label{fig:pls_dh_pirouette}
 		\end{figure} 
 		
-		Pelas curvas de ajuste e do modelo ideal de \cmc, podemos observar que as amostras que mais divergem da região central são aquelas com alta concentração de aditivo, provavelmente porque a divergência entre suas propriedades e de água pura são muito grandes, e o processo de autoassociação é muito alterado. Além disso, observamos que todas as medidas com 1,3BD estão distantes da reta 1:1, e as concentrações de 5 a 20 \% m/m estão paralelas. Isso indica que esse aditivo possui um efeito adicional, aparentemente constante nessa faixa de concentração, que resulta em valores de \cmc{} menores do que o esperado, observando somente os parâmetros escolhidos. Possivelmente, esse é consequência da tendência do 1,3BD de interagir na superfície micelar, diminuir a repulsão e facilitar a autoassociação.
+		Pelas curvas de ajuste e do modelo ideal de \cmc, podemos observar que as amostras que mais divergem da região central são aquelas com alta concentração de aditivo, provavelmente porque a divergência entre suas propriedades e de água pura são muito grandes, e o processo de autoassociação é muito alterado. Além disso, observamos que todas as medidas com 1,3BD estão distantes da reta 1:1, e as concentrações de 5 a 20 \% m/m estão paralelas. Isso indica que esse aditivo possui um efeito adicional, aparentemente constante nessa faixa de concentração, que resulta em valores de \cmc{} menores do que o esperado, observando somente os parâmetros escolhidos. Possivelmente, esse é consequência da tendência do 1,3BD de interagir na superfície micelar, diminuir a repulsão e facilitar a autoassociação. Seria interessante realizar ajustes de \(\Delta G^\circ_\mathrm{mic}\), ao invés de \cmc, como realizaram outros estudos\cite{Abdel-Rahem2012, Moya2007a}, mas seria necessário estimar o grau de ionização das micelas (\autoref{eqn:itc_DeltaG_mic}), o que exigiria mais estudos utilizando condutividade elétrica.
 		
 		A previsão de \DHmic{} é melhor que de \cmc, e os compostos que mais fogem do modelo são, novamente, as soluções com maior concentração de aditivo. Em especial, temos 50\% de sacarose, 60\% de glicerina e 30\% de 1,3BD.
 		
@@ -594,9 +571,9 @@
 		Observamos que somente o índice de refração possui um sinal negativo, logo um aumento de \(n\) resulta numa diminuição de \DHmic{} (tornando-se mais negativo). Por outro lado, \(G\) e \(\varepsilon\) mostram que aumentos em seus valores resultam em uma diminuição na amplitude de \DHmic. 
 		
 		\FloatBarrier
-		\subsection{OLS}
+		\subsection{OLS} \index{ordinary least squares@\textsl{ordinary least squares}}
 		
-		Outra metodologia que pode ser utilizada para realizar essas correlações é a dos mínimos quadrados ordinários (\emph{ordinary least squares}, OLS). Esse método é mais simples do que o PLS, pois não ocorre uma decomposição em componentes principais. Neste caso, o ajuste é feito reduzindo-se os mínimos quadrados da \autoref{eqn:ols_modelo_matricial}.
+		Outra metodologia que pode ser utilizada para realizar essas correlações é a dos mínimos quadrados ordinários (\emph{ordinary least squares}, OLS). Esse método é mais simples do que o PLS, pois não ocorre uma decomposição em componentes principais. Neste caso, o ajuste é feito reduzindo-se os mínimos quadrados de \cite{MarciaQuimiometria}
 	
 		\begin{equation}
 			\mathbf{A} = \mathbf{CB} + \mathbf{E}
@@ -605,14 +582,14 @@
 		
 		\noindent onde \textbf{A} é a matriz de resposta \(I \times J\), neste caso, ou \cmc{} ou \DHmic, \textbf{B} é uma matriz \(L \times J\) com os coeficientes que fornecem os pesos para as variáveis, \textbf{C} é uma matriz \(I \times L\) com as variáveis independentes e \textbf{E} é uma matriz \(I \times J\) com os erros de cada ponto. \(I\) é o número de amostras estudado, \(L\) é o número de coeficientes esperado e \(J\) é o número de variáveis independentes utilizado. A nomenclatura pode ser comparada à lei de Beer, \(A = (\varepsilon b)c + \mathrm{erro}\).
 		
-		Para o estudo da \cmc, a \autoref{eqn:ols_modelo_cmc} pode ser reduzida para a \autoref{eqn:ols_modelo_cmc}.
+		Para o estudo da \cmc, a \autoref{eqn:ols_modelo_cmc} pode ser reduzida para
 		
 		\begin{equation}
 		\textrm{CMC} = a_G \cdot G + a_\varepsilon \cdot \varepsilon + a_n \cdot n + e
 		\label{eqn:ols_modelo_cmc}
 		\end{equation}
 		
-		Esse tipo de ajuste é igual ao ajuste de uma equação linear, porém com mais de uma variável independente, e é mais recomendado quando o número de variáveis independentes é pequeno.
+		Esse tipo de ajuste é igual ao ajuste de uma equação linear, porém com mais de uma variável independente, e é mais recomendado quando o número de variáveis independentes é pequeno.\cite{MarciaQuimiometria}
 		
 		Foram feitos ajustes por mínimos quadrados ordinários tanto para a previsão da \cmc{} quanto a \DHmic. Os resultados dos ajustes estão nas Figuras \ref{fig:ols_cmc_python} e \ref{fig:ols_dh_python}.
 		
@@ -630,7 +607,7 @@
 			\label{fig:ols_dh_python}
 		\end{figure}
 
-		Para realizar as análises e criar a \autoref{fig:ols_cmc_python}, utilizou-se o código \ref{lst:ols_cmc_python}.
+		Para realizar as análises e criar a \autoref{fig:ols_cmc_python}, utilizou-se o código na listagem \ref{lst:ols_cmc_python}.
 		
 		\begin{listing}[h]
 			\inputminted{python}{./python/ols_cmc_statsmodels.py}
@@ -675,11 +652,11 @@
 		
 		\FloatBarrier
 		
-		\section{Visualização das semelhanças dos solventes}
+		\section{Visualização das semelhanças dos solventes} \index{dendrograma}
 		
-		Uma maneira de visualizar a similaridade das misturas binárias é utilizando um dendrograma. Esse tipo de gráfico é produzido calculando-se a distância entre pontos. Neste caso, cada ponto, representando cada mistura, está em um espaço tridimensional, de coordenadas \(n\), \(\varepsilon\) e \(G\). Inicialmente, calcula-se a distância entre os pontos, e agrupa-se os pontos que forem mais próximos, e repete-se o cálculo de distância, agora entre os grupos. O método de cálculo para a distância entre grupos varia, podendo ser feito, por exemplo, pelo ponto médio ou pela média das distâncias de todos os pontos. % todo: a completa é essa última descrita?
+		Uma maneira de visualizar a similaridade das misturas binárias é utilizando um dendrograma. Esse tipo de gráfico é produzido calculando-se a distância entre pontos. Neste caso, cada ponto, representando cada mistura, está em um espaço tridimensional, de coordenadas \(n\), \(\varepsilon\) e \(G\). Inicialmente, calcula-se a distância entre os pontos, e agrupa-se os pontos que forem mais próximos, e repete-se o cálculo de distância, agora entre os grupos. O método de cálculo para a distância entre grupos varia, podendo ser feito, por exemplo, pelo vizinho mais próximo, pelo vizinho mais distante, ou pela média. \cite{MarciaQuimiometria}
 		
-		Dito isso, foi montado um dendrograma das misturas binárias, que está presente na \autoref{fig:dendrograma}. Do lado esquerdo do gráfico, os solventes estão sendo vistos com grande ``criteriosidade'', onde pequenas diferenças conseguem separá-los. À medida que se anda para a direita, a lupa se afasta e os solventes começam a se agrupar, até que todos os solventes são vistos como um só. A reta vertical simboliza o ponto onde a semelhança entre as misturas é de 50\%. Nessa região, os solventes podem ser separados em 6 grupos distintos, que foram coloridos.
+		Dito isso, foi montado um dendrograma das misturas binárias, que está presente na \autoref{fig:dendrograma}. Do lado esquerdo do gráfico, os solventes estão sendo vistos com grande ``criteriosidade'', onde pequenas diferenças conseguem separá-los. À medida que se anda para a direita, a lupa se afasta e os solventes começam a se agrupar, até que todos os solventes são vistos como um só. A reta vertical simboliza o ponto onde a semelhança entre as misturas é de 50\%. Nessa região, os solventes podem ser separados em 6 grupos distintos, que foram coloridos.\cite{MarciaQuimiometria}
 		
 		\begin{figure}[h]
 			\centering
@@ -714,30 +691,29 @@
 		
 		De modo a observar o efeito de todos os parâmetros simultaneamente, foram realizados ajustes para se obter equações empíricas relacionando os parâmetros às propriedades. Foi possível correlacionar somente as concentrações micelares críticas (\cmc) e entalpias de micelização (\DHmic) aos parâmetros escolhidos. Isso ocorreu possivelmente pela maior simplicidade do sistema sem NaSal.
 		
-		Como perspectivas futuras, pode-se estudar outros aditivos para verificar o quanto os parâmetros levantados conseguem explicar outros comportamentos. Além disso, quantificar a concentração de aditivo na superfície micelar, mostrar como esses aditivos interagem com as moléculas de surfactante, com as moléculas de salicilato, e seus efeitos na cinética de quebra e recombinação micelar aprofundariam o entendimento sobre micelas gigantes. Frequentemente micelas gigantes são empregadas em produtos de cuidados pessoais que possuem uma grande quantidade de aditivos, logo entender como esses aditivos afetam as micelas é de grande interesse comercial. Por exemplo, 1,3-butanodiol é um aditivo utilizado comercialmente como XYZ, porém se adicionado à uma formulação de xampu, notaria-se uma queda considerável na viscosidade, o que pode ser explicado pelos efeitos do 1,3BD no solvente e nas micelas.
-
+		Como perspectivas futuras, pode-se estudar outros aditivos para verificar o quanto os parâmetros levantados conseguem explicar outros comportamentos. Além disso, quantificar a concentração de aditivo na superfície micelar, mostrar como esses aditivos interagem com as moléculas de surfactante, com as moléculas de salicilato, e seus efeitos na cinética de quebra e recombinação micelar aprofundariam o entendimento sobre micelas gigantes.
+		
 		% todo: criar correlações agora utilizando outros parâmetros para índice de refração e cte dielétrica. Utilizar, por exemplo, (\varepsilon_r - 1 )/(2 \varepsilon_r + 1) e refração molar (V_m (n^2 - 1)/(n^2 - 2)) e cte dielétrica x dipolo, energia coesiva (raiz quadrada do param de hildebrand)
 		% todo: tentar correlacionar viscosidades utilizando os parâmetros, mais a conc de salicilato como variáveis independentes
 		
-	\chapter{Reologia oscilatória}
+	\chapter{Reologia oscilatória} \index{resultados!reologia oscilatória}
 	\label{sec:reologia_oscilatoria}
 
 		Os aditivos afetam a viscosidade das soluções, como visto na \autoref{sec:efeito_aditivos_hidrofilicos}. Neste capítulo, será estudado o efeito dos aditivos na reologia oscilatória das micelas gigantes, que está relacionada aos processos de relaxação das micelas. Para realizar isso, foram escolhidas algumas concentrações de base, localizadas nos picos de viscosidade e no vale. Essas concentrações são 60, 100 e 260\mM{} de NaSal. Na ausência de aditivo, também foram analisadas as concentrações de 35, 72, 189 e 365 \mM.
 		
-		As curvas foram ajustadas pelos modelos de Maxwell (Equações \ref{eqn:Maxwell_G1_def}, \ref{eqn:Maxwell_G2_def}), Oldroyd (Equações \ref{eqn:Maxwell_G1_def}, \ref{eqn:modelo_oldroyd_g2}), Jeffreys (Equações \ref{eqn:modelo_jeffreys_g1}, \ref{eqn:modelo_jeffreys_g2}), um modelo com dois elementos Maxwellianos, que será chamado de Dois-Modos (Equações \ref{eqn:modelo_doismodos_g1}, \ref{eqn:modelo_doismodos_g2}) e pelo recém proposto modelo de García-Saraji (Equações \ref{eqn:garcia_saraji_g1}, \ref{eqn:garcia_saraji_g2}). Dos ajustes, foram obtidos os módulos no platô, \(G\), e os tempos de relaxação \(\tau_\mathrm{rel}\), para cada dupla G' e G''. Além disso, foram calculados os coeficientes de determinação \(R^2\) (\autoref{eqn:R2}), e os coeficientes de determinação ajustado \(R\mathrm{'}^{2}\) (\autoref{eqn:R2lin}). Esse tipo de estudo é utilizado na literatura para se avaliar a qualidade de um modelo. %ref García Saraji
-		Com essas informações, foram criados gráficos de Cole-Cole, onde se analisa G' em função de G'', normalizados por \(G\).
+		As curvas foram ajustadas pelos modelos de Maxwell (Equações \ref{eqn:Maxwell_G1_def}, \ref{eqn:Maxwell_G2_def}), Oldroyd (Equações \ref{eqn:Maxwell_G1_def}, \ref{eqn:modelo_oldroyd_g2}), Jeffreys (Equações \ref{eqn:modelo_jeffreys_g1}, \ref{eqn:modelo_jeffreys_g2}), um modelo com dois elementos Maxwellianos, que será chamado de Dois-Modos (Equações \ref{eqn:modelo_doismodos_g1}, \ref{eqn:modelo_doismodos_g2}) e pelo recém proposto modelo de García-Saraji (Equações \ref{eqn:garcia_saraji_g1}, \ref{eqn:garcia_saraji_g2}). Dos ajustes, foram obtidos os módulos no platô, \(G\), e os tempos de relaxação \(\tau_\mathrm{rel}\), para cada dupla G' e G''. Além disso, foram calculados os coeficientes de determinação \(R^2\) (\autoref{eqn:R2}), e os coeficientes de determinação ajustado \(R\mathrm{'}^{2}\) (\autoref{eqn:R2lin}).\cite{MarciaQuimiometria} Esse tipo de estudo é utilizado na literatura para se avaliar a qualidade de um modelo.\cite{Garcia2018} Com essas informações, foram criados gráficos de Cole-Cole, onde se analisa G' em função de G'', normalizados por \(G\).
 		
 		\begin{equation}
 			R^2 = 1 - \dfrac{SQ_\mathrm{res}}{SQ_\mathrm{Tcor}}
 			\label{eqn:R2}
-		\end{equation}
+		\end{equation} \index{coeficiente de determinação \(R^2\)}
 		
 		\begin{equation}
 			R\mathrm{'}^{2} = 1 - \dfrac{MQ_\mathrm{res}}{MQ_\mathrm{Tcor}}
 			\label{eqn:R2lin}
-		\end{equation}
+		\end{equation} \index{coeficiente de determinação ajustado \(R'^2\)}
 		
-		\noindent onde \(SQ_\mathrm{res}\) é a soma quadrática dos resíduos, \(SQ_\mathrm{Tcor}\) é a soma quadrática total corrigida, \(MQ_\mathrm{res}\) é a média quadrática dos resíduos e \(MQ_\mathrm{Tcor}\) é a média quadrática total corrigida. Esses termos estão definidos nas equações \ref{eqn:SQres} --- \ref{eqn:MQTcor}.
+		\noindent onde \(SQ_\mathrm{res}\) é a soma quadrática dos resíduos, \(SQ_\mathrm{Tcor}\) é a soma quadrática total corrigida, \(MQ_\mathrm{res}\) é a média quadrática dos resíduos e \(MQ_\mathrm{Tcor}\) é a média quadrática total corrigida. Esses termos estão definidos nas equações \ref{eqn:SQres} --- \ref{eqn:MQTcor}.\cite{MarciaQuimiometria}
 		
 		\begin{equation}
 			SQ_\mathrm{res} = \sum_{i=1}^{I} \left( y_i - \hat{y}_i \right) ^ 2
@@ -778,13 +754,13 @@
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/reologia/oscilatorio_agua}
-			\caption[Reogramas para água]{G' (símbolos cheios) e G''(símbolos vazados) em função da frequência de perturbação \(\omega\), em rad.s\menosUm, para amostras com CTAB 100\mM{} e NaSal em concentrações crescentes. Para facilitar a visualização, o ponto de cruzamento para cada curva está indicado por uma reta horizontal. As curvas de 189 e 365\mM{} de NaSal se sobrepuseram.}
+			\caption[Reogramas para água]{G' (símbolos cheios) e G''(símbolos vazados) em função da frequência de perturbação \(\omega\), em rad.s\menosUm, para amostras com \CTAB{} 100\mM{} e NaSal em concentrações crescentes. Para facilitar a visualização, o ponto de cruzamento para cada curva está indicado por uma reta horizontal. As curvas de 189 e 365\mM{} de NaSal se sobrepuseram.}
 			\label{fig:oscilatorio_agua}
 		\end{figure}
 		
 		É possível ver que todas as curvas de G' atingem aproximadamente o mesmo valor em frequências altas, onde se encontra o módulo no platô, \(G\). Além disso, pode-se observar que o ponto de cruzamento, indicativo do inverso tempo de relaxação, também oscila, sendo mínimo em 60\mM, o máximo de viscosidade, e máximo em 100\mM, o mínimo de viscosidade. 
 		
-		Além disso, é possível observar que em frequências altas, os valores de G' e G'', principalmente, começam a oscilar. Essa oscilação não é real, e é devido a limitações de medida do equipamento. Para fazer os ajustes, todos os pontos a partir do momento em que começam a oscilar foram descartados. Os pontos que aparentam não seguir os modelos, mas que não mostram oscilação, foram mantidos. Os ajustes de Maxwell realizados para essas curvas estão nas Figuras \ref{fig:oscilatorio_agua_maxwell1} e \ref{fig:oscilatorio_agua_maxwell2}. O código para esse ajuste se encontra na listagem \ref{lst:ajuste_maxwell}. Os outros modelos seguiram o mesmo modelo, variando-se as equações de acordo com o modelo.
+		Além disso, é possível observar que em frequências altas, os valores de G' e G'', principalmente, começam a oscilar. Essa oscilação não é real, e é devido a limitações de medida do equipamento. Para fazer os ajustes, todos os pontos a partir do momento em que começam a oscilar foram descartados. Os pontos que aparentam não seguir os modelos, mas que não mostram oscilação, foram mantidos. Os ajustes de Maxwell realizados para essas curvas estão nas Figuras \ref{fig:oscilatorio_agua_maxwell1} e \ref{fig:oscilatorio_agua_maxwell2}. O código para esse ajuste se encontra na listagem \ref{lst:ajuste_maxwell}, no fim desta seção. Os outros modelos seguiram o mesmo modelo, variando-se as equações de acordo com o modelo.
 				
 		\begin{figure}[h]
 			\begin{subfigure}[t]{0.5\textwidth}
@@ -837,7 +813,7 @@
 			\label{fig:oscilatorio_agua_maxwell2}
 		\end{figure}
 	
-		Na \autoref{fig:oscilatorio_agua_35}, o ponto de cruzamento visual e o calculado divergem significantemente. Além disso, é observado um aumento de G'' em altas frequências não previsto pelo modelo, e G' também possui uma divergência da planaridade. Isso indica que não há somente um tempo de relaxação nesse sistema, e que outros modos de relaxação se tornam mais evidentes à medida que a frequência aumenta. O mesmo pode ser observado, mas em menor escala, para a \autoref{fig:oscilatorio_agua_60}. % todo: comparar com o artigo do Hoffmann
+		Na \autoref{fig:oscilatorio_agua_35}, o ponto de cruzamento visual e o calculado divergem significantemente. Além disso, é observado um aumento de G'' em altas frequências não previsto pelo modelo, e G' também possui uma divergência da planaridade. Isso indica que não há somente um tempo de relaxação nesse sistema, e que outros modos de relaxação se tornam mais evidentes à medida que a frequência aumenta. O mesmo pode ser observado, mas em menor escala, para a \autoref{fig:oscilatorio_agua_60}.
 		
 		As outras amostras seguiram consideravelmente bem o modelo de Maxwell, com valores de \(R^2\) próximos à unidade. Além disso, observa-se que não há uma diferença significativa entre \(R^2\) e \(R\mathrm{'}^2\). O mesmo ocorreu para os outros modelos, então esse parâmetro não será utilizado.
 		
@@ -866,7 +842,7 @@
 
 		\begin{table}[h]
 	\IBGEtab{%
-		\caption{Módulos no platô, \(G\) em Pa, em função da concentração de NaSal em \mM, de todos os ajustes}
+		\caption{Módulos no platô \(G\), em Pa, em função da concentração de NaSal em \mM, de todos os ajustes}
 		\label{tab:g0_agua}
 	}%
 	{%
@@ -1005,9 +981,10 @@
 		}{}
 	\end{table}  
 
-	Os valores de módulo no platô foram todos próximos em todos os modelos, exceto pelas primeiras concentrações, quando a rede micelar ainda está sendo formada. Isso já foi observado anteriormente, e que \(G\) essencialmente não varia entre os dois picos, indicando que a estrutura lamelar se mantém constante.
+	Os valores de módulo no platô foram todos próximos em todos os modelos, exceto pelas primeiras concentrações, quando a rede micelar ainda está sendo formada. Isso já foi observado anteriormente\cite{Rehage1991}, e que \(G\) essencialmente não varia entre os dois picos, indicando que a estrutura lamelar se mantém constante.
+	
 	% todo: Rehage e Hoffmann em 1991 mostraram que não muda muito entre os picos. Transição sol-gel. O módulo é dependente da concentração de partículas ou o número de pontos de crosslinking por unidade de volume. Valor constante de G0 indica que a estrutura micelar não muda em função da força iônica. No mesmo artigo, ele fala que no segundo máximo as micelas ficaram negativas.
-	No modelo de Dois-Modos, não há uma restrição para os valores de \(G_{0,1}\) e \(G_{0,2}\), e observa-se que os dois módulos variam entre um valor perto de 50 Pa e outro entre 3-5 Pa, praticamente insignificante. Esse módulo existe, provavelmente, para ajustar a região final de G'', onde há uma divergência para cima. A amostra com 60 \mM{} de NaSal, porém, mostrou dois valores bastante diferentes de \(G\) quando comparados aos outros mas, se somados, resultam no módulo dos outros modelos, mostrando que os dois elementos do modelo são, de fato, aditivos. Isso ocorreu provavelmente porque há uma região pequena antes do cruzamento, então não foi possível ajustar muito bem a curva por completo. Adquirir pontos antes do cruzamento nesse caso é, experimentalmente, muito difícil, pois exigiria muitas horas para completar uma análise, e a secagem da amostra seria difícil de ser adequadamente prevenida. Os desvios de todos os parâmetros estão semelhantes, e são maiores para as amostras longe da concentração de 100 \mM. Uma exceção é, novamente, o modelo de Dois-Modos, que possui incertezas maiores, possivelmente porque variações nesses parâmetros não resultam em mudanças significativas na qualidade do ajuste, já que utilizar um único parâmetro foi adequado.
+	No modelo de Dois-Modos, não há uma restrição para os valores de \(G_{0,1}\) e \(G_{0,2}\), e observa-se que os dois módulos variam entre um valor perto de 50 Pa e outro entre 3-5 Pa, praticamente insignificante. Esse segundo módulo, provavelmente, está auxiliando no ajuste da região final de G'', onde há uma divergência para cima de G' e G''. A amostra com 60 \mM{} de NaSal, porém, mostrou dois valores bastante diferentes de \(G\) quando comparados aos outros mas, se somados, resultam no módulo dos outros modelos, mostrando que os dois elementos do modelo são, de fato, aditivos. Isso ocorreu provavelmente porque há uma região pequena antes do cruzamento, então não foi possível ajustar muito bem a curva por completo. Adquirir pontos antes do cruzamento nesse caso é, experimentalmente, muito difícil, pois exigiria muitas horas para completar uma análise, e a secagem da amostra seria difícil de ser adequadamente prevenida. Os desvios de todos os parâmetros estão semelhantes, e são maiores para as amostras longe da concentração de 100 \mM. Uma exceção é, novamente, o modelo de Dois-Modos, que possui incertezas maiores, possivelmente porque variações nesses parâmetros não resultam em mudanças significativas na qualidade do ajuste, já que utilizar um único parâmetro foi adequado.
 	
 	Os valores de tempo de relaxação seguem o mesmo perfil de viscosidade, como pode ser visto na \autoref{fig:oscilatorio_agua_tr}. Seus valores também estão todos com valores próximos entre os modelos, com exceção do modelo de Dois Modos e de García-Saraji. No modelo Dois Modos, um dos tempos se aproxima dos tempos dos outros modelos, e o outro tempo é diferente. Com 60 \mM, o mesmo fenômeno ocorreu com os tempos de relaxação, mas neste caso a média dos dois tempos (128 e 38), 83, é parecido com os outros tempos de relaxação. Os tempos de relaxação para as amostras com 35 e 60 \mM{} do modelo de García-Saraji demonstraram grande variabilidade em comparação com os outros modelos, em especial a amostra com 60 \mM. Isso pode se dever à falta de pontos antes do cruzamento, sendo que o modelo necessita do perfil completo de viscosidade para estimar como o tempo de relaxação varia com a frequência. O segundo tempo de relaxação do modelo de Jeffreys, presente na \autoref{tab:outros_params_agua}, possui valores muito baixos e com incerteza alta, mostrando que esse parâmetro não é relevante ao ajuste, e também é diferente do segundo tempo de relaxação do modelo Dois-Modos. A viscosidade em frequências altas, do modelo de Oldroyd, que visa ajustar a região de alta frequência de G'', também não teve um ajuste muito bom, com altas incertezas.
 	
@@ -1044,7 +1021,7 @@
 		\label{fig:ajuste_gs_tm_35}
 	\end{figure}
 	
-	Os parâmetros \(a\) e \(b\) do modelo de García-Saraji estão próximos aos valores apresentados pelos autores no artigo onde o modelo foi proposto. % ref García-Saraji
+	Os parâmetros \(a\) e \(b\) do modelo de García-Saraji estão próximos aos valores apresentados pelos autores no artigo onde o modelo foi proposto.\cite{Garcia2018}
 	
 	Utilizando os valores de \(G\) calculados pelos modelos, foi construído um diagrama de Cole-Cole, presente na \autoref{fig:colecole_agua}. Utilizou-se o \(G\) do modelo de Maxwell, já que os valores entre modelos não variaram muito. Esse tipo de diagrama possui um formato semicircular caso o conjunto de dados seguir bem o modelo de Maxwell. Essa é uma maneira alternativa de se visualizar o quão bons são os ajustes. É possível criar um diagrama sem normalizar G' e G'' por \(G\), mas isso torna a comparação entre sistemas diferentes mais difícil.
 
@@ -1055,7 +1032,7 @@
 			\label{fig:colecole_agua}
 		\end{figure}
 
-	Com o diagrama de Cole-Cole, é possível observar, graficamente, que as amostras com 35 e 60 \mM{} de NaSal são as que menos se ajustam ao modelo, já as outras são melhores. É possível, a partir de diagramas como esses, estimar outras propriedades das micelas (\autoref{eqn:mesh_contorno_por_reologia}) mas isso necessita de valores confiáveis para altas frequências (à direita no diagrama), o que não ocorreu. % todo: colocar refs e nomes dos outros parâmetros também.
+	Com o diagrama de Cole-Cole, é possível observar, graficamente, que as amostras com 35 e 60 \mM{} de NaSal são as que menos se ajustam ao modelo, já as outras são melhores. É possível, a partir de diagramas como esses, estimar outras propriedades das micelas (\autoref{eqn:mesh_contorno_por_reologia}) mas isso necessita de valores confiáveis para altas frequências (à direita no diagrama), o que não ocorreu.
 	
 	\begin{listing}[h]
 		\inputminted{python}{./python/ajuste_maxwell.py}
@@ -1141,20 +1118,20 @@
 		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{imagens/reologia/oscilatorio_13bd15p}
-			\caption{1,3BD 15\%}
+			\caption{\BD{} 15\%}
 			\label{fig:oscilatorio_13bd_15p}
 		\end{subfigure} %
 		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{imagens/reologia/oscilatorio_13bd25p}
-			\caption{1,3BD 15\%}
+			\caption{\BD{} 15\%}
 			\label{fig:oscilatorio_13bd_25p}
 		\end{subfigure} %
 		\caption{G' (símbolos cheios) e G'' (símbolos vazados) em função da frequência de perturbação \(\omega\), para amostras de \CTAB{} 100\mM{}, NaSal e 1,3-butanodiol 15\% e 25\% m/m. Nem todas as amostras possuíam consistência suficiente para serem medidas no reômetro, então foram descartadas da análise.}
 		\label{fig:oscilatorio_13bd}
 	\end{figure}
 
-	De início, é possível observar que várias das amostras não possuem um comportamento próximo ao Maxwelliano, em especial as amostras com 1,3BD, 60\% de glicerina e 30\% de ureia com 60 \mM{} de NaSal. Em comum, essas amostras possuem baixa viscosidade. Interessantemente, todas as amostras, com exceção de 1,3BD 25\%, aparentam possuir valores de \(G\) próximos, da ordem de 10-50 Pa, independente da viscosidade total da solução, o que mostra que a estrutura micelar nesses sistemas foi mantido, e a viscosidade foi afetada por mudanças no tempo de relaxação, primariamente. Além disso, as amostras com 50\% de sacarose foram as únicas analisadas que possuem a região de alta frequência de G'' bem definida, possivelmente devido à alta viscosidade do solvente.
+	De início, é possível observar que várias das amostras não possuem um comportamento próximo ao Maxwelliano, em especial as amostras com 1,3BD, 60\% de glicerina e 30\% de ureia com 60 \mM{} de NaSal. Em comum, essas amostras possuem baixa viscosidade. Interessantemente, todas as amostras, com exceção de  \BD{} 25\%, aparentam possuir valores de \(G\) próximos, da ordem de 10-50 Pa, independente da viscosidade total da solução, o que mostra que a estrutura micelar nesses sistemas foi mantido, e a viscosidade foi afetada por mudanças no tempo de relaxação, primariamente. Além disso, as amostras com 50\% de sacarose foram as únicas analisadas que possuem a região de alta frequência de G'' bem definida, possivelmente devido à alta viscosidade do solvente.
 	
 	Com esses dados, foram realizados ajustes com os quatro modelos. Os coeficientes de determinação \(R^2\) se encontram na \autoref{tab:R2_aditivos}, os módulos no platô se encontram na \autoref{tab:g0_aditivos} e os tempos de relaxação se encontram na \autoref{tab:tr_aditivos}. 
 
@@ -1413,7 +1390,7 @@
 		
 		Os demais valores de \(G\) calculados e estimados pelos gráficos estão próximos, na faixa de 40-60Pa. Das amostras bem comportadas, os valores de \(G\) dos modelos estão dentro do intervalo de confiança. Além disso, vemos novamente que \(G_{0,1}\) e \(G_{0,2}\) do modelo Dois-Modos são intercambiáveis, e que um dos dois parâmetros são próximos ao \(G\) dos outros modelos, de forma geral.
 		
-		Os tempos de relaxação possuíram algumas variações entre os modelos, nas amostras menos comportadas. O segundo tempo de relaxação do modelo de Jeffreys e de Dois-Modos são diferentes, sendo o segundo tempo do modelo de Jeffreys praticamente irrelevante, visto por estar na escala de ms. Os tempos de relaxação do modelo de Dois-Modos são geralmente diferentes dos outros.
+		Os tempos de relaxação possuíram algumas variações entre os modelos, nas amostras menos comportadas. O segundo tempo de relaxação do modelo de Jeffreys e de Dois-Modos são diferentes, sendo o segundo tempo do modelo de Jeffreys praticamente irrelevante, visto por estar na escala de ms. Os tempos de relaxação do modelo de Dois-Modos são geralmente diferentes dos outros. Os valores de \(\eta_{\infty}\) e \(a\) e \(b\) não mostraram diferenças significativas entre os aditivos. Seria esperado que \(b\) fosse afetado pelo solvente, mas não há uma tendência nos valores.
 		
 		Com os valores de \(G\) calculados pelo modelo de Maxwell, foram criados os diagramas de Cole-Cole, que estão nas Figuras \ref{fig:colecole_glicerina_sacarose}, \ref{fig:colecole_dmso_13bd} e \ref{fig:colecole_ureia}.
 		
@@ -1461,7 +1438,7 @@
 
 		Observa-se assim que a maior parte das amostras segue bem o comportamento ideal. Como exceções, temos a amostra com sacarose 50\% e 60 \mM{} de NaSal. Como já vimos anteriormente que a sacarose afeta pouco as micelas, não é estranho que o comportamento dessa amostra seja próximo ao observado para a água (\autoref{fig:colecole_agua}). Interessantemente, essa amostra aparenta desviar mais do comportamento esperado do que a amostra equivalente em água, sendo mais próxima à amostra com 35 \mM.
 		
-		As amostras com 1,3BD, em sua maioria, não seguiram o modelo, com grandes divergências na região inteira. Com DMSO, as amostras com 60 \mM, em ambas as concentrações de DMSO, e 260 \mM{} a 25\%, fugiram mais da idealidade. Para ureia, observa-se que algumas amostras começaram em relações G'/G'' maiores, mas mesmo assim seguiram bem o modelo em proporções maiores. Isso foi observado para 5 e 15\% de ureia e 60\mM{} de NaSal, e 15\% de ureia e 100 \mM{} de NaSal. A maior divergência apareceu para a amostra 30\% de ureia e 60 \mM{} de NaSal, que possuía baixa resistência, e a malha micelar foi bastante afetada, como pode ser observado pelo valor de \(G\) = 20 Pa.
+		As amostras com \BD, em sua maioria, não seguiram o modelo, com grandes divergências na região inteira. Com DMSO, as amostras com 60 \mM, em ambas as concentrações de DMSO, e 260 \mM{} a 25\%, fugiram mais da idealidade. Para ureia, observa-se que algumas amostras começaram em relações G'/G'' maiores, mas mesmo assim seguiram bem o modelo em proporções maiores. Isso foi observado para 5 e 15\% de ureia e 60\mM{} de NaSal, e 15\% de ureia e 100 \mM{} de NaSal. A maior divergência apareceu para a amostra 30\% de ureia e 60 \mM{} de NaSal, que possuía baixa resistência, e a malha micelar foi bastante afetada, como pode ser observado pelo valor de \(G\) = 20 Pa.
 		
 		\section{Conclusão parcial}
 		
@@ -1475,9 +1452,9 @@
 
 	\chapter{Conclusão}
 	
-		A viscosidade de soluções de micelas gigantes foi afetada pela adição de diversos aditivos hidrofílicos. Utilizando a teoria de atração coloidal, foram propostos dois parâmetros para explicar o comportamento observado, o índice de refração e a constante dielétrica. Outro parâmetro numérico foi levantado, o parâmetro de Gordon, além de contribuições não numéricas, como o particionamento dos aditivos na superfície micelar e seus efeitos na estrutura micelar.
+		A viscosidade de soluções de micelas gigantes foi afetada pela adição de diversos aditivos hidrofílicos. Utilizando a teoria de atração coloidal,  dois parâmetros foram propostos para explicar o comportamento observado, o índice de refração e a constante dielétrica. Outro parâmetro numérico foi levantado, o parâmetro de Gordon, além de contribuições não numéricas, como o particionamento dos aditivos na superfície micelar e seus efeitos na estrutura micelar.
 		
-		Utilizando esses parâmetros, foi possível correlacionar as viscosidades com a concentração e a natureza dos aditivos. De forma geral, quanto maior era o efeito do aditivo na estrutura do solvente, maior fosse a queda na constante dielétrica e maior fosse o índice de refração, menor era a viscosidade. O 1,3-butanodiol, dos aditivos estudados, mais fortemente diminuía a viscosidade das micelas, já a sacarose não afetou a viscosidade.
+		Utilizando esses parâmetros, foi possível correlacionar as viscosidades com a concentração e a natureza dos aditivos. De forma geral, quanto maior era o efeito do aditivo na estrutura do solvente, maior fosse a queda na constante dielétrica e maior fosse o índice de refração, menor era a viscosidade. Dos aditivos estudados, o 1,3-butanodiol mais fortemente diminuiu a viscosidade das micelas, já a sacarose não afetou a viscosidade.
 		
 		Os mesmos parâmetros foram utilizados, com pouco sucesso, para descrever o comportamento da formação de micelas gigantes, observado por ITC. Porém, houve notável correlação entre a \cmc{} e a \DHmic{}, indicando que o processo de micelização com NaSal é mais complexo, e não pode ser explicado utilizando somente os três parâmetros descritos.
 		
@@ -1487,6 +1464,4 @@
 		
 		Observou-se que a quantidade de fase é dependente da concentração de ureia, não de surfactante, portanto há uma quantidade significativa, e desconhecida, de surfactante livre na fase límpida. Isso impediu a determinação dos calores de transição por massa de surfactante. A fase branca é composta de lamelas, como observado por SAXS, mas não se sabe o papel da ureia nessa estrutura.
 		
-		Esses estudos permitiram observar como diferentes aditivos afetaram a formulação de soluções micelares, mostrando como 
-
 \FloatBarrier
