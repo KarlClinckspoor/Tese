@@ -10,7 +10,7 @@
 
 Esta seção mostrará as equações utilizadas para descrever o modelo de espalhamento de micelas gigantes, que foi utilizada na \autoref{sec:tr-saxs}. As equação foram baseadas numa série de artigos\cite{Pedersen1996, Yoshizaki1980, Cannavacciuolo2002, Pedersen2007a, Arleth2002}, que serão agrupados para facilitar o entendimento do modelo. Porém, essa descrição matemática é de menor aplicabilidade, pois é necessário transcrever as equações em código que consiga realizar ajustes. Essa tarefa não é trivial, especialmente para não especialistas. Logo, será disponibilizado uma transcrição dessas equações, na linguagem Python, no \autoref{sec:modelo_MG_python}.
 
-\section{Resumo do modelo}
+\section{Resumo do modelo} \index{apêndices!modelos} \index{SAXS!modelagem!micelas gigantes}
 
 O modelo descreve cadeias alongadas caroço-casca (\emph{core-shell}) de Kratky-Porod, considerando volume excluído, com interações intercadeias modeladas pelo modelo PRISM (\emph{Polymer Reference Interaction Site Model}). No total, a equação de intensidade de espalhamento \(I\) em função do vetor de espalhamento \q (\(I(q)\), \autoref{eqn:AP_saxs_MG_superficial}) possui 13 parâmetros, descritos na \autoref{tab_ap:simbolos}.
 

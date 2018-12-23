@@ -11,11 +11,11 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	\includegraphics[width=\textwidth]{imagens/ureia/tempos}
 	\caption{Resfriamento de uma amostra de \CTAB{} 300 \mM{} e 37\% m/m de ureia. A contagem do tempo se iniciou no instante que a amostra foi removida do banho a 60°C e terminou quando a amostra se mostrou totalmente sólida, e em temperatura ambiente.}
 	\label{fig:resfriamento_ureia}
-\end{figure}
+\end{figure} \index{resultados!ureia}
 
 
 \section{Calorimetria diferencial de varredura (DSC)}
-
+	\index{resultados!\CTAB} \index{resultados!\TTAB} \index{resultados!\DTAB} \index{resultados!DSC} \index{resultados!sem NaSal}
 	Foram preparadas soluções de ureia, em várias concentrações, com três surfactantes (\CTAB, \TTAB{} e \DTAB), em nas concentrações de 100, 200 e 300 \mM{} (equivalentes a 3, 6, e 9\% de surfactante, aproximadamente). Os termogramas resultantes foram organizados em figuras de modo a facilitar comparações. A \autoref{tab:refs_DSC} lista as comparações realizadas e em quais figuras estão.
     
     \begin{table}[h]
@@ -362,7 +362,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 %	\end{figure}
 	
 	\FloatBarrier
-\section{SAXS}
+\section{SAXS} \index{resultados!SAXS}
 
 	Foram realizadas análises de SAXS para determinar a estrutura da fase branca. Foi avaliado o papel do comprimento da cadeia e da concentração de surfactante (Figuras \ref{fig:SAXS_ctabconc}, \ref{fig:SAXS_ttabconc}, \ref{fig:SAXS_dtabconc}).
 	
@@ -517,7 +517,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 		\label{eqn:tanford}
 	\end{equation}
 	
-	\noindent onde \(l\) é o comprimento da cadeia de surfactante em nm e \(n\) é o número de carbonos na cadeia. Os volumes das cadeias também podem ser estimadas por uma equação, mas optou-se o site \href{www.chemicalize.com}{Chemicalize}\footnote{Acessado em 28/05/2018} para isso. Com isso, foram calculadas as distâncias interlamelares (\autoref{tab:SAXS_distancias_interlamelares}). Foram estimados erros para o máximo dos picos, com base em sua largura e para os volumes para se obter valores de \(d_\mathrm{HC}\) com incerteza.
+	\noindent onde \(l\) é o comprimento da cadeia de surfactante em nm e \(n\) é o número de carbonos na cadeia. Os volumes das cadeias também podem ser estimadas por uma equação, mas optou-se o site \href{www.chemicalize.com}{Chemicalize}\footnote{Acessado em 28/05/2018} para isso. Com isso, foram calculadas as distâncias interlamelares (\autoref{tab:SAXS_distancias_interlamelares}). Foram estimados erros para o máximo dos picos, com base em sua largura e para os volumes para se obter valores de \(d_\mathrm{HC}\) com incerteza. \index{resultados!distâncias interlamelares \(d\)} \index{resultados!espessuras lamelares \(d_\mathrm{HC}\)}
 	
 		\begin{table}[H]
 			\IBGEtab{%
@@ -576,6 +576,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 	\FloatBarrier
 \section{DLS}
 \label{sec:Ureia-DLS}
+\index{resultados!DLS}
 
 	De modo a obter informações complementares sobre as soluções em temperaturas elevadas, foram realizadas medidas de DLS de amostras de \CTTAB{} 100, 200, 300 \mM{} a 50°C. \DTAB{} não foi analisado por possuir essencialmente os mesmos padrões dos outros surfactantes. As distribuições de tamanho (Figuras \ref{fig:DLS_ctab_distrib}, \ref{fig:DLS_ttab_distrib}), obtidas a partir de um ajuste das curvas de correlação (Figuras \ref{fig:DLS_ctab_cc}, \ref{fig:DLS_ttab_cc}). Cada medida foi feita em triplicata, resultando em uma curva para cada medida.
 	
@@ -692,7 +693,7 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 %
 %Amostras de ureia abaixo da temperatura de transição foram analisadas no reômetro e os resultados estão na Figura. X
 \FloatBarrier
-\section{Entalpia de interação de ureia com surfactante}
+\section{Entalpia de interação de ureia com surfactante} \index{resultados!ITC}
 
 	De modo a investigar a espontaneidade da interação entre ureia e micelas de \TTAB{}, foram realizadas titulações calorimétricas isotérmicas de ureia sobre uma solução de \TTAB{} 12 \mM, e foi descontado o valor da titulação de ureia em água. Utilizou-se concentrações crescentes de ureia, de 40 a 160 \mM. Não foi possível testar concentrações maiores de ureia, semelhantes às condições experimentais das seções anteriores, porque o calor de interação se tornava muito intenso. A \autoref{fig:itc_interacaoUrSurf_entalpograma} mostra os entalpogramas com o branco já descontado, obtidos em função da concentração de ureia na cela. Foram realizados ajustes lineares  dessas curvas para se obter o valor do intercepto quando a concentração de ureia tende a zero. Os valores estão na \autoref{fig:itc_interacaoUrSurf_intercepto}.
 	
@@ -769,8 +770,10 @@ Em concentrações de ureia maiores que 35\%, ocorre a formação de uma fase es
 
 	\FloatBarrier
 	
-	\section{Conclusão}
+	\section{Conclusão} \index{conclusões!ureia}
 	
 	A ureia demonstrou possuir um comportamento muito diferente dos outros aditivos estudados. Ocorre a formação de fases lamelares com temperaturas de transição entre 20 e 40°C, dependendo da concentração de ureia, e do comprimento da cadeia do surfactante. Essa fase lamelar se separa da outra fase, que é límpida e fluida, mas somente após forte centrifugação. A formação das lamelas é fundamentalmente regida pela ureia, pois a adição de mais surfactante não levou à sua incorporação na fase lamelar, já que era possível precipitar o excesso de surfactante com o abaixamento da temperatura. Em temperaturas acima da temperatura de transição, a fase lamelar se transformava numa fase límpida e pouco viscosa, semelhante à outra fase em temperaturas baixas, que contém principalmente micelas esféricas, mas possivelmente contém vesículas. Com isso, a fase lamelar foi caracterizada com a clareza necessária para este trabalho.
 	
 	Como próximos estudos, seria interessante obter um diagrama de fase completo de surfactante e ureia, e determinar a concentração de ureia, e de surfactante, em ambas as fases. Assim, seria mais fácil propor um modelo para as estruturas formadas, qual seria o papel da ureia na formação dos agregados, e porque ocorre a separação de fases.
+	
+	

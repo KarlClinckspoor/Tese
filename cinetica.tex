@@ -3,7 +3,7 @@
 	\chapter{SAXS resolvido no tempo}
 	O objetivo desta seção é determinar a cinética de crescimento de micelas de surfactantes catiônicos e NaSal, tanto por SAXS resolvido no tempo quanto por fluorescência resolvida no tempo. Esse estudo foi realizado para verificar se os picos secundários vistos na \autoref{fig:itc_raw_agua_glicerina} são devido ao crescimento micelar, ou a algum outro processo.
 	
-	\section{Estudos preliminares}
+	\section{Estudos preliminares} 
 	Antes de iniciar as medidas de SAXS resolvido no tempo, foram testadas várias amostras para observar qual é a combinação de surfactante e cossoluto com mais contraste, e que possui maior diferença entre os estados iniciais e finais. Foram escolhidos \CTAB, \TTAB{} e \DTAB{} com surfactantes, inicialmente, mas \CTAB{} foi descartado rapidamente pois a temperatura ambiente era menor do que o ponto Krafft do surfactante, e haveria a precipitação do mesmo dentro das seringas de injeção. Como cossoluto, escolheu-se NaSal, 4-clorobenzoato e 3,4-diclorobenzoato. Os cossolutos clorados apresentariam maior contraste, por possuírem maior densidade eletrônica, e por isso foram escolhidos.
 	
 	Foram preparadas soluções nas concentrações de 100 \mM{} de surfactante, que caracteriza o estado antes do crescimento, e 100 \mM{} de surfactante com 100 \mM{} do cossoluto, que caracteriza o estado depois do crescimento. Após o preparo e estabilização das amostras, as mesmas foram injetadas no capilar de \emph{flow-through} do equipamento. As curvas adquiridas estão na \autoref{fig:ft_preliminar}. Não foi incluído a mistura 3,4-diclorobenzoato e surfactante, pois o contraste era muito baixo, e não havia uma boa relação sinal-ruído.
@@ -26,7 +26,7 @@
 	
 	A região em baixos valores de \q{} é bastante ruidosa na amostra com \TTAB{} 100 \mM{} devido ao baixo contraste entre a amostra e o \emph{background}. O mesmo ocorre na amostra com micelas gigantes de NaSal e \TTAB, e a queda na curva não possui significado físico. Isso será importante na discussão, pois observar-se-á que essa região terá um decaimento em \(q^{-4}\), que pode não ter significado físico, e é um artefato oriundo do baixo contraste. É interessante notar a semelhança entre o perfil de espalhamento obtido aqui e na \autoref{fig:SAXS_micelas_esfericas}, obtido na linha SAXS1 do LNLS. A principal diferença é uma faixa de \q{} menor, que fornece informações sobre estruturas maiores, o que é mais apropriado ao estudo de micelas gigantes.
 	
-	\section{TR-SAXS}
+	\section{TR-SAXS} \index{resultados!SAXS!resolvido no tempo}
 	\label{sec:tr-saxs}
 	Com essas informações, foram medidas várias misturas de \TTAB{} e NaSal, nas proporções de 55:55, 75:75, 100:100 e 60:100 de NaSal:TTAB. Todas as concentrações estão em \mM. Com essas variações de concentração, era esperado observar mudanças na cinética de crescimento. A amostra com 60:100 NaSal:TTAB foi escolhida por possuir uma carga positiva e, consequentemente, resultar numa solução micelar mais viscosa, cujo crescimento poderia ser mais lento também. Essa última amostra foi medida em duas distâncias de detector, 3 m e 1,5 m, para ver se isso afetava os resultados dos ajustes. Todas as outras amostras foram medidas com o detector a 3 m de distância.
 	
@@ -168,7 +168,7 @@
 		\end{subfigure}
 		\caption{Parâmetros \(d_{\mathrm{head}}\) e \(r_{\mathrm{core}}\), ambos em \AA, das cinco amostras medidas. Os números indicam o \emph{frame}, e o tempo após a mistura pode ser checada na \autoref{tab:tr_tempos_frames}. ``Média'' significa o resultado do ajuste da média das curvas 2-30, que eram praticamente idênticas.}
 		\label{fig:params_dhead_radcore}
-	\end{figure}
+	\end{figure} \index{resultados!SAXS!ajustes}
 
 	\begin{figure}
 		\begin{subfigure}[t]{0.5\textwidth}
@@ -238,7 +238,7 @@
 	
 	\FloatBarrier
 	
-	\section{Conclusão parcial}
+	\section{Conclusão parcial} \index{conclusões!SAXS} 
 	
 	Foi possível observar que há uma diferença entre as curvas de saxs obtidas após 35 ms da mistura, e as demais, o que significa que o crescimento micelar foi muito rápido, possivelmente devido à alta concentração do sistema. Essas diferenças foram quantificadas através de ajustes das curvas, das quais foram extraídos parâmetros estruturais das micelas. Infelizmente, observou-se mudanças nos raios da seção transversal das micelas, e não nos comprimentos de Kuhn e de contorno, então não foi possível estimar esses tamanhos.
 	
@@ -251,7 +251,7 @@
 	
 	\chapter{Fluorescência resolvida no tempo}
 	
-	\section{Estudos preliminares}
+	\section{Estudos preliminares} \index{resultados!fluorescência!estática} \index{resultados!fluorescência}
 	
 	Primeiramente foi analisada as curvas de emissão e absorção da molécula de salicilato livre em água e incorporada em micelas. Foram preparadas soluções 1,5 \mM{} de NaSal, com concentrações de \TTAB{} de 0 a 4,5 \mM. As curvas de emissão e absorção de salicilato estão na \autoref{fig:emissao_excitacao}. O comprimento de onda de excitação utilizado foi distante do máximo de absorção, devido à alta fluorescência. Isso não influencia no espectro de emissão, devido à lei de Kasha, pois as moléculas excitadas relaxam até o estado vibracional fundamental do primeiro nível eletrônico excitado, para depois fluorescer. As fendas no equipamento foram ajustadas de modo a maximizar a relação sinal/ruído mas ainda assim permitir medir todas as amostras.
 	
@@ -297,7 +297,7 @@
 		\includegraphics[width=0.7\textwidth]{imagens/fluor/combinacao_propriedades}
 		\caption{Viscosidade, em mPa s, intensidade de fluorescência e entalpia de mistura de amostras com 1,5 \mM{} de NaSal e concentrações crescentes de \TTAB.}
 		\label{fig:combinacao_propriedades}
-	\end{figure}
+	\end{figure} \index{resultados!fluorescência!correlação}
 	
 	Como todas as propriedades são dependentes da inserção de \Sal{} nas micelas, foi estudado se há uma correlação mais direta entre elas. A fluorescência é dependente da quantidade total de \Sal{} inserida. Já as entalpias de mistura individuais são dependentes da quantidade de \Sal{} incorporados às micelas em cada etapa. A viscosidade é uma propriedade dependente da concentração de NaSal, onde uma determinada concentração é capaz de fornecer uma ``quantidade'' de viscosidade específica, que a adição de mais \TTAB{} esgota. Assim, a integração do entalpograma seria proporcional à incorporação de \Sal{}, e a integração da viscosidade seria proporcional à quantidade total de viscosidade ``consumida'' por \TTAB. A  \autoref{fig:correlacoes_propriedades_zoom} mostra a correlação entre viscosidade e calorimetria integradas, e normalizadas pelo valor máximo, e a intensidade de fluorescência.
 	
@@ -322,7 +322,7 @@
 
 	\FloatBarrier	
 	
-	\section{Cinética medida por fluorescência}
+	\section{Cinética medida por fluorescência} \index{resultados!fluorescência!cinética}
 	
 	Foram realizados estudos de cinética misturando-se duas soluções, de forma que sua mistura resulte numa solução com micelas gigantes. Uma maneira de se fazer isso é misturando uma solução de NaSal 1,5 \mM{} e outra contendo tanto NaSal 1,5 \mM{} quanto \TTAB{} 1,7 \mM. Essa concentração de \TTAB{} está longe da região do mínimo, com baixa viscosidade. Quanto misturadas, a concentração de \TTAB{} será diminuída pela metade, atingindo a concentração de 0,85 \mM{}, próximo ao mínimo. Logo, observaria-se o crescimento das micelas, através de um salto de concentração, em paralelo a experimentos de saltos de temperatura ou pressão.\cite{Hoffmann2012a} A \autoref{fig:itc_experimento_cinetica} ilustra a mistura que irá ocorrer, e sua relação com o entalpograma e a fluorescência.
 	
@@ -351,7 +351,7 @@
 		\centering
 		\includegraphics[width=\textwidth]{imagens/fluor/curva_inicio_final_cortada}
 		\caption{Seção em 411 nm do mapa de cor da  \autoref{fig:mapa_cor_fluorescencia}. Em vermelho, à esquerda, está a região onde ocorre a injeção. À direita, o perfil de fluorescência contem a região pré-injeção, a região de injeção, em vermelho, e a região de pós-injeção, que decai gradativamente em função do tempo.}
-		\label{fig:curva_inicio_final_cortada}  % todo: mover a legenda tempo/ms para a direita
+		\label{fig:curva_inicio_final_cortada} 
 	\end{figure}
 	
 	Cada curva possui três regiões distintas. A primeira, antes da injeção, corresponde ao sinal de fluorescência do porta-amostra. Quando é feita a injeção, a intensidade de fluorescência aumenta abruptamente, devido à introdução de \TTAB{} ao porta-amostra. A terceira região começa após o pico de intensidade, onde há, aparentemente, um decaimento gradual e bastante lento de fluorescência.
@@ -411,7 +411,7 @@
 				MG + NaSal \(\to\) \agua                       & 6          & 0.987   & 14190 \(\pm\) 41  & 62 \(\pm\) 34           \\ \bottomrule
 			\end{tabular}
 		}{}
-	\end{table}
+	\end{table} \index{resultados!fluorescência!ajuste}
 	
 	Observa-se que há uma diferença significativa tanto no coeficiente de determinação quanto na constante de decaimento entre as injeções com e sem \TTAB{}. Os valores menores de \(R^2\) e os erros maiores se devem à menor taxa de decaimento, isso é, a curva é mais próxima a uma reta horizontal.  Porém, não se observa uma diferença entre os tempos de injeção. Isso indica que o crescimento micelar ocorre após a injeção, e prossegue bastante lentamente.
 	
@@ -437,11 +437,13 @@
 	
 	Claramente não é observado nenhum decaimento. Essa informação, contraditória com os experimentos anteriores, indica que não foi observado, em nenhuma instância até agora, o crescimento micelar, somente processos relacionados ao processo de análise. Ou o crescimento micelar ocorreu em muito pouco tempo, como nos experimentos de SAXS, ou a incidência de luz auxilia nesse processo, ou o crescimento micelar não pode ser observado por fluorescência.
 	
-	\section{Conclusão parcial}	
+	\section{Conclusão parcial}	 \index{conclusões!fluorescência}
 	
-	Resultados contraditórios mostram que a determinação de cinética de crescimento micelar através da fluorescência e stopped-flow, é experimentalmente difícil, e estudos posteriores, com técnicas experimentais mais refinadas, serão necessários para determinar, com total certeza, se o crescimento micelar pode ser diretamente observado por fluorescência.
+	Observou-se que a fluorescência de \Sal{} aumentava com o aumento da concentração de \TTAB. Isso foi atribuído à uma menor quantidade de \Sal{} em solução, e o ponto onde a fluorescência começa a subir é o mesmo ponto onde começa o crescimento micelar. Foi possível correlacionar isso a outras propriedades, a viscosidade e os resultados calorimétricos.
 	
-	\chapter{Conclusões sobre a cinética de crescimento}
+	Porém, resultados contraditórios mostram que a determinação de cinética de crescimento micelar através da fluorescência e stopped-flow, é experimentalmente difícil, e estudos posteriores, com técnicas experimentais mais refinadas, serão necessários para determinar, com total certeza, se o crescimento micelar pode ser diretamente observado por fluorescência.
+	
+	\chapter{Conclusões sobre a cinética de crescimento} \index{conclusões!cinética}
 	
 	Estudos de cinética de crescimento foram realizados tanto por SAXS resolvido no tempo quanto por fluorescência junto de um aparato de stopped-flow.
 	
