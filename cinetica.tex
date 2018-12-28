@@ -6,7 +6,7 @@
 	\section{Estudos preliminares} 
 	Antes de iniciar as medidas de SAXS resolvido no tempo, foram testadas várias amostras para observar qual é a combinação de surfactante e cossoluto com mais contraste, e que possui maior diferença entre os estados iniciais e finais. Foram escolhidos \CTAB, \TTAB{} e \DTAB{} com surfactantes, inicialmente, mas \CTAB{} foi descartado rapidamente pois a temperatura ambiente era menor do que o ponto Krafft do surfactante, e haveria a precipitação do mesmo dentro das seringas de injeção. Como cossoluto, escolheu-se NaSal, 4-clorobenzoato e 3,4-diclorobenzoato. Os cossolutos clorados apresentariam maior contraste, por possuírem maior densidade eletrônica, e por isso foram escolhidos.
 	
-	Foram preparadas soluções nas concentrações de 100 \mM{} de surfactante, que caracteriza o estado antes do crescimento, e 100 \mM{} de surfactante com 100 \mM{} do cossoluto, que caracteriza o estado depois do crescimento. Após o preparo e estabilização das amostras, as mesmas foram injetadas no capilar de \emph{flow-through} do equipamento. As curvas adquiridas estão na \autoref{fig:ft_preliminar}. Não foi incluído a mistura 3,4-diclorobenzoato e surfactante, pois o contraste era muito baixo, e não havia uma boa relação sinal-ruído.
+	Foram preparadas soluções nas concentrações de 100 \mM{} de surfactante, que caracteriza o estado antes do crescimento, e 100 \mM{} de surfactante com 100 \mM{} do cossoluto, que caracteriza o estado depois do crescimento. Após o preparo e estabilização das amostras, as mesmas foram injetadas no capilar de \emph{flow-through} do equipamento. As curvas adquiridas estão na \autoref{fig:ft_preliminar}. Não foi incluída a mistura 3,4-diclorobenzoato e surfactante, pois o contraste era muito baixo, e não havia uma boa relação sinal-ruído.
 	
 	\begin{figure}[h]
 		\centering
@@ -142,7 +142,7 @@
 	
 	Todos os primeiros \emph{frames} das curvas possuem um formato diferente dos demais, que é mais pronunciado à medida que a concentração aumenta. Isso mostra que em 35 ms, as micelas possuíam uma estrutura diferente do que em 65 ms, e adiante. Essas curvas são, todavia, bastante próximas em formato ao estado final da \autoref{fig:tr_comparacao_ttab}, o que significa que o crescimento micelar está quase completo em 35 ms e se completa em 65 ms. Uma possível explicação para esse acontecimento é a alta concentração de micelas no meio. Isso acelera a cinética de colisão entre micelas e cossolutos. Além disso, a rede micelar pode se tornar tão densa que o meio se torna homogêneo para SAXS, e não é possível distinguir entre uma micela e outra.
 	
-	Na maior parte das curvas, é possível observar que na região de baixo \q, há um decaimento exponencial. O modelo utilizado não prevê esse comportamento, que teve de ser incluído externamente. O valor do expoente, em todos os ajustes, foi de 4, isso é, o decaimento segue \( q^{-4} \). Se essa região for verdadeira, a validade do modelo utilizado para o tratamento se torna questionável. Porém, essa queda não foi observada na cela de \emph{flow-through}, como mencionado anteriormente. Além disso, houveram ligeiras variações no valor do \emph{background} entre cada amostra, devido à limpeza, apesar de que se garantiu que nenhum sinal significativo era observado. A \autoref{fig:problema_limpeza} mostra a minúscula diferença entre o \emph{background}, medido com o capilar seco e vazio, e o capilar após a primeira limpeza com água. Essa pequena diferença pode gerar o sinal em baixo \q{} com o decaimento observado devido à baixa intensidade nos sinais, devido ao curto tempo de integração, necessário para medidas cinéticas, e o baixo contraste entre as micelas e o solvente. Logo, a região em baixo \q{}, provavelmente, não possui significado físico, e o decaimento exponencial utilizado é somente um artifício matemático para auxiliar no ajuste das curvas.
+	Na maior parte das curvas, é possível observar que na região de baixo \q, há um decaimento exponencial. O modelo utilizado não prevê esse comportamento, que teve de ser incluído externamente. O valor do expoente, em todos os ajustes, foi de 4, isto é, o decaimento segue \( q^{-4} \). Se essa região for verdadeira, a validade do modelo utilizado para o tratamento se torna questionável. Porém, essa queda não foi observada na cela de \emph{flow-through}, como mencionado anteriormente. Além disso, houveram ligeiras variações no valor do \emph{background} entre cada amostra, devido à limpeza, apesar de que se garantiu que nenhum sinal significativo era observado. A \autoref{fig:problema_limpeza} mostra a minúscula diferença entre o \emph{background}, medido com o capilar seco e vazio, e o capilar após a primeira limpeza com água. Essa pequena diferença pode gerar o sinal em baixo \q{} com o decaimento observado devido à baixa intensidade nos sinais, devido ao curto tempo de integração, necessário para medidas cinéticas, e o baixo contraste entre as micelas e o solvente. Logo, a região em baixo \q{}, provavelmente, não possui significado físico, e o decaimento exponencial utilizado é somente um artifício matemático para auxiliar no ajuste das curvas.
 	
 	\begin{figure}[h]
 		\centering
@@ -228,13 +228,13 @@
 		}{}
 	\end{table} 
 
-	Os parâmetros obtidos das amostra 60:100 NaSal:TTAB nas duas distâncias de detector são, em alguns casos, diferentes. Isso ocorre nas medidas da espessura da superfície, raio do \emph{core}, e na diferença de densidade eletrônica. O raio do \emph{core} e da superfície são complementares, e aparecem na região de alto \q, devido ao pequeno tamanho. Logo, as amostras com d=1,5 m, que possuem melhor definição na região de alto \q, também possuem barras de erro menores, em ambos \(r_{\mathrm{core}}\) e \(d_{\mathrm{head}}\). Além disso, os valores de \(r_{\mathrm{core}}\) são maiores para d=1,5 m, mas \(d_\mathrm{head}\) são complementarmente menores. De qualquer maneira, ambas as distâncias são bastante semelhantes em todas as amostras. Interessantemente, o valor médio da primeira medida é consistentemente diferente das outras, resultado do crescimento das micelas entre o primeiro e os próximos \emph{frames}.
+	Os parâmetros obtidos da amostra 60:100 NaSal:TTAB nas duas distâncias de detector são, em alguns casos, diferentes. Isso ocorre nas medidas da espessura da superfície, raio do \emph{core}, e na diferença de densidade eletrônica. O raio do \emph{core} e da superfície são complementares, e aparecem na região de alto \q, devido ao pequeno tamanho. Logo, as amostras com d=1,5 m, que possuem melhor definição na região de alto \q, também possuem barras de erro menores, em ambos \(r_{\mathrm{core}}\) e \(d_{\mathrm{head}}\). Além disso, os valores de \(r_{\mathrm{core}}\) são maiores para d=1,5 m, mas \(d_\mathrm{head}\) são complementarmente menores. De qualquer maneira, ambas as distâncias são bastante semelhantes em todas as amostras. Interessantemente, o valor médio da primeira medida é consistentemente diferente das outras, resultado do crescimento das micelas entre o primeiro e os próximos \emph{frames}.
 	
-	O comprimento da cadeia de surfactante pode ser estimado pela equação de Tanford (\autoref{eqn:tanford}). Com isso, o raio de seção transversal de micelas gigantes com \TTAB{} (\(n=14\)) é de aproximadamente 2 nm, ou 20 \AA. Considerando a presença do grupo trimetilamônio, carregado, e da molécula de salicilato, que pode se posicionar na palisada micelar próximo à superfície ou mais no interior, os tamanhos calculados para \(d_{\mathrm{head}}\) e \(r_{\mathrm{core}}\) são factíveis, com um raio total de 30 \AA{} (3 nm).
+	O comprimento da cadeia de surfactante pode ser estimado pela equação de Tanford (\autoref{eqn:tanford}). Com isso, o raio de seção transversal de micelas gigantes com \TTAB{} (\(n=14\)) é de aproximadamente 2 nm, ou 20 \AA. Considerando a presença do grupo trimetilamônio, carregado, e da molécula de salicilato, que pode se posicionar na paliçada micelar próximo à superfície ou mais no interior, os tamanhos calculados para \(d_{\mathrm{head}}\) e \(r_{\mathrm{core}}\) são factíveis, com um raio total de 30 \AA{} (3 nm).
 
-	A diferença entre o primeiro e os últimos \emph{frames} também foi observado no fator de concentração e na distância de correlação. Quanto maior a concentração, maior foi o efeito, e foi máximo no caso onde a composição é 60:100. A diferença entre o primeiro e os últimos frames do fator de concentração pode se dever, ao crescimento das micelas. Antes do crescimento estar finalizado, não há uma rede micelar tão densa, então o fator de concentração é diferente. A distância de correlação, pelo outro lado, mostra que antes do crescimento, a carga superficial micelar era menor, devido à menor distância, e depois se estabilizou. Essas propriedades foram as mais importantes para a diferenciação entre o primeiro \emph{frame} e os demais.
+	A diferença entre o primeiro e os últimos \emph{frames} também foi observada no fator de concentração e na distância de correlação. Quanto maior a concentração, maior foi o efeito, e foi máximo no caso onde a composição é 60:100. A diferença entre o primeiro e os últimos frames do fator de concentração pode se dever, ao crescimento das micelas. Antes do crescimento estar finalizado, não há uma rede micelar tão densa, então o fator de concentração é diferente. A distância de correlação, pelo outro lado, mostra que antes do crescimento, a carga superficial micelar era menor, devido à menor distância, e depois se estabilizou. Essas propriedades foram as mais importantes para a diferenciação entre o primeiro \emph{frame} e os demais.
 	
-	Por último, vemos que a maior parte das amostras possui o parâmetro \(\rho_{\mathrm{rel}}\) próximos, com o caso 60:100 1,5 m sendo o mais discrepante. Há uma diferença entre o primeiro e os últimos \emph{frames} possivelmente porque como a incorporação de salicilato não terminou, a diferença de densidade eletrônica da superfície micelar e do interior é diferente. Isso se refletiu no fator de escala, também. Esse parâmetro, porém, não possui muito significado físico, dado que a intensidade do sinal medido não é absoluta.
+	Por último, vemos que a maior parte das amostras possui o parâmetro \(\rho_{\mathrm{rel}}\) próximos, com o caso 60:100 1,5 m sendo o mais discrepante. Há uma diferença entre o primeiro e os últimos \emph{frames} possivelmente porque, como a incorporação de salicilato não terminou, a diferença de densidade eletrônica da superfície micelar e do interior é diferente. Isso se refletiu no fator de escala, também. Esse parâmetro, porém, não possui muito significado físico, dado que a intensidade do sinal medido não é absoluta.
 	
 	\FloatBarrier
 	
@@ -253,7 +253,7 @@
 	
 	\section{Estudos preliminares} \index{resultados!fluorescência!estática} \index{resultados!fluorescência}
 	
-	Primeiramente foi analisada as curvas de emissão e absorção da molécula de salicilato livre em água e incorporada em micelas. Foram preparadas soluções 1,5 \mM{} de NaSal, com concentrações de \TTAB{} de 0 a 4,5 \mM. As curvas de emissão e absorção de salicilato estão na \autoref{fig:emissao_excitacao}. O comprimento de onda de excitação utilizado foi distante do máximo de absorção, devido à alta fluorescência. Isso não influencia no espectro de emissão, devido à lei de Kasha, pois as moléculas excitadas relaxam até o estado vibracional fundamental do primeiro nível eletrônico excitado, para depois fluorescer. As fendas no equipamento foram ajustadas de modo a maximizar a relação sinal/ruído mas ainda assim permitir medir todas as amostras.
+	Primeiramente foram analisadas as curvas de emissão e absorção da molécula de salicilato livre em água e incorporada em micelas. Foram preparadas soluções 1,5 \mM{} de NaSal, com concentrações de \TTAB{} de 0 a 4,5 \mM. As curvas de emissão e absorção de salicilato estão na \autoref{fig:emissao_excitacao}. O comprimento de onda de excitação utilizado foi distante do máximo de absorção, devido à alta fluorescência. Isso não influencia no espectro de emissão, devido à lei de Kasha, pois as moléculas excitadas relaxam até o estado vibracional fundamental do primeiro nível eletrônico excitado, para depois fluorescer. As fendas no equipamento foram ajustadas de modo a maximizar a relação sinal/ruído mas ainda assim permitir medir todas as amostras.
 	
 	\begin{figure}[h]
 		\centering
@@ -262,7 +262,7 @@
 		\label{fig:emissao_excitacao}
 	\end{figure}
 
-	Pode-se observar que há dois máximos de absorção, em 260 e 325 nm, e um máximo de emissão. Com o aumento da concentração de \TTAB{}, e a intensidade do sinal de emissão também aumentou. Porém, como os sinais eram bastante ruidosos, ajustou-se uma função aos sinais, descrita na \autoref{eqn:ajuste_extremo}, para facilitar a visualização. As curvas ajustadas estão na \autoref{fig:emissao_nasal}.
+	Pode-se observar que há dois máximos de absorção, em 260 e 325 nm, e um máximo de emissão. Com o aumento da concentração de \TTAB{}, a intensidade do sinal de emissão também aumentou. Porém, como os sinais eram bastante ruidosos, ajustou-se uma função aos sinais, descrita na \autoref{eqn:ajuste_extremo}, para facilitar a visualização. As curvas ajustadas estão na \autoref{fig:emissao_nasal}.
 
 	\begin{subequations}
 		\begin{align}
@@ -279,9 +279,9 @@
 		\label{fig:emissao_nasal}
 	\end{figure}
 	
-	Os máximos de todos os espectros de emissão foi em 411 nm, e por essa razão, esse comprimento de onda foi utilizado em todos os experimentos posteriores. O aumento de fluorescência da molécula de salicilato se deve à mudança do ambiente, quando se dirige à palisada micelar. Isso aumenta o rendimento quântico do processo de fluorescência porque há uma menor proporção das moléculas excitadas que perde a sua energia por processos não radiativos, como colisão com moléculas de água.
+	Os máximos de todos os espectros de emissão foi em 411 nm, e por essa razão, esse comprimento de onda foi utilizado em todos os experimentos posteriores. O aumento de fluorescência da molécula de salicilato se deve à mudança do ambiente, quando se dirige à paliçada micelar. Isso aumenta o rendimento quântico do processo de fluorescência porque há uma menor proporção das moléculas excitadas que perde a sua energia por processos não radiativos, como colisão com moléculas de água.
 	
-	Portanto, a intensidade de fluorescência é dependente da inserção de salicilato nas micelas. Os processos de formação de micelas gigantes, observada por calorimetria, também ocorrem mediante a inserção de salicilato, logo os dois processos podem ser relacionados. A \autoref{fig:itc_fluorescencia} relaciona experimentos de ITC com a fluorescência em 411 nm.
+	Portanto, a intensidade de fluorescência é dependente da inserção de salicilato nas micelas. Os processos de formação de micelas gigantes, observados por calorimetria, também ocorrem mediante a inserção de salicilato, logo os dois processos podem ser relacionados. A \autoref{fig:itc_fluorescencia} relaciona experimentos de ITC com a fluorescência em 411 nm.
 	
 	\begin{figure}[h]
 		\centering
@@ -324,7 +324,7 @@
 	
 	\section{Cinética medida por fluorescência} \index{resultados!fluorescência!cinética}
 	
-	Foram realizados estudos de cinética misturando-se duas soluções, de forma que sua mistura resulte numa solução com micelas gigantes. Uma maneira de se fazer isso é misturando uma solução de NaSal 1,5 \mM{} e outra contendo tanto NaSal 1,5 \mM{} quanto \TTAB{} 1,7 \mM. Essa concentração de \TTAB{} está longe da região do mínimo, com baixa viscosidade. Quanto misturadas, a concentração de \TTAB{} será diminuída pela metade, atingindo a concentração de 0,85 \mM{}, próximo ao mínimo. Logo, observaria-se o crescimento das micelas, através de um salto de concentração, em paralelo a experimentos de saltos de temperatura ou pressão.\cite{Hoffmann2012a} A \autoref{fig:itc_experimento_cinetica} ilustra a mistura que irá ocorrer, e sua relação com o entalpograma e a fluorescência.
+	Foram realizados estudos de cinética misturando-se duas soluções, de forma que sua mistura resulte numa solução com micelas gigantes. Uma maneira de se fazer isso é misturando uma solução de NaSal 1,5 \mM{} e outra contendo tanto NaSal 1,5 \mM{} quanto \TTAB{} 1,7 \mM. Essa concentração de \TTAB{} está longe da região do mínimo, com baixa viscosidade. Quando misturadas, a concentração de \TTAB{} será diminuída pela metade, atingindo a concentração de 0,85 \mM{}, próximo ao mínimo. Logo, observaria-se o crescimento das micelas, através de um salto de concentração, em paralelo a experimentos de saltos de temperatura ou pressão.\cite{Hoffmann2012a} A \autoref{fig:itc_experimento_cinetica} ilustra a mistura que irá ocorrer, e sua relação com o entalpograma e a fluorescência.
 	
 	\begin{figure}[h]
 		\centering
@@ -333,7 +333,7 @@
 		\label{fig:itc_experimento_cinetica}
 	\end{figure}
 	
-	Com as amostras prontas, montou-se o aparato descrito na seção experimental (\autoref{sec:experimental_fluor_resolvida}), e foram injetadas as soluções. Em parte dos experimentos, a cela de medida foi lavada com água até que todo sinal de fluorescência do salicilato desaparecesse. Na outra parte, a cela não foi limpa, de modo a observar se há diferença no sinal de fluorescência imediatamente após a injeção, e após alguns minutos.
+	Com as amostras prontas, montou-se o aparato descrito na seção experimental (\autoref{sec:experimental_fluor_resolvida}), e foram injetadas as soluções. Em parte dos experimentos, a cela de medida foi lavada com água até que todo sinal de fluorescência do salicilato desaparecesse. Na outra parte, a cela não foi limpa, de modo a observar se havia diferença no sinal de fluorescência imediatamente após a injeção, e após alguns minutos.
 	
 	Como resultado de cada análise, um mapa de cor é obtido, contendo os espectros medidos em y, o tempo em x, e as cores correspondendo à intensidade do sinal. Um mapa de cor padrão se encontra na \autoref{fig:mapa_cor_fluorescencia}.
 	
@@ -344,7 +344,7 @@
 		\label{fig:mapa_cor_fluorescencia}
 	\end{figure}
 	
-	Desse mapa, foi retirado a variação da intensidade em 411 nm, o máximo do sinal, em função do tempo. Cada sinal é extremamente ruidoso, devido ao baixo tempo de integração de 6 ms.
+	Desse mapa, foi retirada a variação da intensidade em 411 nm, o máximo do sinal, em função do tempo. Cada sinal é extremamente ruidoso, devido ao baixo tempo de integração de 6 ms.
 	A \autoref{fig:curva_inicio_final_cortada} mostra essa seção do mapa de cor, evidenciando o ponto de injeção, onde a intensidade de fluorescência aumenta.
 	
 	\begin{figure}[h]
@@ -356,7 +356,7 @@
 	
 	Cada curva possui três regiões distintas. A primeira, antes da injeção, corresponde ao sinal de fluorescência do porta-amostra. Quando é feita a injeção, a intensidade de fluorescência aumenta abruptamente, devido à introdução de \TTAB{} ao porta-amostra. A terceira região começa após o pico de intensidade, onde há, aparentemente, um decaimento gradual e bastante lento de fluorescência.
 	
-	A região de inflexão foi analisada para obter-se o tempo de mistura das soluções. Possivelmente esse tempo de mistura seja relacionado ao crescimento micelar, pois ambos ocorrem em escalas de tempo próximas às observadas por SAXS. Além disso, a região após o máximo, onde ocorre o decaimento, também foi analisada, de modo a determinar se esse decaimento se deve à lenta transição das micelas de uma seringa para o estado final, próximo ao máximo de viscosidade. 
+	A região de inflexão foi analisada para obter-se o tempo de mistura das soluções. Possivelmente esse tempo de mistura esteja relacionado ao crescimento micelar, pois ambos ocorrem em escalas de tempo próximas às observadas por SAXS. Além disso, a região após o máximo, onde ocorre o decaimento, também foi analisada, de modo a determinar se esse decaimento se deve à lenta transição das micelas de uma seringa para o estado final, próximo ao máximo de viscosidade. 
 	
 	Cada curva foi alisada pelo método de Savitzky-Golay de segundo grau, utilizando uma janela variável para cada região da curva. Para a região de inflexão, foi utilizada uma janela pequena, com aproximadamente a metade do número de pontos da região de inflexão. Para a região de decaimento, foi utilizada uma janela de 201 pontos, muito maior, para aumentar a intensidade de alisamento. A \autoref{fig:decaimento_fluorescencia_mg1} mostra como a utilização de Savtizky-Golay é essencial para a análise das curvas. 
 
@@ -415,7 +415,7 @@
 	
 	Observa-se que há uma diferença significativa tanto no coeficiente de determinação quanto na constante de decaimento entre as injeções com e sem \TTAB{}. Os valores menores de \(R^2\) e os erros maiores se devem à menor taxa de decaimento, isso é, a curva é mais próxima a uma reta horizontal.  Porém, não se observa uma diferença entre os tempos de injeção. Isso indica que o crescimento micelar ocorre após a injeção, e prossegue bastante lentamente.
 	
-	A hipótese de que o fenômeno que concede o decaimento exponencial é o crescimento micelar foi testado de uma maneira bastante simples. Um papel foi colocado na frente a fonte de luz. Caso o decaimento seja devido ao crescimento micelar, o mesmo deve prosseguir sem a incidência de radiação. Caso contrário, é possível que a incidência de luz esteja resultando em alguma modificação no sistema. A \autoref{fig:fluorescencia_buraco} mostra a curva resultante, e a junção das duas regiões pré- e pós-bloqueio.
+	A hipótese de que o fenômeno que concede o decaimento exponencial é o crescimento micelar foi testado de uma maneira bastante simples. Um papel foi colocado na frente da fonte de luz. Caso o decaimento seja devido ao crescimento micelar, o mesmo deve prosseguir sem a incidência de radiação. Caso contrário, é possível que a incidência de luz esteja resultando em alguma modificação no sistema. A \autoref{fig:fluorescencia_buraco} mostra a curva resultante, e a junção das duas regiões pré- e pós-bloqueio.
 	
 	\begin{figure}[h]
 		\centering
@@ -424,7 +424,7 @@
 		\label{fig:fluorescencia_buraco}
 	\end{figure}
 	
-	Observa-se claramente de que o decaimento recomeça assim que a luz começa a reincidir na amostra. Isso coloca em dúvida as conclusões observadas anteriormente. Possivelmente, o decaimento se deve a algum fenômeno fotoquímico ou fotofísico desconhecido.
+	Observa-se claramente que o decaimento recomeça assim que a luz começa a reincidir na amostra. Isso coloca em dúvida as conclusões observadas anteriormente. Possivelmente, o decaimento se deve a algum fenômeno fotoquímico ou fotofísico desconhecido.
 	
 	Como o decaimento aparenta ocorrer em tempos muito longos, foi utilizado outro equipamento para comparar os resultados, utilizando tempos de integração de 1s, mas com uma incidência de radiação muito menos intensa. A \autoref{fig:fluor_claudia} mostra as curvas observadas para todas as misturas utilizadas na  \autoref{tab:params_ajuste_decaimento}.
 	

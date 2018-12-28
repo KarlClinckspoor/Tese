@@ -8,7 +8,7 @@
 \label{sec:modelo_MG_matematica}
 \section{Introdução e motivação}
 
-Esta seção mostrará as equações utilizadas para descrever o modelo de espalhamento de micelas gigantes, que foi utilizada na \autoref{sec:tr-saxs}. As equação foram baseadas numa série de artigos\cite{Pedersen1996, Yoshizaki1980, Cannavacciuolo2002, Pedersen2007a, Arleth2002}, que serão agrupados para facilitar o entendimento do modelo. Porém, essa descrição matemática é de menor aplicabilidade, pois é necessário transcrever as equações em código que consiga realizar ajustes. Essa tarefa não é trivial, especialmente para não especialistas. Logo, será disponibilizado uma transcrição dessas equações, na linguagem Python, no \autoref{sec:modelo_MG_python}.
+Esta seção mostrará as equações utilizadas para descrever o modelo de espalhamento de micelas gigantes, que foi utilizada na \autoref{sec:tr-saxs}. As equações foram baseadas numa série de artigos\cite{Pedersen1996, Yoshizaki1980, Cannavacciuolo2002, Pedersen2007a, Arleth2002}, que serão agrupados para facilitar o entendimento do modelo. Porém, essa descrição matemática é de menor aplicabilidade, pois é necessário transcrever as equações em código que consiga realizar ajustes. Essa tarefa não é trivial, especialmente para não especialistas. Logo, será disponibilizado uma transcrição dessas equações, na linguagem Python, no \autoref{sec:modelo_MG_python}.
 
 \section{Resumo do modelo} \index{apêndices!modelos} \index{SAXS!modelagem!micelas gigantes}
 
@@ -339,7 +339,7 @@ Esta seção mostrará as equações do modelo de micelas gigantes, utilizado ne
 	\label{fig:saxs_modelo_dado_saxs_python}
 \end{figure}
 
-Uma das motivações para realizar essa tarefa foi a grande dificuldade de nosso grupo utilizar SAXS para estudar micelas. Não há especialistas na região que conhecem modelagem de micelas gigantes. Além disso, escrever um modelo computacional baseando-se somente as equações matemáticas é uma tarefa muito difícil para quem não possui experiência. O modelo computacional, apesar de menos compacto em sua notação, é mais fácil de ser utilizado pois os passos são bastante detalhados, o que também facilita o entendimento de novos alunos. Além disso, examinando o código, é possível notar vários detalhes operacionais, como constantes de integração/normalização que não estão explicitamente presentes nas equações.
+Uma das motivações para realizar essa tarefa foi a grande dificuldade de nosso grupo utilizar SAXS para estudar micelas. Não há especialistas na região que conhecem modelagem de micelas gigantes. Além disso, escrever um modelo computacional baseando-se somente nas equações matemáticas é uma tarefa muito difícil para quem não possui experiência. O modelo computacional, apesar de menos compacto em sua notação, é mais fácil de ser utilizado pois os passos são bastante detalhados, o que também facilita o entendimento de novos alunos. Além disso, examinando o código, é possível notar vários detalhes operacionais, como constantes de integração/normalização que não estão explicitamente presentes nas equações.
 
 As equações descritas no apêndice anterior foram traduzidas em uma série de funções e termos dentro dessas funções. Para ajudar no entendimento, há comentários no código que referenciam as equações à medida que elas são utilizadas. Note, porém, que a lógica utilizada para descrever um modelo matematicamente e computacionalmente são diferentes. Matematicamente, iniciei descrevendo o modelo de forma geral e depois descrevi as partes mais detalhadas, enquanto que, computacionalmente, essa ordem pode se inverter.
 
@@ -489,7 +489,7 @@ Uma nova janela de prompt de comando ou PowerShell pode ser aberta na pasta atua
 	\centering
 \end{figure}
 
-Após isso, digite o nome do programa, geralmente \texttt{wlsq.exe} para iniciar o programa, e você será apresentado com a seguinte tela. Mas antes de realizar começar a fazer os ajustes, é necessário cuidar de outros detalhes.
+Após isso, digite o nome do programa, geralmente \texttt{wlsq.exe} para iniciar o programa, e você será apresentado com a seguinte tela. Mas antes de começar a fazer os ajustes, é necessário cuidar de outros detalhes.
 \begin{samepage}
 	\begin{verbatim}
 	PS C:\Users\Karl\Desktop\SAXS\SAXS_Karl_back> .\wlsq_karl.exe
@@ -507,7 +507,7 @@ Após isso, digite o nome do programa, geralmente \texttt{wlsq.exe} para iniciar
 
 \section{Carregamento de dados}
 
-É necessário se atentar a estes três requesitos para os arquivos.
+É necessário se atentar a estes três requisitos para os arquivos.
 
 \begin{enumerate}
 	\item Formatação
@@ -765,7 +765,7 @@ GIVE RETURN TO CONTINUE OR S=STORE
 
 Você tem duas escolhas, dar enter ou escrever \texttt{S}. Store armazena os parâmetros no arquivo \texttt{RESULT.DAT}, se você estiver satisfeito com os parâmetros.
 
-Depois disso ele mostrará alguns parâmetros do ajuste e perguntar se você deseja fazer um novo fit. É necessário você escolher \texttt{Y} ou \texttt{N}. Aí você escolhe entre ajustar um novo conjunto de dados ou tentar ajustar esse dado novamente (\textit{default}). Aí o processo se repete.
+Depois disso ele mostrará alguns parâmetros do ajuste e perguntará se você deseja fazer um novo fit. É necessário você escolher \texttt{Y} ou \texttt{N}. Aí você escolhe entre ajustar um novo conjunto de dados ou tentar ajustar esse dado novamente (\textit{default}). Aí o processo se repete.
 
 \section{Resultados}
 
@@ -815,7 +815,7 @@ Caso se coloque que não quer realizar um ajuste, o programa irá cair num estad
 
 \section{Análises em sequência}
 \label{sec:script_saxs_sequencia}
-Quando tiver muitos arquivos, você pode utiliar o modo de sequência, usando uma lista de arquivos. Essa lista deve ter o nome \texttt{INPUT.LIS} e deve conter o seguinte:
+Quando tiver muitos arquivos, você pode utilizar o modo de sequência, usando uma lista de arquivos. Essa lista deve ter o nome \texttt{INPUT.LIS} e deve conter o seguinte:
 
 \begin{linenumbers}
 	\begin{verbatim}
@@ -930,7 +930,7 @@ Durante a elaboração deste projeto, uma animação foi criada, mostrando como 
 
 \chapter{Curso de Python}
 
-Neste trabalho, utilizou-se bastante a linguagem Python para o tratamento de dados. O aluno gosta bastante dessa linguagem, por ser fácil de compreender, ser poderoso, possuir um conjunto grande de pacotes científicos e matemáticos de qualidade, e totalmente gratuita. 
+Neste trabalho, utilizou-se bastante a linguagem Python para o tratamento de dados. O aluno gosta bastante dessa linguagem, por ser fácil de compreender, ser poderosa, possuir um conjunto grande de pacotes científicos e matemáticos de qualidade, e ser totalmente gratuita. 
 
 Um curso de Python com foco em tratamento de dados foi elaborado pelo aluno, e se encontra disponível em um repositório no Github\footnote{\href{https://github.com/KarlClinckspoor/CursoPython}{https://github.com/KarlClinckspoor/CursoPython}}. 
 
@@ -952,7 +952,7 @@ Um curso de Python com foco em tratamento de dados foi elaborado pelo aluno, e s
 
 \section{Breve introdução à sintaxe}
 
-Para ajudar compreender os códigos presentes neste texto, estas são algumas informações básicas sobre a sintaxe da linguagem.
+Para ajudar a compreender os códigos presentes neste texto, estas são algumas informações básicas sobre a sintaxe da linguagem.
 
 \begin{enumerate}
 	\item 	Para definir uma equação, segue-se a seguinte sintaxe \mintinline{python}{def nome_da_equação(parâmetros):}. Após o \texttt{:}, ocorre a criação de um bloco de código com um nível de indentação. Todo o código dentro de um mesmo nível de indentação possui o mesmo escopo, ou seja, está dentro, por exemplo, da definição da função. A palavra chave \mintinline{python}{return} retorna a/as variáveis seguintes, como resposta da função. Para chamar uma função, é utilizado o nome da função seguido dos parâmetros entre parênteses.
