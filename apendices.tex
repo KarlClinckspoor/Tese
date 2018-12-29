@@ -118,8 +118,8 @@ A \autoref{eqn:AP_Fwc} pode ser simplificada dependendo da faixa de \q. A regiã
 \begin{equation}
 	F_\mathrm{wc} \approx 
 		\begin{cases}
-			F_{\mathrm{chain}_\mathrm{ExV}}		& \mathrm{q baixo}  \\
-			F_\mathrm{rod}						& \mathrm{q alto}
+			F_{\mathrm{chain}_\mathrm{ExV}}		& q\mathrm{\> baixo}  \\
+			F_\mathrm{rod}						& q\mathrm{\> alto}
 		\end{cases}
 	\label{eqn:AP_Fwc_dois_casos}
 \end{equation}
@@ -339,9 +339,9 @@ Esta seção mostrará as equações do modelo de micelas gigantes, utilizado ne
 	\label{fig:saxs_modelo_dado_saxs_python}
 \end{figure}
 
-Uma das motivações para realizar essa tarefa foi a grande dificuldade de nosso grupo utilizar SAXS para estudar micelas. Não há especialistas na região que conhecem modelagem de micelas gigantes. Além disso, escrever um modelo computacional baseando-se somente nas equações matemáticas é uma tarefa muito difícil para quem não possui experiência. O modelo computacional, apesar de menos compacto em sua notação, é mais fácil de ser utilizado pois os passos são bastante detalhados, o que também facilita o entendimento de novos alunos. Além disso, examinando o código, é possível notar vários detalhes operacionais, como constantes de integração/normalização que não estão explicitamente presentes nas equações.
+Uma das motivações para realizar essa tarefa foi a grande dificuldade de nosso grupo utilizar SAXS para estudar micelas. Não há especialistas na região que conhecem modelagem de micelas gigantes. Além disso, escrever um modelo computacional baseando-se somente em equações matemáticas é uma tarefa muito difícil para quem não possui experiência. O modelo computacional, apesar de menos compacto em sua notação, é mais fácil de ser utilizado pois os passos são bastante detalhados, o que também facilita o entendimento de novos alunos. Além disso, examinando o código, é possível notar vários detalhes operacionais, como constantes de integração/normalização que não estão explicitamente presentes nas equações.
 
-As equações descritas no apêndice anterior foram traduzidas em uma série de funções e termos dentro dessas funções. Para ajudar no entendimento, há comentários no código que referenciam as equações à medida que elas são utilizadas. Note, porém, que a lógica utilizada para descrever um modelo matematicamente e computacionalmente são diferentes. Matematicamente, iniciei descrevendo o modelo de forma geral e depois descrevi as partes mais detalhadas, enquanto que, computacionalmente, essa ordem pode se inverter.
+As equações descritas no apêndice anterior foram traduzidas em uma série de funções e termos dentro dessas funções. Para ajudar no entendimento, há comentários no código que referenciam as equações à medida que elas são utilizadas. Note, porém, que a lógica utilizada para descrever um modelo matematicamente e computacionalmente são diferentes. Matematicamente, modelo de forma geral foi descrito inicialmente, seguido das partes mais detalhadas, enquanto que, computacionalmente, essa ordem pode se inverter.
 
 Para facilitar o entendimento, a \autoref{tab:AP_corrs_blocos_equacoes} correlaciona as equações e os blocos de código onde aparecem.
 
@@ -460,7 +460,7 @@ Foi desenvolvido um guia para utilizar o programa SUPERSAXS, disponibilizado par
 
 \textbf{Resumo}
 
-O programa SUPERSAXS foi desenvolvido em FORTRAN77 por Jan Skov Pedersen e Cristiano Oliveira, na Universidade de Århus, Dinamarca, para o ajuste não linear com base no método dos mínimos quadrados. A operação do programa é totalmente baseada no teclado. Este documento visa guiar um novo usuário a como utilizar o programa e alertá-lo para todos os eventuais problemas que possam aparecer. O código-fonte do programa está disponível para outras pessoas que desejam utilizá-lo e modificá-lo, mas não pode ser publicado. Compiladores de Fortran 95, como o \texttt{gfortran} conseguem compilar o código.
+O programa SUPERSAXS foi desenvolvido em FORTRAN77 por Jan Skov Pedersen e Cristiano Oliveira, na Universidade de Århus, Dinamarca, para o ajuste não linear com base no método dos mínimos quadrados. A operação do programa é totalmente baseada em comandos de texto. Este documento visa guiar um novo usuário a como utilizar o programa e alertá-lo para todos os eventuais problemas que possam aparecer. O código-fonte do programa está disponível para outras pessoas que desejam utilizá-lo e modificá-lo, mas não pode ser publicado. Compiladores de Fortran 95, como o \texttt{gfortran} conseguem compilar o código.
 
 
 \section*{Descrição geral}

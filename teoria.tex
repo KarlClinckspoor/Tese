@@ -1,5 +1,14 @@
 
+	\chapter*{Divisão do trabalho}
+Esta tese se dividirá em 4 grandes partes. Na primeira, será fornecido o embasamento teórico necessário para a melhor compreensão da discussão. Essa parte começará por uma introdução geral ao sistema que será estudado, surfactantes e micelas gigantes, e as técnicas que serão utilizadas: reologia, calorimetria de titulação isotérmica, SAXS e fluorescência. Em seguida, começará uma seção mais focada no trabalho, discutindo sobre as interações intermoleculares e, por fim, todo esse conteúdo será focado na área de micelas gigantes. Com esse panorama, os objetivos do projeto serão descritos.
+
+A próxima parte desta tese mostrará o efeito dos aditivos escolhidos nos objetivos nas micelas gigantes. Serão fornecidas informações reológicas e calorimétricas. Em seguida, o estudo de um desses aditivos, a ureia, será aprofundado, utilizando técnicas adicionais, como SAXS e calorimetria diferencial de varredura, e um sistema simplificado. A última grande parte abordará os estudos de cinética de crescimento de micelas gigantes, através de SAXS e fluorescência resolvidos no tempo.
+
+A parte seguinte mostrará a contribuição do aluno para outros trabalhos, e, por fim, os apêndices agregam tópicos de matemática e programação de aspectos abordados no texto, mas que foram colocados a parte para deixar o texto mais claro.
+
+
 \part{Introdução e teoria}
+
 
 	\chapter{Surfactantes e autoassociação}
 	\label{sec:surfactantes_autoassociação}
@@ -28,7 +37,7 @@
 		\label{fig:superficie_surfactante}
 	\end{figure} \index{surfactantes!atividade superficial}
 		
-	Devido à sua ação interfacial e a característica anfifílica, os surfactantes possuem uma grande variedade de possíveis aplicações, desde produtos básicos inventados na antiguidade, como o sabão\cite{Gibbs1939, Levey1954}, na biologia, na forma de membranas celulares e sais biliares\cite{Wennerstrom1979}, na indústria alimentícia\cite{Lauridsen1976}, na indústria química\cite{Balzer1999} e de petróleo\cite{Surfactants_petroleum}, e inclusive, como catalizadores\cite{Minch1978a}.
+	Devido à sua ação interfacial e a característica anfifílica, os surfactantes possuem uma grande variedade de possíveis aplicações, desde produtos básicos inventados na antiguidade, como o sabão\cite{Gibbs1939, Levey1954}, na biologia, na forma de membranas celulares e sais biliares\cite{Wennerstrom1979}, na indústria alimentícia\cite{Lauridsen1976}, na indústria química\cite{Balzer1999} e de petróleo\cite{Surfactants_petroleum}, e, inclusive, como catalizadores\cite{Minch1978a}.
 	
 	À medida que mais surfactante é adicionado, mais moléculas se concentram na superfície, até uma concentração limite, chamada de concentração micelar crítica (\cmc). Nesse ponto, várias propriedades do sistema mudam, como a tensão superficial, a condutividade, pressão osmótica, e outros.\cite{Lindman_livro} \index{surfactantes!concentração micelar crítica} A partir desse ponto, as moléculas de surfactante começam a formar estruturas de autoassociação, como, por exemplo, micelas esféricas, ilustradas na \autoref{fig:micela_esferica}.\cite{Lindman_livro} O termo ``micela'', do latim \emph{mica}, migalha, foi cunhado por Karl Wilhelm von Nägeli em 1858, e adotado por McBain em 1913 para descrever os agregados formados numa solução de sabão. Supostamente, seus contemporâneos não aceitaram essa ideia, dizendo ``Nonsense, McBain, Nonsense!''.\footnote{``Absurdo, McBain, Absurdo!''}\cite{Vincent2014} % todo: verificar a posição da ref e da nota de rodapé
 		
@@ -78,7 +87,7 @@
 		\label{fig:param_empacotamento}
 	\end{figure}
 	
-	Esse parâmetro pode ser visualizado como uma comparação entre as áreas das bases de um cilindro, sendo uma dada por \({V}/{l}\) e a outra por \(a_0\). Quando o termo hidrofóbico é pequeno, temos praticamente um cone, e valores de \(P\) menores que \(\sfrac{1}{3}\). Como a região polar é muito grande, a estrutura de autoassociação necessariamente possuirá uma curvatura alta, o que resulta em micelas esféricas. Seguindo esse raciocínio, tanto aumentando a contribuição hidrofóbica quanto diminuindo a contribuição hidrofílica, é possível obter valores de \(\sfrac{1}{3} \leq P < \sfrac{1}{2}\). Nesse momento, são formadas micelas gigantes.
+	Esse parâmetro pode ser visualizado como uma comparação entre as áreas das bases de um cilindro, sendo uma dada por \({V}/{l}\) e a outra por \(a_0\). Quando o termo hidrofóbico é pequeno, temos praticamente um cone, e valores de \(P\) menores que \(\sfrac{1}{3}\). Como a região polar é muito grande, a estrutura de autoassociação necessariamente possuirá uma curvatura alta, o que resulta em micelas esféricas. Seguindo esse raciocínio, tanto aumentando a contribuição hidrofóbica quanto diminuindo a contribuição hidrofílica, é possível obter valores de \(\sfrac{1}{3} \leq P < \sfrac{1}{2}\). Nessa condição, são formadas micelas gigantes.
 	
 	Prosseguindo por essa lógica, quando as contribuições das duas regiões são equivalentes, (\(P = 1\)), as moléculas de surfactante possuem um formato cilíndrico. Nessa situação, são formadas estruturas de curvatura total zero, como lamelas.\cite{Zou2007} É possível inverter essa tendência aumentando a contribuição da parte hidrofóbica, gerando agregados com grande curvatura, mas de maneira oposta. Nesse caso, são formadas micelas reversas, cilíndricas\cite{Tung2006} ou esféricas\cite{Mackeben2001a}. \index{surfactantes!parâmetro de empacotamento} Um diagrama com várias estruturas de autoassociação possíveis se encontra em \citeauthor{Lindman_livro}.
 
@@ -91,13 +100,13 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=5cm]{imagens/introducao/interacao_nasal_ctab}
-		\caption{Interação da molécula de salicilato com um surfactante catiônico e com o solvente}
+		\caption{Interação da molécula de salicilato com um surfactante catiônico e com o solvente, na paliçada micelar.}
 		\label{fig:interacao_nasal_ctab} \index{surfactantes!efeito de NaSal}
 	\end{figure}
 	
-	Concentrações pequenas, tanto de surfactante quanto de NaSal são capazes de induzir a formação e crescimento micelar\cite{Sarac2013, Ito2015c}, devido à grande afinidade que o salicilato possui pela paliçada. O sistema 100 \mM{} de \CTAB{} e 100 \mM{} de NaSal forma uma solução bastante viscosa, porém uma solução 100 \mM{} de \CTAB{} e 100 \mM{} de NaCl é completamente fluída, devido à baixa afinidade do íon Cl\textsuperscript{-} pela superfície micelar.\footnote{Dados não publicados do grupo} 
+	Concentrações pequenas, tanto de surfactante quanto de NaSal são capazes de induzir a formação e crescimento micelar\cite{Sarac2013, Ito2015c}, devido à grande afinidade que o salicilato possui pela paliçada. O sistema 100 \mM{} de \CTAB{} e 100 \mM{} de NaSal forma uma solução bastante viscosa, porém uma solução 100 \mM{} de \CTAB{} e 100 \mM{} de NaCl é completamente fluída, devido à baixa afinidade do íon Cl\textsuperscript{-} pela superfície micelar.\footnote{Dados do grupo não publicados} 
 	
-	O solvente, como já informado, possui uma papel muito importante na formação de estruturas de autoassociação. É necessário que exista uma penalidade entrópica da solvatação do surfactante suficientemente grande para que a associação ocorra. Essa penalidade é bastante alta em água, mas inexistente em solventes como hexano. Apesar de sua importância, não há muitos estudos sobre como solventes aquosos afetam a formação, crescimento e interações de micelas gigantes. Neste trabalho, será estudado o papel de misturas binárias água com outros componentes na formação de micelas gigantes de NaSal e surfactantes catiônicos.
+	O solvente, como já informado, possui uma papel muito importante na formação de estruturas de autoassociação. É necessário que exista uma penalidade entrópica da solvatação do surfactante suficientemente grande para que a associação ocorra. Essa penalidade é bastante alta em água, mas inexistente em solventes como hexano. Apesar de sua importância, não há muitos estudos sobre como solventes aquosos afetam a formação, crescimento e interações de micelas gigantes. Neste trabalho, será estudado o papel de misturas binárias de água com outros componentes na formação de micelas gigantes de NaSal e surfactantes catiônicos.
 		
 	Uma descrição mais completa sobre micelas gigantes se encontra no \autoref{chap:micelas_gigantes}.
 
@@ -128,13 +137,13 @@
 			\label{eqn:Deborah}
 		\end{equation}
 		
-		O tempo de relaxação é, como o nome diz, o tempo que um material leva para dissipar uma tensão aplicada em si. Quando a força é aplicada por um tempo maior que o tempo de relaxação do material, a tensão é dissipada e o material flui. De maneira oposta, caso a tensão seja aplicada por um tempo bastante curto, comparativamente, não há tempo para o material perder a energia, e mantém seu formato.
+		O tempo de relaxação é, como o nome diz, o tempo que um material leva para dissipar uma tensão aplicada em si. Quando a força é aplicada por um tempo maior que o tempo de relaxação do material, a tensão é dissipada e o material flui. De maneira oposta, caso a tensão seja aplicada por um tempo bastante curto, comparativamente, não há tempo para o material perder a energia, e mantém assim o seu formato.
 		
 		Por exemplo, uma mola metálica resiste forças compressivas e expansivas. Porém, se comprimida ou expandida por muito tempo, os defeitos cristalinos do metal podem começar a se locomover, e a mola perde parte de suas características elásticas, um fenômeno conhecido como fluência (\emph{creep}). Logo, o material que aparentemente é sempre elástico, pode fluir, demonstrando um pouco de comportamento viscoso.\cite{Crossland1973, Schleichert2017}
 				
 		Água, no outro extremo, é um material que se comporta quase sempre como um líquido. Porém, assim como a mola, pode agir de maneira oposta. Se o tempo do experimento for muito rápido, como num impacto, as moléculas de água não tem tempo suficiente para se deslocar, e a água aparenta ser um sólido.\cite{Goodwin2008}
 		
-		Soluções de micelas gigantes combinam ambos os comportamentos elástico e viscoso.\cite{Pilpel1966, Hoffmann1982a} \index{reologia!viscoelasticidade} Isso é observado claramente no efeito de recuo (\emph{recoil}), \index{micelas gigantes!recoil@\textsl{recoil}} quando uma solução de micelas gigantes é agitada circularmente.\cite{Hoffmann1988a} Inicialmente, observa-se a solução seguindo o sentido do fluxo através das bolhas formadas pela agitação. Quando a agitação é cessada, o fluxo continua por um tempo, devido à sua inércia, depois para e começa a fluir no sentido contrário (recuo), podendo até oscilar várias vezes, se a solução for bastante elástica. Isso ocorre porque as cadeias de micelas gigantes interagem entre si e se entrelaçam de tal modo que um pouco da energia da agitação é armazenada. Quando a agitação cessa, essa energia consegue ser liberada, o que ocorre no sentido oposto à agitação, então o recuo é observado. Depois do recuo, a solução para de se movimentar pois toda a energia foi dissipada. A escala de tempo para a perda de energia e para o \emph{recoil} são aproximadamente iguais, logo o número de Deborah desse fluido é próximo de 1.
+		Soluções de micelas gigantes combinam ambos os comportamentos elástico e viscoso.\cite{Pilpel1966, Hoffmann1982a} \index{reologia!viscoelasticidade} Isso é observado claramente no efeito de recuo (\emph{recoil}), \index{micelas gigantes!recoil@\textsl{recoil}} quando uma solução de micelas gigantes é agitada circularmente.\cite{Hoffmann1988a} Inicialmente, observa-se a solução seguindo o sentido do fluxo através das bolhas formadas pela agitação. Quando a agitação cessa, o fluxo continua por um tempo, devido à sua inércia, depois para e começa a fluir no sentido contrário (recuo), podendo até oscilar várias vezes, se a solução for bastante elástica. Isso ocorre porque as cadeias de micelas gigantes interagem entre si e se entrelaçam de tal modo que um pouco da energia da agitação é armazenada. Ao interromper a agitação, essa energia consegue ser liberada, o que ocorre no sentido oposto à agitação, então o recuo é observado. Depois do recuo, a solução para de se movimentar pois toda a energia foi dissipada. A escala de tempo para a perda de energia e para o \emph{recoil} são aproximadamente iguais, logo o número de Deborah desse fluido é próximo de 1.
 		
 		A correlação entre o número de Deborah e o comportamento do material pode ser resumido pela \autoref{eqn:Deborah_casos}\cite{Goodwin2008}
 		
@@ -148,7 +157,7 @@
 			\label{eqn:Deborah_casos}
 		\end{equation} \index{reologia!Número de Deborah|textbf}
 		
-		A mola possui \(D_e \gg 1\), pois seu tempo de relaxação é bastante longo comparado com a ação típica de uma mola. Porém, se armazenada numa posição longe de seu estado sem tensão, em especial em temperaturas altas, a situação se inverte, e \(D_e \ll 1\), logo, a mola flui e adota uma nova posição. Dessa maneira, a mola, e os outros materiais citados se comportam como materiais tanto elásticos quanto viscosos, dependendo do tempo de análise \(t\). O nome desse número vem de uma passagem bíblica, \emph{Os montes deslizaram diante do Senhor}\footnote{Juízes 5:5}. Mesmo as montanhas, que tradicionalmente não se movem, acabam deslizando mediante tempos de observação infinitos.
+		A mola possui \(D_e \gg 1\), pois seu tempo de relaxação é bastante longo comparado com a ação típica de uma mola. Porém, se armazenada numa posição longe de seu estado sem tensão, em especial em temperaturas altas, a situação se inverte, e \(D_e \ll 1\), logo, a mola flui e adota um novo formato. Dessa maneira, a mola, e os outros materiais citados se comportam como materiais tanto elásticos quanto viscosos, dependendo do tempo de análise \(t\). O nome desse número vem de uma passagem bíblica, \emph{Os montes deslizaram diante do Senhor}\footnote{Juízes 5:5}. Mesmo as montanhas, que tradicionalmente não se movem, acabam deslizando mediante tempos de observação infinitos.
 		
 		Para um estudo mais aprofundado de reologia, é necessário estabelecer um formalismo matemático, que será feito nas seções a seguir.
 		
@@ -176,7 +185,7 @@
 				\label{eqn:tensao_cisalhamento}
 			\end{equation}
 			
-			A velocidade de cisalhamento é conhecida também como taxa de cisalhamento \(\dot{\gamma}\), calculada a partir da derivada em função do tempo de \(\gamma\) (\autoref{eqn:taxa_cisalhamento})\cite{Kronberg2014a}. A unidade usual de \(\dot{\gamma}\) é s\menosUm. \index{reologia!taxa de cisalhamento \(\dot{\gamma}\)} Algumas referências utilizam a notação de \(\dot{\gamma}\) e outras utilizam o símbolo \(D\), mais fácil de ser digitado.\cite{Schramm1994}
+			A velocidade de cisalhamento é conhecida também como taxa de cisalhamento \(\dot{\gamma}\), calculada a partir da derivada em relação ao tempo de \(\gamma\) (\autoref{eqn:taxa_cisalhamento})\cite{Kronberg2014a}. A unidade usual de \(\dot{\gamma}\) é s\menosUm. \index{reologia!taxa de cisalhamento \(\dot{\gamma}\)} Algumas referências utilizam a notação de \(\dot{\gamma}\) e outras utilizam o símbolo \(D\), mais fácil de ser digitado.\cite{Schramm1994}
 			
 			\begin{equation}
 				\dot{\gamma} = \dfrac{\partial \gamma}{\partial t}
@@ -239,7 +248,7 @@
 			
 			\begin{itemize}[noitemsep]
 				\item Plásticos: Viscosidade inicial é muito alta ou, teoricamente, infinita, até a tensão atingir um valor específico, chamado de tensão limite ou \emph{yield-stress}, quando o material começa a fluir. Exemplo: Manteiga, géis.
-				\item Pseudoplásticos ou \emph{shear-thinning}: Viscosidade alta, mas finita, em baixas taxas de cisalhamento, e decai com o aumento da taxa de cisalhamento, atingindo um valor mínimo. Exemplo: soluções de micelas gigantes.
+				\item Pseudoplásticos ou \emph{shear-thinning}: Viscosidade alta, mas finita, em baixas taxas de cisalhamento, e decai com o aumento da taxa de cisalhamento, atingindo um valor mínimo. Exemplo: soluções de micelas gigantes, tintas.
 				\item Dilatantes: Viscosidade baixa a baixas taxas de cisalhamento, e aumenta com o aumento da taxa. Exemplo: Dispersões de amido em água.
 			\end{itemize}
 			
@@ -411,7 +420,7 @@
 				\label{eqn:osc_g2linha}
 			\end{equation} \index{reologia!oscilatória!G''}
 			
-			Portanto, para conseguir separar os valores dos módulos G' e G'', o reômetro necessita medir o módulo total e o ângulo de defasagem, sendo possível assim separar os componentes. Vale notar que a tangente do ângulo de defasagem é a relação \(G''/G'\),
+			Portanto, para conseguir separar os valores dos módulos \(G'\) e \(G''\), o reômetro necessita medir o módulo total e o ângulo de defasagem, sendo possível assim separar os componentes. Vale notar que a tangente do ângulo de defasagem é a relação \(G''/G'\),
 			
 			\index{módulo elástico G'|see {reologia}}
 			\index{módulo viscoso G''|see {reologia}}
@@ -525,7 +534,7 @@
 				\label{eqn:Maxwell_tempo_rel_def}
 			\end{equation}
 		
-			O tempo de relaxação é o tempo de decaimento de \(\sigma\) para \(\sfrac{1}{e}\) do valor inicial. É interessante notar que em tempos pequenos, relativos a \(\tau_{\mathrm{rel}}\), o material responde com a tensão inicial total. Essa é a resposta imediata da mola. Porém,à medida que \(t\to\tau_{\mathrm{rel}}\), a tensão começa a decair exponencialmente e depois, em \(t \gg \tau_{\mathrm{rel}}\), tende a zero. Nessa situação, o dissipador difundiu toda a energia inicial aplicada.
+			O tempo de relaxação é o tempo de decaimento de \(\sigma\) para \(\sfrac{1}{e}\) do valor inicial. É interessante notar que em tempos pequenos, relativos a \(\tau_{\mathrm{rel}}\), o material responde com a tensão inicial total. Essa é a resposta imediata da mola. Porém, à medida que \(t\to\tau_{\mathrm{rel}}\), a tensão começa a decair exponencialmente e depois, em \(t \gg \tau_{\mathrm{rel}}\), tende a zero. Nessa situação, o dissipador difundiu toda a energia inicial aplicada.
 			
 			A \autoref{eqn:Maxwell_soma} pode ser rearranjada utilizando o tempo de relaxação,
 			
@@ -759,7 +768,7 @@
 				\label{fig:ITC_inj_exemplo}
 			\end{subfigure}
 		
-			\caption{Titulação de \TTAB{} 42 \mM{} em água, mostrando o calor absorvido pela célula durante a titulação (\ref{fig:ITC_raw_exemplo}). A primeira injeção é descartada para garantir que as injeções subsequentes possuam um volume correto de injeção. A integração dos picos em relação à linha base, dividindo-se isso pela concentração de surfactante injetado, resulta no entalpograma (\ref{fig:ITC_inj_exemplo})}
+			\caption{Titulação de \TTAB{} 42 \mM{} em água, mostrando o calor absorvido pela célula durante a titulação (\ref{fig:ITC_raw_exemplo}). A primeira injeção é descartada para garantir que as injeções subsequentes possuam um volume correto de injeção. A integração dos picos em relação à linha base, dividindo-se pela concentração de surfactante injetado, resulta no entalpograma (\ref{fig:ITC_inj_exemplo})}
 			\label{fig:ITC_exemplo}
 		\end{figure}
 		
@@ -767,7 +776,7 @@
 		
 		\section{Calorimetria de micelização} \index{ITC!micelização}
 		\label{sec:calorimetria_micelizacao}
-		A partir de um conjunto de dados como os da \autoref{fig:ITC_exemplo}, é possível calcular a concentração micelar crítica (\cmc) e a entalpia de micelização, \DHmic. A \cmc{} pelo ponto onde a primeira derivada do entalpograma é máxima (ou mínima)\cite{Bouchemal2010a}, ou onde a segunda derivada é igual a zero.\cite{Sarac2009}  A \DHmic{} é determinada realizando-se dois ajustes lineares das regiões iniciais e finais do entalpograma.\cite{Loh2016} A diferença de entalpia dos pontos de intersecção desses ajustes com uma reta horizontal na \cmc{} fornece o \DHmic{} sem correção.  A \autoref{fig:itc_extracao_cmc_dh} mostra esse método.
+		A partir de um conjunto de dados como os da \autoref{fig:ITC_exemplo}, é possível calcular a concentração micelar crítica (\cmc) e a entalpia de micelização, \DHmic. A \cmc{} é dada pelo ponto onde a primeira derivada do entalpograma é máxima (ou mínima)\cite{Bouchemal2010a}, ou onde a segunda derivada é igual a zero.\cite{Sarac2009}  A \DHmic{} é determinada realizando-se dois ajustes lineares das regiões iniciais e finais do entalpograma.\cite{Loh2016} A diferença de entalpia dos pontos de intersecção desses ajustes com uma reta horizontal na \cmc{} fornece o \DHmic{} sem correção.  A \autoref{fig:itc_extracao_cmc_dh} mostra esse método.
 		
 		\begin{figure}[h] \index{ITC!\cmc}
 			\centering
@@ -796,7 +805,7 @@
 			\label{eqn:itc_DeltaG_mic}
 		\end{equation} \index{ITC!relações termodinâmicas}
 		
-		\noindent onde \(\alpha\) é o grau de ionização das micelas e \(\chi_{\mathrm{cmc}}\) é a concentração micelar crítica em fração molar. O cálculo para surfactantes iônicos assume que o solvente é água e/ou a força iônica seja baixa. Não considerar os contraíons geralmente leva a erros altos.\cite{Bouchemal2010a}
+		\noindent onde \(\alpha\) é o grau de ionização das micelas e \(\chi_{\mathrm{cmc}}\) é a concentração micelar crítica em fração molar. O cálculo para surfactantes iônicos assume que o solvente é água e/ou a força iônica seja baixa. Não considerar os contraíons geralmente leva a erros significativos.\cite{Bouchemal2010a}
 		
 		Com a entalpia e energia livre de micelização, é possível encontrar a entropia de micelização pela equação de Gibbs (\autoref{eqn:itc_gibbs_para_entropia}).
 		
@@ -814,7 +823,7 @@
 		
 		%Este capítulo foi fortemente inspirado pelo livro de \citeauthor{Glatter2018livro}, uma excelente, e acessível, introdução à técnica. Os trabalhos de Pedersen também são de boa qualidade, e, quando utilizados, serão indicados.
 		
-		A radiação eletromagnética é composta com um campo magnético e um campo elétrico oscilantes. Quando um feixe eletromagnético incide sobre uma amostra fina, o campo elétrico variante irá interagir com os elétrons dos átomos dentro da região iluminada. Dependendo da frequência (\(\omega\)), pode ocorrer o fenômeno da absorção perto do limite de Lorentz, \(\omega \approx \omega_0\), de interesse em experimentos espectroscópicos, ou pode ocorrer uma polarização dos átomos que varia com a frequência da radiação quando \(\omega \ll \omega_0\) ou \(\omega \gg \omega_0\). Os dipolos emitem radiação pois toda carga elétrica emite um campo elétrico em direções praticamente aleatórias, com amplitude proporcional à aceleração. Isso é chamado de espalhamento. Essas ondas espalhadas interagem construtiva- e destrutivamente, originando em padrões de espalhamento dependendo da localização dos centros espalhadores.\cite{Glatter2018livro}
+		A radiação eletromagnética é composta com um campo magnético e um campo elétrico oscilantes. Quando um feixe eletromagnético incide sobre uma amostra fina, o campo elétrico variante irá interagir com os elétrons dos átomos dentro da região iluminada. Dependendo da frequência (\(\omega\)), pode ocorrer o fenômeno da absorção perto do limite de Lorentz, \(\omega \approx \omega_0\), de interesse em experimentos espectroscópicos, ou pode ocorrer uma polarização dos átomos que varia com a frequência da radiação quando \(\omega \ll \omega_0\) ou \(\omega \gg \omega_0\). Os dipolos emitem radiação pois toda carga elétrica emite um campo elétrico em direções praticamente aleatórias, com amplitude proporcional à aceleração. Isso é chamado de espalhamento. Essas ondas espalhadas interagem construtiva- e destrutivamente, originando padrões de espalhamento dependendo da localização dos centros espalhadores.\cite{Glatter2018livro}
 		
 		Raios-X possuem comprimentos de onda tão pequenos que se encontram no limite de Thomson, onde \(\omega \gg \omega_0\). No campo da matéria mole, a energia dos fótons é tão alta que todos os elétrons dos átomos, até suas camadas mais internas, oscilam junto com a radiação. Isso não acontece com o espalhamento de luz, onde a oscilação ocorre somente com os elétrons das camadas mais externas, dependendo da polarizabilidade dos átomos, que é proporcional ao índice de refração do material (\autoref{eqn:lorenz_lorentz}).\citeauthor{Glatter2018livro}
 		
@@ -936,7 +945,7 @@
 			\label{eqn:SAXS_amplitude_esfera_integrado}
 		\end{equation}
 		
-		Essa equação, normalizada, é utilizada na descrição do modelo de micelas gigantes (\autoref{eqn:AP_Fsphere}) que está presente no \autoref{sec:modelo_MG_matematica}.
+		Essa equação, normalizada, será utilizada na descrição do modelo de micelas gigantes (\autoref{eqn:AP_Fsphere}) que está presente no \autoref{sec:modelo_MG_matematica}.
 		
 		Como a intensidade de luz espalhada é o quadrado da amplitude, \cite{Narayanan2008a}
 		
@@ -965,7 +974,7 @@
 		
 		\subsection{Fator estrutura, concentrações altas} \index{SAXS!fator estrutura}
 		
-		Quando a translação e orientação de uma partícula em solução começa a depender das outras, uma contribuição do espalhamento dessas correlações começa a se tornar visível. Esse fator adicional, chamado de fator estrutura, \(S(q)\), deve ser multiplicado ao \(P(q)\) para se obter o valor da intensidade correta (\autoref{eqn:SAXS_I_P_S}). Em soluções diluídas, a contribuição do fator estrutura se cancela devido à posição e orientação arbitrárias das partículas, então \(S(q) \approx 1\).\cite{Narayanan2008a}
+		Quando a translação e orientação de uma partícula em solução começa a depender das outras, uma contribuição do espalhamento dessas correlações começa a se tornar visível. Esse fator adicional, chamado de fator estrutura, \(S(q)\), deve ser multiplicado ao \(P(q)\) para se obter o valor da intensidade correta (\autoref{eqn:SAXS_I_P_S}). Em soluções diluídas, a contribuição do fator estrutura se cancela devido à posição e à orientação arbitrárias das partículas, então \(S(q) \approx 1\).\cite{Narayanan2008a}
 		
 		\begin{equation}
 			I(q) = n\Delta \rho^2 V^2 P(q) S(q)
@@ -992,7 +1001,7 @@
 		\subsection{Indexação de picos} \index{SAXS!indexação de picos}
 		\label{sec:teoria_SAXS}
 		
-		Outro exemplo de estruturação é o que ocorre quando existem fases lamelares em solução. Geralmente, os picos oriundos do fator estrutura se superpõem ao fator forma, tornando-se bastante evidentes. Esses picos são consequência da ordenação equidistante das bicamadas, e a posição dos picos está relacionada à distância média das lamelas.\cite{Glatter2018livro} Outras mesofases também resultam em fatores estrutura, mas com a posição relativa dos picos em valores diferentes, o que permite a identificação da fase a partir de SAXS.\cite{Narayanan2008a} A \autoref{fig:exemplo_saxs} mostra o padrão de espalhamento de uma amostra lamelar, obtido neste trabalho. Essa figura é resultado da integração azimutal da imagem da \autoref{fig:esquema_saxs}.
+		Outro exemplo de estruturação é o que ocorre quando existem cristais líquidos em solução. Neste trabalho, observou-se fases lamelares, então receberão o foco do texto. Geralmente, os picos oriundos do fator estrutura se superpõem ao fator forma, tornando-se bastante evidentes. Esses picos são consequência da ordenação equidistante das bicamadas, e a posição dos picos está relacionada à distância média das lamelas.\cite{Glatter2018livro} Outras mesofases também resultam em fatores estrutura, mas com a posição relativa dos picos em valores diferentes, o que permite a identificação da fase a partir de SAXS.\cite{Narayanan2008a} A \autoref{fig:exemplo_saxs} mostra o padrão de espalhamento de uma amostra lamelar, obtido neste trabalho. Essa figura é resultado da integração azimutal da imagem da \autoref{fig:esquema_saxs}.
 		
 		\begin{figure}[h]
 			\centering
@@ -1053,7 +1062,7 @@
 		
 		O fenômeno de fluorescência é uma subdivisão do fenômeno luminescência, posição que compartilha com a fosforescência. A diferença entre os dois fenômenos está no mecanismo de transição eletrônica, que também altera os tempos de vida dos dois fenômenos. De forma geral, os tempos de vida de fluorescência são da ordem de \(10^{-8} s\), já a fosforescência os tempos de vida variam de milissegundos a segundos.\cite{Lakowicz2006} Neste trabalho, somente o fenômeno da fluorescência é de importância.
 		
-		Uma maneira de se visualizar os fenômenos de luminescência é através do diagrama de Jablonski. Nesse tipo de diagrama, o eixo y representa energia, e as várias linhas representam níveis energéticos.\cite{Lakowicz2006} A \autoref{fig:diagrama_jablonski} mostra um diagrama de Jablonski onde os fenômenos de absorção, fluorescência e fosforescência estão ilustrados. Os níveis \(S\) representam os estados singleto, e seu subíndice representa o nível eletrônico, sendo 0 o fundamental, que é marcado como uma linha mais grossa. Os níveis vibracionais são marcados de 0 a 4 nesse diagrama, com uma linha mais fina. As linhas pontilhadas representam processos não-radiativos e as linhas cheias representam processos radiativos. \index{Fluorescência!processo radiativo} \index{Fluorescência!processo não-radiativo} As cores das linhas são proporcionais aos comprimentos de onda envolvidos, mas não descrevem as cores reais. O nível tripleto é representado como \(T_1\). 
+		Uma maneira de se visualizar os fenômenos de luminescência é através do diagrama de Jablonski. Nesse tipo de diagrama, o eixo y representa energia, e as várias linhas representam níveis energéticos.\cite{Lakowicz2006} A \autoref{fig:diagrama_jablonski} mostra um diagrama de Jablonski onde os fenômenos de absorção, fluorescência e fosforescência estão ilustrados. Os níveis \(S\) representam os estados singleto, e seu subíndice representa o nível eletrônico, sendo 0 o fundamental. Os níveis vibracionais são marcados de 0 a 4 nesse diagrama, com o estado fundamental marcado com uma linha mais grossa e os outros, com uma linha mais fina. As linhas pontilhadas representam processos não-radiativos e as linhas cheias representam processos radiativos. \index{Fluorescência!processo radiativo} \index{Fluorescência!processo não-radiativo} As cores das linhas são proporcionais aos comprimentos de onda envolvidos, mas não descrevem as cores reais. O nível tripleto é representado como \(T_1\). 
 		
 		\begin{figure}[h]
 			\centering
@@ -1074,6 +1083,8 @@
 		As transições eletrônicas ocorrem numa faixa de tempo muito rápida, de cerca de \(10^{-15}\) s. Esse tempo é muito rápido para que tenha ocorrido mudanças nas posições dos núcleos. Isso é conhecido como o princípio de Frank-Condon. \index{Fluorescência!princípio de Franck-Condon} Uma das consequências desse princípio é que a probabilidade de uma transição \(S_1 \to S_0\) é igual à probabilidade de uma transição \(S_0 \to S_1\), o que resulta em espectros de emissão e absorção espelhados. Quando o espelhamento não é observado, é possível que o espectro de absorção possua uma absorção para um segundo estado excitado \(S_2\), onde o elétron relaxa rapidamente. Logo, observa-se somente as transições espelhadas entre os estados \(S_1\) e \(S_0\).
 			
 		As transições para os estados excitados ocorrem sem alteração do spin do elétron. Porém, caso o elétron troque de spin, no fenômeno chamado de cruzamento intersistema, \index{Fluorescência!cruzamento intersistemas} o novo estado, um tripleto, não possui uma transição permitida para o estado singleto fundamental. Isso faz com que as escalas de tempo para a transição sejam muito maiores do que a fluorescência, onde a transição é permitida.
+		
+		\vfill
 		
 		\section{Rendimento quântico e tempo de vida} \index{Fluorescência!rendimento quântico}
 				
@@ -1101,7 +1112,7 @@
 		
 		A transferência eletrônica é resultante da formação de um completo entre um doador e um aceptor eletrônico (o fluoróforo pode ser ambos), formando um complexo do tipo \(D_p^+A_p^-\), que pode voltar ao estado fundamental sem emissão, porém em alguns casos é observada a emissão desse complexo. Após a relaxação, o elétron é retornado ao doador.  \cite{Lakowicz2006}
 				
-		Outro parâmetro que pode influenciar a fluorescência é a viscosidade do meio onde o fluoróforo se encontra. \index{Fluorescência!efeito da viscosidade} Isso depende da estrutura e do mecanismo de emissão específico de cada fluoróforo. A molécula CCVJ possui um aumento de seu rendimento quântico com o aumento da viscosidade do solvente, em soluções de etileno glicol em glicol. Isso ocorre porque a maior viscosidade atrasa a rotação interna de certos grupos em sua estrutura e dificulta um mecanismo de transferência de carga que extingue a fluorescência, aumentando então o rendimento quântico. \cite{Lakowicz2006}
+		Outro parâmetro que pode influenciar a fluorescência é a viscosidade do meio onde o fluoróforo se encontra. \index{Fluorescência!efeito da viscosidade} Isso depende da estrutura e do mecanismo de emissão específico de cada fluoróforo. Por exemplo, a molécula CCVJ possui um aumento de seu rendimento quântico com o aumento da viscosidade do solvente, em soluções de etileno glicol em glicol. Isso ocorre porque a maior viscosidade atrasa a rotação interna de certos grupos em sua estrutura e dificulta um mecanismo de transferência de carga que extingue a fluorescência, aumentando então o rendimento quântico. \cite{Lakowicz2006}
 		
 		\section{Aplicações para sistemas micelares}
 		
@@ -1304,7 +1315,7 @@
 	
 	Na molécula de água, há uma grande diferença de eletronegatividade entre O e H, resultando numa grande polarização dessa ligação. A molécula de água pode ser representada centrada no oxigênio, com duas cargas positivas nos hidrogênios e duas cargas negativas nos pares eletrônicos do oxigênio. Essa interação entre as regiões positiva e negativa das moléculas de água, de natureza eletrostática, é bastante forte, da ordem de 5-10 \(k_BT\) a 298K. Essa interação pode ser visualizada através das distâncias de ligação, onde a ligação intramolecular O --- H é de 0.10 nm, a distância intermolecular \(\mathrm{O} \cdots \mathrm{H}\) é 0.176 nm, e a soma dos raios de van der Waals de O e H é de 0.26 nm. Devido à essa forte interação, as moléculas de água formam uma estrutura tetraédrica, com quatro moléculas de água ao redor, no estado sólido, e uma média de 3,5 moléculas de água no estado líquido, ao invés de 12 moléculas para estruturas com empacotamento denso.
 	
-	A forte tendência da água de formar ligações de hidrogênio influencia quando algum soluto grande, que não consegue realizar ligações de hidrogênio, é adicionado. Não importa a disposição das moléculas de água, haverá alguma das cargas parciais que não conseguirá ser totalmente equilibrada. Uma consequência disso é o aparecimento de cargas negativas em superfícies hidrofóbicas, pois moléculas de água se direcionam preferencialmente com o oxigênio em direção à essas superfícies, ocorrendo um acúmulo das cargas negativas parciais. Outra consequência é que em solutos hidrofóbicos, como hidrocarbonetos longos, causam uma estruturação da água envolvendo o hidrocarboneto, que é bastante entropicamente desfavorável, já que rompe a estrutura existente e impõe uma estrutura ordenada. Por exemplo, a interação entre n-butano e água é entalpicamente favorável (\(\Delta H = -4,3\) kJ.mol\menosUm), porém é extremamente entropicamente desfavorável (\(-T\Delta S = +28,7\) kJ.mol\menosUm), resultando no \(\Delta G_{\mathrm{transferência}} = +24.5\) kJ.mol\menosUm. Essa energia é proporcional à área da superfície hidrofóbica, e é próxima à tensão superficial de água e um hidrocarboneto. \index{forças intermoleculares!interação de hidrocarbonetos com água}
+	A forte tendência da água de formar ligações de hidrogênio influencia quando algum soluto grande, que não consegue realizar ligações de hidrogênio, é adicionado. Não importa a disposição das moléculas de água, haverá alguma das cargas parciais que não conseguirá ser totalmente equilibrada. Uma consequência disso é o aparecimento de cargas negativas em superfícies hidrofóbicas, pois moléculas de água se direcionam preferencialmente com o oxigênio em direção à essas superfícies, ocorrendo um acúmulo das cargas negativas parciais. Outra consequência é que em solutos hidrofóbicos, como hidrocarbonetos longos, causam uma estruturação da água envolvendo o hidrocarboneto, que é entropicamente desfavorável, já que rompe a estrutura existente e impõe uma estrutura ordenada. Por exemplo, a interação entre n-butano e água é entalpicamente favorável (\(\Delta H = -4,3\) kJ.mol\menosUm), porém é extremamente entropicamente desfavorável (\(-T\Delta S = +28,7\) kJ.mol\menosUm), resultando no \(\Delta G_{\mathrm{transferência}} = +24.5\) kJ.mol\menosUm. Essa energia é proporcional à área da superfície hidrofóbica, e é próxima à tensão superficial de água e um hidrocarboneto. \index{forças intermoleculares!interação de hidrocarbonetos com água}
 	
 	A interação hidrofóbica é o nome dado à força de atração entre espécies hidrofóbicas em água, que é muito maior à força de atração daquelas em vácuo, devido ao efeito hidrofóbico. Quando duas moléculas solvatadas se aproximam, suas esferas de hidratação se sobrepõem, e moléculas de água se tornam livres. Do lado oposto, a interação hidrofílica resulta na repulsão de espécies em água, e ocorre em materiais conhecidos por absorver água do ar, isso é, hidroscópicos.
 	
@@ -1400,12 +1411,12 @@
 
 	\chapter{Micelas gigantes} \index{micelas gigantes|textbf}
 	% todo: Falar sobre os tempos de relaxação vistos por Hoffmann por birrefringência elétrica
-	Este capítulo irá contextualizar a teoria vista nos capítulos anteriores para o campo de micelas gigantes, e expandir em algumas áreas. Excelentes livros e artigos introdutórios podem ser encontrados nas referências \cite{Herb1994, Dreiss2007, WLM_Advances, Giant_Micelles, Ezrahi2006}.
-	
+	Este capítulo irá contextualizar a teoria vista nos capítulos anteriores para o campo de micelas gigantes, e expandir em algumas áreas. Excelentes livros e artigos introdutórios podem ser encontrados nas referências \cite{Dreiss2007, Giant_Micelles, WLM_Advances, Herb1994, Ezrahi2006}.
+
 		\label{chap:micelas_gigantes}
 		\section{Estruturas e tamanhos}  % todo: rever esse nome
 		\index{micelas gigantes!estrutura}
-		Como mencionado no \autoref{sec:surfactantes_autoassociação}, micelas gigantes são formadas por moléculas de surfactante. O parâmetro de empacotamento dessas moléculas pode ser alterado pela adição de mais surfactante, sais inorgânicos, sais orgânicos (hidrótropos), cosurfactantes pequenos, surfactantes não iônicos, pela mistura de surfactantes catiônicos e aniônicos, ou também pela alterações nas características do solvente, como sua temperatura e pH.\cite{Dreiss2007} A alteração do parâmetro de empacotamento leva a mudanças na curvatura micelar, que acaba levando à formação de estruturas diferentes. A \autoref{fig:regimes_e_estruturas_lequeux} mostra um diagrama de fase esquemático para estruturas alongadas.
+		Como mencionado no \autoref{sec:surfactantes_autoassociação}, micelas gigantes são formadas por moléculas de surfactante. O parâmetro de empacotamento dessas moléculas pode ser alterado pela adição de mais surfactante, sais inorgânicos, sais orgânicos (hidrótropos\footnote{Sais anfifílicos mas com uma região apolar pequena}), cosurfactantes pequenos, surfactantes não iônicos, pela mistura de surfactantes catiônicos e aniônicos, ou também pela alterações nas características do solvente, como sua temperatura e pH.\cite{Dreiss2007} A alteração do parâmetro de empacotamento leva a mudanças na curvatura micelar, que acaba levando à formação de estruturas diferentes. A \autoref{fig:regimes_e_estruturas_lequeux} mostra um diagrama de fase esquemático para estruturas alongadas.
 		
 		\begin{figure}[h]
 			\centering
@@ -1420,7 +1431,7 @@
 	\index{micelas gigantes!ramificações}
 	\index{micelas gigantes!rede}
 		
-		As micelas gigantes possuem alguns comprimentos característicos. Começando do maior, temos o comprimento de contorno, \(L_c\), que vai de uma ponta à outra da micela. Em solução, as micelas geralmente estão enoveladas, dependendo de sua rigidez, e o tamanho desse novelo é conhecido como raio de giro, \(R_g\).  Por sua vez, a rigidez intrínseca, cujo tamanho é definido pelo comprimento de persistência \(l_p\), também está relacionada ao comprimento de Kuhn, \(k_L\) pela relação \(k_L=2l_p\).\cite{Dreiss2007} A proporção entre o comprimento de contorno e de persistência de uma micela informa o quão flexível essa micela é. Por exemplo, micelas longas e com comprimento de persistência curto são bastante flexíveis, porém micelas curtas, da mesma ordem do comprimento de contorno, se comportam como cilindros rígidos. O menor dos comprimentos é o raio da seção transversal (\(r_{\mathrm{CS}}\)) , que é da ordem do raio de micelas esféricas, em torno de poucos nanômetros. O raio de seção transversal das micelas é próximo ao comprimento da cadeia do surfactante, que está em torno de 2 nm. O comprimento de persistência varia de 15 a 1000 nm, e o comprimento de contorno varia de 4 a 3600 nm.\cite{Dreiss2007} A \autoref{fig:escalas_tamanho_mg} mostra as escalas de tamanho das micelas gigantes.
+		As micelas gigantes possuem alguns comprimentos característicos. Começando do maior, temos o comprimento de contorno, \(L_c\), que vai de uma ponta à outra da micela. Em solução, as micelas geralmente estão enoveladas, dependendo de sua rigidez, e o tamanho desse novelo é conhecido como raio de giro, \(R_g\).  Por sua vez, a rigidez intrínseca, cujo tamanho é definido pelo comprimento de persistência \(l_p\), também está relacionada ao comprimento de Kuhn, \(k_L\) pela relação \(k_L=2l_p\).\cite{Dreiss2007} A proporção entre o comprimento de contorno e de persistência de uma micela informa o quão flexível essa micela é. Por exemplo, micelas longas e com comprimento de persistência curto são bastante flexíveis, porém micelas curtas, da mesma ordem do comprimento de contorno, se comportam como cilindros rígidos. O menor dos comprimentos é o raio da seção transversal (\(r_{\mathrm{CS}}\)), da ordem do raio de micelas esféricas, em torno de poucos nanômetros. O raio de seção transversal das micelas é próximo ao comprimento da cadeia do surfactante, que está em torno de 2 nm. O comprimento de persistência varia de 15 a 1000 nm, e o comprimento de contorno varia de 4 a 3600 nm.\cite{Dreiss2007} A \autoref{fig:escalas_tamanho_mg} mostra as escalas de tamanho das micelas gigantes.
 		\index{micelas gigantes!comprimento de persistência \(l_p\)} 
 		\index{micelas gigantes!comprimento de contorno \(L_c\)} 
 		\index{micelas gigantes!raio de giro \(R_g\)} 
@@ -1437,7 +1448,7 @@
 			\label{fig:escalas_tamanho_mg}
 		\end{figure}
 		
-		As micelas gigantes, por possuírem tamanhos finitos, necessitam de pontas. O empacotamento das pontas é diferente do corpo cilíndrico, caso contrário, não possuiriam a curvatura necessária para ``fechar'' um cilindro. Como o empacotamento das pontas está diferente do empacotamento ditado pelas condições da solução, as pontas possuem uma energia maior que o corpo micelar.\cite{May2001a} Se a causa principal para a mudança no parâmetro de empacotamento for a presença de sais como NaSal, segue que a concentração de NaSal incorporado às pontas deve ser diferente do corpo micelar. As pontas, de maneira geral, são inchadas, e isso pode facilmente ser observado em micelas mais espessas, como de copolímeros em bloco (\autoref{fig:pontas_inchadas_danino2009}). \index{micelas gigantes!pontas}
+		Por possuírem tamanhos finitos, as micelas gigantes necessitam de pontas. O empacotamento das pontas é diferente do corpo cilíndrico, caso contrário, não possuiriam a curvatura necessária para ``fechar'' um cilindro. Por esse motivo, as pontas possuem uma energia maior que o corpo micelar.\cite{May2001a} Se a causa principal para a mudança no parâmetro de empacotamento for a presença de sais como NaSal, segue que a concentração de NaSal incorporado às pontas deve ser diferente do corpo micelar. O empacotamento diferenciado das pontas pode ser facilmente observado em micelas mais espessas, como de copolímeros em bloco (\autoref{fig:pontas_inchadas_danino2009}). \index{micelas gigantes!pontas}
 		
 		\begin{figure}[h]
 			\centering
@@ -1446,7 +1457,7 @@
 			\label{fig:pontas_inchadas_danino2009}
 		\end{figure} \index{micelas gigantes!Cryo-TEM}
 				
-		As moléculas de surfactante no meio se particionam nas duas regiões das micelas dependendo da energia relativa dessas duas regiões. Caso mais moléculas de surfactante se dirijam ao corpo micelar, haverá a formação de micelas mais compridas, caso contrário, haverá um número maior de micelas mais curtas. Assim, quanto maior for a energia das pontas, maior será o comprimento da micela.\cite{May2001a}
+		Caso mais moléculas de surfactante se dirijam ao corpo micelar, haverá a formação de micelas mais compridas, caso contrário, haverá um número maior de micelas mais curtas. Assim, quanto maior for a energia das pontas, maior será o comprimento da micela.\cite{May2001a}
 		
 		Acima da concentração de sobreposição \(\phi^*\), é possível calcular, pela teoria do campo médio, o comprimento de contorno médio \(\overline{L_c}\), relacionando-o à energia das pontas, \(E_c\) (\autoref{eqn:l_contorno_neutra})\cite{Cates1990}. Essa teoria considera que o comprimento de persistência é muito mais comprido que o raio de seção transversal, e que o volume excluído pelas cadeias pode ser considerado pelo sistema completo, ao invés de ser tratado localmente.
 		\index{micelas gigantes!concentração de sobreposição} \index{micelas gigantes!energia das pontas}
@@ -1487,7 +1498,7 @@
 		Porém, essas equações não consideram a formação de \emph{loops} ou de pontos de ramificação. A formação de \emph{loops} elimina a energia das pontas, em troca de perda de entropia conformacional. Pontos de ramificação, assim como as pontas de micelas, possuem um empacotamento diferente do corpo micelar, mas com a curvatura oposta.
 		\index{micelas gigantes!loops}
 		
-		A reologia de sistemas com redes diferem fortemente das cadeias lineares.\cite{Cates2006, Lequeux1992a} Uma característica importante dos pontos de ramificação é que eles são lábeis, isso é, podem se mover pela cadeia. Nesse caso, o comprimento de contorno \(\overline{L_c}\) não possui o mesmo significado físico. Nesse caso, \(\overline{L_c}\) denota distância até a cadeia mais próxima, ou o ponto de junção na rede. Isso ocorre porque, o sistema ramificado, em escalas de tamanho maiores que \(\overline{L_c}\), oferece uma reserva para o comprimento de contorno, que pode ser armazenado, ou emprestado, para outras cadeias da rede. \cite{Cates2006} 
+		A reologia de sistemas com redes diferem fortemente das cadeias lineares.\cite{Cates2006, Lequeux1992a} Uma característica importante dos pontos de ramificação é que eles são lábeis, isso é, podem se mover pela cadeia. Nesse caso, o comprimento de contorno \(\overline{L_c}\) não possui o mesmo significado físico. Nesse caso, \(\overline{L_c}\) denota distância até a cadeia mais próxima, ou o ponto de junção na rede. Isso ocorre porque o sistema ramificado, em escalas de tamanho maiores que \(\overline{L_c}\), oferece uma reserva para o comprimento de contorno, que pode ser armazenado, ou emprestado, para outras cadeias da rede. \cite{Cates2006} 
 		
 		\section{Comportamento reológico}
 		
@@ -1544,7 +1555,7 @@
 		\end{equation} % ref Cates 1990
 		\index{micelas gigantes!quebra e recombinação}
 		
-		Por último, o módulo no platô é dependente da quantidade de pontos de contato das micelas, que, por sua vez, é dependente da fração volumétrica de surfactante,\cite{Cates1990}. \index{micelas gigantes!módulo no platô \(G\)}
+		Por último, o módulo no platô é dependente da quantidade de pontos de contato das micelas, que, por sua vez, é dependente da fração volumétrica de surfactante \(\phi\),\cite{Cates1990} \index{micelas gigantes!módulo no platô \(G\)}
 		
 		\begin{equation}
 			G \sim \phi^{2{,}3}  
@@ -1629,7 +1640,7 @@
 		
 		
 		\index{micelas gigantes!OHCA}
-		A viscosidade das soluções de surfactantes catiônicos e sais é dependente da concentração de sal, e da afinidade do sal pela micela que, por sua vez, depende de sua estrutura. Além disso, a afinidade do sal altera o perfil de viscosidade. Sais com pouca afinidade, como orto-metilbenzoato de sódio, possuem um único máximo de viscosidade, já sais como o salicilato de sódio e o orto-hidroxicinamato de sódio geram perfis com dois máximos de viscosidade.\cite{Clinckspoor2015, Ito2014c}
+		A viscosidade das soluções de surfactantes catiônicos e sais é dependente da concentração de sal, e da afinidade do sal pela micela que, por sua vez, depende de sua estrutura. Além disso, a afinidade do sal altera o perfil de viscosidade. Sais com pouca afinidade, como ortometilbenzoato de sódio, possuem um único máximo de viscosidade, já sais como o salicilato de sódio e o orto-hidroxicinamato de sódio geram perfis com dois máximos de viscosidade.\cite{Clinckspoor2015, Ito2014c}
 		A quantidade de salicilato que se concentra na superfície micelar é alta, cerca de 93\%, muito mais do que os íons Cl\textsuperscript{-} e Br\textsuperscript{-}.\cite{Rehage1991}
 		
 		Tais soluções de surfactante e sal podem ser estudadas tanto por reologia oscilatória quanto por curvas de fluxo. Soluções de micelas gigantes, quando submetidas à uma taxa de cisalhamento crescente, começam a se alinhar ao fluxo, diminuindo a viscosidade aparente da solução. Isso as caracteriza como fluidos pseudoplásticos. Quando a taxa de cisalhamento é baixa, a viscosidade não se altera, e pode-se obter uma grandeza conhecida como viscosidade no repouso \(\eta_0\) por uma variedade de técnicas (\autoref{sec:teoria_fluidos_NN}). \index{micelas gigantes!alinhamento ao fluxo}
@@ -1642,7 +1653,7 @@
 			 O valor de \(G\) dessa região é menor do que nas próximas. \cite{Rehage1991}
 			\item[III] Região onde a carga das micelas continua a diminuir com a incorporação crescente de NaSal, levando à uma diminuição da carga superficial. Ao invés de micelas lineares, ocorre a formação de uma rede ramificada de micelas, e a solução começa a seguir o modelo de Maxwell. Quando a solução se aproxima da equimolaridade, a carga superficial das micelas se aproxima a 0. Nessa região, o processo de relaxação principal é a quebra e recombinação.
 			\item[IV] Região onde a carga das micelas começa a ficar mais negativa devido ao excesso de salicilato em solução\cite{Olsson1986a}, mas alguns trabalhos discordam, citando que o salicilato extra pode se encontrar fora, como um contraíon.\cite{Cassidy1996} A estrutura das micelas ainda é ramificada. % todo: colocar uma ref disso. Rehage?
-			A carga superficial pode levar à uma diminuição na taxa de colisão entre as micelas e no aumento do comprimento de persistência, aumentando o tempo de relaxação estrutural. A viscosidade menor nesta região, em relação à região II, pode se dever aos íons \Sal{} livres, que ajudam nos mecanismos de dissipação de tensão.\cite{Shikata1988} 
+			A carga superficial pode levar a uma diminuição na taxa de colisão entre as micelas e no aumento do comprimento de persistência, aumentando o tempo de relaxação estrutural. A viscosidade menor nesta região, em relação à região II, pode se dever aos íons \Sal{} livres, que ajudam nos mecanismos de dissipação de tensão.\cite{Shikata1988} 
 			\item[V] Região onde a quantidade de salicilato aumentou em demasia, e, ao invés do crescimento micelar ocorrer, existe somente a transição para micelas cilíndricas curtas, ou esféricas, com grande excesso de salicilato.
 		\end{enumerate}
 		
@@ -1690,7 +1701,7 @@
 %		
 %		\noindent onde \(\mu_\infty^\circ\) é o potencial químico numa molécula com um número infinito de agregação.
 	
-		De forma geral, o potencial químico dos agregados aumenta com o número de agregação. Para entender onde ocorre a transição entre monômeros e agregados, a \cmc, deve-se considerar a diferença no potencial químico dessas duas espécies,\cite{Israelachvili2011}
+		De forma geral, o potencial químico dos agregados aumenta com o número de agregação. Deve-se considerar a diferença no potencial químico dessas duas espécies, para entender em qual concentração ocorre a transição entre monômeros e agregados, a \cmc, \cite{Israelachvili2011}
 		
 		\begin{equation}
 			X_N = N \left[ X_1 \exp \left(\dfrac{\mu_1^\circ - \mu_N^\circ}{k_B T}\right) \right] ^ N
@@ -1796,13 +1807,13 @@
 			\label{eqn:potencial_quim_eletrostatico}
 		\end{equation} \index{micelas gigantes!energia eletrostática}
 		
-		\noindent onde \(c = a / (2 \pi r_\mathrm{cs} \lambda_B)\). Além disso, o fator \(k_BT\) substitui o termo \(e^2/4\pi\varepsilon_{ 0 }\varepsilon_\mathrm{água}\lambda_B\) da contribuição eletrostática. O termo positivo \(\sim N \ln N\) age contra o termo \((N - N_\mathrm{ponta}) \mu_\mathrm{cilindro}^\circ\) (\autoref{eqn:potencial_quimico_MG}), este que, por sua vez, leva ao crescimento das micelas. Somando a contribuição eletrostática ao potencial químico das micelas, chegamos à uma equação que leva as contribuições eletrostáticas em consideração \cite{Giant_Micelles}
+		\noindent onde \(c = a / (2 \pi r_\mathrm{cs} \lambda_B)\). Além disso, o fator \(k_BT\) substitui o termo \(e^2/4\pi\varepsilon_{ 0 }\varepsilon_\mathrm{água}\lambda_B\) da contribuição eletrostática. O termo positivo \(\sim N \ln N\) age contra o termo \((N - N_\mathrm{ponta}) \mu_\mathrm{cilindro}^\circ\) (\autoref{eqn:potencial_quimico_MG}), este que, por sua vez, leva ao crescimento das micelas. Somando a contribuição eletrostática ao potencial químico das micelas, chegamos a uma equação que leva as contribuições eletrostáticas em consideração \cite{Giant_Micelles}
 		
 		\begin{equation}
 			\mu_N^\circ = (N - N_\mathrm{ponta})\mu_\mathrm{cilindro}^\circ + k_B T c \left[ N \ln (cN) - N \right] + N_\mathrm{ponta}\mu_\mathrm{ponta}^\circ
 		\end{equation}
 		
-		Esse resultado limita a distribuição de tamanho das micelas, mas somente em soluções diluídas. Quando o sistema aumenta de concentração, e passa para o regime semidiluído, o comprimento de contorno \(\overline{L_c}\) das micelas se torna maior que \(\tilde{L}\) \index{micelas gigantes!regime semidiluído}
+		Esse resultado limita a distribuição de tamanho das micelas, mas somente em soluções diluídas. Quando a concentração aumenta, e o sistema passa para o regime semidiluído, o comprimento de contorno \(\overline{L_c}\) das micelas se torna maior que \(\tilde{L}\) \index{micelas gigantes!regime semidiluído}
 		
 		\begin{equation}
 		 	\tilde{L} \sim r_\mathrm{cs} / \phi^{\sfrac{1}{2}}
@@ -1827,13 +1838,13 @@
 
 		\section{Comportamento calorimétrico} \index{micelas gigantes!calorimetria}
 		
-		A calorimetria de titulação isotérmica é uma técnica que é utilizada para estudar a autoassociação de micelas gigantes.\cite{Bijma1998c, Liu2011a, Fisicaro2005a, Sarac2009, Sarac2013} Recentemente, observou-se que esse processo, para surfactantes catiônicos e vários aditivos aromáticos, possui um perfil característico.\cite{Ito2015c, Ito2016}
+		A calorimetria de titulação isotérmica é uma técnica que é empregada no estudo a autoassociação de micelas gigantes.\cite{Bijma1998c, Liu2011a, Fisicaro2005a, Sarac2009, Sarac2013} Recentemente, observou-se que esse processo, para surfactantes catiônicos e vários aditivos aromáticos, possui um perfil característico.\cite{Ito2015c, Ito2016}
 		
 		Numa titulação típica, como mostrado na \autoref{sec:calorimetria_micelizacao}, o surfactante é titulado em água. Dessa forma, à medida que a concentração de surfactante aumenta, o sistema prossegue ao ponto onde a micelização ocorre, e, tipicamente, uma variação no calor trocado é observada. Na titulação de micelas gigantes, o mesmo procedimento foi adotado, porém agora, ao invés de se titular o surfactante em água, se titula numa solução do aditivo. Neste trabalho, utilizou-se NaSal. Como o salicilato induz a micelização, é necessário uma concentração menor de surfactante na seringa para se observar o processo de micelização. Isso altera o formato do entalpograma, como será mostrado nesta seção.
 		
 		\index{micelas gigantes!dado bruto de calorimetria}
 		
-		A \autoref{fig:itc_raw_mg} mostra dois exemplos dos sinais obtidos para a titulação \TTAB{} em uma solução de NaSal 1,5 \mM{} em dois solventes diferentes, água (\autoref{fig:itc_raw_mg}) e 40\% m/m de glicerina, 60\% m/m de água (\autoref{fig:raw_itc_mg_glicerina}). Essa figura mostra vários detalhes comuns que são observados durante uma titulação. Próximo à região onde ocorre a formação de micelas gigantes, picos adicionais aparecem nos entalpogramas, e, dependendo do solvente, o ruído da linha de base aumenta. Esse segundo pico pode tanto ser endotérmico como exotérmico. Os picos largos podem estar relacionados à um processo lento no sistema, de incorporação de \Sal{} nas micelas ou de fusão das mesmas.\cite{Ito2016} Essa aparente lentidão motivou os estudos de cinética deste trabalho. % todo: pensar em colocar um estudo mais aprofundado desse tipo nos resultados, após a reologia oscilatória
+		A \autoref{fig:itc_raw_mg} mostra dois exemplos dos sinais obtidos para a titulação \TTAB{} em uma solução de NaSal 1,5 \mM{} em dois solventes diferentes, água (\autoref{fig:itc_raw_mg}) e 40\% m/m de glicerina, 60\% m/m de água (\autoref{fig:raw_itc_mg_glicerina}). Essa figura mostra vários detalhes comuns que são observados durante uma titulação. Próximo à região onde ocorre a formação de micelas gigantes, picos adicionais aparecem nos entalpogramas, e, dependendo do solvente, o ruído da linha de base aumenta. Esse segundo pico pode tanto ser endotérmico como exotérmico. Os picos largos podem estar relacionados a um processo lento no sistema, de incorporação de \Sal{} nas micelas ou de fusão das mesmas.\cite{Ito2016} Essa aparente lentidão motivou os estudos de cinética deste trabalho. % todo: pensar em colocar um estudo mais aprofundado desse tipo nos resultados, após a reologia oscilatória
 		\index{micelas gigantes!segundo pico de injeção}
 		Geralmente, utiliza-se \TTAB{} nesse tipo de experimento, ao invés de \CTAB{}, pois a agregação é menos favorecida, deslocando as curvas para uma faixa maior de concentração de surfactante, e as soluções são menos viscosas no mínimo, resultando em dados melhores.
 		
@@ -1880,6 +1891,7 @@
 		Um problema com esse tipo de análise é determinar como exibir esse tipo de dado. É possível tanto utilizar a concentração de \TTAB{} quanto de NaSal na abscissa, mas isso acaba comprimindo um dos entalpogramas. Outra maneira é utilizar a concentração do titulado, porém, claramente, a abscissa possui significados diferentes. Esse tipo de experimento foi muito pouco estudado, e a definição de parâmetros como \cwlm{} ficam difíceis de serem definidas. Algumas questões pode ser levantadas. Por exemplo, caso a agregação seja observada em determinada concentração de NaSal, a concentração de \TTAB{} nesse ponto seria definida como sua \cwlm{} para tal concentração de NaSal? Estudos mais aprofundados, de viscosimetria e espalhamento de luz, dentre outras técnicas, são necessários para definir essa área.
 		
 		\begin{figure}
+			\centering
 			\begin{subfigure}{0.3\textwidth}
 				\centering
 				\includegraphics[width=\linewidth]{imagens/itc/itc_inverso_normal_base_ttab}
@@ -1919,7 +1931,7 @@
 		Hoffmann observou\cite{Grabner2014, Song2008a, Shinto2012} que a formação de lamelas não era afetada pela adição de alguns aditivos ao solvente, porém a distância interlamelar aumentava significativamente. A interpretação de Hoffmann para o intumescimento se baseou no índice de refração (\(n\)) do surfactante e do solvente, propriedades importantes para descrever a atração coloidal, como visto pela constante de Hamaker, \autoref{eqn:constante_hamaker_lifshitz}.
 		\index{micelas gigantes!constante de Hamaker}
 		
-		Quando a concentração de glicerina em água atinge 60\% v/v, o índice de refração do solvente \(n_3\) e do agregado \(n_1\) se tornam iguais. Nessa situação, a atração interlamelar diminui muito, pois a constante de Hamaker, proporcional à diferença desses índices de refração, se torna próxima de zero. Com a atração interlamelar anulada, as forças repulsivas de ondulação das lamelas conseguem separá-las, intumescendo o sistema.
+		Quando a concentração de glicerina em água atinge 60\% v/v, o índice de refração do solvente \(n_3\) e do agregado \(n_1\) se tornam iguais. Nessa situação, a atração interlamelar diminui muito, pois a constante de Hamaker, proporcional à diferença desses índices de refração, torna-se próxima de zero. Com a atração interlamelar anulada, as forças repulsivas de ondulação das lamelas conseguem separá-las, intumescendo o sistema.
 		\index{micelas gigantes!índice de refração}
 		
 		Os sistemas estudados foram: 
