@@ -1,6 +1,7 @@
-% todo: verificar 1,3BD ou 1,3-BD
 % todo: verificar seção por seção se as imagens são melhores h, ht, htb
-% todo: alterar a legenda das figuras muito compridas
+% todo: fazer alguns testes de ajuste da cinética de ITC 
+% todo: remover a seção de fibrose cística, mover para o apêndice.
+
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
@@ -102,7 +103,7 @@
 \newcommand{\CTAB}{C\textsubscript{16}TAB}
 \newcommand{\TTAB}{C\textsubscript{14}TAB}
 \newcommand{\DTAB}{C\textsubscript{12}TAB}
-\newcommand{\BD}{1,3-BD}  % todo: substituir isso no texto
+\newcommand{\BD}{1,3-BD} 
 \newcommand{\CTDTAB}{C\textsubscript{16,14,12}TAB}
 \newcommand{\CTTAB}{C\textsubscript{16,14}TAB}
 \newcommand{\DHmic}{\(\Delta H^\circ_{\mathrm{mic}}\)}
@@ -154,7 +155,7 @@
 % ---
 \titulo{Estudo estrutural, termodinâmico e cinético sobre a formação e interações de micelas gigantes em sistemas aquosos binários}
 \autor{Karl Jan Clinckspoor}
-\local{Brasil}
+\local{Campinas}
 \data{\today}
 \orientador{Prof. Dr. Edvaldo Sabadini}
 \coorientador{}
@@ -167,7 +168,7 @@
 \tipotrabalho{Tese (Doutorado)}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Tese de doutorado realizado no Instituto de Química da Unicamp, na área de Físico-Química, que visa estudar micelas gigantes, sua formação, seu crescimento e as interações intermicelares em sistemas aquosos binários}
+\preambulo{Tese de doutorado apresentada ao Instituto de Química da Universidade Estadual de Campinas, como parte dos requisitos exigidos para a obtenção do título de Doutor em Ciências. O projeto, focado na área de Físico-Química, visa estudar micelas gigantes, sua formação, seu crescimento e as interações intermicelares em sistemas aquosos binários}
 % ---
 
 
@@ -185,7 +186,7 @@
 		pdfauthor={\@author},
     	pdfsubject={\imprimirpreambulo},
 	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		pdfkeywords={Tese de Doutorado}{Micelas Gigantes}{Surfactantes}{Aditivos}{ABNT}, 
 		colorlinks=true,       		% false: boxed links; true: colored links
     	linkcolor=blue,          	% color of internal links
     	citecolor=blue,        		% color of links to bibliography
@@ -193,6 +194,23 @@
 		urlcolor=blue,
 		bookmarksdepth=4
 }
+
+%\hypersetup{
+%	%pagebackref=true,
+%	pdftitle={\@title}, 
+%	pdfauthor={\@author},
+%	pdfsubject={\imprimirpreambulo},
+%	pdfcreator={LaTeX with abnTeX2},
+%	pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+%	colorlinks=true,       		% false: boxed links; true: colored links
+%	linkcolor=black,          	% color of internal links
+%	citecolor=black,        		% color of links to bibliography
+%	filecolor=black,      		% color of file links
+%	urlcolor=black,
+%	bookmarksdepth=4
+%}
+
+
 \makeatother
 % --- 
 
@@ -229,6 +247,16 @@
 % ---
 % Capa
 % ---
+%
+\includegraphics[width=3cm]{imagens/logo_unicamp.png}
+\begin{center}
+	\begin{Large}
+	\textsf{Universidade Estadual de Campinas} 
+	
+	\textsf{Instituto de Química}
+	\end{Large}
+	\vspace{1cm}
+\end{center}
 \imprimircapa
 % ---
 
@@ -327,10 +355,11 @@
    %Trabalho aprovado. \imprimirlocal, 24 de novembro de 2012:
 
    \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{Professor} \\ Convidado 1}
-   \assinatura{\textbf{Professor} \\ Convidado 2}
-   \assinatura{\textbf{Professor} \\ Convidado 3}
-   \assinatura{\textbf{Professor} \\ Convidado 4}
+   \assinatura{\textbf{Prof. Dr. Watson Loh} \\ Membro Interno}
+   \assinatura{\textbf{Prof. Dr. Celso Aparecido Bertran} \\ Membro Interno}
+   \assinatura{\textbf{Prof. Dr. Omar A. El Seoud} \\ Membro Externo}
+   \assinatura{\textbf{Prof. Dr. Antonio José F. Bombard} \\ Membro Externo}
+
       
    \begin{center}
     \vspace*{0.5cm}
@@ -499,7 +528,7 @@ Agradeço ao CNPq pelo financiamento.
 \include{aditivos}
 \include{ureia}
 \include{cinetica}
-\include{contribuicoes}
+%\include{contribuicoes}
 
 
 
@@ -511,8 +540,12 @@ Agradeço ao CNPq pelo financiamento.
 
 
 % Apêndices
-\include{apendices}
 
+\begin{apendicesenv}
+	\partapendices
+	\include{apendices}
+	\include{contribuicoes}
+\end{apendicesenv}
 % Referências bibliográficas
 \bibliography{library}
 

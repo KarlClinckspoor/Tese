@@ -1,6 +1,7 @@
-\part{Contribuições para outros projetos}
+%\part{Contribuições para outros projetos}
 
-	\chapter{Breve descrição sobre o projeto de fibrose cística} \index{fibrose cística}
+	\chapter{Contribuições para o projeto de fibrose cística} \index{fibrose cística}
+	%\chapter{Breve descrição sobre o projeto de fibrose cística} 
 
 	Durante a execução do projeto de doutorado, foi estabelecida uma parceria com uma aluna de doutorado da Faculdade de Ciências Médicas na Unicamp, Carla Cristina S. Gomez, através do Professor Francisco Benedito Pessine, do Instituto de Química da Unicamp, para a análise de amostras de muco de pacientes com fibrose cística. Nesta seção, uma pequena descrição sobre o projeto será apresentada, a contribuição do aluno será realçada, e os resultados do projeto serão mencionados.
 	
@@ -13,15 +14,15 @@
 	Uma série de 19 voluntários com fibrose cística participaram do estudo, porém 7 descontinuaram por outros problemas de saúde. Eles foram dosados com soluções 4,2\% e 8,4\% de NaHCO\textsubscript{3} diluído em água destilada, por inalação, e depois de duas triagens, recebiam o produto para realizar a inalação domiciliarmente. Após isso, retornavam ao centro de pesquisa para escarrar, a cada meia hora, e o muco era coletado e depois analisado. Primeiramente o pH era medido, e depois as amostras eram enviadas para serem analisadas no Instituto de Química. Os parâmetros das análises foram determinados pelo autor da tese, e aproximadamente metade das amostras foram analisadas pelo mesmo (cerca de 250). As amostras restantes foram analisadas pela aluna Carla Gomez. Após isso, os resultados foram tratados, e o processo de tratamento de dados será descrito nesta parte do trabalho.
 
 
-	\chapter{Contribuições ao projeto}
+	\section{Contribuições ao projeto}
 	
 	Nesse projeto, foram analisados tanto curvas de fluxo, como a reologia oscilatória do muco. Utilizou-se tanto o reômetro Haake RheoStress1 quanto o Haake Mars III, ambos da Thermo Scientific, para as análises. Para o tratamento de dados, foi utilizado a linguagem Python, que permite resultados consistentes e de melhor qualidade, se comparados com o ajuste manual.
 	
-		\section{Determinação dos parâmetros de análise}
+		\subsection{Determinação dos parâmetros de análise}
 		
 		Foram analisadas algumas amostras inicialmente para se determinar as faixas de varredura para os estudos reológicos. Primeiramente, a faixa linear de tensão foi determinada com uma varredura de 0,01 Pa a 0,75 Pa, a 1 Hz. Após isso, a varredura oscilatória de frequência foi medida, geralmente com tensões de 0,5 Pa, entre 0,1 Hz a 5 Hz. As curvas de fluxo foram medidas entre 0,01 a 1 s\menosUm.
 	
-		\section{Criação de um software para tratamento de curvas de fluxo} \index{resultados!curvas de fluxo}
+		\subsection{Criação de um software para tratamento de curvas de fluxo} \index{resultados!curvas de fluxo}
 		\label{sec:apn_tratamento_CF}
 		Para o tratamento de dados de curva de fluxo, foi criado um programa que permite o usuário aplicar três modelos mais complexos, descritos na \autoref{sec:modelagem_curva_fluxo} e um modelo simplificado, o linear, para a obtenção de valores de viscosidade no repouso. Todas as amostras de muco, sem exceção, demonstraram ser pseudoplásticas, então não foram colocados mais modelos. A seguir, será mostrada somente a lógica do programa, pois o código fonte inteiro é longo demais para ser incluído aqui (aproximadamente 1000 linhas).
 		
@@ -74,7 +75,7 @@
 		
 	%	\FloatBarrier
 
-		\section{Método de ajuste para reologia oscilatória de muco}
+		\subsection{Método de ajuste para reologia oscilatória de muco}
 		
 		As amostras de muco não seguiram modelos de reologia parecidos aos apresentados neste trabalho, como o modelo de Maxwell. Portanto, foi necessário desenvolver uma nova abordagem para analisar as amostras. Plotando-se todos os dados obtidos, observou-se que G' estava sempre acima de G'' e, na escala logarítmica, as duas curvas eram praticamente paralelas e ligeiramente inclinadas positivamente. Em alguns casos, a inclinação aumentava em frequências maiores e, frequentemente, havia uma oscilação de G' e G'' sem significado físico nessa região. A taxa de aumento era consistente com uma exponencial. Visto isso, foi desenvolvido um script que realiza o seguinte:
 		
@@ -123,7 +124,7 @@
 		
 		\FloatBarrier
 		
-		\chapter{Resultado da colaboração} \index{resultados!colaboração}
+		\section{Resultado da colaboração} \index{resultados!colaboração}
 		
 		A muco é bastante heterogêneo, dependendo da concentração de diversas espécies, como eletrólitos e pH, e também possui regiões com maior concentração de saliva. A parte mais líquida era removida durante a análise no reômetro pelo simples ato de colocar a geometria na superfície da amostra. A secagem da amostra poderia descaracterizá-la, invalidando os resultados. Além disso, cada coleta de muco fornece o muco de regiões diferentes do pulmão, levando a uma variabilidade natural alta.
 		
