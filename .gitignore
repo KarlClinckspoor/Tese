@@ -22,4 +22,5 @@ manuais*
 __pycache__
 Ajuste CTAB*
 *es*
-*pdf
+main.pdf
+.ipynb_checkpoints

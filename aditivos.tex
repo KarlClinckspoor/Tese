@@ -5,6 +5,8 @@
 		
 	Esta é a parte principal desta tese, na qual houve uma dedicação prolongada. Aqui, pesquisou-se sobre efeitos dos aditivos hidrofílicos no comportamento das micelas gigantes. Parte dos resultados foram publicados na revista \emph{Journal of Colloid and Interface Science}, sob o título ``\emph{Rheological and calorimetric study of alkyltrimethylammonium bromide-sodium salicylate wormlike micelles in aqueous binary systems}"\cite{Clinckspoor2018}.
 	
+	Como base para a discussão, utilizou-se a concentração dos aditivos em fração mássica (\% m/m). Isso se deve porque é a base de concentração utilizada na literatura da área, e os bancos de dados possuem as propriedades geralmente em função dessa grandeza. O \autoref{sec:tabelas_conversao} contém algumas tabelas convertendo a fração mássica para outras grandezas de concentração, como molaridade, molalidade, fração molar e proporções molares.
+	
 	Serão apresentados inicialmente os resultados de curva de fluxo (\autoref{sec:efeito_aditivos_viscosidade}), seguindo a lógica de \citeauthor{Hoffmann2010}. Em conjunto, serão apresentados os resultados calorimétricos, tanto de formação de micelas gigantes (\autoref{sec:efeito_aditivos_calorimetria_mg}) quanto de formação de micelas esféricas (\autoref{sec:efeito_aditivos_calorimetria_me}). Em seguida, serão levantados alguns parâmetros que podem ser utilizados para descrever o efeito dos aditivos (\autoref{sec:efeito_aditivos_viscosidade}). Os resultados calorimétricos serão correlacionados aos parâmetros (\autoref{sec:correlacao_params_cmc_dh}). Como complemento aos estudos com as curvas de fluxo, será avaliada a reologia oscilatória (\autoref{sec:reologia_oscilatoria}), e, como será mostrado, a ureia possui um efeito muito diferente, e será estudado mais a fundo no \autoref{sec:cap_efeito_ureia}.
 	
 	A inspiração para a glicerina e o DMSO vieram de outros estudos, onde se mostrou que ambos possuíam a capacidade de melhorar o armazenamento criogênico de células animais, como hemácias e esperma\cite{Butler1959, Polge1949}, sendo que essa propriedade do DMSO está relacionada à sua capacidade de permear membranas\cite{Notman2006}. Logo, se esses aditivos foram capazes de preservar células vivas após o congelamento, qual seria seu efeito em sistemas de autoassociação? Desse tipo de questionamento vieram os estudos de Hoffmann\cite{Grabner2014, Song2008a, Shinto2012}. Em seguida, \citeauthor{Abdel-Rahem2014} utilizou o 1,3-butanodiol, devido às suas aplicações como aditivo para fixar fragrâncias e agente antimicrobiano. A sacarose foi escolhida, devido à similaridade de suas interações com a água, e à similaridade da constante dielétrica, com a glicerina, e por já ter sido estudada anteriormente, com lamelas.\cite{Song2008a} Por último, a ureia é um aditivo frequentemente descrito como agente desestruturante da água, que leva à desnaturação de proteínas, aumenta a solubilidade de hidrocarbonetos e inibe a agregação micelar.\cite{Kuharski1984} 
@@ -13,7 +15,7 @@
 			\label{sec:efeito_aditivos_viscosidade} \index{resultados!índice de refração} \index{resultados!índice de refração}
 			A reologia é uma técnica que pode fornecer informações sobre a dinâmica de relaxação de um material, através da viscosidade. Em especial, o perfil de viscosidade em repouso \(\eta_0\) (\autoref{fig:regioes_rh}) está relacionado com mudanças no processo de relaxação das micelas. Com o intuito de se estudar como a relaxação das micelas é afetada pelos aditivos, foram construídos vários diagramas de viscosidade, sempre com 100 \mM{} de \CTAB, para várias concentrações de aditivo.
 			
-			Neste momento, os resultados serão discutidos com base somente no índice de refração das soluções, partindo da primeira premissa apresentada na \autoref{sec:efeito_solvente}. Relembrando, essa premissa se baseia na diminuição no valor da constante de Hamaker (\autoref{eqn:constante_hamaker_lifshitz}), que diminui a atração entre as micelas, consequentemente acelerando o mecanismo de reptação, e não afetando o mecanismo de quebra e recombinação (\autoref{fig:regioes_rh}). A \autoref{fig:indice_refracao} mostra como o índice de refração das soluções com os aditivos variam em função da fração mássica de aditivo.
+			Neste momento, os resultados serão discutidos com base somente no índice de refração das soluções, partindo da primeira premissa apresentada na \autoref{sec:efeito_solvente}. Relembrando, essa premissa se baseia na diminuição no valor da constante de Hamaker (\autoref{eqn:constante_hamaker_lifshitz}), que diminui a atração entre as micelas, consequentemente acelerando o mecanismo de reptação, e não afetando o mecanismo de quebra e recombinação (\autoref{fig:regioes_rh}). A \autoref{fig:indice_refracao} mostra como o índice de refração das soluções com os aditivos variam em função da fração mássica de aditivo. A reta horizontal possui o mesmo índice de refração, então aditivos diferentes deveriam ter o mesmo efeito na reologia.
 					
 			\begin{figure}[h]
 				\centering
@@ -28,7 +30,9 @@
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/reologia/RH_sacarose_glicerina}
 				%\caption[Diagrama de viscosidade para glicerina e sacarose]{Viscosidade no repouso \(\eta_0\) em função da concentração de salicilato de sódio (NaSal) em várias concentrações dos aditivos glicerina e sacarose. 60\% de glicerina (V/V) e 50\% de sacarose (m/m) estão no ponto de equivalência do índice de refração. As curvas com 30, 45 e 60 \% de glicerina foram obtidas pela aluna de mestrado Laila Lorenzetti, coautora do trabalho.}
-				\caption{Viscosidade no repouso \(\eta_0\) em função da concentração de salicilato de sódio (NaSal) em várias concentrações dos aditivos glicerina e sacarose. 60\% de glicerina (V/V) e 50\% de sacarose (m/m) estão no ponto de equivalência do índice de refração. As curvas com 30, 45 e 60 \% de glicerina foram obtidas pela aluna de mestrado Laila Lorenzetti, coautora do trabalho.}
+				\caption{Viscosidade no repouso \(\eta_0\) em função da concentração de salicilato de sódio (NaSal) em várias concentrações dos aditivos glicerina e sacarose.
+				%	 A concentração de \CTAB{} é de 100 \mM{}.
+					60\% de glicerina (V/V) e 50\% de sacarose (m/m) estão no ponto de equivalência do índice de refração. As curvas com 30, 45 e 60 \% de glicerina foram obtidas pela aluna de mestrado Laila Lorenzetti, coautora do trabalho.}
 				\label{fig:rh_sacarose_glicerina}
 			\end{figure} \index{resultados!sacarose} \index{resultados!glicerina} \index{resultados!\CTAB}
 			
@@ -36,14 +40,18 @@
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/reologia/RH_13BD_DMSO}
 				%\caption[Diagrama de viscosidade para DMSO e 1,3BD]{Viscosidade no repouso \(\eta_0\) em função da concentração de salicilato de sódio (NaSal) em várias concentrações dos aditivos 1,3-butanodiol (\BD) e dimetilsulfóxido (DMSO). As concentrações de igualdade do índice de refração são 77\% (m/m) e 57\% (m/m), respectivamente}
-				\caption{Viscosidade no repouso \(\eta_0\) em função da concentração de salicilato de sódio (NaSal) em várias concentrações dos aditivos 1,3-butanodiol (\BD) e dimetilsulfóxido (DMSO). As concentrações de igualdade do índice de refração são 77\% (m/m) e 57\% (m/m), respectivamente}
+				\caption{Viscosidade no repouso \(\eta_0\) em função da concentração de salicilato de sódio (NaSal) em várias concentrações dos aditivos 1,3-butanodiol (\BD) e dimetilsulfóxido (DMSO).
+					%A concentração de \CTAB{} é de 100 \mM{}.
+					As concentrações de igualdade do índice de refração são 77\% (m/m) e 57\% (m/m), respectivamente}
 				\label{fig:rh_13bd_dmso}
 			\end{figure} \index{resultados!dimetilsulfóxido} \index{resultados!1,3-butanodiol}
 			
 			\begin{figure}[htb]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/reologia/RH_ureia}
-				\caption{Viscosidade no repouso \(\eta_0\) em função da concentração de salicilato de sódio (NaSal) em várias concentrações de ureia. A concentração de igualdade de índice de refração é em torno de 55\%.}
+				\caption{Viscosidade no repouso \(\eta_0\) em função da concentração de salicilato de sódio (NaSal) em várias concentrações de ureia.
+				%	A concentração de \CTAB{} é de 100 \mM{}.
+					 A concentração de igualdade de índice de refração é em torno de 55\%.}
 				\label{fig:rh_ureia}
 			\end{figure} \index{resultados!ureia}
 			
@@ -84,16 +92,21 @@
 				\label{fig:itc_mg_dmso} \index{resultados!dimetilsulfóxido}
 			\end{figure}
 
-			As diferenças entre glicerina e sacarose, novamente, se evidenciaram. Da mesma maneira que na reologia, a presença de sacarose não afetou a formação de micelas gigantes. Já a glicerina teve um efeito deletério na autoassociação, aumentando significativamente a concentração necessária para o crescimento. \BD{} e DMSO não se mostraram muito diferentes, apesar dos perfis reológicos serem bastante distintos, algo não totalmente inesperado, já que ambas as técnicas observam fenômenos diferentes. Isso indica que o \BD{} não leva à uma diminuição na estabilidade micelar, o que poderia levar à uma diminuição na quantidade de micelas, que poderia diminuir a viscosidade dos sistemas. Logo, o \BD{} possui outros mecanismos que afetam as micelas.
-
 			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/itc/ITC_MG_ur}
 				\caption{Efeito da concentração de ureia nas curvas de titulação de formação de micelas gigantes. A concentração de salicilato de sódio na cela de amostra é de 1,5 \mM. A concentração do aditivo está em \% (m/m).}
 				\label{fig:itc_mg_ureia}
 			\end{figure} \index{resultados!ureia}
-		
+
+			
+			
+			As diferenças entre glicerina e sacarose, novamente, se evidenciaram. Da mesma maneira que na reologia, a presença de sacarose não afetou a formação de micelas gigantes. Já a glicerina teve um efeito deletério na autoassociação, aumentando significativamente a concentração necessária para o crescimento. \BD{} e DMSO não se mostraram muito diferentes, apesar dos perfis reológicos serem bastante distintos, algo não totalmente inesperado, já que ambas as técnicas observam fenômenos diferentes. Isso indica que o \BD{} não leva à uma diminuição na estabilidade micelar, o que poderia levar à uma diminuição na quantidade de micelas, que poderia diminuir a viscosidade dos sistemas. Logo, o \BD{} possui outros mecanismos que afetam as micelas.
+
+
 			O comportamento da ureia seguiu o esperado, de acordo com a literatura\cite{Souza2012, Bruning1961}, com um aumento de \cwlm{}. É interessante notar que o \DHwlm{} diminui com o aumento da concentração de ureia, o que sugere uma diminuição na adsorção de salicilato nas micelas. Em 35\% de ureia observa-se um perfil bastante diferente dos outros, porém nessa situação, ocorre a formação de um precipitado, cuja natureza será discutida na \autoref{sec:cap_efeito_ureia}.
+			
+			%\FloatBarrier
 			
 			Uma maneira de se resumir as curvas calorimétricas é através da concentração de formação de micelas gigantes (\cwlm) e a entalpia de micelização (\DHwlm). Dessa forma, podemos analisar o comportamento de todos os aditivos mais facilmente. A \autoref{fig:cwlm_dhwlm_por_conc} resume isso, mostrando como essas propriedades variam com a concentração de aditivo.
 			
@@ -128,7 +141,7 @@
 					\label{fig:dhwlm_por_conc}
 				\end{subfigure}
 				
-				\caption{\cmc{} e \DHwlm{} em função da concentração de aditivo.}
+				\caption{\cwlm{} e \DHwlm{} em função da concentração de aditivo para titulações de \TTAB{} em NaSal 1,5 \mM.}
 				\label{fig:cwlm_dhwlm_por_conc}
 			\end{figure}
 
@@ -160,7 +173,7 @@
 				\label{fig:itc_sacarose}
 			\end{figure} \index{resultados!sacarose}
 			
-			O efeito da glicerina na formação de micelas é semelhante ao efeito em micelas gigantes, exceto pelo aumento do \DHmic{}.\cite{Moya2007a} Mais interessante, porém, é que sacarose levou à uma diminuição da \cmc{}. Isso já foi observado para SDS\cite{Bakshi1993a, Chauhan2014}, \CTAB\cite{Banipal2016a} e Brij 35\cite{Sharma1989}. A literatura sugere que a sacarose pode estruturar a água, portanto aumentando a penalidade entrópica e diminuindo a \cmc,\cite{Chauhan2014, Banipal2016a, Sharma1989}, assim como pode interagir com a superfície micelar, diminuindo a repulsão entre as cabeças, estabilizando as micelas.\cite{Bakshi1993a, Chauhan2014, Banipal2016a}. Porém, nas micelas gigantes, o grupo carboxilato do salicilato se encontra nessa mesma região, então há uma competição entre hidroxilas e carboxilatos. Como o carboxilato é carregado, interage mais fortemente com as micelas e impede que a sacarose exerça sua influência estabilizadora, logo não afeta as micelas. O efeito do aumento do índice de refração pode ter sido contrabalanceado pela estruturação do solvente, neste caso.
+			O efeito da glicerina na formação de micelas é semelhante ao efeito em micelas gigantes, exceto pelo aumento do \DHmic{}, na questão da tendência de aumento das concentrações críticas.\cite{Moya2007a} Mais interessante, porém, é que sacarose levou à uma diminuição da \cmc{}. Isso já foi observado para SDS\cite{Bakshi1993a, Chauhan2014}, \CTAB\cite{Banipal2016a} e Brij 35\cite{Sharma1989}. A literatura sugere que a sacarose pode estruturar a água, portanto aumentando a penalidade entrópica e diminuindo a \cmc,\cite{Chauhan2014, Banipal2016a, Sharma1989}, assim como pode interagir com a superfície micelar, diminuindo a repulsão entre as cabeças, estabilizando as micelas.\cite{Bakshi1993a, Chauhan2014, Banipal2016a}. Porém, nas micelas gigantes, o grupo carboxilato do salicilato se encontra nessa mesma região, então há uma competição entre hidroxilas e carboxilatos. Como o carboxilato é carregado, interage mais fortemente com as micelas e impede que a sacarose exerça sua influência estabilizadora, logo não afeta as micelas. O efeito do aumento do índice de refração pode ter sido contrabalanceado pela estruturação do solvente, neste caso.
 			
 			\begin{figure}[h]
 				\centering
@@ -176,7 +189,6 @@
 				\label{fig:itc_dmso}
 			\end{figure} \index{resultados!dimetilsulfóxido}
 			
-			
 			\begin{figure}[h]
 				\centering
 				\includegraphics[width=0.7\textwidth]{imagens/itc/ITC_ur}
@@ -185,6 +197,8 @@
 			\end{figure} \index{resultados!ureia}
 		
 		Novamente, o \BD{} e DMSO mostraram possuir comportamentos semelhantes entre si, portanto o mecanismo que influencia ambas as micelas gigantes quanto esféricas deve ser semelhante. O aumento na \cmc{} já foi observado anteriormente, tanto para o DMSO\cite{Bakshi1993a} quando para \BD.\cite{Abdel-Rahem2012}. A ureia influencia aumentando a \cmc{}, como esperado,\cite{Dias2002} porém não afeta muito o \DHmic{}. Logo, como não há \Sal{} para ser dessorvido das micelas, não ocorrem grandes variações de \DHmic.
+		
+		\FloatBarrier
 		
 		Da mesma maneira que anteriormente, essas informações foram resumidas na \autoref{fig:cmc_dh_por_conc}, onde a \cmc{} e o \DHmic{} foram colocados em função da concentração de aditivo.
 		
@@ -207,15 +221,14 @@
 %		\end{figure}
 
 		\begin{figure}[h]
-			\centering
-			\begin{subfigure}[t]{0.7\textwidth}
+		%	\centering
+			\begin{subfigure}[t]{0.5\textwidth}
 				\centering
 				\includegraphics[width=\textwidth]{imagens/itc/ITC_cmc_adit}
 				\caption{\cmc}
 				\label{fig:cmc_por_conc}
-			\end{subfigure} 
-		
-			\begin{subfigure}[t]{0.7\textwidth}
+			\end{subfigure} %
+			\begin{subfigure}[t]{0.5\textwidth}
 				\centering
 				\includegraphics[width=\textwidth]{imagens/itc/ITC_DH_adit}
 				\caption{\DHmic}
@@ -225,6 +238,24 @@
 			\caption{\cmc{} e \DHmic{} em função da concentração de aditivo.}
 			\label{fig:cmc_dh_por_conc}
 		\end{figure}
+	
+%				\begin{figure}[h]
+%		\begin{subfigure}[t]{0.5\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{imagens/itc/Cwlm_por_conc}
+%			\caption{\cwlm}
+%			\label{fig:cwlm_por_conc}
+%		\end{subfigure} %
+%		\begin{subfigure}[t]{0.5\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{imagens/itc/DHwlm_por_conc}
+%			\caption{\DHwlm}
+%			\label{fig:dhwlm_por_conc}
+%		\end{subfigure}
+%		
+%		\caption{\cwlm{} e \DHwlm{} em função da concentração de aditivo para titulações de \TTAB{} em NaSal 1,5 \mM.}
+%		\label{fig:cwlm_dhwlm_por_conc}
+%	\end{figure}
 	
 		\FloatBarrier
 		
@@ -342,7 +373,10 @@
 		Os outros aditivos agem de maneira contrária, porém, a quantidade de \Sal{} incorporado já é bastante alta, então a ação de incorporar mais salicilato não tem um efeito tão forte. % todo: achar ref que fala do grau de incorporação de nasal.
 		Todavia, ainda é necessário considerar se o aumento da hidrofobicidade do solvente acarretaria numa dessorção de salicilato, apesar de que, devido à sua carga, sua interação com a superfície micelar deve ser mais forte em solventes mais apolares.
 	
-		Da mesma maneira que o índice de refração, os parâmetros dos ITCs serão comparados com a constante dielétrica do meio para tentar observar algum padrão.
+		Da mesma maneira que o índice de refração, os parâmetros dos ITCs serão comparados com a constante dielétrica do meio para tentar observar algum padrão. Essas comparações estão na \autoref{fig:cwlm_dhwlm_por_eps} e \autoref{fig:cmc_dh_por_eps}.
+
+		
+		Algumas observações podem ser feitas quanto aos resultados observados. Aparentemente todos os aditivos possuem uma divergência única do ponto inicial, água, não havendo muita correlação entre eles, com exceção da \DHmic{}, onde a glicerina, sacarose e \BD{} aparentam seguir uma tendência semelhante. A ureia, em todos os casos, diverge pois seu valor de constante dielétrica aumenta. O DMSO não afeta grandemente \(\varepsilon\), mas tanto as concentrações quanto entalpias são fortemente afetadas pelo aumento de sua concentração. Isso indica que a constante dielétrica, por si só, também não consegue explicar os fenômenos observados. Porém, ela é necessária para capturar a divergência observada com a ureia.
 		
 		\begin{figure}[h]
 			\begin{subfigure}[t]{0.5\textwidth}
@@ -379,10 +413,8 @@
 			\label{fig:cmc_dh_por_eps}
 		\end{figure}
 		
-		Algumas observações podem ser feitas quanto aos resultados observados. Aparentemente todos os aditivos possuem uma divergência única do ponto inicial, água, não havendo muita correlação entre eles, com exceção da \DHmic{}, onde a glicerina, sacarose e \BD{} aparentam seguir uma tendência semelhante. A ureia, em todos os casos, diverge pois seu valor de constante dielétrica aumenta. O DMSO não afeta grandemente \(\varepsilon\), mas tanto as concentrações quanto entalpias são fortemente afetadas pelo aumento de sua concentração. Isso indica que a constante dielétrica, por si só, também não consegue explicar os fenômenos observados. Porém, ela é necessária para capturar a divergência observada com a ureia.
-		
-		
 		\FloatBarrier
+		
 		\section{Coesão do solvente e Parâmetro de Gordon} \index{resultados!coesão do solvente} \index{resultados!parâmetro de Gordon}
 		
 		Devido à incapacidade dos outros parâmetros explicarem o comportamento reológico e calorimétrico, procuramos por outras propriedades que possam estar relacionadas. Consultando trabalhos anteriores, pensamos na coesão do solvente para explicar o comportamento reológico e calorimétrico. Solventes bastante estruturados, como a água, diminuem a \cmc{} devido ao aumento da penalidade entrópica. Além disso, estipulamos que solventes mais bem estruturados devem dificultar a locomoção das micelas gigantes durante os processos de reptação, aumentando a viscosidade aparente. A partir disso, foram coletadas informações sobre a coesão dos solventes utilizados.
@@ -419,6 +451,17 @@
 		\end{equation*}
 		
 		Essa sequência possui grande correlação com o comportamento reológico (com exceção da ureia). \BD, que possui a menor estruturação, reduz mais fortemente a viscosidade das micelas. Já a sacarose praticamente não afetou a estruturação do solvente, e também não afetou muito a viscosidade. Como mencionado, a ureia é uma exceção devido à grande alteração na constante dielétrica, que deve dessorver moléculas de salicilato das micelas e aumentar sua carga. Isso faz com que o mecanismo principal de relaxação seja a reptação na faixa de concentração estudada, então a viscosidade é sempre alta.
+		
+		Um mecanismo possível para esse acontecimento é o seguinte. A rede criada pelo solvente é enfraquecida quando a estruturação do solvente (parâmetro de Gordon) está baixa, como está esboçado na \autoref{fig:estrutura_agua_G}. Logo, a movimentação das cadeias das micelas é favorecida, o mecanismo de reptação é acelerado, e então a viscosidade é mais baixa.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.5\textwidth]{imagens/Estrutura_agua_G}
+			\caption{Ilustração do efeito do parâmetro de Gordon na estruturação do solvente}
+			\label{fig:estrutura_agua_G}
+		\end{figure}
+		
+		\FloatBarrier
 		
 		Para compreender o efeito do parâmetro de Gordon nas titulações, foram criadas figuras comparativas, da mesma maneira que nas seções anteriores. Os comparativos para a formação de micelas gigantes e micelas esféricas estão nas Figuras \ref{fig:cwlm_dhwlm_por_g} e \ref{fig:cmc_dh_por_g}, respectivamente.
 		
@@ -460,7 +503,7 @@
 				
 		As \DHwlm{} não possuem uma ordenação clara. Ureia aparenta ter comportamentos divergentes entre soluções de concentrações baixas (\(<\) 15\%) e altas (\(\ge\) 15\%). Já a \DHmic{} possui padrões, como os valores de ureia agrupados, pois não há salicilato para ser dessorvido. Glicerina e DMSO novamente possuem um comportamento relativamente próximo, e \BD{} tem o menor efeito na entalpia por variação de \(G\). A sacarose diminui a \DHmic{} e a \cmc{}, apesar de não afetar \(G\), indicando que seu papel está relacionado com a interação com as micelas, não somente seu efeito no solvente.
 		
-		A correlação do parâmetro de Gordon é especialmente forte com o comportamento reológico, e há algumas correlações que podem ser feitas com a calorimetria. Deve ser enfatizado que esse parâmetro, por si só, também não explica o comportamento completo. É necessário combinar todas essas considerações para entender o sistema.
+		A correlação do parâmetro de Gordon é especialmente forte com o comportamento reológico, e há algumas correlações que podem ser feitas com a calorimetria. Deve ser enfatizado que esse parâmetro, por si só, também não explica o comportamento completo. É necessário combinar todas essas considerações para entender o sistema. Por exemplo, se um aditivo for ativo na superfície, os valores de tensão superficial irão decair muito fortemente, mas não necessariamente haverá uma alteração forte na estruturação do solvente. Logo, é necessário utilizar aditivos pouco ativos em superfície, e hidrofílicos, caso seja necessário estender este estudo.
 		\FloatBarrier
 		
 		\section{Interação dos aditivos com a superfície micelar}
@@ -469,7 +512,7 @@
 		
 		Estudos da influência de álcoois lineares na viscosidade de micelas gigantes de C\textsubscript{16}TASal e CPySal\cite{Bayer1986} mostraram que quando álcoois de cadeia curta interagiam com a superfície micelar, agem como um cossolvente e diminuem o comprimento das micelas, logo diminuindo sua viscosidade. Caso \BD{} se comporte de maneira similar, esse é mais um efeito que pode resultar nas quedas fortes da viscosidade. Um estudo mostra que o \BD{} interage como cosurfactante em cristais líquidos, o que reforça a teoria de seu efeito em micelas gigantes.\cite{Iwanaga1998a} A reologia oscilatória (\autoref{sec:reologia_oscilatoria}) mostra que o módulo no platô \(G\) para as soluções com \BD{} é menor que nos outros aditivos, reforçando a ideia de que houve uma alteração na estrutura das micelas. DMSO aparentemente se localiza na superfície micelar, logo abaixo da cabeça dos surfactantes, e altera a flexibilidade de lamelas,\cite{Notman2006} portanto é possível que o mesmo ocorra com as micelas gigantes, o DMSO iria aumentar a flexibilidade. A interação entre \Sal{} e DMSO na superfície merece mais estudos.
 		
-		A presença desses aditivos na superfície das micelas durante a relaxação também pode afetar a hidrofilicidade das mesmas, afetando o mecanismo de ``sticky contacts''. Isso levaria a uma diminuição na viscosidade das micelas. O \BD{} poderia se localizar na superfície micelar, aumentando sua hidrofilicidade, em comparação com as metilas do grupo trimetilamônio, levando à uma diminuição na viscosidade. A glicerina, por ser mais polar, possivelmente não se localizaria na mesma região que \BD, logo seria menos eficaz em diminuir a viscosidade ou aumentar a \cmc. O DMSO pode se solubilizar na superfície micelar e interagir com os grupos metila, pois é menos polar que os outros aditivos, e isso pode resultar em uma diminuição maior na viscosidade que a glicerina, mas não tanto quanto o \BD{}. 
+		A presença desses aditivos na superfície das micelas durante a relaxação também pode afetar a hidrofilicidade das mesmas, afetando o mecanismo de ``sticky contacts''. Isso levaria a uma diminuição na viscosidade das micelas. O \BD{} poderia se localizar na superfície micelar, aumentando sua hidrofilicidade, em comparação com as metilas do grupo trimetilamônio, levando à uma diminuição na viscosidade. A glicerina, por ser mais polar, possivelmente não se concentraria tanto na mesma região que \BD, logo seria menos eficaz em diminuir a viscosidade ou aumentar a \cmc. A posição das hidroxilas do \BD{} permite que seus grupos polares sejam expostos para uma mesma direção, já a glicerina, devido à repulsão entre as três hidroxilas próximas, não permite que todas se alinhem no mesmo plano, dificultando sua inclusão na superfície micelar.0  O DMSO pode se solubilizar na superfície micelar e interagir com os grupos metila, pois é menos polar que os outros aditivos, e isso pode resultar em uma diminuição maior na viscosidade que a glicerina, mas não tanto quanto o \BD{}. 
 		
 		A sacarose diminui a \cmc{} de outros surfactantes, como SDS, \CTAB{} e Brij 35, pela interação de suas hidroxilas com a superfície micelar reduzindo a repulsão, e pela estruturação do solvente. Logo, a diminuição de \(n\) e \(\varepsilon\), que deveriam aumentar a \cwlm{}, são compensadas e a \cwlm{} é mantida. Não há uma diminuição de \cwlm, como houve de \cmc, pois o salicilato interage mais fortemente com a superfície micelar, deslocando as hidroxilas da sacarose, logo seu efeito é principalmente na estruturação do solvente.
 		
