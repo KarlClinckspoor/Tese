@@ -2,6 +2,9 @@
 % todo: fazer alguns testes de ajuste da cinética de ITC 
 % todo: remover a seção de fibrose cística, mover para o apêndice.
 
+% Após a defesa:
+% todo: colocar o nome do stopped flow, BioLogic SFM-400. Colocar mais detalhes da fluorescência. 
+
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
@@ -71,6 +74,7 @@
 \usepackage{subcaption}  % figuras com subfiguras
 \usepackage{placeins}
 \graphicspath{{./figuras}}
+\usepackage[final]{pdfpages}
 
 % Se eles reclamarem do espaço em branco antes e depois do \part, utilizar titlesec, https://ctan.org/pkg/titlesec, em especial o comando \titlespacing*
 
@@ -180,35 +184,35 @@
 
 % informações do PDF
 \makeatletter
-\hypersetup{
-     	%pagebackref=true,
-		pdftitle={\@title}, 
-		pdfauthor={\@author},
-    	pdfsubject={\imprimirpreambulo},
-	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={Tese de Doutorado}{Micelas Gigantes}{Surfactantes}{Aditivos}{ABNT}, 
-		colorlinks=true,       		% false: boxed links; true: colored links
-    	linkcolor=blue,          	% color of internal links
-    	citecolor=blue,        		% color of links to bibliography
-    	filecolor=magenta,      		% color of file links
-		urlcolor=blue,
-		bookmarksdepth=4
-}
-
 %\hypersetup{
-%	%pagebackref=true,
-%	pdftitle={\@title}, 
-%	pdfauthor={\@author},
-%	pdfsubject={\imprimirpreambulo},
-%	pdfcreator={LaTeX with abnTeX2},
-%	pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
-%	colorlinks=true,       		% false: boxed links; true: colored links
-%	linkcolor=black,          	% color of internal links
-%	citecolor=black,        		% color of links to bibliography
-%	filecolor=black,      		% color of file links
-%	urlcolor=black,
-%	bookmarksdepth=4
+%     	%pagebackref=true,
+%		pdftitle={\@title}, 
+%		pdfauthor={\@author},
+%    	pdfsubject={\imprimirpreambulo},
+%	    pdfcreator={LaTeX with abnTeX2},
+%		pdfkeywords={Tese de Doutorado}{Micelas Gigantes}{Surfactantes}{Aditivos}{ABNT}, 
+%		colorlinks=true,       		% false: boxed links; true: colored links
+%    	linkcolor=blue,          	% color of internal links
+%    	citecolor=blue,        		% color of links to bibliography
+%    	filecolor=magenta,      		% color of file links
+%		urlcolor=blue,
+%		bookmarksdepth=4
 %}
+
+\hypersetup{
+	%pagebackref=true,
+	pdftitle={\@title}, 
+	pdfauthor={\@author},
+	pdfsubject={\imprimirpreambulo},
+	pdfcreator={LaTeX with abnTeX2},
+	pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+	colorlinks=true,       		% false: boxed links; true: colored links
+	linkcolor=black,          	% color of internal links
+	citecolor=black,        		% color of links to bibliography
+	filecolor=black,      		% color of file links
+	urlcolor=black,
+	bookmarksdepth=4
+}
 
 
 \makeatother
@@ -336,38 +340,40 @@
 %
 \begin{folhadeaprovacao}
 %
-  \begin{center}
-    {\ABNTEXchapterfont\large\imprimirautor}
+%  \begin{center}
+%    {\ABNTEXchapterfont\large\imprimirautor}
+%
+%    \vspace*{\fill}\vspace*{\fill}
+%    \begin{center}
+%      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+%    \end{center}
+%    \vspace*{\fill}
+%    
+%    \hspace{.45\textwidth}
+%    \begin{minipage}{.5\textwidth}
+%        \imprimirpreambulo
+%    \end{minipage}%
+%    \vspace*{\fill}
+%   \end{center}
+%        
+%   %Trabalho aprovado. \imprimirlocal, 24 de novembro de 2012:
+%
+%   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+%   \assinatura{\textbf{Prof. Dr. Watson Loh} \\ Membro Interno}
+%   \assinatura{\textbf{Prof. Dr. Celso Aparecido Bertran} \\ Membro Interno}
+%   \assinatura{\textbf{Prof. Dr. Omar A. El Seoud} \\ Membro Externo}
+%   \assinatura{\textbf{Prof. Dr. Antonio José F. Bombard} \\ Membro Externo}
+%
+%      
+%   \begin{center}
+%    \vspace*{0.5cm}
+%    {\large\imprimirlocal}
+%    \par
+%    {\large\imprimirdata}
+%    \vspace*{1cm}
+%  \end{center}
 
-    \vspace*{\fill}\vspace*{\fill}
-    \begin{center}
-      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
-    \end{center}
-    \vspace*{\fill}
-    
-    \hspace{.45\textwidth}
-    \begin{minipage}{.5\textwidth}
-        \imprimirpreambulo
-    \end{minipage}%
-    \vspace*{\fill}
-   \end{center}
-        
-   %Trabalho aprovado. \imprimirlocal, 24 de novembro de 2012:
-
-   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{Prof. Dr. Watson Loh} \\ Membro Interno}
-   \assinatura{\textbf{Prof. Dr. Celso Aparecido Bertran} \\ Membro Interno}
-   \assinatura{\textbf{Prof. Dr. Omar A. El Seoud} \\ Membro Externo}
-   \assinatura{\textbf{Prof. Dr. Antonio José F. Bombard} \\ Membro Externo}
-
-      
-   \begin{center}
-    \vspace*{0.5cm}
-    {\large\imprimirlocal}
-    \par
-    {\large\imprimirdata}
-    \vspace*{1cm}
-  \end{center}
+	\includepdf{folha_aprovacao.pdf}
   
 \end{folhadeaprovacao}
 % ---
@@ -482,6 +488,11 @@ Agradeço ao CNPq pelo financiamento.
   \item[DLS] Espalhamento dinâmico de luz
   \item[ITC] Calorimetria de titulação isotérmica
   \item[DSC] Calorimetria diferencial de varredura
+  \item[TEM] \emph{Transmission Electron Microscopy}, Microscopia de Transmissão Eletrônica
+  \item[LNLS] Laboratório Nacional de Luz Sincrotron
+  \item[ESRF] \emph{European Synchrotron Radiation Facility}
+  \item[DLVO] teoria Deraguin, Landau, Verwey, Overbeek
+  \item[\cmc] Concentração micelar crítica
 \end{siglas}
 % ---
 
@@ -528,6 +539,7 @@ Agradeço ao CNPq pelo financiamento.
 \include{aditivos}
 \include{ureia}
 \include{cinetica}
+\include{conclusoes_finais}
 %\include{contribuicoes}
 
 
@@ -545,6 +557,19 @@ Agradeço ao CNPq pelo financiamento.
 	\partapendices
 	\include{apendices}
 	\include{contribuicoes}
+	
+	\chapter{Permissões para uso das figuras}
+	
+	Os arquivos de permissão concedidos pelas editoras estarão nas páginas a seguir, sem modificação.
+	
+	\includepdf{./permissoes/diagrama_micelas_gigantes_lequeux_candau.pdf}
+	\includepdf{./permissoes/imagem_cates_reptação.pdf}
+	\includepdf{./permissoes/imagem_cole-cole_berret.pdf}
+	\includepdf[pages={1,2,3}]{./permissoes/imagem_goodwin_hughes}
+	\includepdf{./permissoes/imagem_Hoffmann_tamanhos_de_MG}
+	\includepdf[pages={1,2}]{./permissoes/imagem_MG_Danino}
+	\includepdf[pages={1,2}]{./permissoes/imagem_tamanho_micelas_cecile}
+	\includepdf[pages={1,2}]{./permissoes/lacowicz_jablonski}
 \end{apendicesenv}
 % Referências bibliográficas
 \bibliography{library}

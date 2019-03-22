@@ -1,11 +1,10 @@
 
 	\chapter*{Divisão do trabalho}
-Esta tese se dividirá em 4 grandes partes. Na primeira, será fornecido o embasamento teórico necessário para a melhor compreensão da discussão. Essa parte começará por uma introdução geral ao sistema que será estudado, surfactantes e micelas gigantes, e as técnicas que serão utilizadas: reologia, calorimetria de titulação isotérmica, SAXS e fluorescência. Em seguida, começará uma seção mais focada no trabalho, discutindo sobre as interações intermoleculares e, por fim, todo esse conteúdo será focado na área de micelas gigantes. Com esse panorama, os objetivos do projeto serão descritos.
+Esta tese se dividirá em 4 grandes partes. Na primeira, será fornecido o embasamento teórico necessário para a melhor compreensão da discussão. Essa parte começará por uma introdução geral ao sistema que será estudado, surfactantes e micelas gigantes, e as técnicas que serão utilizadas: reologia, calorimetria de titulação isotérmica, SAXS e fluorescência. Em seguida, começará uma seção mais focada no trabalho, discutindo sobre as interações intermoleculares e, por fim, todo esse conteúdo será focado na área de micelas gigantes. Com esse panorama, os objetivos do projeto serão descritos. A próxima parte mostrará, em detalhes, os procedimentos experimentais utilizados para a realização dos experimentos e o tratamento de dados obtidos.
 
-A próxima parte desta tese mostrará o efeito dos aditivos escolhidos nos objetivos nas micelas gigantes. Serão fornecidas informações reológicas e calorimétricas. Em seguida, o estudo de um desses aditivos, a ureia, será aprofundado, utilizando técnicas adicionais, como SAXS e calorimetria diferencial de varredura, e um sistema simplificado. A última grande parte abordará os estudos de cinética de crescimento de micelas gigantes, através de SAXS e fluorescência resolvidos no tempo.
+Em seguida, será discutido o efeito dos aditivos escolhidos nas micelas gigantes, com base em informações reológicas e calorimétricas. O estudo de um desses aditivos, a ureia, será aprofundado, utilizando técnicas adicionais, como SAXS e calorimetria diferencial de varredura. A última grande parte abordará os estudos de cinética de crescimento de micelas gigantes, através de SAXS e fluorescência resolvidos no tempo.
 
 Por fim, os apêndices agregam tópicos de matemática e programação de aspectos abordados no texto, mas que foram colocados a parte para deixar o texto mais claro. As contribuições para outro trabalho também foram incluídas no apêndice.
-
 
 \part{Introdução e teoria}
 
@@ -178,7 +177,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 				\label{fig:cisalhamento}
 			\end{figure} 
 			
-			A tensão de cisalhamento \(\sigma\) é a força \(F\) necessária para aplicar um cisalhamento divido pela área de aplicação (\autoref{eqn:tensao_cisalhamento})\cite{Kronberg2014a}. A unidade usual para \(\sigma\) é Pa. Comumente, a tensão é também simbolizada por \(\tau\) \index{reologia!tensão de cisalhamento \(\sigma\)}
+			A tensão de cisalhamento \(\sigma\) é a força \(F\) necessária para aplicar um cisalhamento divido pela área de aplicação (\autoref{eqn:tensao_cisalhamento})\cite{Kronberg2014a}. A unidade usual para \(\sigma\) é Pa. Comumente, a tensão é também simbolizada por \(\tau\). \index{reologia!tensão de cisalhamento \(\sigma\)}
 			
 			\begin{equation}
 				\sigma = \frac{F}{A}
@@ -489,7 +488,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 %					\includegraphics[width=\textwidth]{}
 %					\label{fig:}
 %				\end{subfigure}
-			\caption{Simulações do comportamento de um fluido sob cisalhamento cossenoidal. As imagens mostram a deformação \(\gamma\) em função do tempo, a tensão total \(\sigma\) de resposta em função do tempo, decomposta em suas componentes elástica e viscosa. No título de cada gráfico está a contribuição, em porcentagem, de cada componente do material. O ângulo de defasagem está ilustrado na figura.}
+			\caption{Simulações do comportamento de um fluido sob cisalhamento cossenoidal. As imagens mostram a deformação \(\gamma\) e a tensão total \(\sigma\) de resposta, em função do tempo. A tensão também foi decomposta em suas componentes elástica e viscosa. No título de cada gráfico está a contribuição, em porcentagem, de cada componente do material. O ângulo de defasagem está ilustrado na legenda de cada subfigura.}
 			\label{fig:osc_simulacoes}
 			\end{figure} 
 			
@@ -789,7 +788,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		Para corrigir a entalpia de micelização observada para obter a entalpia de micelização correta, utiliza-se a \autoref{eqn:itc_obtencao_dhmic}.\cite{Loh2016}  \index{ITC!cálculo de \DHmic}
 		
 		\begin{equation}
-			\Delta H^0_{\textrm{mic}} = \Delta H^0_{\textrm{obs}} \times \dfrac{c_{\textrm{seringa}}}{c_{\textrm{seringa}-\mathrm{CMC}}}
+			\Delta H^\circ_{\textrm{mic}} = \Delta H^\circ_{\textrm{obs}} \times \dfrac{c_{\textrm{seringa}}}{c_{\textrm{seringa}-\mathrm{CMC}}}
 			\label{eqn:itc_obtencao_dhmic}
 		\end{equation}  % todo: ficar de olho aqui porque tem termos que não estão em macros e precisam ser revistos quando algo mudar
 		
@@ -798,7 +797,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		Pela \cmc{} é possível obter a energia livre de micelização a partir da \autoref{eqn:itc_DeltaG_mic}, oriunda do modelo de ação das massas\cite{Loh2016} dependendo do tipo de surfactante e do meio.
 		
 		\begin{equation}
-			\Delta G_{\textrm{mic}}^0
+			\Delta G_{\textrm{mic}}^\circ
 			\begin{cases}
 			= RT\ln(\chi_{\textrm{cmc}})      & \textrm{Surfactante não iônico}      \\
 			= (2-\alpha)RT\ln(\chi_{\textrm{cmc}}) & \textrm{Surfactante iônico}					\\
@@ -811,13 +810,13 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		Com a entalpia e energia livre de micelização, é possível encontrar a entropia de micelização pela equação de Gibbs (\autoref{eqn:itc_gibbs_para_entropia}).
 		
 		\begin{equation}
-			T\Delta S^0_{\textrm{mic}} = \Delta H^0_{\textrm{mic}} - \Delta G^0_{\textrm{mic}}
+			T\Delta S^\circ_{\textrm{mic}} = \Delta H^\circ_{\textrm{mic}} - \Delta G^\circ_{\textrm{mic}}
 			\label{eqn:itc_gibbs_para_entropia}
 		\end{equation}
 		
 		Outra maneira de se obter esses parâmetros é pelo ajuste de um modelo, como mostrado em \citeauthor{Sarac2017a}.
 		
-		Geralmente, em artigos sobre calorimetria, são calculados esses parâmetros termodinâmicos, além da variação de capacidade calorífica \(\Delta C_p\), e com isso se discute a contribuição hidrofóbica\cite{Sarac2017a, Kfouri2019}, o efeito de um sal/aditivo\cite{Sarac2009, Liu2011a, Ito2016}, a espontaneidade de agregação\cite{Ito2016}, e inclusive, cinética de processos.\cite{Kfouri2019,Lof2007a}
+		Geralmente, em artigos sobre calorimetria, são calculados esses parâmetros termodinâmicos, além da variação de capacidade calorífica \(\Delta C_p\). Com essas informações, se discute a contribuição hidrofóbica\cite{Sarac2017a, Kfouri2019}, o efeito de um sal/aditivo\cite{Sarac2009, Liu2011a, Ito2016}, a espontaneidade de agregação\cite{Ito2016}, e inclusive, cinética de processos.\cite{Kfouri2019,Lof2007a}
 		
 	\chapter{SAXS} \index{SAXS} \index{espalhamento de raios-X em baixos ângulos |see {SAXS}}
 		\section{Fundamentos} \index{SAXS!fundamentos}
@@ -885,7 +884,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 			\label{eqn:funcao_onda_espalhamento}
 		\end{equation}
 				
-		A somatória das funções de onda, \autoref{eqn:SAXS_somatoria_contribs}, resulta na amplitude de espalhamento.\\\cite{Pedersen_Aula1} O termo \(b_j\) é o comprimento de espalhamento de cada ponto. Para elétrons, seu comprimento de espalhamento é o raio do elétron, \(r_e = 0.2817 \times 10^{-12}\) cm.
+		A somatória das funções de onda, \autoref{eqn:SAXS_somatoria_contribs}, resulta na amplitude de espalhamento. \cite{Pedersen_Aula1} O termo \(b_j\) é o comprimento de espalhamento de cada ponto. Para elétrons, seu comprimento de espalhamento é o raio do elétron, \(r_e = 0.2817 \times 10^{-12}\) cm.
 		
 		\begin{equation}
 			A(\mathbf{q}) = \sum_j b_j \exp(-i \mathbf{q} \cdot \mathbf{r})
@@ -1820,7 +1819,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		 	\tilde{L} \sim r_\mathrm{cs} / \phi^{\sfrac{1}{2}}
 		\end{equation}
 		
-		Uuma micela carregada observa um ambiente eletricamente neutro em distâncias maiores que \(\tilde{L}\), então qualquer interação eletrostática é blindada. Isso necessita modificar a \autoref{eqn:potencial_quim_eletrostatico} para \cite{Giant_Micelles}
+		Uma micela carregada observa um ambiente eletricamente neutro em distâncias maiores que \(\tilde{L}\), então qualquer interação eletrostática é blindada. Isso necessita modificar a \autoref{eqn:potencial_quim_eletrostatico} para \cite{Giant_Micelles}
 		\index{micelas gigantes!blindagem das cargas}
 		
 		\begin{equation}
