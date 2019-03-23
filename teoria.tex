@@ -4,7 +4,7 @@ Esta tese se dividirá em 4 grandes partes. Na primeira, será fornecido o embas
 
 Em seguida, será discutido o efeito dos aditivos escolhidos nas micelas gigantes, com base em informações reológicas e calorimétricas. O estudo de um desses aditivos, a ureia, será aprofundado, utilizando técnicas adicionais, como SAXS e calorimetria diferencial de varredura. A última grande parte abordará os estudos de cinética de crescimento de micelas gigantes, através de SAXS e fluorescência resolvidos no tempo.
 
-Por fim, os apêndices agregam tópicos de matemática e programação de aspectos abordados no texto, mas que foram colocados a parte para deixar o texto mais claro. As contribuições para outro trabalho também foram incluídas no apêndice.
+Por fim, os apêndices agregam tópicos de matemática e programação de aspectos abordados no texto, mas que foram colocados a parte para deixar o texto mais claro. Além disso, há um conjunto de tabelas de conversão entre concentrações em fração mássica para molaridade, molalidade, etc. As contribuições para outro trabalho também foram incluídas no apêndice.
 
 \part{Introdução e teoria}
 
@@ -86,7 +86,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		\label{fig:param_empacotamento}
 	\end{figure}
 	
-	Esse parâmetro pode ser visualizado como uma comparação entre as áreas das bases de um cilindro, sendo uma dada por \({V}/{l}\) e a outra por \(a_0\). Quando o termo hidrofóbico é pequeno, temos praticamente um cone, e valores de \(P\) menores que \(\sfrac{1}{3}\). Como a região polar é muito grande, a estrutura de autoassociação necessariamente possuirá uma curvatura alta, o que resulta em micelas esféricas. Seguindo esse raciocínio, tanto aumentando a contribuição hidrofóbica quanto diminuindo a contribuição hidrofílica, é possível obter valores de \(\sfrac{1}{3} \leq P < \sfrac{1}{2}\). Nessa condição, são formadas micelas gigantes.
+	Esse parâmetro pode ser visualizado como uma comparação entre as áreas das bases de um cilindro, sendo uma dada por \({V}/{l}\) e a outra por \(a_0\). Quando o termo hidrofóbico é pequeno, temos praticamente um cone, e valores de \(P\) menores que \(\sfrac{1}{3}\). Como a região polar é muito grande, a estrutura de autoassociação necessariamente possuirá uma curvatura alta, o que resulta em micelas esféricas. Seguindo esse raciocínio, tanto aumentando a contribuição hidrofóbica quanto diminuindo a contribuição hidrofílica, é possível obter valores de \(\sfrac{1}{3} \leq P < \sfrac{1}{2}\). Nessa condição, são formadas micelas gigantes. A concentração de formação de micelas gigantes, \cwlm, é geralmente obtida a partir de experimentos de calorimetria de titulação isotérmica (\autoref{sec:micelas_gigantes_calorimetria}), e é análoga à \cmc.
 	
 	Prosseguindo por essa lógica, quando as contribuições das duas regiões são equivalentes, (\(P = 1\)), as moléculas de surfactante possuem um formato cilíndrico. Nessa situação, são formadas estruturas de curvatura total zero, como lamelas.\cite{Zou2007} É possível inverter essa tendência aumentando a contribuição da parte hidrofóbica, gerando agregados com grande curvatura, mas de maneira oposta. Nesse caso, são formadas micelas reversas, cilíndricas\cite{Tung2006} ou esféricas\cite{Mackeben2001a}. \index{surfactantes!parâmetro de empacotamento} Um diagrama com várias estruturas de autoassociação possíveis se encontra em \citeauthor{Lindman_livro}.
 
@@ -268,11 +268,13 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 					\caption{\(\eta \times \dot{\gamma}\)}
 					\label{fig:reol_pseudo_etaGP}
 				\end{subfigure}
-				\caption{Exemplos de curvas de fluxo de um fluido pseudoplástico. (\ref{fig:reol_pseudo_tauGP}) Tensão aplicada em função da taxa de cisalhamento. (\ref{fig:reol_pseudo_etaGP}) Derivada de (\ref{fig:reol_pseudo_tauGP}) em função da taxa de cisalhamento.}
+				\caption{Exemplos de uma curva de fluxo de um fluido pseudoplástico. (\ref{fig:reol_pseudo_tauGP}) Tensão aplicada em função da taxa de cisalhamento. (\ref{fig:reol_pseudo_etaGP}) Curva de viscosidade, obtida pela divisão de cada ponto da curva \ref{fig:reol_pseudo_tauGP} pela taxa de cisalhamento, uma derivada ponto a ponto}
 				\label{fig:reol_pseudoplastico_exemplos}
 			\end{figure} \index{reologia!curva de fluxo}
 			
-			No entanto, as curvas de fluxo são frequentemente plotadas na escala log-log. Nesse tipo de gráfico (\autoref{fig:reol_pseudoplastico_loglog}), é possível observar a região com viscosidade constante em baixas taxas de cisalhamento, chamada de platô Newtoniano, devido à sua constância. A viscosidade determinada nessa condição é chamada de viscosidade no repouso (\emph{zero-shear viscosity}), \(\eta_0\).\cite{Kronberg2014a}
+			No entanto, as curvas de fluxo são frequentemente plotadas na escala log-log. Nesse tipo de gráfico (\autoref{fig:reol_pseudoplastico_loglog}), é possível observar a região com viscosidade constante em baixas taxas de cisalhamento, chamada de platô Newtoniano, devido à sua constância. A viscosidade determinada nessa condição é chamada de viscosidade no repouso%
+			\footnote{Esta será a nomenclatura adotada neste trabalho. Apesar de não ser a mais precisa, seu significado se mostra evidente no contexto de que é obtida na condição \(\lim_{\dot{\gamma} \to 0} \eta \left( \dot{\gamma} \right) \). Alternativa: \emph{viscosidade no primeiro platô Newtoniano}.} %
+		    (\emph{zero-shear viscosity}), \(\eta_0\).\cite{Kronberg2014a}
 			
 			\begin{figure}[h]
 				\centering
@@ -314,14 +316,14 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 				{%
 					\begin{tabular}{c c p{9cm}}
 						\toprule
-						Parâmetro      & Unidade   & Significado                                                       \\ \midrule
-						\(\eta_0\)     & Pa.s      & Viscosidade no repouso*                                           \\
-						\(\eta_{\infty}\)  & Pa.s      & Viscosidade no infinito                                           \\
-						\(n\)        & --        & Inclinação da região de decaimento de viscosidade, índice da pseudoplasticidade                 \\
-						\(\dot{\gamma}_b\) & s\menosUm & \(\dot{\gamma}\) de início da região de decaimento de viscosidade \\ \midrule
-						\(a\)        & --        & curvatura               \\ \bottomrule
+						    Parâmetro      & Unidade   & Significado                                                                      \\ \midrule
+						    \(\eta_0\)     & Pa.s      & Viscosidade no repouso*                                                          \\
+						\(\eta_{\infty}\)  & Pa.s      & Viscosidade no infinito                                                          \\
+						      \(n\)        & --        & Inclinação da região de decaimento de viscosidade, índice da pseudoplasticidade  \\
+						\(\dot{\gamma}_b\) & s\menosUm & \(\dot{\gamma}\) de início da região de decaimento de viscosidade                \\ \midrule
+						      \(a\)        & --        & curvatura                                                                        \\ \bottomrule
 					\end{tabular}%
-				}{}
+				}{\small{* parâmetro de maior relevância para este trabalho}}
 			\end{table}
 			
 			A \autoref{fig:reologia_modelos} exemplifica os modelos de Carreau e Cross e como os parâmetros afetam o formato das curvas. Note que a escala dos eixos é logarítmica. Vemos que, essencialmente, ambas as curvas possuem formatos muito semelhantes, com os parâmetros escolhidos. A escolha de um modelo depende da qualidade dos dados e do desejo do experimentalista.
@@ -628,7 +630,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 				\label{fig:modelo_maxwell}
 			\end{figure} \index{reologia!espectro mecânico}
 			
-			Para o modelo de Maxwell, a viscosidade complexa segue a \autoref{eqn:visc_complexa_maxwell}, sendo que \(\eta_0\) é equivalente à viscosidade no repouso (\autoref{fig:reol_pseudoplastico_loglog}). Não há dependência da tensão \(\gamma\) porque as medidas oscilatórias são obtidas no regime linear.\cite{Rehage1991}
+			Para o modelo de Maxwell, a viscosidade complexa segue a \autoref{eqn:visc_complexa_maxwell}, sendo que \(\eta_0\) é equivalente à viscosidade no repouso (\autoref{fig:reol_pseudoplastico_loglog}). Não há dependência da deformação \(\gamma\) porque as medidas oscilatórias são obtidas no regime linear.\cite{Rehage1991}
 			
 			\begin{equation}
 				 \eta^* (\omega) = \dfrac{\eta_0}{\left( 1 + \omega^2 \tau_\mathrm{rel}^2 \right)^{\sfrac{1}{2}}}
@@ -768,7 +770,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 				\label{fig:ITC_inj_exemplo}
 			\end{subfigure}
 		
-			\caption{Titulação de \TTAB{} 42 \mM{} em água, mostrando o calor absorvido pela célula durante a titulação (\ref{fig:ITC_raw_exemplo}). A primeira injeção é descartada para garantir que as injeções subsequentes possuam um volume correto de injeção. A integração dos picos em relação à linha base, dividindo-se pela concentração de surfactante injetado, resulta no entalpograma (\ref{fig:ITC_inj_exemplo})}
+			\caption{Titulação de \TTAB{} 42 \mM{} em água, mostrando o calor absorvido pela célula durante a titulação (\ref{fig:ITC_raw_exemplo}). A primeira injeção é descartada para garantir que as injeções subsequentes possuam um volume correto de injeção, neste tipo de equipamento. A integração dos picos em relação à linha base, dividindo-se pela concentração de surfactante injetado, resulta no entalpograma (\ref{fig:ITC_inj_exemplo})}
 			\label{fig:ITC_exemplo}
 		\end{figure}
 		
@@ -1309,7 +1311,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 	
 	\noindent onde \(a_1\) é o raio da molécula 1.
 	
-	Alguns fatores podem ser levantados sobre essa equação. Geralmente, a componente com \(\nu > 0\) é mais forte que a componente com \(\nu = 0\), exceto em solventes polares, como a água. Além disso, a força de van der Waals é reduzida num meio com solvente, devido às propriedades de excesso serem menores do que no vácuo. Por último, a força dispersiva é sempre atrativa entre moléculas iguais\cite{Hamaker1937}, mas a expressão expandida mostra que as interações podem ser tanto atrativas quanto repulsivas, quando a propriedade do solvente, como o índice de refração, é intermediário entre as duas partículas. Uma maneira de se visualizar isso é pensando no princípio de Arquimedes. A força gravitacional é, aparentemente, sempre atrativa. Porém, ao colocar uma esfera de isopor no fundo de uma banheira, a esfera irá subir para a superfície, sendo que uma esfera de aço afundaria. A causa da repulsão da esfera de isopor é a força gravitacional, que agiu com maior força no volume de água deslocado pelo isopor do que na própria esfera de isopor, e a deslocou para cima. \index{forças intermoleculares!repulsão}
+	Alguns fatores podem ser levantados sobre essa equação. Geralmente, a componente com \(\nu > 0\) é mais forte que a componente com \(\nu = 0\), exceto em solventes polares, como a água. Além disso, a força de van der Waals é reduzida num meio com solvente, devido às propriedades de excesso serem menores do que no vácuo. Por último, a força dispersiva é sempre atrativa entre moléculas iguais\cite{Hamaker1937}, mas a expressão expandida mostra que as interações podem ser tanto atrativas quanto repulsivas, quando a propriedade do solvente, como o índice de refração, é intermediário entre as duas partículas. Uma maneira de se visualizar isso é pensando no princípio de Arquimedes. A força gravitacional é, aparentemente, sempre atrativa. Porém, ao colocar uma esfera de isopor no fundo de uma banheira, a esfera irá subir para a superfície, sendo que uma esfera de aço afundaria. A causa da repulsão da esfera de isopor é a força gravitacional, que agiu com maior força no volume de água deslocado pelo isopor do que na própria esfera de isopor, e a deslocou para cima. Neste caso, a densidade dos materiais é análoga ao índice de refração. Quando dois materiais estão num meio com densidade intermediária (ou índice de refração), a força, seja gravitacional ou de van der Waals, entre eles se torna repulsiva.\index{forças intermoleculares!repulsão}
 	
 	\section{Ligações de hidrogênio e interações hidrofóbicas} \index{forças intermoleculares!ligação de hidrogênio} \index{forças intermoleculares!interação hidrofóbica} \label{sec:ligacoes_hidrogenio}
 	
@@ -1388,7 +1390,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 	
 	Em soluções aquosas, coloides podem adquirir carga devido à ionização ou dissociação de grupos superficiais, adsorção de íons da solução, ou mecanismos de troca de carga do tipo ácido-base. A carga superficial de íons é contrabalanceada por uma região de contraíons, sendo que parte estão ligados, transientemente, à superfície, na chamada camada de Stern. \index{forças intercoloidais!camada de Stern} Outros íons mais distantes à superfície em movimento térmico configuram a dupla camada elétrica difusa, que se estende até o comprimento de Debye a partir da superfície do coloide. A distribuição de íons é dada pela equação de Poisson-Boltzmann.
 	
-	A maior parte dos contraíons que efetivamente contrabalanceiam a carga está muito próxima à superfície, a uma distância de poucos \aa ngstrom. Logo, a repulsão entre duas superfícies carregadas num solvente tem origem entrópica (osmótica), não eletrostática. Quando as duas superfícies se aproximam, os contraíons da solução, que estão longe das superfícies por efeitos entrópicos, são forçados à retornar à superfície, perdendo liberdade conformacional, contrariando a força osmótica.
+	A maior parte dos contraíons que efetivamente contrabalanceiam a carga está muito próxima à superfície, a uma distância de poucos \AA ngstrom. Logo, a repulsão entre duas superfícies carregadas num solvente tem origem entrópica (osmótica), não eletrostática. Quando as duas superfícies se aproximam, os contraíons da solução, que estão longe das superfícies por efeitos entrópicos, são forçados à retornar à superfície, perdendo liberdade conformacional, contrariando a força osmótica.
 	
 	A energia de interação de dupla camada elétrica para duas partículas esféricas de raios \(R_1\) e \(R_2\) a uma distância \(D\) é dada por
 	
@@ -1837,6 +1839,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		
 
 		\section{Comportamento calorimétrico} \index{micelas gigantes!calorimetria}
+		\label{sec:micelas_gigantes_calorimetria}
 		
 		A calorimetria de titulação isotérmica é uma técnica que é empregada no estudo a autoassociação de micelas gigantes.\cite{Sarac2009, Sarac2013, Liu2011a, Bijma1998c, Fisicaro2005a} Recentemente, observou-se que esse processo, para surfactantes catiônicos e vários aditivos aromáticos, possui um perfil característico.\cite{Ito2016, Ito2015c}
 
@@ -1869,16 +1872,17 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 	
 		O entalpograma integrado, \autoref{fig:itc_integrado_mg} possui um perfil semelhante a todos os sistemas de micelas gigantes estudados até agora, e inclusive foi chamado de ``assinatura'' da formação de micelas gigantes. \cite{Ito2016}
 		\index{micelas gigantes!entalpograma}
-		Esse entalpograma integrado foi tipicamente dividido em quatro regiões. Em concentrações pequenas de \TTAB, fo iproposto que ocorre a formação de micelas mistas, esféricas ou cilíndricas curtas. Em seguida, ocorre a fusão das micelas, liberando a energia de excesso das pontas (\autoref{eqn:distribuicao_tamanho_MG}), que leva à queda brusca nos valores de \(\Delta H\). Com a adição de mais \TTAB, o sistema sai da proporção ideal entre as espécies, e as micelas começam a encurtar até que, em grande excesso de \TTAB, as micelas se tornam esféricas, e a adição de mais \TTAB{} leva somente à diluição do conteúdo da seringa, e os valores de entalpia se aproximam de zero.\cite{Shukla2008, Ito2015c}
+		Esse entalpograma integrado foi tipicamente dividido em quatro regiões. Em concentrações pequenas de \TTAB, foi proposto que ocorre a formação de micelas mistas, esféricas ou cilíndricas curtas. Em seguida, ocorre a fusão das micelas, liberando a energia de excesso das pontas (\autoref{eqn:distribuicao_tamanho_MG}), que leva à queda brusca nos valores de \(\Delta H\). Com a adição de mais \TTAB, o sistema sai da proporção ideal entre as espécies, e as micelas começam a encurtar até que, em grande excesso de \TTAB, as micelas se tornam esféricas, e a adição de mais \TTAB{} leva somente à diluição do conteúdo da seringa, e os valores de entalpia se aproximam de zero.\cite{Shukla2008, Ito2015c}
 		
-		Do entalpograma é possível obter a concentração de formação de micelas gigantes, \cwlm, e a entalpia de formação de micelas gigantes, \DHwlm. A posição de formação de micelas gigantes, \cwlm, não foi definida no ponto de inflexão, pois o máximo de viscosidade para os sistemas \TTAB{} e NaSal se encontra no ponto mínimo. \cite{Ito2015c}
+		Do entalpograma é possível obter a concentração de formação de micelas gigantes, \cwlm, e a entalpia de formação de micelas gigantes, \DHwlm. A posição de formação de micelas gigantes, \cwlm, foi definida no ponto de mínimo de entalpia, não no ponto de inflexão, pois o máximo de viscosidade para os sistemas \TTAB{} e NaSal se encontra no ponto mínimo de \(\Delta H^\circ\). \cite{Ito2015c} A entalpia de formação de micelas gigantes \DHwlm{} é a diferença entre a entalpia imediatamente antes da queda, e a entalpia da \cwlm (\autoref{fig:itc_integrado_mg}). Essa concentração é análoga à concentração micelar crítica \cmc, porém é dependente da concentração de aditivo no meio, que é essencial para o processo de formação.
+
 		\index{micelas gigantes!\cwlm}
 		% figura com esses parâmetros
 		
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/itc/exemplo_integrado_mg}
-			\caption{Potência integrada da \autoref{fig:itc_raw_mg}, resultando no entalpograma característico da formação de micelas gigantes. A concentração de formação de micelas gigantes \cwlm{} está definida, assim como a entalpia de micelização, \DHwlm.}
+			\caption{Potência integrada da \autoref{fig:itc_raw_mg}, resultando no entalpograma característico da formação de micelas gigantes. A concentração de formação de micelas gigantes \cwlm, assim como a entalpia de micelização, \DHwlm, estão indicadas.}
 			\label{fig:itc_integrado_mg}
 		\end{figure}
 		
@@ -1931,7 +1935,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		Hoffmann observou\cite{Grabner2014, Song2008a, Shinto2012} que a formação de lamelas não era afetada pela adição de alguns aditivos ao solvente, porém a distância interlamelar aumentava significativamente. A interpretação de Hoffmann para o intumescimento se baseou no índice de refração (\(n\)) do surfactante e do solvente, propriedades importantes para descrever a atração coloidal, como visto pela constante de Hamaker, \autoref{eqn:constante_hamaker_lifshitz}.
 		\index{micelas gigantes!constante de Hamaker}
 		
-		Quando a concentração de glicerina em água atinge 60\% v/v, o índice de refração do solvente \(n_3\) e do agregado \(n_1\) se tornam iguais. Nessa situação, a atração interlamelar diminui muito, pois a constante de Hamaker, proporcional à diferença desses índices de refração, torna-se próxima de zero. Com a atração interlamelar anulada, as forças repulsivas de ondulação das lamelas conseguem separá-las, intumescendo o sistema.
+		Quando a concentração de glicerina em água atinge 60\% v/v, o índice de refração do solvente \(n_3\) e do agregado \(n_1\) se tornam iguais. Nessa situação, a atração interlamelar diminui muito, pois a constante de Hamaker, proporcional à diferença desses índices de refração, torna-se próxima de zero. Com a atração interlamelar anulada, as forças repulsivas de ondulação das lamelas conseguem separá-las, intumescendo o sistema. O termo relativo à constante dielétrica na constante de Hamaker é relativamente pequeno, então não foi considerado.
 		\index{micelas gigantes!índice de refração}
 		
 		Os sistemas estudados foram: 
@@ -1939,7 +1943,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		\begin{enumerate}[noitemsep]
 			\item \citeauthor{Grabner2014}: diacilfosfatidilcolina com glicerina, 1,3-butanodiol, 1,2-propanodiol
 			\item \citeauthor{Song2008a}: uma mistura de 5\% de um surfactante não iônico Genapol 070 (LA070) com 50\mM{} de octanol em DMSO, glicerina e sacarose (referenciada simplesmente como \emph{sugar}), e lecitina com glicerol
-			\item \citeauthor{Shinto2012}: diacilfosfatifilcolina com água e glicerina.
+			\item \citeauthor{Shinto2012}: diacilfosfatidilcolina com água e glicerina.
 		\end{enumerate}
 		
 		% todo: colocar uma lista de sistemas que o Hoffmann observou, para MG 
@@ -1954,7 +1958,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		% Falar sobre a hidrofilicidade da superfície micelar, o t3 de relaxação e a relação com os perfis de viscosidade.
 		
 		\index{micelas gigantes!sticky contacts@\textsl{sticky contacts}}
-		Hoffmann também, em correspondências pessoais, mencionou que conseguiu observar um tempo de relaxação adicional por birrefringência elétrica\cite{Hoffmann1990} que estariam relacionados ao tempo em que as micelas demoram para tocar umas às outras. Esse processo, determinado como ``sticky contact''\cite{Hoffmann2010, Hoffmann2012a, Yamashita2006}, promove a maior viscosidade para sistemas com \CTAB{} do que com, por exemplo, C\textsubscript{16}PyCl, e estaria relacionado à hidrofilicidade da superfície micelar. Logo, micelas gigantes com superfícies mais hidrofílicas passariam menos tempo em contato, e os processos de relaxação seriam mais rápidos. 
+		Hoffmann também, em correspondências pessoais, mencionou que conseguiu observar um tempo de relaxação adicional por birrefringência elétrica\cite{Hoffmann1990} que estaria relacionado ao tempo em que as micelas demoram para tocar umas às outras. Esse processo, determinado como ``sticky contact''\cite{Hoffmann2010, Hoffmann2012a, Yamashita2006}, promove a maior viscosidade para sistemas com \CTAB{} do que com, por exemplo, C\textsubscript{16}PyCl, e estaria relacionado à hidrofilicidade da superfície micelar. Logo, micelas gigantes com superfícies mais hidrofílicas passariam menos tempo em contato, e os processos de relaxação seriam mais rápidos. 
 		
 
 
