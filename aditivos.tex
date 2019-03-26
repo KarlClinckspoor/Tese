@@ -62,7 +62,7 @@
 		
 		\section{Efeito dos aditivos na calorimetria de micelas gigantes} \index{resultados!ITC} \index{resultados!\TTAB}
 		\label{sec:efeito_aditivos_calorimetria_mg}
-			A calorimetria de titulação isotérmica fornece informações sobre o quão favorável é a formação das micelas, através da concentração de formação de micelas gigantes, \cwlm. As Figuras \ref{fig:itc_mg_glicerina}, \ref{fig:itc_mg_sacarose}, \ref{fig:itc_mg_13bd}, \ref{fig:itc_mg_dmso} e \ref{fig:itc_mg_ureia} mostram os perfis de formação de micelas gigantes para glicerina, sacarose, 1,3-butanodiol, dimetilsulfóxido e ureia, respectivamente.
+			A calorimetria de titulação isotérmica fornece informações sobre o quão favorável é a formação das micelas, através da concentração de formação de micelas gigantes, \cwlm. As Figuras \ref{fig:itc_mg_glicerina}, \ref{fig:itc_mg_sacarose}, \ref{fig:itc_mg_13bd}, \ref{fig:itc_mg_dmso} e \ref{fig:itc_mg_ureia} mostram os perfis de formação de micelas gigantes para glicerina, sacarose, 1,3-butanodiol, dimetilsulfóxido e ureia, respectivamente. 
 		
 			\begin{figure}[h]
 				\centering
@@ -440,7 +440,7 @@
 			\label{fig:param_gordon_por_conc}
 		\end{figure}
 		
-		Podemos observar que os dois gráficos possuem basicamente o mesmo formato. A maior alteração ocorre devido à divisão pelo volume molar, onde a alta massa da sacarose mascara o aumento de sua tensão superficial, tornando os valores de \(G\) constantes. Essa divisão também diferencia as curvas de ureia e sacarose.
+		Podemos observar que os dois gráficos possuem basicamente o mesmo formato. A maior alteração ocorre devido à divisão pelo volume molar, onde a alta massa da sacarose mascara o aumento de sua tensão superficial, tornando os valores de \(G\) constantes. Essa divisão também diferencia as curvas de ureia e sacarose. \label{sec:correlacao_G_reologia}
 		
 		Pelo posição relativa das retas observadas para cada aditivo, podemos construir a seguinte correlação de estruturação do solvente:
 		
@@ -501,7 +501,7 @@
 				
 		As \DHwlm{} não possuem uma ordenação clara. Ureia aparenta ter comportamentos divergentes entre soluções de concentrações baixas (\(<\) 15\%) e altas (\(\ge\) 15\%). Já a \DHmic{} possui padrões, como os valores de ureia agrupados, pois não há salicilato para ser dessorvido. Glicerina e DMSO novamente possuem um comportamento relativamente próximo, e \BD{} tem o menor efeito na entalpia por variação de \(G\). A sacarose diminui a \DHmic{} e a \cmc{}, apesar de não afetar \(G\), indicando que seu papel está relacionado com a interação com as micelas, não somente seu efeito no solvente.
 		
-		A correlação do parâmetro de Gordon é especialmente forte com o comportamento reológico, e há algumas correlações que podem ser feitas com a calorimetria. Deve ser enfatizado que esse parâmetro, por si só, também não explica o comportamento completo. É necessário combinar todas essas considerações para entender o sistema. Por exemplo, se um aditivo for ativo na superfície, os valores de tensão superficial irão decair muito fortemente, mas não necessariamente haverá uma alteração forte na estruturação do solvente. Logo, é necessário utilizar aditivos pouco ativos em superfície, e hidrofílicos, caso seja necessário estender este estudo.
+		A correlação do parâmetro de Gordon é especialmente forte com o comportamento reológico (página \pageref{sec:correlacao_G_reologia}), e, como será visto há algumas correlações que podem ser feitas com a calorimetria. Deve ser enfatizado que esse parâmetro, por si só, também não explica o comportamento completo. É necessário combinar todas essas considerações para entender o sistema. Por exemplo, se um aditivo for ativo na superfície, os valores de tensão superficial irão decair muito fortemente, mas não necessariamente haverá uma alteração forte na estruturação do solvente. Logo, é necessário utilizar aditivos pouco ativos em superfície, e hidrofílicos, caso seja necessário estender este estudo.
 		\FloatBarrier
 		
 		\section{Interação dos aditivos com a superfície micelar}
@@ -1039,7 +1039,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.9\textwidth]{imagens/reologia/oscilatório_agua_tr}
-		\caption{Tempos de relaxação, em segundos, calculados pelo ajuste dos quatro modelos estudados. As linhas são guias para os olhos, para mostrar a similaridade com o perfil de viscosidade.}
+		\caption{Tempos de relaxação, em segundos, calculados pelo ajuste dos quatro modelos estudados. As linhas são guias para os olhos, para mostrar a similaridade com o perfil de viscosidade (\autoref{fig:rh_agua_oscilatorio}).}
 		\label{fig:oscilatorio_agua_tr}  
 	\end{figure}
 
@@ -1491,11 +1491,90 @@
 		
 		Observou-se que a variação da viscosidade, na maior parte das soluções, foi devido à alterações no tempo de relaxação das micelas \(\tau_{\textrm{rel}}\), e não no módulo no platô \(G\). As exceções são as soluções que possuíam baixa viscosidade. Interessantemente, as amostras de 100 \mM{}, com 60\% de glicerina e 15\% de \BD{}, apesar de possuírem viscosidades semelhantes, tiveram ajustes diferentes. Isso pode significar que há mecanismos extras que diminuiram a viscosidade com o \BD{}, possivelmente devido à sua posição na superfície micelar. Todas as outras soluções com \BD{} não seguiram um comportamento típico de micelas gigantes.
 		
+		A \autoref{fig:resumo_ajuste_max}, análoga à \autoref{fig:oscilatorio_agua_tr}, resume os resultados de \(\tau_{\mathrm{rel}}\) para os diferentes aditivos e concentrações. Utilizou-se somente o modelo de Maxwell para esta figura porque, neste caso, é representativo dos outros modelos também. É possível observar que, da mesma maneira que na \autoref{fig:oscilatorio_agua_tr}, as regiões onde se encontram os picos de viscosidade possuem os \(\tau_{\mathrm{rel}}\) mais longos. Interessantemente, em concentrações de aditivo onde há uma transição no perfil de viscosidade (por exemplo, 15\% de ureia), os tempos de relaxação também estão intermediários. Os tempos de relaxação de algumas composições não puderam ser determinados, então alguns perfis não estão completos.
+		
+		\begin{figure}[h]
+			\begin{subfigure}[t]{0.5\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{imagens/reologia/resumo_ajuste_adit_gl_sac_dmso_max}
+				\caption{Glicerina, sacarose e DMSO}
+				\label{fig:resumoajusteaditglsacdmsomax}
+			\end{subfigure} %
+			\begin{subfigure}[t]{0.5\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{imagens/reologia/resumo_ajuste_adit_13bd_ur_max}
+				\caption{\BD{} e ureia}
+				\label{fig:resumoajusteadit13bdurmax}
+			\end{subfigure} %
+			\caption{Tempos de relaxação \(\tau_{\mathrm{rel}}\), em s, para os ajustes de Maxwell das amostras com \CTAB{} 100 \mM{} e três concentrações de NaSal. As linhas são guias para os olhos.}
+			\label{fig:resumo_ajuste_max}
+		\end{figure}
+		
+		
 		Todos os modelos utilizados ajustaram bem os conjuntos de dados, e não houve ganho significativo em qualidade pela troca de modelo, mostrando que, nesses casos, o modelo mais simples, o de Maxwell, é suficiente para explicar os dados. As regiões com alta frequência das amostras com 35 e 60 \mM{} de NaSal frequentemente divergiram dos modelos, e o sucesso no tratamento dessa região variou bastante, mas nunca foi muito satisfatória, com os modelos utilizados.
 		
 		O coeficiente de determinação \(R^2\) mostrou que amostras foram melhor ajustadas, e, de forma geral, forneceu valores mais próximos de 1 para os modelos mais complexos, apesar de não haver um ganho significativo no entendimento desses sistemas. Os parâmetros extras obtidos, como \(\tau_{\textrm{rel,2}}\), geralmente não possuíram significado. Por exemplo, no modelo de Jeffreys, \(\tau_{\textrm{rel,2}}\) sempre teve valores muito baixos, da ordem de ms, o que resultaria em informações sobre a região de altas frequências dos reogramas, onde não havia pontos experimentais de qualidade.
 		
 		Além disso, em água, os coeficientes de determinação se aproximaram à unidade nas amostras com 100 \mM{} de NaSal, e se aproximaram de 0,9 para amostras com menos NaSal. Isso indica que antes do mínimo, o comportamento das micelas não é Maxwelliano, e se torna após o mínimo. A queda em frequências mais altas pode se dever a variações experimentais, ou a presença de mais pontos além do cruzamento.
+		
+		%Foram criadas figuras análogas à \autoref{fig:oscilatorio_agua_tr}, para resumir os resultados dos ajustes através de \(\tau_{\mathrm{rel}}\), dos quatro principais modelos utilizados. Para facilitar a visualização, não foi utilizado o segundo tempo de relaxação de alguns modelos, e as curvas foram divididas em dois grupos para cada aditivo. Essas comparações estão nas Figuras \ref{fig:resumo_ajuste_max}--\ref{fig:resumo_ajuste_dm}. É possível observar que, da mesma maneira que na \autoref{fig:oscilatorio_agua_tr}, as regiões onde se encontram os picos de viscosidade possuem os valores máximos de \(\tau_{\mathrm{rel}}\). 
+	
+
+	
+
+%		\begin{figure}[h]
+%			\begin{subfigure}[t]{0.5\textwidth}
+%				\centering
+%				\includegraphics[width=\textwidth]{imagens/reologia/resumo_ajuste_adit_gl_sac_dmso_old}
+%				\caption{Glicerina, sacarose e DMSO}
+%				\label{fig:resumoajusteaditglsacdmsoold}
+%			\end{subfigure} %
+%			\begin{subfigure}[t]{0.5\textwidth}
+%				\centering
+%				\includegraphics[width=\textwidth]{imagens/reologia/resumo_ajuste_adit_13bd_ur_old}
+%				\caption{\BD{} e ureia}
+%				\label{fig:resumoajusteadit13bdurold}
+%			\end{subfigure} %
+%			\caption{Tempos de relaxação \(\tau_{\mathrm{rel}}\), em s, para os ajustes de Oldroyd das amostras com \CTAB{} 100 \mM{} e três concentrações de NaSal.}
+%			\label{fig:resumo_ajuste_old}
+%		\end{figure}
+%
+%
+%		\begin{figure}[h]
+%			\begin{subfigure}[t]{0.5\textwidth}
+%				\centering
+%				\includegraphics[width=\textwidth]{imagens/reologia/resumo_ajuste_adit_gl_sac_dmso_jef}
+%				\caption{Glicerina, sacarose e DMSO}
+%				\label{fig:resumoajusteaditglsacdmsojef}
+%			\end{subfigure} %
+%			\begin{subfigure}[t]{0.5\textwidth}
+%				\centering
+%				\includegraphics[width=\textwidth]{imagens/reologia/resumo_ajuste_adit_13bd_ur_jef}
+%				\caption{\BD{} e ureia}
+%				\label{fig:resumoajusteadit13bdurjef}
+%			\end{subfigure} %
+%			\caption{Tempos de relaxação \(\tau_{\mathrm{rel}}\), em s, para os ajustes de Jeffreys das amostras com \CTAB{} 100 \mM{} e três concentrações de NaSal.}
+%			\label{fig:resumo_ajuste_jef}
+%		\end{figure}
+%
+%		\begin{figure}[h]
+%			\begin{subfigure}[t]{0.5\textwidth}
+%				\centering
+%				\includegraphics[width=\textwidth]{imagens/reologia/resumo_ajuste_adit_gl_sac_dmso_dm}
+%				\caption{Glicerina, sacarose e DMSO}
+%				\label{fig:resumoajusteaditglsacdmsodm}
+%			\end{subfigure} %
+%			\begin{subfigure}[t]{0.5\textwidth}
+%				\centering
+%				\includegraphics[width=\textwidth]{imagens/reologia/resumo_ajuste_adit_13bd_ur_dm}
+%				\caption{\BD{} e ureia}
+%				\label{fig:resumoajusteadit13bdurdm}
+%			\end{subfigure} %
+%			\caption{Tempos de relaxação \(\tau_{\mathrm{rel}}\), em s, para os ajustes de Dois Modos das amostras com \CTAB{} 100 \mM{} e três concentrações de NaSal.}
+%			\label{fig:resumo_ajuste_dm}
+%		\end{figure}
+		
+	\FloatBarrier
 
 	\chapter{Conclusão} \index{conclusões}
 	

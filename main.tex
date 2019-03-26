@@ -160,7 +160,8 @@
 \titulo{Estudo estrutural, termodinâmico e cinético sobre a formação e interações de micelas gigantes em sistemas aquosos binários}
 \autor{Karl Jan Clinckspoor}
 \local{Campinas}
-\data{\today}
+%\data{\today}
+\data{19 de março de 2019}
 \orientador{Prof. Dr. Edvaldo Sabadini}
 \coorientador{}
 \instituicao{%
@@ -268,7 +269,47 @@
 % Folha de rosto
 % (o * indica que haverá a ficha bibliográfica)
 % ---
+\makeatletter
+\renewcommand{\folhaderostocontent}{
+\begin{center}
+	
+	{\ABNTEXchapterfont\large\imprimirautor}
+	\vspace*{\fill}\vspace*{\fill}
+	
+	\begin{center}\ABNTEXchapterfont\bfseries\Large\imprimirtitulo\end{center}
+	
+	\vspace*{\fill}\abntex@ifnotempty{\imprimirpreambulo}{%
+		\hspace{.45\textwidth}
+		\begin{minipage}{.5\textwidth}
+			\SingleSpacing
+			\imprimirpreambulo
+		\end{minipage}%
+	\vspace*{\fill}
+	}%
+
+	{\abntex@ifnotempty{\imprimirinstituicao}{\imprimirinstituicao\vspace*{\fill}}}
+	
+	{\large\imprimirorientadorRotulo~\imprimirorientador\par}
+	\abntex@ifnotempty{\imprimircoorientador}{%
+		{\large\imprimircoorientadorRotulo~\imprimircoorientador}%
+	}%
+
+	\vspace*{\fill}{\large\imprimirlocal}
+	\par
+	{\large\imprimirdata}
+	\vspace*{1cm}
+	
+\begin{center} Este arquivo digital corresponde à versão final da tese defendida pelo aluno Karl Jan Clinckspoor e orientada pelo Prof. Dr. Edvaldo Sabadini \end{center}
+	
+	\end{center}
+}
+
+\makeatother
+
 \imprimirfolhaderosto*
+
+
+
 % ---
 
 % ---
@@ -427,11 +468,17 @@ Agradeço ao CNPq pelo financiamento.
 % resumo em português
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
- 	O objetivo deste trabalho é estudar o efeito de cinco aditivos, a saber, glicerina, sacarose, 1,3-butanodiol, dimetilsulfóxido e ureia, na reologia de micelas gigantes de brometo de hexadeciltrimetilamônio e salicilato de sódio. Isso foi realizado através da análise da viscosidade no repouso em função da concentração de salicilato, para uma concentração fixa de surfactante. A viscosidade no repouso é proporcional ao tempo de relaxação das micelas e, assim, se observaria alterações na relaxação micelar. Esses estudos foram complementados com calorimetria de titulação isotérmica, onde se observou a tendência de formação e entalpia de formação de micelas gigantes e de micelas esféricas, porém, desta vez, utilizando brometo de tetradeciltrimetilamônio. Além disso, a reologia oscilatória foi estudada, de modo a verificar se os aditivos alteram a estruturação da micela.
+ 	O objeto central de estudo deste trabalho são as micelas gigantes. Será estudada a formação, crescimento e interações dessas estruturas de autoassociação alongadas. Porém, ao invés de se alterar a composição das micelas diretamente, será estudado o efeito do solvente nesses agregados, uma abordagem raramente empregada na área. Neste trabalho, utilizou-se primariamente dois surfactantes catiônicos (brometo de hexadeciltrimetilamônio e brometo de tetradeciltrimetilamônio) e salicilato de sódio, que formam um dos sistemas de micelas gigantes mais bem estudados.
  	
-	Os resultados reológicos e calorimétricos foram explicados com base em parâmetros macroscópicos do solvente, o índice de refração, relacionado à atração entre coloides, a constante dielétrica, relacionada à estabilização de espécies iônicas, e ao parâmetro de Gordon, relacionado à estruturação do solvente. Observou-se que o parâmetro de Gordon possuía a melhor correlação com as medidas reológicas. Isto é, quanto menos estruturado fosse o solvente, mais a viscosidade no repouso foi afetada. Porém, é necessário considerar o efeito desses aditivos na superfície micelar, que podem também afetar tanto estruturalmente, quanto nos mecanismos de relaxação. A reologia oscilatória mostrou que as soluções que mais diminuíram a viscosidade também afetaram os perfis dos módulos elástico e viscoso, porém a maior parte das amostras mantive sua estrutura de micelas gigantes.
+	De acordo com a literatura, solventes com índices de refração (\(n\)) e constantes dielétricas (\(\varepsilon\)) semelhantes deveriam resultar em micelas com propriedades similares, pois o efeito na constante de Hamaker deveria ser idêntico. Logo, foram escolhidos cinco aditivos hidrofílicos, a saber, glicerina, sacarose, 1,3-butanodiol, dimetilsulfóxido e ureia, para testar essa hipótese. Esses aditivos foram escolhidos por suas potenciais aplicações práticas, e por alguns terem sido estudados anteriormente, como ponto de comparação. Foram utilizadas misturas binárias com água, nas concentrações de 5---60\% (m/m) de aditivo em água. Duas técnicas, a reologia e a calorimetria de titulação isotérmica (ITC), foram utilizadas em conjunto para analisar o efeito das mudanças no solvente nas propriedades das micelas. 
 	
-	Além disso, estudou-se a interação de ureia, em altas concentrações, e surfactantes catiônicos. Notou-se que ocorria a formação de fases lamelares, cuja quantidade era dependente da concentração de ureia, não de surfactante. Também foram realizados estudos sobre a cinética de crescimento das micelas através de espalhamento de raios-X resolvido no tempo, em Grenoble, na França. Infelizmente, os resultados de cinética forneceram somente um tempo de crescimento em torno de 35 ms. Foi observado que a fluorescência do salicilato era afetada pela quantidade de surfactante em solução, resultado que foi atribuído à incorporação do mesmo nas micelas. Com isso, foi desenvolvido um método para a medida de fluorescência resolvida no tempo, porém na escala de ms, para se observar a incorporação de salicilato. Novamente, não foi possível obter a cinética de crescimento micelar.
+	Os perfis de viscosidade no repouso (\(\eta_0\)) em função da concentração de salicilato, obtidos por reologia, possuíram correlações insatisfatórias somente com \(n\) e \(\varepsilon\), mas foram muito bem descritos pelo parâmetro de Gordon \(G\), relacionado com a estruturação do solvente. Os perfis de viscosidade foram complementados com estudos de reologia oscilatória, onde observou-se que as micelas mantiveram sua estrutura, exceto em altas concentrações de aditivos. Os resultados calorimétricos, por sua vez, não possuíram uma correlação tão satisfatória, mas medidas simplificadas, sem salicilato de sódio, foram muito bem explicadas por esses parâmetros. Além disso, descobriu-se ureia, em concentrações acima de 35\% (m/m), induzia a formação de lamelas de três surfactantes catiônicos. Essas estruturas foram caracterizadas.
+	
+	Esses resultados mostram como o solvente afetou as micelas, e como efeitos inicialmente não considerados pela constante de Hamaker levam à diferenças nas propriedades micelares. Por exemplo, o efeito de glicerina deveria ser similar ao da sacarose, por possuírem \(n\) e \(\varepsilon\) praticamente idênticos, mas seus parâmetros de Gordon divergem significativamente. Isso mostra como as características estruturais únicas de cada aditivo são relevantes para a explicação completa das micelas gigantes.
+	
+	Foi observado que a fluorescência do salicilato era afetada pela quantidade de surfactante em solução, resultado que foi atribuído à incorporação do mesmo nas micelas, e essa propriedade foi correlacionada a viscosidade e o calor de interação, algo inédito. Com isso, foi desenvolvido um método para a medida de fluorescência resolvida no tempo, na escala de ms, para se observar a incorporação de salicilato. Infelizmente, não foi possível obter a cinética de crescimento micelar por essa técnica. Por outro lado, foi realizado espalhamento de raios-X em baixos ângulos resolvido no tempo em Grenoble, França, onde se estimou o tempo de crescimento como sendo entre 35 e 65 ms.
+	
+% 	It was also observed that the fluorescence of salicylate was affected by the quantity of surfactant in solution, which was attributed to its incorporation into the micelles. This was correlated with the viscosity and the heat of interaction, something novel. A ms-scale time-resolved fluorescence method was developed, to observe the incorporation of salicylate. However, the growth kinetics could not be obtained by this technique. On the other hand, time-resolved X-ray scattering was performed in Grenoble, France, where the growth of the micelles was estimated to happen around 35 to 65 ms.
 	
  \textbf{Palavras-chave}: micelas gigantes, aditivos, reologia, calorimetria, cinética, espalhamento de raios-X, surfactantes
 \end{resumo}
@@ -439,12 +486,16 @@ Agradeço ao CNPq pelo financiamento.
 % resumo em inglês
 \begin{resumo}[Abstract]
  \begin{english}
-   The objective of this work is to study the effect of five additive, i.e., glycerine, sucrose, 1,3-butanediol, dimethylsulfoxide and urea, on the rheology of wormlike micelles of hexadecyltrimethylammonium bromide and sodium salicylate. This was done through the analysis of the zero-shear viscosity as a function of the concentration of salicylate, for a fixed surfactant concentration. The zero-shear viscosity is proportional to the relaxation time of the micelles and, therefore, changes in the micellar relaxation could be seen. These studies were complemented by isothermal titration calorimetry, where the tendency and enthalpy of formation of wormlike and spherical micelles were observed. However, this time, tetradecyltrimethylammonium bromide was used. In addition to that, oscillatory rheology was studied in order to verify if the additives alter the structure of the micelles.
-   
-   The rheological and calorimetric results were explained based on the macroscopia parameters of the solvent, the refractive index, related to inter-colloid attraction, dielectric constant, related to the stabilization of ionic species, and the Gordon parameter, related to the structuring of the solvent. We observed that the Gordon parameter had the best correlation with the rheological measurements, that is, the less structured the solvent is, the more the zero-shear viscosity was affected. However, it is also necessary to consider the effect these additives have on the micellar surface, which can also affect them structurally and in their relaxation mechanisms.
-   
-   Secondly, the interaction of high concentrations of urea and cationic surfactants was studied. We noted that the formation of lamellar phases occured, which was dependent on the concentration of urea, not surfactant. We also performed measurements of the growth kinetics of the micelles through time-resolved small angle X-ray scattering in Grenoble, France. Unfortunately, the results showed only an estimate for the timescape of growth, 35 ms. Lastly, we observed that the fluorescence of salicylate varied with the concentration of surfactant, which was attributed to the incorporation of salicylate into the micellar palisade. Using this, a method to study the time-resolved fluorescence, in the scale of ms, was developed, in order to observe the rate that salicylate entered. Again, it was not possible to observe the growth kinetics.
-
+ 	The main object of study of this work are wormlike micelles. The formation, growth and interactions of these elongated self-assembly structures will be studied. However, instead of altering the composition of the micelles directly, the effect of the solvent on the micelles will be studied instead, a rarely used approach in this area. In this work, mainly two cationic surfactants were used (hexadecyltrimethylammonium bromide and tetradecyltrimethylammonium bromide), together with sodium salicylate, which form well known wormlike micelles.
+ 	
+ 	According to the literature, solvents with similar refractive indexes (\(n\)) and dielectric constants (\(\varepsilon\)) should result in micelles with similar properties, because the effect on the Hamaker constant should be identical. Therefore, five hydrophilic additives were chosen, glycerol, sucrose, 1,3-butanediol, dimethylsulfoxide and urea, to test this hypothesis. These additives were chosen for their practical applications, and because some were studied previously, and could be used as reference points. Binary mixtures of these additives, with concentrations ranging from 5---60\% (w/w), and water were used. Two techniques, rheology and isothermal titration calorimetry (ITC), were used in unison to analyze the effect of the changes of the solvents in the properties of the micelles.
+ 	
+ 	The zero-shear viscosity (\(\eta_0\)) profiles as a function of salicylate concentration, obtained through rheology, had unsatisfactory correlations with \(n\) and \(\varepsilon\), but were very well explained by the Gordon parameter \(G\), which is related to the structure of the solvent. These viscosity profiles were complemented by oscillatory rheology measurements, which showed that the micelles maintained their structure, except at high additive concentrations. The calorimetric results, on the other hand, could not be satisfactorily correlated to the parameters, but the simplified experiments, without sodium salicylate, could be correlated. On top of that, it was discovered that urea, in concentrations above 35\% (w/w), induced the formation of lamellae with three cationic surfactants. These structures were characterized.
+ 	
+ 	These results showed how the solvent affected the micelles, and how effects not considered by the Hamaker constant lead to differences in the micellar properties. For example, the effect of urea should be similar to that of sucrose, due to their similarities in both \(n\) and \(\varepsilon\), but their Gordon parameters diverged significantly. This shows how the unique structural characteristics of each additive are relevant to explain the whole self-assembly system.
+ 	
+ 	It was also observed that the fluorescence of salicylate was affected by the quantity of surfactant in solution, which was attributed to its incorporation into the micelles. This was correlated with the viscosity and the heat of interaction, something novel. A ms-scale time-resolved fluorescence method was developed, to observe the incorporation of salicylate. However, the growth kinetics could not be obtained by this technique. On the other hand, time-resolved X-ray scattering was performed in Grenoble, France, where the growth of the micelles was estimated to happen between 35 to 65 ms.
+ 	
    \vspace{\onelineskip}
  
    \noindent 
