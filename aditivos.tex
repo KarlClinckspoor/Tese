@@ -724,7 +724,36 @@
 			\label{lst:dendrograma}
 		\end{listing}
 		\FloatBarrier
-
+		
+		\section{Estimativas de \(\Delta G^\circ_{\textrm{mic}}\) e \(\Delta S^\circ_{\textrm{mic}}\)} 
+		
+		Através da \autoref{eqn:itc_DeltaG_mic} e \autoref{eqn:itc_gibbs_para_entropia} é possível calcular a variação energia livre de Gibbs de micelização, e a variação da entropia de micelização. Para esses cálculos, é necessário ter o grau de ionização \(\alpha\) das micelas , que deve variar muito com a composição da solução. A primeira aproximação desta seção será assumir que as micelas estão totalmente ionizadas, mas idealmente o grau de ionização deveria ser calculado através de medidas de condutividade. Além disso, as equações irão assumir que não há interação dos aditivos com as micelas, e essa será a segunda aproximação. Não existe na literatura um formalismo para a formação de micelas gigantes, então não serão calculados \(\Delta G^\circ\) e \(\Delta S^\circ\) para a formação de micelas gigantes. Os cálculos levaram em conta a concentração de aditivo para calcular a fração molar de surfactante na \cmc.
+		
+		Para comparações, foi criada a \autoref{fig:dg_tds_por_composto} que contém essas grandezas em função da composição dos aditivos. Ao invés de se utilizar \(\Delta S^\circ_{\textrm{mic}}\) nessa comparação, a contribuição entrópica total, \(-T\Delta S^\circ_{\textrm{mic}}\), foi utilizada. Isso permite avaliar melhor as contribuições relativas de cada grandeza, porque a faixa dos valores de \(\Delta S^\circ_{\textrm{mic}}\) é entre +60 J.mol\menosUm{} a -20 J.mol\menosUm, já os valores de \(\Delta H^\circ_{\textrm{mic}}\) estão na faixa de kJ.mol\menosUm. Essa figura também serve como uma tabela visual.
+		
+		\begin{figure}[h]
+			\begin{subfigure}{0.5\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{imagens/itc/DG_por_composto}
+				\caption{\(\Delta G^\circ_{\textrm{mic}}\)}
+				\label{fig:dg_por_composto}
+			\end{subfigure}%
+			\begin{subfigure}{0.5\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{imagens/itc/TDS_por_composto}
+				\caption{\(-T\Delta S^\circ_{\textrm{mic}}\)}
+				\label{fig:tds_por_composto}
+			\end{subfigure}
+			\caption{(\ref{fig:dg_por_composto}) Energia livre de Gibbs de micelização e (\ref{fig:tds_por_composto}) contribuição entrópica para a micelização (\(-T\Delta S^\circ_{\textrm{mic}}\)) para os processos de formação de micelas de \TTAB{} em soluções dos diversos solventes binários utilizados. Essas grandezas foram calculadas a partir da \cmc{} e \DHmic. A reta horizontal é utilizada como comparação com a água.}
+			\label{fig:dg_tds_por_composto}
+		\end{figure}
+		
+		Como \(\Delta G^\circ_{\textrm{mic}}\) é obtido a partir da \cmc, é esperado que a tendência de comportamento das duas grandezas seja a mesma. De forma geral, quanto maior é a concentração de aditivo, maior é a \cmc{} e menor é a \(\Delta G^\circ_{\textrm{mic}}\). Há deslocamentos das posições de cada ponto devido à contribuição da alta concentração de aditivo no cálculo da fração molar de surfactante, como fica evidente ao se observar o comportamento da sacarose onde, apesar da \cmc{} gradualmente diminuir, os valores de \(\Delta G^\circ_{\textrm{mic}}\) oscilam ao redor do valor em água, para depois cair bruscamente em 50\%.
+		
+		Para todos os compostos estudados, a contribuição entrópica para a micelização se torna cada vez menor, indicando que o termo entálpico se torna mais relevante para o processo. Enquanto que, em água, o termo entrópico corresponde a aproximadamente \(\frac{4}{5}\) da contribuição total para \(\Delta G^\circ_{\textrm{mic}}\), em sacarose 50\% o termo entrópico age contra a micelização. De fato, esse é o único aditivo que levou a uma inversão no valor de \(-T\Delta S^\circ_{\textrm{mic}}\). Como esse é também o único aditivo que levou à uma diminuição de \(\Delta G^\circ_{\textrm{mic}}\), isso pode significar que a sacarose levou à micelização por sua interação com a superfície micelar, como já foi mencionado.
+		
+		Já os outros aditivos tiveram aumentos de \(-T\Delta S^\circ_{\textrm{mic}}\) possivelmente porque a penalidade entrópica diminui com a desestruturação do solvente. Outra observação interessante ocorre nas variações de de 50-- 60\% de glicerina e 20--30\% de \BD. Provavelmente, isso se deve à alteração significativa do solvente nessas condições, que tornou a medida em si pouco confiável, como também foi observado nas figuras anteriores. Se a tendência se mantivesse, possivelmente as concentrações mais altas de glicerina e \BD{} teriam valores de \(-T\Delta S^\circ_{\textrm{mic}}\) positivos ou próximos de zero, indicando o ponto onde a contribuição entrópica se tornou irrelevante, e a entalpia domina. Vemos também que a ureia pouco afeta o termo entálpico, mas afeta a \cmc. Porém, esse deve ser o aditivo que mais afeta a carga superficial micelar, então é difícil criar especulações confiáveis.
+		
 		\section{Conclusão Parcial} \index{conclusões!aditivos}
 		
 		Nesta parte do trabalho, mostrou-se o efeito de diversos aditivos na reologia e na calorimetria de micelas gigantes. Os experimentos reológicos mostraram como os processos de relaxação de tensão foram afetados pela adição dos aditivos, e por calorimetria observou-se a espontaneidade de formação de micelas gigantes.
@@ -738,7 +767,9 @@
 		
 		De modo a observar o efeito de todos os parâmetros simultaneamente, foram realizados ajustes para se obter equações empíricas relacionando os parâmetros às propriedades. Foi possível correlacionar somente as concentrações micelares críticas (\cmc) e entalpias de micelização (\DHmic) aos parâmetros escolhidos. Isso ocorreu possivelmente pela maior simplicidade do sistema sem NaSal.
 		
-		Como perspectivas futuras, pode-se estudar outros aditivos para verificar o quanto os parâmetros levantados conseguem explicar outros comportamentos. Além disso, quantificar a concentração de aditivo na superfície micelar, mostrar como esses aditivos interagem com as moléculas de surfactante, com as moléculas de salicilato, e seus efeitos na cinética de quebra e recombinação micelar aprofundariam o entendimento sobre micelas gigantes.
+		As grandezas \(\Delta G^\circ_{\textrm{mic}}\) e \(\Delta S^\circ_{\textrm{mic}}\) foram estimadas a partir dos dados calorimétricos. Observou-se que as tendências de \(\Delta G^\circ_{\textrm{mic}}\) eram similares às de \cmc, o que é esperado. Já a \(\Delta S^\circ_{\textrm{mic}}\), ajustada para \(-T\Delta S^\circ_{\textrm{mic}}\) mostrou que quanto maior é a concentração de aditivo, menor é a contribuição entrópica para a micelização, e que em altas concentrações de sacarose, a entropia de micelização contribuía na direção oposta à micelização, apesar da \cmc{} diminuir. Isso mostra que a sacarose interage com a superfície micelar, levando à micelização, e também que os outros aditivos devem desestruturar o solvente de modo a diminuir a penalidade entrópica.
+		
+		Como perspectivas futuras, pode-se estudar outros aditivos para verificar o quanto os parâmetros levantados conseguem explicar outros comportamentos. Além disso, quantificar a concentração de aditivo na superfície micelar, mostrar como esses aditivos interagem com as moléculas de surfactante, com as moléculas de salicilato, e seus efeitos na cinética de quebra e recombinação micelar aprofundariam o entendimento sobre micelas gigantes. Utilizando-se condutivímetros de boa qualidade, seria possível aprofundar os estudos de calorimetria, e obter valores mais confiáveis para \(\Delta G^\circ_{\textrm{mic}}\) e \(\Delta S^\circ_{\textrm{mic}}\), o que ajudaria na discussão sobre a estruturação do solvente, penalidade entrópica e interação dos aditivos com as micelas.
 		
 		% todo: criar correlações agora utilizando outros parâmetros para índice de refração e cte dielétrica. Utilizar, por exemplo, (\varepsilon_r - 1 )/(2 \varepsilon_r + 1) e refração molar (V_m (n^2 - 1)/(n^2 - 2)) e cte dielétrica x dipolo, energia coesiva (raiz quadrada do param de hildebrand)
 		% todo: tentar correlacionar viscosidades utilizando os parâmetros, mais a conc de salicilato como variáveis independentes

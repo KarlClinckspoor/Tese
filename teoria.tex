@@ -12,13 +12,13 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 	\chapter{Surfactantes e autoassociação}
 	\label{sec:surfactantes_autoassociação}
 	\index{surfactantes}
-	Surfactantes são moléculas que são ativas em superfícies, como o nome já indica.\cite{Lindman_livro} Isso ocorre devido a sua estrutura molecular, que possui regiões com polaridades diferentes. A \autoref{fig:estrutura_surfactantes} mostra a estrutura de alguns surfactantes comumente utilizados.
+	Surfactantes são moléculas que são ativas em superfícies, como o nome já indica.\cite{Lindman_livro} Isso ocorre devido à sua estrutura molecular, que possui regiões com polaridades diferentes. A \autoref{fig:estrutura_surfactantes} mostra a estrutura de alguns surfactantes comumente utilizados.
 	
 	\begin{figure}[h] 
 		\centering
 		\includegraphics[width=0.7\textwidth]{./imagens/introducao/estrutura_surfactantes}
 		%\caption[Estrutura de alguns surfactantes]{Estrutura de alguns surfactantes. (a) dodecilsulfato de sódio (SDS) (b) brometo de hexadeciltrimetilamônio (\CTAB) (c) 1-palmitoil-2-oleoil-3-sn-fosfatidilcolina (d) bis-(2-etilhexil) sulfosuccinato de sódio (AOT) (e) poli(etilenoglicol) p-(1,1,3,3-tetrametilbutil)-fenil éter (Triton X-100)}
-		\caption{Estrutura de alguns surfactantes. (a) dodecilsulfato de sódio (SDS) (b) brometo de hexadeciltrimetilamônio (\CTAB) (c) 1-palmitoil-2-oleoil-3-sn-fosfatidilcolina (d) bis-(2-etilhexil) sulfosuccinato de sódio (AOT) (e) poli(etilenoglicol) p-(1,1,3,3-tetrametilbutil)-fenil éter (Triton X-100)}
+		\caption{Estrutura de alguns surfactantes. (a) dodecilsulfato de sódio (SDS) (b) brometo de hexadeciltrimetilamônio (\CTAB) (c) 1-palmitoil-2-oleoil-3-sn-fosfatidilcolina (d) bis-(2-etilhexil) sulfosuccinato de sódio (AOT) (e) poli(etilenoglicol) p-(1,1,3,3-tetrametilbutil)-fenil éter (Triton X-100, n=10)}
 		\label{fig:estrutura_surfactantes}
 	\end{figure} \index{surfactantes!estrutura}
 	
@@ -745,7 +745,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		
 		% todo: encontrar um termo melhor para ``caixa adiabática''
 		
-		A calorimetria de titulação isotérmica (ITC) é uma técnica baseada num processo de titulação, onde cada alíquota de titulante resulta em uma ou mais reações químicas ou físicas que podem liberar ou absorver calor. O calor total observado é a somatória do calor de todos esses processos, sendo assim difícil desmembrar as contribuições de cada processo.\cite{Loh2016} No calorímetro há duas celas dentro de uma caixa adiabática; uma de referência, que contém somente água, e outra de amostra, onde ocorre a titulação em si.\cite{Bouchemal2010a} A cela de referência recebe uma quantidade fixa de calor através de uma resistência, e a cela de amostra recebe uma quantidade variável de calor. Isso significa que a temperatura das celas, no decorrer de uma titulação, aumenta ligeiramente, mas menos que 0,1°C. A \autoref{fig:ITC_esquema} ilustra a construção de um calorímetro.
+		A calorimetria de titulação isotérmica (ITC) é uma técnica baseada num processo de titulação, onde cada alíquota de titulante resulta em uma ou mais reações químicas ou físicas que podem liberar ou absorver calor. O calor total observado é a somatória do calor de todos esses processos, sendo assim difícil desmembrar as contribuições de cada processo.\cite{Loh2016} No calorímetro diferencial, há duas celas dentro de uma caixa adiabática; uma de referência, que contém somente água, e outra de amostra, onde ocorre a titulação em si.\cite{Bouchemal2010a} Na técnica de compensação de potência, a cela de referência recebe uma quantidade fixa de calor através de uma resistência, e a cela de amostra recebe uma quantidade variável de calor. Isso significa que a temperatura das celas, no decorrer de uma titulação, aumenta ligeiramente, mas menos que 0,1°C. A \autoref{fig:ITC_esquema} ilustra a construção de um calorímetro.
 		
 		\begin{figure}[h]
 			\centering
@@ -778,7 +778,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		
 		\section{Calorimetria de micelização} \index{ITC!micelização}
 		\label{sec:calorimetria_micelizacao}
-		A partir de um conjunto de dados como os da \autoref{fig:ITC_exemplo}, é possível calcular a concentração micelar crítica (\cmc) e a entalpia de micelização, \DHmic. A \cmc{} é dada pelo ponto onde a primeira derivada do entalpograma é máxima (ou mínima)\cite{Bouchemal2010a}, ou onde a segunda derivada é igual a zero.\cite{Sarac2009}  A \DHmic{} é determinada realizando-se dois ajustes lineares das regiões iniciais e finais do entalpograma.\cite{Loh2016} A diferença de entalpia dos pontos de intersecção desses ajustes com uma reta horizontal na \cmc{} fornece o \DHmic{} sem correção.  A \autoref{fig:itc_extracao_cmc_dh} mostra esse método.
+		A partir de um conjunto de dados como os da \autoref{fig:ITC_exemplo}, é possível calcular a concentração micelar crítica (\cmc) e a entalpia de micelização, \DHmic. A \cmc{} é dada pelo ponto onde a primeira derivada do entalpograma é máxima (ou mínima)\cite{Bouchemal2010a}, ou onde a segunda derivada é igual a zero.\cite{Sarac2009}  A \DHmic{} é determinada realizando-se dois ajustes lineares das regiões iniciais e finais do entalpograma.\cite{Olofsson2009a, Loh2016} A diferença de entalpia dos pontos de intersecção desses ajustes com uma reta horizontal na \cmc{} fornece o \DHmic{} sem correção.  A \autoref{fig:itc_extracao_cmc_dh} mostra esse método.
 		
 		\begin{figure}[h] \index{ITC!\cmc}
 			\centering
@@ -1847,9 +1847,11 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		
 		\index{micelas gigantes!dado bruto de calorimetria}
 		
-		A \autoref{fig:itc_raw_mg} mostra dois exemplos dos sinais obtidos para a titulação \TTAB{} em uma solução de NaSal 1,5 \mM{} em dois solventes diferentes, água (\autoref{fig:itc_raw_mg}) e 40\% m/m de glicerina, 60\% m/m de água (\autoref{fig:raw_itc_mg_glicerina}). Essa figura mostra vários detalhes comuns que são observados durante uma titulação. Próximo à região onde ocorre a formação de micelas gigantes, picos adicionais aparecem nos entalpogramas, e, dependendo do solvente, o ruído da linha de base aumenta. Esse segundo pico pode tanto ser endotérmico como exotérmico. Os picos largos podem estar relacionados a um processo lento no sistema, de incorporação de \Sal{} nas micelas ou de fusão das mesmas.\cite{Ito2016} Essa aparente lentidão motivou os estudos de cinética deste trabalho. % todo: pensar em colocar um estudo mais aprofundado desse tipo nos resultados, após a reologia oscilatória
+		A \autoref{fig:itc_raw_mg} mostra dois exemplos dos sinais obtidos para a titulação \TTAB{} em uma solução de NaSal 1,5 \mM{} em dois solventes diferentes, água (\autoref{fig:itc_raw_mg}) e 40\% m/m de glicerina, 60\% m/m de água (\autoref{fig:raw_itc_mg_glicerina}). Essa figura mostra vários detalhes comuns que são observados durante uma titulação. Próximo à região onde ocorre a formação de micelas gigantes, picos adicionais aparecem nos entalpogramas, e, dependendo do solvente, o ruído da linha de base aumenta. Esse segundo pico pode tanto ser endotérmico como exotérmico. Os picos largos podem estar relacionados a um processo lento no sistema, de incorporação de \Sal{} nas micelas ou de fusão das mesmas.\cite{Ito2016} Essa aparente lentidão motivou os estudos de cinética deste trabalho, para se determinar se é uma cinética de crescimento, ou de mistura. % todo: pensar em colocar um estudo mais aprofundado desse tipo nos resultados, após a reologia oscilatória
 		\index{micelas gigantes!segundo pico de injeção}
-		Geralmente, utiliza-se \TTAB{} nesse tipo de experimento, ao invés de \CTAB{}, pois a agregação é menos favorecida, deslocando as curvas para uma faixa maior de concentração de surfactante, e as soluções são menos viscosas no mínimo, resultando em dados melhores.
+		A qualidade da linha base nesse tipo de experimento varia bastante com as concentrações das espécies utilizadas e a presença dos aditivos estudados. De forma geral, a variação na linha base começa quando ocorre a formação de micelas gigantes. No grupo, já foram feitos vários estudos para otimizar a linha base, porém não houve muito sucesso.
+		
+		Geralmente, utiliza-se \TTAB{} nesse tipo de experimento, ao invés de \CTAB{}, pois a agregação é menos favorecida, deslocando as curvas para uma faixa maior de concentração de surfactante, e as soluções são menos viscosas no mínimo, resultando em dados melhores. 
 		
 		\begin{figure}
 			\begin{subfigure}{\textwidth}
@@ -1866,11 +1868,11 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 				\label{fig:raw_itc_mg_glicerina}
 			\end{subfigure}
 			
-			\caption{Potência necessária para manter a cela de amostra e de referência com a mesma temperatura durante uma titulação de \TTAB{} em NaSal 1,5 \mM{} em água e em glicerina 40\% m/m. A região onde se inicia a formação de micelas gigantes, marcada pelas retas verticais, está no \emph{inset}, mostrando a presença de dois picos. A linha vermelha é a linha de base criada pelo software.}
+			\caption{Potência necessária para manter a cela de amostra e de referência com a mesma temperatura durante uma titulação de \TTAB{} em NaSal 1,5 \mM{} em água e em glicerina 40\% m/m. A região onde se inicia a formação de micelas gigantes, marcada pelas retas verticais, está no \emph{inset}, mostrando a presença de dois picos. A linha vermelha é a linha de base criada automaticamente pelo software.}
 			\label{fig:itc_raw_agua_glicerina}
 		\end{figure}
 	
-		O entalpograma integrado, \autoref{fig:itc_integrado_mg} possui um perfil semelhante a todos os sistemas de micelas gigantes estudados até agora, e inclusive foi chamado de ``assinatura'' da formação de micelas gigantes. \cite{Ito2016}
+		O entalpograma integrado, \autoref{fig:itc_integrado_mg} possui um perfil semelhante a todos os sistemas de micelas gigantes estudados até agora, e inclusive foi chamado de ``assinatura'' da formação de micelas gigantes. Observando-se as variações nessa assinatura, estuda-se o comportamento calorimétrico das micelas gigantes. \cite{Ito2016} 
 		\index{micelas gigantes!entalpograma}
 		Esse entalpograma integrado foi tipicamente dividido em quatro regiões. Em concentrações pequenas de \TTAB, foi proposto que ocorre a formação de micelas mistas, esféricas ou cilíndricas curtas. Em seguida, ocorre a fusão das micelas, liberando a energia de excesso das pontas (\autoref{eqn:distribuicao_tamanho_MG}), que leva à queda brusca nos valores de \(\Delta H\). Com a adição de mais \TTAB, o sistema sai da proporção ideal entre as espécies, e as micelas começam a encurtar até que, em grande excesso de \TTAB, as micelas se tornam esféricas, e a adição de mais \TTAB{} leva somente à diluição do conteúdo da seringa, e os valores de entalpia se aproximam de zero.\cite{Shukla2008, Ito2015c}
 		
@@ -1882,7 +1884,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/itc/exemplo_integrado_mg}
-			\caption{Potência integrada da \autoref{fig:itc_raw_mg}, resultando no entalpograma característico da formação de micelas gigantes. A concentração de formação de micelas gigantes \cwlm, assim como a entalpia de micelização, \DHwlm, estão indicadas.}
+			\caption{Calor integrada da \autoref{fig:itc_raw_mg}, resultando no entalpograma característico da formação de micelas gigantes. A concentração de formação de micelas gigantes \cwlm, assim como a entalpia de micelização, \DHwlm, estão indicadas. O ruído se deve à linha de base com grande variação.}
 			\label{fig:itc_integrado_mg}
 		\end{figure}
 		
@@ -1973,7 +1975,12 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		Em paralelo, observou-se que a fluorescência do salicilato se alterava dependendo da concentração de surfactante no meio. Caso esse processo de inserção e crescimento fosse lento o suficiente, seria possível observá-lo por fluorescência resolvida no tempo, mas em escalas de ms, ao invés de ps dos experimentos tradicionais desse ramo. Assim, o mesmo fenômeno seria observado, em paralelo, por duas técnicas diferentes.
 			
 	\chapter{Objetivos}
-		Os objetivos deste projeto são:
+		
+		Este projeto tem como objetivo central estudar micelas gigantes, sua formação, estrutura e dinâmica, através de alterações na composição do solvente, ao invés de mudanças nos componentes da micela. A hipótese inicial é aquela apresentada inicialmente por \citeauthor{Hoffmann2010}, onde solventes com índices de refração similares levariam a perfis de viscosidade semelhantes. Essa hipótese foi testada utilizando outros aditivos hidrofílicos, principalmente através de medidas de reologia e calorimetria de titulação isotérmica. Este é o objetivo primário deste trabalho.
+		
+		Durante os estudos de calorimetria de titulação isotérmica, notou-se que havia uma cinética lenta na etapa de formação de micelas gigantes, que poderia ser estudada com o mesmo enfoque no solvente que anteriormente. Porém, para possibilitar este estudo de cinética com tamanha abrangência, é necessário realizar estudos preliminares, para se determinar os melhores métodos para medir o crescimento micelar. Este é o segundo objetivo deste trabalho.
+		
+		Para cumprir esses objetivos, o seguinte plano foi utilizado:
 		
 		\begin{itemize}[noitemsep]
 			\item Estudar como o solvente afeta a reologia de micelas gigantes de \CTAB{} e NaSal.
