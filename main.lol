@@ -1,5 +1,5 @@
 \contentsline {listing}{\numberline {1}{\ignorespaces Código utilizado para a criação da \autoref {fig:espalhamento_esfera}\relax }}{78}{listing.1}% 
-\contentsline {listing}{\numberline {2}{\ignorespaces Código fonte para a criação de mapas de cor e extração de informações em 411 nm.\relax }}{146}{listing.2}% 
+\contentsline {listing}{\numberline {2}{\ignorespaces Código fonte para a criação de mapas de cor e extração de informações em 411 nm. Cada cela se refere a uma cela do Jupyter Notebook utilizado para o tratamento.\relax }}{146}{listing.2}% 
 \contentsline {listing}{\numberline {3}{\ignorespaces Código fonte para o script de obtenção dos valores de largura a meia altura de curvas de DSC (1/2)\relax }}{147}{listing.3}% 
 \contentsline {listing}{\numberline {4}{\ignorespaces Código fonte para o script de obtenção dos valores de largura a meia altura de curvas de DSC (2/2)\relax }}{148}{listing.4}% 
 \contentsline {listing}{\numberline {5}{\ignorespaces Código utilizado para gerar a dependência de CMC{} com os parâmetros estudados, resultando na \autoref {fig:pls_cmc_pirouette}. A tabela de dados utilizada possui em cada linha as misturas utilizadas, suas concentrações em \% m/m, as variáveis dependentes (CMC{} e \(\Delta H^\circ _{\mathrm {mic}}\)) e as variáveis independentes (\(n\), \(\varepsilon \), \(G\))\relax }}{178}{listing.5}% 

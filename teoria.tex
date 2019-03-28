@@ -12,7 +12,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 	\chapter{Surfactantes e autoassociação}
 	\label{sec:surfactantes_autoassociação}
 	\index{surfactantes}
-	Surfactantes são moléculas que são ativas em superfícies, como o nome já indica.\cite{Lindman_livro} Isso ocorre devido à sua estrutura molecular, que possui regiões com polaridades diferentes. A \autoref{fig:estrutura_surfactantes} mostra a estrutura de alguns surfactantes comumente utilizados.
+	Surfactantes são moléculas que são ativas em superfícies, como o nome já indica.\cite{Lindman_livro} Isso ocorre devido à sua estrutura molecular, que possui regiões com polaridades diferentes. A \autoref{fig:estrutura_surfactantes} mostra a estrutura de alguns surfactantes comumente utilizados na indústria e academia.
 	
 	\begin{figure}[h] 
 		\centering
@@ -22,7 +22,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		\label{fig:estrutura_surfactantes}
 	\end{figure} \index{surfactantes!estrutura}
 	
-	Essa dualidade os caracteriza como anfífilos,\cite{ColloidalDomain}, do grego \emph{amphi}, ``de dois tipos'', da mesma raiz de anfíbio, e \emph{philos}, ``amigável''. As duas regiões são chamadas de região liofílica (interage bem com o solvente) e liofóbica (interage mal com o solvente). Quando o solvente é água, essas regiões são chamadas então hidrofílicas e hidrofóbicas, respectivamente, e essa será a nomenclatura adotada neste trabalho, por clareza. Dessa diferença de afinidade se origina sua atividade superficial. Por exemplo, na interface água-ar, a região hidrofílica de um surfactante pode permanecer em água, enquanto a região hidrofóbica se orienta a evitar contato com a água, no ar, como mostra a \autoref{fig:superficie_surfactante}. Isso diminui a tensão superficial \(\gamma\), que relaciona a variação da energia superficial \(G\) com a variação na área superficial \(A\),
+	Essa dualidade os caracteriza como anfífilos,\cite{ColloidalDomain}, do grego \emph{amphi}, ``de dois tipos'', da mesma raiz de anfíbio, e \emph{philos}, ``amigável''. As duas regiões são chamadas de região liofílica (interage bem com o solvente) e liofóbica (interage mal com o solvente). Quando o solvente é água, essas regiões são chamadas então hidrofílicas e hidrofóbicas, respectivamente, e essa será a nomenclatura adotada neste trabalho, por clareza. Dessa diferença de afinidade se origina sua atividade superficial. Por exemplo, na interface água-ar, a região hidrofílica de um surfactante pode permanecer em água, enquanto a região hidrofóbica se orienta no ar para evitar contato com a água, como mostra a \autoref{fig:superficie_surfactante}. Isso diminui a tensão superficial \(\gamma\), que relaciona a variação da energia superficial \(G\) com a variação na área superficial \(A\),
 	
 	\begin{equation}
 		\gamma = \left( \dfrac{\partial G}{\partial A}  \right)_{T,P,n}
@@ -88,11 +88,11 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 	
 	Esse parâmetro pode ser visualizado como uma comparação entre as áreas das bases de um cilindro, sendo uma dada por \({V}/{l}\) e a outra por \(a_0\). Quando o termo hidrofóbico é pequeno, temos praticamente um cone, e valores de \(P\) menores que \(\sfrac{1}{3}\). Como a região polar é muito grande, a estrutura de autoassociação necessariamente possuirá uma curvatura alta, o que resulta em micelas esféricas. Seguindo esse raciocínio, tanto aumentando a contribuição hidrofóbica quanto diminuindo a contribuição hidrofílica, é possível obter valores de \(\sfrac{1}{3} \leq P < \sfrac{1}{2}\). Nessa condição, são formadas micelas gigantes. A concentração de formação de micelas gigantes, \cwlm, é geralmente obtida a partir de experimentos de calorimetria de titulação isotérmica (\autoref{sec:micelas_gigantes_calorimetria}), e é análoga à \cmc.
 	
-	Prosseguindo por essa lógica, quando as contribuições das duas regiões são equivalentes, (\(P = 1\)), as moléculas de surfactante possuem um formato cilíndrico. Nessa situação, são formadas estruturas de curvatura total zero, como lamelas.\cite{Zou2007} É possível inverter essa tendência aumentando a contribuição da parte hidrofóbica, gerando agregados com grande curvatura, mas de maneira oposta. Nesse caso, são formadas micelas reversas, cilíndricas\cite{Tung2006} ou esféricas\cite{Mackeben2001a}. \index{surfactantes!parâmetro de empacotamento} Um diagrama com várias estruturas de autoassociação possíveis se encontra em \citeauthor{Lindman_livro}.
+	Prosseguindo com essa lógica, quando as contribuições das duas regiões são equivalentes, (\(P = 1\)), as moléculas de surfactante possuem um formato cilíndrico. Nessa situação, são formadas estruturas de curvatura total zero, como lamelas.\cite{Zou2007} É possível inverter essa tendência aumentando a contribuição da parte hidrofóbica, gerando agregados com grande curvatura, mas de maneira oposta. Nesse caso, são formadas micelas reversas, cilíndricas\cite{Tung2006} ou esféricas\cite{Mackeben2001a}. \index{surfactantes!parâmetro de empacotamento} Um diagrama com várias estruturas de autoassociação possíveis se encontra em \citeauthor{Lindman_livro}.
 
 	É possível controlar a estrutura de autoassociação controlando-se os parâmetros de \(P\). A adição de um sal inorgânico a um surfactante iônico, por exemplo, blinda as cargas da superfície micelar, diminuindo \(a_0\). Isso diminui a \cmc{} de surfactantes iônicos\cite{Sarac2009} e, com a adição de sal suficiente, pode causar a transição para micelas cilíndricas,\cite{Garamus2003a} ou até gigantes.\cite{Helgeson2010d} \index{surfactantes!blindagem da carga}
 	
-	De maneira similar, o aumento da cadeia hidrofóbica (\(l\)) de um surfactante induz a micelização em concentrações menores (diminui a \cmc).\cite{Bai2008, Sarac2017a} Uma alteração de \(V\) pode ser realizada tanto com o aumento do comprimento da cauda do surfactante, como também com a adição de moléculas como hidrocarbonetos e álcoois, porém o comprimento das cadeias desses aditivos afetam de maneira diferente a agregação.\cite{Bayer1986, Bielawska2013a, Kamada2014a} É importante ressaltar que o parâmetro de empacotamento se refere somente à estrutura do surfactante, mas é necessário também considerar o contexto químico do sistema, que pode alterar os parâmetros, se comparados com um surfactante isolado. \index{surfactantes!parâmetro de empacotamento}
+	De maneira similar, o aumento da cadeia hidrofóbica (\(l\)) de um surfactante induz a micelização em concentrações menores (diminui a \cmc).\cite{Bai2008, Sarac2017a} Uma alteração de \(V\) pode ser realizada tanto com o aumento do comprimento da cauda do surfactante, como também com a adição de moléculas como hidrocarbonetos e álcoois, porém o comprimento das cadeias desses aditivos afeta de maneira diferente a agregação.\cite{Bayer1986, Bielawska2013a, Kamada2014a} É importante ressaltar que o parâmetro de empacotamento se refere somente à estrutura do surfactante, mas é necessário também considerar o contexto químico do sistema, que pode alterar os parâmetros, se comparados com um surfactante isolado. \index{surfactantes!parâmetro de empacotamento}
 	
 	O sistema mais bem descrito na literatura para a formação de micelas gigantes é uma mistura de um surfactante catiônico, como brometo de hexadeciltrimetilamônio (\CTAB) com salicilato de sódio, NaSal.\cite{Dreiss2007} O íon \Sal{} consegue se inserir na superfície micelar, por ser planar, possuir uma região hidrofóbica pequena e carga oposta ao surfactante, e assim diminui \(a_0\), sem aumentar muito \(V\) (\autoref{fig:interacao_nasal_ctab}).\cite{Ito2014c} Além disso, as interações cátion-\(\pi\) entre o surfactante e o anel aromático\cite{Mahadevi2013a, Umeasiegbu2016} reforçam o posicionamento da molécula na paliçada micelar.  \index{surfactantes!efeito de NaSal} \index{surfactantes!\CTAB}
 	
@@ -115,7 +115,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		A reologia é a área ciência que estuda o fluxo e a deformação da matéria. O termo vem do grego \emph{rheos}, fluxo, e \emph{logia}, ciência, e foi cunhado por Bingham em 1929.\cite{Bingham1929} Para causar um fluxo ou deformação, é necessário que uma força externa seja aplicada ao corpo. Reagindo à essa força, o material se comporta de tal maneira que algumas de suas características estruturais podem ser inferidas. % Isso é feito intuitivamente por qualquer pessoa, por exemplo, ao apertar uma fruta para determinar sua firmeza e assim, se ela está apropriada para consumo ou não, para desagrado do vendedor.
 		% Hiris: logia se traduz melhor como ``área da ciência''. É verdade?
 		
-		No campo coloidal, a reologia é utilizada para estudar como os corpos coloidais estão arranjados no meio, suas interações entre si e com o meio, e como fluem mediante a força externa. Por exemplo, soluções de micelas gigantes são altamente viscosas, pois as cadeias das micelas se entrelaçam e ramificam,\cite{Rehage1991} então existe um mecanismo para oferecer resistência à força aplicada. Já soluções de micelas esféricas possuem baixa viscosidade, pois o tamanho das micelas é pequeno, e não existe esse mecanismo. A resistência se deve principalmente ao solvente, nesse caso.
+		No campo coloidal, a reologia é utilizada para estudar como os corpos coloidais estão arranjados no meio, suas interações entre si e com o meio, e como fluem mediante a força externa. Por exemplo, soluções de micelas gigantes são altamente viscosas, pois as cadeias das micelas se entrelaçam e ramificam,\cite{Rehage1991} então existe um mecanismo para oferecer resistência à força aplicada. Já soluções de micelas esféricas possuem baixa viscosidade, pois o tamanho das micelas é pequeno. A resistência se deve principalmente ao solvente, nesse caso.
 		
 		A viscosidade pode ser definida, de maneira pouco rigorosa, como a resistência ao fluxo de um material.\cite{Boger1989} \index{reologia!viscosidade} Então a água possui baixa viscosidade, já o mel, uma solução concentrada de açúcar, possui alta viscosidade. Porém, quando tenta-se aplicar essa definição para outros tipos de materiais, aparecem problemas. Manteiga mantém seu formato, ao contrário de mel, que sempre flui, mas é muito mais fácil passar manteiga num pedaço de pão do que mel. Já amido de milho em água aparenta ser resistente se forçado a se mover rapidamente, mas flui quando é perturbado lentamente. Qual desses três materiais seria mais viscoso? 
 		
@@ -123,7 +123,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		
 		Portanto, a viscosidade da manteiga dependeu da força que estava sendo aplicada. Em forças baixas, o material aparentava ser altamente viscoso, já em forças maiores, o material aparentava ser pouco viscoso. Não existe um valor único de viscosidade que pode ser atribuído à manteiga, da mesma maneira que é feito com água. Somente é possível estabelecer viscosidades aparentes dependentes da força aplicada.\cite{Kronberg2014a}
 		
-		Do lado oposto à viscosidade, no campo reológico, existe a elasticidade \index{reologia!elasticidade}. Materiais elásticos, ao invés de fluir, se deformam reversivelmente. A estrutura interna desses materiais permite que energia seja armazenada em torções e distensões. Quando a força externa é removida, a energia é liberada e o material volta ao seu formato inicial. Caso a energia aplicada supere as interações que estruturam o material, por exemplo, ligações covalentes ou interações intermoleculares, o material acaba fluindo ou quebrando.\cite{Goodwin2008} Exemplos clássicos de materiais elásticos são: molas, borrachas, rochas, madeira. A constante de elasticidade é a grandeza análoga à viscosidade, para materiais elásticos. Essa constante está relacionada à força necessária para causar uma deformação no material. \index{reologia!módulo elástico}
+		Do lado oposto à viscosidade, no campo reológico, existe a elasticidade. \index{reologia!elasticidade} Materiais elásticos, ao invés de fluir, se deformam reversivelmente. A estrutura interna desses materiais permite que energia seja armazenada em torções e distensões. Quando a força externa é removida, a energia é liberada e o material volta ao seu formato inicial. Caso a energia aplicada supere as interações que estruturam o material, por exemplo, ligações covalentes ou interações intermoleculares, o material acaba fluindo ou quebrando.\cite{Goodwin2008} Exemplos clássicos de materiais elásticos são: molas, borrachas, rochas, madeira. A constante de elasticidade é a grandeza análoga à viscosidade, para materiais elásticos. Essa constante está relacionada à força necessária para causar uma deformação no material. \index{reologia!módulo elástico}
 
 		Retomando o exemplo anterior, em baixos valores de tensão, a manteiga conseguia se manter estruturada. Nessa região de forças bastante pequenas, a manteiga consegue armazenar energia em sua estrutura interna. De acordo com as definições apresentadas, a manteiga pode se comportar tanto como um material elástico quanto um material viscoso. Esse tipo de material recebe o nome de material viscoelástico. Em especial, a manteiga é um material plástico, que possui uma tensão máxima de resistência, chamada de \emph{yield stress}.
 		
@@ -209,7 +209,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 			\begin{figure}[h]
 				\begin{subfigure}[t]{.5\textwidth}
 					\includegraphics[width=\textwidth]{./imagens/reologia/newtoniano_exemplo_tauGP}
-					\caption{\(\tau \times \dot{\gamma}\)}
+					\caption{\(\sigma \times \dot{\gamma}\)}
 					\label{fig:reol_newt_tauGP}
 				\end{subfigure}%
 				\begin{subfigure}[t]{.5\textwidth}
@@ -569,7 +569,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 				\label{eqn:Maxwell_complexo_antes_sep}
 			\end{equation}
 			
-			Note a semelhança com a equação \ref{eqn:modulo_complexo}. Seguindo o princípio de que o módulo complexo \(\hat{G}\) pode ser dividido em uma parte imaginária e uma parte real, podemos realizar o mesmo com a \autoref{eqn:Maxwell_complexo_antes_sep} multiplicando-se a fração por \(\frac{\left(   1 - i\omega\tau_{\mathrm{rel}}  \right)}{\left(   1 - i\omega\tau_{\mathrm{rel}}  \right)}\),
+			Note a semelhança com a equação \ref{eqn:osc_transform_G}. Seguindo o princípio de que o módulo complexo \(\hat{G}\) pode ser dividido em uma parte imaginária e uma parte real, podemos realizar o mesmo com a \autoref{eqn:Maxwell_complexo_antes_sep} multiplicando-se a fração por \(\frac{\left(   1 - i\omega\tau_{\mathrm{rel}}  \right)}{\left(   1 - i\omega\tau_{\mathrm{rel}}  \right)}\),
 			
 			\begin{equation}
 				\hat{G} = \dfrac{  i\omega G\tau_{\textrm{rel}} - i^2 \omega^2 G \tau_{\textrm{rel}}^2        }{  1 - i^2\omega^2 \tau_{\textrm{rel}}^2          }
@@ -646,7 +646,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 			
 %			Micelas gigantes, em vários regimes, obedecem muito bem o modelo de Maxwell. É possível interpretar esse comportamento da seguinte maneira. Em baixas frequências de perturbação (longos tempos), as micelas possuem tempo suficiente para deslizar umas pelas outras, então a maior parte da energia fornecida é perdida, logo o módulo viscoso, ou de perda, possui valores altos. Em frequências altas, a rede micelar e os entrelaçamentos conseguem armazenar a energia, não possuindo tempo suficiente para deslizar, então o módulo elástico, ou de armazenamento, é alto. Na região intermediária, ambos os mecanismos estão presentes, parte da energia é perdida e parte é armazenada, sendo que no ponto de cruzamento, exatamente metade da energia é preservada e metade é perdida.
 			
-			Para a obtenção de valores confiáveis para os parâmetros \(G\) e \(\tau_{\mathrm{rel}}\), é necessário realizar um ajuste dessas curvas. Porém, ambos G' e G'' são descritos pelo mesmo conjunto de parâmetros. Ao invés de se fazer dois ajustes e encontrar quatro parâmetros, é ideal realizar um ajuste das duas curvas simultaneamente. Isso pode ser feito pelo software Origin\textregistered, escolhendo uma opção de ajuste de equações, não de expressão. Além disso, é possível utilizar o Excel, com a ferramenta \emph{Solver} para minimizar o conjunto dos resíduos de ambas as curvas. Esse foi o princípio dos ajustes neste trabalho, mas utilizando Python.
+			Para a obtenção de valores confiáveis para os parâmetros \(G\) e \(\tau_{\mathrm{rel}}\), é necessário realizar um ajuste das curvas de G' e G''. Porém, ambos G' e G'' são descritos pelo mesmo conjunto de parâmetros. Ao invés de se fazer dois ajustes e encontrar quatro parâmetros, é ideal realizar um ajuste das duas curvas simultaneamente. Isso pode ser feito pelo software Origin\textregistered, escolhendo uma opção de ajuste de equações, não de expressão. Além disso, é possível utilizar o Excel, com a ferramenta \emph{Solver} para minimizar o conjunto dos resíduos de ambas as curvas. Esse foi o princípio dos ajustes neste trabalho, mas utilizando Python.
 			
 			\subsection{Modelos mais complexos}
 			\label{sec:modelos_complexos_reologia}
@@ -754,7 +754,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 			\label{fig:ITC_esquema}
 		\end{figure} \index{ITC!construção do equipamento}
 		
-		Durante uma titulação, caso ocorra liberação de calor na cela de amostra, menos energia, em relação ao valor basal, precisa ser fornecida para manter a temperatura igual entre as celas. Caso o sistema absorva calor, mais potência precisa ser fornecida à cela, e vice-versa. Esse comportamento se expressa em picos acima ou abaixo da linha de base. A integração de cada pico no tempo fornece valores de energia que, quando divididos pelo número de mols injetados, obtemos valores de \(\Delta H^0\)/kJ.mol\menosUm. Um diagrama da entalpia pela concentração de titulante é chamada de entalpograma, ou termograma.\cite{Bouchemal2010a}. A \autoref{fig:ITC_exemplo} mostra um exemplo de um experimento de titulação de \TTAB{} em água.
+		Durante uma titulação, caso ocorra liberação de calor na cela de amostra, menos energia, em relação ao valor basal, precisa ser fornecida para manter a temperatura igual entre as celas. Caso o sistema absorva calor, mais potência precisa ser fornecida à cela, e vice-versa. Esse comportamento se expressa em picos acima ou abaixo da linha de base. A integração de cada pico no tempo fornece valores de energia que, quando divididos pelo número de mols injetados, obtemos valores de \(\Delta H^\circ\)/kJ.mol\menosUm. Um diagrama da entalpia pela concentração de titulante é chamada de entalpograma, ou termograma.\cite{Bouchemal2010a} A \autoref{fig:ITC_exemplo} mostra um exemplo de um experimento de titulação de \TTAB{} em água.
 		
 		\begin{figure}[h]
 			\begin{subfigure}[t]{0.5\textwidth}
@@ -783,7 +783,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		\begin{figure}[h] \index{ITC!\cmc}
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagens/itc/extracao_cmc_dh_exemplo}
-			\caption{Método para extração da concentração micelar crítica (\cmc) e a entalpia de micelização \DHmic. A curva em verde é a derivada do entalpograma. Os pontos amarelos limitam as regiões onde são feitos ajustes lineares.}
+			\caption{Método para extração da concentração micelar crítica (\cmc) e a entalpia de micelização observada \(\Delta H^\circ_\mathrm{obs}\). A curva em verde é a derivada do entalpograma. Os pontos amarelos limitam as regiões onde são feitos ajustes lineares.}
 			\label{fig:itc_extracao_cmc_dh}
 		\end{figure} 
 
@@ -925,7 +925,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 
 		Mais informações sobre o cálculo de figuras de espalhamento podem ser encontrados em \citeauthor{Alves2017}.
 		
-		Sistemas com alto contraste, por exemplo, partículas de ouro em água, espalham bastante raios-X, resultando em sinais de boa qualidade. Porém sistemas de baixo contraste, como a maior parte de sistemas de materia mole, incluindo o sistema \CTAB{} + NaSal, utilizado neste trabalho, não resultam em uma boa resolução sinal/ruído. Tipicamente, o contraste das cabeças é positivo em relação à água, mas o contraste das cadeias é negativo, o que resulta num contraste total baixo. Logo, é interessante calcular o contraste, o que pode ser feito por programas como o SASfit.\footnote{\url{https://github.com/SASfit/SASfit}}. Algumas vezes é possível melhorar o contraste adicionando-se sacarose ou glicerina ao solvente ao meio, porém isso só é válido para experimentos de SAXS, não de espalhamento de luz, onde a igualdade do índice de refração efetivamente faria os agregados serem invisíveis.
+		Sistemas com alto contraste, por exemplo, partículas de ouro em água, espalham bastante raios-X, resultando em sinais de boa qualidade. Porém sistemas de baixo contraste, como a maior parte de sistemas de materia mole, incluindo o sistema \TTAB{} + NaSal, utilizado neste trabalho, não resultam em uma boa resolução sinal/ruído. Tipicamente, o contraste das cabeças é positivo em relação à água, mas o contraste das cadeias é negativo, o que resulta num contraste total baixo. Logo, é interessante calcular o contraste, o que pode ser feito por programas como o SASfit.\footnote{Disponível em: \url{https://github.com/SASfit/SASfit}}. Algumas vezes é possível melhorar o contraste adicionando-se sacarose ou glicerina ao solvente ao meio, porém isso só é válido para experimentos de SAXS, não de espalhamento de luz, onde a igualdade do índice de refração efetivamente faria os agregados serem invisíveis.
 		
 		\section{Modelagem e o problema inverso do espalhamento}
 		
@@ -947,7 +947,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 			\label{eqn:SAXS_amplitude_esfera_integrado}
 		\end{equation}
 		
-		Essa equação, normalizada, será utilizada na descrição do modelo de micelas gigantes (\autoref{eqn:AP_Fsphere}) que está presente no \autoref{sec:modelo_MG_matematica}.
+		Essa equação, normalizada, será utilizada na descrição do modelo de micelas gigantes (\autoref{eqn:AP_Fsphere}).
 		
 		Como a intensidade de luz espalhada é o quadrado da amplitude, \cite{Narayanan2008a}
 		
@@ -985,7 +985,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		
 		Como as distâncias entre partículas são tipicamente maiores do que as distâncias dentro das partículas, as contribuições do fator estrutura geralmente aparecem com maior intensidade em valores de \q{} baixos.\cite{Glatter2018livro}
 		
-		Existem vários modelos possíveis para o fator \(S(q)\), que dependem de uma função que descreve a probabilidade de se encontrar uma partícula a uma distância \(r\) de outra. Dentro dessa função, existe um potencial que pode descrever, por exemplo, se há atração ou repulsão eletrostática entre as partículas. Por exemplo, o modelo das esferas rígidas sem carga, o mais simples, que possui o seguinte potencial \cite{Glatter2018livro}
+		Existem vários modelos possíveis para o fator \(S(q)\), que dependem de uma função que descreve a probabilidade de se encontrar uma partícula a uma distância \(r\) de outra. Dentro dessa função, existe um potencial que pode descrever, por exemplo, se há atração ou repulsão eletrostática entre as partículas. Por exemplo, o modelo das esferas rígidas sem carga, o mais simples, possui o seguinte potencial \cite{Glatter2018livro}
 		
 		\begin{equation}
 			u(r) = 
@@ -1199,7 +1199,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		\label{eqn:energia_dipolo_dipolo}
 	\end{equation} \index{forças intermoleculares!energia dipolar}
 	
-	\noindent onde \(\theta_{ 1 }\) e \(\theta_{ 2 }\) são os ângulos das duas moléculas dipolares em relação à reta que as liga, \(\phi\) é o ângulo de rotação perpendicular a \(\theta_{ 2 }\) de uma das moléculas. É interessante ver que essa interação também é dependente da constante dielétrica, além de ser dependente de \(r^{-3}\).  % todo: pensar se eu devo deixar essa equação ou só colocar a de Keesom
+	\noindent onde \(\theta_{ 1 }\) e \(\theta_{ 2 }\) são os ângulos das duas moléculas dipolares em relação à reta que as liga, \(\phi\) é o ângulo de rotação perpendicular a \(\theta_{ 2 }\), de uma das moléculas. É interessante ver que essa interação também é dependente da constante dielétrica, além de ser dependente de \(r^{-3}\).  % todo: pensar se eu devo deixar essa equação ou só colocar a de Keesom
 	
 	Se os dois dipolos puderem rodar livremente, a energia média dessa interação, conhecida como energia de Keesom é dada por
 	
@@ -1302,22 +1302,20 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 	\label{eqn:vdw}
 	\end{subequations} \index{forças intermoleculares!curto alcance}
 	
-	Porém, essa equação possui algumas limitações. Não são consideradas absorções além da primeira absorção eletrônica, e não é possível levar em consideração o meio. MacLachlan utilizou uma somatória de todas as possíveis absorções para expandir a abrangência da equação, e utilizou propriedades de excesso de um sistema contínuo para poder considerar a presença de um meio. Assumindo que todos os meios possuem a mesma energia de absorção, e que as partículas \emph{1} e \emph{2} sejam iguais e dispersas no meio \emph{3}, é possível obter a \autoref{eqn:energia_maclachlan}, onde as contribuições estáticas, onde \(\nu = 0\) (Debye e Keesom) foram separadas das contribuições de frequências altas, onde predominam as interações dispersivas.
+	Porém, essa equação possui algumas limitações. Não são consideradas absorções além da primeira absorção eletrônica, e não é possível levar em consideração o meio. \mbox{MacLachlan} utilizou uma somatória de todas as possíveis absorções para expandir a abrangência da equação, e utilizou propriedades de excesso de um sistema contínuo para poder considerar a presença de um meio. Assumindo que todos os meios possuem a mesma energia de absorção, e que as partículas \emph{1} e \emph{2} sejam iguais e dispersas no meio \emph{3}, é possível obter a \autoref{eqn:energia_maclachlan}, onde as contribuições estáticas, onde \(\nu = 0\) (Debye e Keesom) foram separadas das contribuições de frequências altas, onde predominam as interações dispersivas. Nessa equação, \(a_1\) é o raio da molécula 1.
 	
 	\begin{equation}
 		w ( r ) = w ( r ) _ { \nu = 0 } + w ( r ) _ { \nu > 0 } \approx - \left[ 3 k_B T \left( \frac { \varepsilon _ { 1 } ( 0 ) - \varepsilon _ { 3 } ( 0 ) } { \varepsilon _ { 1 } ( 0 ) + 2 \varepsilon _ { 3 } ( 0 ) } \right) ^ { 2 } + \frac { \sqrt { 3 } h \nu _ { e } } { 4 } \frac { \left( n _ { 1 } ^ { 2 } - n _ { 3 } ^ { 2 } \right) ^ { 2 } } { \left( n _ { 1 } ^ { 2 } + 2 n _ { 3 } ^ { 2 } \right) ^ { 3 / 2 } } \right] \frac { a _ { 1 } ^ { 6 } } { r ^ { 6 } }
 		\label{eqn:energia_maclachlan}
 	\end{equation} \index{forças intermoleculares!expansão de MacLachlan}
 	
-	\noindent onde \(a_1\) é o raio da molécula 1.
-	
-	Alguns fatores podem ser levantados sobre essa equação. Geralmente, a componente com \(\nu > 0\) é mais forte que a componente com \(\nu = 0\), exceto em solventes polares, como a água. Além disso, a força de van der Waals é reduzida num meio com solvente, devido às propriedades de excesso serem menores do que no vácuo. Por último, a força dispersiva é sempre atrativa entre moléculas iguais\cite{Hamaker1937}, mas a expressão expandida mostra que as interações podem ser tanto atrativas quanto repulsivas, quando a propriedade do solvente, como o índice de refração, é intermediário entre as duas partículas. Uma maneira de se visualizar isso é pensando no princípio de Arquimedes. A força gravitacional é, aparentemente, sempre atrativa. Porém, ao colocar uma esfera de isopor no fundo de uma banheira, a esfera irá subir para a superfície, sendo que uma esfera de aço afundaria. A causa da repulsão da esfera de isopor é a força gravitacional, que agiu com maior força no volume de água deslocado pelo isopor do que na própria esfera de isopor, e a deslocou para cima. Neste caso, a densidade dos materiais é análoga ao índice de refração. Quando dois materiais estão num meio com densidade intermediária (ou índice de refração), a força, seja gravitacional ou de van der Waals, entre eles se torna repulsiva.\index{forças intermoleculares!repulsão}
+	Alguns fatores podem ser levantados sobre essa equação. Geralmente, a componente com \(\nu > 0\) é mais forte que a componente com \(\nu = 0\), exceto em solventes polares, como a água. Além disso, a força de van der Waals é reduzida num meio com solvente, devido às propriedades de excesso serem menores do que no vácuo. Por último, a força dispersiva é sempre atrativa entre moléculas iguais\cite{Hamaker1937}, mas a expressão expandida mostra que as interações podem ser tanto atrativas quanto repulsivas, quando a propriedade do solvente, como o índice de refração, for intermediário entre as duas partículas. Uma maneira de se visualizar isso é pensando no princípio de Arquimedes. A força gravitacional é, aparentemente, sempre atrativa. Porém, ao colocar uma esfera de isopor no fundo de uma banheira, a esfera irá subir para a superfície, sendo que uma esfera de aço afundaria. A causa da repulsão da esfera de isopor é a força gravitacional, que agiu com maior força no volume de água deslocado pelo isopor do que na própria esfera de isopor, e a deslocou para cima. Neste caso, a densidade dos materiais é análoga ao índice de refração. Quando dois materiais estão num meio com densidade intermediária (ou índice de refração), a força, seja gravitacional ou de van der Waals, entre eles se torna repulsiva.\index{forças intermoleculares!repulsão}
 	
 	\section{Ligações de hidrogênio e interações hidrofóbicas} \index{forças intermoleculares!ligação de hidrogênio} \index{forças intermoleculares!interação hidrofóbica} \label{sec:ligacoes_hidrogenio}
 	
 	Na molécula de água, há uma grande diferença de eletronegatividade entre O e H, resultando numa grande polarização dessa ligação. A molécula de água pode ser representada centrada no oxigênio, com duas cargas positivas nos hidrogênios e duas cargas negativas nos pares eletrônicos do oxigênio. Essa interação entre as regiões positiva e negativa das moléculas de água, de natureza eletrostática, é bastante forte, da ordem de 5-10 \(k_BT\) a 298K. Essa interação pode ser visualizada através das distâncias de ligação, onde a ligação intramolecular O --- H é de 0.10 nm, a distância intermolecular \(\mathrm{O} \cdots \mathrm{H}\) é 0.176 nm, e a soma dos raios de van der Waals de O e H é de 0.26 nm. Devido à essa forte interação, as moléculas de água formam uma estrutura tetraédrica, com quatro moléculas de água ao redor, no estado sólido, e uma média de 3,5 moléculas de água no estado líquido, ao invés de 12 moléculas para estruturas com empacotamento denso.
 	
-	A forte tendência da água de formar ligações de hidrogênio influencia quando algum soluto grande, que não consegue realizar ligações de hidrogênio, é adicionado. Não importa a disposição das moléculas de água, haverá alguma das cargas parciais que não conseguirá ser totalmente equilibrada. Uma consequência disso é o aparecimento de cargas negativas em superfícies hidrofóbicas, pois moléculas de água se direcionam preferencialmente com o oxigênio em direção à essas superfícies, ocorrendo um acúmulo das cargas negativas parciais. Outra consequência é que em solutos hidrofóbicos, como hidrocarbonetos longos, causam uma estruturação da água envolvendo o hidrocarboneto, que é entropicamente desfavorável, já que rompe a estrutura existente e impõe uma estrutura ordenada. Por exemplo, a interação entre n-butano e água é entalpicamente favorável (\(\Delta H = -4,3\) kJ.mol\menosUm), porém é extremamente entropicamente desfavorável (\(-T\Delta S = +28,7\) kJ.mol\menosUm), resultando no \(\Delta G_{\mathrm{transferência}} = +24.5\) kJ.mol\menosUm. Essa energia é proporcional à área da superfície hidrofóbica, e é próxima à tensão superficial de água e um hidrocarboneto. \index{forças intermoleculares!interação de hidrocarbonetos com água}
+	A forte tendência da água de formar ligações de hidrogênio influencia quando algum soluto grande, que não consegue realizar ligações de hidrogênio, é adicionado. Não importa a disposição das moléculas de água, algumas das cargas parciais não estarão totalmente equilibradas. Uma consequência disso é o aparecimento de cargas negativas em superfícies hidrofóbicas, pois moléculas de água se direcionam preferencialmente com o oxigênio em direção à essas superfícies, ocorrendo um acúmulo das cargas negativas parciais. Outra consequência é que em solutos hidrofóbicos, como hidrocarbonetos longos, causam uma estruturação da água envolvendo o hidrocarboneto, que é entropicamente desfavorável, já que rompe a estrutura existente e impõe uma estrutura ordenada. Por exemplo, a interação entre n-butano e água é entalpicamente favorável (\(\Delta H = -4,3\) kJ.mol\menosUm), porém é extremamente entropicamente desfavorável (\(-T\Delta S = +28,7\) kJ.mol\menosUm), resultando no \(\Delta G_{\mathrm{transferência}} = +24.5\) kJ.mol\menosUm. Essa energia é proporcional à área da superfície hidrofóbica, e é próxima à tensão superficial de água e um hidrocarboneto. \index{forças intermoleculares!interação de hidrocarbonetos com água}
 	
 	A interação hidrofóbica é o nome dado à força de atração entre espécies hidrofóbicas em água, que é muito maior à força de atração daquelas em vácuo, devido ao efeito hidrofóbico. Quando duas moléculas solvatadas se aproximam, suas esferas de hidratação se sobrepõem, e moléculas de água se tornam livres. Do lado oposto, a interação hidrofílica resulta na repulsão de espécies em água, e ocorre em materiais conhecidos por absorver água do ar, isto é, higroscópicos.
 	
@@ -1336,14 +1334,14 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 	Outro fator importante são as dimensões em estudo. As propriedades de gases e fases condensadas são determinadas principalmente pela energia de interação quando as partículas estão em contato. No caso de coloides, a situação se altera, e as interações principais são as de longo alcance. Além disso, quando as partículas são ``moles'' (do inglês \emph{soft}), isto é, não possuem uma estrutura rígida, as interações se tornam dependentes dos formatos transientes de ambas as partículas, como, por exemplo, as forças de ondulação de bicamadas. No total, as interações entre coloides são quantitativamente, e qualitativamente, diferentes daquelas de moléculas pequenas.
 	\index{forças intercoloidais!efeito do tamanho}
 	
-	Como uma aproximação inicial, é possível calcular as interações de van der Waals entre partículas com diversos formatos, assumindo que as forças são aditivas. Por exemplo, a interação de van der Waals possui energia \(w(r) = C/r^6\) (\autoref{eqn:vdw_geral}), mas a interação de van der Waals entre duas esferas de tamanhos coloidais de raios \(R_1\) e \(R_2\) separadas por uma distância \(D\) é dado pela \autoref{eqn:interacao_duas_esferas}. \index{forças intercoloidais!aditividade}
+	Como uma aproximação inicial, é possível calcular as interações de van der Waals entre partículas com diversos formatos, assumindo que as forças sejam aditivas. Por exemplo, a interação de van der Waals possui energia \(w(r) = C/r^6\) (\autoref{eqn:vdw_geral}), mas a interação de van der Waals entre duas esferas de tamanhos coloidais de raios \(R_1\) e \(R_2\) separadas por uma distância \(D\) é dado pela \autoref{eqn:interacao_duas_esferas}. \index{forças intercoloidais!aditividade}
 	
 	\begin{equation}
 		w(D) = \dfrac{-A}{6D} \left( \dfrac{R_1R_2}{R_1 + R_2}   \right)
 		\label{eqn:interacao_duas_esferas}
 	\end{equation}
 	
-	\noindent onde \(A\) é a constante de Hamaker, conceitualmente semelhante à constante \(C\) das interações entre moléculas. A constante de Hamaker é definida pela \autoref{eqn:constante_hamaker}. \index{forças intercoloidais!constante de Hamaker}
+	\noindent onde \(A\) é a constante de Hamaker, conceitualmente semelhante à constante \(C\) das interações entre moléculas. A constante de Hamaker é definida como \index{forças intercoloidais!constante de Hamaker}
 	
 	\begin{equation}
 		A = \pi^2 C \rho_1 \rho_2
@@ -1356,7 +1354,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 	\index{forças intercoloidais!longo alcance}
 	\index{forças intercoloidais!aditividade|textbf}
 
-	Porém, a suposição de que as interações de van der Waals são aditivas é falsa. Isso ocorre porque quando um átomo 1 interage com um átomo 2 e um átomo 3, todos próximos, a polarização de 1 em 2 ocorrerá tanto diretamente, como também através da polarização de 1 em 3, que por sua vez irá polarizar 2. Logo, houve uma ``reflexão'' da polarização de 1 pelo átomo 3. Para resolver esse problema, Lifshitz \index{forças intercoloidais!teoria de Lifshitz} criou uma teoria onde a estrutura atômica é ignorada, e as interações são descritas somente pelas propriedades do \emph{bulk}, como índices de refração e constantes dielétricas, semelhante à \autoref{eqn:energia_maclachlan}. Com essa teoria, é possível calcular constantes de Hamaker sem o efeito de retardação (definido em breve), mas considerando a aditividade. Para o caso onde há duas partículas 1 interagindo num meio 3, a constante de Hamaker possui a forma da \autoref{eqn:constante_hamaker_lifshitz}. Como a teoria de Lifshitz se baseia na teoria do contínuo, a separação dos materiais interagentes deve ser maior do que as dimensões moleculares.
+	Porém, a suposição de que as interações de van der Waals são aditivas é falsa. Isso ocorre porque quando um átomo 1 interage com um átomo 2 e um átomo 3, todos próximos, a polarização de 1 em 2 ocorrerá tanto diretamente, como também através da polarização de 1 em 3, que por sua vez irá polarizar 2. Logo, houve uma ``reflexão'' da polarização de 1 pelo átomo 3. Para resolver esse problema, Lifshitz \index{forças intercoloidais!teoria de Lifshitz} criou uma teoria onde a estrutura atômica é ignorada, e as interações são descritas somente pelas propriedades do \emph{bulk}, como índices de refração e constantes dielétricas, semelhante à \autoref{eqn:energia_maclachlan}. Com essa teoria, é possível calcular constantes de Hamaker sem o efeito de retardação (definido em breve), mas considerando a não aditividade. Para o caso onde há duas partículas 1 interagindo num meio 3, a constante de Hamaker possui a forma da \autoref{eqn:constante_hamaker_lifshitz}. Como a teoria de Lifshitz se baseia na teoria do contínuo, a separação dos materiais interagentes deve ser maior do que as dimensões moleculares.
 	
 	\begin{equation}
 	A = A_{\nu=0} + A_{\nu>0}  = \frac{3}{4} k_BT \left( \frac { \varepsilon_{1}-\varepsilon_{3}} { \varepsilon_{1} + \varepsilon_{3} } \right)^{2} + \frac{3h\nu_{\mathrm{e} } } {16\sqrt{2}} \frac{\left(n_{1}^{2} - n_{3}^{2} \right)^{2}} {\left(n_{1}^{2} + n_{3}^{2} \right)^{3/2} }
@@ -1379,7 +1377,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		\label{eqn:comprimento_debye}
 	\end{equation} \index{forças intercoloidais!comprimento de Debye}
 	
-	Logo, para uma solução 0,1 mol.L\menosUm{} de NaCl possui um comprimento de Debye de aproximadamente 1 nm. A 2 nm, as forças eletrostáticas são da ordem de 13\% do valor inicial.
+	Logo, uma solução 0,1 mol.L\menosUm{} de NaCl possui um comprimento de Debye de aproximadamente 1 nm. A 2 nm, as forças eletrostáticas são da ordem de 13\% do valor inicial.
 	
 	Relacionado ao comprimento de Debye, há o comprimento de Bjerrum, que relaciona a distância onde a energia Coulombica entre duas cargas se iguala à energia térmica (\autoref{eqn:comprimento_bjerrum}).
 	
@@ -1631,7 +1629,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 			
 		Surfactantes catiônicos, como os haletos de alquiltrimetilamônio ou alquilpiridínio são frequentemente utilizados para a formação de micelas gigantes utilizando sais orgânicos, como o salicilato de sódio, porém vários outros sais conseguem induzir o crescimento micelar. Esse tipo de sistema foi bastante estudado por Hoffmann, para uma variedade de sais e surfactantes\cite{Rehage1991, Rehage1988, Hoffmann1992a} e também por outros autores.\cite{Wei2013, Hartmann1998, Lutz-Bueno2016a,Lutz-Bueno2017, Cappelaere1998, Pleines2019, Clinckspoor2015, Raghavan2002a, Davies2006}
 		
-		Tais sais orgânicos possuem uma região hidrofóbica que consegue se inserir na superfície micelar, e ao mesmo tempo manter o grupo carregado exposto à água, na superfície. Isso diminui a carga superficial micelar, aumentando o parâmetro de empacotamento e induzindo o crescimento das micelas. Sais inorgânicos, como Cl\textsuperscript{-}, também podem promover o crescimento, mas necessitam de concentrações uma ordem de grandeza maiores. Por exemplo, é necessária a concentração de aproximadamente 4 mol.L\menosUm{} de NaCl para gerar micelas com efeitos viscosos semelhantes aos gerados por NaSal 100 \mM, numa solução com \CTAB 100{} \mM.\footnote{Dados não publicados}
+		Tais sais orgânicos possuem uma região hidrofóbica que consegue se inserir na superfície micelar, e ao mesmo tempo manter o grupo carregado exposto à água, na superfície. Isso diminui a carga superficial micelar, aumentando o parâmetro de empacotamento e induzindo o crescimento das micelas. Sais inorgânicos, como Cl\textsuperscript{--}, também podem promover o crescimento, mas necessitam de concentrações uma ordem de grandeza maiores. Por exemplo, é necessária a concentração de aproximadamente 4 mol.L\menosUm{} de NaCl para gerar micelas com efeitos viscosos semelhantes aos gerados por NaSal 100 \mM, numa solução com \CTAB{} 100{} \mM.\footnote{Dados não publicados}
 		
 %		\begin{figure}[h]
 %			\centering
@@ -1643,7 +1641,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		
 		\index{micelas gigantes!OHCA}
 		A viscosidade das soluções de surfactantes catiônicos e sais orgânicos é dependente da concentração e da afinidade do sal pela micela que, por sua vez, depende de sua estrutura. Além disso, a afinidade do sal altera o perfil de viscosidade. Sais com pouca afinidade, como ortometilbenzoato de sódio, possuem um único máximo de viscosidade, já sais como o salicilato de sódio e o orto-hidroxicinamato de sódio geram perfis com dois máximos de viscosidade.\cite{Clinckspoor2015, Ito2014c}
-		A quantidade de salicilato que se concentra na superfície micelar é alta, cerca de 93\%, muito mais do que os íons Cl\textsuperscript{-} e Br\textsuperscript{-}.\cite{Rehage1991}
+		A quantidade de salicilato que se concentra na superfície micelar é alta, cerca de 93\%, muito mais do que os íons Cl\textsuperscript{--} e Br\textsuperscript{--}.\cite{Rehage1991}
 		
 		Tais soluções de surfactante e sal aromático podem ser estudadas tanto por reologia oscilatória quanto por curvas de fluxo. Soluções de micelas gigantes, quando submetidas à uma taxa de cisalhamento crescente, começam a se alinhar ao fluxo, diminuindo a viscosidade aparente da solução. Isso as caracteriza como fluidos pseudoplásticos. Quando a taxa de cisalhamento é baixa, a viscosidade não se altera, e pode-se obter uma grandeza conhecida como viscosidade no repouso \(\eta_0\) por uma variedade de técnicas (\autoref{sec:teoria_fluidos_NN}). \index{micelas gigantes!alinhamento ao fluxo}
 		
@@ -1651,7 +1649,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		
 		\begin{enumerate} \index{micelas gigantes!perfil de viscosidade|textbf}
 			\item[I] Região altamente diluída, onde há micelas esféricas, seguido de micelas cilíndricas curtas e, em concentrações um pouco mais altas, de micelas gigantes muito distantes umas das outras.
-			\item[II] Região onde ocorre aumento no número de micelas e crescimento das mesmas, levando ao entrelaçamento e aumento rápido da viscosidade. As micelas estão positivamente carregadas, e lineares. O mecanismo principal de relaxação nesta região é a reptação, porém as soluções não seguem o modelo de Maxwell perfeitamente, pois há um espectro de processos de relaxação. \cite{Rehage1988}
+			\item[II] Região onde ocorre aumento no número de micelas e crescimento das mesmas, levando ao entrelaçamento e aumento rápido da viscosidade. As micelas estão positivamente carregadas, e não ramificadas. O mecanismo principal de relaxação nesta região é a reptação, porém as soluções não seguem o modelo de Maxwell perfeitamente, pois há um espectro de processos de relaxação. \cite{Rehage1988}
 			 O valor de \(G\) dessa região é menor do que nas próximas. \cite{Rehage1991}
 			\item[III] Região onde a carga das micelas continua a diminuir com a incorporação crescente de NaSal, levando à uma diminuição da carga superficial. Ao invés de micelas lineares, ocorre a formação de uma rede ramificada de micelas, e a solução começa a seguir o modelo de Maxwell. Quando a solução se aproxima da equimolaridade, a carga superficial das micelas se aproxima a 0. Nessa região, o processo de relaxação principal é a quebra e recombinação.
 			\item[IV] Região onde a carga das micelas começa a ficar mais negativa devido ao excesso de salicilato em solução\cite{Olsson1986a}, mas alguns trabalhos discordam, citando que o salicilato extra pode se encontrar fora, como um contraíon.\cite{Cassidy1996} A estrutura das micelas ainda é ramificada. % todo: colocar uma ref disso. Rehage?
@@ -1667,7 +1665,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		\end{figure}
 
 		Além desses fatores relativos ao salicilato, há uma contribuição do surfactante. A viscosidade do sistema \CTAB{} e NaSal é maior, em todas as proporções, que a viscosidade do sistema cloreto de hexadecilpiridínio (C\textsubscript{16}PyCl) e NaSal \cite{Lutz-Bueno2017}
-		Essa diferença ocorre, de acordo com Hoffmann,\cite{Hoffmann2010, Hoffmann2012a, Yamashita2006} devido aos contatos ``grudentos'' (\emph{sticky contacts}) causados pela atração entre grupos metila do \CTAB, hidrofóbicos, com os outros grupos metila de micelas vizinhas. Isso aumenta o tempo de relaxação estrutural, pois o deslizamento entre as micelas se torna mais lento, levando à maior viscosidade. O mesmo mecanismo não pode ocorrer, pois o grupo piridínio não possui tais metilas. \index{micelas gigantes!sticky contacts@\textsl{sticky contacts}} 
+		Essa diferença ocorre, de acordo com Hoffmann,\cite{Hoffmann2010, Hoffmann2012a, Yamashita2006} devido aos contatos ``grudentos'' (\emph{sticky contacts}) causados pela atração entre grupos metila do \CTAB, hidrofóbicos, com os outros grupos metila de micelas vizinhas. Isso aumenta o tempo de relaxação estrutural, pois o deslizamento entre as micelas se torna mais lento, levando à maior viscosidade. Como o grupo piridínio não possui tais metilas, esse mecanismo não pode existir nessas micelas. \index{micelas gigantes!sticky contacts@\textsl{sticky contacts}} 
 		
 
 		\section{Termodinâmica de micelas} \index{micelas gigantes!termodinâmica}
@@ -1778,7 +1776,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		\end{equation} 		% Ref. Giant Micelles Avinoam Ben Shaoul Silvio May, de agora em diante
 		\index{micelas gigantes!modelo das forças opostas OFM}
 		
-		% todo: achar um termo melhor para cabeça
+		O termo \(f(s)\) pode ser desmembrando em várias contribuições:
 		
 		\begin{itemize}
 			\item[\(f_h\)] Energia livre de interação entre cabeças
@@ -1802,14 +1800,14 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		
 		\noindent onde \(B\) é um termo que agrupa todas as repulsões das cabeças dos surfactantes, \(a\) é a área de contato entre a região hidrofóbica e a água e \(\gamma\) é a tensão interfacial entre hidrocarboneto e água. O termo \(f_c\) é constante, significando que o interior das micelas é considerado como um hidrocarboneto líquido. A área \(a\) e a área de seção transversal \(a_h\), do parâmetro de empacotamento, \autoref{eqn:param_empacot}, estão relacionados através da duas curvaturas locais. O termo eletrostático depende do comprimento de Bjerrum \(\lambda_B\) e do comprimento de Debye \(1/\kappa\), introduzidos na página \pageref{eqn:comprimento_debye}.
 		
-		A contribuição eletrostática para a energia livre é dado por \cite{Giant_Micelles}
+		A contribuição eletrostática para a energia livre é dada por \cite{Giant_Micelles}
 		
 		\begin{equation}
 			\mu_\mathrm{el}^\circ (N) = k_B T c \left[ N \ln (cN) - N \right]
 			\label{eqn:potencial_quim_eletrostatico}
 		\end{equation} \index{micelas gigantes!energia eletrostática}
 		
-		\noindent onde \(c = a / (2 \pi r_\mathrm{cs} \lambda_B)\). Além disso, o fator \(k_BT\) substitui o termo \(e^2/4\pi\varepsilon_{ 0 }\varepsilon_\mathrm{água}\lambda_B\) da contribuição eletrostática. O termo positivo \(\sim N \ln N\) age contra o termo \((N - N_\mathrm{ponta}) \mu_\mathrm{cilindro}^\circ\) (\autoref{eqn:potencial_quimico_MG}), este que, por sua vez, leva ao crescimento das micelas. Somando a contribuição eletrostática ao potencial químico das micelas, chegamos a uma equação que leva as contribuições eletrostáticas em consideração \cite{Giant_Micelles}
+		\noindent onde \(c = a / (2 \pi r_\mathrm{cs} \lambda_B)\). Além disso, o fator \(k_BT\) substitui o termo (\(e^2/4\pi\varepsilon_{ 0 }\varepsilon_\mathrm{água}\lambda_B\)) da contribuição eletrostática. O termo positivo é \(\sim N \ln N\) age contra o termo \((N - N_\mathrm{ponta}) \mu_\mathrm{cilindro}^\circ\) (\autoref{eqn:potencial_quimico_MG}), este que, por sua vez, leva ao crescimento das micelas. Somando a contribuição eletrostática ao potencial químico das micelas, chegamos a uma equação que leva as contribuições eletrostáticas em consideração \cite{Giant_Micelles}
 		
 		\begin{equation}
 			\mu_N^\circ = (N - N_\mathrm{ponta})\mu_\mathrm{cilindro}^\circ + k_B T c \left[ N \ln (cN) - N \right] + N_\mathrm{ponta}\mu_\mathrm{ponta}^\circ
@@ -1841,7 +1839,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		\section{Comportamento calorimétrico} \index{micelas gigantes!calorimetria}
 		\label{sec:micelas_gigantes_calorimetria}
 		
-		A calorimetria de titulação isotérmica é uma técnica que é empregada no estudo a autoassociação de micelas gigantes.\cite{Sarac2009, Sarac2013, Liu2011a, Bijma1998c, Fisicaro2005a} Recentemente, observou-se que esse processo, para surfactantes catiônicos e vários aditivos aromáticos, possui um perfil característico.\cite{Ito2016, Ito2015c}
+		A calorimetria de titulação isotérmica é uma técnica que já foi empregada no estudo a autoassociação de micelas gigantes.\cite{Sarac2009, Sarac2013, Liu2011a, Bijma1998c, Fisicaro2005a} Recentemente, observou-se que esse processo, para surfactantes catiônicos e vários aditivos aromáticos, possui um perfil característico.\cite{Ito2016, Ito2015c}
 
 		Numa titulação típica, como mostrado na \autoref{sec:calorimetria_micelizacao}, o surfactante é titulado em água. Dessa forma, à medida que a concentração de surfactante aumenta, o sistema prossegue ao ponto onde a micelização ocorre, e, tipicamente, uma variação no calor trocado é observada. Na titulação de micelas gigantes, o mesmo procedimento foi adotado, porém agora, ao invés de se titular o surfactante em água, se titula numa solução do aditivo. Neste trabalho, utilizou-se NaSal. Como o salicilato induz a micelização, é necessário uma concentração menor de surfactante na seringa para se observar o processo de micelização. Isso altera o formato do entalpograma, como será mostrado nesta seção.
 		
@@ -1851,7 +1849,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		\index{micelas gigantes!segundo pico de injeção}
 		A qualidade da linha base nesse tipo de experimento varia bastante com as concentrações das espécies utilizadas e a presença dos aditivos estudados. De forma geral, a variação na linha base começa quando ocorre a formação de micelas gigantes. No grupo, já foram feitos vários estudos para otimizar a linha base, porém não houve muito sucesso.
 		
-		Geralmente, utiliza-se \TTAB{} nesse tipo de experimento, ao invés de \CTAB{}, pois a agregação é menos favorecida, deslocando as curvas para uma faixa maior de concentração de surfactante, e as soluções são menos viscosas no mínimo, resultando em dados melhores. 
+		Geralmente, utiliza-se \TTAB{} nesse tipo de experimento, ao invés de \CTAB{}, pois a agregação é menos favorecida, deslocando as curvas para uma faixa maior de concentração de surfactante. Além disso, as soluções são menos viscosas no mínimo, resultando em dados melhores. 
 		
 		\begin{figure}
 			\begin{subfigure}{\textwidth}
@@ -1952,7 +1950,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 		
 		\index{micelas gigantes!glicerina}
 		
-		Posteriormente, \citeauthor{Hoffmann2010} estudaram o efeito do solvente, utilizando glicerina, porém em micelas gigantes de \CTAB{} e NaSal. Observaram que havia uma grande diminuição na viscosidade dos dois picos de viscosidade, mas a região central, de mínimo de viscosidade, era pouco afetada. Nas regiões afetadas, a relaxação micelar ocorre principalmente por meio da reptação, e como a atração intermicelar se torna menor, devido à constante de Hamaker ser próxima de zero, as micelas conseguem reptar mais rapidamente, diminuindo a viscosidade. Na região central, onde o mecanismo principal é a quebra e recombinação, a atração intermicelar é pouco importante, portanto a viscosidade é pouco afetada. Maiores explicações para esse fenômeno podem ser encontradas na \autoref{sec:efeito_solvente}. 
+		Posteriormente, \citeauthor{Hoffmann2010} estudaram o efeito do solvente, utilizando glicerina, porém em micelas gigantes de \CTAB{} e NaSal. Observaram que havia uma grande diminuição na viscosidade dos dois picos de viscosidade, mas a região central, de mínimo de viscosidade, era pouco afetada. Nas regiões afetadas, a relaxação micelar ocorre principalmente por meio da reptação, e como a atração intermicelar se torna menor, devido à constante de Hamaker ser próxima de zero, as micelas conseguem reptar mais rapidamente, diminuindo a viscosidade. Na região central, onde o mecanismo principal é a quebra e recombinação, a atração intermicelar é pouco importante, portanto a viscosidade é pouco afetada.% Maiores explicações para esse fenômeno podem ser encontradas na \autoref{sec:efeito_solvente}. 
 		
 		\index{micelas gigantes!1,3-butanodiol}
 		Em seguida, \citeauthor{Abdel-Rahem2014} estudou o efeito do 1,3-butanodiol. Observou que a concentração de 1,3-butanodiol necessário para resultar numa queda de viscosidade é muito menor que glicerina, nas mesmas condições de índice de refração. Isso informa que considerar somente as interações intermicelares não é suficiente para explicar o efeito do aditivo. O autor levanta a hipótese que há um efeito adicional que está alterando o comportamento, a constante dielétrica, que afeta as interações eletrostáticas no meio. Ambos os parâmetros afetam os mecanismos de relaxação estrutural das micelas, alterando os tempos de relaxação e, consequentemente, as viscosidades. \index{micelas gigantes!constante dielétrica}
@@ -1968,7 +1966,7 @@ Por fim, os apêndices agregam tópicos de matemática e programação de aspect
 
 		Os estudos de Hoffmann inspiraram grande parte deste trabalho, devido à correlação entre parâmetros macroscópicos do solvente com as propriedades reológicas das micelas gigantes. O fato de que é possível modular a viscosidade das micelas, mantendo sua estrutura, pela adição de glicerina, resultou em vários questionamentos e conversas durante a visita de Hoffmann ao grupo. Logo depois, decidiu-se continuar esses estudos, expandindo-os utilizando outros aditivos.
 		
-		Além disso, notou-se que haviam resultados de ITC (\autoref{fig:itc_raw_agua_glicerina}) que indicavam que poderiam existir dois processos ocorrendo em cada injeção, devido à existência de dois picos. A cinética desse processo era bastante longa. Além disso, esses processos cinéticos lentos ocorriam na região de formação de micelas gigantes. Começou-se a buscar técnicas para a determinação da cinética de crescimento.
+		Além disso, notou-se que haviam resultados de ITC (\autoref{fig:itc_raw_agua_glicerina}) que indicavam que poderiam existir dois processos ocorrendo em cada injeção, devido à existência de dois picos. A cinética desse processo era bastante longa, e ocorriam na região de formação de micelas gigantes. Começou-se a buscar técnicas para a determinação da cinética de crescimento.
 		
 		Pedersen, em uma série de artigos\cite{Jensen2013a, Jensen2014a, Jensen2016a}, observou o crescimento de micelas alongadas utilizando espalhamento de raios-X em baixos ângulos (SAXS), resolvido no tempo. Para iniciar o crescimento das micelas, foi utilizado um aparato de \emph{stopped-flow}, onde duas soluções, que não continham micelas gigantes, eram misturadas. Enquanto o sistema se dirigia ao equilíbrio, as micelas eram formadas. Dessa maneira, uma colaboração foi firmada com seu grupo, e foram medidas a cinética de crescimento. \index{micelas gigantes!cinética} \index{micelas gigantes!stopped-flow@\textsl{stopped-flow}}
 		
