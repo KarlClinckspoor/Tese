@@ -161,7 +161,7 @@
 \autor{Karl Jan Clinckspoor}
 \local{Campinas}
 %\data{\today}
-\data{19 de março de 2019}
+\data{2019}
 \orientador{Prof. Dr. Edvaldo Sabadini}
 \coorientador{}
 \instituicao{%
@@ -173,7 +173,7 @@
 \tipotrabalho{Tese (Doutorado)}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Tese de doutorado apresentada ao Instituto de Química da Universidade Estadual de Campinas, como parte dos requisitos exigidos para a obtenção do título de Doutor em Ciências. O projeto, focado na área de Físico-Química, visa estudar micelas gigantes, sua formação, seu crescimento e as interações intermicelares em sistemas aquosos binários}
+\preambulo{Tese de doutorado apresentada ao Instituto de Química da Universidade Estadual de Campinas como parte dos requisitos exigidos para a obtenção do título de Doutor em Ciências}
 % ---
 
 
@@ -287,22 +287,26 @@
 	\vspace*{\fill}
 	}%
 
-	{\abntex@ifnotempty{\imprimirinstituicao}{\imprimirinstituicao\vspace*{\fill}}}
+	%{\abntex@ifnotempty{\imprimirinstituicao}{\imprimirinstituicao\vspace*{\fill}}}
 	
-	{\large\imprimirorientadorRotulo~\imprimirorientador\par}
-	\abntex@ifnotempty{\imprimircoorientador}{%
-		{\large\imprimircoorientadorRotulo~\imprimircoorientador}%
-	}%
+%	{\large\imprimirorientadorRotulo~\imprimirorientador\par}
+%	\abntex@ifnotempty{\imprimircoorientador}{%
+%		{\large\imprimircoorientadorRotulo~\imprimircoorientador}%
+%	}%
+\end{center}
+	Orientador: Prof. Dr. Edvaldo Sabadini
 	\vspace*{\fill}
 	
-	\begin{center} Este arquivo digital corresponde à versão final da tese defendida pelo aluno Karl Jan Clinckspoor e orientada pelo Prof. Dr. Edvaldo Sabadini \end{center}
+	\noindent O arquivo digital corresponde à versão final da tese defendida pelo aluno \mbox{Karl Jan Clinckspoor} e orientada pelo Prof. Dr. Edvaldo Sabadini.
 
+
+\begin{center}
 	\vspace*{\fill}{\large\imprimirlocal}
 	\par
 	{\large\imprimirdata}
 	\vspace*{1cm}
-	
-	\end{center}
+\end{center}
+
 }
 
 \makeatother
@@ -370,7 +374,7 @@
 %    \vspace*{\fill}
 %   \end{center}
 
-	{\Large\textbf{Banca Examinadora}}
+	{\Large\ABNTEXchapterfont\textbf{Banca Examinadora}}
 	
 	\vspace{1cm}
 	
@@ -446,6 +450,8 @@ Agradeço aos colegas e ex-colegas do laboratório B145, pelas discussões e com
 
 Agradeço ao CNPq pelo financiamento.
 
+O presente trabalho foi realizado com apoio da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - Brasil (CAPES) - Código de Financiamento 001.
+
 \end{agradecimentos}
 % ---
 
@@ -481,7 +487,7 @@ Agradeço ao CNPq pelo financiamento.
 	
 % 	It was also observed that the fluorescence of salicylate was affected by the quantity of surfactant in solution, which was attributed to its incorporation into the micelles. This was correlated with the viscosity and the heat of interaction, something novel. A ms-scale time-resolved fluorescence method was developed, to observe the incorporation of salicylate. However, the growth kinetics could not be obtained by this technique. On the other hand, time-resolved X-ray scattering was performed in Grenoble, France, where the growth of the micelles was estimated to happen around 35 to 65 ms.
 	
- \textbf{Palavras-chave}: micelas gigantes, surfactantes, reologia, calorimetria, espalhamento de raios-X a baixo ângulo, cinética
+% \textbf{Palavras-chave}: micelas gigantes, surfactantes, reologia, calorimetria, espalhamento de raios-X a baixo ângulo, cinética
 \end{resumo}
 
 % resumo em inglês
@@ -500,7 +506,7 @@ Agradeço ao CNPq pelo financiamento.
    \vspace{\onelineskip}
  
    \noindent 
-   \textbf{Keywords}: wormlike micelles, surfactants, rheology, calorimetry, small angle x-ray scattering, kinetics
+%   \textbf{Keywords}: wormlike micelles, surfactants, rheology, calorimetry, small angle x-ray scattering, kinetics
  \end{english}
 \end{resumo}
 
@@ -630,9 +636,9 @@ Agradeço ao CNPq pelo financiamento.
 %\bibliography(newbib.bib)
 
 % Índice remissivo
-% TODO: criar um índice
+
 \phantompart
-\printindex
+%\printindex
 
 \end{document}
 
