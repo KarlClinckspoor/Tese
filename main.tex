@@ -1,15 +1,9 @@
-% todo: verificar seção por seção se as imagens são melhores h, ht, htb
-% todo: fazer alguns testes de ajuste da cinética de ITC 
-% todo: remover a seção de fibrose cística, mover para o apêndice.
-
-% Após a defesa:
-% todo: colocar o nome do stopped flow, BioLogic SFM-400. Colocar mais detalhes da fluorescência. 
-
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
-	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	twoside,			% para impressão em recto e verso. Oposto a oneside
+%	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+%	twoside,			% para impressão em recto e verso. Oposto a oneside
+	oneside,
 	a4paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
@@ -263,6 +257,7 @@
 	\vspace{1cm}
 \end{center}
 \imprimircapa
+
 % ---
 
 % ---
@@ -297,7 +292,7 @@
 	Orientador: Prof. Dr. Edvaldo Sabadini
 	\vspace*{\fill}
 	
-	\noindent O arquivo digital corresponde à versão final da tese defendida pelo aluno \mbox{Karl Jan Clinckspoor} e orientada pelo Prof. Dr. Edvaldo Sabadini.
+	\noindent O arquivo digital corresponde à versão final da Tese defendida pelo aluno \mbox{Karl Jan Clinckspoor} e orientada pelo Prof. Dr. Edvaldo Sabadini.
 
 
 \begin{center}
@@ -335,6 +330,7 @@
 \begin{fichacatalografica}
 	\includepdf{./ficha_catalografica.pdf}
 \end{fichacatalografica}
+
 % ---
 
 % ---
@@ -390,7 +386,7 @@
 	
 	\vspace*{\fill}
 	
-	\noindent A Ata da defesa assinada pelos membros da Comissão Examinadora consta no SIGA/Sistema de Fluxo de Dissertação/Tese e na Secretaria do Programa da Unidade.
+	\noindent A Ata da defesa assinada pelos membros da Comissão Examinadora, consta no SIGA/Sistema de Fluxo de Dissertação/Tese e na Secretaria do Programa da Unidade.
 	
 	\vspace*{\fill}
 	
@@ -622,14 +618,14 @@ O presente trabalho foi realizado com apoio da Coordenação de Aperfeiçoamento
 	
 	Os arquivos de permissão concedidos pelas editoras estarão nas páginas a seguir, sem modificação.
 	
-	\includepdf{./permissoes/diagrama_micelas_gigantes_lequeux_candau.pdf}
-	\includepdf{./permissoes/imagem_cates_reptação.pdf}
-	\includepdf{./permissoes/imagem_cole-cole_berret.pdf}
-	\includepdf[pages={1,2,3}]{./permissoes/imagem_goodwin_hughes}
-	\includepdf{./permissoes/imagem_Hoffmann_tamanhos_de_MG}
-	\includepdf[pages={1,2}]{./permissoes/imagem_MG_Danino}
-	\includepdf[pages={1,2}]{./permissoes/imagem_tamanho_micelas_cecile}
-	\includepdf[pages={1,2}]{./permissoes/lacowicz_jablonski}
+	\includepdf[scale=.8, pagecommand={}]{./permissoes/diagrama_micelas_gigantes_lequeux_candau.pdf}
+	\includepdf[scale=.8, pagecommand={}]{./permissoes/imagem_cates_reptação.pdf}
+	\includepdf[scale=.8, pagecommand={}]{./permissoes/imagem_cole-cole_berret.pdf}
+	\includepdf[scale=.8, pages={1,2,3}, pagecommand={}]{./permissoes/imagem_goodwin_hughes}
+	\includepdf[scale=.8, pagecommand={}]{./permissoes/imagem_Hoffmann_tamanhos_de_MG}
+	\includepdf[scale=.8, pages={1,2}, pagecommand={}]{./permissoes/imagem_MG_Danino}
+	\includepdf[scale=.8, pages={1,2}, pagecommand={}]{./permissoes/imagem_tamanho_micelas_cecile}
+	\includepdf[scale=.8, pages={1,2}, pagecommand={}]{./permissoes/lacowicz_jablonski}
 \end{apendicesenv}
 % Referências bibliográficas
 \bibliography{library}
